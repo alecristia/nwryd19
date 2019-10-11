@@ -1,0 +1,406 @@
+child	file	int	target	on	off	corr	pron	out
+c70	190825_0021_ch1	56	dimope	338.597	340.170	0	towape	pairs/dimope_c70_1.wav
+c70	190825_0021_ch1	72	diponate	383.935	385.728	1		pairs/diponate_c70_1.wav
+c70	190825_0021_ch1	26	dpa	258.772	259.247	1		pairs/dpa_c70_1.wav
+c70	190825_0021_ch1	36	dpa2	286.775	287.370	1		pairs/dpa2_c70_1.wav
+c70	190825_0021_ch1	40	dpe	295.592	296.364	0	ncha	pairs/dpe_c70_1.wav
+c70	190825_0021_ch1	38	dpu	291.272	291.911	0	chu	pairs/dpu_c70_1.wav
+c70	190825_0021_ch1	42	gh_aa	300.115	300.937	0	êlvaa	pairs/gh_aa_c70_1.wav
+c70	190825_0021_ch1	44	gh_aa	309.858	311.084	1		pairs/gh_aa_c70_2.wav
+c70	190825_0021_ch1	24	kp_aa	254.161	254.811	1		pairs/kp_aa_c70_1.wav
+c70	190825_0021_ch1	28	lva	262.820	263.656	0	êlva	pairs/lva_c70_1.wav
+c70	190825_0021_ch1	30	lvi	267.106	267.522	1		pairs/lvi_c70_1.wav
+c70	190825_0021_ch1	32	lvi	277.896	279.112	1		pairs/lvi_c70_2.wav
+c70	190825_0021_ch1	66	mituye	365.782	367.103	0	mitiye	pairs/mituye_c70_1.wav
+c70	190825_0021_ch1	62	nayeki	352.504	353.888	1		pairs/nayeki_c70_1.wav
+c70	190825_0021_ch1	64	nayeki	360.686	362.007	1		pairs/nayeki_c70_2.wav
+c70	190825_0021_ch1	46	noki	315.284	316.668	1		pairs/noki_c70_1.wav
+c70	190825_0021_ch1	52	nomi	328.903	330.318	1		pairs/nomi_c70_1.wav
+c70	190825_0021_ch1	68	nomiwake	370.663	372.142	1		pairs/nomiwake_c70_1.wav
+c70	190825_0021_ch1	70	nomiwake	378.873	380.351	1		pairs/nomiwake_c70_2.wav
+c70	190825_0021_ch1	14	nopimade	213.898	216.295	0	nopimamade	pairs/nopimade_c70_1.wav
+c70	190825_0021_ch1	16	nopimade	228.346	230.816	1		pairs/nopimade_c70_2.wav
+c70	190825_0021_ch1	18	nopimade	238.007	239.678	1		pairs/nopimade_c70_3.wav
+c70	190825_0021_ch1	54	pedumi	333.778	335.540	1		pairs/pedumi_c70_1.wav
+c70	190825_0021_ch1	48	piwa	319.876	321.669	0		pairs/piwa_c70_1.wav
+c70	190825_0021_ch1	10	poni	193.849	195.447	1		pairs/poni_c70_1.wav
+c70	190825_0021_ch1	12	poni	201.694	203.292	1		pairs/poni_c70_2.wav
+c70	190825_0021_ch1	20	t_ee	244.617	245.193	0	táá	pairs/t_ee_c70_1.wav
+c70	190825_0021_ch1	58	tiwune	343.378	345.171	0	dipunde	pairs/tiwune_c70_1.wav
+c70	190825_0021_ch1	50	towi	324.342	325.695	1		pairs/towi_c70_1.wav
+c70	190825_0021_ch1	34	tp_a	282.573	283.063	0	cha	pairs/tp_a_c70_1.wav
+c70	190825_0021_ch1	22	tpe	249.182	249.566	1		pairs/tpe_c70_1.wav
+c70	190825_0021_ch1	2	wi	141.843	143.151	1		pairs/wi_c70_1.wav
+c70	190825_0021_ch1	4	wi	143.805	145.475	1		pairs/wi_c70_2.wav
+c70	190825_0021_ch1	6	wi	157.388	158.914	1		pairs/wi_c70_3.wav
+c70	190825_0021_ch1	8	wi	167.292	168.672	1		pairs/wi_c70_4.wav
+c70	190825_0021_ch1	60	wumipo	347.687	349.260	0	piwipo	pairs/wumipo_c70_1.wav
+c71	190825_0022_ch1	58	dimope	157.527	158.408	0	kimope	pairs/dimope_c71_1.wav
+c71	190825_0022_ch1	60	dimope	161.742	163.126	0	kimope	pairs/dimope_c71_2.wav
+c71	190825_0022_ch1	62	diyeto	166.810	167.785	0	tiyoto	pairs/diyeto_c71_1.wav
+c71	190825_0022_ch1	42	dpa	122.663	123.449	1		pairs/dpa_c71_1.wav
+c71	190825_0022_ch1	44	dpa	125.462	126.249	1		pairs/dpa_c71_2.wav
+c71	190825_0022_ch1	18	dpa2	65.163	65.792	1		pairs/dpa2_c71_1.wav
+c71	190825_0022_ch1	40	dpe	118.491	119.214	1		pairs/dpe_c71_1.wav
+c71	190825_0022_ch1	16	dpu	61.389	62.207	1		pairs/dpu_c71_1.wav
+c71	190825_0022_ch1	28	gh_aa	87.488	88.243	1		pairs/gh_aa_c71_1.wav
+c71	190825_0022_ch1	30	gh_aa	90.319	91.294	1		pairs/gh_aa_c71_2.wav
+c71	190825_0022_ch1	56	kipo	152.746	153.689	1		pairs/kipo_c71_1.wav
+c71	190825_0022_ch1	20	kp_aa	69.005	69.854	0	p:aa	pairs/kp_aa_c71_1.wav
+c71	190825_0022_ch1	32	lva	95.478	96.264	1		pairs/lva_c71_1.wav
+c71	190825_0022_ch1	34	lva	105.721	106.601	1		pairs/lva_c71_2.wav
+c71	190825_0022_ch1	22	lvi	72.905	73.691	1		pairs/lvi_c71_1.wav
+c71	190825_0022_ch1	24	lvi	80.291	81.203	1		pairs/lvi_c71_2.wav
+c71	190825_0022_ch1	26	lvi	82.021	82.902	1		pairs/lvi_c71_3.wav
+c71	190825_0022_ch1	64	meyadi	171.622	172.597	1		pairs/meyadi_c71_1.wav
+c71	190825_0022_ch1	68	nademo	180.886	181.641	0	nabo	pairs/nademo_c71_1.wav
+c71	190825_0022_ch1	69	nademo	181.641	182.647	0	nábo	pairs/nademo_c71_2.wav
+c71	190825_0022_ch1	71	nademo	188.480	189.204	0	nawur-	pairs/nademo_c71_3.wav
+c71	190825_0022_ch1	72	nademo	189.204	190.808	0	i-naro-wo	pairs/nademo_c71_4.wav
+c71	190825_0022_ch1	48	noki	134.830	135.680	1		pairs/noki_c71_1.wav
+c71	190825_0022_ch1	50	noki	136.938	137.756	1		pairs/noki_c71_2.wav
+c71	190825_0022_ch1	52	nomi	141.656	142.442	0	no	pairs/nomi_c71_1.wav
+c71	190825_0022_ch1	54	nomi	144.675	145.619	1		pairs/nomi_c71_2.wav
+c71	190825_0022_ch1	80	nomiwake	211.275	212.848	0	nomuwake	pairs/nomiwake_c71_1.wav
+c71	190825_0022_ch1	82	nomiwake	214.672	216.434	0	ênomiwake	pairs/nomiwake_c71_2.wav
+c71	190825_0022_ch1	10	nopimade	47.153	49.166	0	bopilvate	pairs/nopimade_c71_1.wav
+c71	190825_0022_ch1	74	pedumi	196.778	197.848	1		pairs/pedumi_c71_1.wav
+c71	190825_0022_ch1	4	poni	26.114	27.624	0	epuni	pairs/poni_c71_1.wav
+c71	190825_0022_ch1	6	poni	37.529	38.346	0	puni	pairs/poni_c71_2.wav
+c71	190825_0022_ch1	8	poni	40.139	41.051	1		pairs/poni_c71_3.wav
+c71	190825_0022_ch1	12	t_ee	53.148	54.029	1		pairs/t_ee_c71_1.wav
+c71	190825_0022_ch1	76	todiwuma	201.878	203.199	0	tatuwo	pairs/todiwuma_c71_1.wav
+c71	190825_0022_ch1	78	todiwuma	205.590	207.005	0	tatuwoma	pairs/todiwuma_c71_2.wav
+c71	190825_0022_ch1	14	tp_a	57.394	58.306	1		pairs/tp_a_c71_1.wav
+c71	190825_0022_ch1	36	tpe	109.747	110.564	1		pairs/tpe_c71_1.wav
+c71	190825_0022_ch1	38	tpe	114.328	115.334	0	tpá	pairs/tpe_c71_2.wav
+c71	190825_0022_ch1	66	tumowe	175.979	177.017	1		pairs/tumowe_c71_1.wav
+c71	190825_0022_ch1	46	tupa	129.803	130.747	1		pairs/tupa_c71_1.wav
+c71	190825_0022_ch1	2	wi	20.201	21.396	0	ghuwe	pairs/wi_c71_1.wav
+c72	190825_0023_ch1	64	diponate	404.413	406.627	0	chipotenate	pairs/diponate_c72_1.wav
+c72	190825_0023_ch1	66	diponate	412.950	414.621	0	chiponate	pairs/diponate_c72_2.wav
+c72	190825_0023_ch1	12	dp_a	269.049	269.839	0	dpe (T) pe (A)	pairs/dp_a_c72_1.wav
+c72	190825_0023_ch1	20	dpa	290.712	291.568	0	dpo	pairs/dpa_c72_1.wav
+c72	190825_0023_ch1	22	dpee	295.215	295.764	0	dee (t) dkee (a)	pairs/dpee_c72_1.wav
+c72	190825_0023_ch1	24	dpee	300.067	300.923	0	piye (t)	pairs/dpee_c72_2.wav
+c72	190825_0023_ch1	26	dpee	304.942	305.636	0	pee	pairs/dpee_c72_3.wav
+c72	190825_0023_ch1	14	dpi	275.469	276.350	0	pe (t) pé (a)	pairs/dpi_c72_1.wav
+c72	190825_0023_ch1	16	dpi	279.851	280.707	0	chi (t) pchi (a) 	pairs/dpi_c72_2.wav
+c72	190825_0023_ch1	30	ghuu	313.865	314.584	1	ghuu	pairs/ghuu_c72_1.wav
+c72	190825_0023_ch1	32	ghuu	323.158	324.048	0	ghoo	pairs/ghuu_c72_2.wav
+c72	190825_0023_ch1	44	kamo	352.567	353.456	0	kamwo	pairs/kamo_c72_1.wav
+c72	190825_0023_ch1	34	kani	327.882	328.573	0	teni (t)	pairs/kani_c72_1.wav
+c72	190825_0023_ch1	36	kani	331.794	332.662	0	téni	pairs/kani_c72_2.wav
+c72	190825_0023_ch1	28	kpu	309.518	310.330	0	kîî (t)	pairs/kpu_c72_1.wav
+c72	190825_0023_ch1	18	lv_e	284.213	285.157	0	w:ââ (dog) (t)	pairs/lv_e_c72_1.wav
+c72	190825_0023_ch1	48	mituye	362.475	364.146	0	nétuye	pairs/mituye_c72_1.wav
+c72	190825_0023_ch1	54	nayeki	377.704	378.985	1	nayeki	pairs/nayeki_c72_1.wav
+c72	190825_0023_ch1	8	nopimade	258.279	260.072	0	nopinate	pairs/nopimade_c72_1.wav
+c72	190825_0023_ch1	46	nuyedi	357.537	358.795	0	nuedi	pairs/nuyedi_c72_1.wav
+c72	190825_0023_ch1	42	piwa	348.352	349.480	0	tiw	pairs/piwa_c72_1.wav
+c72	190825_0023_ch1	6	poni	250.704	251.680	1		pairs/poni_c72_1.wav
+c72	190825_0023_ch1	58	tiwune	388.691	389.950	0	toyime	pairs/tiwune_c72_1.wav
+c72	190825_0023_ch1	60	tiwune	394.091	395.502	0	towiné	pairs/tiwune_c72_2.wav
+c72	190825_0023_ch1	38	towi	336.743	337.394	0	to	pairs/towi_c72_1.wav
+c72	190825_0023_ch1	40	towi	343.410	344.387	0	towi	pairs/towi_c72_2.wav
+c72	190825_0023_ch1	62	wadikeno	398.974	400.537	0	wanikedo	pairs/wadikeno_c72_1.wav
+c72	190825_0023_ch1	2	wi	209.789	210.607	1		pairs/wi_c72_1.wav
+c72	190825_0023_ch1	4	wi	243.200	244.364	0	repetition	pairs/wi_c72_2.wav
+c72	190825_0023_ch1	56	widone	382.136	383.352	0	onodi	pairs/widone_c72_1.wav
+c72	190825_0023_ch1	50	wumipo	367.875	369.221	0	numiko	pairs/wumipo_c72_1.wav
+c72	190825_0023_ch1	52	wumipo	372.954	374.321	0	hunipo	pairs/wumipo_c72_2.wav
+c72	190825_0023_ch1	10	yi	264.381	265.168	1		pairs/yi_c72_1.wav
+c73	190825_0024_ch1	58	dimope	215.705	216.664	1		pairs/dimope_c73_1.wav
+c73	190825_0024_ch1	62	diponate	223.818	225.244	1		pairs/diponate_c73_1.wav
+c73	190825_0024_ch1	38	dpa	178.692	179.495	1		pairs/dpa_c73_1.wav
+c73	190825_0024_ch1	20	dpa2	144.970	145.553	1		pairs/dpa2_c73_1.wav
+c73	190825_0024_ch1	14	dpe	133.313	133.677	1		pairs/dpe_c73_1.wav
+c73	190825_0024_ch1	26	dpu	155.471	156.025	0	tó	pairs/dpu_c73_1.wav
+c73	190825_0024_ch1	28	gh_aa	158.942	159.714	0	gá	pairs/gh_aa_c73_1.wav
+c73	190825_0024_ch1	30	gh_aa	160.974	161.648	0	ghé	pairs/gh_aa_c73_2.wav
+c73	190825_0024_ch1	32	gh_aa	164.914	165.950	0	ghéé	pairs/gh_aa_c73_3.wav
+c73	190825_0024_ch1	42	kamo	185.583	186.516	0	ghamo	pairs/kamo_c73_1.wav
+c73	190825_0024_ch1	34	kp_aa	169.631	170.356	0	ghaa	pairs/kp_aa_c73_1.wav
+c73	190825_0024_ch1	36	kp_aa	174.985	175.789	0	kp_aa	pairs/kp_aa_c73_2.wav
+c73	190825_0024_ch1	16	lva	136.775	137.620	0	wé	pairs/lva_c73_1.wav
+c73	190825_0024_ch1	18	lvi	140.903	141.544	1		pairs/lvi_c73_1.wav
+c73	190825_0024_ch1	52	meyadi	204.443	205.609	0	meyade	pairs/meyadi_c73_1.wav
+c73	190825_0024_ch1	48	nademo	195.990	197.027	0	natewo	pairs/nademo_c73_1.wav
+c73	190825_0024_ch1	54	nayeki	208.486	209.705	0	nâyeki	pairs/nayeki_c73_1.wav
+c73	190825_0024_ch1	44	noki	189.004	189.886	1		pairs/noki_c73_1.wav
+c73	190825_0024_ch1	46	nomi	192.374	193.307	1		pairs/nomi_c73_1.wav
+c73	190825_0024_ch1	60	nomiwake	219.541	220.837	0	nemiyake	pairs/nomiwake_c73_1.wav
+c73	190825_0024_ch1	10	nopimade	124.808	125.930	1	nopimate?	pairs/nopimade_c73_1.wav
+c73	190825_0024_ch1	56	nuyedi	211.752	212.996	1		pairs/nuyedi_c73_1.wav
+c73	190825_0024_ch1	50	pedumi	200.189	201.226	0	tátuni	pairs/pedumi_c73_1.wav
+c73	190825_0024_ch1	6	poni	115.416	116.319	0	foli	pairs/poni_c73_1.wav
+c73	190825_0024_ch1	8	poni	117.369	118.068	0	foni	pairs/poni_c73_2.wav
+c73	190825_0024_ch1	12	t_ee	129.713	130.252	0	táá	pairs/t_ee_c73_1.wav
+c73	190825_0024_ch1	22	tp_a	148.189	148.757	0	tá	pairs/tp_a_c73_1.wav
+c73	190825_0024_ch1	24	tpe	152.150	152.529	0	te	pairs/tpe_c73_1.wav
+c73	190825_0024_ch1	40	tupa	181.931	182.683	1		pairs/tupa_c73_1.wav
+c73	190825_0024_ch1	2	wi	107.821	108.667	1		pairs/wi_c73_1.wav
+c73	190825_0024_ch1	4	wi	111.218	111.976	1		pairs/wi_c73_2.wav
+c74	190825_0025_ch1	42	diyeto	110.277	111.321	1		pairs/diyeto_c74_1.wav
+c74	190825_0025_ch1	20	dp_a	70.753	71.330	1		pairs/dp_a_c74_1.wav
+c74	190825_0025_ch1	18	dpa	67.292	67.896	1		pairs/dpa_c74_1.wav
+c74	190825_0025_ch1	22	dpee	74.160	74.956	0	piye	pairs/dpee_c74_1.wav
+c74	190825_0025_ch1	12	ghuu	56.520	57.427	1		pairs/ghuu_c74_1.wav
+c74	190825_0025_ch1	14	ghuu	59.817	60.586	1		pairs/ghuu_c74_2.wav
+c74	190825_0025_ch1	30	kani	87.909	88.760	1		pairs/kani_c74_1.wav
+c74	190825_0025_ch1	28	kipo	84.633	85.402	0	tipo	pairs/kipo_c74_1.wav
+c74	190825_0025_ch1	24	kpu	77.374	78.116	1		pairs/kpu_c74_1.wav
+c74	190825_0025_ch1	16	lv_e	63.663	64.459	1		pairs/lv_e_c74_1.wav
+c74	190825_0025_ch1	36	mituye	99.807	100.933	0	mituwe	pairs/mituye_c74_1.wav
+c74	190825_0025_ch1	8	nopimade	48.633	50.023	0	pimate	pairs/nopimade_c74_1.wav
+c74	190825_0025_ch1	32	piwa	91.315	92.359	0	diwa	pairs/piwa_c74_1.wav
+c74	190825_0025_ch1	6	poni	44.009	44.974	0	koni	pairs/poni_c74_1.wav
+c74	190825_0025_ch1	38	tiwune	103.598	104.779	0	tupume	pairs/tiwune_c74_1.wav
+c74	190825_0025_ch1	48	todiwuma	125.804	127.205	1		pairs/todiwuma_c74_1.wav
+c74	190825_0025_ch1	26	towi	81.474	82.408	1		pairs/towi_c74_1.wav
+c74	190825_0025_ch1	40	tumowe	106.949	107.911	0	tumuwe	pairs/tumowe_c74_1.wav
+c74	190825_0025_ch1	46	wadikeno	121.931	123.195	0	pwadikeno	pairs/wadikeno_c74_1.wav
+c74	190825_0025_ch1	2	wi	35.481	36.191	1		pairs/wi_c74_1.wav
+c74	190825_0025_ch1	4	wi	39.952	40.633	1		pairs/wi_c74_2.wav
+c74	190825_0025_ch1	34	widone	95.738	96.754	0	yidone	pairs/widone_c74_1.wav
+c74	190825_0025_ch1	44	wumipo	118.058	119.156	0	pumupo	pairs/wumipo_c74_1.wav
+c74	190825_0025_ch1	10	yi	53.002	53.825	0	ye	pairs/yi_c74_1.wav
+c76	180101_0031S12_left	64	dimope	219.368	220.739	1		pairs/dimope_c76_1.wav
+c76	180101_0031S12_left	56	diyeto	202.965	204.158	1		pairs/diyeto_c76_1.wav
+c76	180101_0031S12_left	28	dpa	140.164	140.862	0	dpya	pairs/dpa_c76_1.wav
+c76	180101_0031S12_left	30	dpa	144.701	145.538	1		pairs/dpa_c76_2.wav
+c76	180101_0031S12_left	18	dpa2	100.973	101.776	0	tpâ	pairs/dpa2_c76_1.wav
+c76	180101_0031S12_left	20	dpa2	107.046	107.779	0	dp:â?	pairs/dpa2_c76_2.wav
+c76	180101_0031S12_left	22	dpe	113.710	114.338	1		pairs/dpe_c76_1.wav
+c76	180101_0031S12_left	24	dpe	119.826	120.663	1		pairs/dpe_c76_2.wav
+c76	180101_0031S12_left	44	dpu	178.186	178.893	1		pairs/dpu_c76_1.wav
+c76	180101_0031S12_left	32	gh_aa	149.238	150.075	1		pairs/gh_aa_c76_1.wav
+c76	180101_0031S12_left	34	gh_aa	152.291	153.303	1		pairs/gh_aa_c76_2.wav
+c76	180101_0031S12_left	52	kipo	194.773	195.834	1		pairs/kipo_c76_1.wav
+c76	180101_0031S12_left	36	kp_aa	160.458	161.331	1		pairs/kp_aa_c76_1.wav
+c76	180101_0031S12_left	38	lva	165.201	165.997	0	vya	pairs/lva_c76_1.wav
+c76	180101_0031S12_left	40	lva	169.722	170.474	0	vya	pairs/lva_c76_2.wav
+c76	180101_0031S12_left	42	lvi	174.056	174.896	0	vyi	pairs/lvi_c76_1.wav
+c76	180101_0031S12_left	58	nayeki	206.679	208.227	1		pairs/nayeki_c76_1.wav
+c76	180101_0031S12_left	46	noki	182.431	183.448	1		pairs/noki_c76_1.wav
+c76	180101_0031S12_left	50	nomi	190.704	191.589	1		pairs/nomi_c76_1.wav
+c76	180101_0031S12_left	68	nomiwake	228.621	230.169	0	nomuwake	pairs/nomiwake_c76_1.wav
+c76	180101_0031S12_left	6	nopimade	42.682	44.009	0	nopinate	pairs/nopimade_c76_1.wav
+c76	180101_0031S12_left	8	nopimade	51.547	53.292	0	nopinate	pairs/nopimade_c76_2.wav
+c76	180101_0031S12_left	10	nopimade	75.649	77.394	1		pairs/nopimade_c76_3.wav
+c76	180101_0031S12_left	62	nuyedi	215.211	216.273	1		pairs/nuyedi_c76_1.wav
+c76	180101_0031S12_left	4	poni	38.196	38.924	1		pairs/poni_c76_1.wav
+c76	180101_0031S12_left	60	tiwune	211.187	212.204	1		pairs/tiwune_c76_1.wav
+c76	180101_0031S12_left	26	tp_a	135.704	136.541	1		pairs/tp_a_c76_1.wav
+c76	180101_0031S12_left	14	tpe	90.349	91.117	0	te	pairs/tpe_c76_1.wav
+c76	180101_0031S12_left	16	tpe	95.235	95.864	1		pairs/tpe_c76_2.wav
+c76	180101_0031S12_left	48	tupa	186.194	187.167	1		pairs/tupa_c76_1.wav
+c76	180101_0031S12_left	66	wadikeno	224.022	225.305	1		pairs/wadikeno_c76_1.wav
+c76	180101_0031S12_left	2	wi	32.544	33.050	1		pairs/wi_c76_1.wav
+c76	180101_0031S12_left	54	wumipo	198.764	200.002	1		pairs/wumipo_c76_1.wav
+c76	180101_0031S12_left	12	yi	86.220	86.883	0	ye	pairs/yi_c76_1.wav
+c77	180101_0032S12_ch1	48	diponate	123.899	125.103	0	chiponate	pairs/diponate_c77_1.wav
+c77	180101_0032S12_ch1	20	dp_a	70.582	71.117	1		pairs/dp_a_c77_1.wav
+c77	180101_0032S12_ch1	26	dpa	80.033	80.451	1		pairs/dpa_c77_1.wav
+c77	180101_0032S12_ch1	14	dpee	59.418	60.120	1		pairs/dpee_c77_1.wav
+c77	180101_0032S12_ch1	24	dpi	76.735	77.203	0	chi	pairs/dpi_c77_1.wav
+c77	180101_0032S12_ch1	16	ghuu	62.885	63.604	0	ghn	pairs/ghuu_c77_1.wav
+c77	180101_0032S12_ch1	34	kamo	94.123	94.843	0	kamu	pairs/kamo_c77_1.wav
+c77	180101_0032S12_ch1	32	kani	90.679	91.414	1		pairs/kani_c77_1.wav
+c77	180101_0032S12_ch1	22	kpu	73.625	74.060	1		pairs/kpu_c77_1.wav
+c77	180101_0032S12_ch1	18	lv_e	67.200	67.885	0	lv_a	pairs/lv_e_c77_1.wav
+c77	180101_0032S12_ch1	44	meyadi	115.515	116.585	1		pairs/meyadi_c77_1.wav
+c77	180101_0032S12_ch1	46	mituye	119.382	120.368	1		pairs/mituye_c77_1.wav
+c77	180101_0032S12_ch1	38	nademo	102.985	104.088	1		pairs/nademo_c77_1.wav
+c77	180101_0032S12_ch1	10	nopimade	51.078	52.048	0	nopimate	pairs/nopimade_c77_1.wav
+c77	180101_0032S12_ch1	36	pedumi	98.449	99.302	1		pairs/pedumi_c77_1.wav
+c77	180101_0032S12_ch1	30	piwa	87.574	88.277	1		pairs/piwa_c77_1.wav
+c77	180101_0032S12_ch1	8	poni	45.710	46.262	1		pairs/poni_c77_1.wav
+c77	180101_0032S12_ch1	12	t_ee	55.589	56.175	1		pairs/t_ee_c77_1.wav
+c77	180101_0032S12_ch1	50	todiwuma	128.109	129.183	0	tochiwuma	pairs/todiwuma_c77_1.wav
+c77	180101_0032S12_ch1	28	towi	83.778	84.347	1		pairs/towi_c77_1.wav
+c77	180101_0032S12_ch1	42	tumowe	111.297	112.233	1		pairs/tumowe_c77_1.wav
+c77	180101_0032S12_ch1	2	wi	32.410	32.878	0	owe	pairs/wi_c77_1.wav
+c77	180101_0032S12_ch1	4	wi	35.262	35.580	1		pairs/wi_c77_2.wav
+c77	180101_0032S12_ch1	6	wi	40.814	41.500	1		pairs/wi_c77_3.wav
+c77	180101_0032S12_ch1	40	widone	107.312	108.249	0	wudone	pairs/widone_c77_1.wav
+c78	180101_0033S12_ch1	20	dpa	113.477	114.248	1		pairs/dpa_c78_1.wav
+c78	180101_0033S12_ch1	32	dpa2	133.736	134.303	1		pairs/dpa2_c78_1.wav
+c78	180101_0033S12_ch1	34	dpa2	137.180	137.859	1		pairs/dpa2_c78_2.wav
+c78	180101_0033S12_ch1	36	dpe	140.713	141.279	1		pairs/dpe_c78_1.wav
+c78	180101_0033S12_ch1	22	dpu	116.399	117.056	1		pairs/dpu_c78_1.wav
+c78	180101_0033S12_ch1	40	gh_aa	147.889	148.614	1		pairs/gh_aa_c78_1.wav
+c78	180101_0033S12_ch1	48	kipo	163.180	164.018	1		pairs/kipo_c78_1.wav
+c78	180101_0033S12_ch1	12	kp_aa	81.270	82.085	0	p_aa	pairs/kp_aa_c78_1.wav
+c78	180101_0033S12_ch1	14	kp_aa	86.219	87.080	0	p_aa	pairs/kp_aa_c78_2.wav
+c78	180101_0033S12_ch1	16	kp_aa	90.704	91.519	0	p_aa	pairs/kp_aa_c78_3.wav
+c78	180101_0033S12_ch1	18	kp_aa	96.838	97.472	0	p_aa	pairs/kp_aa_c78_4.wav
+c78	180101_0033S12_ch1	38	lva	144.174	145.035	1		pairs/lva_c78_1.wav
+c78	180101_0033S12_ch1	28	lvi	126.836	127.583	1		pairs/lvi_c78_1.wav
+c78	180101_0033S12_ch1	50	mituye	166.849	167.959	1		pairs/mituye_c78_1.wav
+c78	180101_0033S12_ch1	54	nademo	175.245	176.445	1		pairs/nademo_c78_1.wav
+c78	180101_0033S12_ch1	42	noki	151.538	152.512	1		pairs/noki_c78_1.wav
+c78	180101_0033S12_ch1	46	nomi	159.811	160.853	1		pairs/nomi_c78_1.wav
+c78	180101_0033S12_ch1	64	nomiwake	195.675	197.012	1		pairs/nomiwake_c78_1.wav
+c78	180101_0033S12_ch1	6	nopimade	66.769	67.925	0	nopimate	pairs/nopimade_c78_1.wav
+c78	180101_0033S12_ch1	8	nopimade	72.585	73.922	1		pairs/nopimade_c78_2.wav
+c78	180101_0033S12_ch1	52	nuyedi	171.220	172.284	1		pairs/nuyedi_c78_1.wav
+c78	180101_0033S12_ch1	4	poni	63.021	63.870	1		pairs/poni_c78_1.wav
+c78	180101_0033S12_ch1	10	t_ee	76.626	77.374	1		pairs/t_ee_c78_1.wav
+c78	180101_0033S12_ch1	60	tiwune	187.078	188.120	1		pairs/tiwune_c78_1.wav
+c78	180101_0033S12_ch1	62	todiwuma	191.359	192.718	1		pairs/todiwuma_c78_1.wav
+c78	180101_0033S12_ch1	44	towi	155.530	156.595	1		pairs/towi_c78_1.wav
+c78	180101_0033S12_ch1	30	tp_a	130.279	130.845	1		pairs/tp_a_c78_1.wav
+c78	180101_0033S12_ch1	24	tpe	119.366	120.136	0	tpê	pairs/tpe_c78_1.wav
+c78	180101_0033S12_ch1	26	tpe	123.352	124.100	1		pairs/tpe_c78_2.wav
+c78	180101_0033S12_ch1	2	wi	59.317	59.997	1		pairs/wi_c78_1.wav
+c78	180101_0033S12_ch1	56	widone	179.254	180.115	1		pairs/widone_c78_1.wav
+c78	180101_0033S12_ch1	58	wumipo	183.363	184.563	1		pairs/wumipo_c78_1.wav
+c79	180101_0034S12_ch1	52	dimope	178.595	179.715	0	timope	pairs/dimope_c79_1.wav
+c79	180101_0034S12_ch1	34	dpa	132.128	132.631	1		pairs/dpa_c79_1.wav
+c79	180101_0034S12_ch1	14	dpa2	88.922	89.564	1		pairs/dpa2_c79_1.wav
+c79	180101_0034S12_ch1	30	dpe	124.119	124.517	1		pairs/dpe_c79_1.wav
+c79	180101_0034S12_ch1	24	dpu	111.215	111.620	1		pairs/dpu_c79_1.wav
+c79	180101_0034S12_ch1	32	gh_aa	128.095	128.598	1		pairs/gh_aa_c79_1.wav
+c79	180101_0034S12_ch1	44	kipo	160.091	160.837	1		pairs/kipo_c79_1.wav
+c79	180101_0034S12_ch1	46	kipo	165.251	165.900	0	tipo	pairs/kipo_c79_2.wav
+c79	180101_0034S12_ch1	26	kp_aa	115.440	115.919	1		pairs/kp_aa_c79_1.wav
+c79	180101_0034S12_ch1	28	lva	119.934	120.453	1		pairs/lva_c79_1.wav
+c79	180101_0034S12_ch1	12	lvi	84.693	85.453	1		pairs/lvi_c79_1.wav
+c79	180101_0034S12_ch1	40	nomi	150.924	151.947	1		pairs/nomi_c79_1.wav
+c79	180101_0034S12_ch1	60	nomiwake	197.520	198.948	1		pairs/nomiwake_c79_1.wav
+c79	180101_0034S12_ch1	8	nopimade	74.930	76.399	1		pairs/nopimade_c79_1.wav
+c79	180101_0034S12_ch1	56	nuyedi	188.110	189.246	1		pairs/nuyedi_c79_1.wav
+c79	180101_0034S12_ch1	54	pedumi	183.437	184.427	1		pairs/pedumi_c79_1.wav
+c79	180101_0034S12_ch1	36	piwa	136.312	137.286	0	piwi	pairs/piwa_c79_1.wav
+c79	180101_0034S12_ch1	38	piwa	145.391	146.348	0	piwo	pairs/piwa_c79_2.wav
+c79	180101_0034S12_ch1	4	poni	65.180	65.873	1		pairs/poni_c79_1.wav
+c79	180101_0034S12_ch1	6	poni	69.638	70.449	1		pairs/poni_c79_2.wav
+c79	180101_0034S12_ch1	10	t_ee	80.218	80.775	1		pairs/t_ee_c79_1.wav
+c79	180101_0034S12_ch1	50	tiwune	174.263	175.204	1		pairs/tiwune_c79_1.wav
+c79	180101_0034S12_ch1	20	tp_a	102.402	102.841	1		pairs/tp_a_c79_1.wav
+c79	180101_0034S12_ch1	22	tp_a	107.019	107.432	1		pairs/tp_a_c79_2.wav
+c79	180101_0034S12_ch1	16	tpe	93.496	94.087	0	tê	pairs/tpe_c79_1.wav
+c79	180101_0034S12_ch1	18	tpe	97.092	97.616	0	tê	pairs/tpe_c79_2.wav
+c79	180101_0034S12_ch1	42	tupa	155.419	156.198	1		pairs/tupa_c79_1.wav
+c79	180101_0034S12_ch1	62	wadikeno	202.296	203.529	1		pairs/wadikeno_c79_1.wav
+c79	180101_0034S12_ch1	64	wadikeno	209.258	210.215	1		pairs/wadikeno_c79_2.wav
+c79	180101_0034S12_ch1	2	wi	59.244	60.027	1		pairs/wi_c79_1.wav
+c79	180101_0034S12_ch1	48	widone	169.705	170.679	1		pairs/widone_c79_1.wav
+c79	180101_0034S12_ch1	58	wumipo	192.651	193.836	1		pairs/wumipo_c79_1.wav
+c80	180101_0035S12_ch1	56	dimope	203.700	204.589	0	tiwope	pairs/dimope_c80_1.wav
+c80	180101_0035S12_ch1	58	diponate	208.400	209.702	0	tiponape	pairs/diponate_c80_1.wav
+c80	180101_0035S12_ch1	52	diyeto	195.054	195.816	0	piyato	pairs/diyeto_c80_1.wav
+c80	180101_0035S12_ch1	16	dp_a	116.760	117.316	1		pairs/dp_a_c80_1.wav
+c80	180101_0035S12_ch1	18	dp_a	120.426	120.934	1		pairs/dp_a_c80_2.wav
+c80	180101_0035S12_ch1	20	dp_a	127.236	127.649	1		pairs/dp_a_c80_3.wav
+c80	180101_0035S12_ch1	14	dpa	112.188	112.680	1		pairs/dpa_c80_1.wav
+c80	180101_0035S12_ch1	34	dpee	155.644	156.081	1		pairs/dpee_c80_1.wav
+c80	180101_0035S12_ch1	36	dpee	158.970	159.454	1		pairs/dpee_c80_2.wav
+c80	180101_0035S12_ch1	22	dpi	131.210	131.702	1		pairs/dpi_c80_1.wav
+c80	180101_0035S12_ch1	30	ghuu	146.003	146.654	1		pairs/ghuu_c80_1.wav
+c80	180101_0035S12_ch1	44	kamo	176.867	177.549	1		pairs/kamo_c80_1.wav
+c80	180101_0035S12_ch1	40	kani	168.375	169.026	1		pairs/kani_c80_1.wav
+c80	180101_0035S12_ch1	32	kpu	149.687	150.099	0	ghî	pairs/kpu_c80_1.wav
+c80	180101_0035S12_ch1	24	lv_e	135.036	135.592	0	w:a	pairs/lv_e_c80_1.wav
+c80	180101_0035S12_ch1	26	lv_e	138.529	139.005	0	w:a	pairs/lv_e_c80_2.wav
+c80	180101_0035S12_ch1	28	lv_e	142.257	142.812	0	vwa	pairs/lv_e_c80_3.wav
+c80	180101_0035S12_ch1	48	meyadi	185.216	186.041	1		pairs/meyadi_c80_1.wav
+c80	180101_0035S12_ch1	50	nayeki	189.609	190.498	0	nayéki	pairs/nayeki_c80_1.wav
+c80	180101_0035S12_ch1	6	nopimade	82.536	83.600	0	nopinade	pairs/nopimade_c80_1.wav
+c80	180101_0035S12_ch1	8	nopimade	87.744	88.696	0	nokina	pairs/nopimade_c80_2.wav
+c80	180101_0035S12_ch1	10	nopimade	93.600	94.933	0	opinae	pairs/nopimade_c80_3.wav
+c80	180101_0035S12_ch1	54	pedumi	199.388	200.055	0	peduwi	pairs/pedumi_c80_1.wav
+c80	180101_0035S12_ch1	38	piwa	163.898	164.493	1		pairs/piwa_c80_1.wav
+c80	180101_0035S12_ch1	4	poni	76.823	77.839	1		pairs/poni_c80_1.wav
+c80	180101_0035S12_ch1	46	tumowe	180.897	181.707	1		pairs/tumowe_c80_1.wav
+c80	180101_0035S12_ch1	42	tupa	172.755	173.358	1		pairs/tupa_c80_1.wav
+c80	180101_0035S12_ch1	60	wadikeno	212.909	214.131	0		pairs/wadikeno_c80_1.wav
+c80	180101_0035S12_ch1	2	wi	68.663	69.489	1		pairs/wi_c80_1.wav
+c80	180101_0035S12_ch1	12	yi	107.499	108.769	1		pairs/yi_c80_1.wav
+c81	180101_0036S12_ch1	81	diponate	315.817	316.958	0	di	pairs/diponate_c81_1.wav
+c81	180101_0036S12_ch1	82	diponate	316.958	318.171	1		pairs/diponate_c81_2.wav
+c81	180101_0036S12_ch1	63	diyeto	266.575	267.801	1		pairs/diyeto_c81_1.wav
+c81	180101_0036S12_ch1	65	diyeto	271.217	272.473	1		pairs/diyeto_c81_2.wav
+c81	180101_0036S12_ch1	12	dp_a	119.481	120.140	0	dpa	pairs/dp_a_c81_1.wav
+c81	180101_0036S12_ch1	14	dp_a	124.118	124.669	1		pairs/dp_a_c81_2.wav
+c81	180101_0036S12_ch1	16	dp_a	128.483	128.866	1		pairs/dp_a_c81_3.wav
+c81	180101_0036S12_ch1	26	dpa	152.936	153.411	0	pa	pairs/dpa_c81_1.wav
+c81	180101_0036S12_ch1	28	dpa	156.124	156.599	0	pa	pairs/dpa_c81_2.wav
+c81	180101_0036S12_ch1	30	dpa	159.771	160.399	1		pairs/dpa_c81_3.wav
+c81	180101_0036S12_ch1	32	dpa	164.412	164.979	0	dp:aa	pairs/dpa_c81_4.wav
+c81	180101_0036S12_ch1	34	dpee	176.981	177.870	1		pairs/dpee_c81_1.wav
+c81	180101_0036S12_ch1	40	dpi	199.467	200.371	0	pi	pairs/dpi_c81_1.wav
+c81	180101_0036S12_ch1	42	dpi	204.524	205.336	0	pchi	pairs/dpi_c81_2.wav
+c81	180101_0036S12_ch1	44	dpi	209.012	209.702	0	pchi	pairs/dpi_c81_3.wav
+c81	180101_0036S12_ch1	46	dpi	214.222	215.019	0	pchi	pairs/dpi_c81_4.wav
+c81	180101_0036S12_ch1	48	dpi	220.396	221.285	0	pchi	pairs/dpi_c81_5.wav
+c81	180101_0036S12_ch1	18	ghuu	132.743	133.387	1		pairs/ghuu_c81_1.wav
+c81	180101_0036S12_ch1	20	ghuu	136.498	137.294	1		pairs/ghuu_c81_2.wav
+c81	180101_0036S12_ch1	22	ghuu	140.619	141.477	1		pairs/ghuu_c81_3.wav
+c81	180101_0036S12_ch1	24	ghuu	146.975	148.094	0	ghoo	pairs/ghuu_c81_4.wav
+c81	180101_0036S12_ch1	59	kamo	254.916	255.866	0	tamo	pairs/kamo_c81_1.wav
+c81	180101_0036S12_ch1	52	kani	239.042	239.992	0	keni	pairs/kani_c81_1.wav
+c81	180101_0036S12_ch1	54	kani	243.348	244.145	0	ken	pairs/kani_c81_2.wav
+c81	180101_0036S12_ch1	55	kani	244.145	244.819	1		pairs/kani_c81_3.wav
+c81	180101_0036S12_ch1	38	kpu	194.732	195.375	0		pairs/kpu_c81_1.wav
+c81	180101_0036S12_ch1	36	lv_e	189.384	190.089	0	wi	pairs/lv_e_c81_1.wav
+c81	180101_0036S12_ch1	67	meyadi	276.687	278.281	1		pairs/meyadi_c81_1.wav
+c81	180101_0036S12_ch1	73	mituye	291.140	292.489	1		pairs/mituye_c81_1.wav
+c81	180101_0036S12_ch1	61	nademo	260.951	262.514	0	nade	pairs/nademo_c81_1.wav
+c81	180101_0036S12_ch1	75	nayeki	296.238	297.499	1		pairs/nayeki_c81_1.wav
+c81	180101_0036S12_ch1	50	noki	226.235	227.399	0	noti	pairs/noki_c81_1.wav
+c81	180101_0036S12_ch1	8	nopimade	109.333	110.758	1		pairs/nopimade_c81_1.wav
+c81	180101_0036S12_ch1	6	poni	100.749	101.378	1		pairs/poni_c81_1.wav
+c81	180101_0036S12_ch1	77	todiwuma	302.085	304.633	1		pairs/todiwuma_c81_1.wav
+c81	180101_0036S12_ch1	79	todiwuma	310.625	312.177	1		pairs/todiwuma_c81_2.wav
+c81	180101_0036S12_ch1	57	towi	248.908	249.828	0	tuwi	pairs/towi_c81_1.wav
+c81	180101_0036S12_ch1	69	tumowe	282.043	283.223	0	tomowe	pairs/tumowe_c81_1.wav
+c81	180101_0036S12_ch1	71	tumowe	286.252	287.355	1		pairs/tumowe_c81_2.wav
+c81	180101_0036S12_ch1	2	wi	92.888	93.302	1		pairs/wi_c81_1.wav
+c81	180101_0036S12_ch1	4	wi	95.953	96.320	1		pairs/wi_c81_2.wav
+c81	180101_0036S12_ch1	10	yi	114.084	115.034	1		pairs/yi_c81_1.wav
+c82	180101_0037S12_ch1	68	dimope	159.986	161.190	1		pairs/dimope_c82_1.wav
+c82	180101_0037S12_ch1	87	diponate	204.513	206.018	1		pairs/diponate_c82_1.wav
+c82	180101_0037S12_ch1	14	dpa	37.301	37.903	1		pairs/dpa_c82_1.wav
+c82	180101_0037S12_ch1	16	dpa	41.180	41.782	1		pairs/dpa_c82_2.wav
+c82	180101_0037S12_ch1	24	dpa2	59.980	60.883	1		pairs/dpa2_c82_1.wav
+c82	180101_0037S12_ch1	26	dpa2	63.826	64.662	1		pairs/dpa2_c82_2.wav
+c82	180101_0037S12_ch1	50	dpe	115.370	116.105	1		pairs/dpe_c82_1.wav
+c82	180101_0037S12_ch1	52	dpe	120.319	120.988	1		pairs/dpe_c82_2.wav
+c82	180101_0037S12_ch1	30	dpu	71.918	72.821	0	dîdî	pairs/dpu_c82_1.wav
+c82	180101_0037S12_ch1	32	dpu	75.338	75.906	0	du	pairs/dpu_c82_2.wav
+c82	180101_0037S12_ch1	42	gh_aa	97.040	97.977	0	gh:áá	pairs/gh_aa_c82_1.wav
+c82	180101_0037S12_ch1	44	gh_aa	101.756	102.559	1		pairs/gh_aa_c82_2.wav
+c82	180101_0037S12_ch1	58	kamo	136.681	137.584	1		pairs/kamo_c82_1.wav
+c82	180101_0037S12_ch1	60	kamo	141.003	142.074	1		pairs/kamo_c82_2.wav
+c82	180101_0037S12_ch1	46	kp_aa	106.212	106.982	1		pairs/kp_aa_c82_1.wav
+c82	180101_0037S12_ch1	28	lva	67.871	68.640	1		pairs/lva_c82_1.wav
+c82	180101_0037S12_ch1	48	lvi	110.393	111.229	1		pairs/lvi_c82_1.wav
+c82	180101_0037S12_ch1	70	nayeki	164.334	165.538	1		pairs/nayeki_c82_1.wav
+c82	180101_0037S12_ch1	54	nomi	128.015	129.219	1		pairs/nomi_c82_1.wav
+c82	180101_0037S12_ch1	56	nomi	132.567	133.838	1		pairs/nomi_c82_2.wav
+c82	180101_0037S12_ch1	8	nopimade	24.197	25.368	1		pairs/nopimade_c82_1.wav
+c82	180101_0037S12_ch1	76	nuyedi	177.891	179.262	1		pairs/nuyedi_c82_1.wav
+c82	180101_0037S12_ch1	78	nuyedi	183.137	184.374	1		pairs/nuyedi_c82_2.wav
+c82	180101_0037S12_ch1	4	poni	12.960	13.997	1		pairs/poni_c82_1.wav
+c82	180101_0037S12_ch1	6	poni	18.779	19.749	1		pairs/poni_c82_2.wav
+c82	180101_0037S12_ch1	74	tiwune	173.276	174.379	0	pitune	pairs/tiwune_c82_1.wav
+c82	180101_0037S12_ch1	80	todiwuma	188.154	189.425	1		pairs/todiwuma_c82_1.wav
+c82	180101_0037S12_ch1	82	todiwuma	193.338	193.839	0	to	pairs/todiwuma_c82_2.wav
+c82	180101_0037S12_ch1	83	todiwuma	193.839	195.344	1		pairs/todiwuma_c82_3.wav
+c82	180101_0037S12_ch1	85	todiwuma	198.761	200.165	1		pairs/todiwuma_c82_4.wav
+c82	180101_0037S12_ch1	62	towi	145.686	146.689	0	tuwi	pairs/towi_c82_1.wav
+c82	180101_0037S12_ch1	18	tp_a	46.666	47.502	0	tpa	pairs/tp_a_c82_1.wav
+c82	180101_0037S12_ch1	20	tp_a	52.351	52.953	0	tpa	pairs/tp_a_c82_2.wav
+c82	180101_0037S12_ch1	22	tp_a	56.535	57.204	1		pairs/tp_a_c82_3.wav
+c82	180101_0037S12_ch1	34	tpe	79.351	80.087	1		pairs/tpe_c82_1.wav
+c82	180101_0037S12_ch1	36	tpe	83.411	84.147	1		pairs/tpe_c82_2.wav
+c82	180101_0037S12_ch1	38	tpe	87.057	87.793	0	tp:a	pairs/tpe_c82_3.wav
+c82	180101_0037S12_ch1	40	tpe	91.915	92.517	0	tp:a	pairs/tpe_c82_4.wav
+c82	180101_0037S12_ch1	72	tumowe	168.582	169.685	1		pairs/tumowe_c82_1.wav
+c82	180101_0037S12_ch1	64	tupa	150.494	151.397	1		pairs/tupa_c82_1.wav
+c82	180101_0037S12_ch1	2	wi	6.940	8.211	1		pairs/wi_c82_1.wav
+c82	180101_0037S12_ch1	66	widone	155.377	156.347	1		pairs/widone_c82_1.wav
+c82	180101_0037S12_ch1	10	yi	28.639	29.207	0	yá	pairs/yi_c82_1.wav
+c82	180101_0037S12_ch1	12	yi	31.983	32.786	0	ya	pairs/yi_c82_2.wav

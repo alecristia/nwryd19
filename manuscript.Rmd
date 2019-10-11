@@ -1,0 +1,261 @@
+---
+title: "Non-word repetition among the Tsimane': A small-scale study"
+shorttitle        : "NWR among the Tsimane'"
+
+author: 
+  - name          : "Alejandrina Cristia"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "29, rue d'Ulm, 75005, Paris, France"
+    email         : "alecristia@gmail.com"
+  - name          : "Steven Levinson"
+    affiliation   : "2"
+  - name          : "Marisa Casillas"
+    affiliation   : "2"
+
+affiliation:
+  - id            : "1"
+    institution   : "LSCP, Département d’études cognitives, ENS, EHESS, CNRS, Université PSL"
+  - id            : "2"
+    institution   : "MPI"
+
+
+author_note: >
+       
+
+    
+abstract: >    
+    ADD
+
+keywords          : "phonology, non-word repetition"
+wordcount         : "xxx"
+
+bibliography      : ["nwrbib.bib"]
+
+figsintext        : yes
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+lineno            : no
+
+lang              : "english"
+class             : "man"
+output            : papaja::apa6_pdf
+
+---
+
+
+```{r setup, include=FALSE}
+#Sys.setlocale("LC_CTYPE", "en_US_POSIX.UTF-8")
+#Sys.setlocale("LANG", "en_US_POSIX.UTF-8")
+Sys.setlocale(category = "LC_ALL", locale = "en_SE.utf8")
+
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, cache = FALSE, fig.pos = "T")
+require("papaja")
+
+
+```
+
+
+## Introduction
+
+- many studies on phonological development in childhood
+- they show phonology continues developing as children learn more words and gain mastery of phonetic targets
+- one key task in this research in NWR
+- used for theory (eg what are the links between phonology, working memory, and lexicon?), and for applications (nwr as a diagnostic)
+- it has been used acros a wide array of languages, particularly in Europe
+- however, less is known about NWR development in non-Indo European languages
+- this study: NWR in a Yêly Dnyé, an isolate spoken in Rossel Island, PNG, with an unusually dense phonological inventory
+
+In this study, we use nonword repetition (NWR), a technique that has been widely adopted to study the development of perception-production across multiple languages (CITE), particularly in Europe (CITE). In NWR studies, participants are presented auditorily with an item that is phonologically legal but lexically meaningless in the language children are learning. The child should immediately try to say it back without changing anything. Accuracy is thought to reflect long-term phonological knowledge (which allows the child to perceive the item accurately even though it is not a real word they have encountered before) as well as online working memory (to encode the item in the interval between hearing it and saying it back). In our implementation of NWR, we additionally made sure that some of the items contained typologically rare and/or  challenging sounds, to additionally capture children's auditory-articulatory accuracy.
+
+Little is known about language development in children growing up in Rossel Island, a community of primarily subsistence farmers who tend to reside in clise-knitted villages where child care is distributed across many individuals, and who typically speak Yélî Dnyé, a phonologically and lexically complex language. 
+
+### Intro to the language
+
+- complexity in the vowel system
+- complexity in the consonant system
+- word shapes
+- typical word length
+- although not the focus of this paper, high use of suppletion in verbal paradigms, other features of language, see Levinson XXX for details
+
+### Intro to the people
+
+- usually monolingual at home
+- schooling in English but it starts at age XX, so not relevant here
+- however, some use of English due to immigrants & children of immigrants
+- children spend a lot of time with other children
+- most parents are subsistence farmers
+- parental education generally varies between XX and YY
+
+### Brief review of NWR for our purposes
+
+- typical structure of NWR tasks: N of items
+- complexity varies widely across tasks, sometimes within tasks on purpose
+- some authors modulate structural complexity (nb syll, syllable structure), others familiarity via phonotactic probability
+- calculation of frequency in Yêli is challenging bc low resource language
+- so we only manipulated structural complexity, not probability
+- previous work seems to avoid difficult sounds
+- but we felt this was important to represent the language, so we also varied this factor
+
+- previous work shows even 2yo can do the task
+- but there are striking changes with age
+- inconsistent results RE effects of SES (including parental education) & child sex
+
+- brief summary of inconsistent results SES
+
+- idem for sex
+
+### Research questions and predictions
+
+- What is the accuracy (whole word, phoneme based, distance) overall?
+- How does this change as a function of item complexity (nb syll, syll complexity, sound complexity)?
+- How frequent are errors that result in real words? Is that a function of item complexity?
+- Is individual variation explainable by child age, sex, parental education?
+
+
+
+
+Based on previous work, we made the following predictions:
+
+1. Children are more accurate for mono-syllables than longer items
+2. Similarly, we do not know of NWR research that manipulates the difficulty of the sounds that are included in the items, but word naming and other research suggests that children are more accurate when producing easy and/or typologically common sounds than difficult and/or typologically rare sounds
+3. Children's accuracy increases with child age
+4. Non-monolingual Yélî children are less accurate than monolingual ones when tested on the dominant language (we did not test any non-dominant language)
+5. Previous NWR evidence on this is mixed, but general findings on language development suggest that children whose mothers are more educated are more accurate than children whose mothers are less educated
+6. To our knowledge, there is no previous NWR work on this, but other research suggests that first-born children should outperfomr later-born children
+
+Although these predictions were made based on previous work, we also thought reasonable that they would not obtain for the Rossel children in particular, as follows:
+
+1. The length distribution in Yélî words is more balanced than that in English, and thus the performance decline for poly- versus mono-syllables may be less pronounced than that for English. **Check for work on European languages that may have looked into this**
+2. The Yélî sound inventory is very large and compressed, with many similar sounds that are acoustic and articulatory neighbors. Therefore, this may constitute a pressure for children to have finer aduitory skills (and perhaps more precise articulations) than children speaking languages with a simpler inventory. **no work looking at consonants & vowels? no work looking at nasal vowels in particular?**
+3. We had no reservations that children's accuracy increases with child age for the Yélî community as well.
+4. Anecdotally Yélî children grow up in close-knitted communities and thus may receive significant portions of their language input from non-kin (or at least from people other than their mothers, who tend to be the non-native speakers). If so, the difference between monolinguals and not monolinguals may be smaller than that found in other work. That said, one recent study shozs that most child-directed input in the first 2 years does come from the mother, so in so far as this input has a crucial formational role, then there may still be a performance gap between these two groups.
+5. In the Rossel community, formal education plays an extremely minor role in ensuring individual's success, is not a good index of relative socio-economic status, and furthermore there is only a narrow range of variation in maternal educational attainment. This may lead to no or only very small advantages for children whose mothers are more educated, provided that the causal chain between maternal education and child language is via SES more broadly. However, if education directly boosts maternal verbal skills and the incidence of verbal behavior (as suggested by CITE), then we should still see a difference along this factor.
+6. One main causal path between birth order and language development is via parental input (CITE). Given our arguments above for how mothers may not be as important among Rossel people than in other places, then the performance gap between first borns and later borns may be smaller.
+
+## Pre-registration and planned analyses
+
+In view of the hypothesis driven nature of this work, we intended to boost the interpretational value of these data by announcing our analysis plans prior to conducting them. There are a few limitations in our approach:
+
+- The sample size is too small to have enough power to detect all of the relationships of interest
+- In fact, the sample size is too small to detect some of the known effects (see Table XX **add table with r/ds from previous work**)
+- By virtue of this being a language-specific study, it is unclear that our method (including saliently the items we used) is comparable in precision to previous NWR studies
+- Analyses were designed and pre-registered by the same person who collected the data, who coded accuracy (albeit with a non-native ear) on the first 11 participants, and who segmented all children's production. Therefore, a key condition of blinding is not met
+
+Nonetheless, some form of pre-registration still seemed preferrable over the complete lack of it.
+
+The pre-registration can be found XXX
+
+## Stimuli
+
+Many  NWR studies are based on a fixed list of 12-16 items that vary in length between 1 and 4 syllables, often additionally varying syllable complexity and/or cluster presence and complexity, always meeting the condition that they do not mean anything in the target language. We kept the same variation in item length and the non-meaningfulness requirement, but we did not vary syllable complexity and clusters because these are vanishingly rare in the language. We also increased the number of items and individual child would be tested on, so that a child would get up to 23 items to repeat, and we created more items and distributed them across children, so as to increase the coverage, and be able to study more items.
+
+A first list of candidate items was generated in 2018 by selecting simple consonants (LIST) and vowels (LIST) that were combined into CV syllables, further sampling the space of 1- to 4-syllable sequences. These candidates were automatically checked against Levinson's 2015 dictionary and removed from consideration if they appeared in the dictionary. They were further presented orally to three local research assistants, who were asked to repeat them and further say whether they were real words. Any item for which two or more of the assistants reported them having a meaning or some form of association were was excluded.
+
+A second list of candidate items was generated in 2019 by selecting complex consonants and systematically crossing them with all the vowels in the Yelî inventory to produce CV monosyllables. As before, items were automatically excluded if they appeared in the dictionary. Additionally, since hearing vowel length in monosyllables in isolation is challenging, any item that had a short/long real word neighbor was filtered out. Since the phonology and phonetics of Yélî is still in the process of being described (CITE), there could have been undocumented constraints that rendered items illegal. Therefore, we made sure that the precise consonant-vowel sequence occurred in some real word in the dictionary (i.e., that there was a longer word included the monosyllable as a subsequence). These candidates were presented to one informant, for a final check that they did not mean anything. Together with the 2018 selection, they were recorded using a headset XXX and an olympus XXX from the written form presented together with the same item orally. The complete recorded list was finally presented to two more informants, who could repeat all the items and who confirmed there were no real words.
+
+The final list is XX.
+
+A Praat script was written to randomize this list 20 times, and split it into two sublists, to generate 40 different elicitation sets. The split had the following constraint:
+
+- the same 3 items were selected as practice items and used in all 40 elicitation sets
+- splits were done within each length group from the 2018 items (i.e., separately for 1, 2, 3, and 4-syllable items); and among onset groups for the difficult monosyllables generated in 2019 (i.e., all the monosyllables starting with tp were split into 2 sublists). Since some of these groups had an odd number of items, one of the sublists was slightly longer than the other (20 versus 23).
+- once the sublist split had been done, items were randomized such that all children heard first the 3 practice items in a fixed order (1, 2, and 4 syllables), a randomized version of their sublist selection of difficult onset items, and randomized versions of their 2_syllables, then 3-syllables, and finally 4-syllable items.
+
+The 40 elicitation sets are available online from XXX.
+
+## Procedure
+
+We tried to balance three desiderata: That children would not be unduly exposed to the items before they themselves had to repeat them; that children would feel comfortable doing this task with us; and that the community would feel safe with us doing this task with their children. Moreover, there were also some logistic constraints in terms of the space availability. As a result, the places where elicitation took place varied across the hamlets.
+
+Indeed, we visited four different hamlets once, and attempted to test all eligible childr en present at that time, to prevent the items 'spreading' through hearsay. In the first village, we tested children in five different places, with some children being tested inside their house and others tested on the veranda of a house even if it was not their own. The complete list of places and the ways in which they met the desiderata mentioned above can be found in supplementary materials, under comments for each child (direct link xXX).
+ 
+The child was donned a headset (xx for most of the children, xx for the rest). For most children, the headset could not stay comfortably on the child's head, and thus it was placed on the child's shoulders, with the microphone carefully placed close to the child's mouth. A local informant sat next to the child, to would provide the instructions and, if needed, coach the child to make sure, using the 3 practice items as well as real words, that they understood that the task was to repeat the items precisely without changing anything. An experimenter delivered the elicitation stimuli to the local informant and the child over headhphones. 
+
+The first phase was making sure the child understood the task. This was explained orally and the first training item was presented. Often, children froze and did not say anything. If this happened, then we followed this procedure. First, the informant insisted. If the child still did not say anything, the informant asked the child to repeat a real word, and another, and another. If the child could repeat these correctly, then we provided the recorded training item over headphones again. Most children successfully started repeating the items presented over headphones at this point; a few further needed the local informant to model the behavior (i.e., they would hear the item again, and she would say it; then we would play it again, and ask the child to say it). A small minority still failed to repeat the item after hearing it over headphones. If that occurred, we tried with the second training item, at which point some children got it and could continue. A small minority, however, failed to repeat this one, as well as the third training item, in which case we stopped the test altogether. 
+
+NWR studies vary in whether children are provided with several opportunities to hear and say the item. To have a fixed and clear procedure, we decided that items other than the inital three training ones would not be repeated unless the child made an attempt to produce them. If this attempt was judged correct by the local informant, then the experimenter would move on to the next item (whispering this over a headset that was recording a separate track). If the local informant heard a deviation, she indicated to the experimenter that the item needed to be repeated, and up to 5 attempts were allowed. 
+
+Whenever siblings from the same family were tested, an attempt was made to test first the older and then the younger child, and always on different elicitaiton sets.
+
+## Coding
+
+There is an implicit accuracy coding occuring online as a function of whether the local informant asked for the item to be repeated or not. We will call this "online accuracy", and it reflects a wholesale impression of whether the item was correctly or incorrectly repeated.
+
+Additionally, the experimenter listened through all recordings and segmented out every child production. For the first 11 participants, she additionally made a judgment of whether the item was correctly or incorrectly repeated, and transcribed what she heard, which provides both an accuracy measure and a qualitative description of what children were actually saying in response to each stimulus. . We call this "non-native coding," because this experimenter is not familiar with Yélî and has insufficient training on Yélî sounds, including common allophonic variants, not to mention not having some of the sounds in her native perceptual inventory. 
+
+Therefore, we sought additional information by asking a local informant to listen through each child production, paried with the auditory target the child had been provided with, and make a judgment of whether the item was correctly or incorrectly repeated. We additionally asked her to transcribe exactly what the child said, providing some examples of the types of errors children in general make (without making specific reference to Yélî sounds or the items in the elicitation sets). This "native coding" provides both accuracy and qualtiative desciptions of what the child said that are likely more reliable than those of the non-native coder.
+
+## Analyses
+
+For NWR accuracy, we considered only the child's first attempt, which was scored as correct or incorrect online, by a non-native coder (ofr the first 11 kids), and a native coder.
+
+Some NWR studies employ phoneme accuracy (rather than whole word accuracy). We used exclusively the native coding for these, and we calculated accuracy as the number of phonemes that could be aligned across the target and attempt, divided by the number of phonemes of whichever item was longer (the target or the attempt). 
+
+Finally, for describing children's patterns of errors, all repetitions of a given target were taken into account, again using only the native coder's transcriptions.
+
+## Participants
+
+Total N of kids, N of families, N of villages. Some children could not be included for the following reasons: refused participation (N=2), failed to repeat items presented over headphones even after coaching (N=3), spoke too softly to allow offline coding (N=8). In addition, one teenager was tested to put children at ease; their data is not included in analyses below. The remaining XX exhibited the following demographic characteristics
+
+INSERT TABLE WITH THE KEY VARS MENTIONED ABOVE:
+
+- child age
+- monoling
+- mat ed
+- birth order
+
+```{r cars}
+# read.csv("NWR-test-log_FINAL.csv",header=T,sep=";")->fulldemo
+# fulldemo=fulldemo[,-2] #remove children's names
+# fulldemo$dob=as.Date(as.character(fulldemo$DOB.ISO),format="%Y%m%d")
+# fulldemo$test=as.Date(as.character(fulldemo$Date),format="%Y%m%d")
+# fulldemo$age.exact=as.numeric(difftime(fulldemo$test,fulldemo$dob,unit="weeks"))/52.25
+# fulldemo$Age=as.numeric(as.character(fulldemo$Age))
+# plot(fulldemo$Age~fulldemo$age.exact)     
+# write.csv(fulldemo,"nwr-demo.csv")
+                            
+read.csv("NWR-demo.csv",header=T)->demo
+colnames(demo)
+read.table("log2.txt",header=T,sep="\t")->x
+x$rep=gsub(".wav","",gsub(".*_","",x$out),fixed=T)
+x[order(x$out),]->x
+x$cor.online=1
+for(i in 1:dim(x)[1]) if(x$rep[i]>1) x$cor.online[i-1]<-0
+  
+subset(x,rep=="1")->x
+aggregate(x$cor.online,by=list(x$child),mean)->onl
+colnames(onl)<-c("ID","score.online")
+
+print(onl)
+
+aggregate(x$corr,by=list(x$child),mean)->ms
+colnames(ms)<-c("ID","score")
+merge(ms,onl)->ms
+merge(ms,demo)->scores
+scores$Age=as.numeric(as.character(scores$Age))
+scores$Age[is.na(scores$Age)]<-15
+plot(scores$score*100~scores$Age,pch=20,xlab="Age (years)",ylab="% Correct")
+abline(lm(scores$score*100~scores$Age))
+plot(scores$score~scores$monolingual)
+points(scores$score~as.numeric(scores$monolingual),pch=20)
+
+plot(ms$score.online~ms$score)
+
+```
+
+## Discussion
+
+
+\newpage
+
+## Acknowledgments
+
+We are grateful to informants and individuals who participated in the study. AC acknowledges financial and institutional support from Agence Nationale de la Recherche (ANR-17-CE28-0007 LangAge, ANR-16-DATA-0004 ACLEW, ANR-14-CE30-0003 MechELex, ANR-17-EURE-0017) and the J. S. McDonnell Foundation Understanding Human Cognition Scholar Award.
+
+
+# References
+
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
