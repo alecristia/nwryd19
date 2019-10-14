@@ -5,6 +5,8 @@ manuscript_files
 manuscript_files/*
 ~$NWR-test-log_FINAL.xlsx
 .DS_Store
+literature
+literature/*
 
 
 # History files
