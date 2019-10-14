@@ -145,11 +145,33 @@ We tested all children who made themselves available during our visits to differ
 <!-- 1.2.	Example: We used the software program G*Power to conduct a power analysis. Our goal was to obtain .95 power to detect a medium effect size of .25 at the standard .05 alpha error probability.  -->
 <!-- More information: This gives you an opportunity to specifically state how the sample size will be determined. A wide range of possible answers is acceptable; remember that transparency is more important than principled justifications. If you state any reason for a sample size upfront, it is better than stating no reason and leaving the reader to “fill in the blanks.” Acceptable rationales include: a power analysis, an arbitrary number of subjects, or a number based on time or monetary constraints -->
 
-Our sample size was motivated entirely for logistic reasons. Given this constraint, we revisited the literature to better understand which of the effects of interest we may be able to find or not.
+Our sample size was motivated entirely for logistic reasons. 
 
-To begin with, we looked at previous work. NWR studies vary in terms of how many children are included. Farabolini (2018) carried out a study of the literature resulting in two summary tables. The first summary table reviews literature on vocabulary-NWR correlations among bilinguals, showing that in 6 studies, the number of participants ranged between 19 and 105, with a mean of 48.7 and a median of 35.5. The second table reviews 13 studies on correlations between language exposure and NWR among bilinguals, with a median sample size of 52, mean 68, range 39-156. Our study is clearly on the small side in this literature.
+#### How big are the effects we can detect given our sample size?
 
-Second, we looked for the size of effects in our research questions:
+In this section, we look at what are the effect sizes that can be found given this N. Our experimental design (length, complexity) is based on within-participant comparisons. As explained in the section on Variables, Length is coded linearly in terms of number of syllables 1-4; complexity is a binomial variable. As explained in the section on Variables, they will be analyzed using mixed models. Since it is complex to look at power in mixed models, we start with simpler effect sizes. For this design, d between the shortest and longest or simple versus complex is a first approximation. Therefore we looked at the smallest detectable d, with a significance level of .05, a power of 80%, and a one-sided alternative (since we predict higher scores for shorter/simpler items) given a one-sample test, using the pwr package in R:
+
+```{r pwr-d}
+library(pwr)
+pwr.t.test(n=40,power=0.80,sig.level=.05,type="one",alternative="greater")
+```
+
+Our correlational design (age, monolingual status, maternal education, birth order) also lends itself to analysis via mixed models, but as above we start with simpler effect sizes. For this design, the Pearson correlation coefficient r is a first approximation. Therefore we looked at the smallest detectable r, with a significance level of .05, a power of 80%, and a defined direction (higher scores for older, monolinguals, higher educated mothers, firstborns) using the pwr package in R:
+
+```{r pwr-r}
+pwr.r.test(n=40,power=0.80,sig.level=.05,alternative="greater")
+```
+
+Thus, we can theoretically detect d's of above .4 and rs of above .38. However, we will return to this issue given the multiplicity of research questions.
+
+#### How big are effects found in previous work?
+
+We looked at sample sizes in previous work. NWR studies vary in terms of how many children are included. Farabolini (2018) carried out a study of the literature resulting in two summary tables. The first summary table reviews literature on vocabulary-NWR correlations among bilinguals, showing that in 6 studies, the number of participants ranged between 19 and 105, with a mean of 48.7 and a median of 35.5. The second table reviews 13 studies on correlations between language exposure and NWR among bilinguals, with a median sample size of 52, mean 68, range 39-156. Our study is clearly on the small side in this literature. This may be an indication that individual performance is unstable, or that the task is noisy.
+
+Second, we looked for the size of effects in our research questions. AC carried out a scholar.google.com search on 2019-10-14 and inspected the first 20 hits for the search terms *non-word-repetition nwr children "bilingual"*. Papers were excluded because: pdf not directly accessible (5), they reported only on children with language impairment (4), only on bilinguals (1), they were a review paper with no new data (1), children were adolescents (1), resulting on 8 papers being considered. Next, she looked through the top 20 hits for the terms *non-word-repetition nwr children ("maternal education" OR "socio-economic-status")*. Papers were excluded because: pdf not directly accessible (6), they reported on children that were too young (1), did not contain NWR results (2), compared language delayed against bilingual (1), the typical group had been reported on in a different paper (1), resulting on 9 additional papers being considered. In addition, we included 4 papers that we had come across in previous searches, for a total of 23 papers included in the present review.
+
+##### Item length effects
+
 
 
 ```{r len}
@@ -162,6 +184,8 @@ sd3syll=12.0
 
 ```
 
+##### Item complexity effects
+
 
 ```{r comp}
 # Kapalkova high versus low wordlike -- 4yo midpoint
@@ -172,6 +196,9 @@ m3easy=17.57
 sd3easy=2.57
 
 ```
+
+##### Child age effects
+
 
 ```{r age}
 # Vance 2005 -- 5 vs 7 because we also have these
@@ -191,6 +218,18 @@ sd5yok=2.64
 
 ```
 
+##### Maternal education effects
+
+
+
+```{r ed}
+
+
+```
+##### Monolingualism effects
+
+
+
 ```{r monobi}
 # Lotem & Chiat
 bil1.m=.86
@@ -208,13 +247,11 @@ mon2.sd=.14
 
 ```
 
+##### Birth order effects
 
-1. **Length:**
-2. **Complexity:** 
-3. **Age:** 
-4. **Monolingual status:** 
-5. **Maternal education:** 
-6. **Birth order:**  
+AC carried out a scholar.google.com search on 2019-10-14 and inspected the 11 hits for the search items *non-word-repetition nwr children "birth order"* based on title and the text snippet provided by google; as well as full text of the four hits for which google provided a pdf link. None of these contained relevant information.
+
+However, a recent paper by Havron et al (2019) estimated the birth order effect at d=.2, which is too small to be detectable given our sample size.
 
 
 ### Stopping rule
