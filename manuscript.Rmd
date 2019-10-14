@@ -69,7 +69,7 @@ require("papaja")
 
 In this study, we use nonword repetition (NWR), a technique that has been widely adopted to study the development of perception-production across multiple languages (CITE), particularly in Europe (CITE). In NWR studies, participants are presented auditorily with an item that is phonologically legal but lexically meaningless in the language children are learning. The child should immediately try to say it back without changing anything. Accuracy is thought to reflect long-term phonological knowledge (which allows the child to perceive the item accurately even though it is not a real word they have encountered before) as well as online working memory (to encode the item in the interval between hearing it and saying it back). In our implementation of NWR, we additionally made sure that some of the items contained typologically rare and/or  challenging sounds, to additionally capture children's auditory-articulatory accuracy.
 
-Little is known about language development in children growing up in Rossel Island, a community of primarily subsistence farmers who tend to reside in clise-knitted villages where child care is distributed across many individuals, and who typically speak Yélî Dnyé, a phonologically and lexically complex language. 
+Little is known about language development in children growing up in Rossel Island, a community of primarily subsistence farmers who tend to reside in close-knitted villages where child care is distributed across many individuals, and who typically speak Yélî Dnyé, a phonologically and lexically complex language. 
 
 ### Intro to the language
 
@@ -93,14 +93,15 @@ Little is known about language development in children growing up in Rossel Isla
 - typical structure of NWR tasks: N of items
 - complexity varies widely across tasks, sometimes within tasks on purpose
 - some authors modulate structural complexity (nb syll, syllable structure), others familiarity via phonotactic probability
-- calculation of frequency in Yêli is challenging bc low resource language **(MC: but we can try and do a cursory analysis based on the corpora we have from Steve and my transcription of naturalistic interactions!)**
-- so we only manipulated structural complexity, not probability
+- calculation of frequency in Yêli is challenging because it is a low-resource language 
+- so we only manipulated structural complexity, not probability, in the design of the stimuli
 - previous work seems to avoid difficult sounds
 - but we felt this was important to represent the language, so we also varied this factor
 
 - previous work shows even 2yo can do the task
 - but there are striking changes with age
 - inconsistent results RE effects of SES (including parental education) & child sex
+- bilingual disadvantage (could be due to lower exposure to input; learning 2 phonologies; learning 2 lexica)
 
 - brief summary of inconsistent results SES
 
@@ -111,7 +112,7 @@ Little is known about language development in children growing up in Rossel Isla
 - What is the accuracy (whole word, phoneme based, distance) overall?
 - How does this change as a function of item complexity (nb syll, syll complexity, sound complexity)?
 - How frequent are errors that result in real words? Is that a function of item complexity?
-- Is individual variation explainable by child age, sex, parental education?
+- Is individual variation explainable by child age, sex, parental education, birth order, monolingual status?
 
 
 
@@ -119,18 +120,26 @@ Little is known about language development in children growing up in Rossel Isla
 Based on previous work, we made the following predictions:
 
 1. Children are more accurate for mono-syllables than longer items
-2. Similarly, we do not know of NWR research that manipulates the difficulty of the sounds that are included in the items, but word naming and other research suggests that children are more accurate when producing easy and/or typologically common sounds than difficult and/or typologically rare sounds
-3. Children's accuracy increases with child age
-4. Non-monolingual Yélî children are less accurate than monolingual ones when tested on the dominant language (we did not test any non-dominant language) **(MC: or just because they're acquiring two phonologies and so show slightly delayed linguistic development, in parallel with vocab development stuff; we don't have data on their dominant language, but i guess we can assume it's YD for most kids---i'm sure there are exceptions!)**
-5. Previous NWR evidence on this is mixed, but general findings on language development suggest that children whose mothers are more educated are more accurate than children whose mothers are less educated
-6. To our knowledge, there is no previous NWR work on this, but other research suggests that first-born children should outperfomr later-born children
+2. Similarly, we do not know of NWR research that manipulates the difficulty of the sounds that are included in the items, but word naming and other research suggests that children are more accurate when producing easy and/or typologically common sounds than difficult and/or typologically rare sounds. Therefore, we expect higher accuracy for items with common sounds than in those with rare sounds.
+3. Children's accuracy increases with child age.
+4. Non-monolingual Yélî children are less accurate than monolingual ones when tested on the society-dominant language (we did not test any non-dominant language) 
+<!-- **(MC: or just because they're acquiring two phonologies and so show slightly delayed linguistic development, in parallel with vocab development stuff; we don't have data on their dominant language, but i guess we can assume it's YD for most kids---i'm sure there are exceptions!)** ac2mc I added "society-" because that's what I meant (we didn't get proportions of time in which they hear YD versus other languages); I didn't add anything about why this would come out like this or not here, but I'll add this -- although I think the evidence on that is mixed (ie no strong evidence that learning 2 phonologies sets you back)-->
+5. Previous NWR evidence on this is mixed, but general findings on language development suggest that children whose mothers are more educated are more accurate than children whose mothers are less educated.
+6. To our knowledge, there is no previous NWR work on this, but other research suggests that first-born children should outperform later-born children
 
 Although these predictions were made based on previous work, we also thought reasonable that they would not obtain for the Rossel children in particular, as follows:
 
 1. The length distribution in Yélî words is more balanced than that in English, and thus the performance decline for poly- versus mono-syllables may be less pronounced than that for English. **Check for work on European languages that may have looked into this**
-2. The Yélî sound inventory is very large and compressed, with many similar sounds that are acoustic and articulatory neighbors. Therefore, this may constitute a pressure for children to have finer aduitory skills (and perhaps more precise articulations) than children speaking languages with a simpler inventory. **no work looking at consonants & vowels? no work looking at nasal vowels in particular?**
+2. The Yélî sound inventory is very large and compressed, with many similar sounds that are acoustic and articulatory neighbors. Therefore, this may constitute a pressure for children to have finer auditory skills (and perhaps more precise articulations) than children speaking languages with a simpler inventory. As a result, differences between easier and harder items may be smaller in this work than in other research. **no work looking at consonants & vowels? no work looking at nasal vowels in particular?**
 3. We had no reservations that children's accuracy increases with child age for the Yélî community as well.
-4. Anecdotally Yélî children grow up in close-knitted communities and thus may receive significant portions of their language input from non-kin **(MC: definitely almost all kin; 5k of them)** (or at least from people other than their mothers, who tend to be the non-native speakers). If so, the difference between monolinguals and not monolinguals may be smaller than that found in other work **(MC: maybe it'd be more useful to try and estimate the number of non-Y moms who live in each hamlet where testing is taking place?)**. That said, one recent study shozs that most child-directed input in the first 2 years does come from the mother **(MC: i can get you actual estimates for this for YD; let's go with that instead!)**, so in so far as this input has a crucial formational role, then there may still be a performance gap between these two groups.
+4. Anecdotally Yélî children grow up in close-knitted communities and thus may receive significant portions of their language input from people not in their nuclear family 
+<!-- **(MC: definitely almost all kin; 5k of them)** ac2mc I'm not sure this is how bio anthropologists think about kin; because it's about how you attribute resources to boost your genes' chances of being passed on relative to those of others in the same space. So my guess is that there is still a difference between nuclear family and not. Rewrote kin -> nuclear family -->
+(or at least from people other than their mothers, who tend to be the non-native speakers). If so, the difference between monolinguals and not monolinguals may be smaller than that found in other work
+<!-- **(MC: maybe it'd be more useful to try and estimate the number of non-Y moms who live in each hamlet where testing is taking place?)** ac2mc not sure it's worth the effort, in any case other female adults are almost certain to have very little impact on the target child... Perhaps I'm not saying something very clearly? -->
+. That said, one recent study on the same population shows that most child-directed input in the first 2 years does come from the mother 
+<!-- **(MC: i can get you actual estimates for this for YD; let's go with that instead!)** -->
+<!-- ac2mc I think I meant your own paper! added "on the same population "-->
+, so in so far as this input has a crucial formational role, then there may still be a performance gap between these two groups.
 5. In the Rossel community, formal education plays an extremely minor role in ensuring individual's success, is not a good index of relative socio-economic status, and furthermore there is only a narrow range of variation in maternal educational attainment. This may lead to no or only very small advantages for children whose mothers are more educated, provided that the causal chain between maternal education and child language is via SES more broadly. However, if education directly boosts maternal verbal skills and the incidence of verbal behavior (as suggested by CITE), then we should still see a difference along this factor.
 6. One main causal path between birth order and language development is via parental input (CITE). Given our arguments above for how mothers may not be as important among Rossel people than in other places, then the performance gap between first borns and later borns may be smaller.
 
@@ -213,11 +222,15 @@ INSERT TABLE WITH THE KEY VARS MENTIONED ABOVE:
 # fulldemo$test=as.Date(as.character(fulldemo$Date),format="%Y%m%d")
 # fulldemo$age.exact=as.numeric(difftime(fulldemo$test,fulldemo$dob,unit="weeks"))/52.25
 # fulldemo$Age=as.numeric(as.character(fulldemo$Age))
-# plot(fulldemo$Age~fulldemo$age.exact)     
+# plot(fulldemo$Age~fulldemo$age.exact)
 # write.csv(fulldemo,"nwr-demo.csv")
                             
 read.csv("NWR-demo.csv",header=T)->demo
 colnames(demo)
+subset(demo,included=="yes" & Age <12 & !is.na(Age))->inc
+
+summary(inc)
+
 read.table("log2.txt",header=T,sep="\t")->x
 x$rep=gsub(".wav","",gsub(".*_","",x$out),fixed=T)
 x[order(x$out),]->x
@@ -244,6 +257,10 @@ points(scores$score~as.numeric(scores$monolingual),pch=20)
 plot(ms$score.online~ms$score)
 
 ```
+
+### Exploratory analyses: The role of phonotactic frequency
+
+**(MC: but we can try and do a cursory analysis based on the corpora we have from Steve and my transcription of naturalistic interactions!)**
 
 ## Discussion
 

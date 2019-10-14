@@ -28,14 +28,34 @@ knitr::kable
 <!-- 1.2.	Example: Though there is strong evidence to suggest that sugar affects taste preferences, the effect has never been demonstrated in brownies. Therefore, we will measure taste preference for four different levels of sugar concentration in a standard brownie recipe to determine if the effect exists in this pastry.  -->
 <!-- 1.3.	More info: The description should be no longer than the length of an abstract. It can give some context for the proposed study, but great detail is not needed here for your preregistration. -->
 
+In this study, we use nonword repetition (NWR), a technique that has been widely adopted to study the development of perception-production across multiple languages, particularly in Europe. In NWR studies, participants are presented auditorily with an item that is phonologically legal but lexically meaningless in the language children are learning. The child should immediately try to say it back without changing anything. Accuracy is thought to reflect long-term phonological knowledge (which allows the child to perceive the item accurately even though it is not a real word they have encountered before) as well as online working memory (to encode the item in the interval between hearing it and saying it back). In our implementation of NWR, we additionally made sure that some of the items contained typologically rare and/or  challenging sounds, to additionally capture children's auditory-articulatory accuracy.
 
+Little is known about language development in children growing up in Rossel Island, a community of primarily subsistence farmers who tend to reside in close-knitted villages where child care is distributed across many individuals, and who typically speak Yélî Dnyé, a phonologically and lexically complex language. 
 
 
 ## Hypotheses
 
 <!-- 1.1.	List specific, concise, and testable hypotheses. Please state if the hypotheses are directional or non-directional. If directional, state the direction. A predicted effect is also appropriate here. If a specific interaction or moderation is important to your research, you can list that as a separate hypothesis.  -->
 <!-- 1.2.	Example: If taste affects preference, then mean preference indices will be higher with higher concentrations of sugar.  -->
-<!-- Our hypothesis is that child-centered rearing (as a proxy for relative level of child-directed speech) is positively related to size of phoneme inventories: we predict that in languages in which a higher proportion of adult speakers provide with more responses of “child-centered rearing” responses, we find larger phoneme inventories than for languages with more responses of “parents have a life of their own”.  -->
+Based on previous work, we made the following predictions:
+
+1. **Length:** Children are more accurate for mono-syllables than longer items
+2. **Complexity:** Similarly, we do not know of NWR research that manipulates the difficulty of the sounds that are included in the items, but word naming and other research suggests that children are more accurate when producing easy and/or typologically common sounds than difficult and/or typologically rare sounds
+3. **Age:** Children's accuracy increases with child age
+4. **Monolingual status:** Non-monolingual Yélî children are less accurate than monolingual ones when tested on the society-dominant language (we did not test any non-dominant language) 
+<!-- **(MC: or just because they're acquiring two phonologies and so show slightly delayed linguistic development, in parallel with vocab development stuff; we don't have data on their dominant language, but i guess we can assume it's YD for most kids---i'm sure there are exceptions!)** ac2mc I added "society-" because that's what I meant (we didn't get proportions of time in which they hear YD versus other languages); I didn't add anything about why this would come out like this or not here, but I'll add this -- although I think the evidence on that is mixed (ie no strong evidence that learning 2 phonologies sets you back)-->
+5. **Maternal education:** Previous NWR evidence on this is mixed, but general findings on language development suggest that children whose mothers are more educated are more accurate than children whose mothers are less educated
+6. **Birth order:**  To our knowledge, there is no previous NWR work on this, but other research suggests that first-born children should outperform later-born children
+
+Although these predictions were made based on previous work, we also thought reasonable that they would not obtain for the Rossel children in particular, as follows:
+
+1. The length distribution in Yélî words is more balanced than that in English, and thus the performance decline for poly- versus mono-syllables may be less pronounced than that for English. 
+2. The Yélî sound inventory is very large and compressed, with many similar sounds that are acoustic and articulatory neighbors. Therefore, this may constitute a pressure for children to have finer auitory skills (and perhaps more precise articulations) than children speaking languages with a simpler inventory. 
+3. We had no reservations that children's accuracy increases with child age for the Yélî community as well.
+4. Anecdotally Yélî children grow up in close-knitted communities and thus may receive significant portions of their language input from people not in their nuclear family 
+(or at least from people other than their mothers, who tend to be the non-native speakers). If so, the difference between monolinguals and not monolinguals may be smaller than that found in other work. That said, one recent study on the same population shows that most child-directed input in the first 2 years does come from the mother, so in so far as this input has a crucial formational role, then there may still be a performance gap between these two groups.
+5. In the Rossel community, formal education plays an extremely minor role in ensuring individual's success, is not a good index of relative socio-economic status, and furthermore there is only a narrow range of variation in maternal educational attainment. This may lead to no or only very small advantages for children whose mothers are more educated, provided that the causal chain between maternal education and child language is via SES more broadly. However, if education directly boosts maternal verbal skills and the incidence of verbal behavior, then we should still see a difference along this factor.
+6. One main causal path between birth order and language development is via parental input. Given our arguments above for how mothers may not be as important among Rossel people than in other places, then the performance gap between first borns and later borns may be smaller.
 
 
 ## Design plan
@@ -48,6 +68,8 @@ knitr::kable
 <!-- 1.3.	Meta-Analysis - A systematic review of published studies. -->
 <!-- 1.4.	Other  -->
 
+This is both an experiment and an observational study. Questions pertaining to stimulus properties (length & complexity) can be considered experimental; the others bear on observing children's behavior albeit in a very constrained situation (age, monolingual status, maternal education, birth order).
+
 ### Blinding
 <!-- 1.1.	Blinding describes who is aware of the experimental manipulations within a study. Mark all that apply. -->
 <!-- 1.1.1.	No blinding is involved in this study. -->
@@ -56,12 +78,18 @@ knitr::kable
 <!-- 1.1.4.	Personnel who analyze the data collected from the study are not aware of the treatment applied to any given group. -->
 <!-- 1.	Is there any additional blinding in this study? -->
 
+Blinding was partial, as follows:
+
+- Personnel who interacted directly with the participants did know whether an item was one or multiple syllables long, and sometimes of other features of the child (whether they were monolingual, their age), but was not aware of the finer-grained hypotheses.
+- Participants were not aware of the specific hypotheses
+
 
 ###	Study design
 <!-- 1.1.	Describe your study design. Examples include two-group, factorial, randomized block, and repeated measures. Is it a between (unpaired), within-subject (paired), or mixed design? Describe any counterbalancing required. Typical study designs for observation studies include cohort, cross sectional, and case-control studies. -->
 <!-- 1.2.	Example: We have a between subjects design with 1 factor (sugar by mass) with 4 levels.  -->
 <!-- 1.3.	More info: This question has a variety of possible answers. The key is for a researcher to be as detailed as is necessary given the specifics of their design. Be careful to determine if every parameter has been specified in the description of the study design. There may be some overlap between this question and the following questions. That is OK, as long as sufficient detail is given in one of the areas to provide all of the requested information. For example, if the study design describes a complete factorial, 2 X 3 design and the treatments and levels are specified previously, you do not have to repeat that information. -->
 
+Regarding the experimental section (length & complexity), this is a within-participant repeated measures design. Regarding the observational section (age, monolingual status, maternal education, birth order), this is a cross-sectional design.
 
 ### Randomization
 
@@ -69,6 +97,7 @@ knitr::kable
 <!-- 1.2.	Example: We will use block randomization, where each participant will be randomly assigned to one of the four equally sized, predetermined blocks. The random number list used to create these four blocks will be created using the web applications available at http://random.org.  -->
 <!-- 1.3.	More info: Typical randomization techniques include: simple, block, stratified, and adaptive covariate randomization. If randomization is required for the study, the method should be specified here, not simply the source of random numbers. -->
 
+Regarding the experimental section (length & complexity), we did not randomize length but we did randomize complexity. Since the test is very short overall, it is unlikely that there would be a tiredness effect leading to lower performance towards the end. An improvement due to practice may have occurred. Since there are several items of the same length in a row, we can test for practice effect in such sections. The observational section (age, monolingual status, maternal education, birth order) was not overtly randomized; children were tested based on availability.
 
 ## Sampling Plan
 <!-- In this section we’ll ask you to describe how you plan to collect samples, as well as the number of samples you plan to collect and your rationale for this decision. Please keep in mind that the data described in this section should be the actual data used for analysis, so if you are using a subset of a larger dataset, please describe the subset that will actually be used in your study. -->
@@ -81,31 +110,119 @@ knitr::kable
 <!-- 1.1.4.	Registration prior to analysis of the data: As of the date of submission, the data exist and you have accessed it, though no analysis has been conducted related to the research plan (including calculation of summary statistics). A common situation for this scenario when a large dataset exists that is used for many different studies over time, or when a data set is randomly split into a sample for exploratory analyses, and the other section of data is reserved for later confirmatory data analysis. -->
 <!-- 1.1.5.	Registration following analysis of the data: As of the date of submission, you have accessed and analyzed some of the data relevant to the research plan. This includes preliminary analysis of variables, calculation of descriptive statistics, and observation of data distributions. Please see cos.io/prereg for more information.  -->
 
+Registration prior to analysis of the data: As of the date of submission, the data exist and you have accessed it, though no analysis has been conducted related to the research plan (including calculation of summary statistics).
+
+Please note that an analysis of a different aspect of the data were carried out: online coding by a non-native speaker, of 11 out of the 30+ participants. These only inspected accuracy as a function of age.
+
 ###	Explanation of existing data 
 <!-- 1.1.	If you indicate that you will be using some data that already exist in this study, please describe the steps you have taken to assure that you are unaware of any patterns or summary statistics in the data. This may include an explanation of how access to the data has been limited, who has observed the data, or how you have avoided observing any analysis of the specific data you will use in your study.  -->
 <!-- 1.2.	Example: An appropriate instance of using existing data would be collecting a sample size much larger than is required for the study, using a small portion of it to conduct exploratory analysis, and then registering one particular analysis that showed promising results. After registration, conduct the specified analysis on that part of the dataset that had not been investigated by the researcher up to that point.  -->
 <!-- 1.3.	More info: An appropriate instance of using existing data would be collecting a sample size much larger than is required for the study, using a small portion of it to conduct exploratory analysis, and then registering one particular analysis that showed promising results. After registration, conduct the specified analysis on that part of the dataset that had not been investigated by the researcher up to that point. -->
+
+The data were collected by AC, and the coding by a native speaker was overseen by MC. 
 
 ### Data collection procedures
 <!-- 1.1.	Please describe the process by which you will collect your data. If you are using human subjects, this should include the population from which you obtain subjects, recruitment efforts, payment for participation, how subjects will be selected for eligibility from the initial pool (e.g. inclusion and exclusion rules), and your study timeline. For studies that donÍt include human subjects, include information about how you will collect samples, duration of data gathering efforts, source or location of samples, or batch numbers you will use.  -->
 <!-- 1.2.	Example: Participants will be recruited through advertisements at local pastry shops. Participants will be paid $10 for agreeing to participate (raised to $30 if our sample size is not reached within 15 days of beginning recruitment). Participants must be at least 18 years old and be able to eat the ingredients of the pastries. -->
 <!-- 1.3.	More information: The answer to this question requires a specific set of instructions so that another person could repeat the data collection procedures and recreate the study population. Alternatively, if the study population would be unable to be reproduced because it relies on a specific set of circumstances unlikely to be recreated (e.g., a community of people from a specific time and location), the criteria and methods for creating the group and the rationale for this unique set of subjects should be clear. -->
 
-### 1.	Sample size
+Hamlets were visited and the word about the study was spread, so that children could come to be tested in exchange of a packet of biscuits. We asked for children aged between 4 and 10 years, but sometimes older children participated. Some children were coerced by parents or others to participate, which was obvious in that they did not repeat even real words or the did not repeat the prompts. Sometimes a crowd gathered around the study and children were shy, talking too low for the recording to be reliable. Therefore, our inclusion and exclusion criteria are:
+
+- They must have participated freely
+- They need to have repeated at least the first three trial items in order to be included
+- Children must be 11 years of age or younger
+
+
+### Sample size
 <!-- 1.1.	Describe the sample size of your study. How many units will be analyzed in the study? This could be the number of people, birds, classrooms, plots, interactions, or countries included. If the units are not individuals, then describe the size requirements for each unit. If you are using a clustered or multilevel design, how many units are you collecting at each level of the analysis? -->
 <!-- 1.2.	Example: Our target sample size is 280 participants. We will attempt to recruit up to 320, assuming that not all will complete the total task.  -->
 <!-- 1.3.	More information: For some studies, this will simply be the number of samples or the number of clusters. For others, this could be an expected range, minimum, or maximum number. -->
 
-### 1.	Sample size rationale
+We tested all children who made themselves available during our visits to different hamplets, which were 55. Application of our inclusion criteria led to a sample size of 40.
+
+### Sample size rationale
 <!-- 1.1.	This could include a power analysis or an arbitrary constraint such as time, money, or personnel. -->
 <!-- 1.2.	Example: We used the software program G*Power to conduct a power analysis. Our goal was to obtain .95 power to detect a medium effect size of .25 at the standard .05 alpha error probability.  -->
 <!-- More information: This gives you an opportunity to specifically state how the sample size will be determined. A wide range of possible answers is acceptable; remember that transparency is more important than principled justifications. If you state any reason for a sample size upfront, it is better than stating no reason and leaving the reader to “fill in the blanks.” Acceptable rationales include: a power analysis, an arbitrary number of subjects, or a number based on time or monetary constraints -->
 
-### 1.	Stopping rule
+Our sample size was motivated entirely for logistic reasons. Given this constraint, we revisited the literature to better understand which of the effects of interest we may be able to find or not.
+
+To begin with, we looked at previous work. NWR studies vary in terms of how many children are included. Farabolini (2018) carried out a study of the literature resulting in two summary tables. The first summary table reviews literature on vocabulary-NWR correlations among bilinguals, showing that in 6 studies, the number of participants ranged between 19 and 105, with a mean of 48.7 and a median of 35.5. The second table reviews 13 studies on correlations between language exposure and NWR among bilinguals, with a median sample size of 52, mean 68, range 39-156. Our study is clearly on the small side in this literature.
+
+Second, we looked for the size of effects in our research questions:
+
+
+```{r len}
+# Vance 2005 - 5yo because midpoint of their distribution
+m1syll=76.3 
+sd1syll=8.4
+
+m3syll=73.5 
+sd3syll=12.0
+
+```
+
+
+```{r comp}
+# Kapalkova high versus low wordlike -- 4yo midpoint
+m1difficult=15.57 
+sd1difficult=3.21
+
+m3easy=17.57  
+sd3easy=2.57
+
+```
+
+```{r age}
+# Vance 2005 -- 5 vs 7 because we also have these
+m5yov=77.08
+sd5yov=5.92
+
+m7yov=81.42
+sd7yov=7.77
+
+# Kapalkova  -- 4 vs 5 although we only have a few of these
+m4yok=13.05 
+sd4yok=3.02
+
+m5yok=13.6
+sd5yok=2.64
+
+
+```
+
+```{r monobi}
+# Lotem & Chiat
+bil1.m=.86
+bil1.sd=.09
+
+mon1.m=.85
+mon1.sd=.09
+
+
+bil2.m=.82
+bil2.sd=.13
+
+mon2.m=.8
+mon2.sd=.14
+
+```
+
+
+1. **Length:**
+2. **Complexity:** 
+3. **Age:** 
+4. **Monolingual status:** 
+5. **Maternal education:** 
+6. **Birth order:**  
+
+
+### Stopping rule
 <!-- 1.1.	If your data collection procedures do not give you full control over your exact sample size, specify how you will decide when to terminate your data collection.  -->
 <!-- 1.2.	Example: We will post participant sign-up slots by week on the preceding Friday night, with 20 spots posted per week. We will post 20 new slots each week if, on that Friday night, we are below 320 participants.  -->
 <!-- 1.3.	More information: You may specify a stopping rule based on p-values only in the specific case of sequential analyses with pre-specified checkpoints, alphas levels, and stopping rules. Unacceptable rationales include stopping based on p-values if checkpoints and stopping rules are not specified. If you have control over your sample size, then including a stopping rule is not necessary, though it must be clear in this question or a previous question how an exact sample size is attained. -->
 
+Not relevant, our sample size is fixed.
 
 ## Variables
 
