@@ -55,7 +55,16 @@ require("papaja")
 
 
 ```
+## TODO
 
+- create stimuli table that has complexity & length
+- integrate demo data & stim table in final data
+- add analysis on the basis of complexity & length
+- add analysis on the basis of demo chars
+- fix the back-transformation
+- add summary of types of error: %semantic, %deletion (which sounds?) %subst (which are the most common sounds) 
+- maybe add to the last ana the prevalence (ie out of all the gh which proportion get transformed)
+- discussion
 
 ## Introduction
 
@@ -200,11 +209,11 @@ We tried to balance three desiderata: That children would not be unduly exposed 
 
 Indeed, we visited four different hamlets once, and attempted to test all eligible childr en present at that time, to prevent the items 'spreading' through hearsay. In the first village, we tested children in five different places, with some children being tested inside their house and others tested on the veranda of a house even if it was not their own. The complete list of places and the ways in which they met the desiderata mentioned above can be found in the raw data, available from online supplementary materials.
  
-The child was donned a headset (xx @mc please fill in for most of the children, xx @ac fill in for the rest). For most children, the headset could not stay comfortably on the child's head, and thus it was placed on the child's shoulders, with the microphone carefully placed close to the child's mouth. A local informant sat next to the child, to would provide the instructions and, if needed, coach the child to make sure, using the three practice items as well as real words, that they understood that the task was to repeat the items precisely without changing anything. An experimenter delivered the elicitation stimuli to the local informant and the child over headhphones. 
+The child was donned a headset (xx @mc please fill in for most of the children, SHURE WH20 XLR headset with a dynamic microphone for the rest), recorded into the left channel into a Tascam DR40x digital recorder. For most children, the headset could not stay comfortably on the child's head, and thus it was placed on the child's shoulders, with the microphone carefully placed close to the child's mouth. A local informant sat next to the child, to would provide the instructions and, if needed, coach the child to make sure, using the three practice items as well as real words, that they understood that the task was to repeat the items precisely without changing anything. An experimenter delivered the elicitation stimuli to the local informant and the child over headphones. 
 
 The first phase was making sure the child understood the task. This was explained orally and the first training item was presented. Often, children froze and did not say anything. If this happened, then we followed this procedure. First, the informant insisted. If the child still did not say anything, the informant asked the child to repeat a real word, and another, and another. If the child could repeat these correctly, then we provided the recorded training item over headphones again. Most children successfully started repeating the items presented over headphones at this point; a few further needed the local informant to model the behavior (i.e., they would hear the item again, and she would say it; then we would play it again, and ask the child to say it). A small minority still failed to repeat the item after hearing it over headphones. If that occurred, we tried with the second training item, at which point some children got it and could continue. A small minority, however, failed to repeat this one, as well as the third training item, in which case we stopped the test altogether. 
 
-NWR studies vary in whether children are provided with several opportunities to hear and say the item. To have a fixed and clear procedure, we decided that items other than the inital three training ones would not be repeated unless the child made an attempt to produce them. If this attempt was judged correct by the local informant, then the experimenter would move on to the next item (whispering this over a headset that was recording a separate track). If the local informant heard a deviation, she indicated to the experimenter that the item needed to be repeated, and up to 5 attempts were allowed. 
+NWR studies vary in whether children are provided with several opportunities to hear and say the item. To have a fixed and clear procedure, we decided that items other than the inital three training ones would not be repeated unless the child made an attempt to produce them. If this attempt was judged correct by the local informant, then the experimenter would move on to the next item (whispering this over a separate headset that was recording onto the right track of the same Tascam). If the local informant heard a deviation, she indicated to the experimenter that the item needed to be repeated, and up to 5 attempts were allowed. 
 
 Whenever siblings from the same family were tested, an attempt was made to test first the older and then the younger child, and always on different elicitaiton sets.
 
@@ -253,10 +262,8 @@ A total `r dim(demo)[1]` children were tested, from `r length(levels(factor(demo
 
 ## Results
 
-```{r wrangling}
-#@mc look here - we probably need to read the table in a special way to get all the accents etc. right
-read.table("NWR-transcription.txt",header=T,enc="UTF-16le")->trnsc
-read.csv("NWR-transcription.csv",sep=";",enc="UTF-8")->trnsc
+```{r wrangling, eval=T}
+read.delim("NWR-transcription.txt", encoding="UTF-8")->trnsc
 trnsc$tokid=paste(trnsc$item,trnsc$token)
 #task 4 are probably the items with no target; there are 1488 lines of paired data
 
@@ -283,10 +290,11 @@ trnsc[trnsc$target!="yi",]->trnsc
 #REMOVE ALL TASK 4
 trnsc[!is.na(trnsc$target),]->trnsc
 
+##TODO integrate demo data
 
 ```
 
-```{r phonoana}
+```{r phonoana, eval=T}
 
 #convert target coding to orthography
 orthotarget=matrix( #list correspondances always by pairs: orthography then file name; for longer items orthography=filename
@@ -314,9 +322,19 @@ orthotarget=matrix( #list correspondances always by pairs: orthography then file
 trnsc$target.ortho=as.character(trnsc$target) #to start with, put them all in
 for(i in 1:dim(orthotarget)[1]) trnsc$target.ortho[trnsc$target.ortho==orthotarget[i,2]] <- orthotarget[i,1] #then correct the monosyllables
 
-## TODO
+
+#log non-fluent speech, then get rid of that marker
+trnsc$nonfluent<-NA
+trnsc$nonfluent[grep("-",trnsc$mp_uni,fixed=T)]<-1
+trnsc$mispronunciation=gsub("-","",trnsc$mispronunciation)
+
 # make all vowels in mispronunciation & target short (so we don't penalize length errors)
+trnsc$mp=gsub("([aeiouêâéáóî])\\1+", "\\1", trnsc$mispronunciation)
+trnsc$target.ortho=gsub("([aeiouêâéáóî])\\1+", "\\1", trnsc$target.ortho)
+
 # if correct=0 but orthotarget=mispronunciation (probably due to length errors) then change correct to 1 
+#sum(trnsc$correct==0 & trnsc$target.ortho == trnsc$mp & !is.na(trnsc$mp)) #this only happens twice
+trnsc$correct[trnsc$correct==0 & trnsc$target.ortho == trnsc$mp & !is.na(trnsc$mp)]<-1
 
 # create phonological correspondance matrix
 # NOTE!! NON INTUITIVE MAPPING!!!! DO NOT READ THE OUTPUT BELIEVING IT IS PSEUDO IPA!!!
@@ -375,7 +393,7 @@ correspondances=matrix( #list correspondances always by pairs, orthography then 
   ),#last item above should not have a comma
   ncol = 2,byrow = T)
 
-trnsc$mp_uni=trnsc$mispronunciation #start from ortho
+trnsc$mp_uni=trnsc$mp #start from ortho
 trnsc$target_uni=trnsc$target.ortho #start from ortho
 
 for(i in 1:dim(correspondances)[1]) { #transform into unicharacter
@@ -383,22 +401,67 @@ for(i in 1:dim(correspondances)[1]) { #transform into unicharacter
   trnsc$target_uni=gsub(correspondances[i,1],correspondances[i,2],trnsc$target_uni)
 }
 
-#log non-fluent speech
-trnsc$nonfluent<-NA
-trnsc$nonfluent[grep("-",trnsc$mp_uni,fixed=T)]<-1
+#calculate Levinshtein's distances 
+trnsc$ins=trnsc$del=trnsc$sub=trnsc$nchar=trnsc$trafos=trnsc$tarlen=NA
+substitution_bank=NULL
+deletion_bank=NULL
+for(i in grep("0",trnsc$correct)){
+ #lev
+  lev=adist(trnsc[i,c("mp_uni")],trnsc[i,c("target_uni")],count=T)
+  trnsc$ins[i]<-attributes(lev)$counts[,,"ins"]
+  trnsc$del[i]<-attributes(lev)$counts[,,"del"]
+  trnsc$sub[i]<-attributes(lev)$counts[,,"sub"]
+  trnsc$trafos[i]=attributes(lev)$trafos
+  trnsc$nchar[i]=nchar(attributes(lev)$trafos)
+  trnsc$tarlen[i]=nchar(trnsc$target.ortho[i])
+  sublist=which(strsplit(attributes(lev)$trafos, "")[[1]]=="S")
+  substitution_bank=rbind(substitution_bank,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][sublist],strsplit(trnsc[i,c("mp_uni")],"")[[1]][sublist]))
+  dellist=which(strsplit(attributes(lev)$trafos, "")[[1]]=="D")
+  deletion_bank=rbind(deletion_bank,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][dellist]))
+}
 
-#trnsc$additions=
+
+trnsc$ld=rowSums(trnsc[,c("ins","del","sub")])
+trnsc$nld=trnsc$ld/trnsc$nchar
+trnsc$nld[is.na(trnsc$nld)]<-0
+
+#this is not working
+#trnsc$pc=nchar(gsub("SDI","",trnsc$trafos))/trnsc$nchar
+#trnsc$pc[is.na(trnsc$pc)]<-1
+
+write.table(trnsc,"final_data.txt",row.names=F,sep="\t")
+
+#TODO this is not working correctly
+# for(i in dim(correspondances)[1]:1) { #transform into orthography
+#   substitution_bank=gsub(correspondances[i,2],correspondances[i,1],substitution_bank)
+#   deletion_bank=gsub(correspondances[i,2],correspondances[i,1],deletion_bank)
+# }
+
+substitution_bank[order(substitution_bank[,1]),]->substitution_bank
+write.table(substitution_bank,"substitution_bank.txt",row.names=F,sep="\t")
+
+sort(deletion_bank)->deletion_bank
+write.table(deletion_bank,"deletion_bank.txt",row.names=F,sep="\t")
 ```
 
-```{r}
+```{r readin}
+read.table("final_data.txt",header=T,encoding="UTF-8")->trnsc
 #create a subset with just the first presentations -- this is what is going to be used for the quantitative analyses
 firstp=subset(trnsc,rep==1 & !is.na(rep))
 ```
 
-- What is the overall repetition accuracy (whole word, phoneme based, distance)?
+Taking into account only the first attempts, the overall repetition accuracy measured in whole words is `r round(mean(firstp$cor.online)*100)`% based on the online coding (i.e., whether the native experimenter asked for the target to be re-played), and `r round(mean(firstp$correct)*100)`% when the offline coding is considered. On average, the phoneme-based normalized Levenshtein distance was `r round(mean(firstp$nld)*100)`%, meaning that about 20% of phonemes were substituted, inserted, or deleted.
 
-- How does this change as a function of item complexity (number of syllablex, sound complexity)?
 
+We then inspected whether accuracy varied as a function of word length.
+
+
+```{r figlength,eval=F}
+#not working
+aggregate(firstp$correct,list(firstp$tarlen,firstp$id),mean)
+plot(firstp$correct~firstp$tarlen)
+
+```
 - How frequent are errors that result in real words? Is that a function of item complexity? What are some common patterns of phonological errors?
 
 - Is individual variation explainable by child age, sex, birth order, monolingual status, and/or parental education?
