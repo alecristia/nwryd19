@@ -102,7 +102,7 @@ Naturally, designing the task in this way may render the study of individual var
 We sought to address the following questions:
 
 - What is the overall repetition accuracy (whole word, phoneme based, distance)?
-- How does this change as a function of item complexity (number of syllablex, sound complexity)?
+- How does this change as a function of item complexity (number of syllables, sound complexity)?
 - How frequent are errors that result in real words? Is that a function of item complexity? What are some common patterns of phonological errors?
 - Is individual variation explainable by child age, sex, birth order, monolingual status, and/or parental education?
 
@@ -110,10 +110,24 @@ We sought to address the following questions:
 In view of the hypothesis-driven nature of this work, we consider boosting the interpretational value of these data by announcing our analysis plans prior to conducting them. However, we realized that even pre-registering an analysis would be equivocal because we do not have enough power to look at all relationships of interest, and often to detect any of the known effects. For instance, an effect of stimulus length and age has been reported as significant sometimes, but Tables XX and XX show that even these effects can be quite small. **add table with r/ds from previous work**)
 Moreover, by virtue of this being a language-specific study, it is unclear that our method (including saliently the items we used) is comparable in precision to previous NWR studies. Therefore, all analyses here are descriptive and should be considered exploratory.
 
-@ac ADD TABLE SUMMARIZING PREVIOUS WORK
+```{r prevlit-fig, echo = FALSE, ig.pos = "T!", fig.width=8, fig.height=5.5, fig.cap = "Proportion of non-words correctly repeated as a function of age (in years), study (first author and year regardless of the number of authors), and, when available, shorter versus longer non-words."}
+read.csv("prevlit.csv")->pl
+#duplicate Piazzalunga logging short and long items separately
+pl$Score[pl$Study=="Piazzalunga 2018"]<-pl$Short[pl$Study=="Piazzalunga 2018"]
+pl$Study<-as.character(pl$Study)
+pl$Study[pl$Study=="Piazzalunga 2018"]<-"Piazzalunga 2018 1-2 syll"
+dim(pl)[1]->beg
+pl=rbind(pl,pl[pl$Study=="Piazzalunga 2018 1-2 syll",])
+pl[(beg+1):dim(pl)[1],"Score"]<-pl[(beg+1):dim(pl)[1],"Long"]
+pl[(beg+1):dim(pl)[1],"Study"]<-"Piazzalunga 2018 3-4 syll"
+pl$Study=paste(pl$Language,pl$Study)
+library(lattice)
+xyplot(Score~Age,groups=Study,data=pl,type=c('l','p'),auto.key = T ,pch=20)
 
-- age differences
-- length effects
+
+```
+
+
 
 ## Methods
 
@@ -209,7 +223,7 @@ Finally, for describing children's patterns of errors, all repetitions of a give
 ### Participants
 
 
-```{r cars}
+```{r demo}
 # read.csv("NWR-test-log_FINAL.csv",header=T,sep=";")->fulldemo
 # fulldemo=fulldemo[,-2] #remove children's names
 # fulldemo$dob=as.Date(as.character(fulldemo$DOB.ISO),format="%Y%m%d")
@@ -239,6 +253,147 @@ A total `r dim(demo)[1]` children were tested, from `r length(levels(factor(demo
 
 ## Results
 
+```{r wrangling}
+#@mc look here - we probably need to read the table in a special way to get all the accents etc. right
+read.table("NWR-transcription.txt",header=T,enc="UTF-16le")->trnsc
+read.csv("NWR-transcription.csv",sep=";",enc="UTF-8")->trnsc
+trnsc$tokid=paste(trnsc$item,trnsc$token)
+#task 4 are probably the items with no target; there are 1488 lines of paired data
+
+read.table("final_order.txt",header=T)->crp
+crp$tokid=paste(crp$target,crp$nb)
+npairs=dim(crp)[1]
+
+trnsc=merge(trnsc,crp,by.x="tokid",by.y="tokid",all=T)
+
+# sort by file name which indicates presentation order, so that we can get the first attempt
+trnsc[order(trnsc$outfile),]->trnsc
+
+#add repetition number
+trnsc$rep=gsub(".*_","",gsub(".wav","",trnsc$outfile))
+
+#add coding of correctness online/on the fly of first presentation as a function whether there are subsequent reps of the same target
+trnsc$cor.online=1
+for(i in 1:npairs) if(trnsc$rep[i]>1) trnsc$cor.online[i-1]<-0  #if the item is repeated, then code the previous one as being wrong
+trnsc$cor.online[(npairs+1):dim(trnsc)[1]]<-NA
+
+#DATA REMOVAL *** ATTENTION *** 
+#REMOVING ALL THE "YI"
+trnsc[trnsc$target!="yi",]->trnsc
+#REMOVE ALL TASK 4
+trnsc[!is.na(trnsc$target),]->trnsc
+
+
+```
+
+```{r phonoana}
+
+#convert target coding to orthography
+orthotarget=matrix( #list correspondances always by pairs: orthography then file name; for longer items orthography=filename
+  c("dpa","dpa",
+    "dp:a","dp_a",
+    "dpâ","dpa2",
+    "dpéé","dpee",
+    "dpê","dpe",
+    "dpi","dpi",
+    "dpu","dpu",
+    "kp:ââ","kp_aa",
+    "kpu","kpu",
+    "tp:a","tp_a",
+    "tpâ","tpa",
+    "tpê","tpe",
+    "gh:ââ","gh_aa",
+    "ghuu","ghuu",
+    "lva","lva",
+    "lv:ê","lv_e",
+    "lvi","lvi",
+    "t:êê","t_ee"
+  ),#last item above should not have a comma
+  ncol = 2,byrow = T)
+
+trnsc$target.ortho=as.character(trnsc$target) #to start with, put them all in
+for(i in 1:dim(orthotarget)[1]) trnsc$target.ortho[trnsc$target.ortho==orthotarget[i,2]] <- orthotarget[i,1] #then correct the monosyllables
+
+## TODO
+# make all vowels in mispronunciation & target short (so we don't penalize length errors)
+# if correct=0 but orthotarget=mispronunciation (probably due to length errors) then change correct to 1 
+
+# create phonological correspondance matrix
+# NOTE!! NON INTUITIVE MAPPING!!!! DO NOT READ THE OUTPUT BELIEVING IT IS PSEUDO IPA!!!
+correspondances=matrix( #list correspondances always by pairs, orthography then phonology
+  c(
+    #nasal long to unichar
+    ":ii","ì",
+    ":ee","è",
+    ":aa","à",
+    ":êê","3",
+    ":ââ","6",
+    ":uu","ù",
+    ":oo","Ò",
+    #long to unichar
+    "ii","ï",
+    "ee","ë",
+    "éé","Ë",
+    "áá","Ä",
+    "aa","ä",
+    "îî","Ï",
+    "êê","2",
+    "ââ","5",
+    "uu","ü",
+    "óó","ö",
+    "oo","Ö",
+    #short nasal
+    ":i","1",
+    ":e","4",
+    ":a","ã",
+    ":ê","6",
+    ":â","7",
+    ":u","8",
+    ":o","9",
+    #consonants, veeeery dirty!
+    "'n","ń",
+    "tp",":",
+    "dp","/",
+    "kp","P",
+    "ngm","G",
+    "ńm","M",
+    "ng","N",
+    "mb","b",
+    "nd","D",
+    "nt","T",
+    "nk","K",
+    "dn","?",
+    "kn","!",
+    "vy","V",
+    "mt","C",
+    "md","J",
+    "mg","X",
+    "dm","S",
+    "km","Z",
+    "gh","H",
+    "lv","L"
+  ),#last item above should not have a comma
+  ncol = 2,byrow = T)
+
+trnsc$mp_uni=trnsc$mispronunciation #start from ortho
+trnsc$target_uni=trnsc$target.ortho #start from ortho
+
+for(i in 1:dim(correspondances)[1]) { #transform into unicharacter
+  trnsc$mp_uni=gsub(correspondances[i,1],correspondances[i,2],trnsc$mp_uni)
+  trnsc$target_uni=gsub(correspondances[i,1],correspondances[i,2],trnsc$target_uni)
+}
+
+#log non-fluent speech
+trnsc$nonfluent<-NA
+trnsc$nonfluent[grep("-",trnsc$mp_uni,fixed=T)]<-1
+
+#trnsc$additions=
+```
+
+```{r}
+#create a subset with just the first presentations -- this is what is going to be used for the quantitative analyses
+firstp=subset(trnsc,rep==1 & !is.na(rep))
+```
 
 - What is the overall repetition accuracy (whole word, phoneme based, distance)?
 
@@ -248,31 +403,33 @@ A total `r dim(demo)[1]` children were tested, from `r length(levels(factor(demo
 
 - Is individual variation explainable by child age, sex, birth order, monolingual status, and/or parental education?
 
-```{r}
+```{r iniana, eval=FALSE}
+#initial analyses with just 12 participants
 read.table("log2.txt",header=T,sep="\t")->x
 x$rep=gsub(".wav","",gsub(".*_","",x$out),fixed=T)
 x[order(x$out),]->x
 x$cor.online=1
-for(i in 1:dim(x)[1]) if(x$rep[i]>1) x$cor.online[i-1]<-0
+for(i in 1:dim(x)[1]) if(x$rep[i]>1) x$cor.online[i-1]<-0  #if the item is repeated, then code the previous one as being wrong
   
-subset(x,rep=="1")->x
-aggregate(x$cor.online,by=list(x$child),mean)->onl
+subset(x,rep=="1")->x  #get only the first attempt for each child
+aggregate(x$cor.online,by=list(x$child),mean)->onl  #get means on first attempt
 colnames(onl)<-c("ID","score.online")
 
-print(onl)
+#print(onl) #online/on the fly coding, there are only 12 kids
 
-aggregate(x$corr,by=list(x$child),mean)->ms
+aggregate(x$corr,by=list(x$child),mean)->ms  #means
 colnames(ms)<-c("ID","score")
 merge(ms,onl)->ms
 merge(ms,demo)->scores
 scores$Age=as.numeric(as.character(scores$Age))
 scores$Age[is.na(scores$Age)]<-15
-plot(scores$score*100~scores$Age,pch=20,xlab="Age (years)",ylab="% Correct")
-abline(lm(scores$score*100~scores$Age))
-plot(scores$score~scores$monolingual)
-points(scores$score~as.numeric(scores$monolingual),pch=20)
 
-plot(ms$score.online~ms$score)
+# plot(scores$score*100~scores$Age,pch=20,xlab="Age (years)",ylab="% Correct")
+# abline(lm(scores$score*100~scores$Age))
+# plot(scores$score~scores$monolingual)
+# points(scores$score~as.numeric(scores$monolingual),pch=20)
+
+#plot(ms$score.online~ms$score)
 ```
 
 
@@ -308,7 +465,7 @@ Although these predictions were made based on previous work, we also thought rea
 ## Discussion
 
 - What is the overall repetition accuracy (whole word, phoneme based, distance)?
-- How does this change as a function of item complexity (number of syllablex, sound complexity)?
+- How does this change as a function of item complexity (number of syllables, sound complexity)?
 - How frequent are errors that result in real words? Is that a function of item complexity?
 - Is individual variation explainable by child age, sex, birth order, monolingual status, and/or parental education?
 
