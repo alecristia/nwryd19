@@ -112,15 +112,15 @@ correspondances=matrix( #list correspondances always by pairs, orthography then 
   ncol = 2,byrow = T)
 
 ```
+
 ## TODO
 
-- create stimuli table that has complexity & length
-- integrate demo data & stim table in final data
-- add analysis on the basis of complexity & length
-- add analysis on the basis of demo chars
-- fix the back-transformation
+- fix yaml
+- add ana based on phonemes & expand on levenshtein
+- add ana based on number of characters
 - add summary of types of error: %semantic, %deletion (which sounds?) %subst (which are the most common sounds) 
 - maybe add to the last ana the prevalence (ie out of all the gh which proportion get transformed)
+- add analysis on the basis of demo chars
 - discussion
 
 ## Introduction
@@ -350,35 +350,22 @@ source("wrangling.R")
 
 ```
 
-```{r readin}
-read.table("final_data.txt",header=T,encoding="UTF-8")->trnsc
-#create a subset with just the first presentations -- this is what is going to be used for the quantitative analyses
-firstp=subset(trnsc,rep==1 & !is.na(rep))
-```
-
-Taking into account only the first attempts, the overall repetition accuracy measured in whole words is `r round(mean(firstp$cor.online)*100)`% based on the online coding (i.e., whether the native experimenter asked for the target to be re-played), and `r round(mean(firstp$correct)*100)`% when the offline coding is considered. On average, the phoneme-based normalized Levenshtein distance was `r round(mean(firstp$nld)*100)`%, meaning that about 20% of phonemes were substituted, inserted, or deleted.
-
-
-We then inspected whether accuracy varied as a function of word length.
-
-
-```{r figlength,eval=F}
-#not working
-aggregate(firstp$correct,list(firstp$tarlen,firstp$id),mean)
-plot(firstp$correct~firstp$tarlen)
-
-```
-- How frequent are errors that result in real words? Is that a function of item complexity? What are some common patterns of phonological errors?
-
-
 ### Preliminary analyses
 
+
+```{r readin}
+read.table("final_data.txt",header=T,encoding="UTF-8")->trnsc
+
+```
 
 
 ```{r Fig1-first_vs_others, ig.pos = "T!", fig.width=5, fig.height=5, fig.cap="NWR scores for individual participants averaging separately their first attempts and all other attempts."}
 
 aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$age.exact,trnsc$attempt),mean)->pwcm_att
 colnames(pwcm_att)<-c("ID","Age","Attempt","Word")
+
+#remove children who do not have both first & subsequent attempts
+pwcm_att[pwcm_att$ID %in% names(table(pwcm_att$ID))[table(pwcm_att$ID)==2],]->pwcm_att
 
 myx=as.numeric(as.factor(pwcm_att$ID))/100+as.numeric(as.factor(pwcm_att$Attempt))
 
@@ -399,18 +386,31 @@ trnsc=trnsc[trnsc$attempt=="first",]
 
 ### Overall repetition accuracy
 
-We start by describing whole word accuracy. Participants scored 
+Taking into account only the first attempts, the overall repetition accuracy measured in whole words is `r round(mean(trnsc$cor.online)*100)`% based on the online coding (i.e., whether the native experimenter asked for the target to be re-played), and `r round(mean(trnsc$correct)*100)`% when the offline coding is considered. On average, the phoneme-based normalized Levenshtein distance was `r round(mean(trnsc$nld)*100)`%, meaning that about 20% of phonemes were substituted, inserted, or deleted.
+
+ADD GRAPH WITH PHONEME BASED IN Y AND WORD BASED IN X
+
+### Accuracy a function of item complexity 
+
+We then inspected whether accuracy varied as a function of word length.
 
 
-```{r}
+```{r figlength,eval=F}
+#not working
+aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$age.exact,trnsc$tarlen),mean)->pwcm_att
+colnames(pwcm_att)<-c("ID","Age","Length","Word")
 
+#but this one is! What a mystery...
+aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$age.exact,trnsc$type),mean)->pwcm_att
+colnames(pwcm_att)<-c("ID","Age","Length","Word")
+
+myx=as.numeric(as.factor(pwcm_att$ID))/100+as.numeric(as.factor(pwcm_att$Length))
+
+plot(pwcm_att$Word~myx,pch=20,cex=2,lty=3,xlab="",xaxt="n",ylab="NWR scores (%)")
+axis(1,at=1:length(levels(factor(pwcm_att$Length))),labels=levels(factor(pwcm_att$Length)))
 
 ```
 
-phoneme based, distance
-
-### Accuracy a function of item complexity 
-(number of syllablex, sound complexity)?
 
 
 1. Children are more accurate for mono-syllables than longer items
