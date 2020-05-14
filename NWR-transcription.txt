@@ -1,0 +1,1582 @@
+﻿row	annotator	date	token	item	correct	mispronunciation	meaning	comment
+1	DY	10-Sep-19	1	dimope	0	timope	0	
+2	DY	10-Sep-19	2	dimope	1	NA	NA	
+3	DY	10-Sep-19	3	dimope	1	NA	NA	
+4	DY	10-Sep-19	4	dimope	0	timope	0	
+5	DY	10-Sep-19	5	dimope	1	NA	NA	
+6	DY	10-Sep-19	6	dimope	1	NA	NA	
+7	DY	10-Sep-19	7	dimope	1	NA	NA	
+8	DY	10-Sep-19	8	dimope	1	NA	NA	
+9	DY	10-Sep-19	9	dimope	1	NA	NA	
+10	DY	10-Sep-19	10	dimope	0	kemope	0	
+11	DY	10-Sep-19	11	dimope	1	NA	NA	
+12	DY	10-Sep-19	12	dimope	0	ti-mope	0	
+13	DY	10-Sep-19	13	dimope	0	ti-mope	0	
+14	DY	10-Sep-19	14	dimope	1	NA	NA	
+15	DY	10-Sep-19	15	dimope	1	NA	NA	
+16	DY	10-Sep-19	16	dimope	1	NA	NA	
+17	DY	10-Sep-19	17	dimope	1	NA	NA	
+18	DY	10-Sep-19	18	dimope	0	kimope	0	
+19	DY	10-Sep-19	19	dimope	1	NA	NA	
+20	DY	10-Sep-19	20	dimope	0	timope	0	
+21	DY	10-Sep-19	21	dimope	1	NA	NA	
+22	DY	10-Sep-19	22	dimope	1	NA	NA	
+23	DY	10-Sep-19	23	dimope	1	NA	NA	
+24	DY	10-Sep-19	24	dimope	1	NA	NA	
+25	DY	10-Sep-19	25	dimope	0	timope	0	
+26	DY	10-Sep-19	26	dimope	1	NA	NA	
+27	DY	10-Sep-19	1	diponate	1	NA	NA	
+28	DY	10-Sep-19	2	diponate	0	chi-po-nate	0	
+29	DY	10-Sep-19	3	diponate	0	chiponade	0	
+30	DY	10-Sep-19	4	diponate	1	NA	NA	
+31	DY	10-Sep-19	5	diponate	0	chiponate	0	
+32	DY	10-Sep-19	6	diponate	1	NA	NA	
+33	DY	10-Sep-19	7	diponate	1	NA	NA	
+34	DY	10-Sep-19	8	diponate	1	NA	NA	
+35	DY	10-Sep-19	9	diponate	1	NA	NA	
+36	DY	10-Sep-19	10	diponate	0	chiponate	0	
+37	DY	10-Sep-19	11	diponate	1	NA	NA	
+38	DY	10-Sep-19	12	diponate	1	NA	NA	
+39	DY	10-Sep-19	13	diponate	1	NA	NA	
+40	DY	10-Sep-19	14	diponate	0	tiponate	0	
+41	DY	10-Sep-19	15	diponate	1	NA	NA	
+42	DY	10-Sep-19	16	diponate	0	diponade	0	
+43	DY	10-Sep-19	17	diponate	1	NA	NA	
+44	DY	10-Sep-19	18	diponate	0	chi-po-nade	0	
+45	DY	10-Sep-19	19	diponate	0	di	0	
+46	DY	10-Sep-19	20	diponate	0	chiponate	0	
+47	DY	10-Sep-19	21	diponate	1	NA	NA	
+48	DY	10-Sep-19	22	diponate	0	dipona-de	0	
+49	DY	10-Sep-19	23	diponate	1	NA	NA	
+50	DY	10-Sep-19	24	diponate	1	NA	NA	
+51	DY	10-Sep-19	25	diponate	0	chiponate	0	
+52	DY	10-Sep-19	26	diponate	0	chipo-de-nate	0	
+53	DY	10-Sep-19	27	diponate	0	chiponape	0	
+54	DY	10-Sep-19	28	diponate	1	NA	NA	
+55	DY	10-Sep-19	29	diponate	1	NA	NA	
+56	DY	10-Sep-19	30	diponate	0	tiponate	0	
+57	DY	10-Sep-19	1	diyeto	0	tiyeto	0	
+58	DY	10-Sep-19	2	diyeto	0	piyeto	0	
+59	DY	10-Sep-19	3	diyeto	0	tiyeto	0	
+60	DY	10-Sep-19	4	diyeto	0	tiye-to	0	
+61	DY	10-Sep-19	5	diyeto	0	tiyeto	0	
+62	DY	10-Sep-19	6	diyeto	0	tiyoto	0	
+63	DY	10-Sep-19	7	diyeto	1	NA	NA	
+64	DY	10-Sep-19	8	diyeto	0	dpî	sleeping	
+65	DY	10-Sep-19	9	diyeto	0	tiyeto	0	
+66	DY	10-Sep-19	10	diyeto	0	piyeto	0	
+67	DY	10-Sep-19	11	diyeto	1	NA	NA	
+68	DY	10-Sep-19	12	diyeto	0	piyeto	0	
+69	DY	10-Sep-19	13	diyeto	1	NA	NA	
+70	DY	10-Sep-19	14	diyeto	1	NA	NA	
+71	DY	10-Sep-19	15	diyeto	0	tiyeto	0	
+72	DY	10-Sep-19	16	diyeto	0	tiyeto	0	
+73	DY	10-Sep-19	17	diyeto	0	tiyeto	0	
+74	DY	10-Sep-19	18	diyeto	0	e-tóó	sitting	
+75	DY	10-Sep-19	19	diyeto	1	NA	NA	
+76	DY	10-Sep-19	20	diyeto	0	tiyeto	0	
+77	DY	10-Sep-19	21	diyeto	1	NA	NA	
+78	DY	10-Sep-19	22	diyeto	1	NA	NA	
+79	DY	10-Sep-19	23	diyeto	0	piyeto	0	
+80	DY	10-Sep-19	24	diyeto	0	tiyeto	0	
+81	DY	10-Sep-19	25	diyeto	0	tiyeto	0	
+82	DY	10-Sep-19	26	diyeto	1	NA	NA	
+83	DY	10-Sep-19	27	diyeto	0	tiyeto	0	
+84	DY	10-Sep-19	28	diyeto	0	tiyeto	0	
+85	DY	10-Sep-19	29	diyeto	1	NA	NA	
+86	DY	10-Sep-19	30	diyeto	1	NA	NA	
+87	DY	10-Sep-19	31	diyeto	1	NA	NA	
+88	DY	10-Sep-19	32	diyeto	1	NA	NA	
+89	DY	10-Sep-19	33	diyeto	1	NA	NA	
+90	DY	10-Sep-19	34	diyeto	0	piyetóó	someone sitting	
+91	DY	10-Sep-19	35	diyeto	0	tiyeto	0	
+92	DY	10-Sep-19	36	diyeto	0	tiyeto	0	
+93	DY	10-Sep-19	37	diyeto	0	pi-eto	0	
+94	DY	10-Sep-19	1	dp_a	1	NA	NA	
+95	DY	10-Sep-19	2	dp_a	0	tpa	turn over	
+96	DY	10-Sep-19	3	dp_a	1	NA	NA	
+97	DY	10-Sep-19	4	dp_a	1	NA	NA	
+98	DY	10-Sep-19	5	dp_a	0	pee	piece	
+99	DY	11-Sep-19	6	dp_a	0	paa	walk	
+100	DY	11-Sep-19	7	dp_a	0	paa	walk	
+101	DY	11-Sep-19	8	dp_a	0	paa	walk	
+102	DY	11-Sep-19	9	dp_a	0	paa	walk	
+103	DY	11-Sep-19	10	dp_a	0	tpa	turn over	
+104	DY	11-Sep-19	11	dp_a	0	paa	walk	
+105	DY	11-Sep-19	12	dp_a	0	tpaa	turn over	
+106	DY	11-Sep-19	13	dp_a	0	paa	walk	
+107	DY	11-Sep-19	14	dp_a	0	paa	walk	
+108	DY	11-Sep-19	15	dp_a	0	tpaa	turn over	
+109	DY	11-Sep-19	16	dp_a	1	NA	NA	
+110	DY	11-Sep-19	17	dp_a	0	tpaa	turn over	
+111	DY	11-Sep-19	18	dp_a	1	NA	NA	
+112	DY	11-Sep-19	19	dp_a	1	NA	NA	
+113	DY	11-Sep-19	20	dp_a	0	paa	walk	
+114	DY	11-Sep-19	21	dp_a	0	paa	walk	
+115	DY	11-Sep-19	22	dp_a	0	taa	bushknife/arrives	
+116	DY	11-Sep-19	23	dp_a	0	tp:a	0	
+117	DY	11-Sep-19	24	dp_a	0	paa	walk	
+118	DY	11-Sep-19	25	dp_a	0	tpi	0	
+119	DY	11-Sep-19	26	dp_a	1	NA	NA	
+120	DY	11-Sep-19	27	dp_a	0	taa	bushknife/arrives	
+121	DY	11-Sep-19	28	dp_a	0	paa	walk	
+122	DY	11-Sep-19	1	dpa	0	te	fish	
+123	DY	11-Sep-19	2	dpa	1	NA	NA	
+124	DY	11-Sep-19	3	dpa	1	NA	NA	
+125	DY	11-Sep-19	4	dpa	0	ta--taa	arrive--bushknife	
+126	DY	11-Sep-19	5	dpa	1	NA	NA	
+127	DY	11-Sep-19	6	dpa	1	NA	NA	
+128	DY	11-Sep-19	7	dpa	0	te	fish	
+129	DY	11-Sep-19	8	dpa	1	NA	NA	
+130	DY	11-Sep-19	9	dpa	0	ta--taa	arrive--bushknife	
+131	DY	11-Sep-19	10	dpa	0	taa-taa	bushknife--bushknife	
+132	DY	11-Sep-19	11	dpa	0	tââ	high up	
+133	DY	11-Sep-19	12	dpa	0	paa	walk	
+134	DY	11-Sep-19	13	dpa	1	NA	NA	
+135	DY	11-Sep-19	14	dpa	0	paa	walk	
+136	DY	11-Sep-19	15	dpa	0	paa	walk	
+137	DY	11-Sep-19	16	dpa	0	paa	walk	
+138	DY	11-Sep-19	17	dpa	0	p:o	home	
+139	DY	11-Sep-19	18	dpa	0	paa	walk	
+140	DY	11-Sep-19	19	dpa	0	pyaa	crocodile	
+141	DY	11-Sep-19	20	dpa	0	paa	walk	
+142	DY	11-Sep-19	21	dpa	0	paa	walk	
+143	DY	11-Sep-19	22	dpa	0	tpaa	turn over	
+144	DY	11-Sep-19	23	dpa	0	paa	walk	
+145	DY	11-Sep-19	24	dpa	1	NA	NA	
+146	DY	11-Sep-19	25	dpa	1	NA	NA	
+147	DY	11-Sep-19	26	dpa	0	tóó	sitting	
+148	DY	11-Sep-19	27	dpa	1	NA	NA	
+149	DY	11-Sep-19	28	dpa	0	taa	bushknife/arrives	
+150	DY	11-Sep-19	29	dpa	1	NA	NA	
+151	DY	11-Sep-19	30	dpa	0	paa	walk	
+152	DY	11-Sep-19	31	dpa	0	d:ââ	pot/moon/month	
+153	DY	11-Sep-19	32	dpa	0	tpî	spit	
+154	DY	11-Sep-19	33	dpa	1	NA	NA	
+155	DY	11-Sep-19	34	dpa	1	NA	NA	
+156	DY	11-Sep-19	35	dpa	1	NA	NA	
+157	DY	11-Sep-19	36	dpa	0	paa	walk	
+158	DY	11-Sep-19	37	dpa	0	paa	walk	
+159	DY	11-Sep-19	38	dpa	0	paa	walk	
+160	DY	11-Sep-19	39	dpa	0	tpaa	turn over	
+161	DY	11-Sep-19	40	dpa	1	NA	NA	
+162	DY	11-Sep-19	41	dpa	1	NA	NA	
+163	DY	11-Sep-19	42	dpa	1	NA	NA	
+164	DY	11-Sep-19	43	dpa	0	tpaa	turn over	
+165	DY	11-Sep-19	44	dpa	1	NA	NA	
+166	DY	11-Sep-19	45	dpa	1	NA	NA	
+167	DY	11-Sep-19	46	dpa	1	NA	NA	
+168	DY	11-Sep-19	47	dpa	0	tpaa	turn over	
+169	DY	11-Sep-19	48	dpa	0	tpaa	turn over	
+170	DY	11-Sep-19	49	dpa	0	tpaa	turn over	
+171	DY	11-Sep-19	50	dpa	0	tpaa	turn over	
+172	DY	11-Sep-19	51	dpa	0	paa	walk	
+173	DY	11-Sep-19	52	dpa	0	taa	bushknife	
+174	DY	11-Sep-19	53	dpa	0	paa	walk	
+175	DY	11-Sep-19	54	dpa	0	taa	bushknife	
+176	DY	11-Sep-19	55	dpa	0	taa	bushknife	
+177	DY	11-Sep-19	56	dpa	1	NA	NA	
+178	DY	11-Sep-19	57	dpa	1	NA	NA	
+179	DY	11-Sep-19	58	dpa	1	NA	NA	
+180	DY	11-Sep-19	59	dpa	0	tpaa	turn over	
+181	DY	11-Sep-19	60	dpa	1	NA	NA	
+182	DY	11-Sep-19	1	dpa2	1	NA	NA	
+183	DY	11-Sep-19	2	dpa2	1	NA	NA	
+184	DY	11-Sep-19	3	dpa2	1	NA	NA	
+185	DY	11-Sep-19	4	dpa2	1	NA	NA	
+186	DY	11-Sep-19	5	dpa2	1	NA	NA	
+187	DY	11-Sep-19	6	dpa2	1	NA	NA	
+188	DY	11-Sep-19	7	dpa2	0	t:aa	betelnut	
+189	DY	11-Sep-19	8	dpa2	0	paa	walk	
+190	DY	11-Sep-19	9	dpa2	1	NA	NA	
+191	DY	11-Sep-19	10	dpa2	0	paa	walk	
+192	DY	11-Sep-19	11	dpa2	1	NA	NA	
+193	DY	11-Sep-19	12	dpa2	1	NA	NA	
+194	DY	11-Sep-19	13	dpa2	1	NA	NA	
+195	DY	11-Sep-19	14	dpa2	0	d:ââ	pot/moon/month	
+196	DY	11-Sep-19	15	dpa2	1	NA	NA	
+197	DY	11-Sep-19	16	dpa2	1	NA	NA	
+198	DY	11-Sep-19	17	dpa2	1	NA	NA	
+199	DY	11-Sep-19	18	dpa2	0	dî	end	
+200	DY	11-Sep-19	19	dpa2	0	tpaa	turn over	
+201	DY	11-Sep-19	20	dpa2	0	paa	walk	
+202	DY	11-Sep-19	21	dpa2	1	NA	NA	
+203	DY	11-Sep-19	22	dpa2	0	paa	walk	
+204	DY	11-Sep-19	23	dpa2	0	d:ââ	pot/moon/month	
+205	DY	11-Sep-19	24	dpa2	0	d:ââ	pot/moon/month	
+206	DY	11-Sep-19	25	dpa2	0	t:ââ	flood/wait for something	
+207	DY	11-Sep-19	26	dpa2	1	NA	NA	
+208	DY	11-Sep-19	27	dpa2	1	NA	NA	
+209	DY	11-Sep-19	28	dpa2	1	NA	NA	
+210	DY	11-Sep-19	29	dpa2	0	t:ââ	flood/wait for something	
+211	DY	12-Sep-19	1	dpe	0	d:ââ	pot/moon/month	
+212	DY	12-Sep-19	2	dpe	0	tpa	return something	
+213	DY	12-Sep-19	3	dpe	0	tpe	vagina	MC added meaning
+214	DY	12-Sep-19	4	dpe	1	NA	NA	
+215	DY	12-Sep-19	5	dpe	0	te	fish	
+216	DY	12-Sep-19	6	dpe	1	NA	NA	
+217	DY	12-Sep-19	7	dpe	1	NA	NA	
+218	DY	12-Sep-19	8	dpe	1	NA	NA	
+219	DY	12-Sep-19	9	dpe	0	tpaa	turn over	
+220	DY	12-Sep-19	10	dpe	0	tpe	vagina	MC added meaning
+221	DY	12-Sep-19	11	dpe	0	te	fish	
+222	DY	12-Sep-19	12	dpe	0	te	fish	
+223	DY	12-Sep-19	13	dpe	0	te	fish	
+224	DY	12-Sep-19	14	dpe	0	te	fish	
+225	DY	12-Sep-19	15	dpe	1	NA	NA	
+226	DY	12-Sep-19	16	dpe	0	dpa	0	
+227	DY	12-Sep-19	17	dpe	0	d:êê	write	
+228	DY	12-Sep-19	18	dpe	1	NA	NA	
+229	DY	12-Sep-19	19	dpe	1	NA	NA	
+230	DY	12-Sep-19	20	dpe	1	NA	NA	
+231	DY	12-Sep-19	21	dpe	0	d:êê	write	
+232	DY	12-Sep-19	22	dpe	0	dêê	tongue	
+233	DY	12-Sep-19	23	dpe	0	tpe	vagina	MC added meaning
+234	DY	12-Sep-19	24	dpe	1	NA	NA	
+235	DY	12-Sep-19	25	dpe	0	tp:oo	little one	MC added meaning
+236	DY	12-Sep-19	26	dpe	1	NA	NA	
+237	DY	12-Sep-19	27	dpe	0	te	fish	
+238	DY	12-Sep-19	28	dpe	0	tpaa	turn over	
+239	DY	12-Sep-19	29	dpe	0	te	fish	
+240	DY	12-Sep-19	30	dpe	1	NA	NA	
+241	DY	12-Sep-19	31	dpe	0	t:aa	betelnut	
+242	DY	12-Sep-19	32	dpe	0	te	fish	
+243	DY	12-Sep-19	33	dpe	0	dêê	tongue	
+244	DY	12-Sep-19	34	dpe	0	d:ââ	pot/moon/month	
+245	DY	12-Sep-19	35	dpe	0	t:aa	betelnut	
+246	DY	12-Sep-19	36	dpe	1	NA	NA	
+247	DY	12-Sep-19	37	dpe	0	te	fish	
+248	DY	12-Sep-19	38	dpe	0	dêê	tongue	
+249	DY	12-Sep-19	39	dpe	1	NA	NA	
+250	DY	12-Sep-19	40	dpe	1	NA	NA	
+251	DY	12-Sep-19	41	dpe	0	te	fish	
+252	DY	12-Sep-19	1	dpee	1	NA	NA	
+253	DY	12-Sep-19	2	dpee	0	tpee	push/hold tight/some	note 'some' is for 'pee' although she wrote 'tpee'
+254	DY	12-Sep-19	3	dpee	0	te	fish	
+255	DY	12-Sep-19	4	dpee	1	NA	NA	
+256	DY	12-Sep-19	5	dpee	0	te	fish	
+257	DY	12-Sep-19	6	dpee	0	pee	piece	
+258	DY	12-Sep-19	7	dpee	1	NA	NA	
+259	DY	12-Sep-19	8	dpee	0	pee	piece	
+260	DY	12-Sep-19	9	dpee	0	pee	piece	
+261	DY	12-Sep-19	10	dpee	0	tpee	push/hold tight/some	
+262	DY	12-Sep-19	11	dpee	1	NA	NA	
+263	DY	12-Sep-19	12	dpee	1	NA	NA	
+264	DY	12-Sep-19	13	dpee	0	pee	piece	
+265	DY	12-Sep-19	14	dpee	0	tee	0	
+266	DY	12-Sep-19	15	dpee	0	tee	0	
+267	DY	12-Sep-19	16	dpee	0	pee	piece	
+268	DY	12-Sep-19	17	dpee	0	pee	piece	
+269	DY	12-Sep-19	18	dpee	0	pee	piece	
+270	DY	12-Sep-19	19	dpee	0	tpaa	turn over	
+271	DY	12-Sep-19	20	dpee	1	NA	NA	
+272	DY	12-Sep-19	21	dpee	0	tpee	push/hold tight/some	
+273	DY	12-Sep-19	22	dpee	1	NA	NA	
+274	DY	12-Sep-19	23	dpee	0	pee	piece	
+275	DY	12-Sep-19	24	dpee	0	pee	piece	
+276	DY	12-Sep-19	25	dpee	0	pee	piece	
+277	DY	12-Sep-19	26	dpee	1	NA	NA	
+278	DY	12-Sep-19	27	dpee	1	NA	NA	
+279	DY	12-Sep-19	28	dpee	0	pee	piece	
+280	DY	13-Sep-19	1	dpi	0	pyi	heal someone	
+281	DY	13-Sep-19	2	dpi	0	dé	0	
+282	DY	13-Sep-19	3	dpi	0	pyi	heal someone	
+283	DY	13-Sep-19	4	dpi	0	pyi	heal someone	
+284	DY	13-Sep-19	5	dpi	0	tpi	0	
+285	DY	13-Sep-19	6	dpi	0	tpyé	holds	
+286	DY	13-Sep-19	7	dpi	0	tpii	rain	MC added meaning
+287	DY	13-Sep-19	8	dpi	0	chi	0	
+288	DY	13-Sep-19	9	dpi	0	tpyé	holds	
+289	DY	13-Sep-19	10	dpi	0	pyi	heal someone	
+290	DY	13-Sep-19	11	dpi	0	tpyé	holds	
+291	DY	13-Sep-19	12	dpi	0	pyi	heal someone	
+292	DY	13-Sep-19	13	dpi	0	tpyé	holds	
+293	DY	13-Sep-19	14	dpi	0	tpyé	holds	
+294	DY	13-Sep-19	15	dpi	0	pyi	heal someone	
+295	DY	13-Sep-19	16	dpi	0	tpyé	holds	
+296	DY	13-Sep-19	17	dpi	0	pyi	heal someone	
+297	DY	13-Sep-19	18	dpi	0	dî	end	
+298	DY	13-Sep-19	19	dpi	0	dî	end	
+299	DY	13-Sep-19	20	dpi	1	NA	NA	
+300	DY	13-Sep-19	21	dpi	0	dé	0	
+301	DY	13-Sep-19	22	dpi	0	pi	person	
+302	DY	13-Sep-19	23	dpi	0	péé	basket	MC added meaning
+303	DY	13-Sep-19	24	dpi	0	dé	0	
+304	DY	13-Sep-19	25	dpi	0	dî	end	
+305	DY	13-Sep-19	26	dpi	0	dî	end	
+306	DY	13-Sep-19	27	dpi	1	NA	NA	
+307	DY	13-Sep-19	28	dpi	0	pyi	heal someone	
+308	DY	13-Sep-19	29	dpi	0	péé	basket	MC added meaning
+309	DY	13-Sep-19	30	dpi	0	pyi	heal someone	
+310	DY	13-Sep-19	31	dpi	0	dé	0	
+311	DY	13-Sep-19	32	dpi	0	tpyé	holds	
+312	DY	13-Sep-19	33	dpi	0	chi	0	
+313	DY	13-Sep-19	34	dpi	0	pyi	heal someone	
+314	DY	13-Sep-19	35	dpi	0	pyi	heal someone	
+315	DY	13-Sep-19	36	dpi	0	chi	0	
+316	DY	13-Sep-19	37	dpi	0	pyi	heal someone	
+317	DY	13-Sep-19	38	dpi	0	pyi	heal someone	
+318	DY	13-Sep-19	39	dpi	0	pyi	heal someone	
+319	DY	13-Sep-19	1	dpu	1	NA	NA	
+320	DY	13-Sep-19	2	dpu	0	duu	lump	
+321	DY	13-Sep-19	3	dpu	1	NA	NA	
+322	DY	13-Sep-19	4	dpu	0	duu	lump	
+323	DY	13-Sep-19	5	dpu	1	NA	NA	
+324	DY	13-Sep-19	6	dpu	0	duu	lump	
+325	DY	13-Sep-19	7	dpu	0	tóó	sitting	
+326	DY	13-Sep-19	8	dpu	0	duu	lump	
+327	DY	13-Sep-19	9	dpu	1	NA	NA	
+328	DY	13-Sep-19	10	dpu	0	duu	lump	
+329	DY	13-Sep-19	11	dpu	1	NA	NA	
+330	DY	13-Sep-19	12	dpu	0	duu	lump	
+331	DY	13-Sep-19	13	dpu	0	tóó	sitting	
+332	DY	13-Sep-19	14	dpu	0	tóó	sitting	
+333	DY	13-Sep-19	15	dpu	0	duu	lump	
+334	DY	13-Sep-19	16	dpu	0	duu	lump	
+335	DY	13-Sep-19	17	dpu	0	duu	lump	
+336	DY	13-Sep-19	18	dpu	0	duu	lump	
+337	DY	13-Sep-19	19	dpu	1	NA	NA	
+338	DY	13-Sep-19	20	dpu	0	dyuu	heap	
+339	DY	13-Sep-19	21	dpu	0	dpî--dpî	sleep-sleep	
+340	DY	13-Sep-19	22	dpu	0	duu	lump	
+341	DY	13-Sep-19	23	dpu	1	NA	NA	
+342	DY	13-Sep-19	24	dpu	1	NA	NA	
+343	DY	13-Sep-19	25	dpu	1	NA	NA	
+344	DY	13-Sep-19	26	dpu	1	NA	NA	
+345	DY	13-Sep-19	27	dpu	1	NA	NA	
+346	DY	13-Sep-19	28	dpu	0	dóó	0	
+347	DY	13-Sep-19	29	dpu	0	dóó	0	
+348	DY	13-Sep-19	30	dpu	0	dóó	0	
+349	DY	13-Sep-19	31	dpu	0	dóó	0	
+350	DY	13-Sep-19	32	dpu	0	duu	lump	
+351	DY	13-Sep-19	33	dpu	0	duu	lump	
+352	DY	13-Sep-19	34	dpu	0	duu	lump	
+353	DY	13-Sep-19	35	dpu	0	duu	lump	
+354	DY	13-Sep-19	36	dpu	0	tóó	sitting	
+355	DY	13-Sep-19	37	dpu	0	duu	lump	
+356	DY	13-Sep-19	38	dpu	0	duu	lump	
+357	DY	13-Sep-19	39	dpu	0	duu	lump	
+358	DY	13-Sep-19	40	dpu	0	tóó	sitting	
+359	DY	13-Sep-19	41	dpu	0	tóó	sitting	
+360	DY	13-Sep-19	42	dpu	0	duu	lump	
+361	DY	13-Sep-19	43	dpu	0	two	two	English word
+362	DY	13-Sep-19	44	dpu	0	two	two	English word
+363	DY	13-Sep-19	45	dpu	0	di	0	
+364	DY	13-Sep-19	46	dpu	0	duu	lump	
+365	DY	13-Sep-19	47	dpu	0	duu	lump	
+366	DY	13-Sep-19	48	dpu	0	dpî	sleep/your (dual)	MC edited meaning for clarity
+367	DY	13-Sep-19	49	dpu	0	tpu	tail	
+368	DY	13-Sep-19	1	gh_aa	1	NA	NA	
+369	DY	13-Sep-19	2	gh_aa	1	NA	NA	
+370	DY	13-Sep-19	3	gh_aa	1	NA	NA	
+371	DY	13-Sep-19	4	gh_aa	1	NA	NA	
+372	DY	13-Sep-19	5	gh_aa	1	NA	NA	
+373	DY	13-Sep-19	6	gh_aa	1	NA	NA	
+374	DY	13-Sep-19	7	gh_aa	0	gh:êê	clam type	
+375	DY	13-Sep-19	8	gh_aa	0	kn:ââ	butt	MC added meaning
+376	DY	13-Sep-19	9	gh_aa	0	gh:êê	clam type	
+377	DY	13-Sep-19	10	gh_aa	1	NA	NA	
+378	DY	13-Sep-19	11	gh_aa	1	NA	NA	
+379	DY	13-Sep-19	12	gh_aa	1	NA	NA	
+380	DY	13-Sep-19	13	gh_aa	0	gh:êê	clam type	
+381	DY	13-Sep-19	14	gh_aa	1	NA	NA	
+382	DY	13-Sep-19	15	gh_aa	1	NA	NA	
+383	DY	13-Sep-19	16	gh_aa	0	ghee	"peeling/woman and her child(ren); a kinship term"	MC edited meaning for clarity
+384	DY	13-Sep-19	17	gh_aa	0	gh:aa	feathers/hair	
+385	DY	13-Sep-19	18	gh_aa	1	NA	NA	
+386	DY	13-Sep-19	19	gh_aa	1	NA	NA	
+387	DY	13-Sep-19	20	gh_aa	0	w:ââ	dog	
+388	DY	13-Sep-19	21	gh_aa	1	NA	NA	
+389	DY	13-Sep-19	22	gh_aa	0	ghó	breath	
+390	DY	13-Sep-19	23	gh_aa	1	NA	NA	
+391	DY	13-Sep-19	24	gh_aa	1	NA	NA	
+392	DY	13-Sep-19	25	gh_aa	1	NA	NA	
+393	DY	13-Sep-19	26	gh_aa	0	w:ââ	dog	
+394	DY	13-Sep-19	27	gh_aa	1	NA	NA	
+395	DY	13-Sep-19	28	gh_aa	1	NA	NA	
+396	DY	13-Sep-19	29	gh_aa	0	gh:êê	clam type	
+397	DY	13-Sep-19	30	gh_aa	1	NA	NA	
+398	DY	13-Sep-19	31	gh_aa	0	ghee	"peeling/woman and her child(ren); a kinship term"	MC edited meaning for clarity
+399	DY	13-Sep-19	32	gh_aa	1	NA	NA	
+400	DY	13-Sep-19	33	gh_aa	0	gh:aa	feathers/hair	
+401	DY	13-Sep-19	34	gh_aa	1	NA	NA	
+402	DY	13-Sep-19	1	ghuu	1	NA	NA	
+403	DY	13-Sep-19	2	ghuu	1	NA	NA	
+404	DY	13-Sep-19	3	ghuu	1	NA	NA	
+405	DY	13-Sep-19	4	ghuu	0	ghê	life/breath/stand	
+406	DY	13-Sep-19	5	ghuu	0	ghê	life/breath/stand	
+407	DY	13-Sep-19	6	ghuu	0	ghê	life/breath/stand	
+408	DY	13-Sep-19	7	ghuu	1	NA	NA	
+409	DY	13-Sep-19	8	ghuu	1	NA	NA	
+410	DY	13-Sep-19	9	ghuu	1	NA	NA	
+411	DY	13-Sep-19	10	ghuu	1	NA	NA	
+412	DY	13-Sep-19	11	ghuu	0	ghê	life/breath/stand	
+413	DY	13-Sep-19	12	ghuu	1	NA	NA	
+414	DY	13-Sep-19	13	ghuu	1	NA	NA	
+415	DY	13-Sep-19	14	ghuu	1	NA	NA	
+416	DY	13-Sep-19	15	ghuu	1	NA	NA	
+417	DY	13-Sep-19	16	ghuu	0	ghê	life/breath/stand	
+418	DY	13-Sep-19	17	ghuu	1	NA	NA	
+419	DY	13-Sep-19	18	ghuu	1	NA	NA	
+420	DY	13-Sep-19	19	ghuu	0	ghê	life/breath/stand	
+421	DY	13-Sep-19	20	ghuu	1	NA	NA	
+422	DY	13-Sep-19	21	ghuu	1	NA	NA	
+423	DY	13-Sep-19	22	ghuu	0	ghê	life/breath/stand	
+424	DY	13-Sep-19	23	ghuu	0	ghê	life/breath/stand	
+425	DY	13-Sep-19	24	ghuu	1	NA	NA	
+426	DY	13-Sep-19	25	ghuu	1	NA	NA	
+427	DY	13-Sep-19	26	ghuu	1	NA	NA	
+428	DY	13-Sep-19	27	ghuu	1	NA	NA	
+429	DY	13-Sep-19	28	ghuu	0	ghê	life/breath/stand	
+430	DY	13-Sep-19	29	ghuu	0	ghê	life/breath/stand	
+431	DY	13-Sep-19	1	kamo	0	k:aamo	0	
+432	DY	13-Sep-19	2	kamo	0	k:amo	0	
+433	DY	13-Sep-19	3	kamo	1	NA	NA	
+434	DY	13-Sep-19	4	kamo	1	NA	NA	
+435	DY	13-Sep-19	5	kamo	0	k:amoyi	0	
+436	DY	13-Sep-19	6	kamo	1	NA	NA	
+437	DY	13-Sep-19	7	kamo	1	NA	NA	
+438	DY	13-Sep-19	8	kamo	1	NA	NA	
+439	DY	13-Sep-19	9	kamo	1	NA	NA	
+440	DY	13-Sep-19	10	kamo	1	NA	NA	
+441	DY	13-Sep-19	11	kamo	1	NA	NA	
+442	DY	13-Sep-19	12	kamo	1	NA	NA	
+443	DY	13-Sep-19	13	kamo	1	NA	NA	
+444	DY	13-Sep-19	14	kamo	1	NA	NA	
+445	DY	13-Sep-19	15	kamo	1	NA	NA	
+446	DY	13-Sep-19	16	kamo	1	NA	NA	
+447	DY	13-Sep-19	17	kamo	1	NA	NA	
+448	DY	13-Sep-19	18	kamo	1	NA	NA	
+449	DY	13-Sep-19	19	kamo	1	NA	NA	
+450	DY	13-Sep-19	20	kamo	1	NA	NA	
+451	DY	13-Sep-19	21	kamo	1	NA	NA	
+452	DY	13-Sep-19	22	kamo	1	NA	NA	
+453	DY	16-Sep-19	1	kani	0	k:aani	0	
+454	DY	16-Sep-19	2	kani	0	k:aani	0	
+455	DY	16-Sep-19	3	kani	0	daani	0	
+456	DY	16-Sep-19	4	kani	1	NA	NA	
+457	DY	16-Sep-19	5	kani	1	NA	NA	
+458	DY	16-Sep-19	6	kani	1	NA	NA	
+459	DY	16-Sep-19	7	kani	1	NA	NA	
+460	DY	16-Sep-19	8	kani	0	keni	0	
+461	DY	16-Sep-19	9	kani	1	NA	NA	
+462	DY	16-Sep-19	10	kani	0	deni	0	
+463	DY	16-Sep-19	11	kani	1	NA	NA	
+464	DY	16-Sep-19	12	kani	0	k:ani	0	
+465	DY	16-Sep-19	13	kani	0	k:ani	0	
+466	DY	16-Sep-19	14	kani	1	NA	NA	
+467	DY	16-Sep-19	15	kani	1	NA	NA	
+468	DY	16-Sep-19	16	kani	1	NA	NA	
+469	DY	16-Sep-19	17	kani	1	NA	NA	
+470	DY	16-Sep-19	18	kani	1	NA	NA	
+471	DY	16-Sep-19	19	kani	0	keni	0	
+472	DY	16-Sep-19	20	kani	0	k:ani	0	
+473	DY	16-Sep-19	21	kani	0	k	0	
+474	DY	16-Sep-19	22	kani	1	NA	NA	
+475	DY	16-Sep-19	23	kani	1	NA	NA	
+476	DY	16-Sep-19	24	kani	1	NA	NA	
+477	DY	16-Sep-19	25	kani	1	NA	NA	
+478	DY	16-Sep-19	26	kani	1	NA	NA	
+479	DY	16-Sep-19	27	kani	0	k:ani	0	
+480	DY	16-Sep-19	28	kani	0	deni	0	
+481	DY	16-Sep-19	29	kani	1	NA	NA	
+482	DY	16-Sep-19	1	kipo	1	NA	NA	
+483	DY	16-Sep-19	2	kipo	1	NA	NA	
+484	DY	16-Sep-19	3	kipo	1	NA	NA	
+485	DY	16-Sep-19	4	kipo	1	NA	NA	
+486	DY	16-Sep-19	5	kipo	1	NA	NA	
+487	DY	16-Sep-19	6	kipo	0	chipo	0	
+488	DY	16-Sep-19	7	kipo	1	NA	NA	
+489	DY	16-Sep-19	8	kipo	1	NA	NA	
+490	DY	16-Sep-19	9	kipo	1	NA	NA	
+491	DY	16-Sep-19	10	kipo	1	NA	NA	
+492	DY	16-Sep-19	11	kipo	1	NA	NA	
+493	DY	16-Sep-19	12	kipo	1	NA	NA	
+494	DY	16-Sep-19	13	kipo	0	chipo	0	
+495	DY	16-Sep-19	14	kipo	1	NA	NA	
+496	DY	16-Sep-19	15	kipo	0	dipo	0	
+497	DY	16-Sep-19	16	kipo	1	NA	NA	
+498	DY	16-Sep-19	17	kipo	0	dipo	0	
+499	DY	16-Sep-19	18	kipo	0	chipo	0	
+500	DY	16-Sep-19	19	kipo	1	NA	NA	
+501	DY	16-Sep-19	20	kipo	1	NA	NA	
+502	DY	16-Sep-19	21	kipo	0	tipo	0	
+503	DY	16-Sep-19	22	kipo	1	NA	NA	
+504	DY	16-Sep-19	23	kipo	1	NA	NA	
+505	DY	16-Sep-19	24	kipo	1	NA	NA	
+506	DY	16-Sep-19	25	kipo	1	NA	NA	
+507	DY	16-Sep-19	26	kipo	0	chipo	0	
+508	DY	16-Sep-19	27	kipo	1	NA	NA	
+509	DY	16-Sep-19	1	kp_aa	1	NA	NA	
+510	DY	16-Sep-19	2	kp_aa	0	t:ââ	flood/wait for something	
+511	DY	16-Sep-19	3	kp_aa	0	t:ââ	flood/wait for something	
+512	DY	16-Sep-19	4	kp_aa	0	k:ââ	post	
+513	DY	16-Sep-19	5	kp_aa	0	d:ââ	pot/moon/month	
+514	DY	16-Sep-19	6	kp_aa	0	NA	NA	
+515	DY	16-Sep-19	7	kp_aa	0	kn:ââ	butt	
+516	DY	16-Sep-19	8	kp_aa	1	NA	NA	
+517	DY	16-Sep-19	9	kp_aa	0	kn:ââ	butt	
+518	DY	16-Sep-19	10	kp_aa	1	NA	NA	
+519	DY	16-Sep-19	11	kp_aa	1	NA	NA	
+520	DY	16-Sep-19	12	kp_aa	0	paa	walk	
+521	DY	16-Sep-19	13	kp_aa	1	NA	NA	
+522	DY	16-Sep-19	14	kp_aa	1	NA	NA	
+523	DY	16-Sep-19	15	kp_aa	0	kpo	ashes/wrap/chew/smoke/give to you or me	MC edited meaning for clarity
+524	DY	16-Sep-19	16	kp_aa	0	d:ââ	pot/moon/month	
+525	DY	16-Sep-19	17	kp_aa	1	NA	NA	
+526	DY	16-Sep-19	18	kp_aa	0	d:ââ	pot/moon/month	
+527	DY	16-Sep-19	19	kp_aa	0	k:ââ	post	
+528	DY	16-Sep-19	20	kp_aa	0	w:ââ	dog	
+529	DY	16-Sep-19	21	kp_aa	1	NA	NA	
+530	DY	16-Sep-19	22	kp_aa	1	NA	NA	
+531	DY	16-Sep-19	23	kp_aa	0	d:ââ	pot/moon/month	
+532	DY	16-Sep-19	24	kp_aa	0	t:ââ	flood/wait for something	
+533	DY	16-Sep-19	25	kp_aa	0	t:ââ	flood/wait for something	
+534	DY	16-Sep-19	26	kp_aa	1	NA	NA	
+535	DY	16-Sep-19	27	kp_aa	1	NA	NA	
+536	DY	16-Sep-19	28	kp_aa	1	NA	NA	
+537	DY	16-Sep-19	29	kp_aa	0	kn:ââ	butt	
+538	DY	16-Sep-19	30	kp_aa	1	NA	NA	
+539	DY	16-Sep-19	31	kp_aa	1	NA	NA	
+540	DY	16-Sep-19	32	kp_aa	1	NA	NA	
+541	DY	16-Sep-19	33	kp_aa	0	d:ââ	pot/moon/month	
+542	DY	16-Sep-19	34	kp_aa	1	NA	NA	
+543	DY	16-Sep-19	35	kp_aa	0	t:ââ	flood/wait for something	
+544	DY	16-Sep-19	36	kp_aa	0	kmo	flying fish	
+545	DY	16-Sep-19	37	kp_aa	0	kmo	flying fish	
+546	DY	16-Sep-19	38	kp_aa	0	d:ââ	pot/moon/month	
+547	DY	16-Sep-19	39	kp_aa	0	kpo	ashes/wrap/chew/smoke/give to you or me	MC edited meaning for clarity
+548	DY	16-Sep-19	40	kp_aa	0	d:ââ	pot/moon/month	
+549	DY	16-Sep-19	41	kp_aa	0	t:ââ	flood/wait for something	
+550	DY	16-Sep-19	1	kpu	0	pê	long thing	
+551	DY	16-Sep-19	2	kpu	1	NA	NA	
+552	DY	16-Sep-19	3	kpu	0	tpe	vagina	
+553	DY	16-Sep-19	4	kpu	0	kpê	vine/string/light something on fire	MC edited meaning for clarity
+554	DY	16-Sep-19	5	kpu	0	pê	long thing	
+555	DY	16-Sep-19	6	kpu	0	kpê	vine/string/light something on fire	MC edited meaning for clarity
+556	DY	16-Sep-19	7	kpu	0	kpê	vine/string/light something on fire	MC edited meaning for clarity
+557	DY	16-Sep-19	8	kpu	1	NA	NA	
+558	DY	16-Sep-19	9	kpu	1	NA	NA	
+559	DY	16-Sep-19	10	kpu	0	kpê	vine/string/light something on fire	MC edited meaning for clarity
+560	DY	16-Sep-19	11	kpu	1	NA	NA	
+561	DY	16-Sep-19	12	kpu	1	NA	NA	
+562	DY	16-Sep-19	13	kpu	0	kpê	vine/string/light something on fire	MC edited meaning for clarity
+563	DY	16-Sep-19	14	kpu	1	NA	NA	
+564	DY	16-Sep-19	15	kpu	1	NA	NA	
+565	DY	16-Sep-19	16	kpu	1	NA	NA	
+566	DY	16-Sep-19	17	kpu	0	kpê	vine/string/light something on fire	MC edited meaning for clarity
+567	DY	16-Sep-19	18	kpu	0	kpê	vine/string/light something on fire	MC edited meaning for clarity
+568	DY	16-Sep-19	19	kpu	0	kpê	vine/string/light something on fire	MC edited meaning for clarity
+569	DY	16-Sep-19	20	kpu	0	kpê	vine/string/light something on fire	MC edited meaning for clarity
+570	DY	16-Sep-19	1	lv_e	1	NA	NA	
+571	DY	16-Sep-19	2	lv_e	1	NA	NA	
+572	DY	16-Sep-19	3	lv_e	1	NA	NA	
+573	DY	16-Sep-19	4	lv_e	0	w:ââ	dog	
+574	DY	16-Sep-19	5	lv_e	1	NA	NA	
+575	DY	16-Sep-19	6	lv_e	0	w:ââ	dog	
+576	DY	16-Sep-19	7	lv_e	0	va	0	
+577	DY	16-Sep-19	8	lv_e	0	w:ââ	dog	
+578	DY	16-Sep-19	9	lv_e	0	v:a	0	
+579	DY	16-Sep-19	10	lv_e	0	va	0	
+580	DY	16-Sep-19	11	lv_e	0	w:ââ	dog	
+581	DY	16-Sep-19	12	lv_e	1	NA	NA	
+582	DY	16-Sep-19	13	lv_e	0	wo	day	
+583	DY	16-Sep-19	14	lv_e	0	ghîî	descend	MC edited meaning for clarity
+584	DY	16-Sep-19	15	lv_e	1	NA	NA	
+585	DY	16-Sep-19	16	lv_e	0	w:ââ	dog	
+586	DY	16-Sep-19	17	lv_e	1	NA	NA	
+587	DY	16-Sep-19	18	lv_e	0	wo	day	
+588	DY	16-Sep-19	19	lv_e	1	NA	NA	
+589	DY	16-Sep-19	20	lv_e	1	NA	NA	
+590	DY	16-Sep-19	21	lv_e	0	w:ââ	dog	
+591	DY	16-Sep-19	22	lv_e	1	NA	NA	
+592	DY	16-Sep-19	23	lv_e	0	w:ââ	dog	
+593	DY	16-Sep-19	24	lv_e	0	w:ââ	dog	
+594	DY	16-Sep-19	25	lv_e	1	NA	NA	
+595	DY	16-Sep-19	26	lv_e	1	NA	NA	
+596	DY	16-Sep-19	27	lv_e	0	km:ii	coconut	
+597	DY	16-Sep-19	28	lv_e	1	NA	NA	
+598	DY	16-Sep-19	1	lva	1	NA	NA	
+599	DY	16-Sep-19	2	lva	1	NA	NA	
+600	DY	16-Sep-19	3	lva	1	NA	NA	
+601	DY	16-Sep-19	4	lva	1	NA	NA	
+602	DY	16-Sep-19	5	lva	0	lv:ââ	a man's name	
+603	DY	16-Sep-19	6	lva	1	NA	NA	
+604	DY	16-Sep-19	7	lva	0	ghee	peeling	
+605	DY	16-Sep-19	8	lva	1	NA	NA	
+606	DY	16-Sep-19	9	lva	1	NA	NA	
+607	DY	16-Sep-19	10	lva	0	vy:a	hit	
+608	DY	16-Sep-19	11	lva	0	lvee	type of fish	
+609	DY	16-Sep-19	12	lva	0	vy:a	hit	
+610	DY	16-Sep-19	13	lva	0	vy:a	hit	
+611	DY	16-Sep-19	14	lva	1	NA	NA	
+612	DY	16-Sep-19	15	lva	1	NA	NA	
+613	DY	16-Sep-19	16	lva	1	NA	NA	
+614	DY	16-Sep-19	17	lva	0	vy:a	hit	
+615	DY	16-Sep-19	18	lva	0	d:ââ	pot/moon/month	
+616	DY	16-Sep-19	19	lva	1	NA	NA	
+617	DY	16-Sep-19	20	lva	1	NA	NA	
+618	DY	16-Sep-19	21	lva	1	NA	NA	
+619	DY	16-Sep-19	22	lva	0	lvee	type of fish	
+620	DY	16-Sep-19	23	lva	0	lvee	type of fish	
+621	DY	16-Sep-19	24	lva	0	lvee	type of fish	
+622	DY	16-Sep-19	25	lva	1	NA	NA	
+623	DY	16-Sep-19	26	lva	0	vy:a	hit	
+624	DY	16-Sep-19	27	lva	1	NA	NA	
+625	DY	16-Sep-19	28	lva	1	NA	NA	
+626	DY	16-Sep-19	29	lva	0	w:ââ	dog	
+627	DY	16-Sep-19	30	lva	0	vy:a	hit	
+628	DY	16-Sep-19	31	lva	0	vy:a	hit	
+629	DY	16-Sep-19	32	lva	1	NA	NA	
+630	DY	16-Sep-19	1	lvi	1	NA	NA	
+631	DY	16-Sep-19	2	lvi	1	NA	NA	
+632	DY	16-Sep-19	3	lvi	1	NA	NA	
+633	DY	16-Sep-19	4	lvi	0	vyi	say/big flood/bunch of fruit	MC edited meaning for clarity
+634	DY	16-Sep-19	5	lvi	1	NA	NA	
+635	DY	16-Sep-19	6	lvi	0	l--vi	0	
+636	DY	16-Sep-19	7	lvi	0	vyi	say/big flood/bunch of fruit	MC edited meaning for clarity
+637	DY	16-Sep-19	8	lvi	0	vyi	say/big flood/bunch of fruit	MC edited meaning for clarity
+638	DY	16-Sep-19	9	lvi	0	ghi	0	
+639	DY	16-Sep-19	10	lvi	1	NA	NA	
+640	DY	16-Sep-19	11	lvi	1	NA	NA	
+641	DY	16-Sep-19	12	lvi	1	NA	NA	
+642	DY	16-Sep-19	13	lvi	1	NA	NA	
+643	DY	16-Sep-19	14	lvi	1	NA	NA	
+644	DY	16-Sep-19	15	lvi	1	NA	NA	
+645	DY	16-Sep-19	16	lvi	1	NA	NA	
+646	DY	16-Sep-19	17	lvi	1	NA	NA	
+647	DY	16-Sep-19	18	lvi	0	lukwe	what	
+648	DY	16-Sep-19	19	lvi	0	vyi	say/big flood/bunch of fruit	MC edited meaning for clarity
+649	DY	16-Sep-19	20	lvi	0	vyi	say/big flood/bunch of fruit	MC edited meaning for clarity
+650	DY	16-Sep-19	21	lvi	1	NA	NA	
+651	DY	16-Sep-19	22	lvi	1	NA	NA	
+652	DY	16-Sep-19	23	lvi	0	vyi	say/big flood/bunch of fruit	MC edited meaning for clarity
+653	DY	16-Sep-19	24	lvi	1	NA	NA	
+654	DY	16-Sep-19	25	lvi	1	NA	NA	
+655	DY	16-Sep-19	26	lvi	1	NA	NA	
+656	DY	16-Sep-19	27	lvi	1	NA	NA	
+657	DY	16-Sep-19	28	lvi	1	NA	NA	
+658	DY	16-Sep-19	29	lvi	1	NA	NA	
+659	DY	16-Sep-19	30	lvi	1	NA	NA	
+660	DY	16-Sep-19	31	lvi	0	vyi	say/big flood/bunch of fruit	MC edited meaning for clarity
+661	DY	16-Sep-19	32	lvi	1	NA	NA	
+662	DY	16-Sep-19	33	lvi	0	vyi	say/big flood/bunch of fruit	MC edited meaning for clarity
+663	DY	16-Sep-19	34	lvi	1	NA	NA	
+664	DY	16-Sep-19	35	lvi	1	NA	NA	
+665	DY	16-Sep-19	36	lvi	1	NA	NA	
+666	DY	16-Sep-19	1	meyadi	0	neyadi	0	
+667	DY	16-Sep-19	2	meyadi	1	NA	NA	
+668	DY	16-Sep-19	3	meyadi	1	NA	NA	
+669	DY	16-Sep-19	4	meyadi	1	NA	NA	
+670	DY	16-Sep-19	5	meyadi	1	NA	NA	
+671	DY	16-Sep-19	6	meyadi	1	NA	NA	
+672	DY	16-Sep-19	7	meyadi	1	NA	NA	
+673	DY	16-Sep-19	8	meyadi	1	NA	NA	
+674	DY	16-Sep-19	9	meyadi	1	NA	NA	
+675	DY	16-Sep-19	10	meyadi	1	NA	NA	
+676	DY	16-Sep-19	11	meyadi	1	NA	NA	
+677	DY	16-Sep-19	12	meyadi	1	NA	NA	
+678	DY	16-Sep-19	13	meyadi	1	NA	NA	
+679	DY	16-Sep-19	14	meyadi	0	miyedi	0	
+680	DY	16-Sep-19	15	meyadi	1	NA	NA	
+681	DY	16-Sep-19	16	meyadi	1	NA	NA	
+682	DY	16-Sep-19	17	meyadi	1	NA	NA	
+683	DY	16-Sep-19	18	meyadi	1	NA	NA	
+684	DY	16-Sep-19	19	meyadi	0	meye--di	0	
+685	DY	16-Sep-19	20	meyadi	1	NA	NA	
+686	DY	16-Sep-19	21	meyadi	1	NA	NA	
+687	DY	16-Sep-19	1	mituye	1	NA	NA	
+688	DY	16-Sep-19	2	mituye	1	NA	NA	
+689	DY	16-Sep-19	3	mituye	1	NA	NA	
+690	DY	16-Sep-19	4	mituye	1	NA	NA	
+691	DY	16-Sep-19	5	mituye	1	NA	NA	
+692	DY	16-Sep-19	6	mituye	0	miteye	0	
+693	DY	16-Sep-19	7	mituye	1	NA	NA	
+694	DY	16-Sep-19	8	mituye	1	NA	NA	
+695	DY	16-Sep-19	9	mituye	1	NA	NA	
+696	DY	16-Sep-19	10	mituye	1	NA	NA	
+697	DY	16-Sep-19	11	mituye	1	NA	NA	
+698	DY	16-Sep-19	12	mituye	1	NA	NA	
+699	DY	16-Sep-19	13	mituye	1	NA	NA	
+700	DY	16-Sep-19	14	mituye	1	NA	NA	
+701	DY	16-Sep-19	15	mituye	0	mituya	0	
+702	DY	16-Sep-19	16	mituye	1	NA	NA	
+703	DY	16-Sep-19	17	mituye	0	mituya	0	
+704	DY	16-Sep-19	18	mituye	1	NA	NA	
+705	DY	16-Sep-19	19	mituye	1	mi--tu--ye	NA	the right syllables, but with spaces
+706	DY	16-Sep-19	20	mituye	0	mituya	0	
+707	DY	16-Sep-19	21	mituye	1	NA	NA	
+708	DY	16-Sep-19	22	mituye	1	NA	NA	
+709	DY	16-Sep-19	23	mituye	1	NA	NA	
+710	DY	16-Sep-19	24	mituye	1	NA	NA	
+711	DY	16-Sep-19	25	mituye	1	mi--tu--ye	NA	the right syllables, but with spaces
+712	DY	16-Sep-19	26	mituye	0	mi--tu--ya	0	
+713	DY	16-Sep-19	27	mituye	1	NA	NA	
+714	DY	16-Sep-19	28	mituye	0	mituyet	0	
+715	DY	16-Sep-19	29	mituye	1	NA	NA	
+716	DY	17-Sep-19	1	nademo	1	NA	NA	
+717	DY	17-Sep-19	2	nademo	1	NA	NA	
+718	DY	17-Sep-19	3	nademo	0	natemo	0	
+719	DY	17-Sep-19	4	nademo	0	lavu	0	
+720	DY	17-Sep-19	5	nademo	1	NA	NA	
+721	DY	17-Sep-19	6	nademo	1	NA	NA	
+722	DY	17-Sep-19	7	nademo	1	NA	NA	
+723	DY	17-Sep-19	8	nademo	1	NA	NA	
+724	DY	17-Sep-19	9	nademo	1	NA	NA	
+725	DY	17-Sep-19	10	nademo	0	enade--mo	0	
+726	DY	17-Sep-19	11	nademo	1	NA	NA	
+727	DY	17-Sep-19	12	nademo	1	NA	NA	
+728	DY	17-Sep-19	13	nademo	1	NA	NA	
+729	DY	17-Sep-19	14	nademo	1	NA	NA	
+730	DY	17-Sep-19	15	nademo	1	NA	NA	
+731	DY	17-Sep-19	16	nademo	0	navu--u	0	
+732	DY	17-Sep-19	17	nademo	0	loudî	English: loud	
+733	DY	17-Sep-19	18	nademo	1	NA	NA	
+734	DY	17-Sep-19	19	nademo	1	NA	NA	
+735	DY	17-Sep-19	20	nademo	1	NA	NA	
+736	DY	17-Sep-19	21	nademo	1	NA	NA	
+737	DY	17-Sep-19	22	nademo	1	NA	NA	
+738	DY	17-Sep-19	23	nademo	1	NA	NA	
+739	DY	17-Sep-19	24	nademo	1	NA	NA	
+740	DY	17-Sep-19	1	nayeki	1	NA	NA	
+741	DY	17-Sep-19	2	nayeki	1	NA	NA	
+742	DY	17-Sep-19	3	nayeki	1	NA	NA	
+743	DY	17-Sep-19	4	nayeki	1	NA	NA	
+744	DY	17-Sep-19	5	nayeki	1	NA	NA	
+745	DY	17-Sep-19	6	nayeki	0	nayek:ii--k:ii	"banana/there (k:ii only; nakek:ii is not a word)"	MC edited meaning for clarity
+746	DY	17-Sep-19	7	nayeki	1	NA	NA	
+747	DY	17-Sep-19	8	nayeki	1	NA	NA	
+748	DY	17-Sep-19	9	nayeki	1	NA	NA	
+749	DY	17-Sep-19	10	nayeki	1	NA	NA	
+750	DY	17-Sep-19	11	nayeki	1	NA	NA	
+751	DY	17-Sep-19	12	nayeki	1	NA	NA	
+752	DY	17-Sep-19	13	nayeki	1	NA	NA	
+753	DY	17-Sep-19	14	nayeki	1	NA	NA	
+754	DY	17-Sep-19	15	nayeki	1	NA	NA	
+755	DY	17-Sep-19	16	nayeki	1	NA	NA	
+756	DY	17-Sep-19	17	nayeki	1	NA	NA	
+757	DY	17-Sep-19	18	nayeki	1	NA	NA	
+758	DY	17-Sep-19	19	nayeki	1	NA	NA	
+759	DY	17-Sep-19	20	nayeki	1	NA	NA	
+760	DY	17-Sep-19	21	nayeki	1	NA	NA	
+761	DY	17-Sep-19	22	nayeki	0	nayaki	0	
+762	DY	17-Sep-19	23	nayeki	1	NA	NA	
+763	DY	17-Sep-19	24	nayeki	1	NA	NA	
+764	DY	17-Sep-19	25	nayeki	0	nake-k:ii	0	
+765	DY	17-Sep-19	26	nayeki	1	NA	NA	
+766	DY	17-Sep-19	1	noki	1	NA	NA	
+767	DY	17-Sep-19	2	noki	1	NA	NA	
+768	DY	17-Sep-19	3	noki	1	NA	NA	
+769	DY	17-Sep-19	4	noki	1	NA	NA	
+770	DY	17-Sep-19	5	noki	1	NA	NA	
+771	DY	17-Sep-19	6	noki	0	nokî	0	
+772	DY	17-Sep-19	7	noki	0	no--k:ii	"banana/there (k:ii only; nakek:ii is not a word)"	MC edited meaning for clarity
+773	DY	17-Sep-19	8	noki	1	NA	NA	
+774	DY	17-Sep-19	9	noki	1	NA	NA	
+775	DY	17-Sep-19	10	noki	1	NA	NA	
+776	DY	17-Sep-19	11	noki	1	NA	NA	
+777	DY	17-Sep-19	12	noki	1	NA	NA	
+778	DY	17-Sep-19	13	noki	1	NA	NA	
+779	DY	17-Sep-19	14	noki	1	NA	NA	
+780	DY	17-Sep-19	15	noki	1	NA	NA	
+781	DY	17-Sep-19	16	noki	1	NA	NA	
+782	DY	17-Sep-19	17	noki	1	NA	NA	
+783	DY	17-Sep-19	18	noki	1	NA	NA	
+784	DY	17-Sep-19	19	noki	0	nok:ii	0	
+785	DY	17-Sep-19	20	noki	1	NA	NA	
+786	DY	17-Sep-19	21	noki	1	NA	NA	
+787	DY	17-Sep-19	22	noki	1	NA	NA	
+788	DY	17-Sep-19	23	noki	1	NA	NA	
+789	DY	17-Sep-19	24	noki	0	no--k:ii	"banana/there (k:ii only; nakek:ii is not a word)"	MC edited meaning for clarity
+790	DY	17-Sep-19	25	noki	0	no--k:ii	"banana/there (k:ii only; nakek:ii is not a word)"	MC edited meaning for clarity
+791	DY	17-Sep-19	26	noki	1	NA	NA	
+792	DY	17-Sep-19	27	noki	1	NA	NA	
+793	DY	17-Sep-19	1	nomi	1	NA	NA	
+794	DY	17-Sep-19	2	nomi	1	NA	NA	
+795	DY	17-Sep-19	3	nomi	1	NA	NA	
+796	DY	17-Sep-19	4	nomi	1	NA	NA	
+797	DY	17-Sep-19	5	nomi	1	NA	NA	
+798	DY	17-Sep-19	6	nomi	1	NA	NA	
+799	DY	17-Sep-19	7	nomi	1	NA	NA	
+800	DY	17-Sep-19	8	nomi	1	NA	NA	
+801	DY	17-Sep-19	9	nomi	1	NA	NA	
+802	DY	17-Sep-19	10	nomi	1	NA	NA	
+803	DY	17-Sep-19	11	nomi	1	NA	NA	
+804	DY	17-Sep-19	12	nomi	1	NA	NA	
+805	DY	17-Sep-19	13	nomi	1	NA	NA	
+806	DY	17-Sep-19	14	nomi	1	NA	NA	
+807	DY	17-Sep-19	15	nomi	1	NA	NA	
+808	DY	17-Sep-19	16	nomi	1	NA	NA	
+809	DY	17-Sep-19	17	nomi	1	NA	NA	
+810	DY	17-Sep-19	18	nomi	1	NA	NA	
+811	DY	17-Sep-19	19	nomi	1	NA	NA	
+812	DY	17-Sep-19	20	nomi	1	NA	NA	
+813	DY	17-Sep-19	21	nomi	1	NA	NA	
+814	DY	17-Sep-19	22	nomi	1	NA	NA	
+815	DY	17-Sep-19	23	nomi	1	NA	NA	
+816	DY	17-Sep-19	24	nomi	1	NA	NA	
+817	DY	17-Sep-19	25	nomi	1	NA	NA	
+818	DY	17-Sep-19	26	nomi	1	NA	NA	
+819	DY	17-Sep-19	1	nomiwake	1	NA	NA	
+820	DY	17-Sep-19	2	nomiwake	1	NA	NA	
+821	DY	17-Sep-19	3	nomiwake	1	NA	NA	
+822	DY	17-Sep-19	4	nomiwake	1	NA	NA	
+823	DY	17-Sep-19	5	nomiwake	1	NA	NA	
+824	DY	17-Sep-19	6	nomiwake	1	NA	NA	
+825	DY	17-Sep-19	7	nomiwake	1	NA	NA	
+826	DY	17-Sep-19	8	nomiwake	1	NA	NA	
+827	DY	17-Sep-19	9	nomiwake	1	NA	NA	
+828	DY	17-Sep-19	10	nomiwake	0	nómywu--wake	middle word is a name	MC edited meaning for clarity
+829	DY	17-Sep-19	11	nomiwake	1	NA	NA	
+830	DY	17-Sep-19	12	nomiwake	1	NA	NA	
+831	DY	17-Sep-19	13	nomiwake	1	NA	NA	
+832	DY	17-Sep-19	14	nomiwake	1	NA	NA	
+833	DY	17-Sep-19	15	nomiwake	1	NA	NA	
+834	DY	17-Sep-19	16	nomiwake	1	NA	NA	
+835	DY	17-Sep-19	17	nomiwake	1	no--mi--wake	NA	the right syllables, but with spaces
+836	DY	17-Sep-19	18	nomiwake	1	no--mi--wake	NA	the right syllables, but with spaces
+837	DY	17-Sep-19	19	nomiwake	1	NA	NA	
+838	DY	17-Sep-19	20	nomiwake	0	nemwiwate	0	
+839	DY	17-Sep-19	21	nomiwake	0	no--mi--wake	0	
+840	DY	17-Sep-19	22	nomiwake	1	NA	NA	
+841	DY	17-Sep-19	23	nomiwake	1	NA	NA	
+842	DY	17-Sep-19	24	nomiwake	1	NA	NA	
+843	DY	17-Sep-19	25	nomiwake	0	forme-wake	0	
+844	DY	17-Sep-19	26	nomiwake	1	NA	NA	
+845	DY	17-Sep-19	27	nomiwake	1	NA	NA	
+846	DY	17-Sep-19	1	nopimade	0	nopinape	0	
+847	DY	17-Sep-19	2	nopimade	0	nopinate	0	
+848	DY	17-Sep-19	3	nopimade	1	NA	NA	
+849	DY	17-Sep-19	4	nopimade	0	nopima	0	
+850	DY	17-Sep-19	5	nopimade	0	nopina--made	0	
+851	DY	17-Sep-19	6	nopimade	1	NA	NA	
+852	DY	17-Sep-19	7	nopimade	1	NA	NA	
+853	DY	17-Sep-19	8	nopimade	0	nopimate	0	
+854	DY	17-Sep-19	9	nopimade	1	NA	NA	
+855	DY	17-Sep-19	10	nopimade	1	NA	NA	
+856	DY	17-Sep-19	11	nopimade	1	NA	NA	
+857	DY	17-Sep-19	12	nopimade	1	NA	NA	
+858	DY	17-Sep-19	13	nopimade	0	nopima-made	0	
+859	DY	17-Sep-19	14	nopimade	1	NA	NA	
+860	DY	17-Sep-19	15	nopimade	0	nopinade	0	
+861	DY	17-Sep-19	16	nopimade	0	nopimate	0	
+862	DY	17-Sep-19	17	nopimade	0	nopimate	0	
+863	DY	17-Sep-19	18	nopimade	0	nopinade	0	
+864	DY	17-Sep-19	19	nopimade	1	NA	NA	
+865	DY	17-Sep-19	20	nopimade	0	nopinate	0	
+866	DY	17-Sep-19	21	nopimade	1	NA	NA	
+867	DY	17-Sep-19	22	nopimade	0	nopimate	0	
+868	DY	17-Sep-19	23	nopimade	0	nopimate	0	
+869	DY	17-Sep-19	24	nopimade	1	NA	NA	
+870	DY	17-Sep-19	25	nopimade	1	NA	NA	
+871	DY	17-Sep-19	26	nopimade	1	NA	NA	
+872	DY	17-Sep-19	27	nopimade	0	nopinade	0	
+873	DY	17-Sep-19	28	nopimade	1	NA	NA	
+874	DY	17-Sep-19	29	nopimade	0	nopi--mate	0	
+875	DY	17-Sep-19	30	nopimade	0	nopimat	0	
+876	DY	17-Sep-19	31	nopimade	1	NA	NA	
+877	DY	17-Sep-19	32	nopimade	0	mote--mate	0	
+878	DY	17-Sep-19	33	nopimade	0	nopi--mate	0	Anna writes: not clear
+879	DY	17-Sep-19	34	nopimade	0	no-pinêt	English: no peanut	
+880	DY	17-Sep-19	35	nopimade	1	NA	NA	
+881	DY	17-Sep-19	36	nopimade	1	NA	NA	
+882	DY	17-Sep-19	37	nopimade	1	NA	NA	
+883	DY	17-Sep-19	38	nopimade	0	nopinade	0	
+884	DY	17-Sep-19	39	nopimade	0	nopimate	0	
+885	DY	17-Sep-19	40	nopimade	0	nopima	0	
+886	DY	17-Sep-19	41	nopimade	0	nopimate	0	
+887	DY	17-Sep-19	42	nopimade	1	NA	NA	
+888	DY	17-Sep-19	43	nopimade	1	NA	NA	
+889	DY	17-Sep-19	44	nopimade	1	NA	NA	
+890	DY	17-Sep-19	45	nopimade	0	nopimate	0	
+891	DY	17-Sep-19	46	nopimade	1	NA	NA	
+892	DY	17-Sep-19	47	nopimade	1	NA	NA	
+893	DY	17-Sep-19	48	nopimade	1	NA	NA	
+894	DY	17-Sep-19	49	nopimade	1	nopi--made	NA	the right syllables, but with spaces
+895	DY	17-Sep-19	50	nopimade	1	NA	NA	
+896	DY	17-Sep-19	51	nopimade	1	NA	NA	
+897	DY	17-Sep-19	52	nopimade	1	NA	NA	
+898	DY	17-Sep-19	53	nopimade	1	NA	NA	
+899	DY	17-Sep-19	54	nopimade	0	nopinape	0	
+900	DY	17-Sep-19	55	nopimade	0	nopinade	0	
+901	DY	17-Sep-19	56	nopimade	1	NA	NA	
+902	DY	17-Sep-19	57	nopimade	0	nopimate	0	
+903	DY	17-Sep-19	58	nopimade	0	nopimate	0	
+904	DY	17-Sep-19	59	nopimade	0	nopimate	0	
+905	DY	17-Sep-19	1	nuyedi	1	NA	NA	
+906	DY	17-Sep-19	2	nuyedi	1	NA	NA	
+907	DY	17-Sep-19	3	nuyedi	1	NA	NA	
+908	DY	17-Sep-19	4	nuyedi	0	nodedi	English: no daddy	
+909	DY	17-Sep-19	5	nuyedi	1	NA	NA	
+910	DY	17-Sep-19	6	nuyedi	1	NA	NA	
+911	DY	17-Sep-19	7	nuyedi	1	NA	NA	
+912	DY	17-Sep-19	8	nuyedi	1	NA	NA	
+913	DY	17-Sep-19	9	nuyedi	1	NA	NA	
+914	DY	17-Sep-19	10	nuyedi	1	NA	NA	
+915	DY	17-Sep-19	11	nuyedi	1	NA	NA	
+916	DY	17-Sep-19	12	nuyedi	1	NA	NA	
+917	DY	17-Sep-19	13	nuyedi	1	NA	NA	
+918	DY	17-Sep-19	14	nuyedi	1	NA	NA	
+919	DY	17-Sep-19	15	nuyedi	1	NA	NA	
+920	DY	17-Sep-19	16	nuyedi	1	NA	NA	
+921	DY	17-Sep-19	17	nuyedi	0	nuyeté	0	
+922	DY	17-Sep-19	18	nuyedi	1	NA	NA	
+923	DY	17-Sep-19	19	nuyedi	1	NA	NA	
+924	DY	17-Sep-19	20	nuyedi	1	NA	NA	
+925	DY	17-Sep-19	21	nuyedi	1	NA	NA	
+926	DY	17-Sep-19	22	nuyedi	1	NA	NA	
+927	DY	17-Sep-19	23	nuyedi	1	NA	NA	
+928	DY	17-Sep-19	24	nuyedi	1	NA	NA	
+929	DY	17-Sep-19	25	nuyedi	1	NA	NA	
+930	DY	17-Sep-19	26	nuyedi	1	NA	NA	
+931	DY	17-Sep-19	27	nuyedi	1	NA	NA	
+932	DY	17-Sep-19	28	nuyedi	1	nu--ye--di	NA	the right syllables, but with spaces
+933	DY	17-Sep-19	29	nuyedi	0	no--dadi	English: no daddy	
+934	DY	17-Sep-19	30	nuyedi	1	NA	NA	
+935	DY	17-Sep-19	31	nuyedi	1	NA	NA	
+936	DY	17-Sep-19	32	nuyedi	1	NA	NA	
+937	DY	17-Sep-19	1	pedumi	1	NA	NA	
+938	DY	17-Sep-19	2	pedumi	1	NA	NA	
+939	DY	17-Sep-19	3	pedumi	1	NA	NA	
+940	DY	17-Sep-19	4	pedumi	1	NA	NA	
+941	DY	17-Sep-19	5	pedumi	1	NA	NA	
+942	DY	17-Sep-19	6	pedumi	1	NA	NA	
+943	DY	17-Sep-19	7	pedumi	1	NA	NA	
+944	DY	17-Sep-19	8	pedumi	1	NA	NA	
+945	DY	17-Sep-19	9	pedumi	1	NA	NA	
+946	DY	17-Sep-19	10	pedumi	0	pedu	0	
+947	DY	17-Sep-19	11	pedumi	1	NA	NA	
+948	DY	17-Sep-19	12	pedumi	1	NA	NA	
+949	DY	17-Sep-19	13	pedumi	0	petrumi	"English: ""true"""	
+950	DY	17-Sep-19	14	pedumi	0	petrumi	"English: ""true"""	
+951	DY	17-Sep-19	15	pedumi	0	petrumi	"English: ""true"""	
+952	DY	17-Sep-19	16	pedumi	0	dedumi	0	
+953	DY	17-Sep-19	17	pedumi	1	NA	NA	
+954	DY	17-Sep-19	18	pedumi	1	NA	NA	
+955	DY	17-Sep-19	19	pedumi	1	NA	NA	
+956	DY	17-Sep-19	20	pedumi	1	NA	NA	
+957	DY	17-Sep-19	21	pedumi	1	peshu--mi	NA	the right syllables, but with spaces
+958	DY	17-Sep-19	22	pedumi	1	NA	NA	
+959	DY	17-Sep-19	23	pedumi	1	NA	NA	
+960	DY	17-Sep-19	24	pedumi	1	NA	NA	
+961	DY	17-Sep-19	1	piwa	1	NA	NA	
+962	DY	17-Sep-19	2	piwa	0	tiwa	0	
+963	DY	17-Sep-19	3	piwa	1	NA	NA	
+964	DY	17-Sep-19	4	piwa	0	tiwa	0	
+965	DY	17-Sep-19	5	piwa	0	diwa	0	
+966	DY	17-Sep-19	6	piwa	0	tiwa	0	
+967	DY	17-Sep-19	7	piwa	1	NA	NA	
+968	DY	17-Sep-19	8	piwa	0	chiwa	close to a name: Dyuuwaa/Chiiwaa	
+969	DY	17-Sep-19	9	piwa	1	NA	NA	
+970	DY	17-Sep-19	10	piwa	1	NA	NA	
+971	DY	17-Sep-19	11	piwa	1	NA	NA	
+972	DY	17-Sep-19	12	piwa	1	NA	NA	
+973	DY	17-Sep-19	13	piwa	0	diwa	0	
+974	DY	17-Sep-19	14	piwa	1	NA	NA	
+975	DY	17-Sep-19	15	piwa	1	NA	NA	
+976	DY	17-Sep-19	16	piwa	0	piwo	0	
+977	DY	17-Sep-19	17	piwa	1	NA	NA	
+978	DY	17-Sep-19	18	piwa	0	diwa	0	
+979	DY	17-Sep-19	19	piwa	1	NA	NA	
+980	DY	17-Sep-19	20	piwa	0	tiwa	0	
+981	DY	17-Sep-19	21	piwa	1	NA	NA	
+982	DY	17-Sep-19	22	piwa	0	diwa	0	
+983	DY	17-Sep-19	23	piwa	1	NA	NA	
+984	DY	17-Sep-19	24	piwa	1	NA	NA	
+985	DY	17-Sep-19	25	piwa	1	pi--wa	NA	the right syllables, but with spaces
+986	DY	17-Sep-19	26	piwa	1	NA	NA	
+987	DY	17-Sep-19	27	piwa	1	NA	NA	
+988	DY	17-Sep-19	28	piwa	1	NA	NA	
+989	DY	17-Sep-19	29	piwa	0	diwa	0	
+990	DY	17-Sep-19	30	piwa	1	NA	NA	
+991	DY	17-Sep-19	31	piwa	1	NA	NA	
+992	DY	17-Sep-19	32	piwa	0	diwa	0	
+993	DY	17-Sep-19	33	piwa	0	diwa	0	
+994	DY	17-Sep-19	34	piwa	0	diwa	0	
+995	DY	17-Sep-19	1	poni	1	NA	NA	
+996	DY	17-Sep-19	2	poni	0	puni	0	
+997	DY	17-Sep-19	3	poni	0	koni	0	
+998	DY	17-Sep-19	4	poni	1	NA	NA	
+999	DY	17-Sep-19	5	poni	1	NA	NA	
+1000	DY	17-Sep-19	6	poni	0	pon	very close to the borrowed form for phone: 'ponî' or 'fonî'	
+1001	DY	17-Sep-19	7	poni	0	pon	very close to the borrowed form for phone: 'ponî' or 'fonî'	
+1002	DY	17-Sep-19	8	poni	1	NA	NA	
+1003	DY	17-Sep-19	9	poni	1	NA	NA	
+1004	DY	17-Sep-19	10	poni	1	NA	NA	
+1005	DY	17-Sep-19	11	poni	1	NA	NA	
+1006	DY	17-Sep-19	12	poni	1	NA	NA	
+1007	DY	17-Sep-19	13	poni	1	NA	NA	
+1008	DY	17-Sep-19	14	poni	0	puni	0	
+1009	DY	17-Sep-19	15	poni	0	foni	0	very close to the borrowed form for phone: 'ponî' or 'fonî'
+1010	DY	17-Sep-19	16	poni	0	foni	0	very close to the borrowed form for phone: 'ponî' or 'fonî'
+1011	DY	17-Sep-19	17	poni	0	foni	0	very close to the borrowed form for phone: 'ponî' or 'fonî'
+1012	DY	17-Sep-19	18	poni	0	foni	0	very close to the borrowed form for phone: 'ponî' or 'fonî'
+1013	DY	17-Sep-19	19	poni	1	NA	NA	
+1014	DY	17-Sep-19	20	poni	0	foni	0	very close to the borrowed form for phone: 'ponî' or 'fonî'
+1015	DY	17-Sep-19	21	poni	0	foni	0	very close to the borrowed form for phone: 'ponî' or 'fonî'
+1016	DY	17-Sep-19	22	poni	1	NA	NA	
+1017	DY	17-Sep-19	23	poni	0	foni	0	very close to the borrowed form for phone: 'ponî' or 'fonî'
+1018	DY	17-Sep-19	24	poni	1	NA	NA	
+1019	DY	17-Sep-19	25	poni	0	kon	0	
+1020	DY	17-Sep-19	26	poni	0	foni	0	very close to the borrowed form for phone: 'ponî' or 'fonî'
+1021	DY	17-Sep-19	27	poni	1	NA	NA	
+1022	DY	17-Sep-19	28	poni	1	NA	NA	
+1023	DY	17-Sep-19	29	poni	1	NA	NA	
+1024	DY	17-Sep-19	30	poni	1	NA	NA	
+1025	DY	17-Sep-19	31	poni	0	foni	0	very close to the borrowed form for phone: 'ponî' or 'fonî'
+1026	DY	17-Sep-19	32	poni	0	foni	0	very close to the borrowed form for phone: 'ponî' or 'fonî'
+1027	DY	17-Sep-19	33	poni	1	NA	NA	
+1028	DY	17-Sep-19	34	poni	0	foni	0	very close to the borrowed form for phone: 'ponî' or 'fonî'
+1029	DY	17-Sep-19	35	poni	1	NA	NA	
+1030	DY	17-Sep-19	36	poni	1	NA	NA	
+1031	DY	17-Sep-19	37	poni	1	NA	NA	
+1032	DY	17-Sep-19	38	poni	0	p:âây:i	down there	
+1033	DY	17-Sep-19	39	poni	0	ponian	0	
+1034	DY	17-Sep-19	40	poni	0	puni	0	
+1035	DY	17-Sep-19	41	poni	1	NA	NA	
+1036	DY	17-Sep-19	42	poni	0	puni	0	
+1037	DY	17-Sep-19	43	poni	1	NA	NA	
+1038	DY	17-Sep-19	44	poni	0	mbuniye	a woman's name	
+1039	DY	17-Sep-19	45	poni	0	puni	0	
+1040	DY	17-Sep-19	46	poni	0	fonian	0	
+1041	DY	17-Sep-19	47	poni	0	e--puni	0	
+1042	DY	17-Sep-19	48	poni	1	NA	NA	
+1043	DY	17-Sep-19	49	poni	1	NA	NA	
+1044	DY	17-Sep-19	50	poni	1	NA	NA	
+1045	DY	17-Sep-19	51	poni	1	NA	NA	
+1046	DY	17-Sep-19	52	poni	1	NA	NA	
+1047	DY	17-Sep-19	53	poni	1	NA	NA	
+1048	DY	17-Sep-19	54	poni	1	NA	NA	
+1049	DY	17-Sep-19	55	poni	1	NA	NA	
+1050	DY	17-Sep-19	1	t_ee	1	NA	NA	
+1051	DY	17-Sep-19	2	t_ee	1	NA	NA	
+1052	DY	17-Sep-19	3	t_ee	0	tââ	high up	
+1053	DY	17-Sep-19	4	t_ee	1	NA	NA	
+1054	DY	17-Sep-19	5	t_ee	0	tââ	high up	
+1055	DY	17-Sep-19	6	t_ee	1	NA	NA	
+1056	DY	17-Sep-19	7	t_ee	0	t:a	hang on thing	
+1057	DY	17-Sep-19	8	t_ee	1	NA	NA	
+1058	DY	17-Sep-19	9	t_ee	1	NA	NA	
+1059	DY	17-Sep-19	10	t_ee	0	te	fish	
+1060	DY	17-Sep-19	11	t_ee	1	NA	NA	
+1061	DY	17-Sep-19	12	t_ee	0	te	fish	
+1062	DY	17-Sep-19	13	t_ee	1	NA	NA	
+1063	DY	17-Sep-19	14	t_ee	0	tââ	high up	
+1064	DY	17-Sep-19	15	t_ee	1	NA	NA	
+1065	DY	17-Sep-19	16	t_ee	1	NA	NA	
+1066	DY	17-Sep-19	17	t_ee	0	te	fish	
+1067	DY	17-Sep-19	18	t_ee	1	NA	NA	
+1068	DY	17-Sep-19	19	t_ee	1	NA	NA	
+1069	DY	17-Sep-19	20	t_ee	1	NA	NA	
+1070	DY	17-Sep-19	21	t_ee	1	NA	NA	
+1071	DY	17-Sep-19	22	t_ee	1	NA	NA	
+1072	DY	17-Sep-19	23	t_ee	1	NA	NA	
+1073	DY	17-Sep-19	24	t_ee	1	NA	NA	
+1074	DY	17-Sep-19	25	t_ee	1	NA	NA	
+1075	DY	17-Sep-19	26	t_ee	1	NA	NA	
+1076	DY	17-Sep-19	1	tiwune	0	ki--ki--kiwune	0	
+1077	DY	17-Sep-19	2	tiwune	0	tubune	0	
+1078	DY	17-Sep-19	3	tiwune	0	tigune	0	
+1079	DY	17-Sep-19	4	tiwune	0	kiwune	0	
+1080	DY	17-Sep-19	5	tiwune	1	NA	NA	
+1081	DY	17-Sep-19	6	tiwune	1	NA	NA	
+1082	DY	17-Sep-19	7	tiwune	1	NA	NA	
+1083	DY	17-Sep-19	8	tiwune	0	tiwine	0	
+1084	DY	17-Sep-19	9	tiwune	1	NA	NA	
+1085	DY	17-Sep-19	10	tiwune	1	NA	NA	
+1086	DY	17-Sep-19	11	tiwune	1	NA	NA	
+1087	DY	17-Sep-19	12	tiwune	0	tigune	0	
+1088	DY	17-Sep-19	13	tiwune	0	diwune	0	
+1089	DY	17-Sep-19	14	tiwune	1	NA	NA	
+1090	DY	17-Sep-19	15	tiwune	1	NA	NA	
+1091	DY	17-Sep-19	16	tiwune	1	NA	NA	
+1092	DY	17-Sep-19	17	tiwune	0	tigune	0	
+1093	DY	17-Sep-19	18	tiwune	1	NA	NA	
+1094	DY	17-Sep-19	19	tiwune	0	diwune	0	
+1095	DY	17-Sep-19	20	tiwune	0	tikune	0	
+1096	DY	17-Sep-19	21	tiwune	0	k:ii--ku--ne	0	
+1097	DY	17-Sep-19	22	tiwune	1	NA	NA	
+1098	DY	17-Sep-19	23	tiwune	0	kikune	0	
+1099	DY	17-Sep-19	24	tiwune	1	NA	NA	
+1100	DY	17-Sep-19	25	tiwune	1	NA	NA	
+1101	DY	17-Sep-19	26	tiwune	0	diwuné	0	
+1102	DY	17-Sep-19	27	tiwune	1	NA	NA	
+1103	DY	17-Sep-19	28	tiwune	0	diwune	0	
+1104	DY	17-Sep-19	29	tiwune	0	duwine	0	
+1105	DY	17-Sep-19	30	tiwune	0	diwune	0	
+1106	DY	17-Sep-19	31	tiwune	0	tigune	0	
+1107	DY	17-Sep-19	32	tiwune	0	diwuma	0	
+1108	DY	17-Sep-19	33	tiwune	0	tihune	0	
+1109	DY	17-Sep-19	34	tiwune	0	dihune	0	
+1110	DY	17-Sep-19	35	tiwune	0	kikune	0	
+1111	DY	17-Sep-19	36	tiwune	0	diwuma	0	
+1112	DY	17-Sep-19	37	tiwune	1	NA	NA	
+1113	DY	17-Sep-19	38	tiwune	1	NA	NA	
+1114	DY	17-Sep-19	39	tiwune	0	diwune	0	
+1115	DY	17-Sep-19	40	tiwune	0	diwune	0	
+1116	DY	17-Sep-19	1	todiwuma	1	NA	NA	
+1117	DY	17-Sep-19	2	todiwuma	1	NA	NA	
+1118	DY	17-Sep-19	3	todiwuma	1	NA	NA	
+1119	DY	17-Sep-19	4	todiwuma	0	dadiwuma	0	
+1120	DY	17-Sep-19	5	todiwuma	1	NA	NA	
+1121	DY	17-Sep-19	6	todiwuma	1	NA	NA	
+1122	DY	17-Sep-19	7	todiwuma	0	todinuma	0	
+1123	DY	17-Sep-19	8	todiwuma	1	NA	NA	
+1124	DY	17-Sep-19	9	todiwuma	1	NA	NA	
+1125	DY	17-Sep-19	10	todiwuma	1	NA	NA	
+1126	DY	17-Sep-19	11	todiwuma	0	dodiwuma	0	
+1127	DY	17-Sep-19	12	todiwuma	1	NA	NA	
+1128	DY	17-Sep-19	13	todiwuma	0	todinuma	0	
+1129	DY	17-Sep-19	14	todiwuma	1	NA	NA	
+1130	DY	17-Sep-19	15	todiwuma	0	dodiwuma	0	
+1131	DY	17-Sep-19	16	todiwuma	0	tot	0	
+1132	DY	17-Sep-19	17	todiwuma	1	NA	NA	
+1133	DY	17-Sep-19	18	todiwuma	0	dodiwuma	0	
+1134	DY	17-Sep-19	19	todiwuma	1	NA	NA	
+1135	DY	17-Sep-19	20	todiwuma	1	NA	NA	
+1136	DY	17-Sep-19	21	todiwuma	1	NA	NA	
+1137	DY	17-Sep-19	22	todiwuma	1	NA	NA	
+1138	DY	17-Sep-19	23	todiwuma	1	NA	NA	
+1139	DY	17-Sep-19	24	todiwuma	0	daduwuma	0	
+1140	DY	17-Sep-19	25	todiwuma	0	dodiwuma	0	
+1141	DY	17-Sep-19	26	todiwuma	1	NA	NA	
+1142	DY	17-Sep-19	27	todiwuma	1	NA	NA	
+1143	DY	17-Sep-19	28	todiwuma	1	NA	NA	
+1144	DY	17-Sep-19	1	towi	1	NA	NA	
+1145	DY	17-Sep-19	2	towi	0	towi--tuwi	0	
+1146	DY	17-Sep-19	3	towi	1	NA	NA	
+1147	DY	17-Sep-19	4	towi	1	NA	NA	
+1148	DY	17-Sep-19	5	towi	1	NA	NA	
+1149	DY	17-Sep-19	6	towi	1	NA	NA	
+1150	DY	17-Sep-19	7	towi	0	tuwi	0	
+1151	DY	17-Sep-19	8	towi	0	tuwi	0	
+1152	DY	17-Sep-19	9	towi	0	tuwi	0	
+1153	DY	17-Sep-19	10	towi	0	to	0	
+1154	DY	17-Sep-19	11	towi	1	NA	NA	
+1155	DY	17-Sep-19	12	towi	1	NA	NA	
+1156	DY	17-Sep-19	13	towi	0	towunga	0	
+1157	DY	17-Sep-19	14	towi	1	NA	NA	
+1158	DY	17-Sep-19	15	towi	0	tuwi	0	
+1159	DY	17-Sep-19	16	towi	1	NA	NA	
+1160	DY	17-Sep-19	17	towi	1	NA	NA	
+1161	DY	17-Sep-19	18	towi	1	NA	NA	
+1162	DY	17-Sep-19	19	towi	0	tuwi	0	
+1163	DY	17-Sep-19	20	towi	0	tuwi	0	
+1164	DY	17-Sep-19	21	towi	1	NA	NA	
+1165	DY	17-Sep-19	22	towi	0	tuwi	0	
+1166	DY	17-Sep-19	23	towi	1	NA	NA	
+1167	DY	17-Sep-19	24	towi	0	tuwi	0	
+1168	DY	17-Sep-19	25	towi	1	NA	NA	
+1169	DY	17-Sep-19	26	towi	0	tuwi	0	
+1170	DY	17-Sep-19	27	towi	1	NA	NA	
+1171	DY	17-Sep-19	28	towi	0	tow	0	
+1172	DY	17-Sep-19	29	towi	1	NA	NA	
+1173	DY	17-Sep-19	30	towi	0	tuwi	0	
+1174	DY	17-Sep-19	31	towi	1	NA	NA	
+1175	DY	17-Sep-19	32	towi	1	NA	NA	
+1176	DY	17-Sep-19	33	towi	0	tu--wi	0	
+1177	DY	17-Sep-19	34	towi	1	NA	NA	
+1178	DY	17-Sep-19	35	towi	1	NA	NA	
+1179	DY	17-Sep-19	1	tp_a	1	NA	NA	
+1180	DY	17-Sep-19	2	tp_a	0	d:êê	write	
+1181	DY	17-Sep-19	3	tp_a	1	NA	NA	
+1182	DY	17-Sep-19	4	tp_a	1	NA	NA	
+1183	DY	17-Sep-19	5	tp_a	0	d:aa	wax	
+1184	DY	17-Sep-19	6	tp_a	0	t:aa	betelnut	
+1185	DY	17-Sep-19	7	tp_a	0	dp:a	0	
+1186	DY	17-Sep-19	8	tp_a	1	NA	NA	
+1187	DY	17-Sep-19	9	tp_a	1	NA	NA	
+1188	DY	17-Sep-19	10	tp_a	1	NA	NA	
+1189	DY	17-Sep-19	11	tp_a	0	kmo	flying fish	
+1190	DY	17-Sep-19	12	tp_a	0	paa	walk	
+1191	DY	17-Sep-19	13	tp_a	0	tpa	turn over	
+1192	DY	17-Sep-19	14	tp_a	1	NA	NA	
+1193	DY	17-Sep-19	15	tp_a	0	daa	not	
+1194	DY	17-Sep-19	16	tp_a	0	t:aa	betelnut	
+1195	DY	17-Sep-19	17	tp_a	1	NA	NA	
+1196	DY	17-Sep-19	18	tp_a	0	d:aa	wax	
+1197	DY	17-Sep-19	19	tp_a	1	NA	NA	
+1198	DY	17-Sep-19	20	tp_a	0	tpa	turn over	
+1199	DY	17-Sep-19	21	tp_a	1	NA	NA	
+1200	DY	17-Sep-19	22	tp_a	0	daa	not	
+1201	DY	17-Sep-19	23	tp_a	0	te	fish	
+1202	DY	17-Sep-19	24	tp_a	1	NA	NA	
+1203	DY	17-Sep-19	25	tp_a	1	NA	NA	
+1204	DY	17-Sep-19	26	tp_a	1	NA	NA	
+1205	DY	17-Sep-19	27	tp_a	1	NA	NA	
+1206	DY	17-Sep-19	28	tp_a	1	NA	NA	
+1207	DY	17-Sep-19	29	tp_a	0	d:aa	wax	
+1208	DY	17-Sep-19	30	tp_a	0	tpa	turn over	
+1209	DY	17-Sep-19	31	tp_a	0	tpa	turn over	
+1210	DY	17-Sep-19	32	tp_a	0	taa	bushknife	
+1211	DY	17-Sep-19	33	tp_a	0	d:aa	wax	
+1212	DY	17-Sep-19	34	tp_a	0	kmo	flying fish	
+1213	DY	17-Sep-19	35	tp_a	0	ka	okay/to someone	
+1214	DY	17-Sep-19	36	tp_a	0	t:a	hang on thing	
+1215	DY	17-Sep-19	37	tp_a	0	pee	piece	
+1216	DY	17-Sep-19	38	tp_a	0	ta	arrived/attention-getter for children	MC edited meaning for clarity
+1217	DY	17-Sep-19	39	tp_a	0	d:êê	write	
+1218	DY	17-Sep-19	40	tp_a	0	daa	not	
+1219	DY	17-Sep-19	41	tp_a	0	t:a	hang on thing	
+1220	DY	17-Sep-19	42	tp_a	0	dp:a	0	
+1221	DY	17-Sep-19	43	tp_a	0	d:aa	wax	
+1222	DY	17-Sep-19	44	tp_a	1	NA	NA	
+1223	DY	17-Sep-19	45	tp_a	0	t:a	hang on thing	
+1224	DY	17-Sep-19	46	tp_a	0	daa	not	
+1225	DY	17-Sep-19	47	tp_a	0	kpaa	admit (thief)	MC edited meaning for clarity
+1226	DY	17-Sep-19	48	tp_a	0	t:a	hang on thing	
+1227	DY	17-Sep-19	49	tp_a	0	t:a	hang on thing	
+1228	DY	17-Sep-19	50	tp_a	0	kmo	flying fish	
+1229	DY	17-Sep-19	51	tp_a	0	d:êê	write	
+1230	DY	17-Sep-19	52	tp_a	0	d:êê	write	
+1231	DY	17-Sep-19	53	tp_a	0	d:êê	write	
+1232	DY	17-Sep-19	54	tp_a	0	d:êê	write	
+1233	DY	17-Sep-19	55	tp_a	0	dp:a	0	
+1234	DY	17-Sep-19	56	tp_a	0	d:aa	wax	
+1235	DY	17-Sep-19	57	tp_a	0	d:aa	wax	
+1236	DY	17-Sep-19	58	tp_a	0	paa	walk	
+1237	DY	17-Sep-19	59	tp_a	0	t:a	hang on thing	
+1238	DY	18-Sep-19	1	tpe	0	dêê	tongue	
+1239	DY	18-Sep-19	2	tpe	0	te	fish	
+1240	DY	18-Sep-19	3	tpe	0	te	fish	
+1241	DY	18-Sep-19	4	tpe	0	dpa	0	
+1242	DY	18-Sep-19	5	tpe	0	dêê	tongue	
+1243	DY	18-Sep-19	6	tpe	0	te	fish	
+1244	DY	18-Sep-19	7	tpe	0	te	fish	
+1245	DY	18-Sep-19	8	tpe	0	ta	arrived/attention-getter for children	MC edited meaning for clarity
+1246	DY	18-Sep-19	9	tpe	0	ta	arrived/attention-getter for children	MC edited meaning for clarity
+1247	DY	18-Sep-19	10	tpe	1	NA	NA	
+1248	DY	18-Sep-19	11	tpe	1	NA	NA	
+1249	DY	18-Sep-19	12	tpe	0	dp:a	0	
+1250	DY	18-Sep-19	13	tpe	1	NA	NA	
+1251	DY	18-Sep-19	14	tpe	0	te	fish	
+1252	DY	18-Sep-19	15	tpe	0	d:êê	write	
+1253	DY	18-Sep-19	16	tpe	0	te	fish	
+1254	DY	18-Sep-19	17	tpe	0	ta	arrived/attention-getter for children	MC edited meaning for clarity
+1255	DY	18-Sep-19	18	tpe	1	NA	NA	
+1256	DY	18-Sep-19	19	tpe	1	NA	NA	
+1257	DY	18-Sep-19	20	tpe	0	te	fish	
+1258	DY	18-Sep-19	21	tpe	0	d:êê	write	
+1259	DY	18-Sep-19	22	tpe	0	te	fish	
+1260	DY	18-Sep-19	23	tpe	0	te	fish	
+1261	DY	18-Sep-19	24	tpe	0	te	fish	
+1262	DY	18-Sep-19	25	tpe	1	NA	NA	
+1263	DY	18-Sep-19	26	tpe	1	NA	NA	
+1264	DY	18-Sep-19	27	tpe	0	te	fish	
+1265	DY	18-Sep-19	28	tpe	0	ta	arrived/attention-getter for children	MC edited meaning for clarity
+1266	DY	18-Sep-19	29	tpe	1	NA	NA	
+1267	DY	18-Sep-19	30	tpe	0	ta	arrived/attention-getter for children	MC edited meaning for clarity
+1268	DY	18-Sep-19	31	tpe	1	NA	NA	
+1269	DY	18-Sep-19	32	tpe	0	te	fish	
+1270	DY	18-Sep-19	33	tpe	0	te	fish	
+1271	DY	18-Sep-19	34	tpe	0	t:a	hang on thing	
+1272	DY	18-Sep-19	35	tpe	0	te	fish	
+1273	DY	18-Sep-19	36	tpe	0	te	fish	
+1274	DY	18-Sep-19	37	tpe	0	te	fish	
+1275	DY	18-Sep-19	38	tpe	0	te	fish	
+1276	DY	18-Sep-19	39	tpe	1	NA	NA	
+1277	DY	18-Sep-19	40	tpe	0	dp:a	0	
+1278	DY	18-Sep-19	41	tpe	0	te	fish	
+1279	DY	18-Sep-19	42	tpe	0	dp:a	0	
+1280	DY	18-Sep-19	43	tpe	0	te	fish	
+1281	DY	18-Sep-19	44	tpe	0	t:a	hang on thing	
+1282	DY	18-Sep-19	45	tpe	0	te	fish	
+1283	DY	18-Sep-19	46	tpe	0	che	digging	
+1284	DY	18-Sep-19	47	tpe	0	te	fish	
+1285	DY	18-Sep-19	48	tpe	0	d:a	0	
+1286	DY	18-Sep-19	49	tpe	0	daa	not	
+1287	DY	18-Sep-19	50	tpe	0	dp:a	0	
+1288	DY	18-Sep-19	51	tpe	0	te	fish	
+1289	DY	18-Sep-19	52	tpe	0	dêê	tongue	
+1290	DY	18-Sep-19	53	tpe	0	te	fish	
+1291	DY	18-Sep-19	54	tpe	0	te	fish	
+1292	DY	18-Sep-19	55	tpe	0	te	fish	
+1293	DY	18-Sep-19	56	tpe	0	tpa	turn over	
+1294	DY	18-Sep-19	57	tpe	1	NA	NA	
+1295	DY	18-Sep-19	58	tpe	1	NA	NA	
+1296	DY	18-Sep-19	59	tpe	0	t:a	hang on thing	
+1297	DY	18-Sep-19	60	tpe	0	tpa	turn over	
+1298	DY	18-Sep-19	61	tpe	0	te	fish	
+1299	DY	18-Sep-19	62	tpe	0	te	fish	
+1300	DY	18-Sep-19	63	tpe	0	dpa	0	
+1301	DY	18-Sep-19	64	tpe	0	te	fish	
+1302	DY	18-Sep-19	65	tpe	0	te	fish	
+1303	DY	18-Sep-19	66	tpe	1	NA	NA	
+1304	DY	18-Sep-19	67	tpe	0	d:êê	write	
+1305	DY	18-Sep-19	68	tpe	0	te	fish	
+1306	DY	18-Sep-19	1	tumowe	1	NA	NA	
+1307	DY	18-Sep-19	2	tumowe	1	NA	NA	
+1308	DY	18-Sep-19	3	tumowe	1	NA	NA	
+1309	DY	18-Sep-19	4	tumowe	1	NA	NA	
+1310	DY	18-Sep-19	5	tumowe	1	NA	NA	
+1311	DY	18-Sep-19	6	tumowe	1	NA	NA	
+1312	DY	18-Sep-19	7	tumowe	1	NA	NA	
+1313	DY	18-Sep-19	8	tumowe	1	NA	NA	
+1314	DY	18-Sep-19	9	tumowe	0	tumu-wee	quiet	MC edited meaning for clarity
+1315	DY	18-Sep-19	10	tumowe	1	NA	NA	
+1316	DY	18-Sep-19	11	tumowe	1	NA	NA	
+1317	DY	18-Sep-19	12	tumowe	1	NA	NA	
+1318	DY	18-Sep-19	13	tumowe	1	NA	NA	
+1319	DY	18-Sep-19	14	tumowe	1	NA	NA	
+1320	DY	18-Sep-19	15	tumowe	1	NA	NA	
+1321	DY	18-Sep-19	16	tumowe	1	NA	NA	
+1322	DY	18-Sep-19	17	tumowe	1	NA	NA	
+1323	DY	18-Sep-19	18	tumowe	1	NA	NA	
+1324	DY	18-Sep-19	19	tumowe	1	NA	NA	
+1325	DY	18-Sep-19	20	tumowe	1	NA	NA	
+1326	DY	18-Sep-19	21	tumowe	1	NA	NA	
+1327	DY	18-Sep-19	22	tumowe	1	NA	NA	
+1328	DY	18-Sep-19	1	tupa	1	NA	NA	
+1329	DY	18-Sep-19	2	tupa	1	NA	NA	
+1330	DY	18-Sep-19	3	tupa	1	NA	NA	
+1331	DY	18-Sep-19	4	tupa	1	NA	NA	
+1332	DY	18-Sep-19	5	tupa	1	NA	NA	
+1333	DY	18-Sep-19	6	tupa	1	NA	NA	
+1334	DY	18-Sep-19	7	tupa	1	NA	NA	
+1335	DY	18-Sep-19	8	tupa	1	NA	NA	
+1336	DY	18-Sep-19	9	tupa	1	NA	NA	
+1337	DY	18-Sep-19	10	tupa	0	tufa	0	
+1338	DY	18-Sep-19	11	tupa	1	NA	NA	
+1339	DY	18-Sep-19	12	tupa	1	NA	NA	
+1340	DY	18-Sep-19	13	tupa	1	NA	NA	
+1341	DY	18-Sep-19	14	tupa	1	NA	NA	
+1342	DY	18-Sep-19	15	tupa	1	NA	NA	
+1343	DY	18-Sep-19	16	tupa	1	NA	NA	
+1344	DY	18-Sep-19	17	tupa	1	NA	NA	
+1345	DY	18-Sep-19	18	tupa	1	NA	NA	
+1346	DY	18-Sep-19	19	tupa	1	NA	NA	
+1347	DY	18-Sep-19	20	tupa	1	NA	NA	
+1348	DY	18-Sep-19	21	tupa	1	NA	NA	
+1349	DY	18-Sep-19	22	tupa	1	NA	NA	
+1350	DY	18-Sep-19	1	wadikeno	1	NA	NA	
+1351	DY	18-Sep-19	2	wadikeno	1	NA	NA	
+1352	DY	18-Sep-19	3	wadikeno	1	NA	NA	
+1353	DY	18-Sep-19	4	wadikeno	1	NA	NA	
+1354	DY	18-Sep-19	5	wadikeno	1	NA	NA	
+1355	DY	18-Sep-19	6	wadikeno	1	NA	NA	
+1356	DY	18-Sep-19	7	wadikeno	1	NA	NA	
+1357	DY	18-Sep-19	8	wadikeno	0	walikedu	0	
+1358	DY	18-Sep-19	9	wadikeno	1	NA	NA	
+1359	DY	18-Sep-19	10	wadikeno	1	NA	NA	
+1360	DY	18-Sep-19	11	wadikeno	1	NA	NA	
+1361	DY	18-Sep-19	12	wadikeno	1	NA	NA	
+1362	DY	18-Sep-19	13	wadikeno	1	NA	NA	
+1363	DY	18-Sep-19	14	wadikeno	1	NA	NA	
+1364	DY	18-Sep-19	15	wadikeno	1	NA	NA	
+1365	DY	18-Sep-19	16	wadikeno	1	NA	NA	
+1366	DY	18-Sep-19	17	wadikeno	1	NA	NA	
+1367	DY	18-Sep-19	18	wadikeno	1	NA	NA	
+1368	DY	18-Sep-19	19	wadikeno	1	NA	NA	
+1369	DY	18-Sep-19	20	wadikeno	0	putekeno	0	
+1370	DY	18-Sep-19	1	wi	1	NA	NA	
+1371	DY	18-Sep-19	2	wi	0	lukwe	what	
+1372	DY	18-Sep-19	3	wi	1	NA	NA	
+1373	DY	18-Sep-19	4	wi	0	wee	English: where	MC edited meaning for clarity
+1374	DY	18-Sep-19	5	wi	0	wee	English: where	MC edited meaning for clarity
+1375	DY	18-Sep-19	6	wi	0	wee	English: where	MC edited meaning for clarity
+1376	DY	18-Sep-19	7	wi	1	NA	NA	
+1377	DY	18-Sep-19	8	wi	1	NA	NA	
+1378	DY	18-Sep-19	9	wi	1	NA	NA	
+1379	DY	18-Sep-19	10	wi	0	wee	English: where	MC edited meaning for clarity
+1380	DY	18-Sep-19	11	wi	0	wee	English: where	MC edited meaning for clarity
+1381	DY	18-Sep-19	12	wi	1	NA	NA	
+1382	DY	18-Sep-19	13	wi	1	NA	NA	
+1383	DY	18-Sep-19	14	wi	1	NA	NA	
+1384	DY	18-Sep-19	15	wi	1	NA	NA	
+1385	DY	18-Sep-19	16	wi	1	NA	NA	
+1386	DY	18-Sep-19	17	wi	1	NA	NA	
+1387	DY	18-Sep-19	18	wi	1	NA	NA	
+1388	DY	18-Sep-19	19	wi	0	wee	English: where	MC edited meaning for clarity
+1389	DY	18-Sep-19	20	wi	1	NA	NA	
+1390	DY	18-Sep-19	21	wi	1	NA	NA	
+1391	DY	18-Sep-19	22	wi	1	NA	NA	
+1392	DY	18-Sep-19	23	wi	0	wo	day	
+1393	DY	18-Sep-19	24	wi	1	NA	NA	
+1394	DY	18-Sep-19	25	wi	0	wee	English: where	MC edited meaning for clarity
+1395	DY	18-Sep-19	26	wi	0	waa	man's name	
+1396	DY	18-Sep-19	27	wi	0	wee	English: where	MC edited meaning for clarity
+1397	DY	18-Sep-19	28	wi	0	wâ	dawn	
+1398	DY	18-Sep-19	29	wi	0	wee	English: where	MC edited meaning for clarity
+1399	DY	18-Sep-19	30	wi	0	wee	English: where	MC edited meaning for clarity
+1400	DY	18-Sep-19	31	wi	1	NA	NA	
+1401	DY	18-Sep-19	32	wi	0	lukwe	what	
+1402	DY	18-Sep-19	33	wi	0	wat	English: what	MC edited meaning for clarity
+1403	DY	18-Sep-19	34	wi	1	NA	NA	
+1404	DY	18-Sep-19	35	wi	0	w:a	dawn	
+1405	DY	18-Sep-19	36	wi	0	wat	English: what	MC edited meaning for clarity
+1406	DY	18-Sep-19	37	wi	1	NA	NA	
+1407	DY	18-Sep-19	38	wi	1	NA	NA	
+1408	DY	18-Sep-19	39	wi	1	NA	NA	
+1409	DY	18-Sep-19	40	wi	0	w:a	0	
+1410	DY	18-Sep-19	41	wi	1	NA	NA	
+1411	DY	18-Sep-19	42	wi	0	wee	English: where	MC edited meaning for clarity
+1412	DY	18-Sep-19	43	wi	1	NA	NA	
+1413	DY	18-Sep-19	44	wi	1	NA	NA	
+1414	DY	18-Sep-19	45	wi	1	NA	NA	
+1415	DY	18-Sep-19	46	wi	1	NA	NA	
+1416	DY	18-Sep-19	47	wi	1	NA	NA	
+1417	DY	18-Sep-19	1	widone	1	NA	NA	
+1418	DY	18-Sep-19	2	widone	1	NA	NA	
+1419	DY	18-Sep-19	3	widone	1	NA	NA	
+1420	DY	18-Sep-19	4	widone	1	NA	NA	
+1421	DY	18-Sep-19	5	widone	1	NA	NA	
+1422	DY	18-Sep-19	6	widone	1	NA	NA	
+1423	DY	18-Sep-19	7	widone	1	NA	NA	
+1424	DY	18-Sep-19	8	widone	1	NA	NA	
+1425	DY	18-Sep-19	9	widone	0	witone	0	
+1426	DY	18-Sep-19	10	widone	0	widoni	0	
+1427	DY	18-Sep-19	11	widone	1	NA	NA	
+1428	DY	18-Sep-19	12	widone	0	walidi	0	
+1429	DY	18-Sep-19	13	widone	1	NA	NA	
+1430	DY	18-Sep-19	14	widone	1	widoni	NA	the right syllables, but with spaces
+1431	DY	18-Sep-19	15	widone	0	widoni	0	
+1432	DY	18-Sep-19	16	widone	1	NA	NA	
+1433	DY	18-Sep-19	17	widone	1	NA	NA	
+1434	DY	18-Sep-19	18	widone	1	NA	NA	
+1435	DY	18-Sep-19	19	widone	1	NA	NA	
+1436	DY	18-Sep-19	20	widone	1	NA	NA	
+1437	DY	18-Sep-19	1	wumipo	1	NA	NA	
+1438	DY	18-Sep-19	2	wumipo	1	NA	NA	
+1439	DY	18-Sep-19	3	wumipo	1	NA	NA	
+1440	DY	18-Sep-19	4	wumipo	1	NA	NA	
+1441	DY	18-Sep-19	5	wumipo	1	NA	NA	
+1442	DY	18-Sep-19	6	wumipo	1	NA	NA	
+1443	DY	18-Sep-19	7	wumipo	1	NA	NA	
+1444	DY	18-Sep-19	8	wumipo	1	NA	NA	
+1445	DY	18-Sep-19	9	wumipo	1	NA	NA	
+1446	DY	18-Sep-19	10	wumipo	1	NA	NA	
+1447	DY	18-Sep-19	11	wumipo	1	NA	NA	
+1448	DY	18-Sep-19	12	wumipo	1	NA	NA	
+1449	DY	18-Sep-19	13	wumipo	1	NA	NA	
+1450	DY	18-Sep-19	14	wumipo	1	NA	NA	
+1451	DY	18-Sep-19	15	wumipo	1	NA	NA	
+1452	DY	18-Sep-19	16	wumipo	1	NA	NA	
+1453	DY	18-Sep-19	17	wumipo	1	NA	NA	
+1454	DY	18-Sep-19	18	wumipo	1	NA	NA	
+1455	DY	18-Sep-19	19	wumipo	1	NA	NA	
+1456	DY	18-Sep-19	20	wumipo	1	NA	NA	
+1457	DY	18-Sep-19	21	wumipo	1	NA	NA	
+1458	DY	18-Sep-19	22	wumipo	1	NA	NA	
+1459	DY	18-Sep-19	23	wumipo	1	NA	NA	
+1460	DY	18-Sep-19	24	wumipo	1	NA	NA	
+1461	DY	18-Sep-19	25	wumipo	0	pimipo	0	
+1462	DY	18-Sep-19	26	wumipo	1	NA	NA	
+1463	DY	18-Sep-19	27	wumipo	1	NA	NA	
+1464	DY	18-Sep-19	1	yi	1	NA	NA	
+1465	DY	18-Sep-19	2	yi	1	NA	NA	
+1466	DY	18-Sep-19	3	yi	0	ya	sit/veranda	MC edited meaning for clarity
+1467	DY	18-Sep-19	4	yi	0	ya	sit/veranda	MC edited meaning for clarity
+1468	DY	18-Sep-19	5	yi	1	NA	NA	
+1469	DY	18-Sep-19	6	yi	1	NA	NA	
+1470	DY	18-Sep-19	7	yi	1	NA	NA	
+1471	DY	18-Sep-19	8	yi	1	NA	NA	
+1472	DY	18-Sep-19	9	yi	1	NA	NA	
+1473	DY	18-Sep-19	10	yi	0	ya	sit/veranda	MC edited meaning for clarity
+1474	DY	18-Sep-19	11	yi	1	NA	NA	
+1475	DY	18-Sep-19	12	yi	0	ya	sit/veranda	MC edited meaning for clarity
+1476	DY	18-Sep-19	13	yi	0	diyé	learn	
+1477	DY	18-Sep-19	14	yi	1	NA	NA	
+1478	DY	18-Sep-19	15	yi	1	NA	NA	
+1479	DY	18-Sep-19	16	yi	1	NA	NA	
+1480	DY	18-Sep-19	17	yi	0	ya	sit/veranda	MC edited meaning for clarity
+1481	DY	18-Sep-19	18	yi	1	NA	NA	
+1482	DY	18-Sep-19	19	yi	0	ya	sit/veranda	MC edited meaning for clarity
+1483	DY	18-Sep-19	20	yi	1	NA	NA	
+1484	DY	18-Sep-19	21	yi	0	ya	sit/veranda	MC edited meaning for clarity
+1485	DY	18-Sep-19	22	yi	1	NA	NA	
+1486	DY	18-Sep-19	23	yi	0	y:a	ten	
+1487	DY	18-Sep-19	24	yi	1	NA	NA	
+1488	DY	18-Sep-19	25	yi	0	ya	sit/veranda	MC edited meaning for clarity
+1489	DY	26-Sep-19	1	task4	NA	tp:a	0	
+1490	DY	26-Sep-19	2	task4	NA	paa	walk	
+1491	DY	26-Sep-19	3	task4	NA	t:aa	betelnut	
+1492	DY	26-Sep-19	4	task4	NA	t:aa	betelnut	
+1493	DY	26-Sep-19	5	task4	NA	t:aa	betelnut	
+1494	DY	26-Sep-19	6	task4	NA	te	fish	
+1495	DY	26-Sep-19	7	task4	NA	t:aa	betelnut	
+1496	DY	26-Sep-19	8	task4	NA	t:aa	betelnut	
+1497	DY	26-Sep-19	9	task4	NA	kpaa	admit (thief)	MC edited meaning for clarity
+1498	DY	26-Sep-19	10	task4	NA	d:aa	wax	
+1499	DY	26-Sep-19	11	task4	NA	d:aa	wax	
+1500	DY	26-Sep-19	12	task4	NA	te	fish	
+1501	DY	26-Sep-19	13	task4	NA	t:aa	betelnut	
+1502	DY	26-Sep-19	14	task4	NA	tpe	vagina	
+1503	DY	26-Sep-19	15	task4	NA	t:ââ	flood/wait for something	
+1504	DY	26-Sep-19	16	task4	NA	tpaa	turn over	
+1505	DY	26-Sep-19	17	task4	NA	te	fish	
+1506	DY	26-Sep-19	18	task4	NA	daa	not	
+1507	DY	26-Sep-19	19	task4	NA	te	fish	
+1508	DY	26-Sep-19	20	task4	NA	daa	not	
+1509	DY	26-Sep-19	21	task4	NA	tpe	vagina	
+1510	DY	26-Sep-19	22	task4	NA	tp:a	0	
+1511	DY	26-Sep-19	23	task4	NA	te	fish	
+1512	DY	26-Sep-19	24	task4	NA	t:aa	betelnut	
+1513	DY	26-Sep-19	25	task4	NA	dêê	tongue	
+1514	DY	26-Sep-19	26	task4	NA	te	fish	
+1515	DY	26-Sep-19	27	task4	NA	t:aa	betelnut	
+1516	DY	26-Sep-19	28	task4	NA	t:aa	betelnut	
+1517	DY	26-Sep-19	29	task4	NA	paa	walk	
+1518	DY	26-Sep-19	30	task4	NA	dpa	0	
+1519	DY	26-Sep-19	31	task4	NA	t:aa	betelnut	
+1520	DY	26-Sep-19	32	task4	NA	dêê	tongue	
+1521	DY	26-Sep-19	33	task4	NA	tpe	vagina	
+1522	DY	26-Sep-19	34	task4	NA	t:aa	betelnut	
+1523	DY	26-Sep-19	35	task4	NA	t:aa	betelnut	
+1524	DY	26-Sep-19	36	task4	NA	t:ââ	flood/wait for something	
+1525	DY	26-Sep-19	37	task4	NA	tââ	high up	
+1526	DY	26-Sep-19	38	task4	NA	taa	bushknife/arrives	
+1527	DY	26-Sep-19	39	task4	NA	d:ee	write??	
+1528	DY	26-Sep-19	40	task4	NA	paa	walk	
+1529	DY	26-Sep-19	41	task4	NA	paa	walk	
+1530	DY	26-Sep-19	42	task4	NA	taa	bushknife/arrives	
+1531	DY	26-Sep-19	43	task4	NA	taa	bushknife/arrives	
+1532	DY	26-Sep-19	44	task4	NA	tpaa	turn over	
+1533	DY	26-Sep-19	45	task4	NA	tpaa	turn over	
+1534	DY	26-Sep-19	46	task4	NA	dp:ee	bring something down	
+1535	DY	26-Sep-19	47	task4	NA	t:aa	betelnut	
+1536	DY	26-Sep-19	48	task4	NA	daa	not	
+1537	DY	26-Sep-19	49	task4	NA	paa	walk	
+1538	DY	26-Sep-19	50	task4	NA	kn:ââ	butt	
+1539	DY	26-Sep-19	51	task4	NA	te	fish	
+1540	DY	26-Sep-19	52	task4	NA	tââ	high up	
+1541	DY	26-Sep-19	53	task4	NA	te	fish	
+1542	DY	26-Sep-19	54	task4	NA	dp:a	0	
+1543	DY	26-Sep-19	55	task4	NA	dp:a	0	
+1544	DY	26-Sep-19	56	task4	NA	dp:a	0	
+1545	DY	26-Sep-19	57	task4	NA	dp:a	0	
+1546	DY	26-Sep-19	58	task4	NA	tpaa	turn over	
+1547	DY	26-Sep-19	59	task4	NA	tp:a	0	
+1548	DY	26-Sep-19	60	task4	NA	d:aa	wax	
+1549	DY	26-Sep-19	61	task4	NA	tpee	push/hold tight/some	
+1550	DY	26-Sep-19	62	task4	NA	tpaa	turn over	
+1551	DY	26-Sep-19	63	task4	NA	te	fish	
+1552	DY	26-Sep-19	64	task4	NA	taa	bushknife/arrives	
+1553	DY	26-Sep-19	65	task4	NA	te	fish	
+1554	DY	26-Sep-19	66	task4	NA	taa	bushknife/arrives	
+1555	DY	26-Sep-19	67	task4	NA	t:aa	betelnut	
+1556	DY	26-Sep-19	68	task4	NA	d:êê	write	
+1557	DY	26-Sep-19	69	task4	NA	d:êê	write	
+1558	DY	26-Sep-19	70	task4	NA	taa	bushknife/arrives	
+1559	DY	26-Sep-19	71	task4	NA	tp:ee	small boy	
+1560	DY	26-Sep-19	72	task4	NA	tpaa	turn over	
+1561	DY	26-Sep-19	73	task4	NA	tpaa	turn over	
+1562	DY	26-Sep-19	74	task4	NA	t:aa	betelnut	
+1563	DY	26-Sep-19	75	task4	NA	t:aa	betelnut	
+1564	DY	26-Sep-19	76	task4	NA	t:ââ	flood/wait for something	
+1565	DY	26-Sep-19	77	task4	NA	t:ââ	flood/wait for something	
+1566	DY	26-Sep-19	78	task4	NA	km:oo	stomach	
+1567	DY	26-Sep-19	79	task4	NA	tpaa	turn over	
+1568	DY	26-Sep-19	80	task4	NA	tpaa	turn over	
+1569	DY	26-Sep-19	81	task4	NA	d:aa	wax	
+1570	DY	26-Sep-19	82	task4	NA	tpaa	turn over	
+1571	DY	26-Sep-19	83	task4	NA	taa	bushknife/arrives	
+1572	DY	26-Sep-19	84	task4	NA	km:oo	stomach	
+1573	DY	26-Sep-19	85	task4	NA	tp:ee	small boy	
+1574	DY	26-Sep-19	86	task4	NA	te	fish	
+1575	DY	26-Sep-19	87	task4	NA	te	fish	
+1576	DY	26-Sep-19	88	task4	NA	t:aa	betelnut	
+1577	DY	26-Sep-19	89	task4	NA	che	digging	
+1578	DY	26-Sep-19	90	task4	NA	te	fish	
+1579	DY	26-Sep-19	91	task4	NA	te	fish	
+1580	DY	26-Sep-19	92	task4	NA	te	fish	
+1581	DY	26-Sep-19	93	task4	NA	t:ââ	flood/wait for something	
