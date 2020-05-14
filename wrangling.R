@@ -7,8 +7,13 @@ npairs=dim(crp)[1]
 
 trnsc=merge(trnsc,crp,by.x="tokid",by.y="tokid",all=T)
 
-# sort by file name which indicates presentation order, so that we can get the first attempt
-trnsc[order(trnsc$outfile),]->trnsc
+#order so we have all the items by a given child in the right chrono order
+trnsc[order(trnsc$file, trnsc$int),]->trnsc
+
+#add variable coding whether it's the child's first or subsequent attempts
+trnsc$previous<-c(NA,as.character(trnsc$target[1:(dim(trnsc)[1]-1)]))
+trnsc$attempt<-ifelse(trnsc$target!=trnsc$previous,"first","subsequent")
+trnsc$attempt[1]<-"first"
 
 #add repetition number
 trnsc$rep=gsub(".*_","",gsub(".wav","",trnsc$outfile))
@@ -18,31 +23,25 @@ trnsc$cor.online=1
 for(i in 1:npairs) if(trnsc$rep[i]>1) trnsc$cor.online[i-1]<-0  #if the item is repeated, then code the previous one as being wrong
 trnsc$cor.online[(npairs+1):dim(trnsc)[1]]<-NA
 
-#DATA REMOVAL *** ATTENTION *** 
-#REMOVING ALL THE "YI"
-trnsc[trnsc$target!="yi",]->trnsc
-#REMOVE ALL TASK 4
-trnsc[!is.na(trnsc$target),]->trnsc
-
-#remove practice items
-practice=trnsc[(trnsc$target %in% c("wi","poni","nopimade")),]
-trnsc=trnsc[!(trnsc$target %in% c("wi","poni","nopimade")),]
-
 merge(trnsc,demo,by.x="id",by.y="ID",all.x=T)->trnsc
-
-#order so we have all the items by a given child in the right chrono order
-trnsc[order(trnsc$file, trnsc$int),]->trnsc
-
-#add variable coding whether it's the child's first or subsequent attempts
-trnsc$previous<-c(NA,as.character(trnsc$target[1:(dim(trnsc)[1]-1)]))
-trnsc$attempt<-ifelse(trnsc$target!=trnsc$previous,"first","subsequent")
-trnsc$attempt[1]<-"first"
-
 
 #add orthographic representations targets & other stims chars
 read.delim("stimuli.tsv", encoding="UTF-8")->stims
 merge(trnsc,stims,by="target",all=T)->trnsc
 
+
+#DATA REMOVAL *** ATTENTION *** 
+#REMOVE ALL TASK 4 (whatever that is)
+trnsc[!is.na(trnsc$target),]->trnsc
+
+#REMOVING ALL THE "YI"
+trnsc[trnsc$target!="yi",]->trnsc
+
+#remove practice items
+trnsc=trnsc[trnsc$type !="practice",]
+
+
+## PHONOLOGIZE AND SCORE
 
 #log non-fluent speech, then get rid of that marker
 trnsc$nonfluent<-NA
