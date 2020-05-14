@@ -1,3 +1,6 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+%
 \documentclass[english,,man,floatsintext]{apa6}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
@@ -6,35 +9,29 @@
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
 \else % if luatex or xelatex
-  \ifxetex
-    \usepackage{mathspec}
-  \else
-    \usepackage{fontspec}
-  \fi
+  \usepackage{unicode-math}
   \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
 \fi
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 % use microtype if available
 \IfFileExists{microtype.sty}{%
-\usepackage{microtype}
+\usepackage[]{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
 \usepackage{hyperref}
-\hypersetup{unicode=true,
-            pdftitle={Non-word repetition in Yélî Dnye: A small-scale study},
-            pdfauthor={Alejandrina Cristia~\& Marisa Casillas},
-            pdfkeywords={phonology, non-word repetition},
+\hypersetup{
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
-\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
-  \usepackage[shorthands=off,main=english]{babel}
-\else
-  \usepackage{polyglossia}
-  \setmainlanguage[]{english}
-\fi
 \usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -44,80 +41,83 @@
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-\IfFileExists{parskip.sty}{%
-\usepackage{parskip}
-}{% else
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
-}
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{0}
-% Redefines (sub)paragraphs to behave more like sections
-\ifx\paragraph\undefined\else
-\let\oldparagraph\paragraph
-\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
-\fi
-\ifx\subparagraph\undefined\else
-\let\oldsubparagraph\subparagraph
-\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
-\fi
 
-%%% Use protect on footnotes to avoid problems with footnotes in titles
-\let\rmarkdownfootnote\footnote%
-\def\footnote{\protect\rmarkdownfootnote}
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
 
-
-  \title{Non-word repetition in Yélî Dnye: A small-scale study}
-    \author{Alejandrina Cristia\textsuperscript{1}~\& Marisa Casillas\textsuperscript{2}}
-    \date{}
-  
-\shorttitle{NWR in Yélî Dnye'}
-\affiliation{
-\vspace{0.5cm}
-\textsuperscript{1} LSCP, Département d’études cognitives, ENS, EHESS, CNRS, Université PSL\\\textsuperscript{2} Max Planck Institute for Psycholinguistics}
-\keywords{phonology, non-word repetition\newline\indent Word count: xxx}
-\usepackage{csquotes}
+% Manuscript styling
 \usepackage{upgreek}
 \captionsetup{font=singlespacing,justification=justified}
 
+% Table formatting
 \usepackage{longtable}
 \usepackage{lscape}
-\usepackage{multirow}
-\usepackage{tabularx}
-\usepackage[flushleft]{threeparttable}
-\usepackage{threeparttablex}
+% \usepackage[counterclockwise]{rotating}   % Landscape page setup for large tables
+\usepackage{multirow}		% Table styling
+\usepackage{tabularx}		% Control Column width
+\usepackage[flushleft]{threeparttable}	% Allows for three part tables with a specified notes section
+\usepackage{threeparttablex}            % Lets threeparttable work with longtable
 
+% Create new environments so endfloat can handle them
+% \newenvironment{ltable}
+%   {\begin{landscape}\begin{center}\begin{threeparttable}}
+%   {\end{threeparttable}\end{center}\end{landscape}}
 \newenvironment{lltable}{\begin{landscape}\begin{center}\begin{ThreePartTable}}{\end{ThreePartTable}\end{center}\end{landscape}}
 
+% Enables adjusting longtable caption width to table width
+% Solution found at http://golatex.de/longtable-mit-caption-so-breit-wie-die-tabelle-t15767.html
 \makeatletter
 \newcommand\LastLTentrywidth{1em}
 \newlength\longtablewidth
 \setlength{\longtablewidth}{1in}
 \newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
 
+% \setlength{\parindent}{0.5in}
+% \setlength{\parskip}{0pt plus 0pt minus 0pt}
+
+% \usepackage{etoolbox}
+\makeatletter
+\patchcmd{\HyOrg@maketitle}
+  {\section{\normalfont\normalsize\abstractname}}
+  {\section*{\normalfont\normalsize\abstractname}}
+  {}{\typeout{Failed to patch abstract.}}
+\makeatother
+\shorttitle{NWR in Yélî Dnye'}
+\author{Alejandrina Cristia\textsuperscript{1}\ \& Marisa Casillas\textsuperscript{2}}
+\affiliation{
+\vspace{0.5cm}
+\textsuperscript{1} LSCP, Département d’études cognitives, ENS, EHESS, CNRS, Université PSL\\\textsuperscript{2} Max Planck Institute for Psycholinguistics}
 \authornote{
 
-Correspondence concerning this article should be addressed to Alejandrina Cristia, 29, rue d'Ulm, 75005, Paris, France. E-mail: \href{mailto:alecristia@gmail.com}{\nolinkurl{alecristia@gmail.com}}}
+Correspondence concerning this article should be addressed to Alejandrina Cristia, 29, rue d'Ulm, 75005, Paris, France. E-mail: alecristia@gmail.com}
+\keywords{phonology, non-word repetition, development\newline\indent Word count: xxx}
+\usepackage{csquotes}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[shorthands=off,main=english]{babel}
+\else
+  % load polyglossia as late as possible as it *could* call bidi if RTL lang (e.g. Hebrew or Arabic)
+  \usepackage{polyglossia}
+  \setmainlanguage[]{english}
+\fi
 
-\abstract{
-ADD
-
-
-}
+\date{}
 
 \begin{document}
-\maketitle
 
 \hypertarget{introduction}{%
 \subsection{Introduction}\label{introduction}}
 
-Although infants begin to learn about their native language's phonology within the first year, many studies suggest that in perception and production, in phonetics and phonology, their knowledge continues to develop throughout childhood (e.g., CITE). One common task in this line of research is nonword repetition (NWR). In NWR studies, participants are presented auditorily with an item that is phonologically legal but lexically meaningless in the language children are learning. The child should immediately try to say it back without changing anything. Accuracy is thought to reflect long-term phonological knowledge (which allows the child to perceive the item accurately even though it is not a real word they have encountered before) as well as online working memory (to encode the item in the interval between hearing it and saying it back).
+Although infants begin to learn about their native language's phonology within the first year, many studies suggest that in perception and production, in phonetics and phonology, their knowledge continues to develop throughout childhood (e.g., {\textbf{???}}). One common task in this line of research is nonword repetition (NWR). In NWR studies, participants are presented auditorily with an item that is phonologically legal but lexically meaningless in the language children are learning. The child should immediately try to say it back without changing anything. Accuracy is thought to reflect long-term phonological knowledge (which allows the child to perceive the item accurately even though it is not a real word they have encountered before) as well as online phonological working memory (to encode the item in the interval between hearing it and saying it back) and flexible productiong patterns (to produce the item accurately even though it had never been pronounced before).
 
-NWR has been used to seek answers to theoretical questions, including what are the links between phonology, working memory, and the lexicon {[}CITE{]}, as well as for applications, notably using nwr as a diagnostic for language delays and disorders {[}CITE{]}. Since non-words can be generated in many languages, it has been used acros a wide array of languages, particularly in Europe {[}CITE{]}.
+NWR has been used to seek answers to a variety of theoretical questions, including what are the links between phonology, working memory, and the lexicon ({\textbf{???}}), as well as for applications, notably using nwr as a diagnostic for language delays and disorders ({\textbf{???}}). Since non-words can be generated in many languages, it has been used acros a wide array of languages, particularly in Europe ({\textbf{???}},@is08042009language).
 
-In this study, we use NWR to measure perception-production in children learning Yêly Dnyé, an isolate spoken in Rossel Island, PNG, with an unusually dense phonological inventory. In our implementation of NWR, we made sure that some of the items contained typologically rare and/or challenging sounds.
+In this study, we report on NWR results among children learning Yêly Dnyé, an isolate spoken in Rossel Island, PNG, with an unusually dense phonological inventory. In our implementation of NWR, we made sure that some of the items contained typologically rare and/or challenging sounds. MISSING: WHY DO WE DO THIS? WHAT IS THE POINT?
 
 \hypertarget{intro-to-the-language-mc---please-feel-free-to-throw-away-anything-that-is-not-useful}{%
 \subsubsection{\texorpdfstring{Intro to the language (({\textbf{???}})) - please feel free to throw away anything that is not useful!}{Intro to the language ((???)) - please feel free to throw away anything that is not useful!}}\label{intro-to-the-language-mc---please-feel-free-to-throw-away-anything-that-is-not-useful}}
@@ -160,11 +160,13 @@ Little is known about language development in children growing up in Rossel Isla
 \hypertarget{brief-review-of-nwr-for-our-purposes}{%
 \subsubsection{Brief review of NWR for our purposes}\label{brief-review-of-nwr-for-our-purposes}}
 
-Although the procedure tends to be quite stable, there is some variation in the presentation and structure of items found in previous NWR work. For example, items are often presented orally by the experimenter {[}CITE{]}, although an increasing number of studies have turned to playing back the stimuli in order to have greater control of the stability of the presentation {[}CITE{]}. Additionally, while some studies have used 10-15 non-words, others have employed up to 30 unique items {[}CITE{]}. Often, authors modulate structural complexity, typically measured in terms of item length (measured in number of syllables) as well as syllable structure {[}open as opposed to closed syllables, CITE{]}.
+There is some variation in the presentation procedure and structure of items found in previous NWR work. For example, items are often presented orally by the experimenter ({\textbf{???}}), although an increasing number of studies have turned to playing back the stimuli in order to have greater control of the stability of the presentation ({\textbf{???}}). Additionally, while some studies have used 10-15 non-words, others have employed up to 46 unique items ({\textbf{???}}). Often, authors modulate structural complexity, typically measured in terms of item length (measured in number of syllables) and/or syllable structure (open as opposed to closed syllables, {\textbf{???}}).
 
-Previous work seems to avoid difficult sounds, but we felt this was important to represent the language, so we also varied this factor. We designed a relatively large number of items but, aware that this may render the task longer and more tiresome, we split some of the items across children. This allowed us to get information about repetition accuracy of more items.
+Previous work seems to avoid difficult sounds, but we felt this was important to represent Yélî Dnye, so we also varied this factor. We designed a relatively large number of items but, aware that this may render the task longer and more tiresome, we split some of the items across children. This allowed us to get information about repetition accuracy of more items.
 
-Naturally, designing the task in this way may render the study of individual variaiton within the population more difficult because different children are exposed to different items. However, a review of previous work on individual variation suggested to us that many individual differences effects are relatively small, and would not be detectable with the sample size that we could collect in a given visit. That said, we contribute to the literature by also reporting descriptive analyses that could potentially be integrated in meta-analytic efforts. Based on previous work, we looked at potential improvements with age {[}CITE{]}, and potential negative effects of bilingual exposure {[}CITE{]}. Previous work typically finds no significant differences as a function of maternal education {[}see CITE but also CITE{]} or child gender {[}CITE{]}. Although previous research has not often investigated potential effects of birth order on NWR, there is a sizable literature on these effects in other language tasks {[}CITE{]}, and therefore we report on those too.
+Naturally, designing the task in this way may render the study of individual variaiton within the population more difficult because different children are exposed to different items. However, a review of previous work on individual variation suggested to us that many individual differences effects are relatively small, and would not be detectable with the sample size that we could collect in a given visit.
+
+That said, we contribute to the literature by also reporting descriptive analyses of individual variation that could potentially be integrated in meta-analytic efforts. Based on previous work, we looked at potential improvements with age ({\textbf{???}}; {\textbf{???}}; {\textbf{???}}), and potential negative effects of bilingual exposure ({\textbf{???}}; {\textbf{???}}; {\textbf{???}}). Previous work typically finds no significant differences as a function of maternal education (e.g., {\textbf{???}}; {\textbf{???}}; {\textbf{???}}) or child gender ({\textbf{???}}). Although previous research has not often investigated potential effects of birth order on NWR, there is a sizable literature on these effects in other language tasks ({\textbf{???}}), and therefore we report on those too.
 
 \hypertarget{research-questions}{%
 \subsubsection{Research questions}\label{research-questions}}
@@ -174,16 +176,18 @@ We sought to address the following questions:
 \begin{itemize}
 \tightlist
 \item
-  What is the overall repetition accuracy (whole word, phoneme based, distance)?
+  What is the overall repetition score, according to a variety of relevant metrics (whole word, phoneme based, distance)?
 \item
-  How does this change as a function of item complexity (number of syllablex, sound complexity)?
+  How does score change as a function of item complexity (number of syllablex, sound complexity)?
 \item
-  How frequent are errors that result in real words? Is that a function of item complexity? What are some common patterns of phonological errors?
+  How frequent are errors that result in real words? Is that a function of item complexity?
 \item
-  Is individual variation explainable by child age, sex, birth order, monolingual status, and/or parental education?
+  What are some common patterns of phonological errors?
+\item
+  Is variation attributable to child age, sex, birth order, monolingual status, and/or parental education?
 \end{itemize}
 
-In view of the hypothesis-driven nature of this work, we consider boosting the interpretational value of these data by announcing our analysis plans prior to conducting them. However, we realized that even pre-registering an analysis would be equivocal because we do not have enough power to look at all relationships of interest, and often to detect any of the known effects. For instance, an effect of stimulus length and age has been reported as significant sometimes, but Tables XX and XX show that even these effects can be quite small. \textbf{add table with r/ds from previous work})
+In view of the hypothesis-driven nature of this work, we considered boosting the interpretational value of this evidence by announcing our analysis plans prior to conducting them. However, we realized that even pre-registering an analysis would be equivocal because we do not have enough power to look at all relationships of interest, and often to detect any of the known effects. For instance, an effect of stimulus length and age has been reported as significant sometimes, but Tables XX and XX show that even these effects can be quite small (data from {\textbf{???}}). \textbf{add table with r/ds from previous work})
 Moreover, by virtue of this being a language-specific study, it is unclear that our method (including saliently the items we used) is comparable in precision to previous NWR studies. Therefore, all analyses here are descriptive and should be considered exploratory.
 
 ({\textbf{???}}) ADD TABLE SUMMARIZING PREVIOUS WORK
@@ -202,14 +206,19 @@ Moreover, by virtue of this being a language-specific study, it is unclear that 
 \hypertarget{stimuli}{%
 \subsubsection{Stimuli}\label{stimuli}}
 
-Many NWR studies are based on a fixed list of 12-16 items that vary in length between 1 and 4 syllables, often additionally varying syllable complexity and/or cluster presence and complexity, always meeting the condition that they do not mean anything in the target language. We kept the same variation in item length and the non-meaningfulness requirement, but we did not vary syllable complexity and clusters because these are vanishingly rare in the language. We also increased the number of items and individual child would be tested on, so that a child would get up to 23 items to repeat, and we created more items and distributed them across children, so as to increase the coverage, and be able to study more items.
+Many NWR studies are based on a fixed list of 12-16 items that vary in length between 1 and 4 syllables, often additionally varying syllable complexity and/or cluster presence and complexity, always meeting the condition that they do not mean anything in the target language (e.g., {\textbf{???}}; {\textbf{???}}). We kept the same variation in item length and the non-meaningfulness requirement, but we did not vary syllable complexity and clusters because these are vanishingly rare in Yély Dnye. We also increased the number of items an individual child would be tested on, so that a child would get up to 23 items to repeat (note that up to other work has also used 24-30 items: {\textbf{???}}; {\textbf{???}}), and we created more items and distributed them across children, so as to increase the coverage, and be able to study more items.
 
-A first list of candidate items was generated in 2018 by selecting simple consonants (\enquote{p}, \enquote{t}, \enquote{d}, \enquote{k}, \enquote{m}, \enquote{n}, \enquote{w}, \enquote{y}) and vowels (\enquote{i}, \enquote{o},\enquote{u}, \enquote{a},\enquote{e}) that were combined into consonant-vowel syllables, further sampling the space of 1- to 4-syllable sequences. These candidates were automatically checked against Levinson's 2015 dictionary and removed from consideration if they appeared in the dictionary. MC presented them orally to three local research assistants, who were asked to repeat them and further say whether they were real words. Any item for which two or more of the assistants reported them having a meaning or some form of association was excluded.
+A first list of candidate items was generated in 2018 by selecting simple consonants (\enquote{p}, \enquote{t}, \enquote{d}, \enquote{k}, \enquote{m}, \enquote{n}, \enquote{w}, \enquote{y}) and vowels (\enquote{i}, \enquote{o},\enquote{u}, \enquote{a},\enquote{e}) that were combined into consonant-vowel syllables, further sampling the space of 1- to 4-syllable sequences. These candidates were automatically checked against Levinson's 2015 dictionary and removed from consideration if they appeared in the dictionary. The second author presented them orally to three local research assistants, who were asked to repeat them and further say whether they were real words. Any item for which two or more of the assistants reported them having a meaning or some form of association was excluded.
 
-A second list of candidate items was generated in 2019 by selecting complex consonants and systematically crossing them with all the vowels in the Yelî inventory to produce consonant-vowel monosyllables. As before, items were automatically excluded if they appeared in the dictionary. Additionally, since hearing vowel length in monosyllables in isolation is challenging, any item that had a short/long real word neighbor was filtered out. Since the phonology and phonetics of Yélî is still in the process of being described {[}CITE{]}, there could have been undocumented constraints that rendered items illegal. Therefore, we made sure that the precise consonant-vowel sequence occurred in some real word in the dictionary (i.e., that there was a longer word included the monosyllable as a subsequence). These candidates were presented to one informant, for a final check that they did not mean anything. Together with the 2018 selection, they were recorded using a headset XXX and an olympus XXX from the written form presented together with the same item orally. The complete recorded list was finally presented to two more informants, who could repeat all the items and who confirmed there were no real words. Even so, there was one monosyllable that was often identified as a real word (intended \enquote{yî} /yXX/; identified as \enquote{yi} /yi/, \emph{tree}). This item is removed from analyses.
+A second list of candidate items was generated in 2019 by selecting complex consonants and systematically crossing them with all the vowels in the Yélî inventory to produce consonant-vowel monosyllables. As before, items were automatically excluded if they appeared in the dictionary. Additionally, since hearing vowel length in monosyllables in isolation is challenging, any item that had a short/long real word neighbor was filtered out. Since the phonology and phonetics of Yélî is still in the process of being described (CITE {\textbf{???}} please fill in), there could have been undocumented constraints that rendered items illegal. Therefore, we made sure that the precise consonant-vowel sequence occurred in some real word in the dictionary (i.e., that there was a longer word included the monosyllable as a subsequence). These candidates were presented to one informant, for a final check that they did not mean anything. Together with the 2018 selection, they were recorded using a headset \textbf{XXX ({\textbf{???}}) please fill in} and an Olympus \textbf{XXX ({\textbf{???}}) please fill in} from the written form presented together with the same item orally (by the second author). The complete recorded list was finally presented to two more informants, who could repeat all the items and who confirmed there were no real words. Even so, there was one monosyllable that was often identified as a real word (intended \enquote{yî} /yXX/; identified as \enquote{yi} /yi/, \emph{tree}). This item is removed from analyses.
 
-({\textbf{???}}) can you please add the IPA in // for all of the items below?
-The final list is composed of three practice items (wî, poni, nopimade); 20 monoysllables containing sounds that are less frequent in the world's languages than singleton plosives (
+\textbf{({\textbf{???}}) can you please add the IPA in // for all of the items in the table?}
+The final list is composed of three practice items; 20 monoysllables containing sounds that are less frequent in the world's languages than singleton plosives; 8 bisyllables; 12 trisyllables; and 4 quadrisyllables (see Table 2).
+
+Practice
+wî, poni, nopimade
+
+Mono
 dpa
 dp:a
 dpâ
@@ -228,7 +237,9 @@ lva
 lv:ê
 lvi
 t:êê
-); 8 bisyllables (
+);
+
+(
 kamo
 kipo
 kani
@@ -237,7 +248,8 @@ noki
 piwa
 towi
 nomi);
-12 trisyllables (
+
+(
 nademo
 meyadi
 diyeto
@@ -249,7 +261,9 @@ dimope
 tiwune
 wumipo
 nayeki
-mituye); and 4 quadrisyllables (
+mituye);
+
+(
 todiwuma
 wadikeno
 nomiwake
@@ -264,7 +278,7 @@ A Praat script was written to randomize this list 20 times, and split it into tw
 \item
   splits were done within each length group from the 2018 items (i.e., separately for 2, 3, and 4-syllable items); and among onset groups for the difficult monosyllables generated in 2019 (i.e., all the monosyllables starting with tp were split into 2 sublists). Since some of these groups had an odd number of items, one of the sublists was slightly longer than the other (20 versus 23).
 \item
-  once the sublist split had been done, items were randomized such that all children heard first the 3 practice items in a fixed order (1, 2, and 4 syllables), a randomized version of their sublist selection of difficult onset items, and randomized versions of their 2\_syllables, then 3-syllables, and finally 4-syllable items.
+  once the sublist split had been done, items were randomized such that all children heard first the 3 practice items in a fixed order (1, 2, and 4 syllables), a randomized version of their sublist selection of difficult onset items, and randomized versions of their 2-syllables, then 3-syllables, and finally 4-syllable items.
 \end{itemize}
 
 \hypertarget{procedure}{%
@@ -272,9 +286,9 @@ A Praat script was written to randomize this list 20 times, and split it into tw
 
 We tried to balance three desiderata: That children would not be unduly exposed to the items before they themselves had to repeat them; that children would feel comfortable doing this task with us; and that the community would feel safe with us doing this task with their children. Moreover, there were also some logistic constraints in terms of the space availability. As a result, the places where elicitation took place varied across the hamlets.
 
-Indeed, we visited four different hamlets once, and attempted to test all eligible childr en present at that time, to prevent the items \enquote{spreading} through hearsay. In the first village, we tested children in five different places, with some children being tested inside their house and others tested on the veranda of a house even if it was not their own. The complete list of places and the ways in which they met the desiderata mentioned above can be found in the raw data, available from online supplementary materials.
+We visited four different hamlets once, and attempted to test all eligible children present at the time, to prevent the items \enquote{spreading} through hearsay. In the first hamlet, we tested children in five different places, with some children being tested inside a house and others tested on the veranda. The complete list of places and the ways in which they met the desiderata mentioned above can be found in the raw data, available from online supplementary materials.
 
-The child was donned a headset (xx ({\textbf{???}}) please fill in for most of the children, xx ({\textbf{???}}) fill in for the rest). For most children, the headset could not stay comfortably on the child's head, and thus it was placed on the child's shoulders, with the microphone carefully placed close to the child's mouth. A local informant sat next to the child, to would provide the instructions and, if needed, coach the child to make sure, using the three practice items as well as real words, that they understood that the task was to repeat the items precisely without changing anything. An experimenter delivered the elicitation stimuli to the local informant and the child over headhphones.
+The child was donned a headset (\textbf{xx ({\textbf{???}}) please fill in} for most of the children, xx ({\textbf{???}}) fill in for the rest). For most children, the headset could not stay comfortably on the child's head, and thus it was placed on the child's shoulders, with the microphone carefully placed close to the child's mouth. A local informant sat next to the child, to provide the instructions and, if needed, coach the child to make sure that they understood that the task was to repeat the items precisely without changing anything using the three practice items as well as real words. The experimenter (the first author) delivered the elicitation stimuli to the local informant and the child over headhphones.
 
 The first phase was making sure the child understood the task. This was explained orally and the first training item was presented. Often, children froze and did not say anything. If this happened, then we followed this procedure. First, the informant insisted. If the child still did not say anything, the informant asked the child to repeat a real word, and another, and another. If the child could repeat these correctly, then we provided the recorded training item over headphones again. Most children successfully started repeating the items presented over headphones at this point; a few further needed the local informant to model the behavior (i.e., they would hear the item again, and she would say it; then we would play it again, and ask the child to say it). A small minority still failed to repeat the item after hearing it over headphones. If that occurred, we tried with the second training item, at which point some children got it and could continue. A small minority, however, failed to repeat this one, as well as the third training item, in which case we stopped the test altogether.
 
@@ -285,88 +299,72 @@ Whenever siblings from the same family were tested, an attempt was made to test 
 \hypertarget{coding}{%
 \subsubsection{Coding}\label{coding}}
 
-There is an implicit accuracy coding occuring online as a function of whether the local informant asked for the item to be repeated or not. We will call this \enquote{online accuracy}, and it reflects a wholesale impression of whether the item was correctly or incorrectly repeated.
+The local informant asked for the item to be repeated when she thought the repetition was not correct. We will call this \emph{online scoring}, and it reflects a wholesale impression of whether the item was correctly or incorrectly repeated.
 
-We sought additional information by asking a local informant to listen through each child production, paired with the auditory target the child had been provided with, and make a judgment of whether the item was correctly or incorrectly repeated. We additionally asked her to transcribe exactly what the child said, providing some examples of the types of errors children in general make (without making specific reference to Yélî sounds or the items in the elicitation sets). This \enquote{native coding} provides both accuracy and qualitative desciptions of what the child said that are likely more reliable than those of the non-native coder.
+We sought additional information by asking a local informant to listen through each child production, paired with the auditory target the child had been provided with, and make a judgment of whether the item was correctly or incorrectly repeated. We additionally asked her to transcribe exactly what the child said, providing some examples of the types of errors children in general make (without making specific reference to Yélî sounds or the items in the elicitation sets). This \emph{offline scoring} provides both accuracy and qualitative desciptions of what the child said that are likely more reliable than those of the non-native coder.
 
 \hypertarget{analyses}{%
 \subsubsection{Analyses}\label{analyses}}
 
-For NWR accuracy, we considered separately the child's first and subsequent attempts. These were scored as correct or incorrect on the fly depending on whether the native experimenter asked for the item to be repeated; as well as offline. Some NWR studies employ phoneme-based accuracy in addition to or instead of word-level accuracy {[}CITE{]}. We calculated accuracy as the number of phonemes that could be aligned across the target and attempt, divided by the number of phonemes of whichever item was longer (the target or the attempt). Although previous work does not use distance metrics, we additionally report those.
+For NWR accuracy, we considered separately the child's first and subsequent attempts. These were scored as correct or incorrect on the fly depending on whether the native experimenter asked for the item to be repeated; as well as offline. Some NWR studies employ phoneme-based accuracy in addition to or instead of word-level accuracy (e.g., {\textbf{???}}). We calculated accuracy as the number of phonemes that could be aligned across the target and attempt, divided by the number of phonemes of whichever item was longer (the target or the attempt). Although previous work does not use distance metrics, we additionally report those.
 
 Finally, for describing children's patterns of errors, all repetitions of a given target were taken into account. We describe the proportion of items where the change resulted in a real word (semantic errors); and classify the most common phonological errors.
 
 \hypertarget{participants}{%
 \subsubsection{Participants}\label{participants}}
 
-A total 55 children were tested, from 34 of families, in five hamlets. Some children could not be included for the following reasons: refused participation or failed to repeat items presented over headphones even after coaching (N=8), spoke too softly to allow offline coding (N=5). In addition, 2 teenagers were tested to put younger children at ease; their data is not included in analyses below. The remaining 40 children (14 girls) were aged 6.96 years (range 3.92-11.03 years). There were 32 children exposed only to Yélî in the home, 6 children who were also exposed to another language in the home, and , 2 for whom this information was missing. Maternal years of education averaged 8.24 years (range 6-12 years; 2 children had this information missing). In terms of birth order, 0 were first borns, 5 second, 4 third, 2 forth, 6 fifth, 5 sixth, and 1 did not have this information.
+This study was approved as part of a larger research effort by \textbf{({\textbf{???}}) add info from Middy's FAIR reply}. Participation was voluntary, with children being invited to come and participate. Regardless of how they performed, children were provided with a snack as compensation. Children who came up to participate but then refused were nonetheless provided with the snack.
 
-({\textbf{???}}) why is maternal education always in even years? Can you add a footnote to explain?
+A total 55 children were tested, from 34 of families, in five hamlets. Some children could not be included for the following reasons: refused participation or failed to repeat items presented over headphones even after coaching (N=8), spoke too softly to allow offline coding (N=5). In addition, 2 teenagers were tested to put younger children at ease; their data is not included in analyses below. The remaining 40 children (14 girls) were aged 6.96 years (range 3.92-11.03 years). There were 32 children exposed only to Yélî in the home, 6 children who were also exposed to another language in the home, and , 2 for whom this information was missing. Maternal years of education averaged 8.24 years (range 6-12 years; 2 children had this information missing).\footnote{Education is often reported in even years because people typically complete two-year cycles.} In terms of birth order, 0 were first borns, 5 second, 4 third, 2 forth, 6 fifth, 5 sixth, and 1 did not have this information.
 
 \hypertarget{results}{%
 \subsection{Results}\label{results}}
 
-\begin{itemize}
-\item
-  What is the overall repetition accuracy (whole word, phoneme based, distance)?
-\item
-  How does this change as a function of item complexity (number of syllablex, sound complexity)?
-\item
-  How frequent are errors that result in real words? Is that a function of item complexity? What are some common patterns of phonological errors?
-\item
-  Is individual variation explainable by child age, sex, birth order, monolingual status, and/or parental education?
-\end{itemize}
+\hypertarget{overall-repetition-accuracy}{%
+\subsubsection{Overall repetition accuracy}\label{overall-repetition-accuracy}}
 
-\begin{verbatim}
-##     ID score.online
-## 1  c70    0.7307692
-## 2  c71    0.5384615
-## 3  c72    0.6086957
-## 4  c73    0.8461538
-## 5  c74    0.9090909
-## 6  c76    0.7307692
-## 7  c77    0.9565217
-## 8  c78    0.8461538
-## 9  c79    0.7692308
-## 10 c80    0.8260870
-## 11 c81    0.5652174
-## 12 c82    0.5000000
-\end{verbatim}
+We start by describing whole word accuracy
 
-\includegraphics{manuscript_files/figure-latex/unnamed-chunk-1-1.pdf} \includegraphics{manuscript_files/figure-latex/unnamed-chunk-1-2.pdf} \includegraphics{manuscript_files/figure-latex/unnamed-chunk-1-3.pdf}
-
-\textbf{(MC: but we can try and do a cursory analysis based on the corpora we have from Steve and my transcription of naturalistic interactions!)}
-
-Based on previous work, one can make the following general predictions for any population:
+phoneme based, distance
+\#\#\# Accuracy a function of item complexity
+(number of syllablex, sound complexity)?
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
   Children are more accurate for mono-syllables than longer items
 \item
+  The length distribution in Yélî words is more balanced than that in English, and thus the performance decline for poly- versus mono-syllables may be less pronounced than that for English. \textbf{Check for work on European languages that may have looked into this}
+\item
   Similarly, we do not know of NWR research that manipulates the difficulty of the sounds that are included in the items, but word naming and other research suggests that children are more accurate when producing easy and/or typologically common sounds than difficult and/or typologically rare sounds {[}CITE{]}. Therefore, we expect higher accuracy for items with common sounds than in those with rare sounds.
 \item
-  Children's accuracy increases with child age.
-\item
-  Non-monolingual Yélî children are less accurate than monolingual ones when tested on the society-dominant language (we did not test any non-dominant language)
-\item
-  As revious NWR evidence on this is mixed, but general findings on language development suggest that children whose mothers are more educated are more accurate than children whose mothers are less educated.
-\item
-  To our knowledge, there is no previous NWR work on this, but other research suggests that first-born children should outperform later-born children
+  The Yélî sound inventory is very large and compressed, with many similar sounds that are acoustic and articulatory neighbors. Therefore, this may constitute a pressure for children to have finer auditory skills (and perhaps more precise articulations) than children speaking languages with a simpler inventory. As a result, differences between easier and harder items may be smaller in this work than in other research. \textbf{no work looking at consonants \& vowels? no work looking at nasal vowels in particular?}
 \end{enumerate}
 
-Although these predictions were made based on previous work, we also thought reasonable that they would not obtain for the Rossel children in particular, as follows:
+\textbf{(MC: but we can try and do a cursory analysis based on the corpora we have from Steve and my transcription of naturalistic interactions!)}
+
+\hypertarget{patterns-of-errors}{%
+\subsubsection{Patterns of errors}\label{patterns-of-errors}}
+
+\begin{itemize}
+\tightlist
+\item
+  How frequent are errors that result in real words? Is that a function of item complexity? What are some common patterns of phonological errors?
+\end{itemize}
+
+\hypertarget{factor-structuring-individual-variation}{%
+\subsubsection{Factor structuring individual variation}\label{factor-structuring-individual-variation}}
+
+explainable by child age, sex, birth order, monolingual status, and/or parental education?
+3. Children's accuracy increases with child age.
+4. Non-monolingual Yélî children are less accurate than monolingual ones when tested on the society-dominant language (we did not test any non-dominant language)
+5. As revious NWR evidence on this is mixed, but general findings on language development suggest that children whose mothers are more educated are more accurate than children whose mothers are less educated.
+6. To our knowledge, there is no previous NWR work on this, but other research suggests that first-born children should outperform later-born children
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
 \tightlist
-\item
-  The length distribution in Yélî words is more balanced than that in English, and thus the performance decline for poly- versus mono-syllables may be less pronounced than that for English. \textbf{Check for work on European languages that may have looked into this}
-\item
-  The Yélî sound inventory is very large and compressed, with many similar sounds that are acoustic and articulatory neighbors. Therefore, this may constitute a pressure for children to have finer auditory skills (and perhaps more precise articulations) than children speaking languages with a simpler inventory. As a result, differences between easier and harder items may be smaller in this work than in other research. \textbf{no work looking at consonants \& vowels? no work looking at nasal vowels in particular?}
-\item
-  We had no reservations that children's accuracy increases with child age for the Yélî community as well.
 \item
   Anecdotally Yélî children grow up in close-knitted communities and thus may receive significant portions of their language input from people not in their nuclear family
   (or at least from people other than their mothers, who tend to be the non-native speakers). If so, the difference between monolinguals and not monolinguals may be smaller than that found in other work
@@ -405,6 +403,5 @@ We are grateful to informants and individuals who participated in the study. AC 
 
 \setlength{\parindent}{-0.5in}
 \setlength{\leftskip}{0.5in}
-
 
 \end{document}
