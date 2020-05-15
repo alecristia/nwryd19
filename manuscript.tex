@@ -1,7 +1,7 @@
 \PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
 \PassOptionsToPackage{hyphens}{url}
 %
-\documentclass[english,,man,floatsintext]{apa6}
+\documentclass[english,,man]{apa6}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
@@ -29,6 +29,8 @@
 }
 \usepackage{hyperref}
 \hypersetup{
+            pdftitle={Non-word repetition in Yélî Dnye},
+            pdfkeywords={phonology, non-word repetition, development},
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
@@ -88,15 +90,26 @@
   {\section*{\normalfont\normalsize\abstractname}}
   {}{\typeout{Failed to patch abstract.}}
 \makeatother
-\shorttitle{NWR in Yélî Dnye'}
+\shorttitle{NWR in Yélî Dnye}
 \author{Alejandrina Cristia\textsuperscript{1}\ \& Marisa Casillas\textsuperscript{2}}
 \affiliation{
 \vspace{0.5cm}
-\textsuperscript{1} LSCP, Département d’études cognitives, ENS, EHESS, CNRS, Université PSL\\\textsuperscript{2} Max Planck Institute for Psycholinguistics}
-\authornote{
+\textsuperscript{1} Laboratoire de Sciences Cognitives et de Psycholinguistique, Département d'Etudes cognitives, ENS, EHESS, CNRS, PSL University\\\textsuperscript{2} Max Planck Institute for Psycholinguistics}
+\authornote{All data are made available in a repository in the Open Science Framework. AC acknowledges the support of the Agence Nationale de la Recherche (ANR-17-CE28-0007 LangAge, ANR-16-DATA-0004, ANR-14-CE30-0003, ANR-17-EURE-0017); and the J. S. McDonnell Foundation Understanding Human Cognition Scholar Award. 
+ 
 
-Correspondence concerning this article should be addressed to Alejandrina Cristia, 29, rue d'Ulm, 75005, Paris, France. E-mail: alecristia@gmail.com}
-\keywords{phonology, non-word repetition, development\newline\indent Word count: xxx}
+
+Correspondence concerning this article should be addressed to Alejandrina Cristia, 29, rue d’Ulm, 75005 Paris, France. E-mail: alecristia@gmail.com}
+\keywords{phonology, non-word repetition, development\newline\indent Word count: ~xxx words}
+\DeclareDelayedFloatFlavor{ThreePartTable}{table}
+\DeclareDelayedFloatFlavor{lltable}{table}
+\DeclareDelayedFloatFlavor*{longtable}{table}
+\makeatletter
+\renewcommand{\efloat@iwrite}[1]{\immediate\expandafter\protected@write\csname efloat@post#1\endcsname{}}
+\makeatother
+\usepackage{lineno}
+
+\linenumbers
 \usepackage{csquotes}
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[shorthands=off,main=english]{babel}
@@ -106,9 +119,16 @@ Correspondence concerning this article should be addressed to Alejandrina Cristi
   \setmainlanguage[]{english}
 \fi
 
+\title{Non-word repetition in Yélî Dnye}
+
 \date{}
 
+\abstract{
+ADD
+}
+
 \begin{document}
+\maketitle
 
 \hypertarget{todo}{%
 \subsection{TODO}\label{todo}}
@@ -134,9 +154,9 @@ Correspondence concerning this article should be addressed to Alejandrina Cristi
 \hypertarget{introduction}{%
 \subsection{Introduction}\label{introduction}}
 
-Although infants begin to learn about their native language's phonology within the first year, many studies suggest that in perception and production, in phonetics and phonology, their knowledge continues to develop throughout childhood (e.g., {\textbf{???}}). One common task in this line of research is nonword repetition (NWR). In NWR studies, participants are presented auditorily with an item that is phonologically legal but lexically meaningless in the language children are learning. The child should immediately try to say it back without changing anything. Accuracy is thought to reflect long-term phonological knowledge (which allows the child to perceive the item accurately even though it is not a real word they have encountered before) as well as online phonological working memory (to encode the item in the interval between hearing it and saying it back) and flexible productiong patterns (to produce the item accurately even though it had never been pronounced before).
+Although infants begin to learn about their native language's phonology within the first year, many studies suggest that in perception and production, in phonetics and phonology, their knowledge continues to develop throughout childhood (e.g., Hazan \& Barrett, 2000). One common task in this line of research is nonword repetition (NWR). In NWR studies, participants are presented auditorily with an item that is phonologically legal but lexically meaningless in the language children are learning. The child should immediately try to say it back without changing anything. Accuracy is thought to reflect long-term phonological knowledge (which allows the child to perceive the item accurately even though it is not a real word they have encountered before) as well as online phonological working memory (to encode the item in the interval between hearing it and saying it back) and flexible productiong patterns (to produce the item accurately even though it had never been pronounced before).
 
-NWR has been used to seek answers to a variety of theoretical questions, including what are the links between phonology, working memory, and the lexicon ({\textbf{???}}), as well as for applications, notably using nwr as a diagnostic for language delays and disorders ({\textbf{???}}). Since non-words can be generated in many languages, it has been used acros a wide array of languages, particularly in Europe ({\textbf{???}},@is08042009language).
+NWR has been used to seek answers to a variety of theoretical questions, including what are the links between phonology, working memory, and the lexicon (Bowey, 2001), as well as for applications, notably using nwr as a diagnostic for language delays and disorders (Estes, Evans, \& Else-Quest, 2007). Since non-words can be generated in many languages, it has been used acros a wide array of languages, particularly in Europe (Meir, Walters, \& Armon-Lotem, 2016,@is08042009language).
 
 In this study, we report on NWR results among children learning Yêly Dnyé, an isolate spoken in Rossel Island, PNG, with an unusually dense phonological inventory. In our implementation of NWR, we made sure that some of the items contained typologically rare and/or challenging sounds. MISSING: WHY DO WE DO THIS? WHAT IS THE POINT?
 
@@ -181,13 +201,13 @@ Little is known about language development in children growing up in Rossel Isla
 \hypertarget{brief-review-of-nwr-for-our-purposes}{%
 \subsubsection{Brief review of NWR for our purposes}\label{brief-review-of-nwr-for-our-purposes}}
 
-There is some variation in the presentation procedure and structure of items found in previous NWR work. For example, items are often presented orally by the experimenter ({\textbf{???}}), although an increasing number of studies have turned to playing back the stimuli in order to have greater control of the stability of the presentation ({\textbf{???}}). Additionally, while some studies have used 10-15 non-words, others have employed up to 46 unique items ({\textbf{???}}). Often, authors modulate structural complexity, typically measured in terms of item length (measured in number of syllables) and/or syllable structure (open as opposed to closed syllables, {\textbf{???}}).
+There is some variation in the presentation procedure and structure of items found in previous NWR work. For example, items are often presented orally by the experimenter (Torrington Eaton, Newman, Ratner, \& Rowe, 2015), although an increasing number of studies have turned to playing back the stimuli in order to have greater control of the stability of the presentation (Brandeker \& Thordardottir, 2015). Additionally, while some studies have used 10-15 non-words, others have employed up to 46 unique items (Piazzalunga, Previtali, Pozzoli, Scarponi, \& Schindler, 2019). Often, authors modulate structural complexity, typically measured in terms of item length (measured in number of syllables) and/or syllable structure (open as opposed to closed syllables, Gallon, Harris, \& Van der Lely, 2007).
 
 Previous work seems to avoid difficult sounds, but we felt this was important to represent Yélî Dnye, so we also varied this factor. We designed a relatively large number of items but, aware that this may render the task longer and more tiresome, we split some of the items across children. This allowed us to get information about repetition accuracy of more items.
 
 Naturally, designing the task in this way may render the study of individual variaiton within the population more difficult because different children are exposed to different items. However, a review of previous work on individual variation suggested to us that many individual differences effects are relatively small, and would not be detectable with the sample size that we could collect in a given visit.
 
-That said, we contribute to the literature by also reporting descriptive analyses of individual variation that could potentially be integrated in meta-analytic efforts. Based on previous work, we looked at potential improvements with age ({\textbf{???}}; {\textbf{???}}; {\textbf{???}}), and potential negative effects of bilingual exposure ({\textbf{???}}; {\textbf{???}}; {\textbf{???}}). Previous work typically finds no significant differences as a function of maternal education (e.g., {\textbf{???}}; {\textbf{???}}; {\textbf{???}}) or child gender ({\textbf{???}}). Although previous research has not often investigated potential effects of birth order on NWR, there is a sizable literature on these effects in other language tasks ({\textbf{???}}), and therefore we report on those too.
+That said, we contribute to the literature by also reporting descriptive analyses of individual variation that could potentially be integrated in meta-analytic efforts. Based on previous work, we looked at potential improvements with age (Farmani et al., 2018; Kalnak, Peyrard-Janvid, Forssberg, \& Sahlén, 2014; Vance, Stackhouse, \& Wells, 2005), and potential negative effects of bilingual exposure (Brandeker \& Thordardottir, 2015; Meir \& Armon-Lotem, 2017; Meir et al., 2016). Previous work typically finds no significant differences as a function of maternal education (e.g., Farmani et al., 2018; Kalnak et al., 2014; Meir \& Armon-Lotem, 2017) or child gender (Chiat \& Roy, 2007). Although previous research has not often investigated potential effects of birth order on NWR, there is a sizable literature on these effects in other language tasks (Havron et al., 2019), and therefore we report on those too.
 
 \hypertarget{research-questions}{%
 \subsubsection{Research questions}\label{research-questions}}
@@ -208,7 +228,7 @@ We sought to address the following questions:
   Is variation attributable to child age, sex, birth order, monolingual status, and/or parental education?
 \end{itemize}
 
-In view of the hypothesis-driven nature of this work, we considered boosting the interpretational value of this evidence by announcing our analysis plans prior to conducting them. However, we realized that even pre-registering an analysis would be equivocal because we do not have enough power to look at all relationships of interest, and often to detect any of the known effects. For instance, an effect of stimulus length and age has been reported as significant sometimes, but Tables XX and XX show that even these effects can be quite small (data from {\textbf{???}}). \textbf{add table with r/ds from previous work})
+In view of the hypothesis-driven nature of this work, we considered boosting the interpretational value of this evidence by announcing our analysis plans prior to conducting them. However, we realized that even pre-registering an analysis would be equivocal because we do not have enough power to look at all relationships of interest, and often to detect any of the known effects. For instance, an effect of stimulus length and age has been reported as significant sometimes, but Tables XX and XX show that even these effects can be quite small (data from Cristia, Farabolini, Scaff, Havron, \& Stieglitz, 2020). \textbf{add table with r/ds from previous work})
 Moreover, by virtue of this being a language-specific study, it is unclear that our method (including saliently the items we used) is comparable in precision to previous NWR studies. Therefore, all analyses here are descriptive and should be considered exploratory.
 
 \begin{figure}
@@ -223,7 +243,7 @@ Moreover, by virtue of this being a language-specific study, it is unclear that 
 \hypertarget{stimuli}{%
 \subsubsection{Stimuli}\label{stimuli}}
 
-Many NWR studies are based on a fixed list of 12-16 items that vary in length between 1 and 4 syllables, often additionally varying syllable complexity and/or cluster presence and complexity, always meeting the condition that they do not mean anything in the target language (e.g., {\textbf{???}}; {\textbf{???}}). We kept the same variation in item length and the non-meaningfulness requirement, but we did not vary syllable complexity and clusters because these are vanishingly rare in Yély Dnye. We also increased the number of items an individual child would be tested on, so that a child would get up to 23 items to repeat (note that up to other work has also used 24-30 items: {\textbf{???}}; {\textbf{???}}), and we created more items and distributed them across children, so as to increase the coverage, and be able to study more items.
+Many NWR studies are based on a fixed list of 12-16 items that vary in length between 1 and 4 syllables, often additionally varying syllable complexity and/or cluster presence and complexity, always meeting the condition that they do not mean anything in the target language (e.g., Balladares, Marshall, \& Griffiths, 2016; Wilsenach, 2013). We kept the same variation in item length and the non-meaningfulness requirement, but we did not vary syllable complexity and clusters because these are vanishingly rare in Yély Dnye. We also increased the number of items an individual child would be tested on, so that a child would get up to 23 items to repeat (note that up to other work has also used 24-30 items: Jaber-Awida, 2018; Kalnak et al., 2014), and we created more items and distributed them across children, so as to increase the coverage, and be able to study more items.
 
 A first list of candidate items was generated in 2018 by selecting simple consonants (\enquote{p}, \enquote{t}, \enquote{d}, \enquote{k}, \enquote{m}, \enquote{n}, \enquote{w}, \enquote{y}) and vowels (\enquote{i}, \enquote{o},\enquote{u}, \enquote{a},\enquote{e}) that were combined into consonant-vowel syllables, further sampling the space of 1- to 4-syllable sequences. These candidates were automatically checked against Levinson's 2015 dictionary and removed from consideration if they appeared in the dictionary. The second author presented them orally to three local research assistants, who were asked to repeat them and further say whether they were real words. Any item for which two or more of the assistants reported them having a meaning or some form of association was excluded.
 
@@ -323,7 +343,7 @@ We sought additional information by asking a local informant to listen through e
 \hypertarget{analyses}{%
 \subsubsection{Analyses}\label{analyses}}
 
-For NWR accuracy, we considered separately the child's first and subsequent attempts. These were scored as correct or incorrect on the fly depending on whether the native experimenter asked for the item to be repeated; as well as offline. Some NWR studies employ phoneme-based accuracy in addition to or instead of word-level accuracy (e.g., {\textbf{???}}). We calculated accuracy as the number of phonemes that could be aligned across the target and attempt, divided by the number of phonemes of whichever item was longer (the target or the attempt). Although previous work does not use distance metrics, we additionally report those.
+For NWR accuracy, we considered separately the child's first and subsequent attempts. These were scored as correct or incorrect on the fly depending on whether the native experimenter asked for the item to be repeated; as well as offline. Some NWR studies employ phoneme-based accuracy in addition to or instead of word-level accuracy (e.g., Cristia et al., 2020). We calculated accuracy as the number of phonemes that could be aligned across the target and attempt, divided by the number of phonemes of whichever item was longer (the target or the attempt). Although previous work does not use distance metrics, we additionally report those.
 
 Finally, for describing children's patterns of errors, all repetitions of a given target were taken into account. We describe the proportion of items where the change resulted in a real word (semantic errors); and classify the most common phonological errors.
 
@@ -435,5 +455,63 @@ We are grateful to informants and individuals who participated in the study. AC 
 
 \setlength{\parindent}{-0.5in}
 \setlength{\leftskip}{0.5in}
+
+\hypertarget{refs}{}
+\leavevmode\hypertarget{ref-balladares2016socio}{}%
+Balladares, J., Marshall, C., \& Griffiths, Y. (2016). Socio-economic status affects sentence repetition, but not non-word repetition, in Chilean preschoolers. \emph{First Language}, \emph{36}(3), 338--351. \url{https://doi.org/10.1177/0142723715626067}
+
+\leavevmode\hypertarget{ref-bowey2001nonword}{}%
+Bowey, J. A. (2001). Nonword repetition and young children's receptive vocabulary: A longitudinal study. \emph{Applied Psycholinguistics}, \emph{22}(3), 441--469.
+
+\leavevmode\hypertarget{ref-brandeker2015language}{}%
+Brandeker, M., \& Thordardottir, E. (2015). Language exposure in bilingual toddlers: Performance on nonword repetition and lexical tasks. \emph{American Journal of Speech-Language Pathology}, \emph{24}(2), 126--138.
+
+\leavevmode\hypertarget{ref-chiat2007preschool}{}%
+Chiat, S., \& Roy, P. (2007). The preschool repetition test: An evaluation of performance in typically developing and clinically referred children. \emph{Journal of Speech, Language, and Hearing Research}, \emph{50}(2), 429--443.
+
+\leavevmode\hypertarget{ref-cristia2020infant}{}%
+Cristia, A., Farabolini, G., Scaff, C., Havron, N., \& Stieglitz, J. (2020). Infant-directed input and literacy effects on phonological processing: Non-word repetition scores among the tsimane'. \emph{Preprint}.
+
+\leavevmode\hypertarget{ref-estes2007differences}{}%
+Estes, K. G., Evans, J. L., \& Else-Quest, N. M. (2007). Differences in the nonword repetition performance of children with and without specific language impairment: A meta-analysis. \emph{Journal of Speech, Language, and Hearing Research}, \emph{50}(1), 177--195.
+
+\leavevmode\hypertarget{ref-farmani2018normalization}{}%
+Farmani, H., Sayyahi, F., Soleymani, Z., Labbaf, F. Z., Talebi, E., \& Shourvazi, Z. (2018). Normalization of the non-word repetition test in farsi-speaking children. \emph{Journal of Modern Rehabilitation}, \emph{12}(4), 217--224.
+
+\leavevmode\hypertarget{ref-gallon2007non}{}%
+Gallon, N., Harris, J., \& Van der Lely, H. (2007). Non-word repetition: An investigation of phonological complexity in children with grammatical sli. \emph{Clinical Linguistics \& Phonetics}, \emph{21}(6), 435--455.
+
+\leavevmode\hypertarget{ref-havron2019effect}{}%
+Havron, N., Ramus, F., Heude, B., Forhan, A., Cristia, A., Peyre, H., \& Group, E. M.-C. C. S. (2019). The effect of older siblings on language development as a function of age difference and sex. \emph{Psychological Science}, \emph{30}(9), 1333--1343.
+
+\leavevmode\hypertarget{ref-hazan2000development}{}%
+Hazan, V., \& Barrett, S. (2000). The development of phonemic categorization in children aged 6--12. \emph{Journal of Phonetics}, \emph{28}(4), 377--396.
+
+\leavevmode\hypertarget{ref-is08042009language}{}%
+IS0804, C. A. (2009). Language impairment in a multilingual society: Linguistic patterns and the road to assessment. \emph{Brussels: COST Office. Available Online at: Http://Www. Bi-Sli. Org}.
+
+\leavevmode\hypertarget{ref-jabere2018xperiment}{}%
+Jaber-Awida, A. (2018). Experiment in non word repetition by monolingual Arabic preschoolers. \emph{Athens Journal of Philology}, \emph{5}(4), 317--334. \url{https://doi.org/10.30958/ajp.5-4-4}
+
+\leavevmode\hypertarget{ref-kalnak2014nonword}{}%
+Kalnak, N., Peyrard-Janvid, M., Forssberg, H., \& Sahlén, B. (2014). Nonword repetition--a clinical marker for specific language impairment in swedish associated with parents' language-related problems. \emph{PloS One}, \emph{9}(2), e89544.
+
+\leavevmode\hypertarget{ref-meir2017independent}{}%
+Meir, N., \& Armon-Lotem, S. (2017). Independent and combined effects of socioeconomic status (ses) and bilingualism on children's vocabulary and verbal short-term memory. \emph{Frontiers in Psychology}, \emph{8}, 1442.
+
+\leavevmode\hypertarget{ref-meir2016disentangling}{}%
+Meir, N., Walters, J., \& Armon-Lotem, S. (2016). Disentangling sli and bilingualism using sentence repetition tasks: The impact of l1 and l2 properties. \emph{International Journal of Bilingualism}, \emph{20}(4), 421--452.
+
+\leavevmode\hypertarget{ref-piazzalunga2019articulatory}{}%
+Piazzalunga, S., Previtali, L., Pozzoli, R., Scarponi, L., \& Schindler, A. (2019). An articulatory-based disyllabic and trisyllabic non-word repetition test: Reliability and validity in italian 3-to 7-year-old children. \emph{Clinical Linguistics \& Phonetics}, \emph{33}(5), 437--456.
+
+\leavevmode\hypertarget{ref-torrington2015non}{}%
+Torrington Eaton, C., Newman, R. S., Ratner, N. B., \& Rowe, M. L. (2015). Non-word repetition in 2-year-olds: Replication of an adapted paradigm and a useful methodological extension. \emph{Clinical Linguistics \& Phonetics}, \emph{29}(7), 523--535.
+
+\leavevmode\hypertarget{ref-vance2005speech}{}%
+Vance, M., Stackhouse, J., \& Wells, B. (2005). Speech-production skills in children aged 3--7 years. \emph{International Journal of Language \& Communication Disorders}, \emph{40}(1), 29--48.
+
+\leavevmode\hypertarget{ref-wilsenach2013phonological}{}%
+Wilsenach, C. (2013). Phonological skills as predictor of reading success: An investigation of emergent bilingual Northern Sotho/English learners. \emph{Per Linguam: a Journal of Language Learning= Per Linguam: Tydskrif vir Taalaanleer}, \emph{29}(2), 17--32. \url{https://doi.org/10.5785/29-2-554}
 
 \end{document}
