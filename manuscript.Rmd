@@ -1,12 +1,12 @@
 ---
-title: "Non-word repetition in Yélî Dnye"
-shorttitle        : "NWR in Yélî Dnye'"
+title             : "Non-word repetition in Yélî Dnye"
+shorttitle        : "NWR in Yélî Dnye"
 
 author: 
   - name          : "Alejandrina Cristia"
     affiliation   : "1"
     corresponding : yes    # Define only one corresponding author
-    address       : "29, rue d'Ulm, 75005, Paris, France"
+    address       : "29, rue d’Ulm, 75005 Paris, France"
     email         : "alecristia@gmail.com"
   - name          : "Marisa Casillas"
     affiliation   : "2"
@@ -15,34 +15,37 @@ author:
 
 affiliation:
   - id            : "1"
-    institution   : "LSCP, Département d’études cognitives, ENS, EHESS, CNRS, Université PSL"
+    institution   : "Laboratoire de Sciences Cognitives et de Psycholinguistique, Département d'Etudes cognitives, ENS, EHESS, CNRS, PSL University"
   - id            : "2"
     institution   : "Max Planck Institute for Psycholinguistics"
 
+authornote: |
+  All data are made available in a repository in the Open Science Framework. AC acknowledges the support of the Agence Nationale de la Recherche (ANR-17-CE28-0007 LangAge, ANR-16-DATA-0004, ANR-14-CE30-0003, ANR-17-EURE-0017); and the J. S. McDonnell Foundation Understanding Human Cognition Scholar Award. 
+   
 
-author_note: >
-       
+  
+abstract: >
+  ADD
 
-    
-abstract: >    
-    ADD
+
+
 
 keywords          : "phonology, non-word repetition, development"
-wordcount         : "xxx"
+wordcount         : "~xxx words"
 
 bibliography      : ["nwrbib.bib"]
 
-figsintext        : yes
+figsintext        : no
 figurelist        : no
 tablelist         : no
 footnotelist      : no
-lineno            : no
+lineno            : yes
 
 lang              : "english"
 class             : "man"
 output            : papaja::apa6_pdf
-
 ---
+
 
 
 ```{r setup, include=FALSE}
@@ -115,7 +118,6 @@ correspondances=matrix( #list correspondances always by pairs, orthography then 
 
 ## TODO
 
-- fix yaml
 - add ana based on phonemes & expand on levenshtein
 - add ana based on number of characters
 - add summary of types of error: %semantic, %deletion (which sounds?) %subst (which are the most common sounds) 
