@@ -118,6 +118,11 @@ correspondances=matrix( #list correspondances always by pairs, orthography then 
 
 ## TODO
 
+- add table r/d by stim length & age
+- add table with stimuli
+- ask Middy about consent, correct, accuracy
+- double check demo: exact age missing: 78, 82, 83, 115, 119; rough age missing 78, there's a mixture of BGMF in sex, first born is missing, round age
+- 
 - add ana based on phonemes & expand on levenshtein
 - add ana based on number of characters
 - add summary of types of error: %semantic, %deletion (which sounds?) %subst (which are the most common sounds) 
@@ -383,6 +388,11 @@ were on average less accurate than first ones (M = `r round(mean(pwcm_att$Word[p
 
 ```{r exclude subsequent}
 trnsc=trnsc[trnsc$attempt=="first",]
+
+aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$age.exact,trnsc$type),mean)->pwcm_att
+colnames(pwcm_att)<-c("ID","Age","Length","Word")
+
+mean(pwcm_att$Word[pwcm_att$Length==2],na.rm=T)
 ```
 
 
