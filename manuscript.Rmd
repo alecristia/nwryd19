@@ -35,7 +35,7 @@ wordcount         : "~xxx words"
 
 bibliography      : ["nwrbib.bib"]
 
-figsintext        : no
+figsintext        : yes
 figurelist        : no
 tablelist         : no
 footnotelist      : no
@@ -122,9 +122,6 @@ correspondances=matrix( #list correspondances always by pairs, orthography then 
 - add table with stimuli
 - ask Middy about consent, correct, accuracy
 - double check demo: exact age missing: 78, 82, 83, 115, 119; rough age missing 78, there's a mixture of BGMF in sex, first born is missing, round age
-- 
-- add ana based on phonemes & expand on levenshtein
-- add ana based on number of characters
 - add summary of types of error: %semantic, %deletion (which sounds?) %subst (which are the most common sounds) 
 - maybe add to the last ana the prevalence (ie out of all the gh which proportion get transformed)
 - add analysis on the basis of demo chars
@@ -372,6 +369,9 @@ aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$age.exact,trnsc$attempt),mean
 colnames(pwcm_att)<-c("ID","Age","Attempt","Word")
 
 #remove children who do not have both first & subsequent attempts
+# which is
+excl=sum(table(pwcm_att$ID)!=2)
+
 pwcm_att[pwcm_att$ID %in% names(table(pwcm_att$ID))[table(pwcm_att$ID)==2],]->pwcm_att
 
 myx=as.numeric(as.factor(pwcm_att$ID))/100+as.numeric(as.factor(pwcm_att$Attempt))
@@ -383,44 +383,59 @@ axis(1,at=1:2,labels=c("first","others"))
 t.test(pwcm_att$Word~pwcm_att$Attempt,paired=T)->myt
 ```
 
-We first checked whether accuracy varies between first and subsequent presentations of an item by averaging word-level accuracy at the participant level separately for first attempts and subsequent repetitions. As shown in Figure 1, participants' mean word-level accuracy became more heterogeneous in subsequent repetitions. Surprisingly, subsequent repetitions (M = `r round(mean(pwcm_att$Word[pwcm_att$Attempt!="first"]))`, SD = `r round(sd(pwcm_att$Word[pwcm_att$Attempt!="first"]))`)
+We first checked whether accuracy varies between first and subsequent presentations of an item by averaging word-level accuracy at the participant level separately for first attempts and subsequent repetitions. We excluded `r excl` children who did not have data for one of these two types. As shown in Figure 1, participants' mean word-level accuracy became more heterogeneous in subsequent repetitions. Surprisingly, subsequent repetitions (M = `r round(mean(pwcm_att$Word[pwcm_att$Attempt!="first"]))`, SD = `r round(sd(pwcm_att$Word[pwcm_att$Attempt!="first"]))`)
 were on average less accurate than first ones (M = `r round(mean(pwcm_att$Word[pwcm_att$Attempt=="first"]))`, SD = `r round(sd(pwcm_att$Word[pwcm_att$Attempt=="first"]))`), t(`r round(myt$parameter,2)`) = `r round(myt$statistic,2)`, p = `r round(myt$p.value,2)`. Given the uncertainty in whether previous work used only the first or all repetitions, and since behavior degraded and became more heterogeneous in subsequent repetitions, the rest of the analyses focus on only the first repetitions.
 
 ```{r exclude subsequent}
 trnsc=trnsc[trnsc$attempt=="first",]
 
-aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$age.exact,trnsc$type),mean)->pwcm_att
-colnames(pwcm_att)<-c("ID","Age","Length","Word")
-
-mean(pwcm_att$Word[pwcm_att$Length==2],na.rm=T)
 ```
 
 
 ### Overall repetition accuracy
 
-Taking into account only the first attempts, the overall repetition accuracy measured in whole words is `r round(mean(trnsc$cor.online)*100)`% based on the online coding (i.e., whether the native experimenter asked for the target to be re-played), and `r round(mean(trnsc$correct)*100)`% when the offline coding is considered. On average, the phoneme-based normalized Levenshtein distance was `r round(mean(trnsc$nld)*100)`%, meaning that about 20% of phonemes were substituted, inserted, or deleted.
+```{r overall}
 
-ADD GRAPH WITH PHONEME BASED IN Y AND WORD BASED IN X
+aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$age.exact),mean)->overall
+aggregate(trnsc$pc*100,by=list(trnsc$id,trnsc$age.exact),mean)->pc
+aggregate(trnsc$nld*100,by=list(trnsc$id,trnsc$age.exact),mean)->nld
+overall=cbind(overall,pc$x,nld$x)
+colnames(overall)<-c("ID","Age","Word","Phoneme","NLD")
+
+```
+
+
+Taking into account only the first attempts, we averaged attempts by each of the `r dim(overall)[1]` children who had data for first attempts; their ages ranged from `r min(overall$Age)` to `r max(overall$Age)` (M = `r round(mean(overall$Age),1)`, SD = `r round(sd(overall$Age),1)`). 
+
+The overall NWR score was M = `r round(mean(overall$Word))`% (SD = `r round(sd(overall$Word))`%). Scores based on phonemes are even higher  M = `r round(mean(overall$Phoneme))`% (SD = `r round(sd(overall$Phoneme))`%). The phoneme-based normalized Levenshtein distance was  M = `r round(mean(overall$NLD))`% (SD = `r round(sd(overall$NLD))`%), meaning that about a fifth of phonemes were were substituted, inserted, or deleted. Notice that the normalized Levenshtein distance is the complement of phoneme-based scores.
 
 ### Accuracy a function of item complexity 
 
-We then inspected whether accuracy varied as a function of word length.
+```{r bylength}
+aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$age.exact,trnsc$type),mean)->by_length
+aggregate(trnsc$pc*100,by=list(trnsc$id,trnsc$age.exact,trnsc$type),mean)->pc
+aggregate(trnsc$nld*100,by=list(trnsc$id,trnsc$age.exact,trnsc$type),mean)->nld
+by_length=cbind(by_length,pc$x,nld$x)
+colnames(by_length)<-c("ID","Age","Length","Word","Phoneme","NLD")
+
+```
 
 
-```{r figlength,eval=F}
-#not working
-aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$age.exact,trnsc$tarlen),mean)->pwcm_att
-colnames(pwcm_att)<-c("ID","Age","Length","Word")
+We then inspected whether accuracy varied as a function of word length. Results are shown on table XX. This table shows that monosyllables accuracy was much lower than other lengths. This is likely due to the fact that the majority of monosyllables included were chosen because they had sounds that are rare in the world's languages, which may indicate that they are hard to produce or to perceive. 
 
-#but this one is! What a mystery...
-aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$age.exact,trnsc$type),mean)->pwcm_att
-colnames(pwcm_att)<-c("ID","Age","Length","Word")
+Setting monosyllables aside, we observe the typical pattern of decreased accuracy for longer items, although this is particularly salient for the whole word scoring. This is the most commonly reported type of score, but it is also the least forgiving. The pattern is less marked when other two scores are used, which are less sensitive to errors.
 
-myx=as.numeric(as.factor(pwcm_att$ID))/100+as.numeric(as.factor(pwcm_att$Length))
 
-plot(pwcm_att$Word~myx,pch=20,cex=2,lty=3,xlab="",xaxt="n",ylab="NWR scores (%)")
-axis(1,at=1:length(levels(factor(pwcm_att$Length))),labels=levels(factor(pwcm_att$Length)))
-
+```{r tablength}
+mytab=NULL
+for(myvar in c("Word","Phoneme","NLD")){
+  mytab=cbind(mytab,
+              paste0(round(aggregate(by_length[,myvar],by=list(by_length$Length),mean)$x),
+              " (",round(aggregate(by_length[,myvar],by=list(by_length$Length),sd)$x),")"))
+}
+rownames(mytab)<-levels(by_length$Length)
+colnames(mytab)<-c("Word","Phoneme","NLD")
+apa_table(mytab,caption="NWR scores measured in whole word accuracy, phoneme-based accuracy, and normalized Levenshtein Distance, separately for the four stimuli lengths.")
 ```
 
 

@@ -1,7 +1,7 @@
 \PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
 \PassOptionsToPackage{hyphens}{url}
 %
-\documentclass[english,,man]{apa6}
+\documentclass[english,,man,floatsintext]{apa6}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
@@ -101,12 +101,6 @@
 
 Correspondence concerning this article should be addressed to Alejandrina Cristia, 29, rue d’Ulm, 75005 Paris, France. E-mail: alecristia@gmail.com}
 \keywords{phonology, non-word repetition, development\newline\indent Word count: ~xxx words}
-\DeclareDelayedFloatFlavor{ThreePartTable}{table}
-\DeclareDelayedFloatFlavor{lltable}{table}
-\DeclareDelayedFloatFlavor*{longtable}{table}
-\makeatletter
-\renewcommand{\efloat@iwrite}[1]{\immediate\expandafter\protected@write\csname efloat@post#1\endcsname{}}
-\makeatother
 \usepackage{lineno}
 
 \linenumbers
@@ -136,11 +130,13 @@ ADD
 \begin{itemize}
 \tightlist
 \item
-  fix yaml
+  add table r/d by stim length \& age
 \item
-  add ana based on phonemes \& expand on levenshtein
+  add table with stimuli
 \item
-  add ana based on number of characters
+  ask Middy about consent, correct, accuracy
+\item
+  double check demo: exact age missing: 78, 82, 83, 115, 119; rough age missing 78, there's a mixture of BGMF in sex, first born is missing, round age
 \item
   add summary of types of error: \%semantic, \%deletion (which sounds?) \%subst (which are the most common sounds)
 \item
@@ -366,20 +362,22 @@ A total 55 children were tested, from 34 of families, in five hamlets. Some chil
 \caption{(\#fig:Fig1-first\_vs\_others)NWR scores for individual participants averaging separately their first attempts and all other attempts.}
 \end{figure}
 
-We first checked whether accuracy varies between first and subsequent presentations of an item by averaging word-level accuracy at the participant level separately for first attempts and subsequent repetitions. As shown in Figure 1, participants' mean word-level accuracy became more heterogeneous in subsequent repetitions. Surprisingly, subsequent repetitions (M = 42, SD = 28)
+We first checked whether accuracy varies between first and subsequent presentations of an item by averaging word-level accuracy at the participant level separately for first attempts and subsequent repetitions. We excluded 5 children who did not have data for one of these two types. As shown in Figure 1, participants' mean word-level accuracy became more heterogeneous in subsequent repetitions. Surprisingly, subsequent repetitions (M = 42, SD = 28)
 were on average less accurate than first ones (M = 64, SD = 15), t(36) = 5.32, p = 0. Given the uncertainty in whether previous work used only the first or all repetitions, and since behavior degraded and became more heterogeneous in subsequent repetitions, the rest of the analyses focus on only the first repetitions.
 
 \hypertarget{overall-repetition-accuracy}{%
 \subsubsection{Overall repetition accuracy}\label{overall-repetition-accuracy}}
 
-Taking into account only the first attempts, the overall repetition accuracy measured in whole words is 72\% based on the online coding (i.e., whether the native experimenter asked for the target to be re-played), and 65\% when the offline coding is considered. On average, the phoneme-based normalized Levenshtein distance was 22\%, meaning that about 20\% of phonemes were substituted, inserted, or deleted.
+Taking into account only the first attempts, we averaged attempts by each of the 37 children who had data for first attempts; their ages ranged from 3.92 to 12.86 (M = 7.10, SD = 1.90).
 
-ADD GRAPH WITH PHONEME BASED IN Y AND WORD BASED IN X
+The overall NWR score was M = 64\% (SD = 15\%). Scores based on phonemes are even higher M = 78\% (SD = 9\%). The phoneme-based normalized Levenshtein distance was M = 22\% (SD = 9\%), meaning that about a fifth of phonemes were were substituted, inserted, or deleted. Notice that the normalized Levenshtein distance is the complement of phoneme-based scores.
 
 \hypertarget{accuracy-a-function-of-item-complexity}{%
 \subsubsection{Accuracy a function of item complexity}\label{accuracy-a-function-of-item-complexity}}
 
-We then inspected whether accuracy varied as a function of word length.
+We then inspected whether accuracy varied as a function of word length. Results are shown on table XX. This table shows that monosyllables accuracy was much lower than other lengths. This is likely due to the fact that the majority of monosyllables included were chosen because they had sounds that are rare in the world's languages, which may indicate that they are hard to produce or to perceive.
+
+Setting monosyllables aside, we observe the typical pattern of decreased accuracy for longer items, although this is particularly salient for the whole word scoring. This is the most commonly reported type of score, but it is also the least forgiving. The pattern is less marked when other two scores are used, which are less sensitive to errors.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
