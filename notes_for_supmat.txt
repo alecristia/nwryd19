@@ -1,0 +1,51 @@
+
+# Explanation for column names
+
+"target"           identity of the target word
+"id"               child id
+"tokid"            token id 
+"row"             row in coding file"annotator"        annotator initials
+"date"             date of annotation
+"token"            token id
+"item"            item id
+"correct"          whether annotator thought the pronunciation was correct
+"mispronunciation" if it was not correct, what the annotator thought the child said
+"meaning"          whether the mispronunciation meant something in YD
+"comment"         further comments from annotation"file"             recording file name
+"int"              interval in praat coding
+"on"               onset of interval in original recording
+"off"             offset of interval idem"cor"              whether the non-native experimenter thought the child said the item correctly (probably not to be trusted)
+"mp"               what the non-native experimenter thought the child said (probably not to be trusted)
+"outfile"          which file the item was written out to for annotation
+"rand"            random number used for sorting"nb"               number of repetition (1 if first attempt)
+"previous"         id of previous target
+"attempt"         first if it's first attempt, subsequent otherwise
+ "rep"             True/false whether it's a repetition"cor.online"       whether the native RA asked for the item to be replayed (and thus may have been detected online as incorrect)
+"X.3"              ignore
+"included"         whether the child should be included
+"Age"             rough child age written down while testing -- ignore, corrections were done elsewhere with better age estimates"Sex"              child sex
+"birthOrder"       child birth order
+"familyID"         random family ID
+"monolingual"     whether the child is monolingual"matEd"            years of education of the mother
+"Cond"             condition the child was ran on
+"Date"            date of testing
+"Time"            approx time of testing"File"             full recording file id
+"fastcode"         whether the item was fastcoded (ignore)
+"fullcode"         whether the item was fullcoded (ignore)
+"Notes"           notes from testing"Where"            precise location of testing
+"Village"          village of testing
+"X"                ignore
+"X.1"             ignore"X.2"              ignore
+"test"             ignore
+"age.exact"       age after checks"type"             practice or by length (1-4 syllables)
+"target_ortho"     orthographic representation of the target
+"phono"            pseudophono representation of target
+"nonfluent"       TRUE if there were disfluencies in the repetition"mp_uni"           mispronunication in unicharacter pseudophonological representation
+"target_uni"       target in unicharacter pseudophonological representation
+"tarlen"           target length
+"trafos"          trafos score (comparing target_uni and mp_uni): M means character match, S=substitution, D=deletion, I=insertion "nchar"            number of characters
+"sub"              number of substitutions
+"del"              number of deletions
+"ins"             number of insertions"ld"               levenshtein distance
+"nld"              normalized distance
+"pc"   		   proportion correct; calculated as number of matches divided by max length

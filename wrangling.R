@@ -136,7 +136,7 @@ trnsc$ld=rowSums(trnsc[,c("ins","del","sub")])
 trnsc$nld=trnsc$ld/trnsc$nchar
 trnsc$nld[is.na(trnsc$nld)]<-0
 
-#proportion correct doesn't penalize Substitutions Deletions and Insertions
+#proportion correct: remove Substitutions Deletions and Insertions & count only proportion of matches
 trnsc$pc=nchar(gsub("[SDI]","",trnsc$trafos))/trnsc$nchar
 trnsc$pc[is.na(trnsc$pc)]<-1
 
