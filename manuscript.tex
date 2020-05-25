@@ -132,19 +132,24 @@ ADD
 \item
   add table r/d by stim length \& age
 \item
-  add table with stimuli
+  double check demo: exact age missing: 78, 82, 83, 115, 119; rough age missing 78, there's a mixture of BGMF in sex, first born is missing, round age
+\item
+  discussion
+\end{itemize}
+
+\hypertarget{todo-later}{%
+\subsection{TODO later}\label{todo-later}}
+
+\begin{itemize}
+\tightlist
 \item
   ask Middy about consent, correct, accuracy
 \item
-  double check demo: exact age missing: 78, 82, 83, 115, 119; rough age missing 78, there's a mixture of BGMF in sex, first born is missing, round age
+  ask Middy to look through
 \item
-  add summary of types of error: \%semantic, \%deletion (which sounds?) \%subst (which are the most common sounds)
+  probably turn summary of types of error into a table; use proportion of correctly produced rather than number; use first attempts rather than the whole data set
 \item
   maybe add to the last ana the prevalence (ie out of all the gh which proportion get transformed)
-\item
-  add analysis on the basis of demo chars
-\item
-  discussion
 \end{itemize}
 
 \hypertarget{introduction}{%
@@ -224,7 +229,7 @@ We sought to address the following questions:
   Is variation attributable to child age, sex, birth order, monolingual status, and/or parental education?
 \end{itemize}
 
-In view of the hypothesis-driven nature of this work, we considered boosting the interpretational value of this evidence by announcing our analysis plans prior to conducting them. However, we realized that even pre-registering an analysis would be equivocal because we do not have enough power to look at all relationships of interest, and often to detect any of the known effects. For instance, an effect of stimulus length and age has been reported as significant sometimes, but Tables XX and XX show that even these effects can be quite small (data from Cristia, Farabolini, Scaff, Havron, \& Stieglitz, 2020). \textbf{add table with r/ds from previous work})
+In view of the hypothesis-driven nature of this work, we had considered boosting the interpretational value of this evidence by announcing our analysis plans prior to conducting them. However, we realized that even pre-registering an analysis would be equivocal because we do not have enough power to look at all relationships of interest, and often to detect any of the known effects. For instance, an effect of stimulus length and age has been reported as significant sometimes, but Tables XX and XX show that even these effects can be quite small (data from Cristia, Farabolini, Scaff, Havron, \& Stieglitz, 2020). \textbf{add table with r/ds from previous work})
 Moreover, by virtue of this being a language-specific study, it is unclear that our method (including saliently the items we used) is comparable in precision to previous NWR studies. Therefore, all analyses here are descriptive and should be considered exploratory.
 
 \begin{figure}
@@ -243,64 +248,134 @@ Many NWR studies are based on a fixed list of 12-16 items that vary in length be
 
 A first list of candidate items was generated in 2018 by selecting simple consonants (\enquote{p}, \enquote{t}, \enquote{d}, \enquote{k}, \enquote{m}, \enquote{n}, \enquote{w}, \enquote{y}) and vowels (\enquote{i}, \enquote{o},\enquote{u}, \enquote{a},\enquote{e}) that were combined into consonant-vowel syllables, further sampling the space of 1- to 4-syllable sequences. These candidates were automatically checked against Levinson's 2015 dictionary and removed from consideration if they appeared in the dictionary. The second author presented them orally to three local research assistants, who were asked to repeat them and further say whether they were real words. Any item for which two or more of the assistants reported them having a meaning or some form of association was excluded.
 
-A second list of candidate items was generated in 2019 by selecting complex consonants and systematically crossing them with all the vowels in the Yélî inventory to produce consonant-vowel monosyllables. As before, items were automatically excluded if they appeared in the dictionary. Additionally, since hearing vowel length in monosyllables in isolation is challenging, any item that had a short/long real word neighbor was filtered out. Since the phonology and phonetics of Yélî is still in the process of being described (CITE {\textbf{???}} please fill in), there could have been undocumented constraints that rendered items illegal. Therefore, we made sure that the precise consonant-vowel sequence occurred in some real word in the dictionary (i.e., that there was a longer word included the monosyllable as a subsequence). These candidates were presented to one informant, for a final check that they did not mean anything. Together with the 2018 selection, they were recorded using a headset \textbf{XXX ({\textbf{???}}) please fill in} and an Olympus \textbf{XXX ({\textbf{???}}) please fill in} from the written form presented together with the same item orally (by the second author). The complete recorded list was finally presented to two more informants, who could repeat all the items and who confirmed there were no real words. Even so, there was one monosyllable that was often identified as a real word (intended \enquote{yî} /yXX/; identified as \enquote{yi} /yi/, \emph{tree}). This item is removed from analyses.
+A second list of candidate items was generated in 2019 by selecting complex consonants and systematically crossing them with all the vowels in the Yélî inventory to produce consonant-vowel monosyllables. As before, items were automatically excluded if they appeared in the dictionary. Additionally, since hearing vowel length in monosyllables in isolation is challenging, any item that had a short/long real word neighbor was filtered out. Since the phonology and phonetics of Yélî is still in the process of being described (CITE {\textbf{???}} please fill in), there could have been undocumented constraints that rendered items illegal. Therefore, we made sure that the precise consonant-vowel sequence occurred in some real word in the dictionary (i.e., that there was a longer word included the monosyllable as a subsequence). These candidates were presented to one informant, for a final check that they did not mean anything. Together with the 2018 selection, they were recorded using a headset \textbf{XXX ({\textbf{???}}) please fill in} and an Olympus \textbf{XXX ({\textbf{???}}) please fill in} from the written form presented together with the same item orally (by the second author). The complete recorded list was finally presented to two more informants, who could repeat all the items and who confirmed there were no real words. Even so, there was one monosyllable that was often identified as a real word (intended \enquote{yî} /yXX/; identified as \enquote{yi} /yi/, \emph{tree}). This item is removed from analyses below.
 
-\textbf{({\textbf{???}}) can you please add the IPA in // for all of the items in the table?}
+\textbf{({\textbf{???}}) can you please add the IPA in // for all of the items in the excel then save as tsv?}
 The final list is composed of three practice items; 20 monoysllables containing sounds that are less frequent in the world's languages than singleton plosives; 8 bisyllables; 12 trisyllables; and 4 quadrisyllables (see Table 2).
 
-Practice
-wî, poni, nopimade
+\begin{verbatim}
+##        Type Orthographic Phonological Type Orthographic Phonological Type
+## 28 practice     nopimade           NA    1         dp:a           NA    2
+## 32 practice        poni            NA    1          dpa           NA    2
+## 43 practice          wî            NA    1          dpâ           NA    2
+## 1      <NA>         <NA>           NA    1          dpê           NA    2
+## 2      <NA>         <NA>           NA    1         dpéé           NA    2
+## 3      <NA>         <NA>           NA    1          dpi           NA    2
+## 4      <NA>         <NA>           NA    1          dpu           NA    2
+## 5      <NA>         <NA>           NA    1        gh:ââ           NA    2
+## 6      <NA>         <NA>           NA    1         ghuu           NA <NA>
+## 7      <NA>         <NA>           NA    1        kp:ââ           NA <NA>
+## 8      <NA>         <NA>           NA    1          kpu           NA <NA>
+## 9      <NA>         <NA>           NA    1         lv:ê           NA <NA>
+## 10     <NA>         <NA>           NA    1          lva           NA <NA>
+## 11     <NA>         <NA>           NA    1          lvi           NA <NA>
+## 12     <NA>         <NA>           NA    1         t:êê           NA <NA>
+## 13     <NA>         <NA>           NA    1         tp:a           NA <NA>
+## 14     <NA>         <NA>           NA    1          tpâ           NA <NA>
+## 15     <NA>         <NA>           NA    1          tpê           NA <NA>
+##    Orthographic Phonological Type Orthographic Phonological Type Orthographic
+## 28         kamo           NA    3       dimope           NA    4     diponate
+## 32         kani           NA    3       diyeto           NA    4     nomiwake
+## 43         kipo           NA    3       meyadi           NA    4     todiwuma
+## 1          noki           NA    3       mituye           NA    4     wadikeno
+## 2          nomi           NA    3       nademo           NA <NA>         <NA>
+## 3          piwa           NA    3       nayeki           NA <NA>         <NA>
+## 4          towi           NA    3       nuyedi           NA <NA>         <NA>
+## 5          tupa           NA    3       pedumi           NA <NA>         <NA>
+## 6          <NA>           NA    3       tiwune           NA <NA>         <NA>
+## 7          <NA>           NA    3       tumowe           NA <NA>         <NA>
+## 8          <NA>           NA    3       widone           NA <NA>         <NA>
+## 9          <NA>           NA    3       wumipo           NA <NA>         <NA>
+## 10         <NA>           NA <NA>         <NA>           NA <NA>         <NA>
+## 11         <NA>           NA <NA>         <NA>           NA <NA>         <NA>
+## 12         <NA>           NA <NA>         <NA>           NA <NA>         <NA>
+## 13         <NA>           NA <NA>         <NA>           NA <NA>         <NA>
+## 14         <NA>           NA <NA>         <NA>           NA <NA>         <NA>
+## 15         <NA>           NA <NA>         <NA>           NA <NA>         <NA>
+##    Phonological
+## 28           NA
+## 32           NA
+## 43           NA
+## 1            NA
+## 2            NA
+## 3            NA
+## 4            NA
+## 5            NA
+## 6            NA
+## 7            NA
+## 8            NA
+## 9            NA
+## 10           NA
+## 11           NA
+## 12           NA
+## 13           NA
+## 14           NA
+## 15           NA
+\end{verbatim}
 
-Mono
-dpa
-dp:a
-dpâ
-dpéé
-dpê
-dpi
-dpu
-kp:ââ
-kpu
-tp:a
-tpâ
-tpê
-gh:ââ
-ghuu
-lva
-lv:ê
-lvi
-t:êê
-);
+\begin{table}[tbp]
 
-(
-kamo
-kipo
-kani
-tupa
-noki
-piwa
-towi
-nomi);
+\begin{center}
+\begin{threeparttable}
 
-(
-nademo
-meyadi
-diyeto
-widone
-nuyedi
-tumowe
-pedumi
-dimope
-tiwune
-wumipo
-nayeki
-mituye);
+\caption{\label{tab:tab2-stims}NWR stimuli in orthographic and phonological representations.}
 
-(
-todiwuma
-wadikeno
-nomiwake
-diponate).
+\begin{tabular}{ll}
+\toprule
+Orthographic & \multicolumn{1}{c}{Phonological}\\
+\midrule
+dp:a & NA\\
+dpa & NA\\
+dpâ & NA\\
+dpê & NA\\
+dpéé & NA\\
+dpi & NA\\
+dpu & NA\\
+gh:ââ & NA\\
+ghuu & NA\\
+kp:ââ & NA\\
+kpu & NA\\
+lv:ê & NA\\
+lva & NA\\
+lvi & NA\\
+t:êê & NA\\
+tp:a & NA\\
+tpâ & NA\\
+tpê & NA\\
+kamo & NA\\
+kani & NA\\
+kipo & NA\\
+noki & NA\\
+nomi & NA\\
+piwa & NA\\
+towi & NA\\
+tupa & NA\\
+dimope & NA\\
+diyeto & NA\\
+meyadi & NA\\
+mituye & NA\\
+nademo & NA\\
+nayeki & NA\\
+nuyedi & NA\\
+pedumi & NA\\
+tiwune & NA\\
+tumowe & NA\\
+widone & NA\\
+wumipo & NA\\
+diponate & NA\\
+nomiwake & NA\\
+todiwuma & NA\\
+wadikeno & NA\\
+nopimade & NA\\
+poni & NA\\
+wî & NA\\
+\bottomrule
+\end{tabular}
+
+\end{threeparttable}
+\end{center}
+
+\end{table}
 
 A Praat script was written to randomize this list 20 times, and split it into two sublists, to generate 40 different elicitation sets. The 40 elicitation sets are available online from \url{https://osf.io/5qspb}. The split had the following constraints:
 
@@ -332,14 +407,12 @@ Whenever siblings from the same family were tested, an attempt was made to test 
 \hypertarget{coding}{%
 \subsubsection{Coding}\label{coding}}
 
-The local informant asked for the item to be repeated when she thought the repetition was not correct. We will call this \emph{online scoring}, and it reflects a wholesale impression of whether the item was correctly or incorrectly repeated.
-
-We sought additional information by asking a local informant to listen through each child production, paired with the auditory target the child had been provided with, and make a judgment of whether the item was correctly or incorrectly repeated. We additionally asked her to transcribe exactly what the child said, providing some examples of the types of errors children in general make (without making specific reference to Yélî sounds or the items in the elicitation sets). This \emph{offline scoring} provides both accuracy and qualitative desciptions of what the child said that are likely more reliable than those of the non-native coder.
+A script was written to randomize all tokens from all children, pairing each with the auditory target the child had been provided with. A native research assistant then listened through all productions of a given target (randomized across children and repetition order), and made a judgment of whether the item was correctly or incorrectly repeated. She additionally transcribed exactly what the child said, providing some examples of the types of errors children in general make (without making specific reference to Yélî sounds or the items in the elicitation sets).
 
 \hypertarget{analyses}{%
 \subsubsection{Analyses}\label{analyses}}
 
-For NWR accuracy, we considered separately the child's first and subsequent attempts. These were scored as correct or incorrect on the fly depending on whether the native experimenter asked for the item to be repeated; as well as offline. Some NWR studies employ phoneme-based accuracy in addition to or instead of word-level accuracy (e.g., Cristia et al., 2020). We calculated accuracy as the number of phonemes that could be aligned across the target and attempt, divided by the number of phonemes of whichever item was longer (the target or the attempt). Although previous work does not use distance metrics, we additionally report those.
+Some NWR studies employ phoneme-based scoring in addition to or instead of word-level accuracy (e.g., Cristia et al., 2020). We scored items in terms of the number of phonemes that could be aligned across the target and attempt, divided by the number of phonemes of whichever item was longer (the target or the attempt). Although previous work does not use distance metrics, we additionally report those.
 
 Finally, for describing children's patterns of errors, all repetitions of a given target were taken into account. We describe the proportion of items where the change resulted in a real word (semantic errors); and classify the most common phonological errors.
 
@@ -368,16 +441,79 @@ were on average less accurate than first ones (M = 64, SD = 15), t(36) = 5.32, p
 \hypertarget{overall-repetition-accuracy}{%
 \subsubsection{Overall repetition accuracy}\label{overall-repetition-accuracy}}
 
-Taking into account only the first attempts, we averaged attempts by each of the 37 children who had data for first attempts; their ages ranged from 3.92 to 12.86 (M = 7.10, SD = 1.90).
+Taking into account only the first attempts, we averaged attempts by each of the 24 children who had data for first attempts; their ages ranged from 3.92 to 10.20 (M = 6.50, SD = 1.50).
 
-The overall NWR score was M = 64\% (SD = 15\%). Scores based on phonemes are even higher M = 78\% (SD = 9\%). The phoneme-based normalized Levenshtein distance was M = 22\% (SD = 9\%), meaning that about a fifth of phonemes were were substituted, inserted, or deleted. Notice that the normalized Levenshtein distance is the complement of phoneme-based scores.
+The overall NWR score was M = 60\% (SD = 14\%). Scores based on phonemes are even higher M = 76\% (SD = 9\%). The phoneme-based normalized Levenshtein distance was M = 24\% (SD = 9\%), meaning that about a fifth of phonemes were were substituted, inserted, or deleted. Notice that the normalized Levenshtein distance is the complement of phoneme-based scores.
 
-\hypertarget{accuracy-a-function-of-item-complexity}{%
-\subsubsection{Accuracy a function of item complexity}\label{accuracy-a-function-of-item-complexity}}
+\hypertarget{accuracy-a-function-of-item-length}{%
+\subsubsection{Accuracy a function of item length}\label{accuracy-a-function-of-item-length}}
 
 We then inspected whether accuracy varied as a function of word length. Results are shown on table XX. This table shows that monosyllables accuracy was much lower than other lengths. This is likely due to the fact that the majority of monosyllables included were chosen because they had sounds that are rare in the world's languages, which may indicate that they are hard to produce or to perceive.
 
 Setting monosyllables aside, we observe the typical pattern of decreased accuracy for longer items, although this is particularly salient for the whole word scoring. This is the most commonly reported type of score, but it is also the least forgiving. The pattern is less marked when other two scores are used, which are less sensitive to errors.
+
+\begin{table}[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:tablength}NWR scores measured in whole word accuracy, phoneme-based accuracy, and normalized Levenshtein Distance, separately for the four stimuli lengths.}
+
+\begin{tabular}{lll}
+\toprule
+Word & \multicolumn{1}{c}{Phoneme} & \multicolumn{1}{c}{NLD}\\
+\midrule
+48 (21) & 60 (16) & 40 (16)\\
+80 (24) & 93 (10) & 7 (10)\\
+78 (21) & 94 (7) & 6 (7)\\
+66 (31) & 83 (19) & 17 (19)\\
+\bottomrule
+\end{tabular}
+
+\end{threeparttable}
+\end{center}
+
+\end{table}
+
+\hypertarget{patterns-of-errors}{%
+\subsubsection{Patterns of errors}\label{patterns-of-errors}}
+
+\begin{itemize}
+\tightlist
+\item
+  How frequent are errors that result in real words? Is that a function of item complexity? What are some common patterns of phonological errors?
+\end{itemize}
+
+We investigated patterns of deletion and substitution. Deletions were relatively rare, with only 28 vowels deleted, and 8 consonants.
+
+As for substitutions, it was as common for a nasal vowel to be produced as an oral vowel as vice versa (54 oral target vowels produced as nasal vowels, 58 nasal target vowels produced as oral vowels). Substitutions in which the oral nature was preserved but the quality of the vowel was changed were a great deal more common than changes in quality among nasal vowels (202 oral vowels produced with a different quality; 23 nasal vowels produced with a different quality). As for consonants, asymmetries were very marked with more complex consonants (specifically dptpkpkmknmbgh) mispronounced as simple ones (specifically mnlwyvdgptkfhch, 251) than vice versa (2). Simple consonants were mispronounced as other simple consonants quite frequently (135 simple consonants mispronounced as other simple ones, compared to 58 complex ones).
+
+\textbf{probably turn this into a table; use proportion of correctly produced rather than number; use first attempts rather than the whole data set}
+
+Finally, we looked into the frequency with which mispronunciations resulted in real words. Nearly all of them were: 96\%.
+
+** this is higher than any previous report! can we be sure of it?**
+
+\hypertarget{factor-structuring-individual-variation}{%
+\subsubsection{Factor structuring individual variation}\label{factor-structuring-individual-variation}}
+
+\begin{figure}
+\centering
+\includegraphics{manuscript_files/figure-latex/Fig2-scores by age-1.pdf}
+\caption{(\#fig:Fig2-scores by age)NWR whole-word scores for individual participants as a function of age and sex (blue = boys, pink = girls).}
+\end{figure}
+
+Our final exploratory analysis assessed whether variation in scores was structured by factors that vary across individuals. As shown in Figure 2, there was a greater deal of variance in earlier than later ages, with significantly higher NWR scores for older children (Spearman's rank correlation, given inequality of variance, rho (1,535.50) = 0.33, p = 0.11). In contrast, there was no clear association between NWR scores, on the one hand, and sex (t (0.33) = 20.09, p = 0.75), birth order (2,595.77) = -0.13, p = 0.55) or maternal education (2,038.91) = 0.11, p = 0.60)
+
+\hypertarget{discussion}{%
+\subsection{Discussion}\label{discussion}}
+
+\begin{itemize}
+\item
+  What is the overall repetition accuracy (whole word, phoneme based, distance)?
+\item
+  How does this change as a function of item complexity (number of syllables, sound complexity)?
+\end{itemize}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -393,28 +529,25 @@ Setting monosyllables aside, we observe the typical pattern of decreased accurac
 
 \textbf{(MC: but we can try and do a cursory analysis based on the corpora we have from Steve and my transcription of naturalistic interactions!)}
 
-\hypertarget{patterns-of-errors}{%
-\subsubsection{Patterns of errors}\label{patterns-of-errors}}
-
 \begin{itemize}
 \tightlist
 \item
-  How frequent are errors that result in real words? Is that a function of item complexity? What are some common patterns of phonological errors?
+  How frequent are errors that result in real words? Is that a function of item complexity?
+\item
+  Is individual variation explainable by child age, sex, birth order, monolingual status, and/or parental education?
 \end{itemize}
-
-\hypertarget{factor-structuring-individual-variation}{%
-\subsubsection{Factor structuring individual variation}\label{factor-structuring-individual-variation}}
-
-explainable by child age, sex, birth order, monolingual status, and/or parental education?
-3. Children's accuracy increases with child age.
-4. Non-monolingual Yélî children are less accurate than monolingual ones when tested on the society-dominant language (we did not test any non-dominant language)
-5. As revious NWR evidence on this is mixed, but general findings on language development suggest that children whose mothers are more educated are more accurate than children whose mothers are less educated.
-6. To our knowledge, there is no previous NWR work on this, but other research suggests that first-born children should outperform later-born children
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{3}
-\tightlist
+\setcounter{enumi}{2}
+\item
+  Children's accuracy increases with child age.
+\item
+  Non-monolingual Yélî children are less accurate than monolingual ones when tested on the society-dominant language (we did not test any non-dominant language)
+\item
+  As revious NWR evidence on this is mixed, but general findings on language development suggest that children whose mothers are more educated are more accurate than children whose mothers are less educated.
+\item
+  To our knowledge, there is no previous NWR work on this, but other research suggests that first-born children should outperform later-born children
 \item
   Anecdotally Yélî children grow up in close-knitted communities and thus may receive significant portions of their language input from people not in their nuclear family
   (or at least from people other than their mothers, who tend to be the non-native speakers). If so, the difference between monolinguals and not monolinguals may be smaller than that found in other work
@@ -425,21 +558,6 @@ explainable by child age, sex, birth order, monolingual status, and/or parental 
 \item
   One main causal path between birth order and language development is via parental input (CITE). Given our arguments above for how mothers may not be as important among Rossel people than in other places, then the performance gap between first borns and later borns may be smaller.
 \end{enumerate}
-
-\hypertarget{discussion}{%
-\subsection{Discussion}\label{discussion}}
-
-\begin{itemize}
-\tightlist
-\item
-  What is the overall repetition accuracy (whole word, phoneme based, distance)?
-\item
-  How does this change as a function of item complexity (number of syllables, sound complexity)?
-\item
-  How frequent are errors that result in real words? Is that a function of item complexity?
-\item
-  Is individual variation explainable by child age, sex, birth order, monolingual status, and/or parental education?
-\end{itemize}
 
 \newpage
 

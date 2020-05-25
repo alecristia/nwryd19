@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.29)  20 MAY 2020 10:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.29)  25 MAY 2020 19:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1193,59 +1193,191 @@ LaTeX Font Info:    Try loading font information for TS1+lmr on input line 133.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [3] [4] [5] [6]
-<manuscript_files/figure-latex/prevlit-fig-1.pdf, id=130, 551.05875pt x 374.398
+<manuscript_files/figure-latex/prevlit-fig-1.pdf, id=135, 551.05875pt x 374.398
 74pt>
 File: manuscript_files/figure-latex/prevlit-fig-1.pdf Graphic file (type pdf)
 <use manuscript_files/figure-latex/prevlit-fig-1.pdf>
 Package pdftex.def Info: manuscript_files/figure-latex/prevlit-fig-1.pdf used o
-n input line 232.
+n input line 237.
 (pdftex.def)             Requested size: 469.77272pt x 319.17163pt.
+[7 <./manuscript_files/figure-latex/prevlit-fig-1.pdf>] [8]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 256.
 
-Underfull \vbox (badness 2057) has occurred while \output is active []
-
-[7 <./manuscript_files/figure-latex/prevlit-fig-1.pdf>]
+(/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
 Underfull \vbox (badness 4752) has occurred while \output is active []
 
-[8] [9] [10] [11] [12]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 351.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 351.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 351.
+[9]
+Overfull \hbox (24.24522pt too wide) in paragraph at lines 314--314
+[]\T1/lmtt/m/n/12 ##    Orthographic Phonological Type Orthographic Phonologica
+l Type Orthographic[] 
+ []
 
-<manuscript_files/figure-latex/Fig1-first_vs_others-1.pdf, id=173, 332.24126pt 
+
+Overfull \hbox (24.24522pt too wide) in paragraph at lines 314--314
+[]\T1/lmtt/m/n/12 ## 28         kamo           NA    3       dimope           N
+A    4     diponate[] 
+ []
+
+
+Overfull \hbox (24.24522pt too wide) in paragraph at lines 314--314
+[]\T1/lmtt/m/n/12 ## 32         kani           NA    3       diyeto           N
+A    4     nomiwake[] 
+ []
+
+
+Overfull \hbox (24.24522pt too wide) in paragraph at lines 314--314
+[]\T1/lmtt/m/n/12 ## 43         kipo           NA    3       meyadi           N
+A    4     todiwuma[] 
+ []
+
+
+Overfull \hbox (24.24522pt too wide) in paragraph at lines 314--314
+[]\T1/lmtt/m/n/12 ## 1          noki           NA    3       mituye           N
+A    4     wadikeno[] 
+ []
+
+
+Overfull \hbox (24.24522pt too wide) in paragraph at lines 314--314
+[]\T1/lmtt/m/n/12 ## 2          nomi           NA    3       nademo           N
+A <NA>         <NA>[] 
+ []
+
+
+Overfull \hbox (24.24522pt too wide) in paragraph at lines 314--314
+[]\T1/lmtt/m/n/12 ## 3          piwa           NA    3       nayeki           N
+A <NA>         <NA>[] 
+ []
+
+
+Overfull \hbox (24.24522pt too wide) in paragraph at lines 314--314
+[]\T1/lmtt/m/n/12 ## 4          towi           NA    3       nuyedi           N
+A <NA>         <NA>[] 
+ []
+
+
+Overfull \hbox (24.24522pt too wide) in paragraph at lines 314--314
+[]\T1/lmtt/m/n/12 ## 5          tupa           NA    3       pedumi           N
+A <NA>         <NA>[] 
+ []
+
+
+Overfull \hbox (24.23822pt too wide) in paragraph at lines 314--314
+[]\T1/lmtt/m/n/12 ## 6          <NA>           NA    3       tiwune           N
+A <NA>         <NA>[] 
+ []
+
+
+Overfull \hbox (24.24522pt too wide) in paragraph at lines 314--314
+[]\T1/lmtt/m/n/12 ## 7          <NA>           NA    3       tumowe           N
+A <NA>         <NA>[] 
+ []
+
+
+Overfull \hbox (24.24522pt too wide) in paragraph at lines 314--314
+[]\T1/lmtt/m/n/12 ## 8          <NA>           NA    3       widone           N
+A <NA>         <NA>[] 
+ []
+
+
+Overfull \hbox (24.23822pt too wide) in paragraph at lines 314--314
+[]\T1/lmtt/m/n/12 ## 9          <NA>           NA    3       wumipo           N
+A <NA>         <NA>[] 
+ []
+
+
+Overfull \hbox (24.24522pt too wide) in paragraph at lines 314--314
+[]\T1/lmtt/m/n/12 ## 10         <NA>           NA <NA>         <NA>           N
+A <NA>         <NA>[] 
+ []
+
+
+Overfull \hbox (24.24522pt too wide) in paragraph at lines 314--314
+[]\T1/lmtt/m/n/12 ## 11         <NA>           NA <NA>         <NA>           N
+A <NA>         <NA>[] 
+ []
+
+
+Overfull \hbox (24.24522pt too wide) in paragraph at lines 314--314
+[]\T1/lmtt/m/n/12 ## 12         <NA>           NA <NA>         <NA>           N
+A <NA>         <NA>[] 
+ []
+
+
+Overfull \hbox (24.24522pt too wide) in paragraph at lines 314--314
+[]\T1/lmtt/m/n/12 ## 13         <NA>           NA <NA>         <NA>           N
+A <NA>         <NA>[] 
+ []
+
+
+Overfull \hbox (24.24522pt too wide) in paragraph at lines 314--314
+[]\T1/lmtt/m/n/12 ## 14         <NA>           NA <NA>         <NA>           N
+A <NA>         <NA>[] 
+ []
+
+
+Overfull \hbox (24.24522pt too wide) in paragraph at lines 314--314
+[]\T1/lmtt/m/n/12 ## 15         <NA>           NA <NA>         <NA>           N
+A <NA>         <NA>[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[10]
+
+LaTeX Warning: Float too large for page by 564.22585pt on input line 378.
+
+
+Underfull \vbox (badness 4752) has occurred while \output is active []
+
+[11] [12] [13]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[14]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 424.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 424.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 424.
+[15]
+<manuscript_files/figure-latex/Fig1-first_vs_others-1.pdf, id=194, 332.24126pt 
 x 255.95625pt>
 File: manuscript_files/figure-latex/Fig1-first_vs_others-1.pdf Graphic file (ty
 pe pdf)
 <use manuscript_files/figure-latex/Fig1-first_vs_others-1.pdf>
 Package pdftex.def Info: manuscript_files/figure-latex/Fig1-first_vs_others-1.p
-df used on input line 361.
+df used on input line 434.
 (pdftex.def)             Requested size: 332.24043pt x 255.95561pt.
-
-Underfull \vbox (badness 2512) has occurred while \output is active []
-
-[13]
-Underfull \vbox (badness 1292) has occurred while \output is active []
-
-[14 <./manuscript_files/figure-latex/Fig1-first_vs_others-1.pdf>] [15] [16] [17
-] [18] [19] AED endfloat: Processing end Figures and Tables [20]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 515.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 515.
+[16 <./manuscript_files/figure-latex/Fig1-first_vs_others-1.pdf>] [17] [18]
+<manuscript_files/figure-latex/Fig2-scores by age-1.pdf, id=225, 332.24126pt x 
+288.07625pt>
+File: manuscript_files/figure-latex/Fig2-scores by age-1.pdf Graphic file (type
+ pdf)
+<use manuscript_files/figure-latex/Fig2-scores by age-1.pdf>
+Package pdftex.def Info: manuscript_files/figure-latex/Fig2-scores by age-1.pdf
+ used on input line 502.
+(pdftex.def)             Requested size: 332.25056pt x 288.08432pt.
+[19 <./manuscript_files/figure-latex/Fig2-scores by age-1.pdf>] [20] [21] [22] 
+[23] [24] AED endfloat: Processing end Figures and Tables [25]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 633.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 633.
 (./manuscript.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 515.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 515.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 633.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 633.
 Package rerunfilecheck Info: File `manuscript.out' has not changed.
-(rerunfilecheck)             Checksum: 5825353FEC88A0AE774E2727F3FDB2B9;3985.
+(rerunfilecheck)             Checksum: 67903BD47993FB21E3B030F4066D6450;4079.
  ) 
 Here is how much of TeX's memory you used:
- 16282 strings out of 492995
- 239986 string characters out of 6132703
- 357130 words of memory out of 5000000
- 19371 multiletter control sequences out of 15000+600000
- 80802 words of font info for 113 fonts, out of 8000000 for 9000
+ 16354 strings out of 492995
+ 241227 string characters out of 6132703
+ 367430 words of memory out of 5000000
+ 19422 multiletter control sequences out of 15000+600000
+ 81120 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,10n,47p,2249b,494s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,10n,47p,2249b,545s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</usr/local/texlive/2017/
 texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2017/texmf-dist
@@ -1253,11 +1385,12 @@ texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2017/texmf-dist
 1/public/lm/lmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm
 /lmr7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb></
 usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/
-texlive/2017/texmf-dist/fonts/type1/public/lm/lmss8.pfb>
-Output written on manuscript.pdf (20 pages, 226494 bytes).
+texlive/2017/texmf-dist/fonts/type1/public/lm/lmss8.pfb></usr/local/texlive/201
+7/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
+Output written on manuscript.pdf (25 pages, 261956 bytes).
 PDF statistics:
- 308 PDF objects out of 1000 (max. 8388607)
- 270 compressed objects within 3 object streams
- 95 named destinations out of 1000 (max. 500000)
- 10427 words of extra memory for PDF output out of 12000 (max. 10000000)
+ 360 PDF objects out of 1000 (max. 8388607)
+ 312 compressed objects within 4 object streams
+ 111 named destinations out of 1000 (max. 500000)
+ 10440 words of extra memory for PDF output out of 12000 (max. 10000000)
 
