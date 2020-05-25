@@ -122,7 +122,7 @@ correspondances=matrix( #list correspondances always by pairs, orthography then 
 - add table with stimuli
 - ask Middy about consent, correct, accuracy
 - double check demo: exact age missing: 78, 82, 83, 115, 119; rough age missing 78, there's a mixture of BGMF in sex, first born is missing, round age
-- add summary of types of error: %semantic, %deletion (which sounds?) %subst (which are the most common sounds) 
+- probably turn summary of types of error: into a table; use proportion of correctly produced rather than number; use first attempts rather than the whole data set
 - maybe add to the last ana the prevalence (ie out of all the gh which proportion get transformed)
 - add analysis on the basis of demo chars
 - discussion
@@ -182,7 +182,7 @@ We sought to address the following questions:
 
 
 
-In view of the hypothesis-driven nature of this work, we considered boosting the interpretational value of this evidence by announcing our analysis plans prior to conducting them. However, we realized that even pre-registering an analysis would be equivocal because we do not have enough power to look at all relationships of interest, and often to detect any of the known effects. For instance, an effect of stimulus length and age has been reported as significant sometimes, but Tables XX and XX show that even these effects can be quite small [data from @cristia2020infant]. **add table with r/ds from previous work**)
+In view of the hypothesis-driven nature of this work, we had considered boosting the interpretational value of this evidence by announcing our analysis plans prior to conducting them. However, we realized that even pre-registering an analysis would be equivocal because we do not have enough power to look at all relationships of interest, and often to detect any of the known effects. For instance, an effect of stimulus length and age has been reported as significant sometimes, but Tables XX and XX show that even these effects can be quite small [data from @cristia2020infant]. **add table with r/ds from previous work**)
 Moreover, by virtue of this being a language-specific study, it is unclear that our method (including saliently the items we used) is comparable in precision to previous NWR studies. Therefore, all analyses here are descriptive and should be considered exploratory.
 
 
@@ -409,7 +409,7 @@ Taking into account only the first attempts, we averaged attempts by each of the
 
 The overall NWR score was M = `r round(mean(overall$Word))`% (SD = `r round(sd(overall$Word))`%). Scores based on phonemes are even higher  M = `r round(mean(overall$Phoneme))`% (SD = `r round(sd(overall$Phoneme))`%). The phoneme-based normalized Levenshtein distance was  M = `r round(mean(overall$NLD))`% (SD = `r round(sd(overall$NLD))`%), meaning that about a fifth of phonemes were were substituted, inserted, or deleted. Notice that the normalized Levenshtein distance is the complement of phoneme-based scores.
 
-### Accuracy a function of item complexity 
+### Accuracy a function of item length 
 
 ```{r bylength}
 aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$age.exact,trnsc$type),mean)->by_length
@@ -440,6 +440,58 @@ apa_table(mytab,caption="NWR scores measured in whole word accuracy, phoneme-bas
 
 
 
+
+### Patterns of errors
+- How frequent are errors that result in real words? Is that a function of item complexity? What are some common patterns of phonological errors?
+
+
+```{r diffic,echo=F}
+nasalVs=c(":a", ":â" ,":ê", ":i" ,":o")
+oralVs=c("a", "â","e",  "é" ,"ê", "i","î" ,"o","ó","u")
+simplexCs=c("m","n","l","w","y","v","d","g","p","t","k","f","h","ch")
+complexCs=c("dp","tp","kp","km","kn","mb","gh")
+
+allVC=c(nasalVs,oralVs,simplexCs,complexCs)
+
+
+read.table("substitution_bank.txt",header=T)->sub_bank
+colnames(sub_bank)<-c("target","realization")
+sub_bank$target=factor(sub_bank$target,levels=allVC)
+sub_bank$realization=factor(sub_bank$realization,levels=allVC)
+
+sub_tab=table(sub_bank)[allVC,allVC]
+
+
+read.table("deletion_bank.txt",header=T)->del_bank
+colnames(del_bank)<-c("target")
+del_bank$target=factor(del_bank$target,levels=allVC)
+del_tab= table(del_bank)[allVC]
+```
+
+We investigated patterns of deletion and substitution. Deletions were relatively rare, with only `r sum(del_tab[c(oralVs,nasalVs)])` vowels deleted, and `r sum(del_tab[c(simplexCs,complexCs)])` consonants. 
+
+As for substitutions, it was as common for a nasal vowel to be produced as an oral vowel as vice versa (`r sum(sub_tab[oralVs,nasalVs])` oral target vowels produced as nasal vowels, `r sum(sub_tab[nasalVs,oralVs])` nasal target vowels produced as oral vowels). Substitutions in which the oral nature was preserved but the quality of the vowel was changed were a great deal more common than changes in quality among nasal vowels (`r sum(sub_tab[oralVs,oralVs])` oral vowels produced with a different quality; `r sum(sub_tab[nasalVs,nasalVs])` nasal vowels produced with a different quality). As for consonants, asymmetries were very marked with more complex consonants (specifically `r paste0(complexCs)`) mispronounced as simple ones (specifically `r paste0(simplexCs)`, `r sum(sub_tab[complexCs,simplexCs])`) than vice versa (`r sum(sub_tab[simplexCs,complexCs])`). Simple consonants were mispronounced as other simple consonants quite frequently (`r sum(sub_tab[simplexCs,simplexCs])` simple consonants mispronounced as other simple ones, compared to `r sum(sub_tab[complexCs,complexCs])` complex ones).
+
+**probably turn this into a table; use proportion of correctly produced rather than number; use first attempts rather than the whole data set**
+
+
+Finally, we looked into the frequency with which mispronunciations resulted in real words. Nearly all of them were: `r round(sum(!is.na(trnsc$meaning))/sum(!is.na(trnsc$mispronunciation))*100)`%.
+
+** this is higher than any previous report! can we be sure of it?**
+
+
+
+### Factor structuring individual variation 
+
+explainable by child age, sex, birth order, monolingual status, and/or parental education?
+
+
+## Discussion
+
+- What is the overall repetition accuracy (whole word, phoneme based, distance)?
+
+- How does this change as a function of item complexity (number of syllables, sound complexity)?
+
 1. Children are more accurate for mono-syllables than longer items
 1. The length distribution in Yélî words is more balanced than that in English, and thus the performance decline for poly- versus mono-syllables may be less pronounced than that for English. **Check for work on European languages that may have looked into this**
 
@@ -449,14 +501,11 @@ apa_table(mytab,caption="NWR scores measured in whole word accuracy, phoneme-bas
 
 **(MC: but we can try and do a cursory analysis based on the corpora we have from Steve and my transcription of naturalistic interactions!)**
 
-### Patterns of errors
-- How frequent are errors that result in real words? Is that a function of item complexity? What are some common patterns of phonological errors?
+
+- How frequent are errors that result in real words? Is that a function of item complexity?
+- Is individual variation explainable by child age, sex, birth order, monolingual status, and/or parental education?
 
 
-
-### Factor structuring individual variation 
-
-explainable by child age, sex, birth order, monolingual status, and/or parental education?
 3. Children's accuracy increases with child age.
 4. Non-monolingual Yélî children are less accurate than monolingual ones when tested on the society-dominant language (we did not test any non-dominant language) 
 <!-- **(MC: or just because they're acquiring two phonologies and so show slightly delayed linguistic development, in parallel with vocab development stuff; we don't have data on their dominant language, but i guess we can assume it's YD for most kids---i'm sure there are exceptions!)** ac2mc I added "society-" because that's what I meant (we didn't get proportions of time in which they hear YD versus other languages); I didn't add anything about why this would come out like this or not here, but I'll add this -- although I think the evidence on that is mixed (ie no strong evidence that learning 2 phonologies sets you back)-->
@@ -475,15 +524,6 @@ explainable by child age, sex, birth order, monolingual status, and/or parental 
 6. One main causal path between birth order and language development is via parental input (CITE). Given our arguments above for how mothers may not be as important among Rossel people than in other places, then the performance gap between first borns and later borns may be smaller.
 
 
-
-
-
-## Discussion
-
-- What is the overall repetition accuracy (whole word, phoneme based, distance)?
-- How does this change as a function of item complexity (number of syllables, sound complexity)?
-- How frequent are errors that result in real words? Is that a function of item complexity?
-- Is individual variation explainable by child age, sex, birth order, monolingual status, and/or parental education?
 
 \newpage
 
