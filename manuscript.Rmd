@@ -59,6 +59,8 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE, cache = FALSE, fig.pos =
 require("papaja")
 library(kableExtra)
 library(gdata)
+library(ggplot2)
+
 correspondances=matrix( #list correspondances always by pairs, orthography then phonology
   c(
     #nasal  to unichar
@@ -118,15 +120,17 @@ correspondances=matrix( #list correspondances always by pairs, orthography then 
 
 ## TODO
 
-- add table r/d by stim length & age
 - double check demo: exact age missing: 78, 82, 83, 115, 119; rough age missing 78, there's a mixture of BGMF in sex, first born is missing, round age
-- discussion
+- add frequency of sounds in stimuli in segments.xlsx from https://phoible.org/parameters
+- then add that in stimuli to get minimum & average frequencies per stimulus
+- then add analysis of NWR as a function of frequency
+- draft discussion
 
 ## TODO Middy
 
-- look through
-- consent, "correct", "accuracy"
-- help with table 1 (phonological representation but also formatting)
+- look through for **mc**
+- consent, "correct", "accuracy", "performance"
+- help with table 1 (formatting)
 
 ## TODO later
 - probably turn summary of types of error into a table; use proportion of correctly produced rather than number; use first attempts rather than the whole data set
@@ -136,16 +140,14 @@ correspondances=matrix( #list correspondances always by pairs, orthography then 
 
 ## Introduction
 
-Although infants begin to learn about their native language's phonology within the first year, many studies suggest that in perception and production, in phonetics and phonology, their knowledge continues to develop throughout childhood [e.g., @hazan2000development]. One common task in this line of research is nonword repetition (NWR). In NWR studies, participants are presented auditorily with an item that is phonologically legal but lexically meaningless in the language children are learning. The child should immediately try to say it back without changing anything. Accuracy is thought to reflect long-term phonological knowledge (which allows the child to perceive the item accurately even though it is not a real word they have encountered before) as well as online phonological working memory (to encode the item in the interval between hearing it and saying it back) and flexible productiong patterns (to produce the item accurately even though it had never been pronounced before). 
+Although infants begin to learn about their native language's phonology within the first year, many studies suggest that in perception and production, in phonetics and phonology, their knowledge continues to develop throughout childhood [e.g., @hazan2000development]. One common task in this line of research is nonword repetition (NWR). In NWR studies, participants are presented auditorily with an item that is phonologically legal but lexically meaningless in the language children are learning. The child should immediately try to say it back without changing anything. Accuracy is thought to reflect long-term phonological knowledge (which allows the child to perceive the item accurately even though it is not a real word they have encountered before) as well as online phonological working memory (to encode the item in the interval between hearing it and saying it back) and flexible production patterns (to produce the item accurately even though it had never been pronounced before). 
 
-NWR has been used to seek answers to a variety of theoretical questions, including what are the links between phonology, working memory, and the lexicon [@bowey2001nonword], as well as for applications, notably using nwr as a diagnostic for language delays and disorders [@estes2007differences]. Since non-words can be generated in many languages, it has been used acros a wide array of languages, particularly in Europe [@meir2016disentangling,@is08042009language]. 
-
-
-In this study, we report on NWR results among children learning Yêly Dnyé, an isolate spoken in Rossel Island, PNG, with an unusually dense phonological inventory. In our implementation of NWR, we  made sure that some of the items contained typologically rare and/or  challenging sounds. MISSING: WHY DO WE DO THIS? WHAT IS THE POINT?
+NWR has been used to seek answers to a variety of theoretical questions, including what  the links between phonology, working memory, and the lexicon are [@bowey2001nonword]. It is also frequently used as for applications, notably  as a diagnostic for language delays and disorders [@estes2007differences]. Since non-words can be generated in any language, it has attracted the attention of researchers working in multilingual and linguistically diverse environments,  particularly in Europe [@meir2016disentangling;@is08042009language]. 
 
 
+In this study, we report on NWR results among children learning Yêly Dnyé, an isolate spoken in Rossel Island, PNG, with an unusually dense phonological inventory.  The present report uses these unique data to contribute to several lines of research. First, we  made sure that some of the non-word items contained typologically rare and/or  challenging sounds, so that we can contribute to the study of whether rare sounds are disadvantaged in perception and/or production, both in terms of overall accuracy of repetition and patterns of mispronunciation. Second, we look at the effects of item length, since previous NWR research has uncovered variable effects. Third, we contribute to the basic NWR literature by contributing an additional data point for children learning a rarely-studied language and culture, and further investigating whether there are structured sources that account for individual variation.
 
-### Intro to the language (@mc) - please feel free to throw away anything that is not useful!
+### Intro to the language (**mc**) - please feel free to throw away anything that is not useful!
 
 - complexity in the vowel system
 - complexity in the consonant system
@@ -153,7 +155,7 @@ In this study, we report on NWR results among children learning Yêly Dnyé, an 
 - typical word length
 - although not the focus of this paper, high use of suppletion in verbal paradigms, other features of language, see Levinson XXX for details
 
-### Intro to the people (@mc) - please feel free to throw away anything that is not useful!
+### Intro to the people (**mc**) - please feel free to throw away anything that is not useful!
 
 Little is known about language development in children growing up in Rossel Island, a community of primarily subsistence farmers who tend to reside in close-knitted villages where child care is distributed across many individuals, and who typically speak Yélî Dnyé, a phonologically and lexically complex language. 
 
@@ -178,35 +180,45 @@ That said, we contribute to the literature by also reporting descriptive analyse
 
 ### Research questions
 
-We sought to address the following questions:
+After some preliminary analyses to set the stage, we address the following questions:
 
 
-- What is the overall repetition score, according to a variety of relevant metrics (whole word, phoneme based, distance)?
-- How does score change as a function of item complexity (number of syllablex, sound complexity)?
-- How frequent are errors that result in real words? Is that a function of item complexity? 
-- What are some common patterns of phonological errors?
-- Is variation attributable to child age, sex, birth order, monolingual status, and/or parental education?
+- Does the frequency of sounds across languages predict NWR? Are rarer sounds more often substituted by commoner sounds?
+- How does score change as a function of item length in number of syllables?
+- Is individual variation attributable to child age, sex, birth order, monolingual status, and/or parental education?
 
 
 
-In view of the hypothesis-driven nature of this work, we had considered boosting the interpretational value of this evidence by announcing our analysis plans prior to conducting them. However, we realized that even pre-registering an analysis would be equivocal because we do not have enough power to look at all relationships of interest, and often to detect any of the known effects. For instance, an effect of stimulus length and age has been reported as significant sometimes, but Tables XX and XX show that even these effects can be quite small [data from @cristia2020infant]. **add table with r/ds from previous work**)
-Moreover, by virtue of this being a language-specific study, it is unclear that our method (including saliently the items we used) is comparable in precision to previous NWR studies. Therefore, all analyses here are descriptive and should be considered exploratory.
+In view of the hypothesis-driven nature of this work, we had considered boosting the interpretational value of this evidence by announcing our analysis plans prior to conducting them. However, we realized that even pre-registering an analysis would be equivocal because we do not have enough power to look at all relationships of interest, and often to detect any of the known effects given their variability across studies. To illustrate this, we portray studies in which children's NWR scores were gathered between 4 and 12 years of age, and reported separately for items that are relatively short (1-2 syllables) versus longer items (3-4 syllables) in Figure 1. Notice that the effect of stimulus length is minuscule among Italian children [@piazzalunga2019articulatory], but considerable among Tsimane' children  [@cristia2020infant], where a drop of 40 percentage points is observed at all ages. A similar difference in NWR scores for short versus long items was observed among Arabic children [@jabere2018xperiment].  Even the effect of age is unstable in this sample. Whereas it is quite clear that children's NWR scores increase in the Italian data, age effects are less stable among Tsimane' children.  Therefore, all analyses here are descriptive and should be considered exploratory.
 
 
-```{r prevlit-fig, echo = FALSE, ig.pos = "T!", fig.width=8, fig.height=5.5, fig.cap = "Proportion of non-words correctly repeated as a function of age (in years), study (first author and year regardless of the number of authors), and, when available, shorter versus longer non-words."}
-read.csv("prevlit.csv")->pl
-#duplicate Piazzalunga logging short and long items separately
-pl$Score[pl$Study=="Piazzalunga 2018"]<-pl$Short[pl$Study=="Piazzalunga 2018"]
-pl$Study<-as.character(pl$Study)
-pl$Study[pl$Study=="Piazzalunga 2018"]<-"Piazzalunga 2018 1-2 syll"
-dim(pl)[1]->beg
-pl=rbind(pl,pl[pl$Study=="Piazzalunga 2018 1-2 syll",])
-pl[(beg+1):dim(pl)[1],"Score"]<-pl[(beg+1):dim(pl)[1],"Long"]
-pl[(beg+1):dim(pl)[1],"Study"]<-"Piazzalunga 2018 3-4 syll"
-pl$Study=paste(pl$Language,pl$Study)
-library(lattice)
-xyplot(Score~Age,groups=Study,data=pl,type=c('l','p'),auto.key = T ,pch=20)
+```{r prevlit-fig, echo = FALSE, ig.pos = "T!", fig.width=8, fig.height=5.5, fig.cap = "NWR scores as a function of age (in years) and item length for comparable studies. Arabic data  from Jaber et al. (2018); Italian data from Piazzalunga et al. (2019); Tsimane' from Cristia et al. (2020); Yélî data from the present study."}
 
+pl<- read.delim("~/Documents/gitrepos/nwryd19/pl-With_yd.tsv")
+palette = c( 
+             "Arabic 1-2 syll" = "orange",
+             "Yélî 3-4 syll"   ="navyblue",
+             "Yélî 1-2 syll"  ="lightblue",
+             "Italian 3-4 syll"   ="black",
+             "Italian 1-2 syll"  ="gray",
+             "Arabic 3-4 syll"     = "orange", 
+             "Tsimane' 1-2 syll" = "green",
+              "Tsimane' 3-4 syll" = "darkgreen")
+
+
+myplot=ggplot(data = pl, aes(x = Age, y = Score, color = Language))+
+  geom_point(aes(size = n, shape = Length))+
+  geom_line(aes(linetype=Length)) + 
+  theme(text = element_text(size = 16), legend.position="none", axis.text.x=element_text(colour=c("black", "black"))) +
+  scale_color_manual(values = palette)+
+  theme_bw()+
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+
+  scale_x_continuous(name = "Age (years) ", breaks = c(4,8,12))+
+  
+  scale_y_continuous(name = "NWR Score", breaks = seq(0, 100, 10))+
+  scale_size_continuous(range = c(2, 6)) 
+
+myplot
 
 ```
 
@@ -221,14 +233,14 @@ Many NWR studies are based on a fixed list of 12-16 items that vary in length be
 
 A first list of candidate items was generated in 2018 by selecting simple consonants ("p",	"t",	"d",	"k",	"m",	"n",	"w",	"y") and vowels ("i", "o","u", "a","e") that were combined into consonant-vowel syllables, further sampling the space of 1- to 4-syllable sequences. These candidates were automatically checked against Levinson's 2015 dictionary and removed from consideration if they appeared in the dictionary. The second author presented them orally to three local research assistants, who were asked to repeat them and further say whether they were real words. Any item for which two or more of the assistants reported them having a meaning or some form of association was excluded.
 
-A second list of candidate items was generated in 2019 by selecting complex consonants and systematically crossing them with all the vowels in the Yélî inventory to produce consonant-vowel monosyllables. As before, items were automatically excluded if they appeared in the dictionary. Additionally, since hearing vowel length in monosyllables in isolation is challenging, any item that had a short/long real word neighbor was filtered out. Since the phonology and phonetics of Yélî is still in the process of being described [CITE @mc please fill in], there could have been undocumented constraints that rendered items illegal. Therefore, we made sure that the precise consonant-vowel sequence occurred in some real word in the dictionary (i.e., that there was a longer word included the monosyllable as a subsequence). These candidates were presented to one informant, for a final check that they did not mean anything. Together with the 2018 selection, they were recorded using a headset **XXX @mc please fill in** and an Olympus **XXX @mc please fill in** from the written form presented together with the same item orally (by the second author). The complete recorded list was finally presented to two more informants, who could repeat all the items and who confirmed there were no real words. Even so, there was one monosyllable that was often identified as a real word (intended "yî" /yXX/; identified as "yi" /yi/, *tree*). This item is removed from analyses below.
+A second list of candidate items was generated in 2019 by selecting complex consonants and systematically crossing them with all the vowels in the Yélî inventory to produce consonant-vowel monosyllables. As before, items were automatically excluded if they appeared in the dictionary. Additionally, since hearing vowel length in monosyllables in isolation is challenging, any item that had a short/long real word neighbor was filtered out. Since the phonology and phonetics of Yélî is still in the process of being described [CITE **mc** please fill in], there could have been undocumented constraints that rendered items illegal. Therefore, we made sure that the precise consonant-vowel sequence occurred in some real word in the dictionary (i.e., that there was a longer word included the monosyllable as a subsequence). These candidates were presented to one informant, for a final check that they did not mean anything. Together with the 2018 selection, they were recorded using a headset **XXX **mc** please fill in** and an Olympus **XXX **mc** please fill in** from the written form presented together with the same item orally (by the second author). The complete recorded list was finally presented to two more informants, who could repeat all the items and who confirmed there were no real words. Even so, there was one monosyllable that was often identified as a real word (intended "yî" /yXX/; identified as "yi" /yi/, *tree*). This item is removed from analyses below.
 
-**@mc can you please add the IPA in // for all of the items in the excel then save as tsv?**
+****mc** can you please add the IPA in // for all of the items in the excel then save as tsv?**
 The final list is composed of three practice items; 20 monoysllables containing sounds that are less frequent in the world's languages than singleton plosives; 8 bisyllables; 12 trisyllables; and 4 quadrisyllables (see Table 2).
 
-```{r tab2-stims}
+```{r tab2-stims, eval=F}
 #add orthographic representations targets & other stims chars
-read.delim("stimuli.tsv", encoding="UTF-8")->stims
+read.delim("stimuli.txt", encoding="UTF-8")->stims
 stims=stims[order(stims[,1]),-3]
 colnames(stims)<-c("Type","Orthographic","Phonological")
 cbindX(stims[stims$Type=="practice",],
@@ -244,6 +256,7 @@ stims=stims[,-1]
 #kable_styling() %>%
 #add_header_above(c("Practice" = 2, "Monosyll" = 2, "Bisyll" = 2, "Trisyll" = 2, "Tetrasyll" = 2))
 
+#now that I added phonological representations, even this basic table chokes!
 apa_table(stims,"NWR stimuli in orthographic and phonological representations.")
 ```
 
@@ -264,7 +277,7 @@ We visited four different hamlets once, and attempted to test all eligible child
  
 
 
-The child was donned a headset (**xx @mc please fill in** for most of the children, SHURE WH20 XLR headset with a dynamic microphone for the rest), recorded into the left channel into a Tascam DR40x digital recorder. For most children, the headset could not stay comfortably on the child's head, and thus it was placed on the child's shoulders, with the microphone carefully placed close to the child's mouth. A local informant sat next to the child, to would provide the instructions and, if needed, coach the child to make sure, using the three practice items as well as real words, that they understood that the task was to repeat the items precisely without changing anything. An experimenter (the first author) delivered the elicitation stimuli to the local informant and the child over headphones. 
+The child was donned a headset (**xx **mc** please fill in** for most of the children, SHURE WH20 XLR headset with a dynamic microphone for the rest), recorded into the left channel into a Tascam DR40x digital recorder. For most children, the headset could not stay comfortably on the child's head, and thus it was placed on the child's shoulders, with the microphone carefully placed close to the child's mouth. A local informant sat next to the child, to would provide the instructions and, if needed, coach the child to make sure, using the three practice items as well as real words, that they understood that the task was to repeat the items precisely without changing anything. An experimenter (the first author) delivered the elicitation stimuli to the local informant and the child over headphones. 
 
 
 The first phase was making sure the child understood the task. This was explained orally and the first training item was presented. Often, children froze and did not say anything. If this happened, then we followed this procedure. First, the informant insisted. If the child still did not say anything, the informant asked the child to repeat a real word, and another, and another. If the child could repeat these correctly, then we provided the recorded training item over headphones again. Most children successfully started repeating the items presented over headphones at this point; a few further needed the local informant to model the behavior (i.e., they would hear the item again, and she would say it; then we would play it again, and ask the child to say it). A small minority still failed to repeat the item after hearing it over headphones. If that occurred, we tried with the second training item, at which point some children got it and could continue. A small minority, however, failed to repeat this one, as well as the third training item, in which case we stopped the test altogether. 
@@ -364,8 +377,6 @@ trnsc=trnsc[trnsc$attempt=="first",]
 ```
 
 
-### Overall repetition accuracy
-
 ```{r overall}
 
 aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$Sex,trnsc$age.exact,trnsc$birthOrder,trnsc$matEd),mean)->overall
@@ -381,47 +392,22 @@ Taking into account only the first attempts, we averaged attempts by each of the
 
 The overall NWR score was M = `r round(mean(overall$Word))`% (SD = `r round(sd(overall$Word))`%). Scores based on phonemes are even higher  M = `r round(mean(overall$Phoneme))`% (SD = `r round(sd(overall$Phoneme))`%). The phoneme-based normalized Levenshtein distance was  M = `r round(mean(overall$NLD))`% (SD = `r round(sd(overall$NLD))`%), meaning that about a fifth of phonemes were were substituted, inserted, or deleted. Notice that the normalized Levenshtein distance is the complement of phoneme-based scores.
 
-### Accuracy a function of item length 
 
-```{r bylength}
-aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$age.exact,trnsc$type),mean)->by_length
-aggregate(trnsc$pc*100,by=list(trnsc$id,trnsc$age.exact,trnsc$type),mean)->pc
-aggregate(trnsc$nld*100,by=list(trnsc$id,trnsc$age.exact,trnsc$type),mean)->nld
-by_length=cbind(by_length,pc$x,nld$x)
-colnames(by_length)<-c("ID","Age","Length","Word","Phoneme","NLD")
+
+### NWR as a function of cross-linguistic phone frequency
+
+```{r}
+
 
 ```
 
-
-We then inspected whether accuracy varied as a function of word length. Results are shown on table XX. This table shows that monosyllables accuracy was much lower than other lengths. This is likely due to the fact that the majority of monosyllables included were chosen because they had sounds that are rare in the world's languages, which may indicate that they are hard to produce or to perceive. 
-
-Setting monosyllables aside, we observe the typical pattern of decreased accuracy for longer items, although this is particularly salient for the whole word scoring. This is the most commonly reported type of score, but it is also the least forgiving. The pattern is less marked when other two scores are used, which are less sensitive to errors.
-
-
-```{r tablength}
-mytab=NULL
-for(myvar in c("Word","Phoneme","NLD")){
-  mytab=cbind(mytab,
-              paste0(round(aggregate(by_length[,myvar],by=list(by_length$Length),mean)$x),
-              " (",round(aggregate(by_length[,myvar],by=list(by_length$Length),sd)$x),")"))
-}
-rownames(mytab)<-levels(by_length$Length)
-colnames(mytab)<-c("Word","Phoneme","NLD")
-apa_table(mytab,caption="NWR scores measured in whole word accuracy, phoneme-based accuracy, and normalized Levenshtein Distance, separately for the four stimuli lengths.")
-```
-
-
-
-
-### Patterns of errors
-- How frequent are errors that result in real words? Is that a function of item complexity? What are some common patterns of phonological errors?
 
 
 ```{r diffic,echo=F}
 nasalVs=c(":a", ":â" ,":ê", ":i" ,":o")
 oralVs=c("a", "â","e",  "é" ,"ê", "i","î" ,"o","ó","u")
 simplexCs=c("m","n","l","w","y","v","d","g","p","t","k","f","h","ch")
-complexCs=c("dp","tp","kp","km","kn","mb","gh")
+complexCs=c("dp","tp","kp","km","kn","mb","gh","lv")
 
 allVC=c(nasalVs,oralVs,simplexCs,complexCs)
 
@@ -453,6 +439,37 @@ As for substitutions, it was as common for a nasal vowel to be produced as an or
 Finally, we looked into the frequency with which mispronunciations resulted in real words. Nearly all of them were: `r round(sum(!is.na(trnsc$meaning))/sum(!is.na(trnsc$mispronunciation))*100)`%.
 
 ** this is higher than any previous report! can we be sure of it?**
+
+### Accuracy a function of item length 
+
+```{r bylength}
+aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$age.exact,trnsc$type),mean)->by_length
+aggregate(trnsc$pc*100,by=list(trnsc$id,trnsc$age.exact,trnsc$type),mean)->pc
+aggregate(trnsc$nld*100,by=list(trnsc$id,trnsc$age.exact,trnsc$type),mean)->nld
+by_length=cbind(by_length,pc$x,nld$x)
+colnames(by_length)<-c("ID","Age","Length","Word","Phoneme","NLD")
+
+```
+
+
+Next, we inspected whether accuracy varied as a function of word length. Results are shown on table XX. This table shows that monosyllables accuracy was much lower than other lengths. This is likely due to the fact that the majority of monosyllables included were chosen because they had sounds that are rare in the world's languages, which may indicate that they are hard to produce or to perceive. 
+
+Setting monosyllables aside, we observe the typical pattern of decreased accuracy for longer items, although this is particularly salient for the whole word scoring. This is the most commonly reported type of score, but it is also the least forgiving. The pattern is less marked when other two scores are used, which are less sensitive to errors.
+
+
+```{r tablength}
+mytab=NULL
+for(myvar in c("Word","Phoneme","NLD")){
+  mytab=cbind(mytab,
+              paste0(round(aggregate(by_length[,myvar],by=list(by_length$Length),mean)$x),
+              " (",round(aggregate(by_length[,myvar],by=list(by_length$Length),sd)$x),")"))
+}
+rownames(mytab)<-levels(by_length$Length)
+colnames(mytab)<-c("Word","Phoneme","NLD")
+apa_table(mytab,caption="NWR scores measured in whole word accuracy, phoneme-based accuracy, and normalized Levenshtein Distance, separately for the four stimuli lengths.")
+```
+
+
 
 
 
