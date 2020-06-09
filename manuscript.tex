@@ -132,13 +132,13 @@ ADD
 \item
   double check demo: exact age missing: 78, 82, 83, 115, 119; rough age missing 78, there's a mixture of BGMF in sex, first born is missing, round age
 \item
-  add frequency of sounds in stimuli in segments.xlsx from \url{https://phoible.org/parameters}
-\item
-  then add that in stimuli to get minimum \& average frequencies per stimulus
+  finish integration in stimuli in wrangling.R to get minimum \& average frequencies per stimulus
 \item
   then add analysis of NWR as a function of frequency
 \item
   draft discussion
+\item
+  draft abstract
 \end{itemize}
 
 \hypertarget{todo-middy}{%
@@ -149,9 +149,13 @@ ADD
 \item
   look through for \textbf{mc}
 \item
+  double check my frequency entries in segments.xlsx using the search function in \url{https://phoible.org/parameters}; take a look at \url{http://phoible.github.io/conventions/} in case you see something about double articulation (I didn't find tp or lBj)
+\item
+  double check phonological implementation of stimuli in stimuli.xlsx, and if needed re-save as txt file to update the version read in this paper
+\item
   consent, \enquote{correct}, \enquote{accuracy}, \enquote{performance}
 \item
-  help with table 1 (formatting)
+  help with table 1 (formatting \& making it appear, because it's broken by the phonological representations)
 \end{itemize}
 
 \hypertarget{todo-later}{%
@@ -260,7 +264,6 @@ A first list of candidate items was generated in 2018 by selecting simple conson
 
 A second list of candidate items was generated in 2019 by selecting complex consonants and systematically crossing them with all the vowels in the Yélî inventory to produce consonant-vowel monosyllables. As before, items were automatically excluded if they appeared in the dictionary. Additionally, since hearing vowel length in monosyllables in isolation is challenging, any item that had a short/long real word neighbor was filtered out. Since the phonology and phonetics of Yélî is still in the process of being described {[}CITE \textbf{mc} please fill in{]}, there could have been undocumented constraints that rendered items illegal. Therefore, we made sure that the precise consonant-vowel sequence occurred in some real word in the dictionary (i.e., that there was a longer word included the monosyllable as a subsequence). These candidates were presented to one informant, for a final check that they did not mean anything. Together with the 2018 selection, they were recorded using a headset \textbf{XXX }mc** please fill in** and an Olympus \textbf{XXX }mc** please fill in** from the written form presented together with the same item orally (by the second author). The complete recorded list was finally presented to two more informants, who could repeat all the items and who confirmed there were no real words. Even so, there was one monosyllable that was often identified as a real word (intended \enquote{yî} /yXX/; identified as \enquote{yi} /yi/, \emph{tree}). This item is removed from analyses below.
 
-****mc** can you please add the IPA in // for all of the items in the excel then save as tsv?**
 The final list is composed of three practice items; 20 monoysllables containing sounds that are less frequent in the world's languages than singleton plosives; 8 bisyllables; 12 trisyllables; and 4 quadrisyllables (see Table 2).
 
 A Praat script was written to randomize this list 20 times, and split it into two sublists, to generate 40 different elicitation sets. The 40 elicitation sets are available online from \url{https://osf.io/5qspb}. The split had the following constraints:
@@ -278,7 +281,7 @@ A Praat script was written to randomize this list 20 times, and split it into tw
 \hypertarget{procedure}{%
 \subsubsection{Procedure}\label{procedure}}
 
-We tried to balance three desiderata: That children would not be unduly exposed to the items before they themselves had to repeat them; that children would feel comfortable doing this task with us; and that the community would feel safe with us doing this task with their children. Moreover, there were also some logistic constraints in terms of the space availability. As a result, the places where elicitation took place varied across the hamlets.
+We tried to balance three desiderata: That children would not be unduly exposed to the items before they themselves had to repeat them; that children would feel comfortable doing this task with us; and that the community would feel safe with us doing this task with their children. Moreover, there were also some logistic constraints in terms of the space availability. As a result, the places where elicitation happened varied across the hamlets.
 
 We visited four different hamlets once, and attempted to test all eligible children present at the time, to prevent the items \enquote{spreading} through hearsay. In the first hamlet, we tested children in five different places, with some children being tested inside a house and others tested on the veranda. The complete list of places and the ways in which they met the desiderata mentioned above can be found in the raw data, available from online supplementary materials.
 

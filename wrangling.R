@@ -1,3 +1,13 @@
+read.csv("NWR-demo.csv",header=T)->demo
+#colnames(demo)
+
+#if family is missing, attribute each child to a different one
+demo$familyID=as.character(demo$familyID)
+demo$familyID[is.na(demo$familyID)]<-paste("k",demo$ID[is.na(demo$familyID)])
+
+subset(demo,included=="yes" & Age <12 & !is.na(Age))->inc
+#if age.exact is missing, use reported age
+inc$age.exact[is.na(inc$age.exact)]<-inc$Age[is.na(inc$age.exact)]
 read.delim("NWR-transcription.txt", encoding="UTF-8")->trnsc
 trnsc$tokid=paste(trnsc$item,trnsc$token)
 
@@ -26,7 +36,10 @@ trnsc$cor.online[(npairs+1):dim(trnsc)[1]]<-NA
 merge(trnsc,demo,by.x="id",by.y="ID",all.x=T)->trnsc
 
 #add orthographic representations targets & other stims chars
-read.delim("stimuli.tsv", encoding="UTF-8")->stims
+read.delim("stimuli.txt", encoding="UTF-8")->stims
+
+
+
 merge(trnsc,stims,by="target",all=T)->trnsc
 
 
