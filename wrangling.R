@@ -36,9 +36,15 @@ trnsc$cor.online[(npairs+1):dim(trnsc)[1]]<-NA
 merge(trnsc,demo,by.x="id",by.y="ID",all.x=T)->trnsc
 
 #add orthographic representations targets & other stims chars
-read.delim("stimuli.txt", encoding="UTF-8")->stims
+read.delim("stimconv.txt", encoding="UTF-8")->stims
+read.delim("segconv.txt", encoding="UTF-8")->segments
 
-
+stim_seg_freq=matrix(NA,nrow=dim(stims)[1],ncol=8)
+for(i in 1:dim(stim_seg_freq)[1]) for(j in 1:dim(stim_seg_freq)[2]) {
+  thisfreq=segments$pc[as.character(segments$phono)==as.character(stims[i,paste0("phono",j)])] 
+  stim_seg_freq[i,j]<-ifelse(sum(!is.na(thisfreq))==1,thisfreq,NA)
+  }
+stims$avg_fr=apply(stim_seg_freq,1,mean,na.rm=T)
 
 merge(trnsc,stims,by="target",all=T)->trnsc
 

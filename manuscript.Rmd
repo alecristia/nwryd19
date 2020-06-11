@@ -118,10 +118,15 @@ correspondances=matrix( #list correspondances always by pairs, orthography then 
 
 ```
 
+<!-- REMEMBER!!!! -->
+<!-- phonetic characters: -->
+<!-- - save excel as utf with save as -->
+<!-- - do $ iconv -f utf-16le -t utf-8 stimuli.txt > stimconv.txt -->
+<!-- - do $ iconv -f utf-16le -t utf-8 segments.txt > segconv.txt -->
+
 ## TODO
 
 - double check demo: exact age missing: 78, 82, 83, 115, 119; rough age missing 78, there's a mixture of BGMF in sex, first born is missing, round age
-- finish integration in stimuli in wrangling.R to get minimum & average frequencies per stimulus
 - then add analysis of NWR as a function of frequency
 - draft discussion
 - draft abstract
@@ -130,7 +135,9 @@ correspondances=matrix( #list correspondances always by pairs, orthography then 
 
 - look through for **mc**
 - double check my frequency entries in segments.xlsx using the search function in https://phoible.org/parameters; take a look at http://phoible.github.io/conventions/ in case you see something about double articulation (I didn't find tp or lBj)
-- double check phonological implementation of stimuli in stimuli.xlsx, and if needed re-save as txt file to update the version read in this paper
+- double check phonological implementation of stimuli in stimuli.xlsx 
+- for both of the above, if you make any changes, they need to be re-saved as UTF16 txt file, and then converted (see remember above)
+- double check also stim_seg_freq -- why are some items still with NA freq?
 - consent, "correct", "accuracy", "performance"
 - help with table 1 (formatting & making it appear, because it's broken by the phonological representations)
 
