@@ -1,0 +1,62 @@
+﻿ortho	phono	unichar	type	in_stim	freq	pc	notes
+:ii	i͂ː	ì	long_nasal	no	NA	NA	not looked up since not in stimuli
+:ee	ɛ͂ː	è	long_nasal	no	NA	NA	not looked up since not in stimuli
+a	æ	a	short_oral	yes	223	7	
+:a	æ͂	ã	short_nasal	yes	46	2	
+:aa	æ͂ː	à	long_nasal	yes	7	0	
+:uu	u͂ː	ù	long_nasal	no	NA	NA	not looked up since not in stimuli
+:oo	ɔ͂ː	Ò	long_nasal	no	NA	NA	not looked up since not in stimuli
+ii	i:	ï	long_oral	no	NA	NA	not looked up since not in stimuli
+ee	ɛː	ë	long_oral	no	NA	NA	not looked up since not in stimuli
+â	ɑ	â	short_oral	yes	225	7	
+áá	?	Ä	long_oral	no	NA	NA	not looked up since not in stimuli
+aa	æː	ä	long_oral	no	NA	NA	not looked up since not in stimuli
+îî	ɯ:	Ï	long_oral	no	NA	NA	not looked up since not in stimuli
+êê	ə:	2	long_oral	no	NA	NA	not looked up since not in stimuli
+ââ	ɑː	5	long_oral	yes	104	3	
+:ââ	ɑ͂ː	6	long_nasal	yes	16	1	
+óó	o:	ö	long_oral	no	NA	NA	not looked up since not in stimuli
+oo	ɔ:	Ö	long_oral	no	NA	NA	not looked up since not in stimuli
+éé	e:	Ë	long_oral	yes	641	21	
+ê	ə	ê	short_oral	yes	675	22	
+:êê	ə͂ː	3	long_nasal	yes	20	1	
+e	ɛ	e	short_oral	yes	1129	37	
+gh	ɣ	H	consonant	yes	436	14	
+i	i	i	short_oral	yes	2779	92	
+ó	o	ó	short_oral	no	NA	NA	not looked up since not in stimuli
+y	j	y	consonant	yes	2716	90	
+:i	i͂	1	short_nasal	no	NA	NA	not looked up since not in stimuli
+:e	ɛ͂	4	short_nasal	no	NA	NA	not looked up since not in stimuli
+kp	kp	P	consonant	yes	373	12	
+:ê	ə͂	6	short_nasal	no	NA	NA	not looked up since not in stimuli
+:â	ɑ͂	7	short_nasal	no	NA	NA	not looked up since not in stimuli
+:u	u͂	8	short_nasal	no	NA	NA	not looked up since not in stimuli
+:o	ɔ͂	9	short_nasal	no	NA	NA	not looked up since not in stimuli
+'n	n	ń	consonant	no	NA	NA	not looked up since not in stimuli
+lv	lβʲ	L	consonant	yes	10	0	AC used βʲ so this may be an overestimate
+m	m	m	consonant	yes	2914	96	
+n	ṇ	n	consonant	yes	532	18	"AC interpreted dot as dental, so looked up dental n (not advanced n)"
+ngm	ŋm	G	consonant	no	NA	NA	not looked up since not in stimuli
+ńm	nm	M	consonant	no	NA	NA	not looked up since not in stimuli
+ng	ŋ	N	consonant	no	NA	NA	not looked up since not in stimuli
+mb	mb	b	consonant	no	NA	NA	not looked up since not in stimuli
+nd	ṇḍ	D	consonant	no	NA	NA	not looked up since not in stimuli
+nt	nd	T	consonant	no	NA	NA	not looked up since not in stimuli
+nk	ŋɡ	K	consonant	no	NA	NA	not looked up since not in stimuli
+dn	ṭṇ	?	consonant	no	NA	NA	not looked up since not in stimuli
+kn	kŋ	!	consonant	no	NA	NA	not looked up since not in stimuli
+vy	βʲ	V	consonant	no	NA	NA	not looked up since not in stimuli
+mt	nmdb	C	consonant	no	NA	NA	not looked up since not in stimuli
+md	ṇmḍb	J	consonant	no	NA	NA	not looked up since not in stimuli
+mg	ŋmɡb	X	consonant	no	NA	NA	not looked up since not in stimuli
+dm	ṭpṇm	S	consonant	no	NA	NA	not looked up since not in stimuli
+km	kpŋm	Z	consonant	no	NA	NA	not looked up since not in stimuli
+o	ɔ	o	short_oral	yes	1070	35	
+p	p	p	consonant	yes	2594	86	
+t	t	t	consonant	yes	2064	68	
+d	ṭ	d	consonant	yes	707	23	"AC interpreted dot as dental, so looked up dental t (not advanced t)"
+tp	tp	:	consonant	yes	1	0	AC used pt
+dp	ṭp	/	consonant	yes	1	0	AC used pt
+u	u	u	short_oral	yes	2646	88	
+uu	u:	ü	long_oral	consonant	1003	29	
+w	consonant	consonant	consonant	consonant	2483	82	

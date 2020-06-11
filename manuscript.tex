@@ -132,8 +132,6 @@ ADD
 \item
   double check demo: exact age missing: 78, 82, 83, 115, 119; rough age missing 78, there's a mixture of BGMF in sex, first born is missing, round age
 \item
-  finish integration in stimuli in wrangling.R to get minimum \& average frequencies per stimulus
-\item
   then add analysis of NWR as a function of frequency
 \item
   draft discussion
@@ -151,7 +149,11 @@ ADD
 \item
   double check my frequency entries in segments.xlsx using the search function in \url{https://phoible.org/parameters}; take a look at \url{http://phoible.github.io/conventions/} in case you see something about double articulation (I didn't find tp or lBj)
 \item
-  double check phonological implementation of stimuli in stimuli.xlsx, and if needed re-save as txt file to update the version read in this paper
+  double check phonological implementation of stimuli in stimuli.xlsx
+\item
+  for both of the above, if you make any changes, they need to be re-saved as UTF16 txt file, and then converted (see remember above)
+\item
+  double check also stim\_seg\_freq -- why are some items still with NA freq?
 \item
   consent, \enquote{correct}, \enquote{accuracy}, \enquote{performance}
 \item
@@ -324,23 +326,23 @@ A total 55 children were tested, from 34 of families, in five hamlets. Some chil
 \caption{(\#fig:Fig1-first\_vs\_others)NWR scores for individual participants averaging separately their first attempts and all other attempts.}
 \end{figure}
 
-We first checked whether accuracy varies between first and subsequent presentations of an item by averaging word-level accuracy at the participant level separately for first attempts and subsequent repetitions. We excluded 5 children who did not have data for one of these two types. As shown in Figure 1, participants' mean word-level accuracy became more heterogeneous in subsequent repetitions. Surprisingly, subsequent repetitions (M = 42, SD = 28)
-were on average less accurate than first ones (M = 64, SD = 15), t(36) = 5.32, p = 0. Given the uncertainty in whether previous work used only the first or all repetitions, and since behavior degraded and became more heterogeneous in subsequent repetitions, the rest of the analyses focus on only the first repetitions.
+We first checked whether accuracy varies between first and subsequent presentations of an item by averaging word-level accuracy at the participant level separately for first attempts and subsequent repetitions. We excluded 6 children who did not have data for one of these two types. As shown in Figure 1, participants' mean word-level accuracy became more heterogeneous in subsequent repetitions. Surprisingly, subsequent repetitions (M = 41, SD = 27)
+were on average less accurate than first ones (M = 64, SD = 15), t(35) = 5.88, p = 0. Given the uncertainty in whether previous work used only the first or all repetitions, and since behavior degraded and became more heterogeneous in subsequent repetitions, the rest of the analyses focus on only the first repetitions.
 
 Taking into account only the first attempts, we averaged attempts by each of the 24 children who had data for first attempts; their ages ranged from 3.92 to 10.20 (M = 6.50, SD = 1.50).
 
-The overall NWR score was M = 60\% (SD = 14\%). Scores based on phonemes are even higher M = 76\% (SD = 9\%). The phoneme-based normalized Levenshtein distance was M = 24\% (SD = 9\%), meaning that about a fifth of phonemes were were substituted, inserted, or deleted. Notice that the normalized Levenshtein distance is the complement of phoneme-based scores.
+The overall NWR score was M = 61\% (SD = 15\%). Scores based on phonemes are even higher M = 77\% (SD = 9\%). The phoneme-based normalized Levenshtein distance was M = 23\% (SD = 9\%), meaning that about a fifth of phonemes were were substituted, inserted, or deleted. Notice that the normalized Levenshtein distance is the complement of phoneme-based scores.
 
 \hypertarget{nwr-as-a-function-of-cross-linguistic-phone-frequency}{%
 \subsubsection{NWR as a function of cross-linguistic phone frequency}\label{nwr-as-a-function-of-cross-linguistic-phone-frequency}}
 
-We investigated patterns of deletion and substitution. Deletions were relatively rare, with only 28 vowels deleted, and 8 consonants.
+We investigated patterns of deletion and substitution. Deletions were relatively rare, with only 29 vowels deleted, and 9 consonants.
 
-As for substitutions, it was as common for a nasal vowel to be produced as an oral vowel as vice versa (54 oral target vowels produced as nasal vowels, 58 nasal target vowels produced as oral vowels). Substitutions in which the oral nature was preserved but the quality of the vowel was changed were a great deal more common than changes in quality among nasal vowels (202 oral vowels produced with a different quality; 23 nasal vowels produced with a different quality). As for consonants, asymmetries were very marked with more complex consonants (specifically dptpkpkmknmbghlv) mispronounced as simple ones (specifically mnlwyvdgptkfhch, 267) than vice versa (2). Simple consonants were mispronounced as other simple consonants quite frequently (135 simple consonants mispronounced as other simple ones, compared to 62 complex ones).
+As for substitutions, it was as common for a nasal vowel to be produced as an oral vowel as vice versa (52 oral target vowels produced as nasal vowels, 58 nasal target vowels produced as oral vowels). Substitutions in which the oral nature was preserved but the quality of the vowel was changed were a great deal more common than changes in quality among nasal vowels (197 oral vowels produced with a different quality; 23 nasal vowels produced with a different quality). As for consonants, asymmetries were very marked with more complex consonants (specifically dptpkpkmknmbghlv) mispronounced as simple ones (specifically mnlwyvdgptkfhch, 266) than vice versa (2). Simple consonants were mispronounced as other simple consonants quite frequently (128 simple consonants mispronounced as other simple ones, compared to 62 complex ones).
 
 \textbf{probably turn this into a table; use proportion of correctly produced rather than number; use first attempts rather than the whole data set}
 
-Finally, we looked into the frequency with which mispronunciations resulted in real words. Nearly all of them were: 96\%.
+Finally, we looked into the frequency with which mispronunciations resulted in real words. Nearly all of them were: 97\%.
 
 ** this is higher than any previous report! can we be sure of it?**
 
@@ -362,10 +364,10 @@ Setting monosyllables aside, we observe the typical pattern of decreased accurac
 \toprule
 Word & \multicolumn{1}{c}{Phoneme} & \multicolumn{1}{c}{NLD}\\
 \midrule
-48 (21) & 60 (16) & 40 (16)\\
-80 (24) & 93 (10) & 7 (10)\\
-78 (21) & 94 (7) & 6 (7)\\
-66 (31) & 83 (19) & 17 (19)\\
+46 (22) & 58 (17) & 42 (17)\\
+80 (23) & 94 (7) & 6 (7)\\
+78 (20) & 94 (6) & 6 (6)\\
+74 (30) & 93 (11) & 7 (11)\\
 \bottomrule
 \end{tabular}
 
@@ -383,7 +385,7 @@ Word & \multicolumn{1}{c}{Phoneme} & \multicolumn{1}{c}{NLD}\\
 \caption{(\#fig:Fig2-scores by age)NWR whole-word scores for individual participants as a function of age and sex (blue = boys, pink = girls).}
 \end{figure}
 
-Our final exploratory analysis assessed whether variation in scores was structured by factors that vary across individuals. As shown in Figure 2, there was a greater deal of variance in earlier than later ages, with significantly higher NWR scores for older children (Spearman's rank correlation, given inequality of variance, rho (1,535.50) = 0.33, p = 0.11). In contrast, there was no clear association between NWR scores, on the one hand, and sex (t (0.33) = 20.09, p = 0.75), birth order (2,595.77) = -0.13, p = 0.55) or maternal education (2,038.91) = 0.11, p = 0.60)
+Our final exploratory analysis assessed whether variation in scores was structured by factors that vary across individuals. As shown in Figure 2, there was a greater deal of variance in earlier than later ages, with significantly higher NWR scores for older children (Spearman's rank correlation, given inequality of variance, rho (1,519.81) = 0.34, p = 0.10). In contrast, there was no clear association between NWR scores, on the one hand, and sex (t (0.18) = 21.34, p = 0.86), birth order (2,630.74) = -0.14, p = 0.50) or maternal education (2,091.92) = 0.09, p = 0.67)
 
 \hypertarget{discussion}{%
 \subsection{Discussion}\label{discussion}}
