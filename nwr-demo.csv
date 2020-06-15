@@ -1,56 +1,56 @@
-,ID,included,Age,Sex,birthOrder,familyID,monolingual,matEd,Cond,Date,Time,File,fastcode,fullcode,Notes,Where,Village,X,X.1,X.2,dob,test,age.exact
-1,c70,yes,5,G,2,2,yes,8,1a,20190826,15:28,190825_0021,NA,yes,,under house (in public),Cheme,NA,NA,missing,6/13/14,8/26/19,5.194805195
-2,c71,yes,5,G,4,3,no,10,2a,20190826,15:40,190825_0022,NA,yes,sib to c72,in house,Cheme,NA,NA,1b,11/4/13,8/26/19,5.799043062
-3,c72,yes,4,B,5,3,no,10,2b,20190826,15:47,190825_0023,NA,yes,sib to c71,in house,Cheme,NA,NA,9a,11/4/14,8/26/19,4.801093643
-4,c73,yes,6,G,4,9,yes,8,3a,20190826,16:06,190825_0024,NA,yes,sib to c74,in house,Cheme,NA,NA,,4/26/13,8/26/19,6.323991798
-5,c74,yes,5,B,5,9,yes,8,3b,20190826,16:12,190825_0025,NA,yes,sib to c73,in house,Cheme,NA,NA,12a,7/19/14,8/26/19,5.096377307
-6,c75,didnÕt repeat,NA,F,,,,NA,4a,20190827,16:00,,NA,,refused (sick),on veranda (in public),Cheme,NA,NA,,NA,8/27/19,NA
-7,c76,yes,10,G,4,11,yes,6,4a,20190827,,180101_0031S12,NA,yes,,on veranda (in public),Cheme,NA,NA,,6/10/09,8/27/19,10.19822283
-8,c77,yes,7,B,5,11,yes,6,4b,20190827,,180101_0032S12,NA,yes,,on veranda (in public),Cheme,NA,NA,,10/31/11,8/27/19,7.811346548
-9,c78,too old,NA,F,,,,NA,5a,20190827,16:38,180101_0033S12,NA,yes,,on veranda (in public),Cheme,NA,NA,,NA,8/27/19,NA
-10,c79,yes,7,B,1,NA-14b,yes,10,6a,20190827,16:51,180101_0034S12,NA,yes,,on veranda (in public),Cheme,NA,NA,,2/22/12,8/27/19,7.499658237
-11,c80,yes,7,B,3,17,no,6,5b,20190827,,180101_0035S12,NA,yes,memorized?,on veranda (in public),Cheme,NA,NA,,4/9/12,8/27/19,7.371155161
-12,c81,yes,9,G,2,17,no,6,6b,20190827,17:12,180101_0036S12,NA,yes,,on veranda (in public),Cheme,NA,NA,,7/17/10,8/27/19,9.099111415
-13,c82,yes,8,G,NA,NA,NA,NA,7a,20190827,,180101_0037S12,names,yes,,on veranda (in public),Cheme,NA,NA,,NA,8/27/19,NA
-14,c83,yes,6,B,NA,NA,NA,NA,7b,20190827,17:25,180101_0038S12,names,,memorized?,in house,Cheme,NA,NA,,NA,8/27/19,NA
-15,c84,yes,5,B,NA-23b,4,yes,10,8a,20190828,10:05,180101_0039S12,names,,"runny nose, equipment error - skipped and replayed",in house,Kimbêkpap”,NA,NA,,2/13/14,8/28/19,5.52836637
-16,c85,yes,6,B,4,23,yes,6,8b,20190828,,180101_0040S12,names,,,in house,Kimbêkpap”,NA,NA,,7/17/13,8/28/19,6.105263158
-17,c86,didnÕt repeat,5,F,,,,NA,9a,20190828,10:27,180101_0041S12,NA,,"wouldn't/couldn't repeat from playback, OK for real words",in house,Kimbêkpap”,NA,NA,,NA,8/28/19,NA
-18,c87,yes,4,B,6,27,yes,10,9b,20190828,10:40,180101_0042S12,names,,runny nose,in house,Kimbêkpap”,NA,NA,,9/2/14,8/28/19,4.978810663
-19,c88,yes,6,G,4,27,yes,10,10a,20190828,10:49,180101_0043S12,names,,,in house,Kimbêkpap”,NA,NA,,12/5/12,8/28/19,6.717703349
-20,c89,yes,5,G,5,27,yes,10,10a,20190828,11am,180101_0044S12,names,,intended10b,in house,Kimbêkpap”,NA,NA,,11/13/13,8/28/19,5.779904306
-21,c90,yes,7,G,3,18,yes,8,11a,20190828,11:41,180101_0045S12,names,,,in house,Kimbêkpap”,NA,NA,,5/23/12,8/28/19,7.253588517
-22,c91,yes,6,G,4,18,yes,8,11b,20190828,11:47,180101_0046S12,names,,,in house,Kimbêkpap”,NA,NA,,4/11/13,8/28/19,6.370471634
-23,c92,spoke too softly,NA,F,,,,NA,12a,20190828,11:56,180101_0047S12,NA,,"spoke too softly, stopped",in house,Kimbêkpap”,NA,NA,,NA,8/28/19,NA
-24,c93,yes,3,G,5,18,yes,8,13a,20190828,12:08,180101_0048S12,names,,,in house,Kimbêkpap”,NA,NA,,9/25/15,8/28/19,3.91797676
-25,c94,yes,7,B,2,21,yes,10,13b,20190828,12:17,180101_0049S12,names,,,in house,Kimbêkpap”,NA,NA,,4/16/12,8/28/19,7.354750513
-26,c95,yes,5,B,1,39,yes,8,12b,20190828,12:27,180101_0050S12,names,,,in house,Kimbêkpap”,NA,NA,,7/15/14,8/28/19,5.112781955
-27,c95b,didnÕt repeat,NA,F,,,,NA,13a,20190829,,190829_0051S12,,,"didn't talk, stopped",below central house (public),Nookigha,NA,NA,,NA,8/29/19,NA
-28,c96,didnÕt repeat,NA,M,,,,NA,13a,20190829,09:23,190829_0052S12,,,"twin of c97 , didn't talk, Anna said he was sick (implication of not normal)",below central house (public),Nookigha,NA,NA,,NA,8/29/19,NA
-29,c97,spoke too softly,5,M,,,,NA,13a,20190829,,190829_0053S12,partial names,,"twin of c96, whispered, lots of artifacts, runny nose, at least at one point Ana repeats the word for him -- excluding for these reasons but if included, coding needs to be completed",below central house (public),Nookigha,NA,NA,,NA,8/29/19,NA
-30,c98,didnÕt repeat,NA,M,,,,NA,13b,20190829,,190829_0054S12,,,"didn't talk, stopped",below central house (public),Nookigha,NA,NA,,NA,8/29/19,NA
-31,c99,yes,7,B,NA,NA,no,6,13b,20190829,ended 9:53,190829_0055S12,names,,,below central house (public),Nookigha,NA,NA,,8/11/08,8/29/19,11.03212577
-32,c100,spoke too softly,3,F,,,,NA,14a,20190829,09:56,190829_0056S12,,,"too noisy, spoke softly, not coding",below central house (public),Nookigha,NA,NA,,NA,8/29/19,NA
-33,c101,didnÕt repeat,3,M,,,,NA,14b,20190829,10:04,190829_0057S12,NA,,"didn't talk, stopped",below central house (public),Nookigha,NA,NA,,NA,8/29/19,NA
-34,c102,spoke too softly,6,F,,,,NA,14b,20190829,10:10,190829_0058S12,"no, too soft",,excluded because too soft,below central house (public),Nookigha,NA,NA,,NA,8/29/19,NA
-35,c103,spoke too softly,4,M,,,,NA,15a,20190829,finished 10:28,190829_0059S12,ones,,"Barely articulates, excluding _ very soft, artifacts, not for acoustics",below central house (public),Nookigha,NA,NA,,NA,8/29/19,NA
-36,c104,didnÕt repeat,5,M,,,,NA,15b,20190829,,190829_0060S12,NA,,"didn't talk, stopped",below central house (public),Nookigha,NA,NA,,NA,8/29/19,NA
-37,c105,yes,13,B,NA,NA,no,6,15b,20190829,,190829_0061S12,names,,,"on veranda (semi-public, small audience, included other children tested)",Nookigha,NA,NA,,10/13/06,8/29/19,12.85850991
-38,c106,yes,7,B,1,36,yes,8,16a,20190829,15:34,190829_0062S12,names,,,"on veranda (semi-public, small audience, included other children tested)",Nookigha,NA,NA,,6/10/12,8/29/19,7.207108681
-39,c107,yes,7,B,1,30,yes,10,16b,20190829,ended 15:41,190829_0063S12,names,,,"on veranda (semi-public, small audience, included other children tested)",Nookigha,NA,NA,,1/16/12,8/29/19,7.606288448
-40,c108,yes,7,B,2,34,yes,10,17a,20190829,15:42,190829_0064S12,names,,,"on veranda (semi-public, small audience, included other children tested)",Nookigha,NA,NA,,3/4/12,8/29/19,7.475051265
-41,c109,yes,5,B,NA,NA,no,10,17b,20190829,15:50,190829_0065S12,names,,,"on veranda (semi-public, small audience, included other children tested)",Nookigha,NA,NA,,1/4/14,8/29/19,5.640464798
-42,c110,yes,5,B,1,33,yes,8,18a,20190829,ended 16:03,190829_0066S12,names,,weird weak articulations,"on veranda (semi-public, small audience, included other children tested)",Nookigha,NA,NA,,5/30/14,8/29/19,5.241285031
-43,c111,yes,9,B,NA,NA,yes,10,1a,20190830,13:28,190830_0067S12,names,,,"on veranda (semi-public, small audience, included other children tested)",Pumba,NA,NA,,2/14/10,8/30/19,9.525632262
-44,c112,yes,7,G,NA,NA,yes,7,9a,20190830,13:32,190830_0068S12,names,,,"on veranda (semi-public, small audience, included other children tested)",Pumba,NA,NA,,3/30/12,8/30/19,7.406698565
-45,c113,didnÕt repeat,NA,M,,,,NA,12a,20190830,13:41,190830_0069S12,,,refused (sick),"on veranda (semi-public, small audience, included other children tested)",Pumba,NA,NA,,NA,8/30/19,NA
-46,c114,yes,8,B,NA,NA,yes,12,12a,20190830,ended 13:49,190830_0070S12,names,,EE had to repeat items,"on veranda (semi-public, small audience, included other children tested)",Pumba,NA,NA,,5/5/11,8/30/19,8.308954204
-47,c115,yes,7,B,NA,NA,yes,8,19a,20190830,13:52,190830_0071S12,names,,EE last word not played,"on veranda (semi-public, small audience, included other children tested)",Pumba,NA,NA,,NA,8/30/19,NA
-48,c116,yes,8,G,NA,NA,yes,10,19a,20190830,ended 14:02,190830_0072S12,names,,NOTE: REUSED 19A BY MISTAKE,"on veranda (semi-public, small audience, included other children tested)",Pumba,NA,NA,,2/18/11,8/30/19,8.516746411
-49,c117,yes,7,G,NA,NA,yes,6,20a,20190830,,190830_0073S12,names,,lots of artifactsÊ; not for acoustic ana,"on veranda (semi-public, small audience, included other children tested)",Pumba,NA,NA,,2/9/12,8/30/19,7.543403964
-50,c118,yes,5,B,NA,NA,yes,6,20b,20190830,14:17,190830_0075S12,names,,"‡pparent refusal but restarted and ok, except for EE skip","on veranda (semi-public, small audience, included other children tested)",Pumba,NA,NA,,5/20/14,8/30/19,5.271360219
-51,c119,yes,7,B,NA,NA,yes,8,18a,20190830,14:28,190830_0078S12,names,,intended order 18a,"on veranda (semi-public, small audience, included other children tested)",Pumba,NA,NA,,NA,8/30/19,NA
-52,c120,yes,8,B,NA,NA,yes,8,5a,20190830,14:42,190830_0079S12,names,,EE skip error,"on veranda (semi-public, small audience, included other children tested)",Pumba,NA,NA,,8/14/11,8/30/19,8.032809296
-53,c121,yes,8,B,NA,NA,yes,6,1a,20190830,end 14:54,190830_0080S12,names,,,"on veranda (semi-public, small audience, included other children tested)",Pumba,NA,NA,,1/18/11,8/30/19,8.601503759
-54,c122,yes,6,B,NA,NA,yes,6,2b,20190830,end 14:59,190830_0081S12,names,,,"on veranda (semi-public, small audience, included other children tested)",Pumba,NA,NA,,10/7/12,8/30/19,6.884483937
-55,c123,yes,7,B,NA,NA,yes,8,3a,20190830,end 15:04,190830_0082S12,names,,lots of artifactsÊ; not for acoustic ana,"on veranda (semi-public, small audience, included other children tested)",Pumba,NA,NA,,9/16/11,8/30/19,7.942583732
+rown,ID,included,Age,Sex,birthOrder,familyID,notes_familyID,monolingual,matEd,Cond,Date,Time,File,fastcode,fullcode,Notes,notes_demo,Where,Village,age.rounded
+1,c70,yes,5,G,2,2,old_familyID,yes,8,1a,20190826,15:28,190825_0021,NA,yes,,,under house (in public),Cheme,5.2
+2,c71,yes,5,G,4,3,old_familyID,no,10,2a,20190826,15:40,190825_0022,NA,yes,sib to c72,,in house,Cheme,5.8
+3,c72,yes,4,B,5,3,old_familyID,no,10,2b,20190826,15:47,190825_0023,NA,yes,sib to c71,,in house,Cheme,4.8
+4,c73,yes,6,G,4,9,old_familyID,yes,8,3a,20190826,16:06,190825_0024,NA,yes,sib to c74,,in house,Cheme,6.3
+5,c74,yes,5,B,5,9,old_familyID,yes,8,3b,20190826,16:12,190825_0025,NA,yes,sib to c73,,in house,Cheme,5.1
+6,c75,didnÍt repeat,NA,F,,,,,NA,4a,20190827,16:00,,NA,,refused (sick),,on veranda (in public),Cheme,NA
+7,c76,yes,10,G,4,11,old_familyID,yes,6,4a,20190827,,180101_0031S12,NA,yes,,,on veranda (in public),Cheme,10.2
+8,c77,yes,7,B,5,11,old_familyID,yes,6,4b,20190827,,180101_0032S12,NA,yes,,,on veranda (in public),Cheme,7.8
+9,c78,too old,NA,F,,,,,NA,5a,20190827,16:38,180101_0033S12,NA,yes,,,on veranda (in public),Cheme,NA
+10,c79,yes,7,B,1,NA-14b,interpolated_old_familyID,yes,10,6a,20190827,16:51,180101_0034S12,NA,yes,,,on veranda (in public),Cheme,7.5
+11,c80,yes,7,B,3,17,old_familyID,no,6,5b,20190827,,180101_0035S12,NA,yes,memorized?,,on veranda (in public),Cheme,7.4
+12,c81,yes,9,G,2,17,old_familyID,no,6,6b,20190827,17:12,180101_0036S12,NA,yes,,,on veranda (in public),Cheme,9.1
+13,c82,yes,8,G,NA,NA,not_found,NA,NA,7a,20190827,,180101_0037S12,names,yes,,can't find in MarisaPtcpRecruitment-Rossel20190928,on veranda (in public),Cheme,8
+14,c83,yes,6,B,NA,NA,not_found,NA,NA,7b,20190827,17:25,180101_0038S12,names,,memorized?,can't find in MarisaPtcpRecruitment-Rossel20190928,in house,Cheme,6
+15,c84,yes,5,B,4,NA-23b,interpolated_old_familyID,yes,10,8a,20190828,10:05,180101_0039S12,names,,"runny nose, equipment error - skipped and replayed",,in house,KimbêkpapÓ,5.5
+16,c85,yes,6,B,4,23,old_familyID,yes,6,8b,20190828,,180101_0040S12,names,,,,in house,KimbêkpapÓ,6.1
+17,c86,didnÍt repeat,5,F,,,,,NA,9a,20190828,10:27,180101_0041S12,NA,,"wouldn't/couldn't repeat from playback, OK for real words",,in house,KimbêkpapÓ,5
+18,c87,yes,4,B,6,27,old_familyID,yes,10,9b,20190828,10:40,180101_0042S12,names,,runny nose,,in house,KimbêkpapÓ,5
+19,c88,yes,6,G,4,27,old_familyID,yes,10,10a,20190828,10:49,180101_0043S12,names,,,,in house,KimbêkpapÓ,6.7
+20,c89,yes,5,G,5,27,old_familyID,yes,10,10a,20190828,11am,180101_0044S12,names,,intended10b,,in house,KimbêkpapÓ,5.8
+21,c90,yes,7,G,3,18,old_familyID,yes,8,11a,20190828,11:41,180101_0045S12,names,,,,in house,KimbêkpapÓ,7.3
+22,c91,yes,6,G,4,18,old_familyID,yes,8,11b,20190828,11:47,180101_0046S12,names,,,,in house,KimbêkpapÓ,6.4
+23,c92,spoke too softly,NA,F,,,,,NA,12a,20190828,11:56,180101_0047S12,NA,,"spoke too softly, stopped",,in house,KimbêkpapÓ,NA
+24,c93,yes,3,G,5,18,old_familyID,yes,8,13a,20190828,12:08,180101_0048S12,names,,,,in house,KimbêkpapÓ,3.9
+25,c94,yes,7,B,2,21,old_familyID,yes,10,13b,20190828,12:17,180101_0049S12,names,,,,in house,KimbêkpapÓ,7.4
+26,c95,yes,5,B,1,39,old_familyID,yes,8,12b,20190828,12:27,180101_0050S12,names,,,,in house,KimbêkpapÓ,5.1
+27,c95b,didnÍt repeat,NA,F,,,,,NA,13a,20190829,,190829_0051S12,,,"didn't talk, stopped",,below central house (public),Nookigha,NA
+28,c96,didnÍt repeat,NA,M,,,,,NA,13a,20190829,09:23,190829_0052S12,,,"twin of c97 , didn't talk, Anna said he was sick (implication of not normal)",,below central house (public),Nookigha,NA
+29,c97,spoke too softly,5,M,,,,,NA,13a,20190829,,190829_0053S12,partial names,,"twin of c96, whispered, lots of artifacts, runny nose, at least at one point Ana repeats the word for him -- excluding for these reasons but if included, coding needs to be completed",,below central house (public),Nookigha,5
+30,c98,didnÍt repeat,NA,M,,,,,NA,13b,20190829,,190829_0054S12,,,"didn't talk, stopped",,below central house (public),Nookigha,NA
+31,c99,yes,7,B,NA,NA,not_found,no,6,13b,20190829,ended 9:53,190829_0055S12,names,,,can't find in MarisaPtcpRecruitment-Rossel20190928,below central house (public),Nookigha,11
+32,c100,spoke too softly,3,F,,,,,NA,14a,20190829,09:56,190829_0056S12,,,"too noisy, spoke softly, not coding",,below central house (public),Nookigha,3
+33,c101,didnÍt repeat,3,M,,,,,NA,14b,20190829,10:04,190829_0057S12,NA,,"didn't talk, stopped",,below central house (public),Nookigha,3
+34,c102,spoke too softly,6,F,,,,,NA,14b,20190829,10:10,190829_0058S12,"no, too soft",,excluded because too soft,,below central house (public),Nookigha,6
+35,c103,spoke too softly,4,M,,,,,NA,15a,20190829,finished 10:28,190829_0059S12,ones,,"Barely articulates, excluding _ very soft, artifacts, not for acoustics",,below central house (public),Nookigha,4
+36,c104,didnÍt repeat,5,M,,,,,NA,15b,20190829,,190829_0060S12,NA,,"didn't talk, stopped",,below central house (public),Nookigha,5
+37,c105,yes,13,B,NA,NA,not_found,no,6,15b,20190829,,190829_0061S12,names,,,can't find in MarisaPtcpRecruitment-Rossel20190928,"on veranda (semi-public, small audience, included other children tested)",Nookigha,12.9
+38,c106,yes,7,B,1,36,old_familyID,yes,8,16a,20190829,15:34,190829_0062S12,names,,,,"on veranda (semi-public, small audience, included other children tested)",Nookigha,7.2
+39,c107,yes,7,B,1,30,old_familyID,yes,10,16b,20190829,ended 15:41,190829_0063S12,names,,,,"on veranda (semi-public, small audience, included other children tested)",Nookigha,7.6
+40,c108,yes,7,B,2,34,old_familyID,yes,10,17a,20190829,15:42,190829_0064S12,names,,,,"on veranda (semi-public, small audience, included other children tested)",Nookigha,7.5
+41,c109,yes,5,B,NA,NA,not_found,no,10,17b,20190829,15:50,190829_0065S12,names,,,can't find in MarisaPtcpRecruitment-Rossel20190928,"on veranda (semi-public, small audience, included other children tested)",Nookigha,5.6
+42,c110,yes,5,B,1,33,old_familyID,yes,8,18a,20190829,ended 16:03,190829_0066S12,names,,weird weak articulations,,"on veranda (semi-public, small audience, included other children tested)",Nookigha,5.2
+43,c111,yes,9,B,NA,NA,not_found,yes,10,1a,20190830,13:28,190830_0067S12,names,,,,"on veranda (semi-public, small audience, included other children tested)",Pumba,9.5
+44,c112,yes,7,G,NA,NA,not_found,yes,7,9a,20190830,13:32,190830_0068S12,names,,,,"on veranda (semi-public, small audience, included other children tested)",Pumba,7.4
+45,c113,didnÍt repeat,NA,M,,,,,NA,12a,20190830,13:41,190830_0069S12,,,refused (sick),,"on veranda (semi-public, small audience, included other children tested)",Pumba,NA
+46,c114,yes,8,B,NA,NA,not_found,yes,12,12a,20190830,ended 13:49,190830_0070S12,names,,EE had to repeat items,,"on veranda (semi-public, small audience, included other children tested)",Pumba,8.3
+47,c115,yes,7,B,NA,NA,not_found,yes,8,19a,20190830,13:52,190830_0071S12,names,,EE last word not played,,"on veranda (semi-public, small audience, included other children tested)",Pumba,7
+48,c116,yes,8,G,NA,NA,not_found,yes,10,19a,20190830,ended 14:02,190830_0072S12,names,,NOTE: REUSED 19A BY MISTAKE,,"on veranda (semi-public, small audience, included other children tested)",Pumba,8.5
+49,c117,yes,7,G,NA,NA,not_found,yes,6,20a,20190830,,190830_0073S12,names,,lots of artifactsæ; not for acoustic ana,,"on veranda (semi-public, small audience, included other children tested)",Pumba,7.5
+50,c118,yes,5,B,NA,NA,not_found,yes,6,20b,20190830,14:17,190830_0075S12,names,,"àpparent refusal but restarted and ok, except for EE skip",,"on veranda (semi-public, small audience, included other children tested)",Pumba,5.3
+51,c119,yes,7,B,NA,NA,not_found,yes,8,18a,20190830,14:28,190830_0078S12,names,,intended order 18a,,"on veranda (semi-public, small audience, included other children tested)",Pumba,7
+52,c120,yes,8,B,NA,NA,not_found,yes,8,5a,20190830,14:42,190830_0079S12,names,,EE skip error,,"on veranda (semi-public, small audience, included other children tested)",Pumba,8
+53,c121,yes,8,B,NA,NA,not_found,yes,6,1a,20190830,end 14:54,190830_0080S12,names,,,,"on veranda (semi-public, small audience, included other children tested)",Pumba,8.6
+54,c122,yes,6,B,NA,NA,not_found,yes,6,2b,20190830,end 14:59,190830_0081S12,names,,,,"on veranda (semi-public, small audience, included other children tested)",Pumba,6.9
+55,c123,yes,7,B,NA,NA,not_found,yes,8,3a,20190830,end 15:04,190830_0082S12,names,,lots of artifactsæ; not for acoustic ana,,"on veranda (semi-public, small audience, included other children tested)",Pumba,7.9
