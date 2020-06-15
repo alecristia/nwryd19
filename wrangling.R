@@ -1,21 +1,19 @@
-read.csv("NWR-demo.csv",header=T)->demo
-#colnames(demo)
 
-#if family is missing, attribute each child to a different one
-demo$familyID=as.character(demo$familyID)
-demo$familyID[is.na(demo$familyID)]<-paste("k",demo$ID[is.na(demo$familyID)])
-
-subset(demo,included=="yes" & Age <12 & !is.na(Age))->inc
-#if age.exact is missing, use reported age
-inc$age.exact[is.na(inc$age.exact)]<-inc$Age[is.na(inc$age.exact)]
 read.delim("NWR-transcription.txt", encoding="UTF-8")->trnsc
+#DATA REMOVAL *** ATTENTION *** 
+#REMOVE ALL TASK 4 (whatever that is)
+trnsc[trnsc$item!="task4",]->trnsc
+
+dim(trnsc) #1488 judgments
+
 trnsc$tokid=paste(trnsc$item,trnsc$token)
 
 read.table("final_order.txt",header=T)->crp
 crp$tokid=paste(crp$target,crp$nb)
 npairs=dim(crp)[1]
 
-trnsc=merge(trnsc,crp,by.x="tokid",by.y="tokid",all=T)
+trnsc=merge(trnsc,crp,by.x="tokid",by.y="tokid")
+dim(trnsc) #haven't lost any judgments
 
 #order so we have all the items by a given child in the right chrono order
 trnsc[order(trnsc$file, trnsc$int),]->trnsc
@@ -24,16 +22,27 @@ trnsc[order(trnsc$file, trnsc$int),]->trnsc
 trnsc$previous<-c(NA,as.character(trnsc$target[1:(dim(trnsc)[1]-1)]))
 trnsc$attempt<-ifelse(trnsc$target!=trnsc$previous,"first","subsequent")
 trnsc$attempt[1]<-"first"
+table(trnsc$attempt) #1045 first attempts
 
 #add repetition number
 trnsc$rep=gsub(".*_","",gsub(".wav","",trnsc$outfile))
 
-#add coding of correctness online/on the fly of first presentation as a function whether there are subsequent reps of the same target
-trnsc$cor.online=1
-for(i in 1:npairs) if(trnsc$rep[i]>1) trnsc$cor.online[i-1]<-0  #if the item is repeated, then code the previous one as being wrong
-trnsc$cor.online[(npairs+1):dim(trnsc)[1]]<-NA
 
-merge(trnsc,demo,by.x="id",by.y="ID",all.x=T)->trnsc
+# add demographic info
+read.csv("NWR-demo.csv",header=T)->demo
+#colnames(demo)
+
+#if family is missing, attribute each child to a different one
+demo$familyID=as.character(demo$familyID)
+demo$familyID[is.na(demo$familyID)]<-paste("k",demo$ID[is.na(demo$familyID)])
+
+#focus on kids who'll be included
+subset(demo,included=="yes" & Age <12 & !is.na(Age))->inc
+#if age.rounded is missing, use reported age
+inc$age.rounded[is.na(inc$age.rounded)]<-inc$Age[is.na(inc$age.rounded)]
+
+merge(trnsc,inc,by.x="id",by.y="ID",all.x=T)->trnsc
+dim(trnsc) #still no loss, all good
 
 #add orthographic representations targets & other stims chars
 read.delim("stimconv.txt", encoding="UTF-8")->stims
@@ -46,12 +55,13 @@ for(i in 1:dim(stim_seg_freq)[1]) for(j in 1:dim(stim_seg_freq)[2]) {
   }
 stims$avg_fr=apply(stim_seg_freq,1,mean,na.rm=T)
 
-merge(trnsc,stims,by="target",all=T)->trnsc
-
+merge(trnsc,stims,by="target",all.x=T)->trnsc
+dim(trnsc)
 
 #DATA REMOVAL *** ATTENTION *** 
 #REMOVE ALL TASK 4 (whatever that is)
-trnsc[!is.na(trnsc$target),]->trnsc
+#trnsc[!is.na(trnsc$target),]->trnsc
+#already done
 
 #REMOVING ALL THE "YI"
 trnsc[trnsc$target!="yi",]->trnsc
@@ -173,3 +183,4 @@ write.table(substitution_bank,"substitution_bank.txt",row.names=F,sep="\t")
 
 sort(deletion_bank)->deletion_bank
 write.table(deletion_bank,"deletion_bank.txt",row.names=F,sep="\t")
+

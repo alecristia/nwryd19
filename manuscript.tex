@@ -118,26 +118,11 @@ Correspondence concerning this article should be addressed to Alejandrina Cristi
 \date{}
 
 \abstract{
-ADD
+In nonword repetition (NWR) studies, participants are presented auditorily with an item that is phonologically legal but lexically meaningless in the local language. Accuracy is thought to reflect long-term phonological knowledge as well as online phonological working memory and flexible production patterns.In this study, we report on NWR results among children learning Yêly Dnyé, an isolate spoken in Rossel Island, PNG, with an unusually dense phonological inventory. This study contributes to three lines of research. First, we document that non-word items containing typologically rare sounds are repeated accurately less often that non-words containing more common sounds. Second, we document rather weak effects of item length, contributing to other research suggesting that length effects may be language-specific. Third, we do not find strong individual variation effects in this population, contrary to previous results documenting strong age-related effects. Together, these data provide a unique view of online phonological processing in a seldom-studied language, and contribute to both typological and language acquisition research.
 }
 
 \begin{document}
 \maketitle
-
-\hypertarget{todo}{%
-\subsection{TODO}\label{todo}}
-
-\begin{itemize}
-\tightlist
-\item
-  double check demo: exact age missing: 78, 82, 83, 115, 119; rough age missing 78, there's a mixture of BGMF in sex, first born is missing, round age
-\item
-  then add analysis of NWR as a function of frequency
-\item
-  draft discussion
-\item
-  draft abstract
-\end{itemize}
 
 \hypertarget{todo-middy}{%
 \subsection{TODO Middy}\label{todo-middy}}
@@ -145,7 +130,13 @@ ADD
 \begin{itemize}
 \tightlist
 \item
-  look through for \textbf{mc}
+  look through this manuscript for bits of text to be written by \textbf{mc}
+\item
+  help with table 1 (formatting \& making it appear, because it's broken by the phonological representations)
+\item
+  do you think Figure 2 should be done with phonetic symbols? If yes, could you try to implement that?
+\item
+  double check demo -- probably start with the xlsx version that has the children's first names, date of birth, and date of test. I looked again at my local files (still haven't checked the labs' ones) and I'm surprised I have maternal education for more children than I have birth order for\ldots{} If you correct this, to generate the csv I also round the age, assign age.rounded to reported age (in years) when DOB is missing, remove first names, DOB, DOTest and age.precise before pushing to github
 \item
   double check my frequency entries in segments.xlsx using the search function in \url{https://phoible.org/parameters}; take a look at \url{http://phoible.github.io/conventions/} in case you see something about double articulation (I didn't find tp or lBj)
 \item
@@ -157,7 +148,7 @@ ADD
 \item
   consent, \enquote{correct}, \enquote{accuracy}, \enquote{performance}
 \item
-  help with table 1 (formatting \& making it appear, because it's broken by the phonological representations)
+  draft discussion
 \end{itemize}
 
 \hypertarget{todo-later}{%
@@ -178,7 +169,7 @@ ADD
 
 Although infants begin to learn about their native language's phonology within the first year, many studies suggest that in perception and production, in phonetics and phonology, their knowledge continues to develop throughout childhood (e.g., Hazan \& Barrett, 2000). One common task in this line of research is nonword repetition (NWR). In NWR studies, participants are presented auditorily with an item that is phonologically legal but lexically meaningless in the language children are learning. The child should immediately try to say it back without changing anything. Accuracy is thought to reflect long-term phonological knowledge (which allows the child to perceive the item accurately even though it is not a real word they have encountered before) as well as online phonological working memory (to encode the item in the interval between hearing it and saying it back) and flexible production patterns (to produce the item accurately even though it had never been pronounced before).
 
-NWR has been used to seek answers to a variety of theoretical questions, including what the links between phonology, working memory, and the lexicon are (Bowey, 2001). It is also frequently used as for applications, notably as a diagnostic for language delays and disorders (Estes, Evans, \& Else-Quest, 2007). Since non-words can be generated in any language, it has attracted the attention of researchers working in multilingual and linguistically diverse environments, particularly in Europe (Action, 2009; Meir, Walters, \& Armon-Lotem, 2016).
+NWR has been used to seek answers to a variety of theoretical questions, including what the links between phonology, working memory, and the lexicon are (Bowey, 2001), and to assess the extent to which apparent phonological constraints found in the lexicon affect online production (Gallagher, 2014). It is also frequently used as for applications, notably as a diagnostic for language delays and disorders (Estes, Evans, \& Else-Quest, 2007). Since non-words can be generated in any language, it has attracted the attention of researchers working in multilingual and linguistically diverse environments, particularly in Europe (Action, 2009; Meir, Walters, \& Armon-Lotem, 2016).
 
 In this study, we report on NWR results among children learning Yêly Dnyé, an isolate spoken in Rossel Island, PNG, with an unusually dense phonological inventory. The present report uses these unique data to contribute to several lines of research. First, we made sure that some of the non-word items contained typologically rare and/or challenging sounds, so that we can contribute to the study of whether rare sounds are disadvantaged in perception and/or production, both in terms of overall accuracy of repetition and patterns of mispronunciation. Second, we look at the effects of item length, since previous NWR research has uncovered variable effects. Third, we contribute to the basic NWR literature by contributing an additional data point for children learning a rarely-studied language and culture, and further investigating whether there are structured sources that account for individual variation.
 
@@ -305,6 +296,8 @@ A script was written to randomize all tokens from all children, pairing each wit
 
 Some NWR studies employ phoneme-based scoring in addition to or instead of word-level accuracy (e.g., Cristia et al., 2020). We scored items in terms of the number of phonemes that could be aligned across the target and attempt, divided by the number of phonemes of whichever item was longer (the target or the attempt). Although previous work does not use distance metrics, we additionally report those.
 
+Additionally, we looked up each phoneme in each target word in the Phoible database (Moran \& McCloy, 2019). We entered the number of languages in which each phoneme was found, as well as what percentage of languages in the database that represented. We could not find a small number of phonemes in the database, and treat those as NA values that do not contribute to the target-level global average phone cross-linguistic frequency, although an alternative would be to attribute them a very small number. * \textbf{mc} do you agree with this decision or shall we do the alternative?*
+
 Finally, for describing children's patterns of errors, all repetitions of a given target were taken into account. We describe the proportion of items where the change resulted in a real word (semantic errors); and classify the most common phonological errors.
 
 \hypertarget{participants}{%
@@ -312,7 +305,7 @@ Finally, for describing children's patterns of errors, all repetitions of a give
 
 This study was approved as part of a larger research effort by \textbf{({\textbf{???}}) add info from Middy's FAIR reply}. Participation was voluntary, with children being invited to come and participate. Regardless of how they performed, children were provided with a snack as compensation. Children who came up to participate but then refused were nonetheless provided with the snack.
 
-A total 55 children were tested, from 34 of families, in five hamlets. Some children could not be included for the following reasons: refused participation or failed to repeat items presented over headphones even after coaching (N=0), spoke too softly to allow offline coding (N=5). In addition, 2 teenagers were tested to put younger children at ease; their data is not included in analyses below. The remaining 40 children (14 girls) were aged 6.96 years (range 3.92-11.03 years). There were 32 children exposed only to Yélî in the home, 6 children who were also exposed to another language in the home, and , 2 for whom this information was missing. Maternal years of education averaged 8.24 years (range 6-12 years; 2 children had this information missing).\footnote{Education is often reported in even years because people typically complete two-year cycles.} In terms of birth order, 0 were first borns, 5 second, 4 third, 2 forth, 6 fifth, 5 sixth, and 1 did not have this information.
+A total 55 children were tested, from 34 of families, in five hamlets. Some children could not be included for the following reasons: refused participation or failed to repeat items presented over headphones even after coaching (N=0), spoke too softly to allow offline coding (N=5). In addition, 2 teenagers were tested to put younger children at ease; their data is not included in analyses below. The remaining 40 children (14 girls) were aged 6.96 years (range 3.90-11 years). There were 32 children exposed only to Yélî in the home, 6 children who were also exposed to another language in the home, and , 2 for whom this information was missing. Maternal years of education averaged 8.24 years (range 6-12 years; 2 children had this information missing).\footnote{Education is often reported in even years because people typically complete two-year cycles.} In terms of birth order, 5 were first borns, 4 second, 2 third, 7 forth, 5 fifth, 1 sixth, and NA did not have this information.
 
 \hypertarget{results}{%
 \subsection{Results}\label{results}}
@@ -326,17 +319,27 @@ A total 55 children were tested, from 34 of families, in five hamlets. Some chil
 \caption{(\#fig:Fig1-first\_vs\_others)NWR scores for individual participants averaging separately their first attempts and all other attempts.}
 \end{figure}
 
-We first checked whether accuracy varies between first and subsequent presentations of an item by averaging word-level accuracy at the participant level separately for first attempts and subsequent repetitions. We excluded 6 children who did not have data for one of these two types. As shown in Figure 1, participants' mean word-level accuracy became more heterogeneous in subsequent repetitions. Surprisingly, subsequent repetitions (M = 41, SD = 27)
-were on average less accurate than first ones (M = 64, SD = 15), t(35) = 5.88, p = 0. Given the uncertainty in whether previous work used only the first or all repetitions, and since behavior degraded and became more heterogeneous in subsequent repetitions, the rest of the analyses focus on only the first repetitions.
+We first checked whether accuracy varies between first and subsequent presentations of an item by averaging word-level accuracy at the participant level separately for first attempts and subsequent repetitions. We excluded 3 children who did not have data for one of these two types. As shown in Figure 1, participants' mean word-level accuracy became more heterogeneous in subsequent repetitions. Surprisingly, subsequent repetitions (M = 39, SD = 26)
+were on average less accurate than first ones (M = 65, SD = 15), t(38) = 6.62, p = 0. Given the uncertainty in whether previous work used only the first or all repetitions, and since behavior degraded and became more heterogeneous in subsequent repetitions, the rest of the analyses focus on only the first repetitions.
 
-Taking into account only the first attempts, we averaged attempts by each of the 24 children who had data for first attempts; their ages ranged from 3.92 to 10.20 (M = 6.50, SD = 1.50).
+Taking into account only the first attempts, we averaged attempts by each of the 24 children who had data for first attempts; their ages ranged from 3.90 to 10.20 (M = 6.50, SD = 1.50).
 
 The overall NWR score was M = 61\% (SD = 15\%). Scores based on phonemes are even higher M = 77\% (SD = 9\%). The phoneme-based normalized Levenshtein distance was M = 23\% (SD = 9\%), meaning that about a fifth of phonemes were were substituted, inserted, or deleted. Notice that the normalized Levenshtein distance is the complement of phoneme-based scores.
 
 \hypertarget{nwr-as-a-function-of-cross-linguistic-phone-frequency}{%
 \subsubsection{NWR as a function of cross-linguistic phone frequency}\label{nwr-as-a-function-of-cross-linguistic-phone-frequency}}
 
-We investigated patterns of deletion and substitution. Deletions were relatively rare, with only 29 vowels deleted, and 9 consonants.
+In this analysis, we were interested in variation in performance as a function of the average frequency with which sounds composing individual target words are found in languages over the world. To look at this, we fit a mixed logistic regression, in which the outcome variable was whether the non-word was correctly repeated or not. The fixed effects of interest was the average cross-linguistic phone frequency; we also included child age as a control fixed effect, and child ID \& target ID as random variables.
+
+We could include 885 observations (\textbf{why -- shouldn't it be 1k??}), from 41 children producing in any given trial one of 41 potential target words. The analysis revealed a significant estimate for the average cross-linguistic frequency of phones in the target words (ß = 0.03, SE ß = 0.01, p = 0): Target words with phones found more frequently across languages had a higher proportion of words that were correctly repeated, as clear in Figure 2.
+
+\begin{figure}
+\centering
+\includegraphics{manuscript_files/figure-latex/Fig2-xling_freq-1.pdf}
+\caption{(\#fig:Fig2-xling\_freq)NWR scores for individual target words as a function of the average frequency with which each phone is found across languages.}
+\end{figure}
+
+Next, we investigated patterns of deletion and substitution. Deletions were relatively rare, with only 29 vowels deleted, and 9 consonants.
 
 As for substitutions, it was as common for a nasal vowel to be produced as an oral vowel as vice versa (52 oral target vowels produced as nasal vowels, 58 nasal target vowels produced as oral vowels). Substitutions in which the oral nature was preserved but the quality of the vowel was changed were a great deal more common than changes in quality among nasal vowels (197 oral vowels produced with a different quality; 23 nasal vowels produced with a different quality). As for consonants, asymmetries were very marked with more complex consonants (specifically dptpkpkmknmbghlv) mispronounced as simple ones (specifically mnlwyvdgptkfhch, 266) than vice versa (2). Simple consonants were mispronounced as other simple consonants quite frequently (128 simple consonants mispronounced as other simple ones, compared to 62 complex ones).
 
@@ -364,10 +367,10 @@ Setting monosyllables aside, we observe the typical pattern of decreased accurac
 \toprule
 Word & \multicolumn{1}{c}{Phoneme} & \multicolumn{1}{c}{NLD}\\
 \midrule
-46 (22) & 58 (17) & 42 (17)\\
-80 (23) & 94 (7) & 6 (7)\\
-78 (20) & 94 (6) & 6 (6)\\
-74 (30) & 93 (11) & 7 (11)\\
+47 (22) & 59 (17) & 41 (17)\\
+79 (22) & 94 (7) & 6 (7)\\
+78 (19) & 94 (6) & 6 (6)\\
+75 (32) & 93 (11) & 7 (11)\\
 \bottomrule
 \end{tabular}
 
@@ -385,7 +388,7 @@ Word & \multicolumn{1}{c}{Phoneme} & \multicolumn{1}{c}{NLD}\\
 \caption{(\#fig:Fig2-scores by age)NWR whole-word scores for individual participants as a function of age and sex (blue = boys, pink = girls).}
 \end{figure}
 
-Our final exploratory analysis assessed whether variation in scores was structured by factors that vary across individuals. As shown in Figure 2, there was a greater deal of variance in earlier than later ages, with significantly higher NWR scores for older children (Spearman's rank correlation, given inequality of variance, rho (1,519.81) = 0.34, p = 0.10). In contrast, there was no clear association between NWR scores, on the one hand, and sex (t (0.18) = 21.34, p = 0.86), birth order (2,630.74) = -0.14, p = 0.50) or maternal education (2,091.92) = 0.09, p = 0.67)
+Our final exploratory analysis assessed whether variation in scores was structured by factors that vary across individuals. As shown in Figure 2, there was a greater deal of variance in earlier than later ages, with significantly higher NWR scores for older children (Spearman's rank correlation, given inequality of variance, rho (1,548.04) = 0.33, p = 0.12). In contrast, there was no clear association between NWR scores, on the one hand, and sex (t (0.18) = 21.34, p = 0.86), birth order (data missing for 17 children, 2,678.47) = -0.16, p = 0.44) or maternal education (data missing for 2 children, 2,091.92) = 0.09, p = 0.67)
 
 \hypertarget{discussion}{%
 \subsection{Discussion}\label{discussion}}
@@ -479,6 +482,9 @@ Estes, K. G., Evans, J. L., \& Else-Quest, N. M. (2007). Differences in the nonw
 \leavevmode\hypertarget{ref-farmani2018normalization}{}%
 Farmani, H., Sayyahi, F., Soleymani, Z., Labbaf, F. Z., Talebi, E., \& Shourvazi, Z. (2018). Normalization of the non-word repetition test in farsi-speaking children. \emph{Journal of Modern Rehabilitation}, \emph{12}(4), 217--224.
 
+\leavevmode\hypertarget{ref-gallagher2014identity}{}%
+Gallagher, G. (2014). An identity bias in phonotactics: Evidence from Cochabamba Quechua. \emph{Laboratory Phonology}, \emph{5}(3), 337--378. \url{https://doi.org/10.1515/lp-2014-0012}
+
 \leavevmode\hypertarget{ref-gallon2007non}{}%
 Gallon, N., Harris, J., \& Van der Lely, H. (2007). Non-word repetition: An investigation of phonological complexity in children with grammatical sli. \emph{Clinical Linguistics \& Phonetics}, \emph{21}(6), 435--455.
 
@@ -499,6 +505,9 @@ Meir, N., \& Armon-Lotem, S. (2017). Independent and combined effects of socioec
 
 \leavevmode\hypertarget{ref-meir2016disentangling}{}%
 Meir, N., Walters, J., \& Armon-Lotem, S. (2016). Disentangling sli and bilingualism using sentence repetition tasks: The impact of l1 and l2 properties. \emph{International Journal of Bilingualism}, \emph{20}(4), 421--452.
+
+\leavevmode\hypertarget{ref-phoible}{}%
+Moran, S., \& McCloy, D. (Eds.). (2019). \emph{PHOIBLE 2.0}. Jena: Max Planck Institute for the Science of Human History. Retrieved from \url{https://phoible.org/}
 
 \leavevmode\hypertarget{ref-piazzalunga2019articulatory}{}%
 Piazzalunga, S., Previtali, L., Pozzoli, R., Scarponi, L., \& Schindler, A. (2019). An articulatory-based disyllabic and trisyllabic non-word repetition test: Reliability and validity in italian 3-to 7-year-old children. \emph{Clinical Linguistics \& Phonetics}, \emph{33}(5), 437--456.

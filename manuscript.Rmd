@@ -25,7 +25,7 @@ authornote: |
 
   
 abstract: >
-  ADD
+   In nonword repetition (NWR) studies, participants are presented auditorily with an item that is phonologically legal but lexically meaningless in the local language. Accuracy is thought to reflect long-term phonological knowledge as well as online phonological working memory and flexible production patterns.In this study, we report on NWR results among children learning Yêly Dnyé, an isolate spoken in Rossel Island, PNG, with an unusually dense phonological inventory. This study contributes to three lines of research. First, we document that non-word items containing typologically rare sounds are repeated accurately less often that non-words containing more common sounds. Second, we document rather weak effects of item length, contributing to other research suggesting that length effects may be language-specific. Third, we do not find strong individual variation effects in this population, contrary to previous results documenting strong age-related effects. Together, these data provide a unique view of online phonological processing in a seldom-studied language, and contribute to both typological and language acquisition research.
 
 
 
@@ -60,6 +60,7 @@ require("papaja")
 library(kableExtra)
 library(gdata)
 library(ggplot2)
+library(lme4)
 
 correspondances=matrix( #list correspondances always by pairs, orthography then phonology
   c(
@@ -124,22 +125,20 @@ correspondances=matrix( #list correspondances always by pairs, orthography then 
 <!-- - do $ iconv -f utf-16le -t utf-8 stimuli.txt > stimconv.txt -->
 <!-- - do $ iconv -f utf-16le -t utf-8 segments.txt > segconv.txt -->
 
-## TODO
-
-- double check demo: exact age missing: 78, 82, 83, 115, 119; rough age missing 78, there's a mixture of BGMF in sex, first born is missing, round age
-- then add analysis of NWR as a function of frequency
-- draft discussion
-- draft abstract
 
 ## TODO Middy
 
-- look through for **mc**
+- look through this manuscript for bits of text to be written by **mc**
+- help with table 1 (formatting & making it appear, because it's broken by the phonological representations)
+- do you think Figure 2 should be done with phonetic symbols? If yes, could you try to implement that?
+- double check demo -- probably start with the xlsx version that has the children's first names, date of birth, and date of test. I looked again at my local files (still haven't checked the labs' ones) and I'm surprised I have maternal education for more children than I have birth order for... If you correct this, to generate the csv I also round the age, assign age.rounded to reported age (in years) when DOB is missing, remove first names, DOB, DOTest and age.precise before pushing to github
 - double check my frequency entries in segments.xlsx using the search function in https://phoible.org/parameters; take a look at http://phoible.github.io/conventions/ in case you see something about double articulation (I didn't find tp or lBj)
 - double check phonological implementation of stimuli in stimuli.xlsx 
 - for both of the above, if you make any changes, they need to be re-saved as UTF16 txt file, and then converted (see remember above)
 - double check also stim_seg_freq -- why are some items still with NA freq?
 - consent, "correct", "accuracy", "performance"
-- help with table 1 (formatting & making it appear, because it's broken by the phonological representations)
+- draft discussion
+
 
 ## TODO later
 - probably turn summary of types of error into a table; use proportion of correctly produced rather than number; use first attempts rather than the whole data set
@@ -151,7 +150,7 @@ correspondances=matrix( #list correspondances always by pairs, orthography then 
 
 Although infants begin to learn about their native language's phonology within the first year, many studies suggest that in perception and production, in phonetics and phonology, their knowledge continues to develop throughout childhood [e.g., @hazan2000development]. One common task in this line of research is nonword repetition (NWR). In NWR studies, participants are presented auditorily with an item that is phonologically legal but lexically meaningless in the language children are learning. The child should immediately try to say it back without changing anything. Accuracy is thought to reflect long-term phonological knowledge (which allows the child to perceive the item accurately even though it is not a real word they have encountered before) as well as online phonological working memory (to encode the item in the interval between hearing it and saying it back) and flexible production patterns (to produce the item accurately even though it had never been pronounced before). 
 
-NWR has been used to seek answers to a variety of theoretical questions, including what  the links between phonology, working memory, and the lexicon are [@bowey2001nonword]. It is also frequently used as for applications, notably  as a diagnostic for language delays and disorders [@estes2007differences]. Since non-words can be generated in any language, it has attracted the attention of researchers working in multilingual and linguistically diverse environments,  particularly in Europe [@meir2016disentangling;@is08042009language]. 
+NWR has been used to seek answers to a variety of theoretical questions, including what  the links between phonology, working memory, and the lexicon are [@bowey2001nonword], and to assess the extent to which apparent phonological constraints found in the lexicon affect online production [@gallagher2014identity]. It is also frequently used as for applications, notably  as a diagnostic for language delays and disorders [@estes2007differences]. Since non-words can be generated in any language, it has attracted the attention of researchers working in multilingual and linguistically diverse environments,  particularly in Europe [@meir2016disentangling;@is08042009language]. 
 
 
 In this study, we report on NWR results among children learning Yêly Dnyé, an isolate spoken in Rossel Island, PNG, with an unusually dense phonological inventory.  The present report uses these unique data to contribute to several lines of research. First, we  made sure that some of the non-word items contained typologically rare and/or  challenging sounds, so that we can contribute to the study of whether rare sounds are disadvantaged in perception and/or production, both in terms of overall accuracy of repetition and patterns of mispronunciation. Second, we look at the effects of item length, since previous NWR research has uncovered variable effects. Third, we contribute to the basic NWR literature by contributing an additional data point for children learning a rarely-studied language and culture, and further investigating whether there are structured sources that account for individual variation.
@@ -303,6 +302,8 @@ A script was written to randomize all tokens from all children, pairing each wit
 
 Some NWR studies employ phoneme-based scoring in addition to or instead of word-level accuracy [e.g., @cristia2020infant]. We scored items in terms of the number of phonemes that could be aligned across the target and attempt, divided by the number of phonemes of whichever item was longer (the target or the attempt). Although previous work does not use distance metrics, we additionally report those.
 
+Additionally, we looked up each phoneme in each target word in the Phoible database [@phoible]. We entered the number of languages in which each phoneme was found, as well as what percentage of languages in the database that represented. We could not find a small number of phonemes in the database, and treat those as NA values that do not contribute to the target-level global average phone cross-linguistic frequency, although an alternative would be to attribute them a very small number. * **mc** do you agree with this decision or shall we do the alternative?* 
+
 Finally, for describing children's patterns of errors, all repetitions of a given target were taken into account. We describe the proportion of items where the change resulted in a real word (semantic errors); and classify the most common phonological errors.
 
 ### Participants
@@ -314,9 +315,9 @@ This study was approved as part of a larger research effort by **@ac add info fr
 # fulldemo=fulldemo[,-2] #remove children's names
 # fulldemo$dob=as.Date(as.character(fulldemo$DOB.ISO),format="%Y%m%d")
 # fulldemo$test=as.Date(as.character(fulldemo$Date),format="%Y%m%d")
-# fulldemo$age.exact=as.numeric(difftime(fulldemo$test,fulldemo$dob,unit="weeks"))/52.25
+# fulldemo$age.rounded=as.numeric(difftime(fulldemo$test,fulldemo$dob,unit="weeks"))/52.25
 # fulldemo$Age=as.numeric(as.character(fulldemo$Age))
-# plot(fulldemo$Age~fulldemo$age.exact)
+# plot(fulldemo$Age~fulldemo$age.rounded)
 # write.csv(fulldemo,"nwr-demo.csv")
                             
 read.csv("NWR-demo.csv",header=T)->demo
@@ -327,13 +328,13 @@ demo$familyID=as.character(demo$familyID)
 demo$familyID[is.na(demo$familyID)]<-paste("k",demo$ID[is.na(demo$familyID)])
 
 subset(demo,included=="yes" & Age <12 & !is.na(Age))->inc
-#if age.exact is missing, use reported age
-inc$age.exact[is.na(inc$age.exact)]<-inc$Age[is.na(inc$age.exact)]
+#if age.rounded is missing, use reported age
+inc$age.rounded[is.na(inc$age.rounded)]<-inc$Age[is.na(inc$age.rounded)]
 #summary(inc)
 table(inc$birthOrder)->mytab
 ```
 
-A total `r dim(demo)[1]` children were tested, from `r length(levels(factor(demo$familyID)))` of families, in five hamlets. Some children could not be included for the following reasons: refused participation or failed to repeat items presented over headphones even after coaching (N=`r sum(demo$included=="didn\xd5t repeat")`), spoke too softly to allow offline coding (N=`r sum(demo$included=="spoke too softly")`). In addition, `r sum(demo$Age >12 | demo$included=="too old",na.rm=T)` teenagers were tested to put younger children at ease; their data is not included in analyses below. The remaining `r dim(inc)[1]` children (`r sum(inc$Sex=="G")` girls) were aged `r round(mean(inc$age.exact),2)` years (range `r round(min(inc$age.exact),2)`-`r round(max(inc$age.exact),2)` years). There were `r sum(inc$monolingual=="yes", na.rm=T)` children exposed only to Yélî in the home, `r sum(inc$monolingual=="no", na.rm=T)` children who were also exposed to another language in the home, and , `r sum(is.na(inc$monolingual))` for whom this information was missing. Maternal years of education averaged `r round(mean(inc$matEd,na.rm=T),2)` years (range `r round(min(inc$matEd,na.rm=T),2)`-`r round(max(inc$matEd,na.rm=T),2)` years; `r sum(is.na(inc$matEd))` children had this information missing).[^1] In terms of birth order, `r mytab[1]` were first borns, `r mytab[2]` second,  `r mytab[3]` third,  `r mytab[4]` forth,  `r mytab[5]` fifth, `r mytab[6]` sixth, and  `r mytab[7]` did not have this information.
+A total `r dim(demo)[1]` children were tested, from `r length(levels(factor(demo$familyID)))` of families, in five hamlets. Some children could not be included for the following reasons: refused participation or failed to repeat items presented over headphones even after coaching (N=`r sum(demo$included=="didn\xd5t repeat")`), spoke too softly to allow offline coding (N=`r sum(demo$included=="spoke too softly")`). In addition, `r sum(demo$Age >12 | demo$included=="too old",na.rm=T)` teenagers were tested to put younger children at ease; their data is not included in analyses below. The remaining `r dim(inc)[1]` children (`r sum(inc$Sex=="G")` girls) were aged `r round(mean(inc$age.rounded),2)` years (range `r round(min(inc$age.rounded),2)`-`r round(max(inc$age.rounded),2)` years). There were `r sum(inc$monolingual=="yes", na.rm=T)` children exposed only to Yélî in the home, `r sum(inc$monolingual=="no", na.rm=T)` children who were also exposed to another language in the home, and , `r sum(is.na(inc$monolingual))` for whom this information was missing. Maternal years of education averaged `r round(mean(inc$matEd,na.rm=T),2)` years (range `r round(min(inc$matEd,na.rm=T),2)`-`r round(max(inc$matEd,na.rm=T),2)` years; `r sum(is.na(inc$matEd))` children had this information missing).[^1] In terms of birth order, `r mytab[1]` were first borns, `r mytab[2]` second,  `r mytab[3]` third,  `r mytab[4]` forth,  `r mytab[5]` fifth, `r mytab[6]` sixth, and  `r mytab[7]` did not have this information.
 
 [^1]: Education is often reported in even years because people typically complete two-year cycles.
 
@@ -359,7 +360,7 @@ trnsc$birthOrder=as.numeric(trnsc$birthOrder)
 
 ```{r Fig1-first_vs_others, ig.pos = "T!", fig.width=5, fig.height=5, fig.cap="NWR scores for individual participants averaging separately their first attempts and all other attempts."}
 
-aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$age.exact,trnsc$attempt),mean)->pwcm_att
+aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$age.rounded,trnsc$attempt),mean)->pwcm_att
 colnames(pwcm_att)<-c("ID","Age","Attempt","Word")
 
 #remove children who do not have both first & subsequent attempts
@@ -388,9 +389,9 @@ trnsc=trnsc[trnsc$attempt=="first",]
 
 ```{r overall}
 
-aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$Sex,trnsc$age.exact,trnsc$birthOrder,trnsc$matEd),mean)->overall
-aggregate(trnsc$pc*100,by=list(trnsc$id,trnsc$Sex,trnsc$age.exact,trnsc$birthOrder,trnsc$matEd),mean)->pc
-aggregate(trnsc$nld*100,by=list(trnsc$id,trnsc$Sex,trnsc$age.exact,trnsc$birthOrder,trnsc$matEd),mean)->nld
+aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$Sex,trnsc$age.rounded,trnsc$birthOrder,trnsc$matEd),mean)->overall
+aggregate(trnsc$pc*100,by=list(trnsc$id,trnsc$Sex,trnsc$age.rounded,trnsc$birthOrder,trnsc$matEd),mean)->pc
+aggregate(trnsc$nld*100,by=list(trnsc$id,trnsc$Sex,trnsc$age.rounded,trnsc$birthOrder,trnsc$matEd),mean)->nld
 overall=cbind(overall,pc$x,nld$x)
 colnames(overall)<-c("ID","Sex","Age","BrthO","matEd","Word","Phoneme","NLD")
 
@@ -405,11 +406,24 @@ The overall NWR score was M = `r round(mean(overall$Word))`% (SD = `r round(sd(o
 
 ### NWR as a function of cross-linguistic phone frequency
 
-```{r}
+In this analysis, we were interested in variation in performance as a function of the average frequency with which sounds composing individual target words are found in languages over the world. To look at this, we fit a mixed logistic regression, in which the outcome variable was whether the non-word was correctly repeated or not. The fixed effects of interest was the average cross-linguistic phone frequency; we also included child age as a control fixed effect, and child ID & target ID as random variables.
 
-
+```{r xling-freq-ana}
+xl_fr=glmer(correct~avg_fr+age.rounded+(1|file) + (1|target),data=trnsc,family="binomial")
+mycoeff=round(summary(xl_fr)$coefficients,3)
 ```
 
+
+We could include 885 observations (**why -- shouldn't it be 1k??**), from 41 children producing in any given trial one of 41 potential target words. The analysis revealed a significant estimate for the average cross-linguistic frequency of phones in the target words (ß = `r mycoeff["avg_fr","Estimate"]`, SE ß = `r mycoeff["avg_fr","Std. Error"]`, p = `r mycoeff["avg_fr","Pr(>|z|)"]`): Target words with phones found more frequently across languages had a higher proportion of words that were correctly repeated, as clear in Figure 2. 
+
+
+```{r Fig2-xling_freq, ig.pos = "T!", fig.width=5, fig.height=5, fig.cap="NWR scores for individual target words as a function of the average frequency with which each phone is found across languages."}
+aggregate(trnsc$correct*100,by=list(trnsc$target,trnsc$avg_fr),mean)->xling
+colnames(xling)<-c("Target","Avg_fr","Word")
+plot(xling$Word~xling$Avg_fr,lty=3,ylab="NWR scores (% words)",xlab="Average phone cross-ling frequency",type="n")
+text(xling$Word~xling$Avg_fr,labels=xling$Target,cex=.5)
+abline(lm(xling$Word~xling$Avg_fr))
+```
 
 
 ```{r diffic,echo=F}
@@ -438,7 +452,7 @@ del_tab= table(del_bank)[allVC]
 trnsc$meaning[grep("English",trnsc$meaning)]<-NA
 ```
 
-We investigated patterns of deletion and substitution. Deletions were relatively rare, with only `r sum(del_tab[c(oralVs,nasalVs)])` vowels deleted, and `r sum(del_tab[c(simplexCs,complexCs)])` consonants. 
+Next, we investigated patterns of deletion and substitution. Deletions were relatively rare, with only `r sum(del_tab[c(oralVs,nasalVs)])` vowels deleted, and `r sum(del_tab[c(simplexCs,complexCs)])` consonants. 
 
 As for substitutions, it was as common for a nasal vowel to be produced as an oral vowel as vice versa (`r sum(sub_tab[oralVs,nasalVs])` oral target vowels produced as nasal vowels, `r sum(sub_tab[nasalVs,oralVs])` nasal target vowels produced as oral vowels). Substitutions in which the oral nature was preserved but the quality of the vowel was changed were a great deal more common than changes in quality among nasal vowels (`r sum(sub_tab[oralVs,oralVs])` oral vowels produced with a different quality; `r sum(sub_tab[nasalVs,nasalVs])` nasal vowels produced with a different quality). As for consonants, asymmetries were very marked with more complex consonants (specifically `r paste0(complexCs)`) mispronounced as simple ones (specifically `r paste0(simplexCs)`, `r sum(sub_tab[complexCs,simplexCs])`) than vice versa (`r sum(sub_tab[simplexCs,complexCs])`). Simple consonants were mispronounced as other simple consonants quite frequently (`r sum(sub_tab[simplexCs,simplexCs])` simple consonants mispronounced as other simple ones, compared to `r sum(sub_tab[complexCs,complexCs])` complex ones).
 
@@ -452,9 +466,9 @@ Finally, we looked into the frequency with which mispronunciations resulted in r
 ### Accuracy a function of item length 
 
 ```{r bylength}
-aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$age.exact,trnsc$type),mean)->by_length
-aggregate(trnsc$pc*100,by=list(trnsc$id,trnsc$age.exact,trnsc$type),mean)->pc
-aggregate(trnsc$nld*100,by=list(trnsc$id,trnsc$age.exact,trnsc$type),mean)->nld
+aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$age.rounded,trnsc$type),mean)->by_length
+aggregate(trnsc$pc*100,by=list(trnsc$id,trnsc$age.rounded,trnsc$type),mean)->pc
+aggregate(trnsc$nld*100,by=list(trnsc$id,trnsc$age.rounded,trnsc$type),mean)->nld
 by_length=cbind(by_length,pc$x,nld$x)
 colnames(by_length)<-c("ID","Age","Length","Word","Phoneme","NLD")
 
@@ -498,7 +512,7 @@ cor.test(overall$Word,overall$matEd,method="s")->corme
 ```
 
 
-Our final exploratory analysis assessed whether variation in scores was structured by factors that vary across individuals. As shown in Figure 2, there was a greater deal of variance in earlier than later ages, with significantly higher NWR scores for older children  (Spearman's rank correlation, given inequality of variance, rho (`r corage$statistic`) = `r corage$estimate`, p = `r corage$p.value`). In contrast, there was no clear association between NWR scores, on the one hand, and sex (t (`r tsex$statistic`) = `r tsex$parameter`, p = `r tsex$p.value`), birth order  (`r corbo$statistic`) = `r corbo$estimate`, p = `r corbo$p.value`) or maternal education  (`r corme$statistic`) = `r corme$estimate`, p = `r corme$p.value`)
+Our final exploratory analysis assessed whether variation in scores was structured by factors that vary across individuals. As shown in Figure 2, there was a greater deal of variance in earlier than later ages, with significantly higher NWR scores for older children  (Spearman's rank correlation, given inequality of variance, rho (`r corage$statistic`) = `r corage$estimate`, p = `r corage$p.value`). In contrast, there was no clear association between NWR scores, on the one hand, and sex (t (`r tsex$statistic`) = `r tsex$parameter`, p = `r tsex$p.value`), birth order  (data missing for `r sum(is.na(demo$birthOrder[demo$included=="yes"]))` children, `r corbo$statistic`) = `r corbo$estimate`, p = `r corbo$p.value`) or maternal education  (data missing for `r sum(is.na(demo$matEd[demo$included=="yes"]))` children, `r corme$statistic`) = `r corme$estimate`, p = `r corme$p.value`)
 
 
 
