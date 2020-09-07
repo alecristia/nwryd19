@@ -87,7 +87,8 @@ trnsc$correct[trnsc$correct==0 & trnsc$target_ortho == trnsc$mp & !is.na(trnsc$m
 
 # create phonological correspondance matrix
 # NOTE!! NON INTUITIVE MAPPING!!!! DO NOT READ THE OUTPUT BELIEVING IT IS PSEUDO IPA!!!
-# NOTE2!!! it's better if the chars are not accented & since we don't distinguish long & short, we'll use capitals for nasal & small caps for oral, with no distinction between short and long (see above)
+# NOTE2!!! it's better if the chars are not accented & since we don't distinguish long & short, 
+# we'll use capitals for nasal & small caps for oral, with no distinction between short and long (see above)
 correspondances=matrix( #list correspondances always by pairs, orthography then phonology
   c(
     #nasal  to unichar
@@ -143,23 +144,71 @@ for(i in 1:dim(correspondances)[1]) { #transform into unicharacter
 
 #calculate Levinshtein's distances 
 trnsc$ins=trnsc$del=trnsc$sub=trnsc$nchar=trnsc$trafos=trnsc$tarlen=NA
-substitution_bank=NULL
-deletion_bank=NULL
-for(i in grep("0",trnsc$correct)){
+substitution_bank=deletion_bank=match_bank=substitution_bank_try1=deletion_bank_try1=match_bank_try1=NULL
+
+for(i in grep("0",trnsc$correct)){ #this goes through all items with errors (" grep("0",trnsc$correct)")
   #lev
   lev=adist(trnsc[i,c("mp_uni")],trnsc[i,c("target_uni")],count=T)
   trnsc$ins[i]<-attributes(lev)$counts[,,"ins"]
   trnsc$del[i]<-attributes(lev)$counts[,,"del"]
   trnsc$sub[i]<-attributes(lev)$counts[,,"sub"]
-  trnsc$trafos[i]=attributes(lev)$trafos
+  trnsc$trafos[i]=attributes(lev)$trafos #M, I, D and S indicating a match, insertion, deletion and substitution
   trnsc$nchar[i]=nchar(attributes(lev)$trafos)
   trnsc$tarlen[i]=nchar(trnsc$target_uni[i])
+  
+  #extract substitutions & add them to the bank
   sublist=which(strsplit(attributes(lev)$trafos, "")[[1]]=="S")
   substitution_bank=rbind(substitution_bank,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][sublist],strsplit(trnsc[i,c("mp_uni")],"")[[1]][sublist]))
+  
+  #same for deletions  
   dellist=which(strsplit(attributes(lev)$trafos, "")[[1]]=="D")
   deletion_bank=rbind(deletion_bank,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][dellist]))
+  
+  #end with matches
+  matlist=which(strsplit(attributes(lev)$trafos, "")[[1]]=="M")
+  match_bank=rbind(match_bank,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][matlist]))
+  
+  #if item is first attempt, add to try1
+  if(trnsc[i,"attempt"]=="first") {
+    substitution_bank_try1=rbind(substitution_bank_try1,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][sublist],strsplit(trnsc[i,c("mp_uni")],"")[[1]][sublist]))
+    deletion_bank_try1=rbind(deletion_bank_try1,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][dellist]))
+    match_bank_try1=rbind(match_bank_try1,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][matlist]))
+    
+    }
 }
 
+for(i in grep("1",trnsc$correct)){ #this goes through all items without errors (" grep("1",trnsc$correct)")
+  #lev
+  lev=adist(trnsc[i,c("target_uni")],trnsc[i,c("target_uni")],count=T)
+  
+  #for ease of reading the code, we leave the section that does insertions, deletions, substitutions -- but we know there are only matches here ;)
+  trnsc$ins[i]<-attributes(lev)$counts[,,"ins"]
+  trnsc$del[i]<-attributes(lev)$counts[,,"del"]
+  trnsc$sub[i]<-attributes(lev)$counts[,,"sub"]
+  trnsc$trafos[i]=attributes(lev)$trafos #M, I, D and S indicating a match, insertion, deletion and substitution
+  trnsc$nchar[i]=nchar(attributes(lev)$trafos)
+  trnsc$tarlen[i]=nchar(trnsc$target_uni[i])
+  
+  #extract substitutions & add them to the bank
+  sublist=which(strsplit(attributes(lev)$trafos, "")[[1]]=="S")
+  substitution_bank=rbind(substitution_bank,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][sublist],strsplit(trnsc[i,c("mp_uni")],"")[[1]][sublist]))
+  
+  #same for deletions  
+  dellist=which(strsplit(attributes(lev)$trafos, "")[[1]]=="D")
+  deletion_bank=rbind(deletion_bank,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][dellist]))
+  
+  #end with matches
+  matlist=which(strsplit(attributes(lev)$trafos, "")[[1]]=="M")
+  match_bank=rbind(match_bank,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][matlist]))
+  
+  #if item is first attempt, add to try1
+  if(trnsc[i,"attempt"]=="first") {
+    substitution_bank_try1=rbind(substitution_bank_try1,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][sublist],strsplit(trnsc[i,c("mp_uni")],"")[[1]][sublist]))
+    deletion_bank_try1=rbind(deletion_bank_try1,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][dellist]))
+    match_bank_try1=rbind(match_bank_try1,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][matlist]))
+    
+  }
+}
 
 trnsc$ld=rowSums(trnsc[,c("ins","del","sub")])
 trnsc$nld=trnsc$ld/trnsc$nchar
@@ -180,7 +229,16 @@ for(i in dim(correspondances)[1]:1) { #
 
 substitution_bank[order(substitution_bank[,1]),]->substitution_bank
 write.table(substitution_bank,"substitution_bank.txt",row.names=F,sep="\t")
+substitution_bank_try1[order(substitution_bank_try1[,1]),]->substitution_bank_try1
+write.table(substitution_bank_try1,"substitution_bank_try1.txt",row.names=F,sep="\t")
 
 sort(deletion_bank)->deletion_bank
 write.table(deletion_bank,"deletion_bank.txt",row.names=F,sep="\t")
+sort(deletion_bank_try1)->deletion_bank_try1
+write.table(deletion_bank_try1,"deletion_bank_try1.txt",row.names=F,sep="\t")
+
+sort(match_bank)->match_bank
+write.table(match_bank,"match_bank.txt",row.names=F,sep="\t")
+sort(match_bank_try1)->match_bank_try1
+write.table(match_bank_try1,"match_bank_try1.txt",row.names=F,sep="\t")
 
