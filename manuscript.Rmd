@@ -467,23 +467,98 @@ trnsc$meaning[grep("English",trnsc$meaning)]<-NA
 #Create proportion table
 #a reasonable way to calculate proportion is the proportion of times 
 #a target was produced as X out of the total number of times a target appeared
-#so the denominator is not the number of substitutions (which appears in sub_tab)
-#but rather the sum of sub, del, mat
-#a check: colnames(sub_tab) == names(del_tab)
-#a check: names(match_tab) == names(del_tab)
 
+#so the denominator is not the number of substitutions (which appears in sub_tab)
+#but rather the sum of targets appearing in sub, del, & mat
+#check: colnames(sub_tab) == names(del_tab)
+#check: names(match_tab) == names(del_tab)
 denom_vec=rowSums(sub_tab) + del_tab + match_tab
-#THIS IS STILL BROKEN
-#prop_cat=data.frame(apply(all_far,2,dodiv)*100) #generates precision because columns
-#prop_cat=all_far/rowSums(all_far)*100 #generates recall because rows
-#sub_tab_prop=t(t(matrix(sub_tab,ncol=length(denom_vec)))/matrix(denom_vec) )
+
+#all numbers below are percentages (not proportions), and they sum to 100 across sub, del, mat at the TARGET level
+
+#this means: divide each column by corresponding number in denominator vector
+#sub_pc has the same shape as the original sub_tab, namely targets as rows, realization as columns
+sub_pc=round(sub_tab/c(denom_vec)*100,2)
+
+del_pc=round(del_tab/denom_vec*100,2)
+mat_pc=round(match_tab/denom_vec*100,2)
+
+#check that indeed:
+#all numbers ... sum to 100 across sub, del, mat at the TARGET level 
+#NOTE! if you round above, then these don't sum to 100, so don't round very much...
+#rowSums(sub_pc, na.rm=T) + del_pc + mat_pc
 ```
 
+**use proportion of correctly produced rather than number; DONE**
+
+**a2m use first attempts rather than the whole data set: having second thoughts. To be clear: the argument for using first attempts only is that all of the other analyses are on kids' first attempts, rather than all of their attempts, so we should use just first attempts here because it may confuse readers & it is more consistent. BUT there are fewer mistakes this way, which is Options 1 and 2 below has lots of zeros... CF Option 3 further down**
+
+**a2m probably turn the paragraph on substitutions into a table: having second thoughts, the table would look just like a para, no?**
+
+
+**Option 1: just numbers, first attempts only **
 Next, we investigated patterns of deletion and substitution. Deletions were relatively rare, with only `r sum(del_tab[c(oralVs,nasalVs)])` vowels deleted, and `r sum(del_tab[c(simplexCs,complexCs)])` consonants. 
 
 As for substitutions, it was as common for a nasal vowel to be produced as an oral vowel as vice versa (`r sum(sub_tab[oralVs,nasalVs])` oral target vowels produced as nasal vowels, `r sum(sub_tab[nasalVs,oralVs])` nasal target vowels produced as oral vowels). Substitutions in which the oral nature was preserved but the quality of the vowel was changed were a great deal more common than changes in quality among nasal vowels (`r sum(sub_tab[oralVs,oralVs])` oral vowels produced with a different quality; `r sum(sub_tab[nasalVs,nasalVs])` nasal vowels produced with a different quality). As for consonants, asymmetries were very marked with more complex consonants (specifically `r paste0(complexCs)`) mispronounced as simple ones (specifically `r paste0(simplexCs)`, `r sum(sub_tab[complexCs,simplexCs])`) than vice versa (`r sum(sub_tab[simplexCs,complexCs])`). Simple consonants were mispronounced as other simple consonants quite frequently (`r sum(sub_tab[simplexCs,simplexCs])` simple consonants mispronounced as other simple ones, compared to `r sum(sub_tab[complexCs,complexCs])` complex ones).
 
-**probably turn this into a table; use proportion of correctly produced rather than number; use first attempts rather than the whole data set**
+**Option 2: numbers and proportions, first attempts only**
+Next, we investigated patterns of deletion and substitution. Deletions were relatively rare, with only `r sum(del_tab[c(oralVs,nasalVs)])` vowels deleted (about `r mean(del_pc[c(oralVs,nasalVs)],na.rm=T)`% of all vowel targets), and `r sum(del_tab[c(simplexCs,complexCs)])` consonants deleted (about `r mean(del_pc[c(simplexCs,complexCs)],na.rm=T)`% of all consonant targets). 
+
+As for substitutions, it was as common for a nasal vowel to be produced as an oral vowel as vice versa (`r sum(sub_tab[oralVs,nasalVs])` oral target vowels produced as nasal vowels or about `r mean(sub_pc[oralVs,nasalVs],na.rm=T)`% out of all oral vowel targets, `r sum(sub_tab[nasalVs,oralVs])` nasal target vowels produced as oral vowels or about `r mean(sub_pc[nasalVs,oralVs],na.rm=T)`% out of all nasal vowel targets). Substitutions in which the oral nature was preserved but the quality of the vowel was changed were a great deal more common than changes in quality among nasal vowels (`r sum(sub_tab[oralVs,oralVs])` oral vowels produced with a different quality or about `r mean(sub_pc[oralVs,oralVs],na.rm=T)`% out of all oral vowel targets; `r sum(sub_tab[nasalVs,nasalVs])` nasal vowels produced with a different quality or about `r mean(sub_pc[nasalVs,nasalVs],na.rm=T)`% out of all nasal vowel targets). As for consonants, asymmetries were very marked with more complex consonants (specifically `r paste0(complexCs)`) mispronounced as simple ones (specifically `r paste0(simplexCs)`, `r sum(sub_tab[complexCs,simplexCs])` times or  about `r mean(sub_pc[complexCs,simplexCs],na.rm=T)`% out of all complex consonant targets) than vice versa (`r sum(sub_tab[simplexCs,complexCs])` times or  about `r mean(sub_pc[complexCs,simplexCs],na.rm=T)`% out of all simple consonant targets). Simple consonants were mispronounced as other simple consonants quite frequently (`r sum(sub_tab[simplexCs,simplexCs])` simple consonants mispronounced as other simple ones or about `r mean(sub_pc[simplexCs,simplexCs],na.rm=T)`% out of all simple consonant targets, compared to `r sum(sub_tab[complexCs,complexCs])` complex ones or about `r mean(sub_pc[complexCs,complexCs],na.rm=T)`% out of all complex consonant targets).
+
+```{r diffic_all_attempts,echo=F}
+
+read.table("substitution_bank.txt",header=T)->sub_bank
+colnames(sub_bank)<-c("target","realization")
+sub_bank$target=factor(sub_bank$target,levels=allVC)
+sub_bank$realization=factor(sub_bank$realization,levels=allVC)
+
+sub_tab=table(sub_bank)[allVC,allVC]
+
+
+read.table("deletion_bank.txt",header=T)->del_bank
+colnames(del_bank)<-c("target")
+del_bank$target=factor(del_bank$target,levels=allVC)
+del_tab= table(del_bank)[allVC]
+
+read.table("match_bank.txt",header=T)->match_bank
+colnames(match_bank)<-c("target")
+match_bank$target=factor(match_bank$target,levels=allVC)
+match_tab= table(match_bank)[allVC]
+
+
+#remove English meanings
+trnsc$meaning[grep("English",trnsc$meaning)]<-NA
+
+#Create proportion table
+#a reasonable way to calculate proportion is the proportion of times 
+#a target was produced as X out of the total number of times a target appeared
+
+#so the denominator is not the number of substitutions (which appears in sub_tab)
+#but rather the sum of targets appearing in sub, del, & mat
+#check: colnames(sub_tab) == names(del_tab)
+#check: names(match_tab) == names(del_tab)
+denom_vec=rowSums(sub_tab) + del_tab + match_tab
+
+#all numbers below are percentages (not proportions), and they sum to 100 across sub, del, mat at the TARGET level
+
+#this means: divide each column by corresponding number in denominator vector
+#sub_pc has the same shape as the original sub_tab, namely targets as rows, realization as columns
+sub_pc=round(sub_tab/c(denom_vec)*100,2)
+
+del_pc=round(del_tab/denom_vec*100,2)
+mat_pc=round(match_tab/denom_vec*100,2)
+
+#check that indeed:
+#all numbers ... sum to 100 across sub, del, mat at the TARGET level 
+#NOTE! if you round above, then these don't sum to 100, so don't round very much...
+#rowSums(sub_pc, na.rm=T) + del_pc + mat_pc
+```
+
+**Option 3: numbers and proportions, ALL attempts**
+Next, we investigated patterns of deletion and substitution. Deletions were relatively rare, with only `r sum(del_tab[c(oralVs,nasalVs)])` vowels deleted (about `r mean(del_pc[c(oralVs,nasalVs)],na.rm=T)`% of all vowel targets), and `r sum(del_tab[c(simplexCs,complexCs)])` consonants deleted (about `r mean(del_pc[c(simplexCs,complexCs)],na.rm=T)`% of all consonant targets). 
+
+As for substitutions, it was as common for a nasal vowel to be produced as an oral vowel as vice versa (`r sum(sub_tab[oralVs,nasalVs])` oral target vowels produced as nasal vowels or about `r mean(sub_pc[oralVs,nasalVs],na.rm=T)`% out of all oral vowel targets, `r sum(sub_tab[nasalVs,oralVs])` nasal target vowels produced as oral vowels or about `r mean(sub_pc[nasalVs,oralVs],na.rm=T)`% out of all nasal vowel targets). Substitutions in which the oral nature was preserved but the quality of the vowel was changed were a great deal more common than changes in quality among nasal vowels (`r sum(sub_tab[oralVs,oralVs])` oral vowels produced with a different quality or about `r mean(sub_pc[oralVs,oralVs],na.rm=T)`% out of all oral vowel targets; `r sum(sub_tab[nasalVs,nasalVs])` nasal vowels produced with a different quality or about `r mean(sub_pc[nasalVs,nasalVs],na.rm=T)`% out of all nasal vowel targets). As for consonants, asymmetries were very marked with more complex consonants (specifically `r paste0(complexCs)`) mispronounced as simple ones (specifically `r paste0(simplexCs)`, `r sum(sub_tab[complexCs,simplexCs])` times or  about `r mean(sub_pc[complexCs,simplexCs],na.rm=T)`% out of all complex consonant targets) than vice versa (`r sum(sub_tab[simplexCs,complexCs])` times  about `r mean(sub_pc[complexCs,simplexCs],na.rm=T)`% out of all simple consonant targets). Simple consonants were mispronounced as other simple consonants quite frequently (`r sum(sub_tab[simplexCs,simplexCs])` simple consonants mispronounced as other simple ones or about `r mean(sub_pc[simplexCs,simplexCs],na.rm=T)`% out of all simple consonant targets, compared to `r sum(sub_tab[complexCs,complexCs])` complex ones or about `r mean(sub_pc[complexCs,complexCs],na.rm=T)`% out of all complex consonant targets).
 
 
 Finally, we looked into the frequency with which mispronunciations resulted in real words. Nearly all of them were: `r round(sum(!is.na(trnsc$meaning))/sum(!is.na(trnsc$mispronunciation))*100)`%.
