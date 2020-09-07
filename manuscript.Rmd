@@ -43,7 +43,9 @@ lineno            : yes
 
 lang              : "english"
 class             : "man"
-output            : papaja::apa6_pdf
+output            :
+  papaja::apa6_pdf:
+    latex_engine: xelatex
 ---
 
 
@@ -248,23 +250,46 @@ A second list of candidate items was generated in 2019 by selecting complex cons
 
 The final list is composed of three practice items; 20 monoysllables containing sounds that are less frequent in the world's languages than singleton plosives; 8 bisyllables; 12 trisyllables; and 4 quadrisyllables (see Table 2).
 
-```{r tab2-stims}
+```{r tab2-stims, results = "asis"}
 #add orthographic representations targets & other stims chars
-stims <- read_delim("stimuli2.txt", delim = "\t")
-stims=stims[order(stims[,1]),-3]
-colnames(stims)<-c("Type","Orthographic","Phonological")
-cbindX(stims[stims$Type=="practice",],
-      stims[stims$Type==1,],
-      stims[stims$Type==2,],
-      stims[stims$Type==3,],
-      stims[stims$Type==4,])
+stims <- read_delim("stimuli2.txt", delim = "\t") %>%
+  arrange(factor(type, levels = c("practice", "1", "2", "3", "4"))) %>%
+  select(type, target_ortho, phono) %>%
+  rename("Type" = type, "Orthographic" = target_ortho, "Phonological" = phono)
 
-stims=stims[,-1]
+# probably a nicer way to do this but anyhow...
+practice.stims <- filter(stims, Type == "practice")[,2:3]
+practice.stims$row <- seq(1:nrow(practice.stims))
+syll1.stims <- filter(stims, Type == "1")[,2:3]
+syll1.stims$row <- seq(1:nrow(syll1.stims))
+syll2.stims <- filter(stims, Type == "2")[,2:3]
+syll2.stims$row <- seq(1:nrow(syll2.stims))
+syll3.stims <- filter(stims, Type == "3")[,2:3]
+syll3.stims$row <- seq(1:nrow(syll3.stims))
+syll4.stims <- filter(stims, Type == "4")[,2:3]
+syll4.stims$row <- seq(1:nrow(syll4.stims))
+stims.wide <- practice.stims %>%
+  full_join(syll1.stims, by = "row") %>%
+  full_join(syll2.stims, by = "row") %>%
+  full_join(syll3.stims, by = "row") %>%
+  full_join(syll4.stims, by = "row") %>%
+  select(-row) %>%
+  replace(is.na(.), "")
+colnames(stims.wide) <- c(
+  "Orth.", "Phon.",
+  "Orth.", "Phon.",
+  "Orth.", "Phon.",
+  "Orth.", "Phon.",
+  "Orth.", "Phon."
+)
 
-# mytab2 = kable(stims, "latex", booktabs = T,caption="NWR stimuli in orthographic and phonological representations.", row.names =F) %>%
-# kable_styling() %>%
-# add_header_above(c("Practice" = 2, "Monosyll" = 2, "Bisyll" = 2, "Trisyll" = 2, "Tetrasyll" = 2))
-# mytab2
+kable(stims.wide,
+  "latex", booktabs = T,
+  caption="NWR stimuli in orthographic and phonological representations.",
+  row.names =F) %>%
+  kable_styling() %>%
+  add_header_above(c("Practice" = 2, "Monosyll" = 2,
+    "Bisyll" = 2, "Trisyll" = 2, "Tetrasyll" = 2))
 
 #now that I added phonological representations, even this basic table chokes!
 # apa_table(stims,"NWR stimuli in orthographic and phonological representations.")
