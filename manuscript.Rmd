@@ -141,9 +141,9 @@ correspondances=matrix( #list correspondances always by pairs, orthography then 
 
 
 ## TODO later
-- probably turn summary of types of error into a table; use proportion of correctly produced rather than number; use first attempts rather than the whole data set
-- maybe add to the last ana the prevalence (ie out of all the gh which proportion get transformed)
-- maybe add analyses of score as a function of frequency (phones, diphones) in MC's corpus? (mc suggested, but I don't think we need it...)
+- probably turn summary of types of error into a table; use proportion of correctly produced rather than number; use first attempts rather than the whole data set DONE
+- maybe add to the last ana the prevalence (ie out of all the gh which proportion get transformed) DONE I think... (this item looks the same as one of the three above)
+- maybe add analyses of score as a function of frequency (phones, diphones) in MC's corpus? (mc suggested, but I don't think we need it...) - waiting until we talk about this
 
 
 ## Introduction
@@ -284,7 +284,7 @@ We tried to balance three desiderata: That children would not be unduly exposed 
 
 We visited four different hamlets once, and attempted to test all eligible children present at the time, to prevent the items 'spreading' through hearsay. In the first hamlet, we tested children in five different places, with some children being tested inside a house and others tested on the veranda. The complete list of places and the ways in which they met the desiderata mentioned above can be found in the raw data, available from online supplementary materials.
  <!--M2A: I didn't look for the SM yet, but probably best not to provide exact hamlet names-->
-
+<!--a2m: good point! fixed-->
 
 The child was donned a headset (**xx **mc** please fill in** for most of the children, SHURE WH20 XLR headset with a dynamic microphone for the rest), recorded into the left channel into a Tascam DR40x digital recorder. For most children, the headset could not stay comfortably on the child's head, and thus it was placed on the child's shoulders, with the microphone carefully placed close to the child's mouth. A local informant sat next to the child, to would provide the instructions and, if needed, coach the child to make sure, using the three practice items as well as real words, that they understood that the task was to repeat the items precisely without changing anything. An experimenter (the first author) delivered the elicitation stimuli to the local informant and the child over headphones. 
 
