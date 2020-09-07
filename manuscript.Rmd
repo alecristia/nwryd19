@@ -308,7 +308,7 @@ Finally, for describing children's patterns of errors, all repetitions of a give
 
 ### Participants
 
-This study was approved as part of a larger research effort by **@ac add info from Middy's FAIR reply**. Participation was voluntary, with children being invited to come and participate. Regardless of how they performed, children were provided with a snack as compensation. Children who came up to participate but then refused were nonetheless provided with the snack. 
+This study was approved as part of a larger research effort by Marisa Casillas, with the research protocol having been approved by the IRB committee entitled The Ethics Committee of the Faculty of Social Sciences (Ethiek Commissie van de faculteit der Sociale Wetenschappen; ECSW) of Radboud University, Nijmegen, The Netherlands.  The approval for work outside of the Netherlands came as an amendment to the general research line on language development research (original request: ECSW2017-3001-474 Manko-Rowland; amendment: ECSW-2018-041). Participation was voluntary, with children being invited to come and participate. Regardless of how they performed, children were provided with a snack as compensation. Children who came up to participate but then refused were nonetheless provided with the snack. 
 
 ```{r demo}
 # read.csv("NWR-test-log_FINAL.csv",header=T,sep=";")->fulldemo
@@ -435,7 +435,7 @@ complexCs=c("dp","tp","kp","km","kn","mb","gh","lv")
 allVC=c(nasalVs,oralVs,simplexCs,complexCs)
 
 
-read.table("substitution_bank.txt",header=T)->sub_bank
+read.table("substitution_bank_try1.txt",header=T)->sub_bank
 colnames(sub_bank)<-c("target","realization")
 sub_bank$target=factor(sub_bank$target,levels=allVC)
 sub_bank$realization=factor(sub_bank$realization,levels=allVC)
@@ -443,13 +443,33 @@ sub_bank$realization=factor(sub_bank$realization,levels=allVC)
 sub_tab=table(sub_bank)[allVC,allVC]
 
 
-read.table("deletion_bank.txt",header=T)->del_bank
+read.table("deletion_bank_try1.txt",header=T)->del_bank
 colnames(del_bank)<-c("target")
 del_bank$target=factor(del_bank$target,levels=allVC)
 del_tab= table(del_bank)[allVC]
 
+read.table("match_bank_try1.txt",header=T)->match_bank
+colnames(match_bank)<-c("target")
+match_bank$target=factor(match_bank$target,levels=allVC)
+match_tab= table(match_bank)[allVC]
+
+
 #remove English meanings
 trnsc$meaning[grep("English",trnsc$meaning)]<-NA
+
+#Create proportion table
+#a reasonable way to calculate proportion is the proportion of times 
+#a target was produced as X out of the total number of times a target appeared
+#so the denominator is not the number of substitutions (which appears in sub_tab)
+#but rather the sum of sub, del, mat
+#a check: colnames(sub_tab) == names(del_tab)
+#a check: names(match_tab) == names(del_tab)
+
+denom_vec=rowSums(sub_tab) + del_tab + match_tab
+#THIS IS STILL BROKEN
+#prop_cat=data.frame(apply(all_far,2,dodiv)*100) #generates precision because columns
+#prop_cat=all_far/rowSums(all_far)*100 #generates recall because rows
+#sub_tab_prop=t(t(matrix(sub_tab,ncol=length(denom_vec)))/matrix(denom_vec) )
 ```
 
 Next, we investigated patterns of deletion and substitution. Deletions were relatively rare, with only `r sum(del_tab[c(oralVs,nasalVs)])` vowels deleted, and `r sum(del_tab[c(simplexCs,complexCs)])` consonants. 
@@ -461,7 +481,7 @@ As for substitutions, it was as common for a nasal vowel to be produced as an or
 
 Finally, we looked into the frequency with which mispronunciations resulted in real words. Nearly all of them were: `r round(sum(!is.na(trnsc$meaning))/sum(!is.na(trnsc$mispronunciation))*100)`%.
 
-** this is higher than any previous report! can we be sure of it?**
+**TO DISCUSS TOGETHER this is higher than any previous report! can we be sure of it?**
 
 ### Accuracy a function of item length 
 
