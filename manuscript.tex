@@ -70,34 +70,40 @@
 \def\fps@figure{htbp}
 \makeatother
 
-\shorttitle{NWR in Yélî Dnye}
-\affiliation{
-\vspace{0.5cm}
-\textsuperscript{1} Laboratoire de Sciences Cognitives et de Psycholinguistique, Département d'Etudes cognitives, ENS, EHESS, CNRS, PSL University\\\textsuperscript{2} Max Planck Institute for Psycholinguistics}
-\keywords{phonology, non-word repetition, development\newline\indent Word count: ~xxx words}
-\usepackage{csquotes}
-\usepackage{upgreek}
-\captionsetup{font=singlespacing,justification=justified}
+\usepackage{fontspec}
 
-\usepackage{longtable}
-\usepackage{lscape}
-\usepackage{multirow}
-\usepackage{tabularx}
-\usepackage[flushleft]{threeparttable}
-\usepackage{threeparttablex}
+%% Pandoc can only set 10, 11, 12 pt
+%% uncomment below to set fontsize
+%\usepackage[fontsize=13pt]{scrextend}
 
-\newenvironment{lltable}{\begin{landscape}\begin{center}\begin{ThreePartTable}}{\end{ThreePartTable}\end{center}\end{landscape}}
+%\setmainfont{Calibri} % Set main font for latin characters
 
-\makeatletter
-\newcommand\LastLTentrywidth{1em}
-\newlength\longtablewidth
-\setlength{\longtablewidth}{1in}
-\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
+\setlength{\parskip}{0.15cm} % Set space between paragraphs
+%\linespread{1.2}\selectfont % Set line height
+%\usepackage[doublespacing]{setspace} % Use double space without changing footnotes line height
+
+%% Special font for IPA
+%% Make sure "Doulos SIL" is installed on your computer
+%% For other typefaces supporting IPA symbols, see
+%% https://en.wikipedia.org/wiki/International_Phonetic_Alphabet#Typefaces
+\newfontfamily\ipa{Doulos SIL} % Font for IPA symbols
+\DeclareTextFontCommand{\ipatext}{\ipa}
 
 
-\usepackage{lineno}
 
-\linenumbers
+%%%         Section for CJK Characters                   %%%
+%%%   You may want to uncomment the code below if        %%%
+%%%   you're writing this document with CJK characters   %%%
+
+%\usepackage{xeCJK}  % Uncomment for using CJK characters
+%% Set main font for CJK characters
+%% Make sure your system has the font set
+%\setCJKmainfont[
+%	BoldFont={HanWangHeiHeavy}  % Set font for CJK boldface
+%    ]{標楷體}    % Set font for normal CJK
+%% Some Traditional Chinese fonts: AR PL KaitiM Big5, PingFang TC, Noto Sans CJK TC
+%\XeTeXlinebreaklocale "zh"
+%\XeTeXlinebreakskip = 0pt plus 1pt
 
 \title{Non-word repetition in Yélî Dnye}
 \author{Alejandrina Cristia\textsuperscript{1}~\& Marisa
@@ -175,7 +181,7 @@ typological and language acquisition research.
   double check also stim\_seg\_freq -- why are some items still with NA
   freq?
 \item
-  consent, \enquote{correct}, \enquote{accuracy}, \enquote{performance}
+  consent, ``correct'', ``accuracy'', ``performance''
 \item
   draft discussion
 \end{itemize}
@@ -242,24 +248,50 @@ learning a rarely-studied language and culture, and further
 investigating whether there are structured sources that account for
 individual variation.
 
-\subsubsection{\texorpdfstring{Intro to the language (\textbf{mc}) -
-please feel free to throw away anything that is not
-useful!}{Intro to the language (mc) - please feel free to throw away anything that is not useful!}}\label{intro-to-the-language-mc---please-feel-free-to-throw-away-anything-that-is-not-useful}
+\subsubsection{The Yélî language}\label{the-yuxe9luxee-language}
 
-\begin{itemize}
-\tightlist
-\item
-  complexity in the vowel system
-\item
-  complexity in the consonant system
-\item
-  word shapes
-\item
-  typical word length
-\item
-  although not the focus of this paper, high use of suppletion in verbal
-  paradigms, other features of language, see Levinson XXX for details
-\end{itemize}
+Yélî Dnye is an isolate language (presumed Papuan) spoken by
+approximately 7000 people residing on Rossel Island, which is found at
+the far end of the Louisiade Archipelago in Milne Bay Province, Papua
+New Guinea. Most speakers of the language grow up speaking it
+monolingually within their swidden horticulturalist communities until
+they begin attending school around the age of 7; school instruction is
+in English. While monolingual Yélî Dnye upbringing is common,
+multilingual families are not unusual, particularly in the region around
+the Catholic Mission (1953--present) where there appears to be a higher
+incidence of married-in mothers from other islands ({\textbf{???}}), the
+same region in which the current data were collected. Children in these
+multilingual families grow up speaking Yélî Dnye and English, Tok Pisin,
+and/or some other language(s) from the region.
+
+The Yélî sound system, much like its baroque grammatical system in
+general ({\textbf{???}}), is unlike any other in the region, with 90
+contrastive segments, including at least two contrasts not yet been
+documented elsewhere (labial-coronal double-articulations with dental
+vs.~post-alveolar coronal placement in both oral and nasal stops)
+({\textbf{???}}). With only four primary places of articulation
+(bilabial, alveolar, post-alveolar, and velar) and no voicing contrasts,
+the phonological inventory is remarkably packed with acoustically
+similar segments. The core oral stop set includes both singleton (/p/,
+/t/, /ṭ/, and /k/) and doubly-articulated (/tp/, /ṭp/, /kp/) segments,
+with full nasal equivalents (/m/, /n/, /ṇ/, /ŋ/, /nm/, /ṇm/, /ŋm/), and
+with a substantial portion of these able to be pre-nasalized or nasally
+released (/mp/, /nt/, /ṇṭ/, /ŋk/, /nmtp/, /ṇmṭp/, /ŋmkp/, /ṭṇ/, /kŋ/,
+/ṭpṇm/, /kpŋm/). Finally, a number of these can also be labialized or
+palatalized on the release, or both (/pʲ/, /tʃ/, /tpʲ/, /ṭʲ/, /ṭpʲ/,
+/kʲ/, /kpʲ/, /pʲʷ/, /mbʲ/, /ndʒ/, /nmdbʲ/, /ṇḍʲ/, /ṇmḍbʲ/, /mbʷ/, /ŋɡʷ/,
+/mbʲʷ/, /ṭṇʲ/, /ṭpṇmʲ/, /kŋʷ/, /mʲ/, /nʲ/, /nmʲ/, /ṇʲ/, /ṇmʲ/, /mʷ/,
+/ŋʷ/, mʲʷ/). Among the remaining consonants are small group of oral
+continuants (/w/, /j/, /ɣ/, /l/, /βʲ/, /lʲ/, /lβʲ/). Vowels in Yélî Dnye
+may be oral or nasal, short or long. The 10 oral vowel qualities (/i/,
+/ɯ/, /u/, /e/, /o/, /ə/, /ɛ/, /\ipatext{ɔ}/, /æ/, /ɑ/) can be produced
+as short or long vowels, with 7 of these able to appear as short and
+long nasal vowels as well (/i/, /u/, /ə/, /ɛ/, /\ipatext{ɔ}/, /æ/, /ɑ/).
+In total, Levinson ({\textbf{???}}) then counts 90 distinctive segments
+in Yélî Dnye (93 when including consonants that are extremely rarely
+used).
+
+To do: - word shapes - typical word length
 
 \subsubsection{\texorpdfstring{Intro to the people (\textbf{mc}) -
 please feel free to throw away anything that is not
@@ -399,17 +431,16 @@ distributed them across children, so as to increase the coverage, and be
 able to study more items.
 
 A first list of candidate items was generated in 2018 by selecting
-simple consonants (\enquote{p}, \enquote{t}, \enquote{d}, \enquote{k},
-\enquote{m}, \enquote{n}, \enquote{w}, \enquote{y}) and vowels
-(\enquote{i}, \enquote{o},\enquote{u}, \enquote{a},\enquote{e}) that
-were combined into consonant-vowel syllables, further sampling the space
-of 1- to 4-syllable sequences. These candidates were automatically
-checked against Levinson's 2015 dictionary and removed from
-consideration if they appeared in the dictionary. The second author
-presented them orally to three local research assistants, who were asked
-to repeat them and further say whether they were real words. Any item
-for which two or more of the assistants reported them having a meaning
-or some form of association was excluded.
+simple consonants (``p'', ``t'', ``d'', ``k'', ``m'', ``n'', ``w'',
+``y'') and vowels (``i'', ``o'',``u'', ``a'',``e'') that were combined
+into consonant-vowel syllables, further sampling the space of 1- to
+4-syllable sequences. These candidates were automatically checked
+against Levinson's 2015 dictionary and removed from consideration if
+they appeared in the dictionary. The second author presented them orally
+to three local research assistants, who were asked to repeat them and
+further say whether they were real words. Any item for which two or more
+of the assistants reported them having a meaning or some form of
+association was excluded.
 
 A second list of candidate items was generated in 2019 by selecting
 complex consonants and systematically crossing them with all the vowels
@@ -431,8 +462,8 @@ presented together with the same item orally (by the second author). The
 complete recorded list was finally presented to two more informants, who
 could repeat all the items and who confirmed there were no real words.
 Even so, there was one monosyllable that was often identified as a real
-word (intended \enquote{yî} /yXX/; identified as \enquote{yi} /yi/,
-\emph{tree}). This item is removed from analyses below.
+word (intended ``yî'' /yXX/; identified as ``yi'' /yi/, \emph{tree}).
+This item is removed from analyses below.
 
 The final list is composed of three practice items; 20 monoysllables
 containing sounds that are less frequent in the world's languages than
@@ -510,12 +541,12 @@ space availability. As a result, the places where elicitation happened
 varied across the hamlets.
 
 We visited four different hamlets once, and attempted to test all
-eligible children present at the time, to prevent the items
-\enquote{spreading} through hearsay. In the first hamlet, we tested
-children in five different places, with some children being tested
-inside a house and others tested on the veranda. The complete list of
-places and the ways in which they met the desiderata mentioned above can
-be found in the raw data, available from online supplementary materials.
+eligible children present at the time, to prevent the items `spreading'
+through hearsay. In the first hamlet, we tested children in five
+different places, with some children being tested inside a house and
+others tested on the veranda. The complete list of places and the ways
+in which they met the desiderata mentioned above can be found in the raw
+data, available from online supplementary materials.
 
 The child was donned a headset (\textbf{xx }mc** please fill in** for
 most of the children, SHURE WH20 XLR headset with a dynamic microphone
