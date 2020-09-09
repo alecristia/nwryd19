@@ -26,7 +26,7 @@ grep -v "&" | grep -v "@s" | #remove switches
 grep -v "xxx" | grep -vw "hm" | grep -vw "mm" | grep -vw "mmhm" | grep -vw "oh" | grep -vw "yeah" | grep -v "uhhuh" | grep -v "ho" | grep -v "mmmm" | grep -v "chuk"| grep -v "ha" |#final cleaning
 tr -d '>' | tr -d '<' |tr -d '(' |tr -d ')' | sed "s/@c//g" |
 grep -v "[A-Z]" | #get rid of all names
-sed "s/che/te/g" |  sed "s/chi/ti/g" 
+sed "s/che/te/g" |  sed "s/chi/ti/g" | sort > words_corpus.txt
 
 
 ```
