@@ -1,0 +1,42 @@
+---
+title: "Get freqs for NWR YD project"
+author: "AC"
+date: "9/8/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Initial clean up
+
+This is a bit bludgeony, so replace if Marvin has something more elegant
+
+```{bash}
+grep "^[FM]A" txt/*.txt | # use only adult speech
+cut -f 6 | #take transcription
+sed "s/\[: /\[:_/g" |  sed "s/\[=! /\[:_/g" | sed "s/\[- /\[-_/g" | #remove spaces that are not real ones
+grep -v "\[-_" | #remove sentences in Eng and Pidgin
+ grep -v "he " | grep -vw "they" | grep -vw "I"  | grep -vw "you" | grep -vw "your"| grep -vw "his" | grep -vw "hey" | grep -vw "going" | grep -vw "people" | grep -vw "dogs" | grep -vw "puppies" | grep -vw "boys" | grep -vw "and"| grep -vw "container" | grep -vw "brother" | grep -vw "good"| grep -vw "where"| grep -vw "umbrella"| grep -vw "hello"| grep -vw "here" | grep -vw "this"| grep -vw "married" | grep -vw "here" | grep -vw "okay"| grep -vw "nice"| grep -vw "baked"| grep -vw "singsing"| grep -vw "cooked"| grep -vw "banana"| grep -vw "hurry"| grep -vw "fire"|#there were still some English sentences
+sed 's/\[[^[]*\]//g' | #delete comments
+tr ' ' '\n' | #cut at word boundaries
+tr -d '?' | tr -d '.' | tr -d '!' | tr -d '-' | tr -d ',' | #clean up punctuation
+grep -v "&" | grep -v "@s" | #remove switches
+grep -v "xxx" | grep -vw "hm" | grep -vw "mm" | grep -vw "mmhm" | grep -vw "oh" | grep -vw "yeah" | grep -v "uhhuh" | grep -v "ho" | grep -v "mmmm" | grep -v "chuk"| grep -v "ha" |#final cleaning
+tr -d '>' | tr -d '<' |tr -d '(' |tr -d ')' | sed "s/@c//g" |
+grep -v "[A-Z]" | #get rid of all names
+sed "s/che/te/g" |  sed "s/chi/ti/g" 
+
+
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
