@@ -45,8 +45,11 @@ merge(trnsc,inc,by.x="id",by.y="ID",all.x=T)->trnsc
 dim(trnsc) #still no loss, all good
 
 #add orthographic representations targets & other stims chars
+read.table("freq_corpus.csv",sep=";",header=T)->phone_counts
 read.delim("stimconv.txt", encoding="UTF-8")->stims
 read.delim("segconv.txt", encoding="UTF-8")->segments
+#add corpus freq to segments
+#merge(segments,phone_counts)->test
 
 stim_seg_freq=matrix(NA,nrow=dim(stims)[1],ncol=8)
 for(i in 1:dim(stim_seg_freq)[1]) for(j in 1:dim(stim_seg_freq)[2]) {
@@ -106,6 +109,61 @@ correspondances=matrix( #list correspondances always by pairs, orthography then 
     "é","E",
     "á","A",
     "ó","O",
+    #consonants from rossel ortho replacements, missing previously
+    "mbyw","x",
+    "mbwy","x",
+    "pwy","x",
+    "pyw","x",
+    "tpy","x",
+    "dpy","x",
+    "kpy","x",
+    "myw","x",
+    "mwy","x",
+    "ngw","x",
+    "nmy","x",
+    "ngm","x",
+    "mby","x",
+    "mbw","x",
+    "nty","x",
+    "ndy","x",
+    "nkw","x",
+    "mty","x",
+    "mdy","x",
+    "mgw","x",
+    "dny","x",
+    "dmy","x",
+    "knw","x",
+    "py","x",
+    "pw","x",
+    "ty","x",
+   # "ch"
+    "dy","x",
+    "ky","x",
+    "kw","x",
+    #"tp"
+    #"dp"
+    #"kp"
+    "my","x",
+    "mw","x",
+    "ny","x",
+    #"ng"
+    "nm","x",
+    #"mb"
+    #"nt"
+    "nj","x",
+    #"nd"
+    #"nk"
+    #"mt"
+    #"md"
+    #"mg"
+    #"dn"
+    #"dm"
+   # "kn"
+    #"km"
+    #"vy"
+    "ly","x",
+    #"lv"
+    #"gh"
     #consonants, veeeery dirty!
     "'n","ń",
     "tp",":",
@@ -128,7 +186,8 @@ correspondances=matrix( #list correspondances always by pairs, orthography then 
     "km","Z",
     "gh","H",
     "lv","L",
-    "ch","†" #this one doesn't exist in the local orthography but it appears
+    "ch","t" #this one doesn't exist in the local orthography but it appears -- middy said this is t before e and i
+    
   ),#last item above should not have a comma
   ncol = 2,byrow = T)
 
@@ -241,4 +300,6 @@ sort(match_bank)->match_bank
 write.table(match_bank,"match_bank.txt",row.names=F,sep="\t")
 sort(match_bank_try1)->match_bank_try1
 write.table(match_bank_try1,"match_bank_try1.txt",row.names=F,sep="\t")
+
+
 
