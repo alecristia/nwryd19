@@ -11,32 +11,232 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Initial clean up
 
-This is a bit bludgeony, so replace if Marvin has something more elegant
+This is a better than what we had in divime, because it does more cleanup. To run it, you need to be in raw_YEL
 
-```{bash}
+```{bash, eval=F}
 grep "^[FM]A" txt/*.txt | # use only adult speech
 cut -f 6 | #take transcription
 sed "s/\[: /\[:_/g" |  sed "s/\[=! /\[:_/g" | sed "s/\[- /\[-_/g" | #remove spaces that are not real ones
 grep -v "\[-_" | #remove sentences in Eng and Pidgin
- grep -v "he " | grep -vw "they" | grep -vw "I"  | grep -vw "you" | grep -vw "your"| grep -vw "his" | grep -vw "hey" | grep -vw "going" | grep -vw "people" | grep -vw "dogs" | grep -vw "puppies" | grep -vw "boys" | grep -vw "and"| grep -vw "container" | grep -vw "brother" | grep -vw "good"| grep -vw "where"| grep -vw "umbrella"| grep -vw "hello"| grep -vw "here" | grep -vw "this"| grep -vw "married" | grep -vw "here" | grep -vw "okay"| grep -vw "nice"| grep -vw "baked"| grep -vw "singsing"| grep -vw "cooked"| grep -vw "banana"| grep -vw "hurry"| grep -vw "fire"|#there were still some English sentences
+ grep -v "he " | grep -vw "they" | grep -vw "I"  | grep -vw "you" | grep -vw "your"| grep -vw "his" | grep -vw "hey" | grep -vw "going" | grep -vw "people" | grep -vw "dogs" | grep -vw "puppies" | grep -vw "boys" | grep -vw "and"| grep -vw "container" | grep -vw "brother" | grep -vw "good"| grep -vw "where"| grep -vw "umbrella"| grep -vw "hello"| grep -vw "here" | grep -vw "this"| grep -vw "married" | grep -vw "here" | grep -vw "okay"| grep -vw "nice"| grep -vw "baked"| grep -vw "singsing"| grep -vw "cooked"| grep -vw "banana"| grep -vw "hurry"| grep -vw "fire"| grep -vw "about" | #there were still some English sentences
+grep -vw "alright" |grep -vw "already" |grep -vw "almost" |grep -vw "another" |
+grep -vw "bye" |grep -vw "calling" |grep -vw "coming" |grep -vw "clothes" |
+grep -vw "complete" |grep -vw "counting" |grep -vw "enough" |grep -vw "fight" |
+grep -vw "first" |grep -vw "finished" |grep -vw "there"|grep -vw "which" |grep -vw "witchcraft" |grep -vw "small"|grep -vw "right"|grep -vw "ready"|grep -vw "out"|grep -vw "our"|grep -vw "later"|grep -vw "leave"|grep -vw "eat"|grep -vw "everything"|grep -vw "books"|
+grep -vw "window" |grep -vw "want"|grep -vw "sister"|grep -vw "sleeping"|
+grep -vw "sometimes" | grep -vw "somehwere"|grep -vw "scared"|grep -vw "saw" |
+grep -vw "inside" | grep -vw "gonna" | grep -vw "her" | grep -vw "him"|
+grep -vw "here" | grep -vw "easy" | grep -vw "early" | grep -vw "eye"|
+grep -vw "cook" | grep -vw "dog" | grep -vw "area" | grep -vw "around"|
+grep -v "a@l" | grep -v "e@l" | grep -v "d@l"|
 sed 's/\[[^[]*\]//g' | #delete comments
 tr ' ' '\n' | #cut at word boundaries
 tr -d '?' | tr -d '.' | tr -d '!' | tr -d '-' | tr -d ',' | #clean up punctuation
 grep -v "&" | grep -v "@s" | #remove switches
-grep -v "xxx" | grep -vw "hm" | grep -vw "mm" | grep -vw "mmhm" | grep -vw "oh" | grep -vw "yeah" | grep -v "uhhuh" | grep -v "ho" | grep -v "mmmm" | grep -v "chuk"| grep -v "ha" |#final cleaning
-tr -d '>' | tr -d '<' |tr -d '(' |tr -d ')' | sed "s/@c//g" |
-grep -v "[A-Z]" | #get rid of all names
-sed "s/che/te/g" |  sed "s/chi/ti/g" | sort > words_corpus.txt
+grep -v "xxx" | grep -vw "xx" | grep -vw "hm" | grep -vw "mm" | grep -vw "mmhm" | grep -vw "oh" | grep -vw "yeah" | grep -v "uhhuh" | grep -v "ho" | grep -v "mmmm" | grep -v "chuk"| grep -v "ha"| grep -v "ah" | grep -v "ehheh" | grep -v "hmmm" |#remove nonwords
+grep -v "[A-Z]" | grep -vw "Ńaamońo" | #get rid of all names
+sed "s/aa+/aa/g" | sed "s/ee+/ee/g" | sed "s/ii+/ii/g" | sed "s/oo+/oo/g" | sed "s/uu+/aa/g" |
+sed "s/êê+/êê/g" | sed "s/ââ+/ââ/g" | sed "s/áá+/áá/g" | sed "s/óó+/óó/g" | #exaggeration of vowel length
+sed "s/aaaa/aa/g" |
+tr -d '>' | tr -d '<' |tr -d '(' |tr -d ')' | sed "s/@c//g" | # final cleaning and write out
+sed "s/che/te/g" |  sed "s/chi/ti/g" | sort | grep -v "[0-9]" | sed '/^$/d' > words_corpus.txt
 
 
 ```
 
-## Including Plots
+## Getting frequencies for segments in our stimuli 
 
-You can also embed plots, for example:
+Middy gave me an onset list that converts all vowels and consonants to common representations for the purposes of counting syllables (rossel-ortho-replacements.txt). I thought of the following changes:
+
+- remove all rewrites for vowels
+- but that destroys the context for the following rules, eg not removing colon means knw does not find a match in knw:a 
+- but why weren't these defined with regular expressions anyway?
+- it looks like I should be careful with the 4- and 3-letter phonemes, because I do not have those in my rewrites but not otherwise
+
+So all things considered, it looks like it may be easier to just do the replacement of the 4- and 3-letter segments here, just being careful to map these to something that is not used in the stimuli, such as ngm.
+
+Also, this reveals my rewrites were incomplete, so I added some lines for the onsets that were missing in my initial correspondance list.
+
+The correspondances here looks similar to the one in wrangling but it has more entries because we want to separate each phoneme, and we want to distinguish between short and long
 
 ```{r pressure, echo=FALSE}
-plot(pressure)
+
+correspondances=matrix( #list correspondances always by pairs, orthography then phonology
+  c(
+    #nasal
+    ":ii",":ii ",
+    ":ee",":ee ",
+    ":aa",":aa ",
+    ":êê",":êê ",
+    ":ââ",":ââ ",
+    ":uu",":uu ",
+    ":oo",":oo ",
+    
+    
+    ":i",":i ",
+    ":e",":e ",
+    ":a",":a ",
+    ":ê",":ê ",
+    ":â",":â ",
+    ":u",":u ",
+    ":o",":o ",
+    
+    #non-nasal
+    "îî","îî ",
+    "êê","êê ",
+    "ââ","ââ ",
+    "éé","éé ",
+    "áá","áá ",
+    "óó","óó ",
+    
+    "aa","aa ",
+    "ee","ee ",
+    "ii","ii ",
+    "oo","oo ",
+    "uu","uu ",
+
+    "î","î ",
+    "ê","ê ",
+    "â","â ",
+    "é","é ",
+    "á","á ",
+    "ó","ó ",
+    
+    "a","a ",
+    "e","e ",
+    "i","i ",
+    "o","o ",
+    "u","u ",
+    "ú","ú ",
+    #consonants from rossel ortho replacements, missing previously
+    "mbyw","x ",
+    "mbwy","x ",
+    "pwy","x ",
+    "pyw","x ",
+    "tpy","x ",
+    "dpy","x ",
+    "kpy","x ",
+    "myw","x ",
+    "mwy","x ",
+    "ngw","x ",
+    "nmy","x ",
+    "ngm","x ",
+    "mby","x ",
+    "mbw","x ",
+    "nty","x ",
+    "ndy","x ",
+    "nkw","x ",
+    "mty","x ",
+    "mdy","x ",
+    "mgw","x ",
+    "dny","x ",
+    "dmy","x ",
+    "knw","x ",
+    "py","x ",
+    "pw","x ",
+    "ty","x ",
+   # "ch"
+    "dy","x ",
+    "ky","x ",
+    "kw","x ",
+    #"tp"
+    #"dp"
+    #"kp"
+    "my","x ",
+    "mw","x ",
+    "ny","x ",
+    #"ng"
+    "nm","x ",
+    #"mb"
+    #"nt"
+    "nj","x ",
+    #"nd"
+    #"nk"
+    #"mt"
+    #"md"
+    #"mg"
+    #"dn"
+    #"dm"
+   # "kn"
+    #"km"
+    #"vy"
+    "ly","x ",
+    #"lv"
+    #"gh"
+    #consonants, veeeery dirty!
+    "'n","ń ",
+    "ń","ń ",
+    "tp","tp ",
+    "dp","dp ",
+    "kp","kp ",
+    "ngm","ngm ",
+    "ńm","ńm ",
+    "ng","ng ",
+    "mb","mb ",
+    "nd","nd ",
+    "nt","nt ",
+    "nk","nk ",
+    "dn","dn ",
+    "kn","kn ",
+    "vy","vy ",
+    "mt","mt ",
+    "md","md ",
+    "mg","mg ",
+    "dm","dm ",
+    "km","km ",
+    "gh","gh ",
+    "lv","lv ",
+    "cch","ch ",
+    "ch","ch ", #NOTE
+   "w","w ",
+   "r","r ",
+   "t","t ",
+   "y","y ",
+   "p","p ",
+   "s","s ",
+   "d","d ",
+  "f","f ",
+   "g","g ",
+   "h","h ",
+   "j","j ",
+   "k","k ",
+   "l","l ",
+   "z","z ",
+   "c","c ",
+   "v","v ",
+   "b","b ",
+   "n","n ",
+   "m","m "
+    
+  ),#last item above should not have a comma
+  ncol = 2,byrow = T)
+
+
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```{r}
+# get frequencies in raw_YEL
+#note, you should have ran the code documented in get_freq_cor.Rmd
+
+scan("words_corpus.txt",what="char")->wds
+
+wds[1:1000]
+
+#initialize the unichar phono-like representation
+wds_uni=wds
+
+for(i in 1:dim(correspondances)[1]) { #transform into unicharacter
+  wds_uni=gsub(correspondances[i,1],correspondances[i,2],wds_uni,fixed=T,useBytes = T)
+}
+wds_uni[1:1000]
+
+write.table(wds_uni,"phonemized-words.txt",col.names = F,row.names = F,quote=F)
+```
+
+Finally this line happens in the nwr19yd folder
+
+```{bash, eval=F}
+tr ' ' '\n' < phonemized-words.txt | sort | uniq -c | sort > phone-counts.txt
+```
+
+The final steps were done by hand in an excel file called freq_corpus.xlsx, to calculate frequencies removing items that we think should not count.
