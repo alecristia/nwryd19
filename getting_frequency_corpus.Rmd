@@ -64,92 +64,94 @@ The correspondances here looks similar to the one in wrangling but it has more e
 correspondances=matrix( #list correspondances always by pairs, orthography then phonology
   c(
     #nasal
-    ":ii",":ii ",
-    ":ee",":ee ",
-    ":aa",":aa ",
-    ":êê",":êê ",
-    ":ââ",":ââ ",
-    ":uu",":uu ",
-    ":oo",":oo ",
+    ":ii","1 ",
+    ":ee","2 ",
+    ":aa","3 ",
+    ":êê","4 ",
+    ":ââ","5 ",
+    ":uu","6 ",
+    ":oo","7 ",
+    ":óó","37 ",
     
     
-    ":i",":i ",
-    ":e",":e ",
-    ":a",":a ",
-    ":ê",":ê ",
-    ":â",":â ",
-    ":u",":u ",
-    ":o",":o ",
-    
+    ":i","8 ",
+    ":e","9 ",
+    ":a","0 ",
+    ":ê","10 ",
+    ":â","11 ",
+    ":u","12 ",
+    ":o","13 ",
+     ":ó","38 ",
+   
     #non-nasal
-    "îî","îî ",
-    "êê","êê ",
-    "ââ","ââ ",
-    "éé","éé ",
-    "áá","áá ",
-    "óó","óó ",
+    "îî","14 ",
+    "êê","15 ",
+    "ââ","16 ",
+    "éé","17 ",
+    "áá","18 ",
+    "óó","19 ",
     
-    "aa","aa ",
-    "ee","ee ",
-    "ii","ii ",
-    "oo","oo ",
-    "uu","uu ",
+    "aa","20 ",
+    "ee","21 ",
+    "ii","22 ",
+    "oo","23 ",
+    "uu","24 ",
 
-    "î","î ",
-    "ê","ê ",
-    "â","â ",
-    "é","é ",
-    "á","á ",
-    "ó","ó ",
+    "î","25 ",
+    "ê","26 ",
+    "â","27 ",
+    "é","28 ",
+    "á","29 ",
+    "ó","30 ",
     
-    "a","a ",
-    "e","e ",
-    "i","i ",
-    "o","o ",
-    "u","u ",
-    "ú","ú ",
+    "a","31 ",
+    "e","32 ",
+    "i","33 ",
+    "o","34 ",
+    "u","35 ",
+    "ú","36 ",
     #consonants from rossel ortho replacements, missing previously
-    "mbyw","x ",
-    "mbwy","x ",
-    "pwy","x ",
-    "pyw","x ",
-    "tpy","x ",
-    "dpy","x ",
-    "kpy","x ",
-    "myw","x ",
-    "mwy","x ",
-    "ngw","x ",
-    "nmy","x ",
-    "ngm","x ",
-    "mby","x ",
-    "mbw","x ",
-    "nty","x ",
-    "ndy","x ",
-    "nkw","x ",
-    "mty","x ",
-    "mdy","x ",
-    "mgw","x ",
-    "dny","x ",
-    "dmy","x ",
-    "knw","x ",
-    "py","x ",
-    "pw","x ",
-    "ty","x ",
+    "mbyw","39 ",
+    "mbwy","40 ",
+    "pwy","41 ",
+    "pyw","42 ",
+    "tpy","43 ",
+    "dpy","44 ",
+    "kpy","45 ",
+    "myw","46 ",
+    "mwy","47 ",
+    "ngw","48 ",
+    "nmy","49 ",
+    "ngm","50 ",
+    "mby","51 ",
+    "mbw","52 ",
+    "nty","53 ",
+    "ndy","54 ",
+    "nkw","55 ",
+    "mty","56 ",
+    "mdy","57 ",
+    "mgw","58 ",
+    "dny","59 ",
+    "dmy","60 ",
+    "knw","61 ",
+    "py","62 ",
+    "pw","63 ",
+    "ty","64 ",
    # "ch"
-    "dy","x ",
-    "ky","x ",
-    "kw","x ",
+    "dy","65 ",
+    "ky","66 ",
+    "kw","67 ",
     #"tp"
     #"dp"
     #"kp"
-    "my","x ",
-    "mw","x ",
-    "ny","x ",
+    "my","68 ",
+    "mw","69 ",
+    "ny","70 ",
     #"ng"
-    "nm","x ",
+    "nm","71 ",
     #"mb"
     #"nt"
-    "nj","x ",
+    "nj","72 ",
     #"nd"
     #"nk"
     #"mt"
@@ -160,35 +162,36 @@ correspondances=matrix( #list correspondances always by pairs, orthography then 
    # "kn"
     #"km"
     #"vy"
-    "ly","x ",
+    "ly","73 ",
     #"lv"
     #"gh"
     #consonants, veeeery dirty!
-    "'n","ń ",
+    "tp","Tp ",
+    "dp","Dp ",
+    "kp","Kp ",
+    "ngm","Ngm ",
+    "ńm","ñ ",
+    "ng","Ng ",
+    "mb","Mb ",
+    "nd","Nd ",
+    "nt","Nt ",
+    "nk","Nk ",
+    "dn","Dn ",
+    "kn","Kn ",
+    "vy","Vy ",
+    "mt","Mt ",
+    "md","Md ",
+    "mg","Mg ",
+    "dm","Dm ",
+    "km","Km ",
+    "gh","Gh ",
+    "lv","Lv ",
+    "cch","CCh ",
+    "'n","'n ",
     "ń","ń ",
-    "tp","tp ",
-    "dp","dp ",
-    "kp","kp ",
-    "ngm","ngm ",
-    "ńm","ńm ",
-    "ng","ng ",
-    "mb","mb ",
-    "nd","nd ",
-    "nt","nt ",
-    "nk","nk ",
-    "dn","dn ",
-    "kn","kn ",
-    "vy","vy ",
-    "mt","mt ",
-    "md","md ",
-    "mg","mg ",
-    "dm","dm ",
-    "km","km ",
-    "gh","gh ",
-    "lv","lv ",
-    "cch","ch ",
-    "ch","ch ", #NOTE
+    "ch","Ch ", #NOTE
    "w","w ",
+   "ẃ","ẃ ",
    "r","r ",
    "t","t ",
    "y","y ",
@@ -230,13 +233,48 @@ for(i in 1:dim(correspondances)[1]) { #transform into unicharacter
 }
 wds_uni[1:1000]
 
-write.table(wds_uni,"phonemized-words.txt",col.names = F,row.names = F,quote=F)
+wds_uni=unlist(strsplit(wds_uni,split=" "))
+counts=data.frame(table(wds_uni))
+counts$wds_uni=as.character(counts$wds_uni)
+
+colnames(correspondances)<-c("ortho","fake")
+correspondances=data.frame(correspondances)
+correspondances$fake=gsub(" ","",as.character(correspondances$fake))
+
+#backtranslate
+merge(counts,correspondances,by.x="wds_uni",by.y="fake")->counts
+counts=counts[order(counts$Freq),]
+
+colnames(counts)[2]<-"counts_corpus"
+counts$freq_corpus=counts$counts_corpus/sum(counts$counts_corpus)
+
+write.table(counts,"segment-counts.txt",col.names = T,row.names = F,quote=T,sep="\t")
 ```
 
-Finally this line happens in the nwr19yd folder
 
-```{bash, eval=F}
-tr ' ' '\n' < phonemized-words.txt | sort | uniq -c | sort > phone-counts.txt
+## Analyses
+
+I ran the code in wrangling again, to integrate these counts & freqs into the main data set.
+
+In addition, I wrote out a new version of segments which has the corpus frequency
+
+```{r}
+read.table("segments_with_cor_freq.txt",header=T)->segments # not ran
+plot(segments$pc~segments$freq_corpus,type="n")
+text(segments$pc~segments$freq_corpus,labels=segments$ortho)
+
+plot(segments$pc~log(segments$freq_corpus),type="n")
+text(segments$pc~log(segments$freq_corpus),labels=segments$ortho)
+
+#some stimuli sounds do not occur in the corpus at all
+#so we'll give them a really small frequency, just so that they show up
+#and we tag them in red
+segments$freq_corpus[is.na(segments$freq_corpus)]<-.0001
+plot(segments$pc~log(segments$freq_corpus),type="n",main="blue fitted to sounds in corpus, purple to all")
+text(segments$pc~log(segments$freq_corpus),labels=segments$ortho,col=ifelse(segments$freq_corpus<.00057,"red","blue"))
+#abline(lm(segments$pc~log(segments$freq_corpus),subset=c(segments$freq_corpus<.00057)),col="red",lty=2) #this one is impossible, bc it's vertical, all the x are the same
+abline(lm(segments$pc~log(segments$freq_corpus),subset=c(segments$freq_corpus>=.00057)),col="blue",lty=2)
+abline(lm(segments$pc~log(segments$freq_corpus)),col="purple",lty=2)
+
 ```
 
-The final steps were done by hand in an excel file called freq_corpus.xlsx, to calculate frequencies removing items that we think should not count.
