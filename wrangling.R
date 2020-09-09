@@ -45,11 +45,12 @@ merge(trnsc,inc,by.x="id",by.y="ID",all.x=T)->trnsc
 dim(trnsc) #still no loss, all good
 
 #add orthographic representations targets & other stims chars
-read.table("freq_corpus.csv",sep=";",header=T)->phone_counts
+read.delim("segment-counts.txt", encoding="UTF-8",sep="\t",header=T)->phone_counts
 read.delim("stimconv.txt", encoding="UTF-8")->stims
 read.delim("segconv.txt", encoding="UTF-8")->segments
 #add corpus freq to segments
-#merge(segments,phone_counts)->test
+merge(segments,phone_counts,by.x="ortho",by.y="ortho",all.x=T)->segments
+write.table(segments,"segments_with_cor_freq.txt",sep="\t",row.names = F)
 
 stim_seg_freq=matrix(NA,nrow=dim(stims)[1],ncol=8)
 for(i in 1:dim(stim_seg_freq)[1]) for(j in 1:dim(stim_seg_freq)[2]) {
