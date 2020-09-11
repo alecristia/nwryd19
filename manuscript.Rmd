@@ -133,7 +133,6 @@ correspondances=matrix( #list correspondances always by pairs, orthography then 
 ## TODO Middy
 
 - look through this manuscript for bits of text to be written by **mc**
-- help with table 1 (formatting & making it appear, because it's broken by the phonological representations)
 - do you think Figure 2 should be done with phonetic symbols? If yes, could you try to implement that?
 - double check demo -- probably start with the xlsx version that has the children's first names, date of birth, and date of test. I looked again at my local files (still haven't checked the labs' ones) and I'm surprised I have maternal education for more children than I have birth order for... If you correct this, to generate the csv I also round the age, assign age.rounded to reported age (in years) when DOB is missing, remove first names, DOB, DOTest and age.precise before pushing to github
 - double check my frequency entries in segments.xlsx using the search function in https://phoible.org/parameters; take a look at http://phoible.github.io/conventions/ in case you see something about double articulation (I didn't find tp or lBj)
@@ -224,11 +223,11 @@ palette = c(
              "Tsimane' 1-2 syll" = "green",
               "Tsimane' 3-4 syll" = "darkgreen")
 
-
-myplot=ggplot(data = pl, aes(x = Age, y = Score, color = Language))+
+myplot = ggplot(data = pl, aes(x = Age, y = Score, color = Language))+
   geom_point(aes(size = n, shape = Length))+
   geom_line(aes(linetype=Length)) + 
-  theme(text = element_text(size = 16), legend.position="none", axis.text.x=element_text(colour=c("black", "black"))) +
+  theme(text = element_text(size = 16),
+    legend.position="none", axis.text.x=element_text(colour=c("black", "black"))) +
   scale_color_manual(values = palette)+
   theme_bw()+
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+
@@ -264,7 +263,7 @@ stims <- read_delim("stimuli2.txt", delim = "\t") %>%
   select(type, target_ortho, phono) %>%
   rename("Type" = type, "Orthographic" = target_ortho, "Phonological" = phono)
 
-# probably a nicer way to do this but anyhow...
+# there's definitely a nicer way to do this but anyhow...
 practice.stims <- filter(stims, Type == "practice")[,2:3]
 practice.stims$row <- seq(1:nrow(practice.stims))
 syll1.stims <- filter(stims, Type == "1")[,2:3]
@@ -298,8 +297,6 @@ kable(stims.wide,
   add_header_above(c("Practice" = 2, "Monosyll" = 2,
     "Bisyll" = 2, "Trisyll" = 2, "Tetrasyll" = 2))
 
-#now that I added phonological representations, even this basic table chokes!
-# apa_table(stims,"NWR stimuli in orthographic and phonological representations.")
 ```
 
 
@@ -371,12 +368,12 @@ subset(demo,included=="yes" & Age <12 & !is.na(Age))->inc
 #if age.rounded is missing, use reported age
 inc$age.rounded[is.na(inc$age.rounded)]<-inc$Age[is.na(inc$age.rounded)]
 #summary(inc)
-table(inc$birthOrder)->mytab
+table(inc$birthOrder)->birthorder.tab
 ```
 
-A total `r dim(demo)[1]` children were tested, from `r length(levels(factor(demo$familyID)))` of families, in five hamlets. Some children could not be included for the following reasons: refused participation or failed to repeat items presented over headphones even after coaching (N=`r sum(demo$included=="didn\xd5t repeat")`), spoke too softly to allow offline coding (N=`r sum(demo$included=="spoke too softly")`). In addition, `r sum(demo$Age >12 | demo$included=="too old",na.rm=T)` teenagers were tested to put younger children at ease; their data is not included in analyses below. The remaining `r dim(inc)[1]` children (`r sum(inc$Sex=="G")` girls) were aged `r round(mean(inc$age.rounded),2)` years (range `r round(min(inc$age.rounded),2)`-`r round(max(inc$age.rounded),2)` years). There were `r sum(inc$monolingual=="yes", na.rm=T)` children exposed only to Yélî in the home, `r sum(inc$monolingual=="no", na.rm=T)` children who were also exposed to another language in the home, and , `r sum(is.na(inc$monolingual))` for whom this information was missing. Maternal years of education averaged `r round(mean(inc$matEd,na.rm=T),2)` years (range `r round(min(inc$matEd,na.rm=T),2)`-`r round(max(inc$matEd,na.rm=T),2)` years; `r sum(is.na(inc$matEd))` children had this information missing).[^1] In terms of birth order, `r mytab[1]` were first borns, `r mytab[2]` second,  `r mytab[3]` third,  `r mytab[4]` forth,  `r mytab[5]` fifth, `r mytab[6]` sixth, and  `r mytab[7]` did not have this information.
+A total `r dim(demo)[1]` children were tested, from `r length(levels(factor(demo$familyID)))` of families, in five hamlets. Some children could not be included for the following reasons: refused participation or failed to repeat items presented over headphones even after coaching (N=`r sum(demo$included=="didn't repeat")`), spoke too softly to allow offline coding (N=`r sum(demo$included=="spoke too softly")`). In addition, `r sum(demo$Age >12 | demo$included=="too old",na.rm=T)` teenagers were tested to put younger children at ease; their data is not included in analyses below. The remaining `r dim(inc)[1]` children (`r sum(inc$Sex=="G")` girls) were aged `r round(mean(inc$age.rounded),2)` years (range `r round(min(inc$age.rounded),2)`-`r round(max(inc$age.rounded),2)` years). Among these, there were `r sum(inc$monolingual=="yes", na.rm=T)` children exposed only to Yélî in the home, `r sum(inc$monolingual=="no", na.rm=T)` children who were also exposed to another language in the home, and `r sum(is.na(inc$monolingual))` for whom this information is missing. Maternal years of education averaged `r round(mean(inc$matEd,na.rm=T),2)` years (range `r round(min(inc$matEd,na.rm=T),2)`-`r round(max(inc$matEd,na.rm=T),2)` years; `r sum(is.na(inc$matEd))` children had this information missing).[^1] In terms of birth order, `r birthorder.tab[1]` were first borns, `r birthorder.tab[2]` second,  `r birthorder.tab[3]` third,  `r birthorder.tab[4]` forth,  `r birthorder.tab[5]` fifth, `r birthorder.tab[6]` sixth, and  `r birthorder.tab[7]` did not have this information.
 
-[^1]: Education is often reported in even years because people typically complete two-year cycles.
+[^1]: Most people complete their education upon reaching the highest level of a schooling type (e.g., elementary, primary, secondary etc.). This means that most people have 3, 6, 8, 10, or 12 years of education, with few stopping in-between (e.g., 7 years or 9 years). That said, precise years of education are hard to count given an irregularity in ability to pay school fees, school opening times, familial obligations, and more. We asked parents to report their highest completed level of education and inferred the approximate number of years that entails under ideal conditions.
 
 ## Results
 
@@ -642,15 +639,15 @@ Setting monosyllables aside, we observe the typical pattern of decreased accurac
 
 
 ```{r tablength}
-mytab=NULL
+birthorder.tab=NULL
 for(myvar in c("Word","Phoneme","NLD")){
-  mytab=cbind(mytab,
+  birthorder.tab=cbind(birthorder.tab,
               paste0(round(aggregate(by_length[,myvar],by=list(by_length$Length),mean)$x),
               " (",round(aggregate(by_length[,myvar],by=list(by_length$Length),sd)$x),")"))
 }
-rownames(mytab)<-levels(by_length$Length)
-colnames(mytab)<-c("Word","Phoneme","NLD")
-apa_table(mytab,caption="NWR scores measured in whole word accuracy, phoneme-based accuracy, and normalized Levenshtein Distance, separately for the four stimuli lengths.")
+rownames(birthorder.tab)<-levels(by_length$Length)
+colnames(birthorder.tab)<-c("Word","Phoneme","NLD")
+apa_table(birthorder.tab,caption="NWR scores measured in whole word accuracy, phoneme-based accuracy, and normalized Levenshtein Distance, separately for the four stimuli lengths.")
 ```
 
 
