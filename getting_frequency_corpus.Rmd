@@ -217,13 +217,12 @@ correspondances=matrix( #list correspondances always by pairs, orthography then 
 
 ```
 
-```{r}
+```{r token freq}
 # get frequencies in raw_YEL
-#note, you should have ran the code documented in get_freq_cor.Rmd
 
 scan("words_corpus.txt",what="char")->wds
 
-wds[1:1000]
+#wds[1:1000]
 
 #initialize the unichar phono-like representation
 wds_uni=wds
@@ -231,7 +230,36 @@ wds_uni=wds
 for(i in 1:dim(correspondances)[1]) { #transform into unicharacter
   wds_uni=gsub(correspondances[i,1],correspondances[i,2],wds_uni,fixed=T,useBytes = T)
 }
-wds_uni[1:1000]
+#wds_uni[1:1000]
+
+wds_uni=unlist(strsplit(wds_uni,split=" "))
+counts=data.frame(table(wds_uni))
+counts$wds_uni=as.character(counts$wds_uni)
+
+correspondances2=correspondances
+colnames(correspondances2)<-c("ortho","fake")
+correspondances2=data.frame(correspondances2)
+correspondances2$fake=gsub(" ","",as.character(correspondances2$fake))
+
+#backtranslate
+merge(counts,correspondances2,by.x="wds_uni",by.y="fake")->counts
+counts=counts[order(counts$Freq),]
+
+colnames(counts)[2]<-"counts_corpus"
+counts$freq_corpus=counts$counts_corpus/sum(counts$counts_corpus)
+
+write.table(counts,"segment-counts.txt",col.names = T,row.names = F,quote=T,sep="\t")
+```
+
+```{r type freq}
+
+#initialize the unichar phono-like representation
+wds_uni= names(table(wds))
+
+for(i in 1:dim(correspondances)[1]) { #transform into unicharacter
+  wds_uni=gsub(correspondances[i,1],correspondances[i,2],wds_uni,fixed=T,useBytes = T)
+}
+#wds_uni[1:1000]
 
 wds_uni=unlist(strsplit(wds_uni,split=" "))
 counts=data.frame(table(wds_uni))
@@ -245,12 +273,11 @@ correspondances$fake=gsub(" ","",as.character(correspondances$fake))
 merge(counts,correspondances,by.x="wds_uni",by.y="fake")->counts
 counts=counts[order(counts$Freq),]
 
-colnames(counts)[2]<-"counts_corpus"
-counts$freq_corpus=counts$counts_corpus/sum(counts$counts_corpus)
+colnames(counts)[2]<-"counts_corpus_types"
+counts$freq_corpus_types=counts$counts_corpus/sum(counts$counts_corpus)
 
-write.table(counts,"segment-counts.txt",col.names = T,row.names = F,quote=T,sep="\t")
+write.table(counts,"segment-counts-types.txt",col.names = T,row.names = F,quote=T,sep="\t")
 ```
-
 
 ## Analyses
 
