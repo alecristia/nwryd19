@@ -449,12 +449,16 @@ The overall NWR score was M = `r round(mean(overall$Word))`% (SD = `r round(sd(o
 In this analysis, we were interested in variation in performance as a function of the average frequency with which sounds composing individual target words are found in languages over the world. To look at this, we fit a mixed logistic regression, in which the outcome variable was whether the non-word was correctly repeated or not. The fixed effects of interest was the average cross-linguistic phone frequency; we also included child age as a control fixed effect, and child ID & target ID as random variables.
 
 ```{r xling-freq-ana}
-xl_fr=glmer(correct~avg_fr+age.rounded+(1|file) + (1|target),data=trnsc,family="binomial")
+trnsc$avg_fr_s=scale(trnsc$avg_fr)
+trnsc$age.rounded_s=scale(trnsc$age.rounded)
+xl_fr=glmer(correct~avg_fr_s+age.rounded_s+(1|file) + (1|target),data=trnsc,family="binomial")
 mycoeff=round(summary(xl_fr)$coefficients,3)
+#summary(xl_fr)
+#plot(xl_fr)
 ```
 
 
-We could include 885 observations (**why -- shouldn't it be 1k??**), from 41 children producing in any given trial one of 41 potential target words. The analysis revealed a significant estimate for the average cross-linguistic frequency of phones in the target words (ß = `r mycoeff["avg_fr","Estimate"]`, SE ß = `r mycoeff["avg_fr","Std. Error"]`, p = `r mycoeff["avg_fr","Pr(>|z|)"]`): Target words with phones found more frequently across languages had a higher proportion of words that were correctly repeated, as clear in Figure 2. 
+We could include 885 observations (**why -- shouldn't it be 1k??**), from 41 children producing in any given trial one of 41 potential target words. The analysis revealed a significant estimate for the average cross-linguistic frequency of phones in the target words (ß = `r mycoeff["avg_fr_s","Estimate"]`, SE ß = `r mycoeff["avg_fr_s","Std. Error"]`, p = `r mycoeff["avg_fr_s","Pr(>|z|)"]`): Target words with phones found more frequently across languages had a higher proportion of words that were correctly repeated, as clear in Figure 2. Age was also a significant predictor  (ß = `r mycoeff["age.rounded_s","Estimate"]`, SE ß = `r mycoeff["age.rounded_s","Std. Error"]`, p = `r mycoeff["age.rounded_s","Pr(>|z|)"]`).
 
 
 ```{r Fig2-xling_freq, ig.pos = "T!", fig.width=5, fig.height=5, fig.cap="NWR scores for individual target words as a function of the average frequency with which each phone is found across languages."}
@@ -464,6 +468,28 @@ plot(xling$Word~xling$Avg_fr,lty=3,ylab="NWR scores (% words)",xlab="Average pho
 text(xling$Word~xling$Avg_fr,labels=xling$Target,cex=.5)
 abline(lm(xling$Word~xling$Avg_fr))
 ```
+
+```{r cor vs xl}
+#fr_cor=glmer(correct~avg_fr_cor+age.rounded+(1|file) + (1|target),data=trnsc,family="binomial")
+#fr is not sig, but close (p=.1, estimate is 17)
+#trnsc$avg_fr_cor_s=scale(trnsc$avg_fr_cor)
+#both_fr=glmer(correct~avg_fr_s+avg_fr_cor_s+age.rounded_s+(1|file) + (1|target),data=trnsc,family="binomial")
+#both_coeff=round(summary(both_fr)$coefficients,3)
+
+#fr_cor_ty=glmer(correct~avg_fr_cor_ty+age.rounded+(1|file) + (1|target),data=trnsc,family="binomial")
+#fr is sig
+trnsc$avg_fr_cor_ty_s=scale(trnsc$avg_fr_cor_ty)
+both_fr=glmer(correct~avg_fr_s+avg_fr_cor_ty_s+age.rounded_s+(1|file) + (1|target),data=trnsc,family="binomial")
+both_coeff=round(summary(both_fr)$coefficients,3)
+
+read.delim("segments_with_cor_freq.txt", encoding="UTF-8")->segments
+freq_cor=cor.test(segments$pc,log(segments$freq_corpus_types))
+```
+
+
+We next checked whether this may actually be due to frequency of the sounds within the language. We estimated frequency of the phones present in the stimuli in a corpus of child-centered recordings [@casillas2020png], and applied the natural logarithm. As before, unattested sounds were not considered (i.e., they were declared NA so that they do not count for analyses). Phone frequency estimated from this corpus were correlated with cross-linguistic phone frequencies (r(`r freq_cor$parameter`)=`r round(freq_cor$estimate,3)`, =`r round(freq_cor$p.value,3)`). Therefore, we fit another mixed logistic regression, this time declaring as fixed effects scaled cross-linguistic and corpus frequencies (averaged across all attested phones within each stimulus item), in addition to age. As before, the model contained random slopes for both child ID and target. In this model, both cross-linguistic frequency (ß = `r both_coeff["avg_fr_s","Estimate"]`, SE ß = `r both_coeff["avg_fr_s","Std. Error"]`, p = `r both_coeff["avg_fr_s","Pr(>|z|)"]`) and age (ß = `r both_coeff["age.rounded_s","Estimate"]`, SE ß = `r both_coeff["age.rounded_s","Std. Error"]`, p = `r both_coeff["age.rounded_s","Pr(>|z|)"]`) were significant predictors of accuracy, but corpus frequency (ß = `r both_coeff["avg_fr_cor_ty_s","Estimate"]`, SE ß = `r both_coeff["avg_fr_cor_ty_s","Std. Error"]`, p = `r both_coeff["avg_fr_cor_ty_s","Pr(>|z|)"]`) was not.
+
+<!-- a2m should we point out that the coefficient for cross-ling frequency is reduced from .77 to .67, so indirectly corpus frequency does affect a little bit? Or making things too complicated, and just say "so corpus frequency does not explain away these results" -->
 
 
 ```{r diffic,echo=F}
@@ -598,7 +624,7 @@ Finally, we looked into the frequency with which mispronunciations resulted in r
 
 **TO DISCUSS TOGETHER this is higher than any previous report! can we be sure of it?**
 
-### Accuracy a function of item length 
+### Accuracy as a function of item length 
 
 ```{r bylength}
 aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$age.rounded,trnsc$type),mean)->by_length
