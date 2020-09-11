@@ -45,19 +45,39 @@ merge(trnsc,inc,by.x="id",by.y="ID",all.x=T)->trnsc
 dim(trnsc) #still no loss, all good
 
 #add orthographic representations targets & other stims chars
-read.delim("segment-counts.txt", encoding="UTF-8",sep="\t",header=T)->phone_counts
 read.delim("stimconv.txt", encoding="UTF-8")->stims
 read.delim("segconv.txt", encoding="UTF-8")->segments
 #add corpus freq to segments
+read.delim("segment-counts.txt", encoding="UTF-8",sep="\t",header=T)->phone_counts
 merge(segments,phone_counts,by.x="ortho",by.y="ortho",all.x=T)->segments
+#add corpus freq TYPES to segments
+read.delim("segment-counts-types.txt", encoding="UTF-8",sep="\t",header=T)->phone_counts_types
+merge(segments,phone_counts_types,by.x="ortho",by.y="ortho",all.x=T)->segments
 write.table(segments,"segments_with_cor_freq.txt",sep="\t",row.names = F)
 
+#add average crosslinguistic frequency
 stim_seg_freq=matrix(NA,nrow=dim(stims)[1],ncol=8)
 for(i in 1:dim(stim_seg_freq)[1]) for(j in 1:dim(stim_seg_freq)[2]) {
   thisfreq=segments$pc[as.character(segments$phono)==as.character(stims[i,paste0("phono",j)])] 
   stim_seg_freq[i,j]<-ifelse(sum(!is.na(thisfreq))==1,thisfreq,NA)
   }
 stims$avg_fr=apply(stim_seg_freq,1,mean,na.rm=T)
+
+#add average corpus frequency - LOGGED
+stim_seg_freq=matrix(NA,nrow=dim(stims)[1],ncol=8)
+for(i in 1:dim(stim_seg_freq)[1]) for(j in 1:dim(stim_seg_freq)[2]) {
+  thisfreq=segments$freq_corpus[as.character(segments$phono)==as.character(stims[i,paste0("phono",j)])] 
+  stim_seg_freq[i,j]<-ifelse(sum(!is.na(thisfreq))==1,thisfreq,NA)
+}
+stims$avg_fr_cor=apply(log(stim_seg_freq),1,mean,na.rm=T)
+
+#add average corpus frequency based on TYPES - LOGGED
+stim_seg_freq=matrix(NA,nrow=dim(stims)[1],ncol=8)
+for(i in 1:dim(stim_seg_freq)[1]) for(j in 1:dim(stim_seg_freq)[2]) {
+  thisfreq=segments$freq_corpus_types[as.character(segments$phono)==as.character(stims[i,paste0("phono",j)])] 
+  stim_seg_freq[i,j]<-ifelse(sum(!is.na(thisfreq))==1,thisfreq,NA)
+}
+stims$avg_fr_cor_ty=apply(log(stim_seg_freq),1,mean,na.rm=T)
 
 merge(trnsc,stims,by="target",all.x=T)->trnsc
 dim(trnsc)
@@ -72,7 +92,7 @@ trnsc[trnsc$target!="yi",]->trnsc
 
 #remove practice items
 trnsc=trnsc[trnsc$type !="practice",]
-
+dim(trnsc)
 
 ## PHONOLOGIZE AND SCORE
 
@@ -237,6 +257,45 @@ for(i in grep("0",trnsc$correct)){ #this goes through all items with errors (" g
     }
 }
 
+
+trnsc$ld=rowSums(trnsc[,c("ins","del","sub")])
+trnsc$nld=trnsc$ld/trnsc$nchar
+trnsc$nld[is.na(trnsc$nld)]<-0
+
+#proportion correct: remove Substitutions Deletions and Insertions & count only proportion of matches
+trnsc$pc=nchar(gsub("[SDI]","",trnsc$trafos))/trnsc$nchar
+trnsc$pc[is.na(trnsc$pc)]<-1
+
+write.table(trnsc,"final_data.txt",row.names=F,sep="\t")
+
+
+#back-transform into orthography
+for(i in dim(correspondances)[1]:1) { #
+   substitution_bank=gsub(correspondances[i,2],correspondances[i,1],substitution_bank,fixed=T)
+   deletion_bank=gsub(correspondances[i,2],correspondances[i,1],deletion_bank,fixed=T)
+   substitution_bank_try1=gsub(correspondances[i,2],correspondances[i,1],substitution_bank_try1,fixed=T)
+   deletion_bank_try1=gsub(correspondances[i,2],correspondances[i,1],deletion_bank_try1,fixed=T)
+}
+
+substitution_bank[order(substitution_bank[,1]),]->substitution_bank
+write.table(substitution_bank,"substitution_bank.txt",row.names=F,sep="\t")
+
+substitution_bank_try1[order(substitution_bank_try1[,1]),]->substitution_bank_try1  #this gives an error CHECK **AC**
+write.table(substitution_bank_try1,"substitution_bank_try1.txt",row.names=F,sep="\t")
+
+sort(deletion_bank)->deletion_bank
+write.table(deletion_bank,"deletion_bank.txt",row.names=F,sep="\t")
+sort(deletion_bank_try1)->deletion_bank_try1
+write.table(deletion_bank_try1,"deletion_bank_try1.txt",row.names=F,sep="\t")
+
+sort(match_bank)->match_bank
+write.table(match_bank,"match_bank.txt",row.names=F,sep="\t")
+sort(match_bank_try1)->match_bank_try1
+write.table(match_bank_try1,"match_bank_try1.txt",row.names=F,sep="\t")
+
+
+
+#create correct bank
 for(i in grep("1",trnsc$correct)){ #this goes through all items without errors (" grep("1",trnsc$correct)")
   #lev
   lev=adist(trnsc[i,c("target_uni")],trnsc[i,c("target_uni")],count=T)
@@ -269,38 +328,3 @@ for(i in grep("1",trnsc$correct)){ #this goes through all items without errors (
     
   }
 }
-
-trnsc$ld=rowSums(trnsc[,c("ins","del","sub")])
-trnsc$nld=trnsc$ld/trnsc$nchar
-trnsc$nld[is.na(trnsc$nld)]<-0
-
-#proportion correct: remove Substitutions Deletions and Insertions & count only proportion of matches
-trnsc$pc=nchar(gsub("[SDI]","",trnsc$trafos))/trnsc$nchar
-trnsc$pc[is.na(trnsc$pc)]<-1
-
-write.table(trnsc,"final_data.txt",row.names=F,sep="\t")
-
-
-#back-transform into orthography
-for(i in dim(correspondances)[1]:1) { #
-   substitution_bank=gsub(correspondances[i,2],correspondances[i,1],substitution_bank,fixed=T)
-   deletion_bank=gsub(correspondances[i,2],correspondances[i,1],deletion_bank,fixed=T)
-}
-
-substitution_bank[order(substitution_bank[,1]),]->substitution_bank
-write.table(substitution_bank,"substitution_bank.txt",row.names=F,sep="\t")
-substitution_bank_try1[order(substitution_bank_try1[,1]),]->substitution_bank_try1
-write.table(substitution_bank_try1,"substitution_bank_try1.txt",row.names=F,sep="\t")
-
-sort(deletion_bank)->deletion_bank
-write.table(deletion_bank,"deletion_bank.txt",row.names=F,sep="\t")
-sort(deletion_bank_try1)->deletion_bank_try1
-write.table(deletion_bank_try1,"deletion_bank_try1.txt",row.names=F,sep="\t")
-
-sort(match_bank)->match_bank
-write.table(match_bank,"match_bank.txt",row.names=F,sep="\t")
-sort(match_bank_try1)->match_bank_try1
-write.table(match_bank_try1,"match_bank_try1.txt",row.names=F,sep="\t")
-
-
-
