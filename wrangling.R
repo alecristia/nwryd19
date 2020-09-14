@@ -65,6 +65,8 @@ merge(trnsc,inc,by.x="id",by.y="ID",all.x=T)->trnsc
 dim(trnsc) #still no loss, all good
 
 #add orthographic representations targets & other stims chars
+# M2A: Note that some of these stim characters are now updated in stimuli2.txt
+# they do not match what is shown here
 read.delim("stimconv.txt", encoding="UTF-8")->stims
 read.delim("segconv.txt", encoding="UTF-8")->segments
 #add corpus freq to segments
@@ -78,9 +80,10 @@ write.table(segments,"segments_with_cor_freq.txt",sep="\t",row.names = F)
 #add average crosslinguistic frequency
 stim_seg_freq=matrix(NA,nrow=dim(stims)[1],ncol=8)
 for(i in 1:dim(stim_seg_freq)[1]) for(j in 1:dim(stim_seg_freq)[2]) {
-  thisfreq=segments$pc[as.character(segments$phono)==as.character(stims[i,paste0("phono",j)])] 
+  thisfreq=segments$pc[as.character(segments$phono)==as.character(stims[i,paste0("phono",j)])]
   stim_seg_freq[i,j]<-ifelse(sum(!is.na(thisfreq))==1,thisfreq,NA)
-  }
+}
+# M2A: I'm suspicious of some of the NAs in here (like for 'k', 'w', 'd')--what is segment pc?
 stims$avg_fr=apply(stim_seg_freq,1,mean,na.rm=T)
 
 #add average corpus frequency - LOGGED
@@ -94,18 +97,14 @@ stims$avg_fr_cor=apply(log(stim_seg_freq),1,mean,na.rm=T)
 #add average corpus frequency based on TYPES - LOGGED
 stim_seg_freq=matrix(NA,nrow=dim(stims)[1],ncol=8)
 for(i in 1:dim(stim_seg_freq)[1]) for(j in 1:dim(stim_seg_freq)[2]) {
-  thisfreq=segments$freq_corpus_types[as.character(segments$phono)==as.character(stims[i,paste0("phono",j)])] 
+  thisfreq=segments$freq_corpus_types[
+    as.character(segments$phono)==as.character(stims[i,paste0("phono",j)])] 
   stim_seg_freq[i,j]<-ifelse(sum(!is.na(thisfreq))==1,thisfreq,NA)
 }
 stims$avg_fr_cor_ty=apply(log(stim_seg_freq),1,mean,na.rm=T)
 
 merge(trnsc,stims,by="target",all.x=T)->trnsc
 dim(trnsc)
-
-#DATA REMOVAL *** ATTENTION *** 
-#REMOVE ALL TASK 4 (whatever that is)
-#trnsc[!is.na(trnsc$target),]->trnsc
-#already done
 
 #REMOVING ALL THE "YI"
 trnsc[trnsc$target!="yi",]->trnsc
@@ -119,6 +118,8 @@ dim(trnsc)
 #log non-fluent speech, then get rid of that marker
 trnsc$nonfluent<-NA
 trnsc$nonfluent[grep("-",trnsc$mp_uni,fixed=T)]<-1
+# M2A: there is no mp_uni column in trnsc as far as I can see, so this line
+# doesn't do anything
 trnsc$mispronunciation=gsub("-","",trnsc$mispronunciation)
 
 # make all vowels in mispronunciation & target short (so we don't penalize length errors)
@@ -128,6 +129,8 @@ trnsc$target_ortho=gsub("([aeiouêâéáóî])\\1+", "\\1", trnsc$target_ortho)
 # if correct=0 but orthotarget=mispronunciation (probably due to length errors) then change correct to 1 
 #sum(trnsc$correct==0 & trnsc$target_ortho == trnsc$mp & !is.na(trnsc$mp)) #this only happens twice
 trnsc$correct[trnsc$correct==0 & trnsc$target_ortho == trnsc$mp & !is.na(trnsc$mp)]<-1
+# M2A: This appears to be only two cases and it doesn't seem to be a length error diff
+# i.e., mp == mispronunciation on both of these -- should we be cautious about counting them as correct?
 
 # create phonological correspondance matrix
 # NOTE!! NON INTUITIVE MAPPING!!!! DO NOT READ THE OUTPUT BELIEVING IT IS PSEUDO IPA!!!
