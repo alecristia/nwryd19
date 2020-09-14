@@ -2,7 +2,7 @@
 read.delim("NWR-transcription.txt", encoding="UTF-8")->trnsc
 #DATA REMOVAL *** ATTENTION *** 
 #REMOVE ALL TASK 4 (whatever that is)
-# MC: This appears to be a second pass over productions that were deemed to
+# M2A: This appears to be a second pass over productions that were deemed to
 # be words; the elicitation here is just a translation of what word the
 # production was heard to be
 trnsc[trnsc$item!="task4",]->trnsc
@@ -38,7 +38,7 @@ trnsc$attempt <- ifelse(trnsc$rep == "1", "first", "subsequent")
 #   replace_na(list(attempt = "subsequent"))
 # table(trnsc$attempt)
 # M2A: by my count there are 1029 first attempts, but maybe I'm misunderstanding "token"
-# M2A: my solution finds some conflicting cases with your outfile attempt namings,
+# M2A: okay, my solution finds some conflicting cases with your outfile attempt namings,
 #      now going off of those for attempt first/subsequent, I still find 1029
 
 # AC's prev code
@@ -66,7 +66,7 @@ dim(trnsc) #still no loss, all good
 
 #add orthographic representations targets & other stims chars
 # M2A: Note that some of these stim characters are now updated in stimuli2.txt
-# they do not match what is shown here
+# they do not match what is shown here (!!)
 read.delim("stimconv.txt", encoding="UTF-8")->stims
 read.delim("segconv.txt", encoding="UTF-8")->segments
 #add corpus freq to segments
@@ -130,7 +130,8 @@ trnsc$target_ortho=gsub("([aeiouêâéáóî])\\1+", "\\1", trnsc$target_ortho)
 #sum(trnsc$correct==0 & trnsc$target_ortho == trnsc$mp & !is.na(trnsc$mp)) #this only happens twice
 trnsc$correct[trnsc$correct==0 & trnsc$target_ortho == trnsc$mp & !is.na(trnsc$mp)]<-1
 # M2A: This appears to be only two cases and it doesn't seem to be a length error diff
-# i.e., mp == mispronunciation on both of these -- should we be cautious about counting them as correct?
+# i.e., mp == mispronunciation on both of these -- should we be cautious about
+# counting them as correct?
 
 # create phonological correspondance matrix
 # NOTE!! NON INTUITIVE MAPPING!!!! DO NOT READ THE OUTPUT BELIEVING IT IS PSEUDO IPA!!!
@@ -271,7 +272,7 @@ for(i in grep("0",trnsc$correct)){ #this goes through all items with errors (" g
   matlist=which(strsplit(attributes(lev)$trafos, "")[[1]]=="M")
   match_bank=rbind(match_bank,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][matlist]))
   
-  #if item is first attempt, add to try1
+  #if item is first attempt, add to try1 version of these tables
   if(trnsc[i,"attempt"]=="first") {
     substitution_bank_try1=rbind(substitution_bank_try1,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][sublist],strsplit(trnsc[i,c("mp_uni")],"")[[1]][sublist]))
     deletion_bank_try1=rbind(deletion_bank_try1,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][dellist]))
@@ -280,12 +281,13 @@ for(i in grep("0",trnsc$correct)){ #this goes through all items with errors (" g
     }
 }
 
-
 trnsc$ld=rowSums(trnsc[,c("ins","del","sub")])
 trnsc$nld=trnsc$ld/trnsc$nchar
 trnsc$nld[is.na(trnsc$nld)]<-0
 
 #proportion correct: remove Substitutions Deletions and Insertions & count only proportion of matches
+# M2A: Isn't 'pc' used as a variable name relating to phone frequency above?
+# they don't actually overlap here but I'm wary of potential future confusion
 trnsc$pc=nchar(gsub("[SDI]","",trnsc$trafos))/trnsc$nchar
 trnsc$pc[is.na(trnsc$pc)]<-1
 
@@ -304,6 +306,7 @@ substitution_bank[order(substitution_bank[,1]),]->substitution_bank
 write.table(substitution_bank,"substitution_bank.txt",row.names=F,sep="\t")
 
 substitution_bank_try1[order(substitution_bank_try1[,1]),]->substitution_bank_try1  #this gives an error CHECK **AC**
+# M2A: this ^^ doesn't seem to give an error anymore; maybe delete old comment?
 write.table(substitution_bank_try1,"substitution_bank_try1.txt",row.names=F,sep="\t")
 
 sort(deletion_bank)->deletion_bank
@@ -317,8 +320,8 @@ sort(match_bank_try1)->match_bank_try1
 write.table(match_bank_try1,"match_bank_try1.txt",row.names=F,sep="\t")
 
 
-
 #create correct bank
+# M2A: what's this for if we don't expect any S/D/Is?
 for(i in grep("1",trnsc$correct)){ #this goes through all items without errors (" grep("1",trnsc$correct)")
   #lev
   lev=adist(trnsc[i,c("target_uni")],trnsc[i,c("target_uni")],count=T)
