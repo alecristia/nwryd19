@@ -2,6 +2,9 @@
 read.delim("NWR-transcription.txt", encoding="UTF-8")->trnsc
 #DATA REMOVAL *** ATTENTION *** 
 #REMOVE ALL TASK 4 (whatever that is)
+# MC: This appears to be a second pass over productions that were deemed to
+# be words; the elicitation here is just a translation of what word the
+# production was heard to be
 trnsc[trnsc$item!="task4",]->trnsc
 
 dim(trnsc) #1488 judgments
@@ -18,14 +21,31 @@ dim(trnsc) #haven't lost any judgments
 #order so we have all the items by a given child in the right chrono order
 trnsc[order(trnsc$file, trnsc$int),]->trnsc
 
-#add variable coding whether it's the child's first or subsequent attempts
-trnsc$previous<-c(NA,as.character(trnsc$target[1:(dim(trnsc)[1]-1)]))
-trnsc$attempt<-ifelse(trnsc$target!=trnsc$previous,"first","subsequent")
-trnsc$attempt[1]<-"first"
-table(trnsc$attempt) #1045 first attempts
-
 #add repetition number
 trnsc$rep=gsub(".*_","",gsub(".wav","",trnsc$outfile))
+
+#add variable coding whether it's the child's first or subsequent attempts
+trnsc$attempt <- ifelse(trnsc$rep == "1", "first", "subsequent")
+
+# MC's new code
+# first.prods <- trnsc %>%
+#   group_by(id, item) %>%
+#   summarize(min.token = min(token)) %>%
+#   mutate(attempt = "first") %>%
+#   rename("token" = min.token)
+# trnsc <- trnsc %>%
+#   left_join(first.prods, by = c("id", "item", "token")) %>%
+#   replace_na(list(attempt = "subsequent"))
+# table(trnsc$attempt)
+# M2A: by my count there are 1029 first attempts, but maybe I'm misunderstanding "token"
+# M2A: my solution finds some conflicting cases with your outfile attempt namings,
+#      now going off of those for attempt first/subsequent, I still find 1029
+
+# AC's prev code
+# trnsc$previous<-c(NA,as.character(trnsc$target[1:(dim(trnsc)[1]-1)]))
+# trnsc$attempt<-ifelse(trnsc$target!=trnsc$previous,"first","subsequent")
+# trnsc$attempt[1]<-"first"
+# table(trnsc$attempt) #1045 first attempts
 
 
 # add demographic info
