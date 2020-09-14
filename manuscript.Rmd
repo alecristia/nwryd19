@@ -25,7 +25,7 @@ authornote: |
 
   
 abstract: >
-   In nonword repetition (NWR) studies, participants are presented auditorily with an item that is phonologically legal but lexically meaningless in the local language. Accuracy is thought to reflect long-term phonological knowledge as well as online phonological working memory and flexible production patterns. In this study, we report on NWR results among children learning Yêly Dnyé, an isolate spoken in Rossel Island, PNG, with an unusually dense phonological inventory. This study contributes to three lines of research. First, we document that non-word items containing typologically rare sounds are repeated accurately less often that non-words containing more common sounds. Second, we document rather weak effects of item length, contributing to other research suggesting that length effects may be language-specific. Third, we do not find strong individual variation effects in this population, contrary to previous results documenting strong age-related effects. Together, these data provide a unique view of online phonological processing in a seldom-studied language, and contribute to both typological and language acquisition research.
+   In nonword repetition (NWR) studies, participants are presented auditorily with an item that is phonologically legal but lexically meaningless in the local language. NWR scores are thought to reflect long-term phonological knowledge as well as online phonological working memory and flexible production patterns. In this study, we report on NWR results among children learning Yêly Dnyé, an isolate spoken in Rossel Island, PNG, with an unusually dense phonological inventory. This study contributes to three lines of research. First, we document that non-word items containing typologically rare sounds are repeated without changes less often that non-words containing more common sounds. Second, we document rather weak effects of item length, contributing to other research suggesting that length effects may be language-specific. Third, we do not find strong individual variation effects in this population, contrary to previous results documenting strong age-related effects. Together, these data provide a unique view of online phonological processing in a seldom-studied language, and contribute to both typological and language acquisition research.
 
 
 
@@ -139,16 +139,18 @@ correspondances=matrix( #list correspondances always by pairs, orthography then 
 - double check phonological implementation of stimuli in stimuli.xlsx 
 - for both of the above, if you make any changes, they need to be re-saved as UTF16 txt file, and then converted (see remember above)
 - double check also stim_seg_freq -- why are some items still with NA freq?
-- consent, "correct", "accuracy", "performance"
 - draft discussion
 
+## TODO Alex
 
+- add effect sizes to all analyses
+- reply to questions
 
 
 
 ## Introduction
 
-Although infants begin to learn about their native language's phonology within the first year, many studies suggest that in perception and production, in phonetics and phonology, their knowledge continues to develop throughout childhood [e.g., @hazan2000development]. One common task in this line of research is nonword repetition (NWR). In NWR studies, participants are presented auditorily with an item that is phonologically legal but lexically meaningless in the language children are learning. The child should immediately try to say it back without changing anything. Accuracy is thought to reflect long-term phonological knowledge (which allows the child to perceive the item accurately even though it is not a real word they have encountered before) as well as online phonological working memory (to encode the item in the interval between hearing it and saying it back) and flexible production patterns (to produce the item accurately even though it had never been pronounced before). 
+Although infants begin to learn about their native language's phonology within the first year, many studies suggest that in perception and production, in phonetics and phonology, their knowledge continues to develop throughout childhood [e.g., @hazan2000development]. One common task in this line of research is nonword repetition (NWR). In NWR studies, participants are presented auditorily with an item that is phonologically legal but lexically meaningless in the language children are learning. The child should immediately try to say it back without changing anything. NWR scores are thought to reflect long-term phonological knowledge (which allows the child to perceive the item precisely even though it is not a real word they have encountered before) as well as online phonological working memory (to encode the item in the interval between hearing it and saying it back) and flexible production patterns (to produce the item precisely even though it had never been pronounced before). 
 
 NWR has been used to seek answers to a variety of theoretical questions, including what  the links between phonology, working memory, and the lexicon are [@bowey2001nonword], and to assess the extent to which apparent phonological constraints found in the lexicon affect online production [@gallagher2014identity]. It is also frequently used for applications, notably  as a diagnostic for language delays and disorders [@estes2007differences]. Since non-words can be generated in any language, it has attracted the attention of researchers working in multilingual and linguistically diverse environments,  particularly in Europe [@meir2016disentangling;@is08042009language]. However, it has been seldom used outside of Europe and North America [with exceptions including @gallagher2014identity and @cristia2020infant].
 
@@ -156,7 +158,7 @@ NWR has been used to seek answers to a variety of theoretical questions, includi
 <!--M2A: I feel like there's a bit of a jump here from explaining what NWR is and what it's used for to saying we used it in the current study to test three things. We should probably have a paragraph justifying its use in this context, no?-->
 <!-- a2m I added a sentence, is this what you were thinking of? -->
 
-In this study, we report on NWR results among children learning Yêly Dnyé, an isolate spoken in Rossel Island, PNG, with an unusually dense phonological inventory.  The present report uses these unique data to contribute to several lines of research. First, we  made sure that some of the non-word items contained typologically rare and/or  challenging sounds, so that we can contribute to the study of whether rare sounds are disadvantaged in perception and/or production, both in terms of overall accuracy of repetition and patterns of mispronunciation. Second, we look at the effects of item length, since previous NWR research has uncovered variable effects. Third, we contribute to the basic NWR literature by adding a data point for children learning a rarely-studied language and culture, and further investigating whether there are structured sources that account for individual variation.
+In this study, we report on NWR results among children learning Yêly Dnyé, an isolate spoken in Rossel Island, PNG, with an unusually dense phonological inventory.  The present report uses these unique data to contribute to several lines of research. First, we  made sure that some of the non-word items contained typologically rare and/or  challenging sounds, so that we can contribute to the study of whether rare sounds are disadvantaged in perception and/or production, both in terms of overall repetition scores and patterns of mispronunciation. Second, we look at the effects of item length, since previous NWR research has uncovered variable effects. Third, we contribute to the basic NWR literature by adding a data point for children learning a rarely-studied language and culture, and further investigating whether there are structured sources that account for individual variation.
 
 ### Yélî Dnye phonological overview
 
@@ -200,7 +202,7 @@ The basic structure of NWR involves the participant hearing a non-word, like "bi
 
 Aside from this central basic structure, there is some variation in the presentation procedure and structure of items found in previous NWR work. For example, items are often presented orally by the experimenter [@torrington2015non], although an increasing number of studies have turned to playing back the stimuli in order to have greater control of the stability of the presentation [@brandeker2015language]. Additionally, while some studies have used 10-15 non-words, others have employed up to 46 unique items [@piazzalunga2019articulatory]. Often, authors modulate structural complexity, typically measured in terms of item length (measured in number of syllables) and/or syllable structure [open as opposed to closed syllables, @gallon2007non]. 
 
-Previous work seems to avoid difficult sounds, but we felt this was important to represent Yélî Dnye, so we also varied this factor. We designed a relatively large number of items but, aware that this may render the task longer and more tiresome, we split some of the items across children. This allowed us to get information about repetition accuracy of more items. 
+Previous work seems to avoid difficult sounds, but we felt this was important to represent Yélî Dnye, so we also varied this factor. We designed a relatively large number of items but, aware that this may render the task longer and more tiresome, we split some of the items across children. This allowed us to get NWR scores for more items. 
 
 Naturally, designing the task in this way may render the study of individual variation within the population  more difficult because different children are exposed to different items. However, a review of previous work on individual variation suggested to us that effects of individual differences  are relatively small, and would not be detectable with the sample size that we could collect in a given visit. 
 
@@ -346,7 +348,7 @@ A script was written to randomize all tokens from all children, pairing each wit
 
 ### Analyses
 
-Some NWR studies employ phoneme-based scoring in addition to or instead of word-level accuracy [e.g., @cristia2020infant]. We scored items in terms of the number of phonemes that could be aligned across the target and attempt, divided by the number of phonemes of whichever item was longer (the target or the attempt). Although previous work does not use distance metrics, we additionally report those. For instance, recall our example of an English target being "bilik", and imagine a response "bilig". This would receive the following scores: at the whole item level this would receive a score of zero (because the repetition is not exact); at the phoneme level it would receive a score of 80% (4 out of 5 phonemes repeated exactly); and its normalized phone-based Levenshtein distance is 20% (20% of phonemes were substituted or deleted).  
+Some NWR studies employ phoneme-based scoring in addition to or instead of word-level scoring [e.g., @cristia2020infant]. We scored items in terms of the number of phonemes that could be aligned across the target and attempt, divided by the number of phonemes of whichever item was longer (the target or the attempt). Although previous work does not use distance metrics, we additionally report those. For instance, recall our example of an English target being "bilik", and imagine a response "bilig". This would receive the following scores: at the whole item level this would receive a score of zero (because the repetition is not exact); at the phoneme level it would receive a score of 80% (4 out of 5 phonemes repeated exactly); and its normalized phone-based Levenshtein distance is 20% (20% of phonemes were substituted or deleted).  
 <!--M2A: A concrete scoring example would be a good idea here-->
 <!-- a2m added! actually, I haven't changed anything but I've been hesitant about using levenshtein's distance because it's the complement of phoneme based scoring -- so shall we drop it?  -->
 
@@ -361,7 +363,7 @@ Finally, for describing children's patterns of errors, all repetitions of a give
 
 ### Participants
 
-This study was approved as part of a larger research effort by Marisa Casillas, with the research protocol having been approved by the IRB committee entitled The Ethics Committee of the Faculty of Social Sciences (Ethiek Commissie van de faculteit der Sociale Wetenschappen; ECSW) of Radboud University, Nijmegen, The Netherlands.  The approval for work outside of the Netherlands came as an amendment to the general research line on language development research (original request: ECSW2017-3001-474 Manko-Rowland; amendment: ECSW-2018-041). Participation was voluntary, with children being invited to come and participate. Regardless of how they performed, children were provided with a snack as compensation. Children who came up to participate but then refused were nonetheless provided with the snack. 
+This study was approved as part of a larger research effort by Marisa Casillas, with the research protocol having been approved by the IRB committee entitled The Ethics Committee of the Faculty of Social Sciences (Ethiek Commissie van de faculteit der Sociale Wetenschappen; ECSW) of Radboud University, Nijmegen, The Netherlands.  The approval for work outside of the Netherlands came as an amendment to the general research line on language development research (original request: ECSW2017-3001-474 Manko-Rowland; amendment: ECSW-2018-041). Participation was voluntary, with children being invited to come and participate. Regardless of whether they did any of the task, children were provided with a snack as compensation. Children who came up to participate but then refused were nonetheless provided with the snack. 
 
 ```{r demo}
 # read.csv("NWR-test-log_FINAL.csv",header=T,sep=";")->fulldemo
@@ -409,7 +411,8 @@ read.table("final_data.txt",header=T,encoding="UTF-8")->trnsc
 # M2A: Seems like you already did this, and the line below
 # is setting the is.na(trnsc$Sex) cases to "G" -- I assume
 # that's not a desirable outcome so am commenting it out
-# trnsc$Sex[trnsc$Sex=="F"]<-"G"
+# a2m fixed, but I think it is better to fix all of these error upstream, in the demo.xlsx file
+trnsc$Sex[trnsc$Sex=="F" & !is.na(trnsc$Sex)]<-"G"
 trnsc$Sex=factor(trnsc$Sex)
 trnsc$birthOrder=as.numeric(trnsc$birthOrder)
 ```
@@ -435,8 +438,8 @@ axis(1,at=1:2,labels=c("first","others"))
 t.test(pwcm_att$Word~pwcm_att$Attempt,paired=T)->myt
 ```
 
-We first checked whether accuracy varies between first and subsequent presentations of an item by averaging word-level accuracy at the participant level separately for first attempts and subsequent repetitions. We excluded `r excl` children who did not have data for one of these two types. As shown in Figure 1, participants' mean word-level accuracy became more heterogeneous in subsequent repetitions. Surprisingly, subsequent repetitions (M = `r round(mean(pwcm_att$Word[pwcm_att$Attempt!="first"]))`, SD = `r round(sd(pwcm_att$Word[pwcm_att$Attempt!="first"]))`)
-were on average less accurate than first ones (M = `r round(mean(pwcm_att$Word[pwcm_att$Attempt=="first"]))`, SD = `r round(sd(pwcm_att$Word[pwcm_att$Attempt=="first"]))`), t(`r round(myt$parameter,2)`) = `r round(myt$statistic,2)`, p = `r round(myt$p.value,2)`. Given the uncertainty in whether previous work used only the first or all repetitions, and since behavior degraded and became more heterogeneous in subsequent repetitions, the rest of the analyses focus on only the first repetitions.
+We first checked whether NWR scores varied between first and subsequent presentations of an item by averaging word-level scores at the participant level separately for first attempts and subsequent repetitions. We excluded `r excl` children who did not have data for one of these two types. As shown in Figure 1, participants' mean word-level scores became more heterogeneous in subsequent repetitions. Surprisingly, NWR scores for subsequent repetitions (M = `r round(mean(pwcm_att$Word[pwcm_att$Attempt!="first"]))`, SD = `r round(sd(pwcm_att$Word[pwcm_att$Attempt!="first"]))`)
+were on average lower than first ones (M = `r round(mean(pwcm_att$Word[pwcm_att$Attempt=="first"]))`, SD = `r round(sd(pwcm_att$Word[pwcm_att$Attempt=="first"]))`), t(`r round(myt$parameter,2)`) = `r round(myt$statistic,2)`, p = `r round(myt$p.value,2)`. Given the uncertainty in whether previous work used only the first or all repetitions, and since scores declined and became more heterogeneous in subsequent repetitions, the rest of the analyses focus on only the first repetitions.
 
 ```{r exclude subsequent}
 trnsc=trnsc[trnsc$attempt=="first",]
@@ -447,9 +450,9 @@ trnsc=trnsc[trnsc$attempt=="first",]
 ```{r overall}
 
 aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$Sex,trnsc$age.rounded,trnsc$birthOrder,trnsc$matEd),mean)->overall
-aggregate(trnsc$pc*100,by=list(trnsc$id,trnsc$Sex,trnsc$age.rounded,trnsc$birthOrder,trnsc$matEd),mean)->pc
+aggregate(trnsc$phon_score*100,by=list(trnsc$id,trnsc$Sex,trnsc$age.rounded,trnsc$birthOrder,trnsc$matEd),mean)->phon_score
 aggregate(trnsc$nld*100,by=list(trnsc$id,trnsc$Sex,trnsc$age.rounded,trnsc$birthOrder,trnsc$matEd),mean)->nld
-overall=cbind(overall,pc$x,nld$x)
+overall=cbind(overall,phon_score$x,nld$x)
 colnames(overall)<-c("ID","Sex","Age","BrthO","matEd","Word","Phoneme","NLD")
 
 ```
@@ -463,7 +466,7 @@ The overall NWR score was M = `r round(mean(overall$Word))`% (SD = `r round(sd(o
 
 ### NWR as a function of cross-linguistic phone frequency
 
-In this analysis, we were interested in variation in performance as a function of the average frequency with which sounds composing individual target words are found in languages over the world. To look at this, we fit a mixed logistic regression, in which the outcome variable was whether the non-word was correctly repeated or not. The fixed effects of interest was the average cross-linguistic phone frequency; we also included child age as a control fixed effect, and child ID & target ID as random variables.
+In this analysis, we were interested in variation in NWR scores as a function of the average frequency with which sounds composing individual target words are found in languages over the world. To look at this, we fit a mixed logistic regression, in which the outcome variable was whether the non-word was correctly repeated or not. The fixed effects of interest was the average cross-linguistic phone frequency; we also included child age as a control fixed effect, and child ID & target ID as random variables.
 
 ```{r xling-freq-ana}
 trnsc$avg_fr_s=scale(trnsc$avg_fr)
@@ -504,7 +507,7 @@ freq_cor=cor.test(segments$pc,log(segments$freq_corpus_types))
 ```
 
 
-We next checked whether this may actually be due to frequency of the sounds within the language. We estimated frequency of the phones present in the stimuli in a corpus of child-centered recordings [@casillas2020png], and applied the natural logarithm. As before, unattested sounds were not considered (i.e., they were declared NA so that they do not count for analyses). Phone frequency estimated from this corpus were correlated with cross-linguistic phone frequencies (r(`r freq_cor$parameter`)=`r round(freq_cor$estimate,3)`, =`r round(freq_cor$p.value,3)`). Therefore, we fit another mixed logistic regression, this time declaring as fixed effects scaled cross-linguistic and corpus frequencies (averaged across all attested phones within each stimulus item), in addition to age. As before, the model contained random slopes for both child ID and target. In this model, both cross-linguistic frequency (ß = `r both_coeff["avg_fr_s","Estimate"]`, SE ß = `r both_coeff["avg_fr_s","Std. Error"]`, p = `r both_coeff["avg_fr_s","Pr(>|z|)"]`) and age (ß = `r both_coeff["age.rounded_s","Estimate"]`, SE ß = `r both_coeff["age.rounded_s","Std. Error"]`, p = `r both_coeff["age.rounded_s","Pr(>|z|)"]`) were significant predictors of accuracy, but corpus frequency (ß = `r both_coeff["avg_fr_cor_ty_s","Estimate"]`, SE ß = `r both_coeff["avg_fr_cor_ty_s","Std. Error"]`, p = `r both_coeff["avg_fr_cor_ty_s","Pr(>|z|)"]`) was not.
+We next checked whether this may actually be due to frequency of the sounds within the language. We estimated frequency of the phones present in the stimuli in a corpus of child-centered recordings [@casillas2020png], and applied the natural logarithm. As before, unattested sounds were not considered (i.e., they were declared NA so that they do not count for analyses). Phone frequency estimated from this corpus were correlated with cross-linguistic phone frequencies (r(`r freq_cor$parameter`)=`r round(freq_cor$estimate,3)`, =`r round(freq_cor$p.value,3)`). Therefore, we fit another mixed logistic regression, this time declaring as fixed effects scaled cross-linguistic and corpus frequencies (averaged across all attested phones within each stimulus item), in addition to age. As before, the model contained random slopes for both child ID and target. In this model, both cross-linguistic frequency (ß = `r both_coeff["avg_fr_s","Estimate"]`, SE ß = `r both_coeff["avg_fr_s","Std. Error"]`, p = `r both_coeff["avg_fr_s","Pr(>|z|)"]`) and age (ß = `r both_coeff["age.rounded_s","Estimate"]`, SE ß = `r both_coeff["age.rounded_s","Std. Error"]`, p = `r both_coeff["age.rounded_s","Pr(>|z|)"]`) were significant predictors of word-level NWR scores, but corpus frequency (ß = `r both_coeff["avg_fr_cor_ty_s","Estimate"]`, SE ß = `r both_coeff["avg_fr_cor_ty_s","Std. Error"]`, p = `r both_coeff["avg_fr_cor_ty_s","Pr(>|z|)"]`) was not.
 
 <!-- a2m should we point out that the coefficient for cross-ling frequency is reduced from .77 to .67, so indirectly corpus frequency does affect a little bit? Or making things too complicated, and just say "so corpus frequency does not explain away these results" -->
 
@@ -641,21 +644,21 @@ Finally, we looked into the frequency with which mispronunciations resulted in r
 
 **TO DISCUSS TOGETHER this is higher than any previous report! can we be sure of it?**
 
-### Accuracy as a function of item length 
+### NWR scores as a function of item length 
 
 ```{r bylength}
 aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$age.rounded,trnsc$type),mean)->by_length
-aggregate(trnsc$pc*100,by=list(trnsc$id,trnsc$age.rounded,trnsc$type),mean)->pc
+aggregate(trnsc$phon_score*100,by=list(trnsc$id,trnsc$age.rounded,trnsc$type),mean)->phon_score
 aggregate(trnsc$nld*100,by=list(trnsc$id,trnsc$age.rounded,trnsc$type),mean)->nld
-by_length=cbind(by_length,pc$x,nld$x)
+by_length=cbind(by_length,phon_score$x,nld$x)
 colnames(by_length)<-c("ID","Age","Length","Word","Phoneme","NLD")
 
 ```
 
 
-Next, we inspected whether accuracy varied as a function of word length. Results are shown on table XX. This table shows that monosyllables accuracy was much lower than other lengths. This is likely due to the fact that the majority of monosyllables included were chosen because they had sounds that are rare in the world's languages, which may indicate that they are hard to produce or to perceive. 
+Next, we inspected whether NWR scores varied as a function of word length. Results are shown on table XX. This table shows that scores for monosyllables was much lower than for other lengths. This is likely due to the fact that the majority of monosyllables included were chosen because they had sounds that are rare in the world's languages, which may indicate that they are hard to produce or to perceive. 
 
-Setting monosyllables aside, we observe the typical pattern of decreased accuracy for longer items, although this is particularly salient for the whole word scoring. This is the most commonly reported type of score, but it is also the least forgiving. The pattern is less marked when other two scores are used, which are less sensitive to errors.
+Setting monosyllables aside, we observe the typical pattern of lower scores for longer items, although this is particularly salient for the whole word scoring. This is the most commonly reported type of score, but it is also the least forgiving. The pattern is less marked when other two scores are used, which are less sensitive to errors.
 
 
 ```{r tablength}
@@ -667,7 +670,7 @@ for(myvar in c("Word","Phoneme","NLD")){
 }
 rownames(birthorder.tab)<-levels(by_length$Length)
 colnames(birthorder.tab)<-c("Word","Phoneme","NLD")
-apa_table(birthorder.tab,caption="NWR scores measured in whole word accuracy, phoneme-based accuracy, and normalized Levenshtein Distance, separately for the four stimuli lengths.")
+apa_table(birthorder.tab,caption="NWR measured in whole-word scores, phoneme-based scores, and normalized Levenshtein Distance, separately for the four stimuli lengths.")
 ```
 
 
@@ -697,16 +700,18 @@ Our final exploratory analysis assessed whether variation in scores was structur
 
 ## Discussion
 
-- What is the overall repetition accuracy (whole word, phoneme based, distance)?
+- What is the overall repetition scores (whole word, phoneme based, distance)?
 
 - How does this change as a function of item complexity (number of syllables, sound complexity)?
 
-1. Children are more accurate for mono-syllables than longer items
-1. The length distribution in Yélî words is more balanced than that in English, and thus the performance decline for poly- versus mono-syllables may be less pronounced than that for English. **Check for work on European languages that may have looked into this**
+1. Prediction based on previous work: Children have higher scores for shorter items
+1. Prediction for Yélî made before seeing the data: The length distribution in Yélî words is more balanced than that in English, and thus the score decline for poly- versus mono-syllables may be less pronounced than that for English. 
+1. it turns out we were right! the scores for 2-4 syll words decline only slightly with length
 
 
-2. Similarly, we do not know of NWR research that manipulates the difficulty of the sounds that are included in the items, but word naming and other research suggests that children are more accurate when producing easy and/or typologically common sounds than difficult and/or typologically rare sounds [CITE]. Therefore, we expect higher accuracy for items with common sounds than in those with rare sounds.
-2. The Yélî sound inventory is very large and compressed, with many similar sounds that are acoustic and articulatory neighbors. Therefore, this may constitute a pressure for children to have finer auditory skills (and perhaps more precise articulations) than children speaking languages with a simpler inventory. As a result, differences between easier and harder items may be smaller in this work than in other research. **no work looking at consonants & vowels? no work looking at nasal vowels in particular?**
+2. Prediction based on previous work: Similarly, we do not know of NWR research that manipulates the difficulty of the sounds that are included in the items, but word naming and other research suggests that children achieve higher scores when producing easy and/or typologically common sounds than difficult and/or typologically rare sounds [CITE]. Therefore, we expect higher scores for items with common sounds than in those with rare sounds.
+2. Prediction for Yélî made before seeing the data: The Yélî sound inventory is very large and compressed, with many similar sounds that are acoustic and articulatory neighbors. Therefore, this may constitute a pressure for children to have finer auditory skills (and perhaps more precise articulations) than children speaking languages with a simpler inventory. As a result, differences between easier and harder items may be smaller in this work than in other research. 
+2. it turns out we do see 
 
 **(MC: but we can try and do a cursory analysis based on the corpora we have from Steve and my transcription of naturalistic interactions!)**
 
@@ -715,22 +720,32 @@ Our final exploratory analysis assessed whether variation in scores was structur
 - Is individual variation explainable by child age, sex, birth order, monolingual status, and/or parental education?
 
 
-3. Children's accuracy increases with child age.
-4. Non-monolingual Yélî children are less accurate than monolingual ones when tested on the society-dominant language (we did not test any non-dominant language) 
-<!-- **(MC: or just because they're acquiring two phonologies and so show slightly delayed linguistic development, in parallel with vocab development stuff; we don't have data on their dominant language, but i guess we can assume it's YD for most kids---i'm sure there are exceptions!)** ac2mc I added "society-" because that's what I meant (we didn't get proportions of time in which they hear YD versus other languages); I didn't add anything about why this would come out like this or not here, but I'll add this -- although I think the evidence on that is mixed (ie no strong evidence that learning 2 phonologies sets you back)-->
-5. As revious NWR evidence on this is mixed, but general findings on language development suggest that children whose mothers are more educated are more accurate than children whose mothers are less educated.
-6. To our knowledge, there is no previous NWR work on this, but other research suggests that first-born children should outperform later-born children
+3. Children's scores increases with child age.
 
-4. Anecdotally Yélî children grow up in close-knitted communities and thus may receive significant portions of their language input from people not in their nuclear family 
+
+4. General prediction: Non-monolingual Yélî children have lower scores than monolingual ones when tested on the society-dominant language (we did not test any non-dominant language) 
+<!-- **(MC: or just because they're acquiring two phonologies and so show slightly delayed linguistic development, in parallel with vocab development stuff; we don't have data on their dominant language, but i guess we can assume it's YD for most kids---i'm sure there are exceptions!)** ac2mc I added "society-" because that's what I meant (we didn't get proportions of time in which they hear YD versus other languages); I didn't add anything about why this would come out like this or not here, but I'll add this -- although I think the evidence on that is mixed (ie no strong evidence that learning 2 phonologies sets you back)-->
+4. Local prediction: Anecdotally Yélî children grow up in close-knitted communities and thus may receive significant portions of their language input from people not in their nuclear family 
 <!-- **(MC: definitely almost all kin; 5k of them)** ac2mc I'm not sure this is how bio anthropologists think about kin; because it's about how you attribute resources to boost your genes' chances of being passed on relative to those of others in the same space. So my guess is that there is still a difference between nuclear family and not. Rewrote kin -> nuclear family -->
 (or at least from people other than their mothers, who tend to be the non-native speakers). If so, the difference between monolinguals and not monolinguals may be smaller than that found in other work
 <!-- **(MC: maybe it'd be more useful to try and estimate the number of non-Y moms who live in each hamlet where testing is taking place?)** ac2mc not sure it's worth the effort, in any case other female adults are almost certain to have very little impact on the target child... Perhaps I'm not saying something very clearly? -->
 . That said, one recent study on the same population shows that most child-directed input in the first 2 years does come from the mother 
 <!-- **(MC: i can get you actual estimates for this for YD; let's go with that instead!)** -->
 <!-- ac2mc I think I meant your own paper! added "on the same population "-->
-, so in so far as this input has a crucial formational role, then there may still be a performance gap between these two groups.
-5. In the Rossel community, formal education plays an extremely minor role in ensuring individual's success, is not a good index of relative socio-economic status, and furthermore there is only a narrow range of variation in maternal educational attainment. This may lead to no or only very small advantages for children whose mothers are more educated, provided that the causal chain between maternal education and child language is via SES more broadly. However, if education directly boosts maternal verbal skills and the incidence of verbal behavior (as suggested by CITE), then we should still see a difference along this factor.
-6. One main causal path between birth order and language development is via parental input (CITE). Given our arguments above for how mothers may not be as important among Rossel people than in other places, then the performance gap between first borns and later borns may be smaller.
+, so in so far as this input has a crucial formational role, then there may still be a score difference between these two groups.
+4. We don't see a difference
+
+5.  General prediction: previous NWR evidence on this is mixed, but general findings on language development suggest that children whose mothers are more educated score higher in standardized language tests (eg ppvt) than children whose mothers are less educated. 
+5. Prediction made before seeing data: In the Rossel community, formal education plays an extremely minor role in ensuring individual's success, is not a good index of relative socio-economic status, and furthermore there is only a narrow range of variation in maternal educational attainment. This may lead to no or only very small advantages for children whose mothers are more educated, provided that the causal chain between maternal education and child language is via SES more broadly. However, if education directly boosts maternal verbal skills and the incidence of verbal behavior (as suggested by CITE), then we should still see a difference along this factor.
+5. We did not find this
+
+6. General prediction: To our knowledge, there is no previous NWR work on this, but other research suggests that first-born children score higher in standardized language tests later-born children. 
+6. Prediction before seeing data: One main causal path between birth order and language development is via parental input (CITE). Given our arguments above for how mothers may not be as important among Rossel people than in other places, then the difference in scores between first borns and later borns may be small
+6. we did not find a sig effect, but this is a small effect (eg d=.2 in Havron et al)
+
+
+
+
 
 
 

@@ -28,6 +28,10 @@ trnsc$rep=gsub(".*_","",gsub(".wav","",trnsc$outfile))
 trnsc$attempt <- ifelse(trnsc$rep == "1", "first", "subsequent")
 
 # MC's new code
+# A2m please look at lines 21-22, those are the lines that determine which items are first versus subsequent. 
+# int is the interval in praat, so it is a certain measure of time; I don't remember
+# what token is, but there is a file called notes_for_supmat.txt which contains the explanation
+# for all columns, which may say for this one and others
 # first.prods <- trnsc %>%
 #   group_by(id, item) %>%
 #   summarize(min.token = min(token)) %>%
@@ -67,6 +71,16 @@ dim(trnsc) #still no loss, all good
 #add orthographic representations targets & other stims chars
 # M2A: Note that some of these stim characters are now updated in stimuli2.txt
 # they do not match what is shown here (!!)
+# a2m: I'm confused, what do you mean? 
+# my pipeline was: stimuli.txt I couldn't read here, so I put these instructions in the rmd:
+# <!-- REMEMBER!!!! -->
+#   <!-- phonetic characters: -->
+#   <!-- - save excel as utf with save as -->
+#   <!-- - do $ iconv -f utf-16le -t utf-8 stimuli.txt > stimconv.txt -->
+#   <!-- - do $ iconv -f utf-16le -t utf-8 segments.txt > segconv.txt -->
+#   
+# also, notice that stims and segments are merged using ortho, so as long as ortho is matched
+# across the two, the merge should carry over whatever changes you make
 read.delim("stimconv.txt", encoding="UTF-8")->stims
 read.delim("segconv.txt", encoding="UTF-8")->segments
 #add corpus freq to segments
@@ -84,6 +98,10 @@ for(i in 1:dim(stim_seg_freq)[1]) for(j in 1:dim(stim_seg_freq)[2]) {
   stim_seg_freq[i,j]<-ifelse(sum(!is.na(thisfreq))==1,thisfreq,NA)
 }
 # M2A: I'm suspicious of some of the NAs in here (like for 'k', 'w', 'd')--what is segment pc?
+# a2m please note I didn't look up all sounds, only those used in our stimuli
+# w is in our stimuli for sure, so that may not explain away all the NAs
+# pc is percentage of languages in which the sound appears in phoible
+# freq is the number of languages in which the sound appears in phoible
 stims$avg_fr=apply(stim_seg_freq,1,mean,na.rm=T)
 
 #add average corpus frequency - LOGGED
@@ -115,11 +133,18 @@ dim(trnsc)
 
 ## PHONOLOGIZE AND SCORE
 
+#initialize the unichar phono-like representation
+trnsc$mp_uni=trnsc$mp #start from ortho
+trnsc$target_uni=trnsc$target_ortho #start from ortho
+
+
 #log non-fluent speech, then get rid of that marker
 trnsc$nonfluent<-NA
 trnsc$nonfluent[grep("-",trnsc$mp_uni,fixed=T)]<-1
 # M2A: there is no mp_uni column in trnsc as far as I can see, so this line
 # doesn't do anything
+# a2m, my apologies, this is a recent bug
+#but indeed, I didn't look at the prevalence of disfluencies
 trnsc$mispronunciation=gsub("-","",trnsc$mispronunciation)
 
 # make all vowels in mispronunciation & target short (so we don't penalize length errors)
@@ -128,10 +153,36 @@ trnsc$target_ortho=gsub("([aeiouêâéáóî])\\1+", "\\1", trnsc$target_ortho)
 
 # if correct=0 but orthotarget=mispronunciation (probably due to length errors) then change correct to 1 
 #sum(trnsc$correct==0 & trnsc$target_ortho == trnsc$mp & !is.na(trnsc$mp)) #this only happens twice
+trnsc[trnsc$correct==0 & trnsc$target_ortho == trnsc$mp & !is.na(trnsc$mp),]
 trnsc$correct[trnsc$correct==0 & trnsc$target_ortho == trnsc$mp & !is.na(trnsc$mp)]<-1
 # M2A: This appears to be only two cases and it doesn't seem to be a length error diff
 # i.e., mp == mispronunciation on both of these -- should we be cautious about
 # counting them as correct?
+#a2m I'm not sure I follow:
+# target   id       tokid row annotator      date token     item correct mispronunciation
+# 647      lvi c108       lvi 6 635        DY 16-Sep-19     6      lvi       0              lvi
+# 835 nomiwake c110 nomiwake 21 839        DY 17-Sep-19    21 nomiwake       0         nomiwake
+# meaning comment               file int      on     off cor       mp                   outfile
+# 647       0         190829_0064S12_ch1  24 138.154 139.049  NA      lvi      pairs/lvi_c108_1.wav
+# 835       0         190829_0066S12_ch1  68 256.738 259.013  NA nomiwake pairs/nomiwake_c110_1.wav
+# rand nb rep attempt rown included Age Sex birthOrder familyID notes_familyID monolingual
+# 647  0,21105252  6   1   first   40      yes   7   B          2       34   old_familyID         yes
+# 835 0,671765283 21   1   first   42      yes   5   B          1       33   old_familyID         yes
+# matEd Cond     Date        Time           File fastcode fullcode                    Notes
+# 647    10  17a 20190829       15:42 190829_0064S12    names                                  
+# 835     8  18a 20190829 ended 16:03 190829_0066S12    names          weird weak articulations
+# notes_demo                                                                    Where   Village
+# 647            on veranda (semi-public, small audience, included other children tested) Village#3
+# 835            on veranda (semi-public, small audience, included other children tested) Village#3
+# age.rounded type target_ortho    phono phono1 phono2 phono3 phono4 phono5 phono6 phono7 phono8
+# 647         7.5    1          lvi     lβʲi    lβʲ      i   <NA>   <NA>   <NA>   <NA>   <NA>   <NA>
+#   835         5.2    4     nomiwake ṇɔmiwækɛ      ṇ      ɔ      m      i      w      æ      k      ɛ
+# avg_fr avg_fr_cor avg_fr_cor_ty mp_uni target_uni nonfluent
+# 647   46.0  -2.646551     -2.682874     NA        lvi        NA
+# 835   47.5  -3.076920     -3.030380     NA   nomiwake        NA
+# I see: correct=0
+# the first target is lvi and it's pronounced as lvi -- so it is indeed not incorrect
+# the second target is nomiwake pronounced as nomiwake -- idem
 
 # create phonological correspondance matrix
 # NOTE!! NON INTUITIVE MAPPING!!!! DO NOT READ THE OUTPUT BELIEVING IT IS PSEUDO IPA!!!
@@ -236,9 +287,6 @@ correspondances=matrix( #list correspondances always by pairs, orthography then 
   ),#last item above should not have a comma
   ncol = 2,byrow = T)
 
-#initialize the unichar phono-like representation
-trnsc$mp_uni=trnsc$mp #start from ortho
-trnsc$target_uni=trnsc$target_ortho #start from ortho
 
 for(i in 1:dim(correspondances)[1]) { #transform into unicharacter
   trnsc$mp_uni=gsub(correspondances[i,1],correspondances[i,2],trnsc$mp_uni)
@@ -288,8 +336,9 @@ trnsc$nld[is.na(trnsc$nld)]<-0
 #proportion correct: remove Substitutions Deletions and Insertions & count only proportion of matches
 # M2A: Isn't 'pc' used as a variable name relating to phone frequency above?
 # they don't actually overlap here but I'm wary of potential future confusion
-trnsc$pc=nchar(gsub("[SDI]","",trnsc$trafos))/trnsc$nchar
-trnsc$pc[is.na(trnsc$pc)]<-1
+#a2m yikes! fixed 
+trnsc$phon_score=nchar(gsub("[SDI]","",trnsc$trafos))/trnsc$nchar
+trnsc$phon_score[is.na(trnsc$phon_score)]<-1
 
 write.table(trnsc,"final_data.txt",row.names=F,sep="\t")
 
