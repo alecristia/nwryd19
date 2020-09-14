@@ -2,6 +2,9 @@
 read.delim("NWR-transcription.txt", encoding="UTF-8")->trnsc
 #DATA REMOVAL *** ATTENTION *** 
 #REMOVE ALL TASK 4 (whatever that is)
+# M2A: This appears to be a second pass over productions that were deemed to
+# be words; the elicitation here is just a translation of what word the
+# production was heard to be
 trnsc[trnsc$item!="task4",]->trnsc
 
 dim(trnsc) #1488 judgments
@@ -18,14 +21,31 @@ dim(trnsc) #haven't lost any judgments
 #order so we have all the items by a given child in the right chrono order
 trnsc[order(trnsc$file, trnsc$int),]->trnsc
 
-#add variable coding whether it's the child's first or subsequent attempts
-trnsc$previous<-c(NA,as.character(trnsc$target[1:(dim(trnsc)[1]-1)]))
-trnsc$attempt<-ifelse(trnsc$target!=trnsc$previous,"first","subsequent")
-trnsc$attempt[1]<-"first"
-table(trnsc$attempt) #1045 first attempts
-
 #add repetition number
 trnsc$rep=gsub(".*_","",gsub(".wav","",trnsc$outfile))
+
+#add variable coding whether it's the child's first or subsequent attempts
+trnsc$attempt <- ifelse(trnsc$rep == "1", "first", "subsequent")
+
+# MC's new code
+# first.prods <- trnsc %>%
+#   group_by(id, item) %>%
+#   summarize(min.token = min(token)) %>%
+#   mutate(attempt = "first") %>%
+#   rename("token" = min.token)
+# trnsc <- trnsc %>%
+#   left_join(first.prods, by = c("id", "item", "token")) %>%
+#   replace_na(list(attempt = "subsequent"))
+# table(trnsc$attempt)
+# M2A: by my count there are 1029 first attempts, but maybe I'm misunderstanding "token"
+# M2A: okay, my solution finds some conflicting cases with your outfile attempt namings,
+#      now going off of those for attempt first/subsequent, I still find 1029
+
+# AC's prev code
+# trnsc$previous<-c(NA,as.character(trnsc$target[1:(dim(trnsc)[1]-1)]))
+# trnsc$attempt<-ifelse(trnsc$target!=trnsc$previous,"first","subsequent")
+# trnsc$attempt[1]<-"first"
+# table(trnsc$attempt) #1045 first attempts
 
 
 # add demographic info
@@ -45,6 +65,8 @@ merge(trnsc,inc,by.x="id",by.y="ID",all.x=T)->trnsc
 dim(trnsc) #still no loss, all good
 
 #add orthographic representations targets & other stims chars
+# M2A: Note that some of these stim characters are now updated in stimuli2.txt
+# they do not match what is shown here (!!)
 read.delim("stimconv.txt", encoding="UTF-8")->stims
 read.delim("segconv.txt", encoding="UTF-8")->segments
 #add corpus freq to segments
@@ -58,9 +80,10 @@ write.table(segments,"segments_with_cor_freq.txt",sep="\t",row.names = F)
 #add average crosslinguistic frequency
 stim_seg_freq=matrix(NA,nrow=dim(stims)[1],ncol=8)
 for(i in 1:dim(stim_seg_freq)[1]) for(j in 1:dim(stim_seg_freq)[2]) {
-  thisfreq=segments$pc[as.character(segments$phono)==as.character(stims[i,paste0("phono",j)])] 
+  thisfreq=segments$pc[as.character(segments$phono)==as.character(stims[i,paste0("phono",j)])]
   stim_seg_freq[i,j]<-ifelse(sum(!is.na(thisfreq))==1,thisfreq,NA)
-  }
+}
+# M2A: I'm suspicious of some of the NAs in here (like for 'k', 'w', 'd')--what is segment pc?
 stims$avg_fr=apply(stim_seg_freq,1,mean,na.rm=T)
 
 #add average corpus frequency - LOGGED
@@ -74,18 +97,14 @@ stims$avg_fr_cor=apply(log(stim_seg_freq),1,mean,na.rm=T)
 #add average corpus frequency based on TYPES - LOGGED
 stim_seg_freq=matrix(NA,nrow=dim(stims)[1],ncol=8)
 for(i in 1:dim(stim_seg_freq)[1]) for(j in 1:dim(stim_seg_freq)[2]) {
-  thisfreq=segments$freq_corpus_types[as.character(segments$phono)==as.character(stims[i,paste0("phono",j)])] 
+  thisfreq=segments$freq_corpus_types[
+    as.character(segments$phono)==as.character(stims[i,paste0("phono",j)])] 
   stim_seg_freq[i,j]<-ifelse(sum(!is.na(thisfreq))==1,thisfreq,NA)
 }
 stims$avg_fr_cor_ty=apply(log(stim_seg_freq),1,mean,na.rm=T)
 
 merge(trnsc,stims,by="target",all.x=T)->trnsc
 dim(trnsc)
-
-#DATA REMOVAL *** ATTENTION *** 
-#REMOVE ALL TASK 4 (whatever that is)
-#trnsc[!is.na(trnsc$target),]->trnsc
-#already done
 
 #REMOVING ALL THE "YI"
 trnsc[trnsc$target!="yi",]->trnsc
@@ -99,6 +118,8 @@ dim(trnsc)
 #log non-fluent speech, then get rid of that marker
 trnsc$nonfluent<-NA
 trnsc$nonfluent[grep("-",trnsc$mp_uni,fixed=T)]<-1
+# M2A: there is no mp_uni column in trnsc as far as I can see, so this line
+# doesn't do anything
 trnsc$mispronunciation=gsub("-","",trnsc$mispronunciation)
 
 # make all vowels in mispronunciation & target short (so we don't penalize length errors)
@@ -108,6 +129,9 @@ trnsc$target_ortho=gsub("([aeiouêâéáóî])\\1+", "\\1", trnsc$target_ortho)
 # if correct=0 but orthotarget=mispronunciation (probably due to length errors) then change correct to 1 
 #sum(trnsc$correct==0 & trnsc$target_ortho == trnsc$mp & !is.na(trnsc$mp)) #this only happens twice
 trnsc$correct[trnsc$correct==0 & trnsc$target_ortho == trnsc$mp & !is.na(trnsc$mp)]<-1
+# M2A: This appears to be only two cases and it doesn't seem to be a length error diff
+# i.e., mp == mispronunciation on both of these -- should we be cautious about
+# counting them as correct?
 
 # create phonological correspondance matrix
 # NOTE!! NON INTUITIVE MAPPING!!!! DO NOT READ THE OUTPUT BELIEVING IT IS PSEUDO IPA!!!
@@ -248,7 +272,7 @@ for(i in grep("0",trnsc$correct)){ #this goes through all items with errors (" g
   matlist=which(strsplit(attributes(lev)$trafos, "")[[1]]=="M")
   match_bank=rbind(match_bank,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][matlist]))
   
-  #if item is first attempt, add to try1
+  #if item is first attempt, add to try1 version of these tables
   if(trnsc[i,"attempt"]=="first") {
     substitution_bank_try1=rbind(substitution_bank_try1,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][sublist],strsplit(trnsc[i,c("mp_uni")],"")[[1]][sublist]))
     deletion_bank_try1=rbind(deletion_bank_try1,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][dellist]))
@@ -257,12 +281,13 @@ for(i in grep("0",trnsc$correct)){ #this goes through all items with errors (" g
     }
 }
 
-
 trnsc$ld=rowSums(trnsc[,c("ins","del","sub")])
 trnsc$nld=trnsc$ld/trnsc$nchar
 trnsc$nld[is.na(trnsc$nld)]<-0
 
 #proportion correct: remove Substitutions Deletions and Insertions & count only proportion of matches
+# M2A: Isn't 'pc' used as a variable name relating to phone frequency above?
+# they don't actually overlap here but I'm wary of potential future confusion
 trnsc$pc=nchar(gsub("[SDI]","",trnsc$trafos))/trnsc$nchar
 trnsc$pc[is.na(trnsc$pc)]<-1
 
@@ -281,6 +306,7 @@ substitution_bank[order(substitution_bank[,1]),]->substitution_bank
 write.table(substitution_bank,"substitution_bank.txt",row.names=F,sep="\t")
 
 substitution_bank_try1[order(substitution_bank_try1[,1]),]->substitution_bank_try1  #this gives an error CHECK **AC**
+# M2A: this ^^ doesn't seem to give an error anymore; maybe delete old comment?
 write.table(substitution_bank_try1,"substitution_bank_try1.txt",row.names=F,sep="\t")
 
 sort(deletion_bank)->deletion_bank
@@ -294,8 +320,8 @@ sort(match_bank_try1)->match_bank_try1
 write.table(match_bank_try1,"match_bank_try1.txt",row.names=F,sep="\t")
 
 
-
 #create correct bank
+# M2A: what's this for if we don't expect any S/D/Is?
 for(i in grep("1",trnsc$correct)){ #this goes through all items without errors (" grep("1",trnsc$correct)")
   #lev
   lev=adist(trnsc[i,c("target_uni")],trnsc[i,c("target_uni")],count=T)
