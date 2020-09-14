@@ -390,7 +390,10 @@ source("wrangling.R")
 read.table("final_data.txt",header=T,encoding="UTF-8")->trnsc
 
 #quick fix, but should be fixed upstream @ac
-trnsc$Sex[trnsc$Sex=="F"]<-"G"
+# M2A: Seems like you already did this, and the line below
+# is setting the is.na(trnsc$Sex) cases to "G" -- I assume
+# that's not a desirable outcome so am commenting it out
+# trnsc$Sex[trnsc$Sex=="F"]<-"G"
 trnsc$Sex=factor(trnsc$Sex)
 trnsc$birthOrder=as.numeric(trnsc$birthOrder)
 ```
