@@ -14,7 +14,7 @@ type	target_ortho	target	phono	phono1	phono2	phono3	phono4	phono5	phono6	phono7	
 2	kamo	kamo	kæmɔ	k	æ	m	ɔ	NA	NA	NA	NA
 2	kańi	kani	kæni	k	æ	n	i	NA	NA	NA	NA
 2	kipo	kipo	kipɔ	k	i	p	ɔ	NA	NA	NA	NA
-1   kp:ââ   kp_aa   kp̃ɑː   kp  ̃ɑː NA	NA	NA	NA	NA	NA
+1	kp:ââ	kp_aa	kp̃ɑː	kp	̃ɑː	NA	NA	NA	NA	NA	NA
 1	kpu	kpu	kpu	kp	u	NA	NA	NA	NA	NA	NA
 1	lv:ê	lv_e	lβʲ̃ə	lβʲ	ə	NA	NA	NA	NA	NA	NA
 1	lva	lva	lβʲæ	lβʲ	æ	NA	NA	NA	NA	NA	NA
