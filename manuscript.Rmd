@@ -272,21 +272,21 @@ The final list is composed of three practice items; 20 monoysllables containing 
 
 ```{r tab2-stims, results = "asis"}
 #add orthographic representations targets & other stims chars
-stims <- read_delim("stimuli2.txt", delim = "\t") %>%
+stims.tbl <- read_delim("stimuli2.txt", delim = "\t") %>%
   arrange(factor(type, levels = c("practice", "1", "2", "3", "4"))) %>%
   select(type, target_ortho, phono) %>%
   rename("Type" = type, "Orthographic" = target_ortho, "Phonological" = phono)
 
 # there's definitely a nicer way to do this but anyhow...
-practice.stims <- filter(stims, Type == "practice")[,2:3]
+practice.stims <- filter(stims.tbl, Type == "practice")[,2:3]
 practice.stims$row <- seq(1:nrow(practice.stims))
-syll1.stims <- filter(stims, Type == "1")[,2:3]
+syll1.stims <- filter(stims.tbl, Type == "1")[,2:3]
 syll1.stims$row <- seq(1:nrow(syll1.stims))
-syll2.stims <- filter(stims, Type == "2")[,2:3]
+syll2.stims <- filter(stims.tbl, Type == "2")[,2:3]
 syll2.stims$row <- seq(1:nrow(syll2.stims))
-syll3.stims <- filter(stims, Type == "3")[,2:3]
+syll3.stims <- filter(stims.tbl, Type == "3")[,2:3]
 syll3.stims$row <- seq(1:nrow(syll3.stims))
-syll4.stims <- filter(stims, Type == "4")[,2:3]
+syll4.stims <- filter(stims.tbl, Type == "4")[,2:3]
 syll4.stims$row <- seq(1:nrow(syll4.stims))
 stims.wide <- practice.stims %>%
   full_join(syll1.stims, by = "row") %>%
@@ -406,7 +406,10 @@ source("wrangling.R")
 read.table("final_data.txt",header=T,encoding="UTF-8")->trnsc
 
 #quick fix, but should be fixed upstream @ac
-trnsc$Sex[trnsc$Sex=="F"]<-"G"
+# M2A: Seems like you already did this, and the line below
+# is setting the is.na(trnsc$Sex) cases to "G" -- I assume
+# that's not a desirable outcome so am commenting it out
+# trnsc$Sex[trnsc$Sex=="F"]<-"G"
 trnsc$Sex=factor(trnsc$Sex)
 trnsc$birthOrder=as.numeric(trnsc$birthOrder)
 ```
