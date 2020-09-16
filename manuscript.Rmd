@@ -133,11 +133,8 @@ correspondances=matrix( #list correspondances always by pairs, orthography then 
 ## TODO Middy
 
 - look through this manuscript for bits of text to be written by **mc**
-- do you think Figure 2 should be done with phonetic symbols? If yes, could you try to implement that?
 - double check demo -- probably start with the xlsx version that has the children's first names, date of birth, and date of test. I looked again at my local files (still haven't checked the labs' ones) and I'm surprised I have maternal education for more children than I have birth order for... If you correct this, to generate the csv I also round the age, assign age.rounded to reported age (in years) when DOB is missing, remove first names, DOB, DOTest and age.precise before pushing to github
 - double check my frequency entries in segments.xlsx using the search function in https://phoible.org/parameters; take a look at http://phoible.github.io/conventions/ in case you see something about double articulation (I didn't find tp or lBj)
-- double check phonological implementation of stimuli in stimuli.xlsx 
-- for both of the above, if you make any changes, they need to be re-saved as UTF16 txt file, and then converted (see remember above)
 - double check also stim_seg_freq -- why are some items still with NA freq?
 - draft discussion
 
@@ -412,13 +409,15 @@ read.table("final_data.txt",header=T,encoding="UTF-8")->trnsc
 # is setting the is.na(trnsc$Sex) cases to "G" -- I assume
 # that's not a desirable outcome so am commenting it out
 # a2m fixed, but I think it is better to fix all of these error upstream, in the demo.xlsx file
-trnsc$Sex[trnsc$Sex=="F" & !is.na(trnsc$Sex)]<-"G"
+# M2A: Since it's fixed upstream I propose deleting it (and have therefore
+# commented it out again for now)
+# trnsc$Sex[trnsc$Sex=="F" & !is.na(trnsc$Sex)]<-"G"
 trnsc$Sex=factor(trnsc$Sex)
 trnsc$birthOrder=as.numeric(trnsc$birthOrder)
 ```
 
 
-```{r Fig1-first_vs_others, ig.pos = "T!", fig.width=5, fig.height=5, fig.cap="NWR scores for individual participants averaging separately their first attempts and all other attempts."}
+```{r Fig1-first_vs_others, fig.pos = "!t", fig.width=5, fig.height=5, fig.cap="NWR scores for individual participants averaging separately their first attempts and all other attempts."}
 
 aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$age.rounded,trnsc$attempt),mean)->pwcm_att
 colnames(pwcm_att)<-c("ID","Age","Attempt","Word")
@@ -448,7 +447,9 @@ trnsc=trnsc[trnsc$attempt=="first",]
 
 
 ```{r overall}
-
+# M2A: This excludes a bunch of kids (anyone with NA on any of these participant features),
+# whittling the summary down to 24 from 42 -- is that intended?
+# Also all phon_score is 100 and all NLD is 0; does that stike you as fishy?
 aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$Sex,trnsc$age.rounded,trnsc$birthOrder,trnsc$matEd),mean)->overall
 aggregate(trnsc$phon_score*100,by=list(trnsc$id,trnsc$Sex,trnsc$age.rounded,trnsc$birthOrder,trnsc$matEd),mean)->phon_score
 aggregate(trnsc$nld*100,by=list(trnsc$id,trnsc$Sex,trnsc$age.rounded,trnsc$birthOrder,trnsc$matEd),mean)->nld
@@ -481,13 +482,25 @@ mycoeff=round(summary(xl_fr)$coefficients,3)
 We could include 885 observations (**why -- shouldn't it be 1k??**), from 41 children producing in any given trial one of 41 potential target words. The analysis revealed a significant estimate for the average cross-linguistic frequency of phones in the target words (ß = `r mycoeff["avg_fr_s","Estimate"]`, SE ß = `r mycoeff["avg_fr_s","Std. Error"]`, p = `r mycoeff["avg_fr_s","Pr(>|z|)"]`): Target words with phones found more frequently across languages had a higher proportion of words that were correctly repeated, as clear in Figure 2. Age was also a significant predictor  (ß = `r mycoeff["age.rounded_s","Estimate"]`, SE ß = `r mycoeff["age.rounded_s","Std. Error"]`, p = `r mycoeff["age.rounded_s","Pr(>|z|)"]`).
 
 
-```{r Fig2-xling_freq, ig.pos = "T!", fig.width=5, fig.height=5, fig.cap="NWR scores for individual target words as a function of the average frequency with which each phone is found across languages."}
+```{r Fig2-xling-freq, fig.pos = "!t", fig.align = "center", out.width = '65%', fig.cap="NWR scores for individual target words as a function of the average frequency with which each phone is found across languages."}
 aggregate(trnsc$correct*100,by=list(trnsc$target,trnsc$avg_fr),mean)->xling
 colnames(xling)<-c("Target","Avg_fr","Word")
-plot(xling$Word~xling$Avg_fr,lty=3,ylab="NWR scores (% words)",xlab="Average phone cross-ling frequency",type="n")
-text(xling$Word~xling$Avg_fr,labels=xling$Target,cex=.5)
-abline(lm(xling$Word~xling$Avg_fr))
+stims.ipa <- read_delim("stimuli2.txt", delim = "\t") %>%
+  select(target, target_ortho, phono)
+xling <- merge(xling, stims.ipa, by.x = "Target", by.y = "target")
+
+item.plot <- ggplot(data = xling, aes(x = Avg_fr, y = Word, label = phono)) +
+  geom_smooth(method = "lm", se = FALSE, color = "black") +
+  geom_text(family = "Doulos SIL") +
+  ylab("NWR scores (% words)") +
+  xlab("Average phone cross-ling frequency") +
+  theme_apa()
+ggsave("nwr.by.freq.ITEM.png", dpi = 300, device = png())
+
+knitr::include_graphics("nwr.by.freq.ITEM.png")
+
 ```
+
 
 ```{r cor vs xl}
 #fr_cor=glmer(correct~avg_fr_cor+age.rounded+(1|file) + (1|target),data=trnsc,family="binomial")
@@ -507,7 +520,7 @@ freq_cor=cor.test(segments$pc,log(segments$freq_corpus_types))
 ```
 
 
-We next checked whether this may actually be due to frequency of the sounds within the language. We estimated frequency of the phones present in the stimuli in a corpus of child-centered recordings [@casillas2020png], and applied the natural logarithm. As before, unattested sounds were not considered (i.e., they were declared NA so that they do not count for analyses). Phone frequency estimated from this corpus were correlated with cross-linguistic phone frequencies (r(`r freq_cor$parameter`)=`r round(freq_cor$estimate,3)`, =`r round(freq_cor$p.value,3)`). Therefore, we fit another mixed logistic regression, this time declaring as fixed effects scaled cross-linguistic and corpus frequencies (averaged across all attested phones within each stimulus item), in addition to age. As before, the model contained random slopes for both child ID and target. In this model, both cross-linguistic frequency (ß = `r both_coeff["avg_fr_s","Estimate"]`, SE ß = `r both_coeff["avg_fr_s","Std. Error"]`, p = `r both_coeff["avg_fr_s","Pr(>|z|)"]`) and age (ß = `r both_coeff["age.rounded_s","Estimate"]`, SE ß = `r both_coeff["age.rounded_s","Std. Error"]`, p = `r both_coeff["age.rounded_s","Pr(>|z|)"]`) were significant predictors of word-level NWR scores, but corpus frequency (ß = `r both_coeff["avg_fr_cor_ty_s","Estimate"]`, SE ß = `r both_coeff["avg_fr_cor_ty_s","Std. Error"]`, p = `r both_coeff["avg_fr_cor_ty_s","Pr(>|z|)"]`) was not.
+We next checked whether this may actually be due to frequency of the sounds within the language. We estimated frequency of the phones present in the stimuli in a corpus of child-centered recordings [@casillas2020early], and applied the natural logarithm. As before, unattested sounds were not considered (i.e., they were declared NA so that they do not count for analyses). Phone frequency estimated from this corpus were correlated with cross-linguistic phone frequencies (r(`r freq_cor$parameter`)=`r round(freq_cor$estimate,3)`, =`r round(freq_cor$p.value,3)`). Therefore, we fit another mixed logistic regression, this time declaring as fixed effects scaled cross-linguistic and corpus frequencies (averaged across all attested phones within each stimulus item), in addition to age. As before, the model contained random slopes for both child ID and target. In this model, both cross-linguistic frequency (ß = `r both_coeff["avg_fr_s","Estimate"]`, SE ß = `r both_coeff["avg_fr_s","Std. Error"]`, p = `r both_coeff["avg_fr_s","Pr(>|z|)"]`) and age (ß = `r both_coeff["age.rounded_s","Estimate"]`, SE ß = `r both_coeff["age.rounded_s","Std. Error"]`, p = `r both_coeff["age.rounded_s","Pr(>|z|)"]`) were significant predictors of word-level NWR scores, but corpus frequency (ß = `r both_coeff["avg_fr_cor_ty_s","Estimate"]`, SE ß = `r both_coeff["avg_fr_cor_ty_s","Std. Error"]`, p = `r both_coeff["avg_fr_cor_ty_s","Pr(>|z|)"]`) was not.
 
 <!-- a2m should we point out that the coefficient for cross-ling frequency is reduced from .77 to .67, so indirectly corpus frequency does affect a little bit? Or making things too complicated, and just say "so corpus frequency does not explain away these results" -->
 
@@ -647,6 +660,7 @@ Finally, we looked into the frequency with which mispronunciations resulted in r
 ### NWR scores as a function of item length 
 
 ```{r bylength}
+# M2A: this reduces the total number of kids represented from 42 to 40
 aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$age.rounded,trnsc$type),mean)->by_length
 aggregate(trnsc$phon_score*100,by=list(trnsc$id,trnsc$age.rounded,trnsc$type),mean)->phon_score
 aggregate(trnsc$nld*100,by=list(trnsc$id,trnsc$age.rounded,trnsc$type),mean)->nld
@@ -661,7 +675,7 @@ Next, we inspected whether NWR scores varied as a function of word length. Resul
 Setting monosyllables aside, we observe the typical pattern of lower scores for longer items, although this is particularly salient for the whole word scoring. This is the most commonly reported type of score, but it is also the least forgiving. The pattern is less marked when other two scores are used, which are less sensitive to errors.
 
 
-```{r tablength}
+```{r tablength, results = "asis"}
 birthorder.tab=NULL
 for(myvar in c("Word","Phoneme","NLD")){
   birthorder.tab=cbind(birthorder.tab,
