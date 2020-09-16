@@ -24,32 +24,32 @@ trnsc[order(trnsc$file, trnsc$int),]->trnsc
 #add repetition number
 trnsc$rep=gsub(".*_","",gsub(".wav","",trnsc$outfile))
 
-#add variable coding whether it's the child's first or subsequent attempts
-trnsc$attempt <- ifelse(trnsc$rep == "1", "first", "subsequent")
-
-# MC's new code
-# A2m please look at lines 21-22, those are the lines that determine which items are first versus subsequent. 
-# int is the interval in praat, so it is a certain measure of time; I don't remember
-# what token is, but there is a file called notes_for_supmat.txt which contains the explanation
-# for all columns, which may say for this one and others
-# first.prods <- trnsc %>%
-#   group_by(id, item) %>%
-#   summarize(min.token = min(token)) %>%
-#   mutate(attempt = "first") %>%
-#   rename("token" = min.token)
-# trnsc <- trnsc %>%
-#   left_join(first.prods, by = c("id", "item", "token")) %>%
-#   replace_na(list(attempt = "subsequent"))
-# table(trnsc$attempt)
-# M2A: by my count there are 1029 first attempts, but maybe I'm misunderstanding "token"
-# M2A: okay, my solution finds some conflicting cases with your outfile attempt namings,
-#      now going off of those for attempt first/subsequent, I still find 1029
-
 # AC's prev code
 # trnsc$previous<-c(NA,as.character(trnsc$target[1:(dim(trnsc)[1]-1)]))
 # trnsc$attempt<-ifelse(trnsc$target!=trnsc$previous,"first","subsequent")
 # trnsc$attempt[1]<-"first"
 # table(trnsc$attempt) #1045 first attempts
+
+# MC's new code
+# M2A: by my count there are 1029 first attempts, but maybe I'm misunderstanding "token"
+# M2A: okay, my solution finds some conflicting cases with your outfile attempt namings,
+#      now going off of those for attempt first/subsequent, I still find 1029
+# A2m please look at lines 21-22, those are the lines that determine which items are first versus subsequent. 
+# int is the interval in praat, so it is a certain measure of time; I don't remember
+# what token is, but there is a file called notes_for_supmat.txt which contains the explanation
+# for all columns, which may say for this one and others
+# M2A: Okay, great! Well that still returns 1029 first cases, but now the tidyverse pipe below
+# should guarantee we're getting the cases we want
+
+first.prods <- trnsc %>%
+  group_by(id, item) %>%
+  summarize(min.int = min(int)) %>%
+  mutate(attempt = "first") %>%
+  rename("int" = min.int)
+trnsc <- trnsc %>%
+  left_join(first.prods, by = c("id", "item", "int")) %>%
+  replace_na(list(attempt = "subsequent"))
+# table(trnsc$attempt)
 
 
 # add demographic info
@@ -81,6 +81,8 @@ dim(trnsc) #still no loss, all good
 #   
 # also, notice that stims and segments are merged using ortho, so as long as ortho is matched
 # across the two, the merge should carry over whatever changes you make
+# M2A: Some of the segments in stimuli.txt were wrong. I made corrections in stimuli2.txt,
+# but now that is mismatched to stimconv and segconv.
 read.delim("stimconv.txt", encoding="UTF-8")->stims
 read.delim("segconv.txt", encoding="UTF-8")->segments
 #add corpus freq to segments
@@ -102,6 +104,8 @@ for(i in 1:dim(stim_seg_freq)[1]) for(j in 1:dim(stim_seg_freq)[2]) {
 # w is in our stimuli for sure, so that may not explain away all the NAs
 # pc is percentage of languages in which the sound appears in phoible
 # freq is the number of languages in which the sound appears in phoible
+# M2A: but the three examples I listed are all in our stimuli (?)
+# Thanks for the defs of pc and freq 
 stims$avg_fr=apply(stim_seg_freq,1,mean,na.rm=T)
 
 #add average corpus frequency - LOGGED
@@ -183,6 +187,8 @@ trnsc$correct[trnsc$correct==0 & trnsc$target_ortho == trnsc$mp & !is.na(trnsc$m
 # I see: correct=0
 # the first target is lvi and it's pronounced as lvi -- so it is indeed not incorrect
 # the second target is nomiwake pronounced as nomiwake -- idem
+# M2A: I agree! My question is: Why then are they marked as incorrect in the first place?
+# Does this deserve more detective work?
 
 # create phonological correspondance matrix
 # NOTE!! NON INTUITIVE MAPPING!!!! DO NOT READ THE OUTPUT BELIEVING IT IS PSEUDO IPA!!!
