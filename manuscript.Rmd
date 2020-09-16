@@ -140,8 +140,31 @@ correspondances=matrix( #list correspondances always by pairs, orthography then 
 
 ## TODO Alex
 
+- add information about proportion of mispronunciations that are real based on other papers
 - add effect sizes to all analyses
-- reply to questions
+- ? correct treatment of words whose mispronunciation is an English word:
+    mispronunciation meaning
+361              two     two
+362              two     two
+879          no-pinêt                                          English: no peanut
+908            nodedi                                           English: no daddy
+933          no--dadi                                           English: no daddy
+949           petrumi                                             English: "true"
+950           petrumi                                             English: "true"
+951           petrumi                                             English: "true"
+1373              wee     English: where
+1374              wee     English: where
+1375              wee     English: where
+1379              wee     English: where
+1380              wee     English: where
+1388              wee     English: where
+1394              wee     English: where
+1396              wee     English: where
+1398              wee     English: where
+1399              wee     English: where
+1402              wat      English: what
+1405              wat      English: what
+1411              wee     English: where
 
 
 
@@ -332,8 +355,9 @@ We visited four different hamlets once, and attempted to test all eligible child
 The child was donned a headset (**xx **mc** please fill in** for most of the children, SHURE WH20 XLR headset with a dynamic microphone for the rest), recorded into the left channel into a Tascam DR40x digital recorder. For most children, the headset could not stay comfortably on the child's head, and thus it was placed on the child's shoulders, with the microphone carefully placed close to the child's mouth. A local informant sat next to the child, to would provide the instructions and, if needed, coach the child to make sure, using the three practice items as well as real words, that they understood that the task was to repeat the items precisely without changing anything. An experimenter (the first author) delivered the elicitation stimuli to the local informant and the child over headphones. 
 
 
-The first phase was making sure the child understood the task. This was explained orally and the first training item was presented. Often, children froze and did not say anything. If this happened, then we followed this procedure. First, the informant insisted. If the child still did not say anything, the informant asked the child to repeat a real word, and another, and another. If the child could repeat these correctly, then we provided the recorded training item over headphones again. Most children successfully started repeating the items presented over headphones at this point; a few further needed the local informant to model the behavior (i.e., they would hear the item again, and she would say it; then we would play it again, and ask the child to say it). A small minority still failed to repeat the item after hearing it over headphones. If that occurred, we tried with the second training item, at which point some children got it and could continue. A small minority, however, failed to repeat this one, as well as the third training item, in which case we stopped the test altogether. 
+The first phase was making sure the child understood the task. This was explained orally and the first training item was presented. Often, children froze and did not say anything. If this happened, then we followed this procedure. First, the informant insisted. If the child still did not say anything, the informant asked the child to repeat a real word, and another, and another. If the child could repeat these correctly, then we provided the recorded training item over headphones again. Most children successfully started repeating the items presented over headphones at this point; a few further needed the local informant to model the behavior (i.e., they would hear the item again, and she would say it; then we would play it again, and ask the child to say it). A small minority still failed to repeat the item after hearing it over headphones. If that occurred, we tried with the second training item, at which point some children got it and could continue. A small minority, however, failed to repeat this one, as well as the third training item, in which case we stopped the test altogether (see Participants section for exclusions). 
 <!--M2A: do you know how many these were? oh! it's below. then maybe we can just put a (see Participants below), etc.-->
+<!-- a2m done -->
 
 NWR studies vary in whether children are provided with several opportunities to hear and say the item. To have a fixed and clear procedure, we decided that items other than the inital three training ones would not be repeated unless the child made an attempt to produce them. If this attempt was judged correct by the local informant, then the experimenter would move on to the next item (whispering this over a separate headset that was recording onto the right track of the same Tascam). If the local informant heard a deviation, she indicated to the experimenter that the item needed to be repeated, and up to 5 attempts were allowed. 
 
@@ -350,10 +374,7 @@ Some NWR studies employ phoneme-based scoring in addition to or instead of word-
 <!-- a2m added! actually, I haven't changed anything but I've been hesitant about using levenshtein's distance because it's the complement of phoneme based scoring -- so shall we drop it?  -->
 
 Additionally, we looked up each phoneme in each target word in the Phoible database [@phoible]. We entered the number of languages in which each phoneme was found, as well as what percentage of languages in the database that represented. We could not find a small number of phonemes in the database, and treat those as NA values that do not contribute to the target-level global average phone cross-linguistic frequency, although an alternative would be to attribute them a very small number.
-<!--
-A2M: do you agree with this decision or shall we do the alternative?
-M2A: yeah, i think adding abirtrarily small frequencies to the NA cases is fraught for the reasons we talked about this morning (i.e., possible systematic undersampling in phoible that can't be helped).
--->
+
 
 Finally, for describing children's patterns of errors, all repetitions of a given target were taken into account. We describe the proportion of items where the change resulted in a real word (semantic errors); as well as deletions, additions, and substitutions.
 <!-- a2m in the results, I put analyses based on all as well as just on first attempt. If we do just the latter, then come back to change this para -->
@@ -379,11 +400,16 @@ read.csv("NWR-demo.csv",header=T)->demo
 demo$familyID=as.character(demo$familyID)
 demo$familyID[is.na(demo$familyID)]<-paste("k",demo$ID[is.na(demo$familyID)])
 
+#fix sex
+demo$Sex[demo$Sex=="F"]<-"G"
+
 subset(demo,included=="yes" & Age <12 & !is.na(Age))->inc
 #if age.rounded is missing, use reported age
 inc$age.rounded[is.na(inc$age.rounded)]<-inc$Age[is.na(inc$age.rounded)]
 #summary(inc)
 table(inc$birthOrder)->birthorder.tab
+
+
 ```
 
 A total `r dim(demo)[1]` children were tested, from `r length(levels(factor(demo$familyID)))` of families, in five hamlets. Some children could not be included for the following reasons: refused participation or failed to repeat items presented over headphones even after coaching (N=`r sum(demo$included=="didn't repeat")`), spoke too softly to allow offline coding (N=`r sum(demo$included=="spoke too softly")`). In addition, `r sum(demo$Age >12 | demo$included=="too old",na.rm=T)` teenagers were tested to put younger children at ease; their data is not included in analyses below. The remaining `r dim(inc)[1]` children (`r sum(inc$Sex=="G")` girls) were aged `r round(mean(inc$age.rounded),2)` years (range `r round(min(inc$age.rounded),2)`-`r round(max(inc$age.rounded),2)` years). Among these, there were `r sum(inc$monolingual=="yes", na.rm=T)` children exposed only to Yélî in the home, `r sum(inc$monolingual=="no", na.rm=T)` children who were also exposed to another language in the home, and `r sum(is.na(inc$monolingual))` for whom this information is missing. Maternal years of education averaged `r round(mean(inc$matEd,na.rm=T),2)` years (range `r round(min(inc$matEd,na.rm=T),2)`-`r round(max(inc$matEd,na.rm=T),2)` years; `r sum(is.na(inc$matEd))` children had this information missing).[^1] In terms of birth order, `r birthorder.tab[1]` were first borns, `r birthorder.tab[2]` second,  `r birthorder.tab[3]` third,  `r birthorder.tab[4]` forth,  `r birthorder.tab[5]` fifth, `r birthorder.tab[6]` sixth, and  `r birthorder.tab[7]` did not have this information.
@@ -404,14 +430,6 @@ source("wrangling.R")
 ```{r readin}
 read.table("final_data.txt",header=T,encoding="UTF-8")->trnsc
 
-#quick fix, but should be fixed upstream @ac
-# M2A: Seems like you already did this, and the line below
-# is setting the is.na(trnsc$Sex) cases to "G" -- I assume
-# that's not a desirable outcome so am commenting it out
-# a2m fixed, but I think it is better to fix all of these error upstream, in the demo.xlsx file
-# M2A: Since it's fixed upstream I propose deleting it (and have therefore
-# commented it out again for now)
-# trnsc$Sex[trnsc$Sex=="F" & !is.na(trnsc$Sex)]<-"G"
 trnsc$Sex=factor(trnsc$Sex)
 trnsc$birthOrder=as.numeric(trnsc$birthOrder)
 ```
@@ -450,11 +468,13 @@ trnsc=trnsc[trnsc$attempt=="first",]
 # M2A: This excludes a bunch of kids (anyone with NA on any of these participant features),
 # whittling the summary down to 24 from 42 -- is that intended?
 # Also all phon_score is 100 and all NLD is 0; does that stike you as fishy?
-aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$Sex,trnsc$age.rounded,trnsc$birthOrder,trnsc$matEd),mean)->overall
-aggregate(trnsc$phon_score*100,by=list(trnsc$id,trnsc$Sex,trnsc$age.rounded,trnsc$birthOrder,trnsc$matEd),mean)->phon_score
-aggregate(trnsc$nld*100,by=list(trnsc$id,trnsc$Sex,trnsc$age.rounded,trnsc$birthOrder,trnsc$matEd),mean)->nld
+#a2m fixed and fixed!
+aggregate(trnsc$correct*100,by=list(trnsc$id),mean)->overall
+aggregate(trnsc$phon_score*100,by=list(trnsc$id),mean)->phon_score
+aggregate(trnsc$nld*100,by=list(trnsc$id),mean)->nld
 overall=cbind(overall,phon_score$x,nld$x)
-colnames(overall)<-c("ID","Sex","Age","BrthO","matEd","Word","Phoneme","NLD")
+overall=merge(overall, demo[,c("ID","Sex","Age","birthOrder","matEd")], by.x="Group.1",by.y="ID", all.x=T)
+colnames(overall)<-c("ID","Word","Phoneme","NLD","Sex","Age","BrthO","matEd")
 
 ```
 
@@ -653,19 +673,21 @@ Next, we investigated patterns of deletion and substitution. Deletions were rela
 As for substitutions, it was as common for a nasal vowel to be produced as an oral vowel as vice versa (`r sum(sub_tab[oralVs,nasalVs])` oral target vowels produced as nasal vowels or about `r mean(sub_pc[oralVs,nasalVs],na.rm=T)`% out of all oral vowel targets, `r sum(sub_tab[nasalVs,oralVs])` nasal target vowels produced as oral vowels or about `r mean(sub_pc[nasalVs,oralVs],na.rm=T)`% out of all nasal vowel targets). Substitutions in which the oral nature was preserved but the quality of the vowel was changed were a great deal more common than changes in quality among nasal vowels (`r sum(sub_tab[oralVs,oralVs])` oral vowels produced with a different quality or about `r mean(sub_pc[oralVs,oralVs],na.rm=T)`% out of all oral vowel targets; `r sum(sub_tab[nasalVs,nasalVs])` nasal vowels produced with a different quality or about `r mean(sub_pc[nasalVs,nasalVs],na.rm=T)`% out of all nasal vowel targets). As for consonants, asymmetries were very marked with more complex consonants (specifically `r paste0(complexCs)`) mispronounced as simple ones (specifically `r paste0(simplexCs)`, `r sum(sub_tab[complexCs,simplexCs])` times or  about `r mean(sub_pc[complexCs,simplexCs],na.rm=T)`% out of all complex consonant targets) than vice versa (`r sum(sub_tab[simplexCs,complexCs])` times  about `r mean(sub_pc[complexCs,simplexCs],na.rm=T)`% out of all simple consonant targets). Simple consonants were mispronounced as other simple consonants quite frequently (`r sum(sub_tab[simplexCs,simplexCs])` simple consonants mispronounced as other simple ones or about `r mean(sub_pc[simplexCs,simplexCs],na.rm=T)`% out of all simple consonant targets, compared to `r sum(sub_tab[complexCs,complexCs])` complex ones or about `r mean(sub_pc[complexCs,complexCs],na.rm=T)`% out of all complex consonant targets).
 
 
-Finally, we looked into the frequency with which mispronunciations resulted in real words. Nearly all of them were: `r round(sum(!is.na(trnsc$meaning))/sum(!is.na(trnsc$mispronunciation))*100)`%.
+Finally, we looked into the frequency with which mispronunciations resulted in real words. Two thirds of them were: `r round(sum(!is.na(trnsc$meaning) & trnsc$meaning != "0")/sum(!is.na(trnsc$mispronunciation))*100)`%.
 
-**TO DISCUSS TOGETHER this is higher than any previous report! can we be sure of it?**
+
 
 ### NWR scores as a function of item length 
 
 ```{r bylength}
 # M2A: this reduces the total number of kids represented from 42 to 40
-aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$age.rounded,trnsc$type),mean)->by_length
-aggregate(trnsc$phon_score*100,by=list(trnsc$id,trnsc$age.rounded,trnsc$type),mean)->phon_score
-aggregate(trnsc$nld*100,by=list(trnsc$id,trnsc$age.rounded,trnsc$type),mean)->nld
+#a2m fixed
+aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$type),mean)->by_length
+aggregate(trnsc$phon_score*100,by=list(trnsc$id,trnsc$type),mean)->phon_score
+aggregate(trnsc$nld*100,by=list(trnsc$id,trnsc$type),mean)->nld
 by_length=cbind(by_length,phon_score$x,nld$x)
-colnames(by_length)<-c("ID","Age","Length","Word","Phoneme","NLD")
+by_length=merge(by_length, demo[,c("ID","Sex","Age","birthOrder","matEd")], by.x="Group.1",by.y="ID", all.x=T)
+colnames(by_length)<-c("ID","Length","Word","Phoneme","NLD","Sex","Age","BrthO","matEd")
 
 ```
 
@@ -707,7 +729,7 @@ cor.test(overall$Word,overall$matEd,method="s")->corme
 ```
 
 
-Our final exploratory analysis assessed whether variation in scores was structured by factors that vary across individuals. As shown in Figure 2, there was a greater deal of variance in earlier than later ages, with significantly higher NWR scores for older children  (Spearman's rank correlation, given inequality of variance, rho (`r corage$statistic`) = `r corage$estimate`, p = `r corage$p.value`). In contrast, there was no clear association between NWR scores, on the one hand, and sex (t (`r tsex$statistic`) = `r tsex$parameter`, p = `r tsex$p.value`), birth order  (data missing for `r sum(is.na(demo$birthOrder[demo$included=="yes"]))` children, `r corbo$statistic`) = `r corbo$estimate`, p = `r corbo$p.value`) or maternal education  (data missing for `r sum(is.na(demo$matEd[demo$included=="yes"]))` children, `r corme$statistic`) = `r corme$estimate`, p = `r corme$p.value`)
+Our final exploratory analysis assessed whether variation in scores was structured by factors that vary across individuals. As shown in Figure 2, there was a greater deal of variance in earlier than later ages, with significantly higher NWR scores for older children  (Spearman's rank correlation, given inequality of variance, rho (`r corage$statistic`) = `r corage$estimate`, p = `r corage$p.value`). In contrast, there was no clear association between NWR scores, on the one hand, and sex (t (`r tsex$statistic`) = `r tsex$parameter`, p = `r tsex$p.value`), birth order  (data missing for `r sum(is.na(demo$birthOrder[demo$included=="yes"]))` children, rho = (`r corbo$statistic`) = `r corbo$estimate`, p = `r corbo$p.value`) or maternal education  (data missing for `r sum(is.na(demo$matEd[demo$included=="yes"]))` children,  rho = ( `r corme$statistic`) = `r corme$estimate`, p = `r corme$p.value`).
 
 
 
