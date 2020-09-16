@@ -25,37 +25,19 @@ trnsc[order(trnsc$file, trnsc$int),]->trnsc
 #add repetition number
 trnsc$rep=gsub(".*_","",gsub(".wav","",trnsc$outfile))
 
-# AC's prev code
- trnsc$previous<-c(NA,as.character(trnsc$target[1:(dim(trnsc)[1]-1)]))
- trnsc$attempt<-ifelse(trnsc$target!=trnsc$previous,"first","subsequent")
- trnsc$attempt[1]<-"first"
- table(trnsc$attempt) #1045 first attempts
 
- head(trnsc) #previous looks right
- 
-# MC's new code
-# M2A: by my count there are 1029 first attempts, but maybe I'm misunderstanding "token"
-# M2A: okay, my solution finds some conflicting cases with your outfile attempt namings,
-#      now going off of those for attempt first/subsequent, I still find 1029
-# A2m please look at lines 21-22, those are the lines that determine which items are first versus subsequent. 
-# int is the interval in praat, so it is a certain measure of time; I don't remember
-# what token is, but there is a file called notes_for_supmat.txt which contains the explanation
-# for all columns, which may say for this one and others
-# M2A: Okay, great! Well that still returns 1029 first cases, but now the tidyverse pipe below
-# should guarantee we're getting the cases we want
+first.prods <- trnsc %>%
+   group_by(id, item) %>%
+   summarize(min.int = min(int)) %>%
+   mutate(attempt = "first") %>%
+   rename("int" = min.int)
+trnsc <- trnsc %>%
+   left_join(first.prods, by = c("id", "item", "int")) %>%
+   replace_na(list(attempt = "subsequent"))
 
-# first.prods <- trnsc %>%
-#   group_by(id, item) %>%
-#   summarize(min.int = min(int)) %>%
-#   mutate(attempt = "first") %>%
-#   rename("int" = min.int)
-# trnsc <- trnsc %>%
-#   left_join(first.prods, by = c("id", "item", "int")) %>%
-#   replace_na(list(attempt = "subsequent"))
-#  table(trnsc$attempt.x,trnsc$attempt.y) #the code above has removed non-first
-# table(first.prods$attempt) # confirm 1029
-# head(first.prods) #too little information to check
 
+dim(trnsc)
+  
 # add demographic info
 read.csv("NWR-demo.csv",header=T)->demo
 #colnames(demo)
