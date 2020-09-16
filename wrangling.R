@@ -1,3 +1,4 @@
+library(tidyverse)
 
 read.delim("NWR-transcription.txt", encoding="UTF-8")->trnsc
 #DATA REMOVAL *** ATTENTION *** 
@@ -13,7 +14,7 @@ trnsc$tokid=paste(trnsc$item,trnsc$token)
 
 read.table("final_order.txt",header=T)->crp
 crp$tokid=paste(crp$target,crp$nb)
-npairs=dim(crp)[1]
+npairs=dim(crp)[1] #1488 pairs
 
 trnsc=merge(trnsc,crp,by.x="tokid",by.y="tokid")
 dim(trnsc) #haven't lost any judgments
@@ -25,11 +26,13 @@ trnsc[order(trnsc$file, trnsc$int),]->trnsc
 trnsc$rep=gsub(".*_","",gsub(".wav","",trnsc$outfile))
 
 # AC's prev code
-# trnsc$previous<-c(NA,as.character(trnsc$target[1:(dim(trnsc)[1]-1)]))
-# trnsc$attempt<-ifelse(trnsc$target!=trnsc$previous,"first","subsequent")
-# trnsc$attempt[1]<-"first"
-# table(trnsc$attempt) #1045 first attempts
+ trnsc$previous<-c(NA,as.character(trnsc$target[1:(dim(trnsc)[1]-1)]))
+ trnsc$attempt<-ifelse(trnsc$target!=trnsc$previous,"first","subsequent")
+ trnsc$attempt[1]<-"first"
+ table(trnsc$attempt) #1045 first attempts
 
+ head(trnsc) #previous looks right
+ 
 # MC's new code
 # M2A: by my count there are 1029 first attempts, but maybe I'm misunderstanding "token"
 # M2A: okay, my solution finds some conflicting cases with your outfile attempt namings,
@@ -41,16 +44,17 @@ trnsc$rep=gsub(".*_","",gsub(".wav","",trnsc$outfile))
 # M2A: Okay, great! Well that still returns 1029 first cases, but now the tidyverse pipe below
 # should guarantee we're getting the cases we want
 
-first.prods <- trnsc %>%
-  group_by(id, item) %>%
-  summarize(min.int = min(int)) %>%
-  mutate(attempt = "first") %>%
-  rename("int" = min.int)
-trnsc <- trnsc %>%
-  left_join(first.prods, by = c("id", "item", "int")) %>%
-  replace_na(list(attempt = "subsequent"))
-# table(trnsc$attempt)
-
+# first.prods <- trnsc %>%
+#   group_by(id, item) %>%
+#   summarize(min.int = min(int)) %>%
+#   mutate(attempt = "first") %>%
+#   rename("int" = min.int)
+# trnsc <- trnsc %>%
+#   left_join(first.prods, by = c("id", "item", "int")) %>%
+#   replace_na(list(attempt = "subsequent"))
+#  table(trnsc$attempt.x,trnsc$attempt.y) #the code above has removed non-first
+# table(first.prods$attempt) # confirm 1029
+# head(first.prods) #too little information to check
 
 # add demographic info
 read.csv("NWR-demo.csv",header=T)->demo
@@ -83,7 +87,8 @@ dim(trnsc) #still no loss, all good
 # across the two, the merge should carry over whatever changes you make
 # M2A: Some of the segments in stimuli.txt were wrong. I made corrections in stimuli2.txt,
 # but now that is mismatched to stimconv and segconv.
-read.delim("stimconv.txt", encoding="UTF-8")->stims
+
+#get info on segments
 read.delim("segconv.txt", encoding="UTF-8")->segments
 #add corpus freq to segments
 read.delim("segment-counts.txt", encoding="UTF-8",sep="\t",header=T)->phone_counts
@@ -93,25 +98,20 @@ read.delim("segment-counts-types.txt", encoding="UTF-8",sep="\t",header=T)->phon
 merge(segments,phone_counts_types,by.x="ortho",by.y="ortho",all.x=T)->segments
 write.table(segments,"segments_with_cor_freq.txt",sep="\t",row.names = F)
 
+#read in table with breakdown 
+read.delim("stimuli3.txt", encoding="UTF-8")->stims
 #add average crosslinguistic frequency
 stim_seg_freq=matrix(NA,nrow=dim(stims)[1],ncol=8)
 for(i in 1:dim(stim_seg_freq)[1]) for(j in 1:dim(stim_seg_freq)[2]) {
-  thisfreq=segments$pc[as.character(segments$phono)==as.character(stims[i,paste0("phono",j)])]
+  thisfreq=segments$pc[as.character(segments$ortho)==as.character(stims[i,paste0("ortho",j)])]
   stim_seg_freq[i,j]<-ifelse(sum(!is.na(thisfreq))==1,thisfreq,NA)
 }
-# M2A: I'm suspicious of some of the NAs in here (like for 'k', 'w', 'd')--what is segment pc?
-# a2m please note I didn't look up all sounds, only those used in our stimuli
-# w is in our stimuli for sure, so that may not explain away all the NAs
-# pc is percentage of languages in which the sound appears in phoible
-# freq is the number of languages in which the sound appears in phoible
-# M2A: but the three examples I listed are all in our stimuli (?)
-# Thanks for the defs of pc and freq 
 stims$avg_fr=apply(stim_seg_freq,1,mean,na.rm=T)
 
 #add average corpus frequency - LOGGED
 stim_seg_freq=matrix(NA,nrow=dim(stims)[1],ncol=8)
 for(i in 1:dim(stim_seg_freq)[1]) for(j in 1:dim(stim_seg_freq)[2]) {
-  thisfreq=segments$freq_corpus[as.character(segments$phono)==as.character(stims[i,paste0("phono",j)])] 
+  thisfreq=segments$freq_corpus[as.character(segments$ortho)==as.character(stims[i,paste0("ortho",j)])] 
   stim_seg_freq[i,j]<-ifelse(sum(!is.na(thisfreq))==1,thisfreq,NA)
 }
 stims$avg_fr_cor=apply(log(stim_seg_freq),1,mean,na.rm=T)
@@ -120,7 +120,7 @@ stims$avg_fr_cor=apply(log(stim_seg_freq),1,mean,na.rm=T)
 stim_seg_freq=matrix(NA,nrow=dim(stims)[1],ncol=8)
 for(i in 1:dim(stim_seg_freq)[1]) for(j in 1:dim(stim_seg_freq)[2]) {
   thisfreq=segments$freq_corpus_types[
-    as.character(segments$phono)==as.character(stims[i,paste0("phono",j)])] 
+    as.character(segments$ortho)==as.character(stims[i,paste0("ortho",j)])] 
   stim_seg_freq[i,j]<-ifelse(sum(!is.na(thisfreq))==1,thisfreq,NA)
 }
 stims$avg_fr_cor_ty=apply(log(stim_seg_freq),1,mean,na.rm=T)
@@ -133,62 +133,33 @@ trnsc[trnsc$target!="yi",]->trnsc
 
 #remove practice items
 trnsc=trnsc[trnsc$type !="practice",]
-dim(trnsc)
+dim(trnsc) #2020-09-16 1302
 
 ## PHONOLOGIZE AND SCORE
 
 #initialize the unichar phono-like representation
-trnsc$mp_uni=trnsc$mp #start from ortho
+trnsc$mp_uni=trnsc$mispronunciation #start from ortho
 trnsc$target_uni=trnsc$target_ortho #start from ortho
 
+head(trnsc[,c("mispronunciation","mp_uni","target_uni")])
 
 #log non-fluent speech, then get rid of that marker
 trnsc$nonfluent<-NA
 trnsc$nonfluent[grep("-",trnsc$mp_uni,fixed=T)]<-1
-# M2A: there is no mp_uni column in trnsc as far as I can see, so this line
-# doesn't do anything
-# a2m, my apologies, this is a recent bug
-#but indeed, I didn't look at the prevalence of disfluencies
-trnsc$mispronunciation=gsub("-","",trnsc$mispronunciation)
+table(trnsc$nonfluent) #2020-09-16 39
+trnsc$mp_uni=gsub("-","",trnsc$mp_uni,fixed=T)
 
 # make all vowels in mispronunciation & target short (so we don't penalize length errors)
-trnsc$mp=gsub("([aeiouêâéáóî])\\1+", "\\1", trnsc$mispronunciation)
-trnsc$target_ortho=gsub("([aeiouêâéáóî])\\1+", "\\1", trnsc$target_ortho)
+trnsc$mp_uni=gsub("([aeiouêâéáóî])\\1+", "\\1", trnsc$mp_uni)
+trnsc$target_uni=gsub("([aeiouêâéáóî])\\1+", "\\1", trnsc$target_uni)
 
 # if correct=0 but orthotarget=mispronunciation (probably due to length errors) then change correct to 1 
-#sum(trnsc$correct==0 & trnsc$target_ortho == trnsc$mp & !is.na(trnsc$mp)) #this only happens twice
-trnsc[trnsc$correct==0 & trnsc$target_ortho == trnsc$mp & !is.na(trnsc$mp),]
-trnsc$correct[trnsc$correct==0 & trnsc$target_ortho == trnsc$mp & !is.na(trnsc$mp)]<-1
-# M2A: This appears to be only two cases and it doesn't seem to be a length error diff
-# i.e., mp == mispronunciation on both of these -- should we be cautious about
-# counting them as correct?
-#a2m I'm not sure I follow:
-# target   id       tokid row annotator      date token     item correct mispronunciation
-# 647      lvi c108       lvi 6 635        DY 16-Sep-19     6      lvi       0              lvi
-# 835 nomiwake c110 nomiwake 21 839        DY 17-Sep-19    21 nomiwake       0         nomiwake
-# meaning comment               file int      on     off cor       mp                   outfile
-# 647       0         190829_0064S12_ch1  24 138.154 139.049  NA      lvi      pairs/lvi_c108_1.wav
-# 835       0         190829_0066S12_ch1  68 256.738 259.013  NA nomiwake pairs/nomiwake_c110_1.wav
-# rand nb rep attempt rown included Age Sex birthOrder familyID notes_familyID monolingual
-# 647  0,21105252  6   1   first   40      yes   7   B          2       34   old_familyID         yes
-# 835 0,671765283 21   1   first   42      yes   5   B          1       33   old_familyID         yes
-# matEd Cond     Date        Time           File fastcode fullcode                    Notes
-# 647    10  17a 20190829       15:42 190829_0064S12    names                                  
-# 835     8  18a 20190829 ended 16:03 190829_0066S12    names          weird weak articulations
-# notes_demo                                                                    Where   Village
-# 647            on veranda (semi-public, small audience, included other children tested) Village#3
-# 835            on veranda (semi-public, small audience, included other children tested) Village#3
-# age.rounded type target_ortho    phono phono1 phono2 phono3 phono4 phono5 phono6 phono7 phono8
-# 647         7.5    1          lvi     lβʲi    lβʲ      i   <NA>   <NA>   <NA>   <NA>   <NA>   <NA>
-#   835         5.2    4     nomiwake ṇɔmiwækɛ      ṇ      ɔ      m      i      w      æ      k      ɛ
-# avg_fr avg_fr_cor avg_fr_cor_ty mp_uni target_uni nonfluent
-# 647   46.0  -2.646551     -2.682874     NA        lvi        NA
-# 835   47.5  -3.076920     -3.030380     NA   nomiwake        NA
-# I see: correct=0
-# the first target is lvi and it's pronounced as lvi -- so it is indeed not incorrect
-# the second target is nomiwake pronounced as nomiwake -- idem
+#sum(trnsc$correct==0 & trnsc$target_ortho == trnsc$mispronunciation & !is.na(trnsc$mispronunciation)) #this only happens twice
+trnsc[trnsc$correct==0 & trnsc$target_uni == trnsc$mp_uni & !is.na(trnsc$mp_uni),]
+trnsc$correct[trnsc$correct==0 & trnsc$target_uni == trnsc$mp_uni & !is.na(trnsc$mp_uni)]<-1
 # M2A: I agree! My question is: Why then are they marked as incorrect in the first place?
 # Does this deserve more detective work?
+#a2m I looked into in there were disfluencies
 
 # create phonological correspondance matrix
 # NOTE!! NON INTUITIVE MAPPING!!!! DO NOT READ THE OUTPUT BELIEVING IT IS PSEUDO IPA!!!
@@ -295,9 +266,11 @@ correspondances=matrix( #list correspondances always by pairs, orthography then 
 
 
 for(i in 1:dim(correspondances)[1]) { #transform into unicharacter
-  trnsc$mp_uni=gsub(correspondances[i,1],correspondances[i,2],trnsc$mp_uni)
-  trnsc$target_uni=gsub(correspondances[i,1],correspondances[i,2],trnsc$target_uni)
+  trnsc$mp_uni=gsub(correspondances[i,1],correspondances[i,2],trnsc$mp_uni,fixed=T)
+  trnsc$target_uni=gsub(correspondances[i,1],correspondances[i,2],trnsc$target_uni,fixed=T)
 }
+
+head(trnsc[,c("mispronunciation","mp_uni","target_uni")])
 
 
 #calculate Levinshtein's distances 
@@ -335,67 +308,18 @@ for(i in grep("0",trnsc$correct)){ #this goes through all items with errors (" g
     }
 }
 
-trnsc$ld=rowSums(trnsc[,c("ins","del","sub")])
-trnsc$nld=trnsc$ld/trnsc$nchar
-trnsc$nld[is.na(trnsc$nld)]<-0
-
-#proportion correct: remove Substitutions Deletions and Insertions & count only proportion of matches
-# M2A: Isn't 'pc' used as a variable name relating to phone frequency above?
-# they don't actually overlap here but I'm wary of potential future confusion
-#a2m yikes! fixed 
-trnsc$phon_score=nchar(gsub("[SDI]","",trnsc$trafos))/trnsc$nchar
-trnsc$phon_score[is.na(trnsc$phon_score)]<-1
-
-write.table(trnsc,"final_data.txt",row.names=F,sep="\t")
-
-
-#back-transform into orthography
-for(i in dim(correspondances)[1]:1) { #
-   substitution_bank=gsub(correspondances[i,2],correspondances[i,1],substitution_bank,fixed=T)
-   deletion_bank=gsub(correspondances[i,2],correspondances[i,1],deletion_bank,fixed=T)
-   substitution_bank_try1=gsub(correspondances[i,2],correspondances[i,1],substitution_bank_try1,fixed=T)
-   deletion_bank_try1=gsub(correspondances[i,2],correspondances[i,1],deletion_bank_try1,fixed=T)
-}
-
-substitution_bank[order(substitution_bank[,1]),]->substitution_bank
-write.table(substitution_bank,"substitution_bank.txt",row.names=F,sep="\t")
-
-substitution_bank_try1[order(substitution_bank_try1[,1]),]->substitution_bank_try1  #this gives an error CHECK **AC**
-# M2A: this ^^ doesn't seem to give an error anymore; maybe delete old comment?
-write.table(substitution_bank_try1,"substitution_bank_try1.txt",row.names=F,sep="\t")
-
-sort(deletion_bank)->deletion_bank
-write.table(deletion_bank,"deletion_bank.txt",row.names=F,sep="\t")
-sort(deletion_bank_try1)->deletion_bank_try1
-write.table(deletion_bank_try1,"deletion_bank_try1.txt",row.names=F,sep="\t")
-
-sort(match_bank)->match_bank
-write.table(match_bank,"match_bank.txt",row.names=F,sep="\t")
-sort(match_bank_try1)->match_bank_try1
-write.table(match_bank_try1,"match_bank_try1.txt",row.names=F,sep="\t")
-
-
 #create correct bank
 # M2A: what's this for if we don't expect any S/D/Is?
+#a2m for ease of reading the code, I had left the section that does insertions, deletions, substitutions -- but we know there are only matches here ;)
+#but seems that zas confusing
 for(i in grep("1",trnsc$correct)){ #this goes through all items without errors (" grep("1",trnsc$correct)")
   #lev
   lev=adist(trnsc[i,c("target_uni")],trnsc[i,c("target_uni")],count=T)
   
-  #for ease of reading the code, we leave the section that does insertions, deletions, substitutions -- but we know there are only matches here ;)
-  trnsc$ins[i]<-attributes(lev)$counts[,,"ins"]
-  trnsc$del[i]<-attributes(lev)$counts[,,"del"]
-  trnsc$sub[i]<-attributes(lev)$counts[,,"sub"]
   trnsc$trafos[i]=attributes(lev)$trafos #M, I, D and S indicating a match, insertion, deletion and substitution
   trnsc$nchar[i]=nchar(attributes(lev)$trafos)
   trnsc$tarlen[i]=nchar(trnsc$target_uni[i])
   
-  #extract substitutions & add them to the bank
-  sublist=which(strsplit(attributes(lev)$trafos, "")[[1]]=="S")
-  substitution_bank=rbind(substitution_bank,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][sublist],strsplit(trnsc[i,c("mp_uni")],"")[[1]][sublist]))
-  
-  #same for deletions  
-  dellist=which(strsplit(attributes(lev)$trafos, "")[[1]]=="D")
-  deletion_bank=rbind(deletion_bank,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][dellist]))
   
   #end with matches
   matlist=which(strsplit(attributes(lev)$trafos, "")[[1]]=="M")
@@ -403,9 +327,45 @@ for(i in grep("1",trnsc$correct)){ #this goes through all items without errors (
   
   #if item is first attempt, add to try1
   if(trnsc[i,"attempt"]=="first") {
-    substitution_bank_try1=rbind(substitution_bank_try1,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][sublist],strsplit(trnsc[i,c("mp_uni")],"")[[1]][sublist]))
-    deletion_bank_try1=rbind(deletion_bank_try1,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][dellist]))
     match_bank_try1=rbind(match_bank_try1,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][matlist]))
     
   }
 }
+
+trnsc$ld=rowSums(trnsc[,c("ins","del","sub")])
+trnsc$nld=trnsc$ld/trnsc$nchar
+trnsc$nld[is.na(trnsc$nld)]<-0
+
+#proportion correct: remove Substitutions Deletions and Insertions & count only proportion of matches
+trnsc$phon_score=nchar(gsub("[SDI]","",trnsc$trafos))/trnsc$nchar
+trnsc$phon_score[is.na(trnsc$phon_score)]<-1
+
+write.table(trnsc,"final_data.txt",row.names=F,sep="\t")
+
+#finish by writing out the bqnks
+#back-transform into orthography
+for(i in dim(correspondances)[1]:1) { #
+   substitution_bank=gsub(correspondances[i,2],correspondances[i,1],substitution_bank,fixed=T)
+   deletion_bank=gsub(correspondances[i,2],correspondances[i,1],deletion_bank,fixed=T)
+   match_bank=gsub(correspondances[i,2],correspondances[i,1],match_bank,fixed=T)
+   match_bank_try1=gsub(correspondances[i,2],correspondances[i,1],match_bank_try1,fixed=T)
+   substitution_bank_try1=gsub(correspondances[i,2],correspondances[i,1],substitution_bank_try1,fixed=T)
+   deletion_bank_try1=gsub(correspondances[i,2],correspondances[i,1],deletion_bank_try1,fixed=T)
+}
+
+substitution_bank[order(substitution_bank[,1]),]->substitution_bank
+write.table(substitution_bank,"substitution_bank.txt",row.names=F,sep="\t")
+
+substitution_bank_try1[order(substitution_bank_try1[,1]),]->substitution_bank_try1  
+write.table(substitution_bank_try1,"substitution_bank_try1.txt",row.names=F,sep="\t")
+
+sort(deletion_bank)->deletion_bank
+write.table(deletion_bank,"deletion_bank.txt",row.names=F,sep="\t")
+sort(deletion_bank_try1)->deletion_bank_try1
+write.table(deletion_bank_try1,"deletion_bank_try1.txt",row.names=F,sep="\t")
+
+
+sort(match_bank)->match_bank
+write.table(match_bank,"match_bank.txt",row.names=F,sep="\t")
+sort(match_bank_try1)->match_bank_try1
+write.table(match_bank_try1,"match_bank_try1.txt",row.names=F,sep="\t")

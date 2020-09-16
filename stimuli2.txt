@@ -1,6 +1,6 @@
 type	target_ortho	target	phono	phono1	phono2	phono3	phono4	phono5	phono6	phono7	phono8
 3	dimope	dimope	ṭimɔpɛ	ṭ	i	m	ɔ	p	ɛ	NA	NA
-4	dipońate	diponate	ṭipɔnætɛ	ṭ	i	p	ɔ	n	̣æ	t	ɛ
+4	dipońate	diponate	ṭipɔnætɛ	ṭ	i	p	ɔ	n	æ	t	ɛ
 3	diyeto	diyeto	ṭijɛtɔ	ṭ	i	j	ɛ	t	ɔ	NA	NA
 1	dp:a	dp_a	ṭp̃æ	ṭp	̃æ	NA	NA	NA	NA	NA	NA
 1	dpa	dpa	ṭpæ	ṭp	æ	NA	NA	NA	NA	NA	NA
