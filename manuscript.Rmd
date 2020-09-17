@@ -176,6 +176,7 @@ NWR has been used to seek answers to a variety of theoretical questions, includi
 
 <!--M2A: I feel like there's a bit of a jump here from explaining what NWR is and what it's used for to saying we used it in the current study to test three things. We should probably have a paragraph justifying its use in this context, no?-->
 <!-- a2m I added a sentence, is this what you were thinking of? -->
+<!-- M2A: Makes sense. I was thinking we could already hint at YD as interesting in particular bc of the phonology and not simply because it's a random one of many previously untested populations. I don't mind adding something like this in once I'm done with the demo check.-->
 
 In this study, we report on NWR results among children learning Yêly Dnyé, an isolate spoken in Rossel Island, PNG, with an unusually dense phonological inventory.  The present report uses these unique data to contribute to several lines of research. First, we  made sure that some of the non-word items contained typologically rare and/or  challenging sounds, so that we can contribute to the study of whether rare sounds are disadvantaged in perception and/or production, both in terms of overall repetition scores and patterns of mispronunciation. Second, we look at the effects of item length, since previous NWR research has uncovered variable effects. Third, we contribute to the basic NWR literature by adding a data point for children learning a rarely-studied language and culture, and further investigating whether there are structured sources that account for individual variation.
 
@@ -190,8 +191,11 @@ In total, Yélî Dnye uses 90 distinctive segments (93 when including consonants
 Most words in Yélî Dnye are bisyllabic (~50%), with monosyllabic words (~40%) appearing most commonly after that, and with tri-and-above syllabic words appearing least frequently [~10%; based on >5800 lexemes in the current Yélî Dnye dictionary, @levinsoninprepydgrammar]. The vast majority of syllables use a CV format. A small portion of the lexicon features words with a final closed syllable, limited to codas of -/m/, -/p/, or -/j/ (e.g., 'ndap' (Spondylus shell) /ṇṭæp/). However, in spontaneous speech an epenthetic /ɯ/ is often inserted after word-final coda, yielding a CVCV structure instead (e.g., 'ndapî' /'ṇṭæ.pɯ/). This process is used frequently with English loan words that have a coda (e.g., 'ponî' (phone) /'pɔ.nɯ/). An even smaller portion of the lexicon features words starting with a vowel (e.g., 'ala' (here) /æ.'læ/), but these are limited to /æ/-. Finally, the lexicon features a handful of single-vowel grammatical morphemes (see @levinsoninprepydgrammar for details).
 
 <!-- a2m up to here it looks great. i am less sure about the next paragraph because it is unclear how it connects with our study... we didn't really take this into account when building the stimuli, right? -->
+<!-- M2A: Happy to comment it out I agree it's not really relevant for our study in particular; just part of the phonological sketch. I was thinking about linguists when I wrote it up, but psychies probably are just ready to get on with the next part by now :) -->
 
+<!--
 While all consonants can appear in the first syllable of the word, the second syllable onset consonant in bisyllabic roots is almost exclusively drawn from a subset of the simplex consonants (in order of descending frequency: /m/, /ṭ/, /n/, /p/, /l/, /w/, /j/, /pʷ/, /ŋ/, /k/, /t/, /ɣ/, /mʷ/). In monosyllabic stems, oral vowels (short: 43% and long: 31%) are more common than nasal ones (short: 4% and long: 22%), with the first syllable of bisyllabic stems following a similar pattern. Most vowels in the second syllable of bisyllabic stems are also short and oral, with a potential preference for rounding harmony between the first and second vowels. Stress typically falls on the first syllable of bisyllabic words, on the first and third syllables of tetrasyllabic words, and on the first or second syllable of trisyllabic words, depending on its vocalic features (see @levinsoninprepydgrammar for details).
+-->
 
 ### The Yélî community
 <!--M2A: is this okay?-->
@@ -202,6 +206,7 @@ The current study also contributes to increasing the cultural diversity of the p
 
 Most speakers of the language grow up speaking it monolingually until they begin attending school around the age of 7; 
 <!-- a2m no "at" here? *at* around the age? -->
+<!-- M2A: my ear strongly prefers it without the "at", but it could go both ways. -->
 school instruction is in English. While monolingual Yélî Dnye upbringing is common, multilingual families are not unusual, particularly in the region around the Catholic Mission---the same region in which the current data were collected---, where there is a higher incidence of married-in mothers from other islands [@brownIPchildrearing]. Children in these multilingual families grow up speaking Yélî Dnye and English, Tok Pisin, and/or some other language(s) from the region.
 
 Most Yélî people are swidden horticulturalists, raising a variety of tubers (e.g., yams, manioc, taro), coconut, banana, and more in their gardens. In addition to garden foods, Yélî children grow up eating fish and foraging for shellfish and nuts, which provide a regular source of extra protein. The typical household in our dataset includes seven individuals and is situated among a collection of 4 or more other households, with structures often arranged around an open grassy area. These household clusters are organized by patrilocal relation, such that they typically comprise a set of brothers, their wives and children, and their mother and father, with neighboring hamlets also typically related through the patriline.
@@ -213,11 +218,13 @@ Despite restricted outside contact, formal education is a priority for many Yél
 While work on Yélî language development is growing [e.g., @brown2011cultural; @brown2014interactional; @brownIPchildrearing; @casillas2020early; @liszkowski2012prelinguistic], our knowledge of children's linguistic development is quite limited, and research into their phonological development in particular has only just begun [e.g., Bram's thesis; MC's CFH data]. What we do know about the early language environment is that, while child-directed speech is relatively infrequent throughout the day [@casillas2020early], shared caregiving practices and a near-universal fondness for social interaction with young children ensure that speech directed to children comes from all types of speakers: women, men, and other children [@bunceURcrosscultural; @casillas2020early]. While speech from women predominates in young children's speech environments on Rossel, as it does elsewhere [@bergelsoncasillas2019what; @bunceURcrosscultural], there is a significant and marked increase in child-directed speech from other children as infants get older [@bunceURcrosscultural; @casillas2020early]. This increase in child-directed speech from other children is attributed to the fact that, starting around age 2, children often spend large swaths of the day playing, swimming, and foraging for fruit, nuts, and shellfish in large (~10 people) independent and mixed-age child play groups [@brownIPchildrearing; @casillas2020early].
 <!--M2A: I think a nice way to end this bit would be very briefly (~1-sentence) linking this input scenario to the relevance of looking at NWR (à la Cristia 2020 DevRev). What do you think?-->
 <!-- a2m maybe we want to bring that up in the discussion? I haven't found a good place to introduce that paper, in part because right now we have these three purposes that seem sort of unconnected with the goals of that paper... -->
+<!-- M2A: fine with me!-->
 
 ### Brief review of NWR for our purposes
 
 The basic structure of NWR involves the participant hearing a non-word, like "bilik", which they need to repeat back without changing anything that is contrastive in the language. For instance, in English, a response of "bilig" or "pilik" will be scored as incorrect; a response "biilik", where the vowel is lengthened without change of quality would be scored as correct, because English does not have a pure length contrast. 
 <!-- a2m added explanation of correct and incorrect for nwr task -->
+<!--M2A: thanks!-->
 
 Aside from this central basic structure, there is some variation in the presentation procedure and structure of items found in previous NWR work. For example, items are often presented orally by the experimenter [@torrington2015non], although an increasing number of studies have turned to playing back the stimuli in order to have greater control of the stability of the presentation [@brandeker2015language]. Additionally, while some studies have used 10-15 non-words, others have employed up to 46 unique items [@piazzalunga2019articulatory]. Often, authors modulate structural complexity, typically measured in terms of item length (measured in number of syllables) and/or syllable structure [open as opposed to closed syllables, @gallon2007non]. 
 
@@ -240,7 +247,7 @@ After some preliminary analyses to set the stage, we address the following quest
 <!-- a2m we don't actually look at this: Are rarer sounds more often substituted by commoner sounds? -- shall we remove it? -->
 <!--M2A: I'm imagining a reviewer who's knowlegeable about phonology and child development but who hasn't encountered NWR before. I think it would be beneficial to provide a concrete example of a nonword and an inexact repetition above so that they can conceive of what these questions imply (analytically) before we get into the methodological weeds.-->
 <!-- a2m good point, but I think it goes in the previous section so I added it there -->
-
+<!--M2A: thanks!-->
 
 In view of the hypothesis-driven nature of this work, we had considered boosting the interpretational value of this evidence by announcing our analysis plans prior to conducting them. However, we realized that even pre-registering an analysis would be equivocal because we do not have enough power to look at all relationships of interest, and often to detect any of the known effects given their variability across studies. To illustrate this, we portray studies in which children's NWR scores were gathered between 4 and 12 years of age, and reported separately for items that are relatively short (1-2 syllables) versus longer items (3-4 syllables) in Figure 1. Notice that the effect of stimulus length is minuscule among Italian children [@piazzalunga2019articulatory], but considerable among Tsimane' children  [@cristia2020infant], where a drop of 40 percentage points is observed at all ages. A similar difference in NWR scores for short versus long items was observed among Arabic children [@jabere2018xperiment].  Even the effect of age is unstable in this sample. Whereas it is quite clear that children's NWR scores increase in the Italian data, age effects are less stable among Tsimane' children.  Therefore, all analyses here are descriptive and should be considered exploratory.
 
@@ -262,7 +269,7 @@ myplot = ggplot(data = pl, aes(x = Age, y = Score, color = Language))+
   geom_point(aes(size = n, shape = Length))+
   geom_line(aes(linetype=Length)) + 
   theme(text = element_text(size = 16),
-    legend.position="none", axis.text.x=element_text(colour=c("black", "black"))) +
+    legend.position="none", axis.text.x=element_text(colour="black")) +
   scale_color_manual(values = palette)+
   theme_bw()+
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+
@@ -275,6 +282,7 @@ myplot = ggplot(data = pl, aes(x = Age, y = Score, color = Language))+
 #   Warning message:
 # Vectorized input to `element_text()` is not officially supported.
 # Results may be unexpected or may change in future versions of ggplot2. 
+# M2A: removed the vector since it wasn't needed; no more complaint!
 
 myplot
 
@@ -356,6 +364,7 @@ We tried to balance three desiderata: That children would not be unduly exposed 
 We visited four different hamlets once, and attempted to test all eligible children present at the time, to prevent the items 'spreading' through hearsay. In the first hamlet, we tested children in five different places, with some children being tested inside a house and others tested on the veranda. The complete list of places and the ways in which they met the desiderata mentioned above can be found in the raw data, available from online supplementary materials.
  <!--M2A: I didn't look for the SM yet, but probably best not to provide exact hamlet names-->
 <!--a2m: good point! fixed-->
+<!-- M2A: thanks! -->
 
 The child was donned a headset (a Shure SM10A or WH20 XLR with a dynamic microphone on a headband, most children using the former), recorded into the left channel into a Tascam DR40x digital recorder. For most children, the headset could not stay comfortably on the child's head, and thus it was placed on the child's shoulders, with the microphone carefully placed close to the child's mouth. A local informant sat next to the child, to would provide the instructions and, if needed, coach the child to make sure, using the three practice items as well as real words, that they understood that the task was to repeat the items precisely without changing anything. An experimenter (the first author) delivered the elicitation stimuli to the local informant and the child over headphones. 
 
@@ -363,6 +372,8 @@ The child was donned a headset (a Shure SM10A or WH20 XLR with a dynamic microph
 The first phase was making sure the child understood the task. This was explained orally and the first training item was presented. Often, children froze and did not say anything. If this happened, then we followed this procedure. First, the informant insisted. If the child still did not say anything, the informant asked the child to repeat a real word, and another, and another. If the child could repeat these correctly, then we provided the recorded training item over headphones again. Most children successfully started repeating the items presented over headphones at this point; a few further needed the local informant to model the behavior (i.e., they would hear the item again, and she would say it; then we would play it again, and ask the child to say it). A small minority still failed to repeat the item after hearing it over headphones. If that occurred, we tried with the second training item, at which point some children got it and could continue. A small minority, however, failed to repeat this one, as well as the third training item, in which case we stopped the test altogether (see Participants section for exclusions). 
 <!--M2A: do you know how many these were? oh! it's below. then maybe we can just put a (see Participants below), etc.-->
 <!-- a2m done -->
+<!-- M2A: thanks! -->
+
 
 NWR studies vary in whether children are provided with several opportunities to hear and say the item. To have a fixed and clear procedure, we decided that items other than the inital three training ones would not be repeated unless the child made an attempt to produce them. If this attempt was judged correct by the local informant, then the experimenter would move on to the next item (whispering this over a separate headset that was recording onto the right track of the same Tascam). If the local informant heard a deviation, she indicated to the experimenter that the item needed to be repeated, and up to 5 attempts were allowed. 
 
@@ -377,6 +388,11 @@ A script was written to randomize all tokens from all children, pairing each wit
 Some NWR studies employ phoneme-based scoring in addition to or instead of word-level scoring [e.g., @cristia2020infant]. We scored items in terms of the number of phonemes that could be aligned across the target and attempt, divided by the number of phonemes of whichever item was longer (the target or the attempt). Although previous work does not use distance metrics, we additionally report those. For instance, recall our example of an English target being "bilik", and imagine a response "bilig". This would receive the following scores: at the whole item level this would receive a score of zero (because the repetition is not exact); at the phoneme level it would receive a score of 80% (4 out of 5 phonemes repeated exactly); and its normalized phone-based Levenshtein distance is 20% (20% of phonemes were substituted or deleted).  
 <!--M2A: A concrete scoring example would be a good idea here-->
 <!-- a2m added! actually, I haven't changed anything but I've been hesitant about using levenshtein's distance because it's the complement of phoneme based scoring -- so shall we drop it?  -->
+<!-- M2A: three thoughts on this, which you can take as you like:
+1) our audience might make this determination. segment-match score (phoneme-level accuracy) is probably more straightforward and might therefore be preferred by psychies
+2) LD has the advantage of making D/I/S relevant as a next step in the analysis
+3) we should definitely choose one, I agree, and report the other in supp mat tables
+-->
 
 Additionally, we looked up each phoneme in each target word in the Phoible database [@phoible]. We entered the number of languages in which each phoneme was found, as well as what percentage of languages in the database that represented. We could not find a small number of phonemes in the database, and treat those as NA values that do not contribute to the target-level global average phone cross-linguistic frequency, although an alternative would be to attribute them a very small number.
 
@@ -476,6 +492,7 @@ trnsc=trnsc[trnsc$attempt=="first",]
 # whittling the summary down to 24 from 42 -- is that intended?
 # Also all phon_score is 100 and all NLD is 0; does that stike you as fishy?
 #a2m fixed and fixed!
+# M2A: thanks!
 aggregate(trnsc$correct*100,by=list(trnsc$id),mean)->overall
 aggregate(trnsc$phon_score*100,by=list(trnsc$id),mean)->phon_score
 aggregate(trnsc$nld*100,by=list(trnsc$id),mean)->nld
@@ -559,10 +576,12 @@ We next checked whether the association between whole-item NWR scores and cross-
 [^2]: We also carried out this analysis using token phone frequency, but this measure was not correlated with whole-item NWR scores, and therefore the fact that it did not explain away the predictive value of cross-linguistic phone frequency was less convincing.
 
 <!-- a2m should we point out that the coefficient for cross-ling frequency is reduced, so indirectly corpus frequency does explain a little bit of variance? Or making things too complicated, and just say "so corpus frequency does not explain away these results" -->
+<!-- M2A: let's not go into it. because of the way glmer treats collinearity (https://psycnet.apa.org/record/2014-08495-005), it gets complicated quickly in even giving an accurate report of what's going on -->
 
 ### Qualitative analyses of NWR mispronunciations
 
 <!-- a2m I realized this section did not belong together with the xling freq section above - are you ok with this title? -->
+<!-- M2A: The title is a little long and maybe less informative than it could be. How about something like, "Patterns in NWR mispronunciations"-->
 
 ```{r diffic,echo=F}
 nasalVs=c(":a", ":â" ,":ê", ":i" ,":o")
@@ -619,6 +638,8 @@ mat_pc=round(match_tab/denom_vec*100,3)
 #NOTE! if you round above, then these don't sum to 100, so don't round very much...
 #rowSums(sub_pc, na.rm=T) + del_pc + mat_pc
 ```
+
+<!--M2A: coming back to these three comments below after I manage another full read-through (after I check demo) -->
 
 <!-- a2m I think it's weird to put effect sizes here, right? technically I could do something like cohen's d based on mean and sd of the percentage of tokens... -->
 
@@ -695,7 +716,7 @@ As for substitutions, it was as common for a nasal vowel to be produced as an or
 Finally, we looked into the frequency with which mispronunciations resulted in real words. Two thirds of them were: `r round(sum(!is.na(trnsc$meaning) & trnsc$meaning != "0")/sum(!is.na(trnsc$mispronunciation))*100)`%. This is a type of analysis that is seldom reported, and we could only find one comparison point: @castro1998 found that illiterate adults NWR mispronunciations resulted in real words in `r round(53/475*100,2)`% of cases, whereas literate adults did so in only `r round(2/117*100,2)`%. The percentage we observe here is much higher than this, but we do not know whether age, language, or even test structure explains this difference.
 
 <!-- a2m I added info above - is it weird to talk about this here? -->
-
+<!-- M2A: I don't think it's a weird place to add the idea, though I might shorten it a bit when I go through on a writing pass :) -->
 
 
 ### NWR scores as a function of item length 
@@ -703,6 +724,7 @@ Finally, we looked into the frequency with which mispronunciations resulted in r
 ```{r bylength}
 # M2A: this reduces the total number of kids represented from 42 to 40
 #a2m fixed
+# M2A: thanks!
 aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$type),mean)->by_length
 aggregate(trnsc$phon_score*100,by=list(trnsc$id,trnsc$type),mean)->phon_score
 aggregate(trnsc$nld*100,by=list(trnsc$id,trnsc$type),mean)->nld
@@ -721,6 +743,7 @@ Next, we inspected whether NWR scores varied as a function of word length. Resul
 
 Setting monosyllables aside, we observe the typical pattern of lower scores for longer items, although this is particularly salient for the whole word scoring. This is the most commonly reported type of score, but it is also the least forgiving. The pattern is less marked when other two scores are used, which are less sensitive to errors. Averaging across participants and items, the Pearson correlation between length (2-4 syllables) and whole-item NWR scores was r(`r length_r$parameter`) = `r round(length_r$estimate,3)`.
 <!-- a2m it doesn't make sense to do this, right, with only 3 items? -->
+<!-- M2A: you mean with only three lengths? I guess I would prefer a little regression -->
 
 
 ```{r tablength, results = "asis"}
