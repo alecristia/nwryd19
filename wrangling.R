@@ -69,6 +69,7 @@ dim(trnsc) #still no loss, all good
 # across the two, the merge should carry over whatever changes you make
 # M2A: Some of the segments in stimuli.txt were wrong. I made corrections in stimuli2.txt,
 # but now that is mismatched to stimconv and segconv.
+# M note: resolved over quick call; a updated the stim characters throughout now (resolved)
 
 #get info on segments
 read.delim("segconv.txt", encoding="UTF-8")->segments
@@ -142,6 +143,7 @@ trnsc$correct[trnsc$correct==0 & trnsc$target_uni == trnsc$mp_uni & !is.na(trnsc
 # M2A: I agree! My question is: Why then are they marked as incorrect in the first place?
 # Does this deserve more detective work?
 #a2m I looked into in there were disfluencies
+# M2A: awesome, thank you! happy with this now :)
 
 # create phonological correspondance matrix
 # NOTE!! NON INTUITIVE MAPPING!!!! DO NOT READ THE OUTPUT BELIEVING IT IS PSEUDO IPA!!!
@@ -294,6 +296,7 @@ for(i in grep("0",trnsc$correct)){ #this goes through all items with errors (" g
 # M2A: what's this for if we don't expect any S/D/Is?
 #a2m for ease of reading the code, I had left the section that does insertions, deletions, substitutions -- but we know there are only matches here ;)
 #but seems that zas confusing
+# M2A: ah alright!
 for(i in grep("1",trnsc$correct)){ #this goes through all items without errors (" grep("1",trnsc$correct)")
   #lev
   lev=adist(trnsc[i,c("target_uni")],trnsc[i,c("target_uni")],count=T)
