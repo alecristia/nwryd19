@@ -134,10 +134,11 @@ cohensd2=function(m1,sd1,m2,sd2){round((m1-m2)/sqrt((sd1^2+sd2^2)/2),3)}
 
 ## TODO Middy
 
-- double check demo -- probably start with the xlsx version that has the children's first names, date of birth, and date of test. I looked again at my local files (still haven't checked the labs' ones) and I'm surprised I have maternal education for more children than I have birth order for... If you correct this, to generate the csv I also round the age, assign age.rounded to reported age (in years) when DOB is missing, remove first names, DOB, DOTest and age.precise before pushing to github
 - double check my frequency entries in segments.xlsx using the search function in https://phoible.org/parameters; take a look at http://phoible.github.io/conventions/ in case you see something about double articulation (I didn't find tp or lBj)
 - double check also stim_seg_freq -- why are some items still with NA freq?
 - draft discussion
+
+<!--M2A: regarding demo, it looks like you have more mateds than birth orders because family data was systematically not collected for Pu. kids and was missing for three kids tested in No. who were actually from other hamlets. New xslx files sent via email! I left age recomputing to you since I was confused about which file would be used.-->
 
 
 
