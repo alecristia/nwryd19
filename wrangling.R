@@ -1,6 +1,8 @@
 library(tidyverse)
 
 read.delim("NWR-transcription.txt", encoding="UTF-8")->trnsc
+
+
 #DATA REMOVAL *** ATTENTION *** 
 #REMOVE ALL TASK 4 (whatever that is)
 # M2A: This appears to be a second pass over productions that were deemed to
@@ -11,6 +13,38 @@ trnsc[trnsc$item!="task4",]->trnsc
 dim(trnsc) #1488 judgments
 
 trnsc$tokid=paste(trnsc$item,trnsc$token)
+
+
+# - ? correct treatment of words whose mispronunciation is an English word:
+#   mispronunciation meaning
+# 361              two     two
+# 362              two     two
+# 732             loudî      English: loud
+# 879          no-pinêt                                          English: no peanut
+# 908            nodedi                                           English: no daddy
+# 933          no--dadi                                           English: no daddy
+# 949           petrumi                                             English: "true"
+# 950           petrumi                                             English: "true"
+# 951           petrumi                                             English: "true"
+# 1373              wee     English: where
+# 1374              wee     English: where
+# 1375              wee     English: where
+# 1379              wee     English: where
+# 1380              wee     English: where
+# 1388              wee     English: where
+# 1394              wee     English: where
+# 1396              wee     English: where
+# 1398              wee     English: where
+# 1399              wee     English: where
+# 1402              wat      English: what
+# 1405              wat      English: what
+# 1411              wee     English: where
+
+trnsc$mispronunciation=as.character(trnsc$mispronunciation)
+trnsc$meaning=as.character(trnsc$meaning)
+trnsc$mispronunciation[trnsc$mispronunciation=="two"]<-"tuu"
+trnsc$meaning[trnsc$meaning=='English: "true"']<-"0"
+trnsc[grep("Eng",trnsc$meaning),c("mispronunciation","meaning")]
 
 read.table("final_order.txt",header=T)->crp
 crp$tokid=paste(crp$target,crp$nb)
