@@ -105,7 +105,7 @@ dim(trnsc) #still no loss, all good
 # across the two, the merge should carry over whatever changes you make
 # M2A: Some of the segments in stimuli.txt were wrong. I made corrections in stimuli2.txt,
 # but now that is mismatched to stimconv and segconv.
-# M note: resolved over quick call; a updated the stim characters throughout now (resolved)
+# M note: resolved over quick videocall; a updated the stim characters throughout now (resolved)
 
 #get info on segments
 read.delim("segconv.txt", encoding="UTF-8")->segments
