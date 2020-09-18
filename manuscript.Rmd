@@ -135,10 +135,11 @@ cohensd2=function(m1,sd1,m2,sd2){round((m1-m2)/sqrt((sd1^2+sd2^2)/2),3)}
 ## TODO Middy
 
 - double check my frequency entries in segments.xlsx using the search function in https://phoible.org/parameters; take a look at http://phoible.github.io/conventions/ in case you see something about double articulation (I didn't find tp or lBj)
-- double check also stim_seg_freq -- why are some items still with NA freq?
+<!--M2A: I think you mentioned you might have someone do this check, but let me know if I misunderstood!-->
 - draft discussion
 
-<!--M2A: regarding demo, it looks like you have more mateds than birth orders because family data was systematically not collected for Pu. kids and was missing for three kids tested in No. who were actually from other hamlets. New xslx files sent via email! I left age recomputing to you since I was confused about which file would be used.-->
+<!-- M2A: regarding demo, it looks like you have more mateds than birth orders because family data was systematically not collected for Pu. kids and was missing for three kids tested in No. who were actually from other hamlets. New xslx files sent via email! I left age recomputing to you since I was confused about which file would be used.-->
+<!-- M2A: regarding NAs in stim_seg_freq, these appear for 'lv' stimuli because, in the 'segments' table, freq_corpus and freq_corpus_types are NA for that grapheme). The 'segments' table has NAs for 'lv' because it is not included in segment-counts.txt or segment-counts-types.txt. Note that that these NAs are excluded when adding mean item frequency to the 'stims' table (wrangling.R/l.136 & l.145), but this has a pretty big impact since those are all two-segment words. Not sure how avoidable this is, going back to our discussion before about not wanting to ad arbitrarily small frequencies. Thoughts? -->
 
 
 
