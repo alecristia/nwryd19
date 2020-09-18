@@ -19,6 +19,9 @@ trnsc$tokid=paste(trnsc$item,trnsc$token)
 #   mispronunciation meaning
 # 361              two     two
 # 362              two     two
+# --> these two were converted to YD orthography
+# 
+# The following have not been changed in any way
 # 732             loudî      English: loud
 # 879          no-pinêt                                          English: no peanut
 # 908            nodedi                                           English: no daddy
@@ -43,7 +46,6 @@ trnsc$tokid=paste(trnsc$item,trnsc$token)
 trnsc$mispronunciation=as.character(trnsc$mispronunciation)
 trnsc$meaning=as.character(trnsc$meaning)
 trnsc$mispronunciation[trnsc$mispronunciation=="two"]<-"tuu"
-trnsc$meaning[trnsc$meaning=='English: "true"']<-"0"
 trnsc[grep("Eng",trnsc$meaning),c("mispronunciation","meaning")]
 
 read.table("final_order.txt",header=T)->crp
