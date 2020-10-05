@@ -124,6 +124,9 @@ correspondances=matrix( #list correspondances always by pairs, orthography then 
 
 cohensd=function(m,sd){round(m/sd,3)}
 cohensd2=function(m1,sd1,m2,sd2){round((m1-m2)/sqrt((sd1^2+sd2^2)/2),3)}
+
+
+
 ```
 
 <!-- REMEMBER!!!! -->
@@ -136,23 +139,30 @@ cohensd2=function(m1,sd1,m2,sd2){round((m1-m2)/sqrt((sd1^2+sd2^2)/2),3)}
 
 - double check my frequency entries in segments.xlsx using the search function in https://phoible.org/parameters; take a look at http://phoible.github.io/conventions/ in case you see something about double articulation (I didn't find tp or lBj)
 <!--M2A: I think you mentioned you might have someone do this check, but let me know if I misunderstood!-->
-- draft discussion
+<!-- a2m we then decided we'd both feel more certain if you did... -->
+
 
 <!-- M2A: regarding demo, it looks like you have more mateds than birth orders because family data was systematically not collected for Pu. kids and was missing for three kids tested in No. who were actually from other hamlets. New xslx files sent via email! I left age recomputing to you since I was confused about which file would be used.-->
-<!-- M2A: regarding NAs in stim_seg_freq, these appear for 'lv' stimuli because, in the 'segments' table, freq_corpus and freq_corpus_types are NA for that grapheme). The 'segments' table has NAs for 'lv' because it is not included in segment-counts.txt or segment-counts-types.txt. Note that that these NAs are excluded when adding mean item frequency to the 'stims' table (wrangling.R/l.136 & l.145), but this has a pretty big impact since those are all two-segment words. Not sure how avoidable this is, going back to our discussion before about not wanting to ad arbitrarily small frequencies. Thoughts? -->
+<!-- a2m thanks!!! now inc'ed -->
 
+<!-- M2A: regarding NAs in stim_seg_freq, these appear for 'lv' stimuli because, in the 'segments' table, freq_corpus and freq_corpus_types are NA for that grapheme). The 'segments' table has NAs for 'lv' because it is not included in segment-counts.txt or segment-counts-types.txt. Note that that these NAs are excluded when adding mean item frequency to the 'stims' table (wrangling.R/l.136 & l.145), but this has a pretty big impact since those are all two-segment words. Not sure how avoidable this is, going back to our discussion before about not wanting to ad arbitrarily small frequencies. Thoughts? -->
+<!-- a2m So your fear is that frequency is overestimated in these cases, right? Perhaps we can assign the missing segments the lowest observed frequencies? -->
+
+
+- draft discussion
 
 
 ## Introduction
 
 Although infants begin to learn about their native language's phonology within the first year, many studies suggest that in perception and production, in phonetics and phonology, their knowledge continues to develop throughout childhood [e.g., @hazan2000development]. One common task in this line of research is nonword repetition (NWR). In NWR studies, participants are presented auditorily with an item that is phonologically legal but lexically meaningless in the language children are learning. The child should immediately try to say it back without changing anything. NWR scores are thought to reflect long-term phonological knowledge (which allows the child to perceive the item precisely even though it is not a real word they have encountered before) as well as online phonological working memory (to encode the item in the interval between hearing it and saying it back) and flexible production patterns (to produce the item precisely even though it had never been pronounced before). 
 
-NWR has been used to seek answers to a variety of theoretical questions, including what  the links between phonology, working memory, and the lexicon are [@bowey2001nonword], and to assess the extent to which apparent phonological constraints found in the lexicon affect online production [@gallagher2014identity]. It is also frequently used for applications, notably  as a diagnostic for language delays and disorders [@estes2007differences]. Since non-words can be generated in any language, it has attracted the attention of researchers working in multilingual and linguistically diverse environments,  particularly in Europe [@meir2016disentangling;@is08042009language]. However, it has been seldom used outside of Europe and North America [with exceptions including @gallagher2014identity and @cristia2020infant].
+NWR has been used to seek answers to a variety of theoretical questions, including what  the links between phonology, working memory, and the lexicon are [@bowey2001nonword], and to assess the extent to which apparent phonological constraints found in the lexicon affect online production [@gallagher2014identity]. It is also frequently used for applications, notably  as a diagnostic for language delays and disorders [@estes2007differences]. Since non-words can be generated in any language, it has attracted the attention of researchers working in multilingual and linguistically diverse environments,  particularly in Europe [@meir2016disentangling;@is08042009language]. However, it has been seldom used outside of Europe and North America [with exceptions including @gallagher2014identity and @cristia2020infant], and mostly with languages having phonological inventories that are small to moderate in size [@maddieson2005correlating].
 
 
 <!--M2A: I feel like there's a bit of a jump here from explaining what NWR is and what it's used for to saying we used it in the current study to test three things. We should probably have a paragraph justifying its use in this context, no?-->
 <!-- a2m I added a sentence, is this what you were thinking of? -->
 <!-- M2A: Makes sense. I was thinking we could already hint at YD as interesting in particular bc of the phonology and not simply because it's a random one of many previously untested populations. I don't mind adding something like this in once I'm done with the demo check.-->
+<!-- a2m added ", and mostly with languages having phonological inventories that are small to moderate in size" + notice the " with an unusually dense phonological inventory"; my feeling is that it may interrupt the flow to add a lot more here... don't you think? -->
 
 In this study, we report on NWR results among children learning Yêly Dnyé, an isolate spoken in Rossel Island, PNG, with an unusually dense phonological inventory.  The present report uses these unique data to contribute to several lines of research. First, we  made sure that some of the non-word items contained typologically rare and/or  challenging sounds, so that we can contribute to the study of whether rare sounds are disadvantaged in perception and/or production, both in terms of overall repetition scores and patterns of mispronunciation. Second, we look at the effects of item length, since previous NWR research has uncovered variable effects. Third, we contribute to the basic NWR literature by adding a data point for children learning a rarely-studied language and culture, and further investigating whether there are structured sources that account for individual variation.
 
@@ -181,8 +191,6 @@ The current study also contributes to increasing the cultural diversity of the p
 
 
 Most speakers of the language grow up speaking it monolingually until they begin attending school around the age of 7; 
-<!-- a2m no "at" here? *at* around the age? -->
-<!-- M2A: my ear strongly prefers it without the "at", but it could go both ways. -->
 school instruction is in English. While monolingual Yélî Dnye upbringing is common, multilingual families are not unusual, particularly in the region around the Catholic Mission---the same region in which the current data were collected---, where there is a higher incidence of married-in mothers from other islands [@brownIPchildrearing]. Children in these multilingual families grow up speaking Yélî Dnye and English, Tok Pisin, and/or some other language(s) from the region.
 
 Most Yélî people are swidden horticulturalists, raising a variety of tubers (e.g., yams, manioc, taro), coconut, banana, and more in their gardens. In addition to garden foods, Yélî children grow up eating fish and foraging for shellfish and nuts, which provide a regular source of extra protein. The typical household in our dataset includes seven individuals and is situated among a collection of 4 or more other households, with structures often arranged around an open grassy area. These household clusters are organized by patrilocal relation, such that they typically comprise a set of brothers, their wives and children, and their mother and father, with neighboring hamlets also typically related through the patriline.
@@ -192,15 +200,12 @@ Laying 250 nautical miles off the coast of mainland PNG and surrounded by barrie
 Despite restricted outside contact, formal education is a priority for many Yélî families. A recent study surveying more than 40 parents of young children in this region of the island found that nearly all parents completed 6 or more years of education, with 65% of mothers and 49% of fathers completing the full range of locally available education (~9 years), with around half of those parents having pursued an additional 2+ years of education on other islands in the region or on mainland PNG [@casillas2020early]. While there are a handful of local schools around the island, these may be well out of walking distance for many children (i.e., more than 1 hour on foot or by canoe each day), and so it is very common for households to billet school children during the weekdays for months at a time (or for whole months if the child's home is very far). Combined with practices of collective child guardianship within their close-knit hamlets, the practical outcome for researchers is that adult consent can often come from a combination of aunts, uncles, adult cousins, and grandparents standing in for the child's parents---to this child assent is also culturally pertinent, as child independence is encouraged and respected from toddlerhood onward [@brownIPchildrearing].^[Note that in a few cases this does mean that precise details such as child date of birth, parent age in years, and parent education was only able to be approximated as the parents were residing on another part of the island.] Finally, as mentioned, the language of schooling in this region is English, and so the majority of teens and adults on the island speak some English---many speak it very fluently. 
 
 While work on Yélî language development is growing [e.g., @brown2011cultural; @brown2014interactional; @brownIPchildrearing; @casillas2020early; @liszkowski2012prelinguistic], our knowledge of children's linguistic development is quite limited, and research into their phonological development in particular has only just begun [e.g., Bram's thesis; MC's CFH data]. What we do know about the early language environment is that, while child-directed speech is relatively infrequent throughout the day [@casillas2020early], shared caregiving practices and a near-universal fondness for social interaction with young children ensure that speech directed to children comes from all types of speakers: women, men, and other children [@bunceURcrosscultural; @casillas2020early]. While speech from women predominates in young children's speech environments on Rossel, as it does elsewhere [@bergelsoncasillas2019what; @bunceURcrosscultural], there is a significant and marked increase in child-directed speech from other children as infants get older [@bunceURcrosscultural; @casillas2020early]. This increase in child-directed speech from other children is attributed to the fact that, starting around age 2, children often spend large swaths of the day playing, swimming, and foraging for fruit, nuts, and shellfish in large (~10 people) independent and mixed-age child play groups [@brownIPchildrearing; @casillas2020early].
-<!--M2A: I think a nice way to end this bit would be very briefly (~1-sentence) linking this input scenario to the relevance of looking at NWR (à la Cristia 2020 DevRev). What do you think?-->
-<!-- a2m maybe we want to bring that up in the discussion? I haven't found a good place to introduce that paper, in part because right now we have these three purposes that seem sort of unconnected with the goals of that paper... -->
-<!-- M2A: fine with me!-->
+
 
 ### Brief review of NWR for our purposes
 
 The basic structure of NWR involves the participant hearing a non-word, like "bilik", which they need to repeat back without changing anything that is contrastive in the language. For instance, in English, a response of "bilig" or "pilik" will be scored as incorrect; a response "biilik", where the vowel is lengthened without change of quality would be scored as correct, because English does not have a pure length contrast. 
-<!-- a2m added explanation of correct and incorrect for nwr task -->
-<!--M2A: thanks!-->
+
 
 Aside from this central basic structure, there is some variation in the presentation procedure and structure of items found in previous NWR work. For example, items are often presented orally by the experimenter [@torrington2015non], although an increasing number of studies have turned to playing back the stimuli in order to have greater control of the stability of the presentation [@brandeker2015language]. Additionally, while some studies have used 10-15 non-words, others have employed up to 46 unique items [@piazzalunga2019articulatory]. Often, authors modulate structural complexity, typically measured in terms of item length (measured in number of syllables) and/or syllable structure [open as opposed to closed syllables, @gallon2007non]. 
 
@@ -220,10 +225,7 @@ After some preliminary analyses to set the stage, we address the following quest
 - Does the frequency of sounds across languages predict NWR? Are rarer sounds more often substituted by commoner sounds?
 - How does score change as a function of item length in number of syllables?
 - Is individual variation attributable to child age, sex, birth order, monolingual status, and/or parental education?
-<!-- a2m we don't actually look at this: Are rarer sounds more often substituted by commoner sounds? -- shall we remove it? -->
-<!--M2A: I'm imagining a reviewer who's knowlegeable about phonology and child development but who hasn't encountered NWR before. I think it would be beneficial to provide a concrete example of a nonword and an inexact repetition above so that they can conceive of what these questions imply (analytically) before we get into the methodological weeds.-->
-<!-- a2m good point, but I think it goes in the previous section so I added it there -->
-<!--M2A: thanks!-->
+
 
 In view of the hypothesis-driven nature of this work, we had considered boosting the interpretational value of this evidence by announcing our analysis plans prior to conducting them. However, we realized that even pre-registering an analysis would be equivocal because we do not have enough power to look at all relationships of interest, and often to detect any of the known effects given their variability across studies. To illustrate this, we portray studies in which children's NWR scores were gathered between 4 and 12 years of age, and reported separately for items that are relatively short (1-2 syllables) versus longer items (3-4 syllables) in Figure 1. Notice that the effect of stimulus length is minuscule among Italian children [@piazzalunga2019articulatory], but considerable among Tsimane' children  [@cristia2020infant], where a drop of 40 percentage points is observed at all ages. A similar difference in NWR scores for short versus long items was observed among Arabic children [@jabere2018xperiment].  Even the effect of age is unstable in this sample. Whereas it is quite clear that children's NWR scores increase in the Italian data, age effects are less stable among Tsimane' children.  Therefore, all analyses here are descriptive and should be considered exploratory.
 
@@ -254,11 +256,7 @@ myplot = ggplot(data = pl, aes(x = Age, y = Score, color = Language))+
   scale_y_continuous(name = "NWR Score", limits = c(0,100), breaks = seq(0, 100, 10))+
   scale_size_continuous(range = c(2, 6)) 
 
-# a2m I get a warning:
-#   Warning message:
-# Vectorized input to `element_text()` is not officially supported.
-# Results may be unexpected or may change in future versions of ggplot2. 
-# M2A: removed the vector since it wasn't needed; no more complaint!
+
 
 myplot
 
@@ -338,17 +336,13 @@ A Praat script was written to randomize this list 20 times, and split it into tw
 We tried to balance three desiderata: That children would not be unduly exposed to the items before they themselves had to repeat them; that children would feel comfortable doing this task with us; and that the community would feel safe with us doing this task with their children. Moreover, there were also some logistic constraints in terms of the space availability. As a result, the places where elicitation happened varied across the hamlets.
 
 We visited four different hamlets once, and attempted to test all eligible children present at the time, to prevent the items 'spreading' through hearsay. In the first hamlet, we tested children in five different places, with some children being tested inside a house and others tested on the veranda. The complete list of places and the ways in which they met the desiderata mentioned above can be found in the raw data, available from online supplementary materials.
- <!--M2A: I didn't look for the SM yet, but probably best not to provide exact hamlet names-->
-<!--a2m: good point! fixed-->
-<!-- M2A: thanks! -->
+
 
 The child was donned a headset (a Shure SM10A or WH20 XLR with a dynamic microphone on a headband, most children using the former), recorded into the left channel into a Tascam DR40x digital recorder. For most children, the headset could not stay comfortably on the child's head, and thus it was placed on the child's shoulders, with the microphone carefully placed close to the child's mouth. A local informant sat next to the child, to would provide the instructions and, if needed, coach the child to make sure, using the three practice items as well as real words, that they understood that the task was to repeat the items precisely without changing anything. An experimenter (the first author) delivered the elicitation stimuli to the local informant and the child over headphones. 
 
 
 The first phase was making sure the child understood the task. This was explained orally and the first training item was presented. Often, children froze and did not say anything. If this happened, then we followed this procedure. First, the informant insisted. If the child still did not say anything, the informant asked the child to repeat a real word, and another, and another. If the child could repeat these correctly, then we provided the recorded training item over headphones again. Most children successfully started repeating the items presented over headphones at this point; a few further needed the local informant to model the behavior (i.e., they would hear the item again, and she would say it; then we would play it again, and ask the child to say it). A small minority still failed to repeat the item after hearing it over headphones. If that occurred, we tried with the second training item, at which point some children got it and could continue. A small minority, however, failed to repeat this one, as well as the third training item, in which case we stopped the test altogether (see Participants section for exclusions). 
-<!--M2A: do you know how many these were? oh! it's below. then maybe we can just put a (see Participants below), etc.-->
-<!-- a2m done -->
-<!-- M2A: thanks! -->
+
 
 
 NWR studies vary in whether children are provided with several opportunities to hear and say the item. To have a fixed and clear procedure, we decided that items other than the inital three training ones would not be repeated unless the child made an attempt to produce them. If this attempt was judged correct by the local informant, then the experimenter would move on to the next item (whispering this over a separate headset that was recording onto the right track of the same Tascam). If the local informant heard a deviation, she indicated to the experimenter that the item needed to be repeated, and up to 5 attempts were allowed. 
@@ -390,15 +384,16 @@ This study was approved as part of a larger research effort by Marisa Casillas, 
 # plot(fulldemo$Age~fulldemo$age.rounded)
 # write.csv(fulldemo,"nwr-demo.csv")
                             
-read.csv("NWR-demo.csv",header=T)->demo
+read.csv("nwr-demo.csv",header=T,sep=",")->demo
 #colnames(demo)
 
+#lines no longer needed
 #if family is missing, attribute each child to a different one
-demo$familyID=as.character(demo$familyID)
-demo$familyID[is.na(demo$familyID)]<-paste("k",demo$ID[is.na(demo$familyID)])
-
-#fix sex
-demo$Sex[demo$Sex=="F"]<-"G"
+#demo$familyID=as.character(demo$familyID)
+#demo$familyID[is.na(demo$familyID)]<-paste("k",demo$ID[is.na(demo$familyID)])
+#recalc age
+#demo$age.rounded=as.numeric(difftime(as.Date(as.character(demo$Date),format="%Y%m%d"),as.Date(as.character(demo$DOB.ISO),format="%Y%m%d"),unit="weeks"))/52.25
+write.table(demo,"nwr-demo.csv")
 
 subset(demo,included=="yes" & Age <12 & !is.na(Age))->inc
 #if age.rounded is missing, use reported age
@@ -409,7 +404,7 @@ table(inc$birthOrder)->birthorder.tab
 
 ```
 
-A total `r dim(demo)[1]` children were tested, from `r length(levels(factor(demo$familyID)))` of families, in five hamlets. Some children could not be included for the following reasons: refused participation or failed to repeat items presented over headphones even after coaching (N=`r sum(demo$included=="didn't repeat")`), spoke too softly to allow offline coding (N=`r sum(demo$included=="spoke too softly")`). In addition, `r sum(demo$Age >12 | demo$included=="too old",na.rm=T)` teenagers were tested to put younger children at ease; their data is not included in analyses below. The remaining `r dim(inc)[1]` children (`r sum(inc$Sex=="G")` girls) were aged `r round(mean(inc$age.rounded),2)` years (range `r round(min(inc$age.rounded),2)`-`r round(max(inc$age.rounded),2)` years). Among these, there were `r sum(inc$monolingual=="yes", na.rm=T)` children exposed only to Yélî in the home, `r sum(inc$monolingual=="no", na.rm=T)` children who were also exposed to another language in the home, and `r sum(is.na(inc$monolingual))` for whom this information is missing. Maternal years of education averaged `r round(mean(inc$matEd,na.rm=T),2)` years (range `r round(min(inc$matEd,na.rm=T),2)`-`r round(max(inc$matEd,na.rm=T),2)` years; `r sum(is.na(inc$matEd))` children had this information missing).[^1] In terms of birth order, `r birthorder.tab[1]` were first borns, `r birthorder.tab[2]` second,  `r birthorder.tab[3]` third,  `r birthorder.tab[4]` forth,  `r birthorder.tab[5]` fifth, `r birthorder.tab[6]` sixth, and  `r birthorder.tab[7]` did not have this information.
+A total `r dim(demo)[1]` children were tested, from `r length(levels(factor(demo$familyID)))` of families, in four hamlets. Some children could not be included for the following reasons: refused participation or failed to repeat items presented over headphones even after coaching (N=`r sum(demo$included=="didn\xeat repeat")`), spoke too softly to allow offline coding (N=`r sum(demo$included=="spoke too softly")`). In addition, `r sum(demo$Age >12 | demo$included=="too old",na.rm=T)` teenagers were tested to put younger children at ease; their data is not included in analyses below. The remaining `r dim(inc)[1]` children (`r sum(inc$Sex=="G")` girls) were aged `r round(mean(inc$age.rounded),2)` years (range `r round(min(inc$age.rounded),2)`-`r round(max(inc$age.rounded),2)` years). Among these, there were `r sum(inc$monolingual=="yes", na.rm=T)` children exposed only to Yélî in the home, `r sum(inc$monolingual=="no", na.rm=T)` children who were also exposed to another language in the home, and `r sum(is.na(inc$monolingual))` for whom this information is missing. Maternal years of education averaged `r round(mean(inc$matEd,na.rm=T),2)` years (range `r round(min(inc$matEd,na.rm=T),2)`-`r round(max(inc$matEd,na.rm=T),2)` years; `r sum(is.na(inc$matEd))` children had this information missing).[^1] In terms of birth order, `r birthorder.tab[1]` were first borns, `r birthorder.tab[2]` second,  `r birthorder.tab[3]` third,  `r birthorder.tab[4]` forth,  `r birthorder.tab[5]` fifth, `r birthorder.tab[6]` sixth, and  `r birthorder.tab[7]` did not have this information.
 
 [^1]: Precise years of education can be hard to count. This is particularly the case for schooling beyond grade 8, which takes place off-island, which can be due to an irregularity in ability to pay school fees, school opening times, familial obligations, and more. We asked parents to report their highest completed level of education and inferred the approximate number of years that entails under ideal conditions, which results in many esimates around typical "completion" times in between.
 
@@ -464,11 +459,6 @@ trnsc=trnsc[trnsc$attempt=="first",]
 
 
 ```{r overall}
-# M2A: This excludes a bunch of kids (anyone with NA on any of these participant features),
-# whittling the summary down to 24 from 42 -- is that intended?
-# Also all phon_score is 100 and all NLD is 0; does that stike you as fishy?
-#a2m fixed and fixed!
-# M2A: thanks!
 aggregate(trnsc$correct*100,by=list(trnsc$id),mean)->overall
 aggregate(trnsc$phon_score*100,by=list(trnsc$id),mean)->phon_score
 aggregate(trnsc$nld*100,by=list(trnsc$id),mean)->nld
@@ -551,13 +541,11 @@ We next checked whether the association between whole-item NWR scores and cross-
 
 [^2]: We also carried out this analysis using token phone frequency, but this measure was not correlated with whole-item NWR scores, and therefore the fact that it did not explain away the predictive value of cross-linguistic phone frequency was less convincing.
 
-<!-- a2m should we point out that the coefficient for cross-ling frequency is reduced, so indirectly corpus frequency does explain a little bit of variance? Or making things too complicated, and just say "so corpus frequency does not explain away these results" -->
-<!-- M2A: let's not go into it. because of the way glmer treats collinearity (https://psycnet.apa.org/record/2014-08495-005), it gets complicated quickly in even giving an accurate report of what's going on -->
 
-### Qualitative analyses of NWR mispronunciations
 
-<!-- a2m I realized this section did not belong together with the xling freq section above - are you ok with this title? -->
-<!-- M2A: The title is a little long and maybe less informative than it could be. How about something like, "Patterns in NWR mispronunciations"-->
+### Patterns in NWR mispronunciations
+
+
 
 ```{r diffic,echo=F}
 nasalVs=c(":a", ":â" ,":ê", ":i" ,":o")
@@ -691,16 +679,13 @@ As for substitutions, it was as common for a nasal vowel to be produced as an or
 
 Finally, we looked into the frequency with which mispronunciations resulted in real words. Two thirds of them were: `r round(sum(!is.na(trnsc$meaning) & trnsc$meaning != "0")/sum(!is.na(trnsc$mispronunciation))*100)`%. This is a type of analysis that is seldom reported, and we could only find one comparison point: @castro1998 found that illiterate adults NWR mispronunciations resulted in real words in `r round(53/475*100,2)`% of cases, whereas literate adults did so in only `r round(2/117*100,2)`%. The percentage we observe here is much higher than this, but we do not know whether age, language, or even test structure explains this difference.
 
-<!-- a2m I added info above - is it weird to talk about this here? -->
-<!-- M2A: I don't think it's a weird place to add the idea, though I might shorten it a bit when I go through on a writing pass :) -->
+
 
 
 ### NWR scores as a function of item length 
 
 ```{r bylength}
-# M2A: this reduces the total number of kids represented from 42 to 40
-#a2m fixed
-# M2A: thanks!
+
 aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$type),mean)->by_length
 aggregate(trnsc$phon_score*100,by=list(trnsc$id,trnsc$type),mean)->phon_score
 aggregate(trnsc$nld*100,by=list(trnsc$id,trnsc$type),mean)->nld
@@ -712,6 +697,10 @@ aggregate(trnsc$correct*100,by=list(trnsc$type),mean)->by_length_no_child
 colnames(by_length_no_child)<-c("Length","Word")
 by_length_no_child=by_length_no_child[-1,]
 length_r=cor.test(by_length_no_child$Length,by_length_no_child$Word)
+
+xl_fr=glmer(correct~avg_fr_s+age.rounded_s+(1|file) + (1|target),data=trnsc,family="binomial")
+mycoeff=round(summary(xl_fr)$coefficients,3)
+
 ```
 
 
@@ -771,7 +760,6 @@ Our final exploratory analysis assessed whether variation in scores was structur
 2. Prediction for Yélî made before seeing the data: The Yélî sound inventory is very large and compressed, with many similar sounds that are acoustic and articulatory neighbors. Therefore, this may constitute a pressure for children to have finer auditory skills (and perhaps more precise articulations) than children speaking languages with a simpler inventory. As a result, differences between easier and harder items may be smaller in this work than in other research. 
 2. it turns out we do see 
 
-**(MC: but we can try and do a cursory analysis based on the corpora we have from Steve and my transcription of naturalistic interactions!)**
 
 
 - How frequent are errors that result in real words? Is that a function of item complexity?
@@ -803,7 +791,8 @@ Our final exploratory analysis assessed whether variation in scores was structur
 
 
 
-
+<!--M2A: I think a nice way to end this bit would be very briefly (~1-sentence) linking this input scenario to the relevance of looking at NWR (à la Cristia 2020 DevRev). What do you think?-->
+<!-- a2m maybe we want to bring that up in the discussion? I haven't found a good place to introduce that paper, in part because right now we have these three purposes that seem sort of unconnected with the goals of that paper... -->
 
 
 
