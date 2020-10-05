@@ -135,18 +135,18 @@ cohensd2=function(m1,sd1,m2,sd2){round((m1-m2)/sqrt((sd1^2+sd2^2)/2),3)}
 <!-- - do $ iconv -f utf-16le -t utf-8 stimuli.txt > stimconv.txt -->
 <!-- - do $ iconv -f utf-16le -t utf-8 segments.txt > segconv.txt -->
 
+## TODO Alex
+
+- check again if all fields are explained
+- set up OSF (or revise if already there)
+- implement decisions on prop phones & patterns nwr mp
+- revise bullet points for discussion
+
 ## TODO Middy
 
 - double check my frequency entries in segments.xlsx using the search function in https://phoible.org/parameters; take a look at http://phoible.github.io/conventions/ in case you see something about double articulation (I didn't find tp or lBj)
 <!--M2A: I think you mentioned you might have someone do this check, but let me know if I misunderstood!-->
 <!-- a2m we then decided we'd both feel more certain if you did... -->
-
-
-<!-- M2A: regarding demo, it looks like you have more mateds than birth orders because family data was systematically not collected for Pu. kids and was missing for three kids tested in No. who were actually from other hamlets. New xslx files sent via email! I left age recomputing to you since I was confused about which file would be used.-->
-<!-- a2m thanks!!! now inc'ed -->
-
-<!-- M2A: regarding NAs in stim_seg_freq, these appear for 'lv' stimuli because, in the 'segments' table, freq_corpus and freq_corpus_types are NA for that grapheme). The 'segments' table has NAs for 'lv' because it is not included in segment-counts.txt or segment-counts-types.txt. Note that that these NAs are excluded when adding mean item frequency to the 'stims' table (wrangling.R/l.136 & l.145), but this has a pretty big impact since those are all two-segment words. Not sure how avoidable this is, going back to our discussion before about not wanting to ad arbitrarily small frequencies. Thoughts? -->
-<!-- a2m So your fear is that frequency is overestimated in these cases, right? Perhaps we can assign the missing segments the lowest observed frequencies? -->
 
 
 - draft discussion
@@ -184,8 +184,6 @@ While all consonants can appear in the first syllable of the word, the second sy
 -->
 
 ### The Yélî community
-<!--M2A: is this okay?-->
-<!-- a2m I think it's great! although it seemed a bit unexpected to explain all of this, so I added some justification -->
 
 The current study also contributes to increasing the cultural diversity of the populations for which NWR data have been collected. As mentioned previously, this method has been used almost exclusively in urban, industrialized populations, with only one exception to our knowledge [@cristia2020infant]. We therefore provide some background information tol help understand some aspects of our study, including the estimation of children's ages and the relationship between NWR scores and children's demographic characteristics.
 
@@ -384,7 +382,7 @@ This study was approved as part of a larger research effort by Marisa Casillas, 
 # plot(fulldemo$Age~fulldemo$age.rounded)
 # write.csv(fulldemo,"nwr-demo.csv")
                             
-read.csv("nwr-demo.csv",header=T,sep=",")->demo
+read.csv("nwr-demo.csv",header=T)->demo
 #colnames(demo)
 
 #lines no longer needed
@@ -393,7 +391,7 @@ read.csv("nwr-demo.csv",header=T,sep=",")->demo
 #demo$familyID[is.na(demo$familyID)]<-paste("k",demo$ID[is.na(demo$familyID)])
 #recalc age
 #demo$age.rounded=as.numeric(difftime(as.Date(as.character(demo$Date),format="%Y%m%d"),as.Date(as.character(demo$DOB.ISO),format="%Y%m%d"),unit="weeks"))/52.25
-write.table(demo,"nwr-demo.csv")
+#write.table(demo,"nwr-demo.csv",row.names=F,quote=T,sep=",")
 
 subset(demo,included=="yes" & Age <12 & !is.na(Age))->inc
 #if age.rounded is missing, use reported age
@@ -493,7 +491,7 @@ xlfr_r=cor.test(xl_fr_tab$xlf,xl_fr_tab$Word)
 ```
 
 
-We could include `r summary(xl_fr)$devcomp$dims["N"]` observations, from `r summary(xl_fr)$ngrps["file"]` children producing in any given trial one of `r summary(xl_fr)$ngrps["target"]` potential target words. The analysis revealed a main effect of age (ß = `r mycoeff["age.rounded_s","Estimate"]`, SE ß = `r mycoeff["age.rounded_s","Std. Error"]`, p = `r mycoeff["age.rounded_s","Pr(>|z|)"]`); and a significant estimate for the scaled average cross-linguistic frequency of phones in the target words (ß = `r mycoeff["avg_fr_s","Estimate"]`, SE ß = `r mycoeff["avg_fr_s","Std. Error"]`, p = `r mycoeff["avg_fr_s","Pr(>|z|)"]`): Target words with phones found more frequently across languages had a higher proportion of words that were correctly repeated, as clear in Figure 2. Averaging across items and participants, the Pearson correlation between scaled average cross-linguistic phone frequency and whole-item NWR scores was r r(`r length_r$parameter`) = `r round(xlfr_r$estimate,3)`. 
+We could include `r summary(xl_fr)$devcomp$dims["N"]` observations, from `r summary(xl_fr)$ngrps["file"]` children producing in any given trial one of `r summary(xl_fr)$ngrps["target"]` potential target words. The analysis revealed a main effect of age (ß = `r mycoeff["age.rounded_s","Estimate"]`, SE ß = `r mycoeff["age.rounded_s","Std. Error"]`, p = `r mycoeff["age.rounded_s","Pr(>|z|)"]`); and a significant estimate for the scaled average cross-linguistic frequency of phones in the target words (ß = `r mycoeff["avg_fr_s","Estimate"]`, SE ß = `r mycoeff["avg_fr_s","Std. Error"]`, p = `r mycoeff["avg_fr_s","Pr(>|z|)"]`): Target words with phones found more frequently across languages had a higher proportion of words that were correctly repeated, as clear in Figure 2. Averaging across items and participants, the Pearson correlation between scaled average cross-linguistic phone frequency and whole-item NWR scores was r r(`r xlfr_r$parameter`) = `r round(xlfr_r$estimate,3)`. 
 
 
 ```{r Fig2-xling-freq, fig.pos = "!t", fig.align = "center", out.width = '65%', fig.cap="NWR scores for individual target words as a function of the average frequency with which each phone is found across languages."}
@@ -539,7 +537,7 @@ freq_cor=cor.test(segments$pc,log(segments$freq_corpus_types))
 
 We next checked whether the association between whole-item NWR scores and cross-linguistic phone frequence is actually be due to frequency of the sounds within the language: One can suppose that sounds that occur more frequently across languages are also more frequent within a language, and therefore may be easier for children to represent and repeat. We estimated frequency of the phones present in the stimuli in a corpus of child-centered recordings [@casillas2020early] by counting the number of word types in which they occurred, and applied the natural logarithm.[^2] As before, unattested sounds were not considered (i.e., they were declared NA so that they do not count for analyses). Phone frequencies estimated from this corpus were correlated with cross-linguistic phone frequencies (r(`r freq_cor$parameter`)=`r round(freq_cor$estimate,3)`, =`r round(freq_cor$p.value,3)`). Moreover, averaging across items and participants, the Pearson correlation between scaled average corpus phone frequency and whole-item NWR scores was r = `r round(cor.test(cor_fr_tab$corf,cor_fr_tab$Word)$estimate,3)`. Therefore, we fit another mixed logistic regression, this time declaring as fixed effects both scaled cross-linguistic and corpus frequencies (averaged across all attested phones within each stimulus item), in addition to age. As before, the model contained random slopes for both child ID and target. In this model, both cross-linguistic frequency (ß = `r both_coeff["avg_fr_s","Estimate"]`, SE ß = `r both_coeff["avg_fr_s","Std. Error"]`, p = `r both_coeff["avg_fr_s","Pr(>|z|)"]`) and age (ß = `r both_coeff["age.rounded_s","Estimate"]`, SE ß = `r both_coeff["age.rounded_s","Std. Error"]`, p = `r both_coeff["age.rounded_s","Pr(>|z|)"]`) were significant predictors of whole-item  NWR scores, but corpus frequency (ß = `r both_coeff["avg_fr_cor_ty_s","Estimate"]`, SE ß = `r both_coeff["avg_fr_cor_ty_s","Std. Error"]`, p = `r both_coeff["avg_fr_cor_ty_s","Pr(>|z|)"]`) was not.
 
-[^2]: We also carried out this analysis using token phone frequency, but this measure was not correlated with whole-item NWR scores, and therefore the fact that it did not explain away the predictive value of cross-linguistic phone frequency was less convincing.
+[^2]: We also carried out this analysis using token phone frequency, but this measure was not correlated with whole-item NWR scores, and therefore the fact that it did not explain away the predictive value of cross-linguistic phone frequency was less informative than the relationship discussed in the main text, with type frequencies.
 
 
 
@@ -698,17 +696,16 @@ colnames(by_length_no_child)<-c("Length","Word")
 by_length_no_child=by_length_no_child[-1,]
 length_r=cor.test(by_length_no_child$Length,by_length_no_child$Word)
 
-xl_fr=glmer(correct~avg_fr_s+age.rounded_s+(1|file) + (1|target),data=trnsc,family="binomial")
-mycoeff=round(summary(xl_fr)$coefficients,3)
+len_lm=glmer(correct~type+age.rounded_s+(1|file) + (1|target),data=trnsc,family="binomial",subset=c(trnsc$type!=1))
+mycoeff=round(summary(len_lm)$coefficients,3)
 
 ```
 
 
 Next, we inspected whether NWR scores varied as a function of word length. Results are shown on table XX. This table shows that scores for monosyllables was much lower than for other lengths. This is likely due to the fact that the majority of monosyllables included were chosen because they had sounds that are rare in the world's languages, which may indicate that they are hard to produce or to perceive. 
 
-Setting monosyllables aside, we observe the typical pattern of lower scores for longer items, although this is particularly salient for the whole word scoring. This is the most commonly reported type of score, but it is also the least forgiving. The pattern is less marked when other two scores are used, which are less sensitive to errors. Averaging across participants and items, the Pearson correlation between length (2-4 syllables) and whole-item NWR scores was r(`r length_r$parameter`) = `r round(length_r$estimate,3)`.
-<!-- a2m it doesn't make sense to do this, right, with only 3 items? -->
-<!-- M2A: you mean with only three lengths? I guess I would prefer a little regression -->
+Setting monosyllables aside, we observe the typical pattern of lower scores for longer items, although this is particularly salient for the whole word scoring. This is the most commonly reported type of score, but it is also the least forgiving. The pattern is less marked when other two scores are used, which are less sensitive to errors. Averaging across participants and items, the Pearson correlation between length (2-4 syllables) and whole-item NWR scores was r(`r length_r$parameter`) = `r round(length_r$estimate,3)`. In a generalized binomial mixed model, we included `r summary(len_lm)$devcomp$dims["N"]` observations, from `r summary(len_lm)$ngrps["file"]` children producing in any given trial one of `r summary(len_lm)$ngrps["target"]` potential target words. The analysis revealed a main effect of age (ß = `r mycoeff["age.rounded_s","Estimate"]`, SE ß = `r mycoeff["age.rounded_s","Std. Error"]`, p = `r mycoeff["age.rounded_s","Pr(>|z|)"]`); and a significant estimate for the length of the target words in number of syllables (ß = `r mycoeff["type","Estimate"]`, SE ß = `r mycoeff["type","Std. Error"]`, p = `r mycoeff["type","Pr(>|z|)"]`).
+
 
 
 ```{r tablength, results = "asis"}
