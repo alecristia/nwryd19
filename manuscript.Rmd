@@ -394,17 +394,21 @@ read.table("final_data.txt",header=T,encoding="UTF-8")->trnsc
 
 trnsc$Sex=factor(trnsc$Sex)
 trnsc$birthOrder=as.numeric(trnsc$birthOrder)
+
+# Remove excluded children from trnsc
+trnsc[which(trnsc$id %in% inc$ID),]->trnsc.inc
+
 ```
 
 
 ```{r Fig1-first-vs-others, fig.pos = "!t", fig.width=5, fig.height=5, fig.cap="Whole-item NWR scores for individual participants averaging separately their first attempts and all other attempts."}
 
-aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$age.rounded,trnsc$attempt),mean)->pwcm_att
+aggregate(trnsc.inc$correct*100,by=list(trnsc.inc$id,trnsc.inc$age.rounded,trnsc.inc$attempt),mean)->pwcm_att
 colnames(pwcm_att)<-c("ID","Age","Attempt","Word")
 
 #remove children who do not have both first & subsequent attempts
 # which is
-excl=sum(table(pwcm_att$ID)!=2)
+excl=sum(table(pwcm_att$ID)==1)
 
 pwcm_att[pwcm_att$ID %in% names(table(pwcm_att$ID))[table(pwcm_att$ID)==2],]->pwcm_att
 
@@ -423,15 +427,15 @@ We first checked whether whole-item NWR scores varied between first and subseque
 were on average lower than first ones (M = `r round(mean(pwcm_att$Word[pwcm_att$Attempt=="first"]))`, SD = `r round(sd(pwcm_att$Word[pwcm_att$Attempt=="first"]))`), t(`r round(myt$parameter,2)`) = `r round(myt$statistic,2)`, p = `r round(myt$p.value,2)`; Cohen's d = `r cohensd2(mean(pwcm_att$Word[pwcm_att$Attempt=="first"]),sd(pwcm_att$Word[pwcm_att$Attempt=="first"]),mean(pwcm_att$Word[pwcm_att$Attempt!="first"]),sd(pwcm_att$Word[pwcm_att$Attempt!="first"]))`). Given uncertainty in whether previous work used first or all repetitions, and given that score here declined and became more heterogeneous in subsequent repetitions, we focus the remainder of our analyses only on first repetitions.
 
 ```{r exclude subsequent}
-trnsc=trnsc[trnsc$attempt=="first",]
+trnsc.inc=trnsc.inc[trnsc.inc$attempt=="first",]
 
 ```
 
 
 ```{r overall}
-aggregate(trnsc$correct*100,by=list(trnsc$id),mean)->overall
-aggregate(trnsc$phon_score*100,by=list(trnsc$id),mean)->phon_score
-aggregate(trnsc$nld*100,by=list(trnsc$id),mean)->nld
+aggregate(trnsc.inc$correct*100,by=list(trnsc.inc$id),mean)->overall
+aggregate(trnsc.inc$phon_score*100,by=list(trnsc.inc$id),mean)->phon_score
+aggregate(trnsc.inc$nld*100,by=list(trnsc.inc$id),mean)->nld
 overall=cbind(overall,phon_score$x,nld$x)
 overall=merge(overall, demo[,c("ID","Sex","Age","birthOrder","matEd")], by.x="Group.1",by.y="ID", all.x=T)
 colnames(overall)<-c("ID","Word","Phoneme","NLD","Sex","Age","BrthO","matEd")
@@ -441,7 +445,7 @@ colnames(overall)<-c("ID","Word","Phoneme","NLD","Sex","Age","BrthO","matEd")
 
 Taking into account only the first attempts, we averaged attempts by each of the `r dim(overall)[1]` children who had data for first attempts; their ages ranged from `r min(overall$Age)` to `r max(overall$Age)` (M = `r round(mean(overall$Age),1)`, SD = `r round(sd(overall$Age),1)`). 
 
-The overall NWR score was M = `r round(mean(overall$Word))`% (SD = `r round(sd(overall$Word))`%), Cohen's d = `r cohensd(mean(overall$Word),sd(overall$Word))`. Scores based on phonemes are even higher  M = `r round(mean(overall$Phoneme))`% (SD = `r round(sd(overall$Phoneme))`%), Cohen's d = `r cohensd(mean(overall$Phoneme),sd(overall$Phoneme))`. The phoneme-based normalized Levenshtein distance was  M = `r round(mean(overall$NLD))`% (SD = `r round(sd(overall$NLD))`%), meaning that about a fifth of phonemes were were substituted, inserted, or deleted. Notice that the normalized Levenshtein distance is the complement of phoneme-based scores.
+The overall NWR score was M = `r round(mean(overall$Word))`% (SD = `r round(sd(overall$Word))`%), Cohen's d = `r cohensd(mean(overall$Word),sd(overall$Word))`. Scores based on phonemes are even higher  M = `r round(mean(overall$Phoneme))`% (SD = `r round(sd(overall$Phoneme))`%), Cohen's d = `r cohensd(mean(overall$Phoneme),sd(overall$Phoneme))`. The phoneme-based normalized Levenshtein distance was  M = `r round(mean(overall$NLD))`% (SD = `r round(sd(overall$NLD))`%), meaning that about a fifth of phonemes were were substituted, inserted, or deleted (the normalized Levenshtein distance is the complement of phoneme-based scores).
 
 
 
@@ -450,14 +454,14 @@ The overall NWR score was M = `r round(mean(overall$Word))`% (SD = `r round(sd(o
 In this analysis, we were interested in variation in whole-item NWR scores as a function of the average frequency with which sounds composing individual target words are found in languages over the world. To look at this, we fit a mixed logistic regression, in which the outcome variable was whether the non-word was correctly repeated or not. The fixed effects of interest was the average cross-linguistic phone frequency; we also included child age as a control fixed effect, and child ID & target ID as random variables.
 
 ```{r xling-freq-ana}
-trnsc$avg_fr_s=scale(trnsc$avg_fr)
-trnsc$age.rounded_s=scale(trnsc$age.rounded)
-xl_fr=glmer(correct~avg_fr_s+age.rounded_s+(1|file) + (1|target),data=trnsc,family="binomial")
+trnsc.inc$avg_fr_s=scale(trnsc.inc$avg_fr)
+trnsc.inc$age.rounded_s=scale(trnsc.inc$age.rounded)
+xl_fr=glmer(correct~avg_fr_s+age.rounded_s+(1|file) + (1|target),data=trnsc.inc,family="binomial")
 mycoeff=round(summary(xl_fr)$coefficients,3)
 #summary(xl_fr)
 #plot(xl_fr)
 
-aggregate(trnsc$correct*100,by=list(trnsc$avg_fr_s),mean)->xl_fr_tab
+aggregate(trnsc.inc$correct*100,by=list(trnsc.inc$avg_fr_s),mean)->xl_fr_tab
 colnames(xl_fr_tab)<-c("xlf","Word")
 xlfr_r=cor.test(xl_fr_tab$xlf,xl_fr_tab$Word)
 ```
@@ -467,7 +471,7 @@ We could include `r summary(xl_fr)$devcomp$dims["N"]` observations, from `r summ
 
 
 ```{r Fig2-xling-freq, fig.pos = "!t", fig.align = "center", out.width = '65%', fig.cap="NWR scores for individual target words as a function of the average frequency with which each phone is found across languages."}
-aggregate(trnsc$correct*100,by=list(trnsc$target,trnsc$avg_fr),mean)->xling
+aggregate(trnsc.inc$correct*100,by=list(trnsc.inc$target,trnsc.inc$avg_fr),mean)->xling
 colnames(xling)<-c("Target","Avg_fr","Word")
 stims.ipa <- read_delim("stimuli3.txt", delim = "\t") %>%
   select(target, target_ortho, phono)
@@ -487,19 +491,19 @@ knitr::include_graphics("nwr.by.freq.ITEM.png")
 
 
 ```{r cor vs xl}
-#fr_cor=glmer(correct~avg_fr_cor+age.rounded+(1|file) + (1|target),data=trnsc,family="binomial")
+#fr_cor=glmer(correct~avg_fr_cor+age.rounded+(1|file) + (1|target),data=trnsc.inc,family="binomial")
 #fr is not sig, but close (p=.1, estimate is 17)
-#trnsc$avg_fr_cor_s=scale(trnsc$avg_fr_cor)
-#both_fr=glmer(correct~avg_fr_s+avg_fr_cor_s+age.rounded_s+(1|file) + (1|target),data=trnsc,family="binomial")
+#trnsc.inc$avg_fr_cor_s=scale(trnsc.inc$avg_fr_cor)
+#both_fr=glmer(correct~avg_fr_s+avg_fr_cor_s+age.rounded_s+(1|file) + (1|target),data=trnsc.inc,family="binomial")
 #both_coeff=round(summary(both_fr)$coefficients,3)
 
-#fr_cor_ty=glmer(correct~avg_fr_cor_ty+age.rounded+(1|file) + (1|target),data=trnsc,family="binomial")
+#fr_cor_ty=glmer(correct~avg_fr_cor_ty+age.rounded+(1|file) + (1|target),data=trnsc.inc,family="binomial")
 #fr is sig
-trnsc$avg_fr_cor_ty_s=scale(trnsc$avg_fr_cor_ty)
-both_fr=glmer(correct~avg_fr_s+avg_fr_cor_ty_s+age.rounded_s+(1|file) + (1|target),data=trnsc,family="binomial")
+trnsc.inc$avg_fr_cor_ty_s=scale(trnsc.inc$avg_fr_cor_ty)
+both_fr=glmer(correct~avg_fr_s+avg_fr_cor_ty_s+age.rounded_s+(1|file) + (1|target),data=trnsc.inc,family="binomial")
 both_coeff=round(summary(both_fr)$coefficients,3)
 
-aggregate(trnsc$correct*100,by=list(trnsc$avg_fr_cor_ty_s),mean)->cor_fr_tab
+aggregate(trnsc.inc$correct*100,by=list(trnsc.inc$avg_fr_cor_ty_s),mean)->cor_fr_tab
 colnames(cor_fr_tab)<-c("corf","Word")
 
 read.delim("segments_with_cor_freq.txt", encoding="UTF-8")->segments
@@ -546,7 +550,7 @@ match_tab= table(match_bank)[allVC]
 
 
 #remove English meanings
-trnsc$meaning[grep("English",trnsc$meaning)]<-NA
+trnsc.inc$meaning[grep("English",trnsc.inc$meaning)]<-NA
 
 #Create proportion table
 #a reasonable way to calculate proportion is the proportion of times 
@@ -614,7 +618,7 @@ match_tab= table(match_bank)[allVC]
 
 
 #remove English meanings
-trnsc$meaning[grep("English",trnsc$meaning)]<-NA
+trnsc.inc$meaning[grep("English",trnsc.inc$meaning)]<-NA
 
 #Create proportion table
 #a reasonable way to calculate proportion is the proportion of times 
@@ -647,7 +651,7 @@ Next, we investigated patterns of deletion and substitution. Deletions were rela
 As for substitutions, it was as common for a nasal vowel to be produced as an oral vowel as vice versa (`r sum(sub_tab[oralVs,nasalVs])` oral target vowels produced as nasal vowels or about `r mean(sub_pc[oralVs,nasalVs],na.rm=T)`% out of all oral vowel targets, `r sum(sub_tab[nasalVs,oralVs])` nasal target vowels produced as oral vowels or about `r mean(sub_pc[nasalVs,oralVs],na.rm=T)`% out of all nasal vowel targets). Substitutions in which the oral nature was preserved but the quality of the vowel was changed were a great deal more common than changes in quality among nasal vowels (`r sum(sub_tab[oralVs,oralVs])` oral vowels produced with a different quality or about `r mean(sub_pc[oralVs,oralVs],na.rm=T)`% out of all oral vowel targets; `r sum(sub_tab[nasalVs,nasalVs])` nasal vowels produced with a different quality or about `r mean(sub_pc[nasalVs,nasalVs],na.rm=T)`% out of all nasal vowel targets). As for consonants, asymmetries were very marked with more complex consonants (specifically `r paste0(complexCs)`) mispronounced as simple ones (specifically `r paste0(simplexCs)`, `r sum(sub_tab[complexCs,simplexCs])` times or  about `r mean(sub_pc[complexCs,simplexCs],na.rm=T)`% out of all complex consonant targets) than vice versa (`r sum(sub_tab[simplexCs,complexCs])` times  about `r mean(sub_pc[complexCs,simplexCs],na.rm=T)`% out of all simple consonant targets). Simple consonants were mispronounced as other simple consonants quite frequently (`r sum(sub_tab[simplexCs,simplexCs])` simple consonants mispronounced as other simple ones or about `r mean(sub_pc[simplexCs,simplexCs],na.rm=T)`% out of all simple consonant targets, compared to `r sum(sub_tab[complexCs,complexCs])` complex ones or about `r mean(sub_pc[complexCs,complexCs],na.rm=T)`% out of all complex consonant targets).
 
 
-Finally, we looked into the frequency with which mispronunciations resulted in real words. Two thirds of them were: `r round(sum(!is.na(trnsc$meaning) & trnsc$meaning != "0")/sum(!is.na(trnsc$mispronunciation))*100)`%. This is a type of analysis that is seldom reported, and we could only find one comparison point: @castro1998 found that illiterate adults NWR mispronunciations resulted in real words in `r round(53/475*100,2)`% of cases, whereas literate adults did so in only `r round(2/117*100,2)`%. The percentage we observe here is much higher than this, but we do not know whether age, language, or even test structure explains this difference.
+Finally, we looked into the frequency with which mispronunciations resulted in real words. Two thirds of them were: `r round(sum(!is.na(trnsc.inc$meaning) & trnsc.inc$meaning != "0")/sum(!is.na(trnsc.inc$mispronunciation))*100)`%. This is a type of analysis that is seldom reported, and we could only find one comparison point: @castro1998 found that illiterate adults NWR mispronunciations resulted in real words in `r round(53/475*100,2)`% of cases, whereas literate adults did so in only `r round(2/117*100,2)`%. The percentage we observe here is much higher than this, but we do not know whether age, language, or even test structure explains this difference.
 
 
 
@@ -656,19 +660,19 @@ Finally, we looked into the frequency with which mispronunciations resulted in r
 
 ```{r bylength}
 
-aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$type),mean)->by_length
-aggregate(trnsc$phon_score*100,by=list(trnsc$id,trnsc$type),mean)->phon_score
-aggregate(trnsc$nld*100,by=list(trnsc$id,trnsc$type),mean)->nld
+aggregate(trnsc.inc$correct*100,by=list(trnsc.inc$id,trnsc.inc$type),mean)->by_length
+aggregate(trnsc.inc$phon_score*100,by=list(trnsc.inc$id,trnsc.inc$type),mean)->phon_score
+aggregate(trnsc.inc$nld*100,by=list(trnsc.inc$id,trnsc.inc$type),mean)->nld
 by_length=cbind(by_length,phon_score$x,nld$x)
 by_length=merge(by_length, demo[,c("ID","Sex","Age","birthOrder","matEd")], by.x="Group.1",by.y="ID", all.x=T)
 colnames(by_length)<-c("ID","Length","Word","Phoneme","NLD","Sex","Age","BrthO","matEd")
 
-aggregate(trnsc$correct*100,by=list(trnsc$type),mean)->by_length_no_child
+aggregate(trnsc.inc$correct*100,by=list(trnsc.inc$type),mean)->by_length_no_child
 colnames(by_length_no_child)<-c("Length","Word")
 by_length_no_child=by_length_no_child[-1,]
 length_r=cor.test(by_length_no_child$Length,by_length_no_child$Word)
 
-len_lm=glmer(correct~type+age.rounded_s+(1|file) + (1|target),data=trnsc,family="binomial",subset=c(trnsc$type!=1))
+len_lm=glmer(correct~type+age.rounded_s+(1|file) + (1|target),data=trnsc.inc,family="binomial",subset=c(trnsc.inc$type!=1))
 mycoeff=round(summary(len_lm)$coefficients,3)
 
 ```
