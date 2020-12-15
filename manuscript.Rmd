@@ -397,7 +397,7 @@ trnsc$birthOrder=as.numeric(trnsc$birthOrder)
 ```
 
 
-```{r Fig1-first_vs_others, fig.pos = "!t", fig.width=5, fig.height=5, fig.cap="Whole-item NWR scores for individual participants averaging separately their first attempts and all other attempts."}
+```{r Fig1-first-vs-others, fig.pos = "!t", fig.width=5, fig.height=5, fig.cap="Whole-item NWR scores for individual participants averaging separately their first attempts and all other attempts."}
 
 aggregate(trnsc$correct*100,by=list(trnsc$id,trnsc$age.rounded,trnsc$attempt),mean)->pwcm_att
 colnames(pwcm_att)<-c("ID","Age","Attempt","Word")
@@ -410,17 +410,17 @@ pwcm_att[pwcm_att$ID %in% names(table(pwcm_att$ID))[table(pwcm_att$ID)==2],]->pw
 
 myx=as.numeric(as.factor(pwcm_att$ID))/100+as.numeric(as.factor(pwcm_att$Attempt))
 
-plot(pwcm_att$Word~myx,pch=20,cex=2,lty=3,xlab="",xaxt="n",ylab="NWR scores (% words)")
+plot(pwcm_att$Word~myx,pch=20,cex=2,lty=3,xlab="",xaxt="n",ylab="% words correctly repeated")
 for(id in levels(factor(pwcm_att$ID))) lines(myx[pwcm_att$ID==id],pwcm_att$Word[pwcm_att$ID==id],lty=2)
-axis(1,at=1:2,labels=c("first","others"))
+axis(1,at=1:2,labels=c("First","Subsequent"))
 
 t.test(pwcm_att$Word~pwcm_att$Attempt,paired=T)->myt
 
 
 ```
 
-We first checked whether whole-item NWR scores varied between first and subsequent presentations of an item by averaging word-level scores at the participant level separately for first attempts and subsequent repetitions. We excluded `r excl` children who did not have data for one of these two types. As shown in Figure 1, participants' mean word-level scores became more heterogeneous in subsequent repetitions. Surprisingly, whole-item NWR scores for subsequent repetitions (M = `r round(mean(pwcm_att$Word[pwcm_att$Attempt!="first"]))`, SD = `r round(sd(pwcm_att$Word[pwcm_att$Attempt!="first"]))`)
-were on average lower than first ones (M = `r round(mean(pwcm_att$Word[pwcm_att$Attempt=="first"]))`, SD = `r round(sd(pwcm_att$Word[pwcm_att$Attempt=="first"]))`), t(`r round(myt$parameter,2)`) = `r round(myt$statistic,2)`, p = `r round(myt$p.value,2)`; Cohen's d = `r cohensd2(mean(pwcm_att$Word[pwcm_att$Attempt=="first"]),sd(pwcm_att$Word[pwcm_att$Attempt=="first"]),mean(pwcm_att$Word[pwcm_att$Attempt!="first"]),sd(pwcm_att$Word[pwcm_att$Attempt!="first"]))`. Given the uncertainty in whether previous work used only the first or all repetitions, and since scores declined and became more heterogeneous in subsequent repetitions, the rest of the analyses focus on only the first repetitions.
+We first checked whether whole-item NWR scores varied between first and subsequent presentations of an item by averaging word-level scores at the participant level separately for first attempts and subsequent repetitions. We excluded `r excl` children who did not have data for one of these two types. As shown in Figure \@ref(fig:Fig1-first-vs-others), participants' mean word-level scores became more heterogeneous in subsequent repetitions. Surprisingly, whole-item NWR scores for subsequent repetitions (M = `r round(mean(pwcm_att$Word[pwcm_att$Attempt!="first"]))`, SD = `r round(sd(pwcm_att$Word[pwcm_att$Attempt!="first"]))`)
+were on average lower than first ones (M = `r round(mean(pwcm_att$Word[pwcm_att$Attempt=="first"]))`, SD = `r round(sd(pwcm_att$Word[pwcm_att$Attempt=="first"]))`), t(`r round(myt$parameter,2)`) = `r round(myt$statistic,2)`, p = `r round(myt$p.value,2)`; Cohen's d = `r cohensd2(mean(pwcm_att$Word[pwcm_att$Attempt=="first"]),sd(pwcm_att$Word[pwcm_att$Attempt=="first"]),mean(pwcm_att$Word[pwcm_att$Attempt!="first"]),sd(pwcm_att$Word[pwcm_att$Attempt!="first"]))`). Given uncertainty in whether previous work used first or all repetitions, and given that score here declined and became more heterogeneous in subsequent repetitions, we focus the remainder of our analyses only on first repetitions.
 
 ```{r exclude subsequent}
 trnsc=trnsc[trnsc$attempt=="first",]
