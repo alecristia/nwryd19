@@ -230,7 +230,7 @@ myplot = ggplot(data = pl, aes(x = Age, y = Score, color = Language))+
     legend.position="none", axis.text.x=element_text(colour="black")) +
   scale_color_manual(values = palette)+
   theme_bw()+
-  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), legend.key.height = unit(5, "mm"))+
   scale_x_continuous(name = "Age (years) ", limits = c(4,12), breaks = c(4,8,12))+
   
   scale_y_continuous(name = "NWR Score", limits = c(0,100), breaks = seq(0, 100, 10))+
