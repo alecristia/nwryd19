@@ -66,6 +66,25 @@ library(gdata)
 library(tidyverse)
 library(lme4)
 
+p.levels <- c(0, 0.001, 0.01)
+pval.display <- function(p.est) {
+  level <- findInterval(p.est, p.levels)
+  p.string <- ifelse(level == 3, paste0("= ", round(p.est, 2)),
+    ifelse(level == 2, "< 0.01", "< 0.001"))
+  return(p.string)
+}
+
+print.phone.list <- function(charlist) {
+  printout <- ""
+  for (c in 1:length(charlist)) {
+    if (c == length(charlist)) {
+      printout <- paste0(printout, "and [", charlist[c], "]")
+    } else {
+      printout <- paste0(printout, "[", charlist[c], "], ")
+    }
+  }
+  return(printout)
+}
 
 correspondances=matrix( #list correspondances always by pairs, orthography then phonology
   c(
@@ -429,7 +448,7 @@ t.test(pwcm_att$Word~pwcm_att$Attempt,paired=T)->myt
 ```
 
 We first checked whether whole-item NWR scores varied between first and subsequent presentations of an item by averaging word-level scores at the participant level separately for first attempts and subsequent repetitions. We excluded `r excl` child who did not have data for one of these two types. As shown in Figure \@ref(fig:Fig1-first-vs-others), participants' mean word-level scores became more heterogeneous in subsequent repetitions. Surprisingly, whole-item NWR scores for subsequent repetitions (M = `r round(mean(pwcm_att$Word[pwcm_att$Attempt!="first"]))`, SD = `r round(sd(pwcm_att$Word[pwcm_att$Attempt!="first"]))`)
-were on average lower than first ones (M = `r round(mean(pwcm_att$Word[pwcm_att$Attempt=="first"]))`, SD = `r round(sd(pwcm_att$Word[pwcm_att$Attempt=="first"]))`), t(`r round(myt$parameter,2)`) = `r round(myt$statistic,2)`, p = `r round(myt$p.value,2)`; Cohen's d = `r cohensd2(mean(pwcm_att$Word[pwcm_att$Attempt=="first"]),sd(pwcm_att$Word[pwcm_att$Attempt=="first"]),mean(pwcm_att$Word[pwcm_att$Attempt!="first"]),sd(pwcm_att$Word[pwcm_att$Attempt!="first"]))`). Given uncertainty in whether previous work used first or all repetitions, and given that score here declined and became more heterogeneous in subsequent repetitions, we focus the remainder of our analyses only on first repetitions.
+were on average lower than first ones (M = `r round(mean(pwcm_att$Word[pwcm_att$Attempt=="first"]))`, SD = `r round(sd(pwcm_att$Word[pwcm_att$Attempt=="first"]))`), t(`r round(myt$parameter,2)`) = `r round(myt$statistic,2)`, p `r pval.display(round(myt$p.value,2))`; Cohen's d = `r cohensd2(mean(pwcm_att$Word[pwcm_att$Attempt=="first"]),sd(pwcm_att$Word[pwcm_att$Attempt=="first"]),mean(pwcm_att$Word[pwcm_att$Attempt!="first"]),sd(pwcm_att$Word[pwcm_att$Attempt!="first"]))`). Given uncertainty in whether previous work used first or all repetitions, and given that score here declined and became more heterogeneous in subsequent repetitions, we focus the remainder of our analyses only on first repetitions.
 
 ```{r exclude subsequent}
 trnsc.inc=trnsc.inc[trnsc.inc$attempt=="first",]
@@ -448,15 +467,13 @@ colnames(overall)<-c("ID","Word","Phoneme","NLD","Sex","Age","BrthO","matEd")
 ```
 
 
-Taking into account only the first attempts, we averaged attempts by each of the `r dim(overall)[1]` children who had data for first attempts; their ages ranged from `r min(overall$Age)` to `r max(overall$Age)` (M = `r round(mean(overall$Age),1)`, SD = `r round(sd(overall$Age),1)`). 
-
-The overall NWR score was M = `r round(mean(overall$Word))`% (SD = `r round(sd(overall$Word))`%), Cohen's d = `r cohensd(mean(overall$Word),sd(overall$Word))`. Scores based on phonemes are even higher  M = `r round(mean(overall$Phoneme))`% (SD = `r round(sd(overall$Phoneme))`%), Cohen's d = `r cohensd(mean(overall$Phoneme),sd(overall$Phoneme))`. The phoneme-based normalized Levenshtein distance was  M = `r round(mean(overall$NLD))`% (SD = `r round(sd(overall$NLD))`%), meaning that about a fifth of phonemes were were substituted, inserted, or deleted (the normalized Levenshtein distance is the complement of phoneme-based scores).
+Taking into account only the first attempts, we averaged attempts by each of the `r dim(overall)[1]` children who had data for first attempts; their ages ranged from `r min(overall$Age)` to `r max(overall$Age)` (M = `r round(mean(overall$Age),1)`, SD = `r round(sd(overall$Age),1)`). The overall NWR score was M = `r round(mean(overall$Word))`% (SD = `r round(sd(overall$Word))`%), Cohen's d = `r cohensd(mean(overall$Word),sd(overall$Word))`. Scores based on phonemes are even higher  M = `r round(mean(overall$Phoneme))`% (SD = `r round(sd(overall$Phoneme))`%), Cohen's d = `r cohensd(mean(overall$Phoneme),sd(overall$Phoneme))`. The phoneme-based normalized Levenshtein distance was  M = `r round(mean(overall$NLD))`% (SD = `r round(sd(overall$NLD))`%), meaning that about a fifth of phonemes were were substituted, inserted, or deleted (the normalized Levenshtein distance is the complement of phoneme-based scores).
 
 
 
 ### NWR as a function of cross-linguistic phone frequency
 
-In this analysis, we were interested in variation in whole-item NWR scores as a function of the average frequency with which sounds composing individual target words are found in languages over the world. To look at this, we fit a mixed logistic regression, in which the outcome variable was whether the non-word was correctly repeated or not. The fixed effects of interest was the average cross-linguistic phone frequency; we also included child age as a control fixed effect, and child ID & target ID as random variables.
+We then analyzed variation in whole-item NWR scores as a function of the average frequency with which sounds composing individual target words are found in languages over the world. To look at this, we fit a mixed logistic regression in which the outcome variable was whether the non-word was correctly repeated or not. The fixed effect of interest was the average cross-linguistic phone frequency; we also included child age as a control fixed effect, and child ID & target ID as random variables.
 
 ```{r xling-freq-ana}
 trnsc.inc$avg_fr_s=scale(trnsc.inc$avg_fr)
@@ -472,7 +489,7 @@ xlfr_r=cor.test(xl_fr_tab$xlf,xl_fr_tab$Word)
 ```
 
 
-We could include `r summary(xl_fr)$devcomp$dims["N"]` observations, from `r summary(xl_fr)$ngrps["file"]` children producing in any given trial one of `r summary(xl_fr)$ngrps["target"]` potential target words. The analysis revealed a main effect of age (ß = `r mycoeff["age.rounded_s","Estimate"]`, SE ß = `r mycoeff["age.rounded_s","Std. Error"]`, p = `r mycoeff["age.rounded_s","Pr(>|z|)"]`); and a significant estimate for the scaled average cross-linguistic frequency of phones in the target words (ß = `r mycoeff["avg_fr_s","Estimate"]`, SE ß = `r mycoeff["avg_fr_s","Std. Error"]`, p = `r mycoeff["avg_fr_s","Pr(>|z|)"]`): Target words with phones found more frequently across languages had a higher proportion of words that were correctly repeated, as clear in Figure 2. Averaging across items and participants, the Pearson correlation between scaled average cross-linguistic phone frequency and whole-item NWR scores was r r(`r xlfr_r$parameter`) = `r round(xlfr_r$estimate,3)`. 
+We could include `r summary(xl_fr)$devcomp$dims["N"]` observations, from `r summary(xl_fr)$ngrps["file"]` children producing in any given trial one of `r summary(xl_fr)$ngrps["target"]` potential target words. The analysis revealed a main effect of age (ß = `r mycoeff["age.rounded_s","Estimate"]`, SE ß = `r mycoeff["age.rounded_s","Std. Error"]`, p `r pval.display(mycoeff["age.rounded_s","Pr(>|z|)"])`); and a significant estimate for the scaled average cross-linguistic frequency of phones in the target words (ß = `r mycoeff["avg_fr_s","Estimate"]`, SE ß = `r mycoeff["avg_fr_s","Std. Error"]`, p `r pval.display(mycoeff["avg_fr_s","Pr(>|z|)"])`): Target words with phones found more frequently across languages had a higher proportion of words that were correctly repeated, as shown in Figure \@ref(fig:Fig2-xling-freq). Averaging across items and participants, the Pearson correlation between scaled average cross-linguistic phone frequency and whole-item NWR scores was r(`r xlfr_r$parameter`) = `r round(xlfr_r$estimate,3)`. 
 
 
 ```{r Fig2-xling-freq, fig.pos = "!t", fig.align = "center", out.width = '65%', fig.cap="NWR scores for individual target words as a function of the average frequency with which each phone is found across languages."}
@@ -486,7 +503,7 @@ item.plot <- ggplot(data = xling, aes(x = Avg_fr, y = Word, label = phono)) +
   geom_smooth(method = "lm", se = FALSE, color = "black") +
   geom_text(family = "Doulos SIL") +
   ylab("NWR scores (% words)") +
-  xlab("Average phone cross-ling frequency") +
+  xlab("Average cross-linguistic phone frequency") +
   theme_apa()
 ggsave("nwr.by.freq.ITEM.png", dpi = 300, device = png())
 
@@ -516,7 +533,9 @@ freq_cor=cor.test(segments$pc,log(segments$freq_corpus_types))
 ```
 
 
-We next checked whether the association between whole-item NWR scores and cross-linguistic phone frequence is actually be due to frequency of the sounds within the language: One can suppose that sounds that occur more frequently across languages are also more frequent within a language, and therefore may be easier for children to represent and repeat. We estimated frequency of the phones present in the stimuli in a corpus of child-centered recordings [@casillas2020early] by counting the number of word types in which they occurred, and applied the natural logarithm.[^2] As before, unattested sounds were not considered (i.e., they were declared NA so that they do not count for analyses). Phone frequencies estimated from this corpus were correlated with cross-linguistic phone frequencies (r(`r freq_cor$parameter`)=`r round(freq_cor$estimate,3)`, =`r round(freq_cor$p.value,3)`). Moreover, averaging across items and participants, the Pearson correlation between scaled average corpus phone frequency and whole-item NWR scores was r = `r round(cor.test(cor_fr_tab$corf,cor_fr_tab$Word)$estimate,3)`. Therefore, we fit another mixed logistic regression, this time declaring as fixed effects both scaled cross-linguistic and corpus frequencies (averaged across all attested phones within each stimulus item), in addition to age. As before, the model contained random slopes for both child ID and target. In this model, both cross-linguistic frequency (ß = `r both_coeff["avg_fr_s","Estimate"]`, SE ß = `r both_coeff["avg_fr_s","Std. Error"]`, p = `r both_coeff["avg_fr_s","Pr(>|z|)"]`) and age (ß = `r both_coeff["age.rounded_s","Estimate"]`, SE ß = `r both_coeff["age.rounded_s","Std. Error"]`, p = `r both_coeff["age.rounded_s","Pr(>|z|)"]`) were significant predictors of whole-item  NWR scores, but corpus frequency (ß = `r both_coeff["avg_fr_cor_ty_s","Estimate"]`, SE ß = `r both_coeff["avg_fr_cor_ty_s","Std. Error"]`, p = `r both_coeff["avg_fr_cor_ty_s","Pr(>|z|)"]`) was not.
+We next checked whether the association between whole-item NWR scores and cross-linguistic phone frequence could actually be due to frequency of the sounds within the language: One can suppose that sounds that occur more frequently across languages are also more frequent within a language, and therefore may be easier for children to represent and repeat. We estimated frequency of the phones present in the stimuli in a corpus of child-centered recordings [@casillas2020early] by counting the number of word types in which they occurred, and applied the natural logarithm.[^2] As before, unattested sounds were not considered (i.e., they were declared NA so that they do not count for analyses). Phone frequencies estimated from this corpus were correlated with cross-linguistic phone frequencies (r(`r freq_cor$parameter`)=`r round(freq_cor$estimate,3)`, p `r pval.display(round(freq_cor$p.value,3))`). Moreover, averaging across items and participants, the Pearson correlation between scaled average corpus phone frequency and whole-item NWR scores was r = `r round(cor.test(cor_fr_tab$corf,cor_fr_tab$Word)$estimate,3)`. Therefore, we fit another mixed logistic regression, this time declaring as fixed effects both scaled cross-linguistic and corpus frequencies (averaged across all attested phones within each stimulus item), in addition to age. As before, the model contained random slopes for both child ID and target. In this model, both cross-linguistic frequency (ß = `r both_coeff["avg_fr_s","Estimate"]`, SE ß = `r both_coeff["avg_fr_s","Std. Error"]`, p `r pval.display(both_coeff["avg_fr_s","Pr(>|z|)"])`) and age (ß = `r both_coeff["age.rounded_s","Estimate"]`, SE ß = `r both_coeff["age.rounded_s","Std. Error"]`, p `r pval.display(both_coeff["age.rounded_s","Pr(>|z|)"])`) were significant predictors of whole-item  NWR scores, but corpus frequency (ß = `r both_coeff["avg_fr_cor_ty_s","Estimate"]`, SE ß = `r both_coeff["avg_fr_cor_ty_s","Std. Error"]`, p `r pval.display(both_coeff["avg_fr_cor_ty_s","Pr(>|z|)"])`) was not.
+
+<!--M2A: Above it says "As before, unattested sounds were not considered" -- well now we have taken care of PHOIBLE unattested sounds with a frequency of 1. Do we need to change this?-->
 
 [^2]: We also carried out this analysis using token phone frequency, but this measure was not correlated with whole-item NWR scores, and therefore the fact that it did not explain away the predictive value of cross-linguistic phone frequency was less informative than the relationship discussed in the main text, with type frequencies.
 
@@ -531,6 +550,8 @@ nasalVs=c(":a", ":â" ,":ê", ":i" ,":o")
 oralVs=c("a", "â","e",  "é" ,"ê", "i","î" ,"o","ó","u")
 simplexCs=c("m","ń","l","w","y","v","d","g","p","t","k","f","h","ch")
 complexCs=c("dp","tp","kp","km","kn","mb","gh","lv")
+simplexCs.ipa=c("m","n","l","w","j","w","ṭ","g","p","t","k","f","h","tʃ")
+complexCs.ipa=c("ṭp","tp","kp","km","kṇ","mp","ɣ","lβʲ")
 
 allVC=c(nasalVs,oralVs,simplexCs,complexCs)
 
@@ -590,6 +611,8 @@ mat_pc=round(match_tab/denom_vec*100,3)
 
 <!-- **a2m probably turn the paragraph on substitutions into a table: having second thoughts, the table would look just like a para, no?** -->
 
+<!--
+M2A: I prefer a modification of option 2 and so am commenting this out:
 
 **Option 1: just numbers, first attempts only **
 Next, we investigated patterns of deletion and substitution. Deletions were relatively rare, with only `r sum(del_tab[c(oralVs,nasalVs)])` vowels deleted, and `r sum(del_tab[c(simplexCs,complexCs)])` consonants. 
@@ -597,9 +620,9 @@ Next, we investigated patterns of deletion and substitution. Deletions were rela
 As for substitutions, it was as common for a nasal vowel to be produced as an oral vowel as vice versa (`r sum(sub_tab[oralVs,nasalVs])` oral target vowels produced as nasal vowels, `r sum(sub_tab[nasalVs,oralVs])` nasal target vowels produced as oral vowels). Substitutions in which the oral nature was preserved but the quality of the vowel was changed were a great deal more common than changes in quality among nasal vowels (`r sum(sub_tab[oralVs,oralVs])` oral vowels produced with a different quality; `r sum(sub_tab[nasalVs,nasalVs])` nasal vowels produced with a different quality). As for consonants, asymmetries were very marked with more complex consonants (specifically `r paste0(complexCs)`) mispronounced as simple ones (specifically `r paste0(simplexCs)`, `r sum(sub_tab[complexCs,simplexCs])`) than vice versa (`r sum(sub_tab[simplexCs,complexCs])`). Simple consonants were mispronounced as other simple consonants quite frequently (`r sum(sub_tab[simplexCs,simplexCs])` simple consonants mispronounced as other simple ones, compared to `r sum(sub_tab[complexCs,complexCs])` complex ones).
 
 **Option 2: numbers and proportions, first attempts only**
-Next, we investigated patterns of deletion and substitution. Deletions were relatively rare, with only `r sum(del_tab[c(oralVs,nasalVs)])` vowels deleted (about `r mean(del_pc[c(oralVs,nasalVs)],na.rm=T)`% of all vowel targets), and `r sum(del_tab[c(simplexCs,complexCs)])` consonants deleted (about `r mean(del_pc[c(simplexCs,complexCs)],na.rm=T)`% of all consonant targets). 
+-->
 
-As for substitutions, it was as common for a nasal vowel to be produced as an oral vowel as vice versa (`r sum(sub_tab[oralVs,nasalVs])` oral target vowels produced as nasal vowels or about `r mean(sub_pc[oralVs,nasalVs],na.rm=T)`% out of all oral vowel targets, `r sum(sub_tab[nasalVs,oralVs])` nasal target vowels produced as oral vowels or about `r mean(sub_pc[nasalVs,oralVs],na.rm=T)`% out of all nasal vowel targets). Substitutions in which the oral nature was preserved but the quality of the vowel was changed were a great deal more common than changes in quality among nasal vowels (`r sum(sub_tab[oralVs,oralVs])` oral vowels produced with a different quality or about `r mean(sub_pc[oralVs,oralVs],na.rm=T)`% out of all oral vowel targets; `r sum(sub_tab[nasalVs,nasalVs])` nasal vowels produced with a different quality or about `r mean(sub_pc[nasalVs,nasalVs],na.rm=T)`% out of all nasal vowel targets). As for consonants, asymmetries were very marked with more complex consonants (specifically `r paste0(complexCs)`) mispronounced as simple ones (specifically `r paste0(simplexCs)`, `r sum(sub_tab[complexCs,simplexCs])` times or  about `r mean(sub_pc[complexCs,simplexCs],na.rm=T)`% out of all complex consonant targets) than vice versa (`r sum(sub_tab[simplexCs,complexCs])` times or  about `r mean(sub_pc[complexCs,simplexCs],na.rm=T)`% out of all simple consonant targets). Simple consonants were mispronounced as other simple consonants quite frequently (`r sum(sub_tab[simplexCs,simplexCs])` simple consonants mispronounced as other simple ones or about `r mean(sub_pc[simplexCs,simplexCs],na.rm=T)`% out of all simple consonant targets, compared to `r sum(sub_tab[complexCs,complexCs])` complex ones or about `r mean(sub_pc[complexCs,complexCs],na.rm=T)`% out of all complex consonant targets).
+Next, we investigated patterns of deletion and substitution. Deletions were relatively rare: there were only `r sum(del_tab[c(oralVs,nasalVs)])` instances of deleted vowels (~`r mean(del_pc[c(oralVs,nasalVs)],na.rm=T)`% of all vowel targets), and `r sum(del_tab[c(simplexCs,complexCs)])` instances of deleted consonants (~`r mean(del_pc[c(simplexCs,complexCs)],na.rm=T)`% of all consonant targets). Substitutions were somewhat more frequent, but still relatively rare. Nasal vowels were produced as oral vowels and vice versa (`r sum(sub_tab[oralVs,nasalVs])` oral targets as nasal (~`r mean(sub_pc[oralVs,nasalVs],na.rm=T)`% of targets) and `r sum(sub_tab[nasalVs,oralVs])` nasal targets produced as oral (~`r mean(sub_pc[nasalVs,oralVs],na.rm=T)`% of targets). Both oral and nasal vowels were also occasionally subsituted by vowels of a different quality that preserved the target oral/nature airflow (`r sum(sub_tab[oralVs,oralVs])` oral vowels (~`r mean(sub_pc[oralVs,oralVs],na.rm=T)`% of targets and `r sum(sub_tab[nasalVs,nasalVs])` nasal vowels (~`r mean(sub_pc[nasalVs,nasalVs],na.rm=T)`% of targets). Among consonants, complex consonants were occasionally substituted by simpler ones (specifically `r print.phone.list(complexCs.ipa)` as `r print.phone.list(simplexCs.ipa)`), `r sum(sub_tab[complexCs,simplexCs])` times, in approximately `r mean(sub_pc[complexCs,simplexCs],na.rm=T)`% of all complex consonant targets. Interestingly, simple consonants were sometimes also substituted by complex ones; this happened `r sum(sub_tab[simplexCs,complexCs])` times, in approximately `r mean(sub_pc[complexCs,simplexCs],na.rm=T)`% of all simple consonant targets. Finally, simple consonants were mispronounced as other simple consonants (`r sum(sub_tab[simplexCs,simplexCs])` instances, ~`r mean(sub_pc[simplexCs,simplexCs],na.rm=T)`% of all simple consonant targets) and complex consonants as other complex consonants (`r sum(sub_tab[complexCs,complexCs])` instances, ~`r mean(sub_pc[complexCs,complexCs],na.rm=T)`% of all complex consonant targets). Note that the substitutions included phones that are not native to Yélî Dnye but do occur in English (e.g., [tʃ]); as these data come from careful transcriptions by a native Yélî Dnye speaker who is very fluent in English, we take these segmental substitutions faithfully as an indication that several of our participants have mastered production of some English phones, possibly produced within whole English word forms (see below).
 
 ```{r diffic_all_attempts,echo=F}
 
@@ -650,16 +673,21 @@ mat_pc=round(match_tab/denom_vec*100,2)
 #rowSums(sub_pc, na.rm=T) + del_pc + mat_pc
 ```
 
+<!--
+M2A: I prefer a modification of option 2 and so am commenting this out:
+
 **Option 3: numbers and proportions, ALL attempts**
 Next, we investigated patterns of deletion and substitution. Deletions were relatively rare, with only `r sum(del_tab[c(oralVs,nasalVs)])` vowels deleted (about `r mean(del_pc[c(oralVs,nasalVs)],na.rm=T)`% of all vowel targets), and `r sum(del_tab[c(simplexCs,complexCs)])` consonants deleted (about `r mean(del_pc[c(simplexCs,complexCs)],na.rm=T)`% of all consonant targets). 
 
 As for substitutions, it was as common for a nasal vowel to be produced as an oral vowel as vice versa (`r sum(sub_tab[oralVs,nasalVs])` oral target vowels produced as nasal vowels or about `r mean(sub_pc[oralVs,nasalVs],na.rm=T)`% out of all oral vowel targets, `r sum(sub_tab[nasalVs,oralVs])` nasal target vowels produced as oral vowels or about `r mean(sub_pc[nasalVs,oralVs],na.rm=T)`% out of all nasal vowel targets). Substitutions in which the oral nature was preserved but the quality of the vowel was changed were a great deal more common than changes in quality among nasal vowels (`r sum(sub_tab[oralVs,oralVs])` oral vowels produced with a different quality or about `r mean(sub_pc[oralVs,oralVs],na.rm=T)`% out of all oral vowel targets; `r sum(sub_tab[nasalVs,nasalVs])` nasal vowels produced with a different quality or about `r mean(sub_pc[nasalVs,nasalVs],na.rm=T)`% out of all nasal vowel targets). As for consonants, asymmetries were very marked with more complex consonants (specifically `r paste0(complexCs)`) mispronounced as simple ones (specifically `r paste0(simplexCs)`, `r sum(sub_tab[complexCs,simplexCs])` times or  about `r mean(sub_pc[complexCs,simplexCs],na.rm=T)`% out of all complex consonant targets) than vice versa (`r sum(sub_tab[simplexCs,complexCs])` times  about `r mean(sub_pc[complexCs,simplexCs],na.rm=T)`% out of all simple consonant targets). Simple consonants were mispronounced as other simple consonants quite frequently (`r sum(sub_tab[simplexCs,simplexCs])` simple consonants mispronounced as other simple ones or about `r mean(sub_pc[simplexCs,simplexCs],na.rm=T)`% out of all simple consonant targets, compared to `r sum(sub_tab[complexCs,complexCs])` complex ones or about `r mean(sub_pc[complexCs,complexCs],na.rm=T)`% out of all complex consonant targets).
 
+-->
 
-Finally, we looked into the frequency with which mispronunciations resulted in real words. Two thirds of them were: `r round(sum(!is.na(trnsc.inc$meaning) & trnsc.inc$meaning != "0")/sum(!is.na(trnsc.inc$mispronunciation))*100)`%. This is a type of analysis that is seldom reported, and we could only find one comparison point: @castro1998 found that illiterate adults NWR mispronunciations resulted in real words in `r round(53/475*100,2)`% of cases, whereas literate adults did so in only `r round(2/117*100,2)`%. The percentage we observe here is much higher than this, but we do not know whether age, language, or even test structure explains this difference.
+Finally, we looked into the frequency with which mispronunciations resulted in real words. In fact, two thirds of incorrect repetitions were recognizable as real words or phrases in Yélî Dnye or English: `r round(sum(!is.na(trnsc.inc$meaning) & trnsc.inc$meaning != "0")/sum(!is.na(trnsc.inc$mispronunciation))*100)`%. This type of analysis is seldom reported---we could only find one comparison point: @castro1998 found that illiterate Portuguese adults' NWR mispronunciations resulted in real words in `r round(53/475*100,2)`% of cases, whereas literate participants did so in only `r round(2/117*100,2)`% of cases. The percentage we observe here is much higher than reported in Castro and colleagues' study, but we do not know whether age, language, or even test structure explains this difference.
 
-
-
+<!--M2A: castro1998 is missing from bib. is it this one?:
+https://academic.oup.com/brain/article/121/6/1053/280348
+-->
 
 ### NWR scores as a function of item length 
 
@@ -683,9 +711,7 @@ mycoeff=round(summary(len_lm)$coefficients,3)
 ```
 
 
-Next, we inspected whether NWR scores varied as a function of word length. Results are shown on table XX. This table shows that scores for monosyllables was much lower than for other lengths. This is likely due to the fact that the majority of monosyllables included were chosen because they had sounds that are rare in the world's languages, which may indicate that they are hard to produce or to perceive. 
-
-Setting monosyllables aside, we observe the typical pattern of lower scores for longer items, although this is particularly salient for the whole word scoring. This is the most commonly reported type of score, but it is also the least forgiving. The pattern is less marked when other two scores are used, which are less sensitive to errors. Averaging across participants and items, the Pearson correlation between length (2-4 syllables) and whole-item NWR scores was r(`r length_r$parameter`) = `r round(length_r$estimate,3)`. In a generalized binomial mixed model, we included `r summary(len_lm)$devcomp$dims["N"]` observations, from `r summary(len_lm)$ngrps["file"]` children producing in any given trial one of `r summary(len_lm)$ngrps["target"]` potential target words. The analysis revealed a main effect of age (ß = `r mycoeff["age.rounded_s","Estimate"]`, SE ß = `r mycoeff["age.rounded_s","Std. Error"]`, p = `r mycoeff["age.rounded_s","Pr(>|z|)"]`); and a significant estimate for the length of the target words in number of syllables (ß = `r mycoeff["type","Estimate"]`, SE ß = `r mycoeff["type","Std. Error"]`, p = `r mycoeff["type","Pr(>|z|)"]`).
+Next, we inspected whether NWR scores varied as a function of word length (Table \@ref(tab:tablength)). Participants scored much lower on monosyllables than on non-words of other lengths. This is likely due to the fact that the majority of monosyllables were designed to include sounds that are rare in the world's languages, which may indicate that they are hard to produce or perceive. Setting monosyllables aside, we observe the typical pattern of lower scores for longer items, although this is particularly salient for the whole-item scoring. While whole-item scoring is the most commonly reported NWR outcome, it is also the least forgiving. The pattern is less marked when other two scores are used, which are less sensitive to errors. Averaging across participants and items, the Pearson correlation between length (2-4 syllables) and whole-item NWR scores was r(`r length_r$parameter`) = `r round(length_r$estimate,3)`. In a generalized binomial mixed model, we included `r summary(len_lm)$devcomp$dims["N"]` observations, from `r summary(len_lm)$ngrps["file"]` children producing, in any given trial, one of `r summary(len_lm)$ngrps["target"]` potential target words. The analysis revealed a positive effect of age (ß = `r mycoeff["age.rounded_s","Estimate"]`, SE ß = `r mycoeff["age.rounded_s","Std. Error"]`, p `r pval.display(mycoeff["age.rounded_s","Pr(>|z|)"])`) and a negative but non-significant estimate for target length in number of syllables (ß = `r mycoeff["type","Estimate"]`, SE ß = `r mycoeff["type","Std. Error"]`, p `r pval.display(mycoeff["type","Pr(>|z|)"])`).
 
 
 
@@ -706,9 +732,9 @@ apa_table(length.tab,caption="NWR measured in whole-word scores, phoneme-based s
 
 
 
-```{r Fig2-scores by age, ig.pos = "T!", fig.width=5, fig.height=5, fig.cap="NWR whole-word scores for individual participants as a function of age and sex (blue = boys, pink = girls)."}
+```{r Fig2-scores-by-age, ig.pos = "T!", fig.width=5, fig.height=5, fig.cap="NWR whole-item scores for individual participants as a function of age and sex (purple = boys, orange = girls)."}
 
-plot(overall$Word~overall$Age,pch=20,cex=2,lty=3,ylab="NWR scores (% words)",xlab="Age (years)",col=ifelse(overall$Sex=="B","blue","pink"))
+plot(overall$Word~overall$Age,pch=20,cex=2,lty=3,ylab="NWR scores (% words)",xlab="Age (years)",col=ifelse(overall$Sex=="B","darkmagenta","chocolate1"))
 
 cor.test(overall$Word,overall$Age,method="s")->corage
 t.test(overall$Word~overall$Sex)->tsex
@@ -718,7 +744,7 @@ cor.test(overall$Word,overall$matEd,method="s")->corme
 ```
 
 
-Our final exploratory analysis assessed whether variation in scores was structured by factors that vary across individuals. As shown in Figure 2, there was a greater deal of variance in earlier than later ages, with significantly higher NWR scores for older children  (Spearman's rank correlation, given inequality of variance, rho (`r corage$statistic`) = `r corage$estimate`, p = `r corage$p.value`). In contrast, there was no clear association between NWR scores, on the one hand, and sex (t (`r tsex$statistic`) = `r tsex$parameter`, p = `r tsex$p.value`), birth order  (data missing for `r sum(is.na(demo$birthOrder[demo$included=="yes"]))` children, rho = (`r corbo$statistic`) = `r corbo$estimate`, p = `r corbo$p.value`) or maternal education  (data missing for `r sum(is.na(demo$matEd[demo$included=="yes"]))` children,  rho = ( `r corme$statistic`) = `r corme$estimate`, p = `r corme$p.value`).
+Our final exploratory analysis assessed whether variation in scores was structured by factors that vary across individuals. As shown in Figure \@ref(fig:Fig2-scores-by-age), there was a greater deal of variance across the tested age range, with significantly higher NWR scores for older children (Spearman's rank correlation, given inequality of variance, rho (`r corage$statistic`) = `r corage$estimate`, p `r pval.display(corage$p.value)`). In contrast, there was no clear association between NWR scores and sex (t (`r tsex$statistic`) = `r tsex$parameter`, p `r pval.display(tsex$p.value)`), birth order  (data missing for `r sum(is.na(demo$birthOrder[demo$included=="yes"]))` children, rho = (`r corbo$statistic`) = `r corbo$estimate`, p `r pval.display(corbo$p.value)`), or maternal education  (data missing for `r sum(is.na(demo$matEd[demo$included=="yes"]))` children,  rho ( `r corme$statistic`) = `r corme$estimate`, p `r pval.display(corme$p.value)`).
 
 
 
