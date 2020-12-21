@@ -9,7 +9,7 @@ author:
     address       : "29, rue d’Ulm, 75005 Paris, France"
     email         : "alecristia@gmail.com"
   - name          : "Marisa Casillas"
-    affiliation   : "2"
+    affiliation   : "2,3"
     address       : "Wundtlaan 1, 6525 XD, Nijmegen, The Netherlands"
     email         : "marisa.casillas@mpi.nl"
 
@@ -18,6 +18,8 @@ affiliation:
     institution   : "Laboratoire de Sciences Cognitives et de Psycholinguistique, Département d'Etudes cognitives, ENS, EHESS, CNRS, PSL University"
   - id            : "2"
     institution   : "Max Planck Institute for Psycholinguistics"
+  - id            : "3"
+    institution   : "University of Chicago"
 
 authornote: |
   All data are made available in a repository in the Open Science Framework. AC acknowledges the support of the Agence Nationale de la Recherche (ANR-17-CE28-0007 LangAge, ANR-16-DATA-0004, ANR-14-CE30-0003, ANR-17-EURE-0017); and the J. S. McDonnell Foundation Understanding Human Cognition Scholar Award. 
@@ -772,6 +774,10 @@ Following prior work, we expected that NWR scores would increase with participan
 In contrast, previous work shows little evidence for effects of maternal education [e.g., @farmani2018normalization; @kalnak2014nonword; @meir2017independent] or participant gender [@chiat2007preschool] on NWR scores. In addition to this prior work, education on Rossel Island, while generally highly valued, is not at all essential to ensuring one's success in society and may not be a reliable index of local socioeconomic variation. There is also limited variation in maternal education across the families in the region of the island where we sampled. We therefore expected little evidence for impact of either participant gender or maternal education in the present study. On the other hand, these predictors have established effects on other language development measures (**REFS: M2A: Alex go ahead and pick your faves here**). So to the extent that NWR scores share causal links to gender-based differences ein development and maternal linguistic input with these other language ouctome measures, we might then expect these factors to appear in NWR data. In fact, neither participant gender nor maternal education were correlated with NWR score in the current data.
 
 Last but not least, we investigated whether birth order might affect NWR scores, as it does other language tasks, resulting in first-born children showing higher scores on standardized language tests than later-born children [@havron2019effect], presumably because later-born children receive a smaller share of maternal input than their older siblings. Given shared caregiving practices and the hamlet organization typical of Rossel communities, children have many sources of adult and older child input that they encounter on a daily basis and first born children quickly integrate with a much larger pool of both older and younger children with whom they partly share caregivers. Therefore we expected that any effects of birth order on NWR would be attenuated in this context. In line with this prediction, our descriptive analysis showed no correlation between birth order and NWR score.
+
+### Conclusions
+
+While NWR can, in theory, be used to test a variety of questions about phonological development in any language, previous work has been primarily limited to a handful of related languages spoken in urban, industrialized contexts. The present study shows that, not only can NWR be adapted for very different populations than have previously been tested, but that effects of age and typological frequency may strongly influence phonological development across these diverse settings, while effects of item length, participant gender, maternal education, and birth order, may either have little impact on this facet of language development or have an impact that vaies depending on the linguistic, cultural, and sociodemographic properties of the population under study. Because these latter predictors strongly relate to other language outcomes, the present findings raise the issue of why NWR would pattern differently, what that could tell us about the relationship between lexical development, phonological development, and the input environment and, last but not least, what is implied about the joint applicability of these outcome measures as a diagnostic indicator for language delays and disorders. In the meanwhile, we take the present findings as robustly supporting the idea that phonological development continues well past early childhood and as yielding preliminary support for a connection between individual learners and global language patterns when it comes to acoustic and articulatory markedness.
 
 <!--
 4. General prediction: Non-monolingual Yélî children have lower scores than monolingual ones when tested on the society-dominant language (we did not test any non-dominant language) 
