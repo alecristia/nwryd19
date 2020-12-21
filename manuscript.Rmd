@@ -1,6 +1,6 @@
 ---
 title             : "Non-word repetition in Yélî Dnye"
-shorttitle        : "NWR in Yélî Dnye"
+shorttitle        : "NWE in Yélî Dnye"
 
 author: 
   - name          : "Alejandrina Cristia"
@@ -161,15 +161,24 @@ cohensd2=function(m1,sd1,m2,sd2){round((m1-m2)/sqrt((sd1^2+sd2^2)/2),3)}
 - check again if all fields are explained
 - set up OSF (or revise if already there)
 - implement decisions on prop phones & patterns nwr mp
-- revise bullet points for discussion
+<!--Added by MC on 21 Dec 2020-->
+- check and accept/deny MC's updated segment frequencies
+- re-run analyses w/ new frequencies and check that outcomes didn't qualitatively change
+- check YD data in figure 1 (the effect of item length looks reversed)
+- see MC comments throughout and delete now-irrelevant things
 
 ## TODO Middy
 
 <!--
 - double check my frequency entries in segments.xlsx using the search function in https://phoible.org/parameters; take a look at http://phoible.github.io/conventions/ in case you see something about double articulation (I didn't find tp or lBj)
+
+M2A: Done! Left for AC to review in segments-20201123.xlsx and, if she is satisfied, to integrate :)
 -->
-<!--M2A: Done! Left for AC to review in segments-20201123.xlsx and, if she is satisfied, to integrate :)-->
+<!--
 - draft discussion
+
+M2A: Done! I left some space for you to fill in references in a few spots since it seemed from the notes you left that you had some specific ones in mind.
+-->
 
 
 ## Introduction
@@ -824,12 +833,6 @@ M2A: Heh yeah I know! I mean that, buried in my annotations, is also information
 M2A: Not currently tested as far as I can see (?)
 
 -->
-
-
-<!--M2A: I think a nice way to end this bit would be very briefly (~1-sentence) linking this input scenario to the relevance of looking at NWR (à la Cristia 2020 DevRev). What do you think?-->
-<!-- a2m maybe we want to bring that up in the discussion? I haven't found a good place to introduce that paper, in part because right now we have these three purposes that seem sort of unconnected with the goals of that paper... -->
-
-
 
 \newpage
 
