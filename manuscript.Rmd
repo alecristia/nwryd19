@@ -772,19 +772,6 @@ Our final exploratory analysis assessed whether variation in scores was structur
 
 3. Children's scores increases with child age.
 
-
-4. General prediction: Non-monolingual Yélî children have lower scores than monolingual ones when tested on the society-dominant language (we did not test any non-dominant language) 
-<!-- **(MC: or just because they're acquiring two phonologies and so show slightly delayed linguistic development, in parallel with vocab development stuff; we don't have data on their dominant language, but i guess we can assume it's YD for most kids---i'm sure there are exceptions!)** ac2mc I added "society-" because that's what I meant (we didn't get proportions of time in which they hear YD versus other languages); I didn't add anything about why this would come out like this or not here, but I'll add this -- although I think the evidence on that is mixed (ie no strong evidence that learning 2 phonologies sets you back)-->
-4. Local prediction: Anecdotally Yélî children grow up in close-knitted communities and thus may receive significant portions of their language input from people not in their nuclear family 
-<!-- **(MC: definitely almost all kin; 5k of them)** ac2mc I'm not sure this is how bio anthropologists think about kin; because it's about how you attribute resources to boost your genes' chances of being passed on relative to those of others in the same space. So my guess is that there is still a difference between nuclear family and not. Rewrote kin -> nuclear family -->
-(or at least from people other than their mothers, who tend to be the non-native speakers). If so, the difference between monolinguals and not monolinguals may be smaller than that found in other work
-<!-- **(MC: maybe it'd be more useful to try and estimate the number of non-Y moms who live in each hamlet where testing is taking place?)** ac2mc not sure it's worth the effort, in any case other female adults are almost certain to have very little impact on the target child... Perhaps I'm not saying something very clearly? -->
-. That said, one recent study on the same population shows that most child-directed input in the first 2 years does come from the mother 
-<!-- **(MC: i can get you actual estimates for this for YD; let's go with that instead!)** -->
-<!-- ac2mc I think I meant your own paper! added "on the same population "-->
-, so in so far as this input has a crucial formational role, then there may still be a score difference between these two groups.
-4. We don't see a difference
-
 5.  General prediction: previous NWR evidence on this is mixed, but general findings on language development suggest that children whose mothers are more educated score higher in standardized language tests (eg ppvt) than children whose mothers are less educated. 
 5. Prediction made before seeing data: In the Rossel community, formal education plays an extremely minor role in ensuring individual's success, is not a good index of relative socio-economic status, and furthermore there is only a narrow range of variation in maternal educational attainment. This may lead to no or only very small advantages for children whose mothers are more educated, provided that the causal chain between maternal education and child language is via SES more broadly. However, if education directly boosts maternal verbal skills and the incidence of verbal behavior (as suggested by CITE), then we should still see a difference along this factor.
 5. We did not find this
@@ -793,6 +780,52 @@ Our final exploratory analysis assessed whether variation in scores was structur
 6. Prediction before seeing data: One main causal path between birth order and language development is via parental input (CITE). Given our arguments above for how mothers may not be as important among Rossel people than in other places, then the difference in scores between first borns and later borns may be small
 6. we did not find a sig effect, but this is a small effect (eg d=.2 in Havron et al)
 
+
+<!--
+4. General prediction: Non-monolingual Yélî children have lower scores than monolingual ones when tested on the society-dominant language (we did not test any non-dominant language) 
+
+M2A: or just because they're acquiring two phonologies and so show slightly delayed linguistic development, in parallel with vocab development stuff; we don't have data on their dominant language, but i guess we can assume it's YD for most kids---i'm sure there are exceptions!)
+
+ac2mc I added "society-" because that's what I meant (we didn't get proportions of time in which they hear YD versus other languages); I didn't add anything about why this would come out like this or not here, but I'll add this -- although I think the evidence on that is mixed (ie no strong evidence that learning 2 phonologies sets you back)
+
+M2A: I'll take your word on the mixed evidence! I'm certainly not up to date in this domain. We don't really have enough kids (non-monoling = 6 kids) to investigate this anyway, which I think is also why you ultimately don't include it in the analyses of individual variation in NWR score. I'm therefore not going to include it in the discussion draft.
+
+---
+
+4. Local prediction: Anecdotally Yélî children grow up in close-knitted communities and thus may receive significant portions of their language input from people not in their nuclear family 
+
+M2A: definitely almost all kin; 5k of them
+
+ac2mc I'm not sure this is how bio anthropologists think about kin; because it's about how you attribute resources to boost your genes' chances of being passed on relative to those of others in the same space. So my guess is that there is still a difference between nuclear family and not. Rewrote kin -> nuclear family
+
+M2A: I see what you mean! I wouldn't, however, directly apply this broad theory about genetic transmission to understanding the specific Rossel context. I'm really very unconvinced that there is the same kind of hard division between nuclear and non-nuclear family on Rossel wrt daily resources, caregiving, and even ceremonial and some land rights things. I think the real question being raised here is about the specific relevance the distribution of linguistic input over family members has for kids' language development. We're really too far from being able to groundedly talk about that for my comfort.
+
+
+(or at least from people other than their mothers, who tend to be the non-native speakers). If so, the difference between monolinguals and not monolinguals may be smaller than that found in other work
+
+M2A: maybe it'd be more useful to try and estimate the number of non-Y moms who live in each hamlet where testing is taking place?)
+
+ac2mc not sure it's worth the effort, in any case other female adults are almost certain to have very little impact on the target child... Perhaps I'm not saying something very clearly?
+
+M2A: In my experience most of the non-Rossel moms don't really speak Rossel to their kids at all (though they use some phrases and have some receptive knowledge)---there are exceptions of course! I don't think what you're saying is unclear, I'm just trying to wrap my head around what is being implied in some of the text and also doing a self-check for whether each of these implications is really meaningfully relevant in the Rossel context. Sorry, that probably feels like turning us in circles a bit!
+
+
+. That said, one recent study on the same population shows that most child-directed input in the first 2 years does come from the mother 
+
+M2A: i can get you actual estimates for this for YD; let's go with that instead!
+
+ac2mc I think I meant your own paper! added "on the same population "
+
+M2A: Heh yeah I know! I mean that, buried in my annotations, is also information about how often the TCDS in Casillas et al. (2020) comes from the mother vs. others. Right now the paper doesn't make this claim, it only talks about speech from women. So we could in theory extract actual input estimates from the mother. But I think that's moot since none of this is really pertinent to the discussion anymore.
+
+
+, so in so far as this input has a crucial formational role, then there may still be a score difference between these two groups.
+
+4. We don't see a difference
+
+M2A: Not currently tested as far as I can see (?)
+
+-->
 
 
 <!--M2A: I think a nice way to end this bit would be very briefly (~1-sentence) linking this input scenario to the relevance of looking at NWR (à la Cristia 2020 DevRev). What do you think?-->
