@@ -67,6 +67,8 @@ library(kableExtra)
 library(gdata)
 library(tidyverse)
 library(lme4)
+library(openxlsx)
+
 
 p.levels <- c(0, 0.001, 0.01)
 pval.display <- function(p.est) {
@@ -149,36 +151,6 @@ cohensd2=function(m1,sd1,m2,sd2){round((m1-m2)/sqrt((sd1^2+sd2^2)/2),3)}
 
 
 ```
-
-<!-- REMEMBER!!!! -->
-<!-- phonetic characters: -->
-<!-- - save excel as utf with save as -->
-<!-- - do $ iconv -f utf-16le -t utf-8 stimuli.txt > stimconv.txt -->
-<!-- - do $ iconv -f utf-16le -t utf-8 segments.txt > segconv.txt -->
-
-## TODO Alex
-
-- check again if all fields are explained
-- set up OSF (or revise if already there)
-- implement decisions on prop phones & patterns nwr mp
-<!--Added by MC on 21 Dec 2020-->
-- check and accept/deny MC's updated segment frequencies
-- re-run analyses w/ new frequencies and check that outcomes didn't qualitatively change
-- check YD data in figure 1 (the effect of item length looks reversed)
-- see MC comments throughout and delete now-irrelevant things
-
-## TODO Middy
-
-<!--
-- double check my frequency entries in segments.xlsx using the search function in https://phoible.org/parameters; take a look at http://phoible.github.io/conventions/ in case you see something about double articulation (I didn't find tp or lBj)
-
-M2A: Done! Left for AC to review in segments-20201123.xlsx and, if she is satisfied, to integrate :)
--->
-<!--
-- draft discussion
-
-M2A: Done! I left some space for you to fill in references in a few spots since it seemed from the notes you left that you had some specific ones in mind.
--->
 
 
 ## Introduction
@@ -287,7 +259,7 @@ The final list includes: three practice items; 20 monoysllables containing sound
 
 ```{r tab2-stims, results = "asis"}
 #add orthographic representations targets & other stims chars
-stims.tbl <- read_delim("stimuli3.txt", delim = "\t") %>%
+stims.tbl <- read.xlsx("stimuli.xlsx") %>%
   arrange(factor(type, levels = c("practice", "1", "2", "3", "4"))) %>%
   select(type, target_ortho, phono) %>%
   rename("Type" = type, "Orthographic" = target_ortho, "Phonological" = phono)
@@ -380,6 +352,7 @@ Finally, when describing children's patterns of errors, we take all repetitions 
 This study was approved as part of a larger research effort by the second author. The line of research was evaluated by the Radboud University Faculty of Social Sciences Ethics Committee (Ethiek Commissie van de faculteit der Sociale Wetenschappen; ECSW) in Nijmegen, The Netherlands (original request: ECSW2017-3001-474 Manko-Rowland; amendment: ECSW-2018-041). Participation was voluntary; children were invited to participate following indication of approval from an adult caregiver. Regardless of whether they completed the task, children were given a small snack as compensation. Children who showed initial interest but then decided not to participate were also given the snack.
 
 ```{r demo}
+# please note that you will not be able to do this because you don't have this version, that is not fully de-identified
 # read.csv("NWR-test-log_FINAL.csv",header=T,sep=";")->fulldemo
 # fulldemo=fulldemo[,-2] #remove children's names
 # fulldemo$dob=as.Date(as.character(fulldemo$DOB.ISO),format="%Y%m%d")
@@ -392,13 +365,6 @@ This study was approved as part of a larger research effort by the second author
 read.csv("nwr-demo.csv",header=T)->demo
 #colnames(demo)
 
-#lines no longer needed
-#if family is missing, attribute each child to a different one
-#demo$familyID=as.character(demo$familyID)
-#demo$familyID[is.na(demo$familyID)]<-paste("k",demo$ID[is.na(demo$familyID)])
-#recalc age
-#demo$age.rounded=as.numeric(difftime(as.Date(as.character(demo$Date),format="%Y%m%d"),as.Date(as.character(demo$DOB.ISO),format="%Y%m%d"),unit="weeks"))/52.25
-#write.table(demo,"nwr-demo.csv",row.names=F,quote=T,sep=",")
 
 subset(demo,included=="yes" & Age <12 & !is.na(Age))->inc
 #if age.rounded is missing, use reported age
@@ -506,7 +472,7 @@ We could include `r summary(xl_fr)$devcomp$dims["N"]` observations, from `r summ
 ```{r Fig2-xling-freq, fig.pos = "!t", fig.align = "center", out.width = '65%', fig.cap="NWR scores for individual target words as a function of the average frequency with which each phone is found across languages."}
 aggregate(trnsc.inc$correct*100,by=list(trnsc.inc$target,trnsc.inc$avg_fr),mean)->xling
 colnames(xling)<-c("Target","Avg_fr","Word")
-stims.ipa <- read_delim("stimuli3.txt", delim = "\t") %>%
+stims.ipa <- read.xlsx("stimuli.xlsx") %>%
   select(target, target_ortho, phono)
 xling <- merge(xling, stims.ipa, by.x = "Target", by.y = "target")
 

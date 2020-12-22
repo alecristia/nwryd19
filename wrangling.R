@@ -1,4 +1,5 @@
 library(tidyverse)
+library(openxlsx)
 
 read.delim("NWR-transcription.txt", encoding="UTF-8")->trnsc
 
@@ -91,24 +92,13 @@ merge(trnsc,inc,by.x="id",by.y="ID",all.x=T)->trnsc
 dim(trnsc) #still no loss, all good
 
 #add orthographic representations targets & other stims chars
-# M2A: Note that some of these stim characters are now updated in stimuli2.txt
-# they do not match what is shown here (!!)
-# a2m: I'm confused, what do you mean? 
-# my pipeline was: stimuli.txt I couldn't read here, so I put these instructions in the rmd:
-# <!-- REMEMBER!!!! -->
-#   <!-- phonetic characters: -->
-#   <!-- - save excel as utf with save as -->
-#   <!-- - do $ iconv -f utf-16le -t utf-8 stimuli.txt > stimconv.txt -->
-#   <!-- - do $ iconv -f utf-16le -t utf-8 segments.txt > segconv.txt -->
 #   
 # also, notice that stims and segments are merged using ortho, so as long as ortho is matched
 # across the two, the merge should carry over whatever changes you make
-# M2A: Some of the segments in stimuli.txt were wrong. I made corrections in stimuli2.txt,
-# but now that is mismatched to stimconv and segconv.
-# M note: resolved over quick videocall; a updated the stim characters throughout now (resolved)
+
 
 #get info on segments
-read.delim("segconv.txt", encoding="UTF-8")->segments
+read.xlsx("segments.xlsx")->segments
 #add corpus freq to segments
 read.delim("segment-counts.txt", encoding="UTF-8",sep="\t",header=T)->phone_counts
 merge(segments,phone_counts,by.x="ortho",by.y="ortho",all.x=T)->segments
@@ -118,7 +108,7 @@ merge(segments,phone_counts_types,by.x="ortho",by.y="ortho",all.x=T)->segments
 write.table(segments,"segments_with_cor_freq.txt",sep="\t",row.names = F)
 
 #read in table with breakdown 
-read.delim("stimuli3.txt", encoding="UTF-8")->stims
+read.xlsx("stimuli.xlsx")->stims
 #add average crosslinguistic frequency
 stim_seg_freq=matrix(NA,nrow=dim(stims)[1],ncol=8)
 for(i in 1:dim(stim_seg_freq)[1]) for(j in 1:dim(stim_seg_freq)[2]) {
