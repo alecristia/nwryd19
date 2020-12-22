@@ -1,64 +1,64 @@
-"ortho"	"phono"	"unichar"	"type"	"in_stim"	"freq"	"pc"	"notes"	"X"	"wds_uni.x"	"counts_corpus"	"freq_corpus"	"wds_uni.y"	"counts_corpus_types"	"freq_corpus_types"
-":a"	"̃æ"	"ã"	"short_nasal"	"yes"	46	2	""	NA	"0"	47	0.000950935761254426	"0"	13	0.00211107502435856
-":â"	"ɑ͂"	"7"	"short_nasal"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"11"	33	0.000667678300455235	"11"	8	0.00129912309191296
-":aa"	"æ͂ː"	"à"	"long_nasal"	"yes"	7	0	""	NA	"3"	203	0.00410723318158827	"3"	26	0.00422215004871712
-":ââ"	"ɑ͂ː"	"6"	"long_nasal"	"yes"	16	1	""	NA	"5"	120	0.00242792109256449	"5"	22	0.00357258850276064
-":e"	"ɛ͂"	"4"	"short_nasal"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"9"	53	0.00107233181588265	"9"	14	0.00227346541084768
-":ê"	"ə͂"	"6"	"short_nasal"	"no"	91	3	""	NA	"10"	7	0.000141628730399595	"10"	2	0.00032478077297824
-":ee"	"ɛ͂ː"	"è"	"long_nasal"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"2"	132	0.00267071320182094	"2"	28	0.00454693082169536
-":êê"	"ə͂ː"	"3"	"long_nasal"	"yes"	20	1	""	NA	"4"	43	0.000870005058168943	"4"	11	0.00178629425138032
-":i"	"i͂"	"1"	"short_nasal"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"8"	84	0.00169954476479514	"8"	7	0.00113673270542384
-":ii"	"i͂ː"	"ì"	"long_nasal"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"1"	303	0.00613050075872534	"1"	27	0.00438454043520624
-":o"	"ɔ͂"	"9"	"short_nasal"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"13"	154	0.0031158320687911	"13"	20	0.0032478077297824
-":oo"	"ɔ͂ː"	"Ò"	"long_nasal"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"7"	333	0.00673748103186646	"7"	26	0.00422215004871712
-":u"	"u͂"	"8"	"short_nasal"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"12"	23	0.000465351542741528	"12"	11	0.00178629425138032
-":uu"	"u͂ː"	"ù"	"long_nasal"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"6"	310	0.00627212948912494	"6"	29	0.00470932120818448
-"a"	"æ"	"a"	"short_oral"	"yes"	223	7	""	NA	"31"	3316	0.0670915528578655	"31"	231	0.0375121792789867
-"â"	"ɑ"	"â"	"short_oral"	"yes"	225	7	""	NA	"27"	93	0.00188163884673748	"27"	50	0.00811951932445599
-"aa"	"æː"	"ä"	"long_oral"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"20"	934	0.0188973191704603	"20"	87	0.0141279636245534
-"áá"	"?"	"Ä"	"long_oral"	"no"	NA	NA	"not looked up since not in stimuli"	NA	NA	NA	NA	NA	NA	NA
-"ââ"	"ɑ:"	"5"	"long_oral"	"yes"	104	3	""	NA	"16"	585	0.0118361153262519	"16"	59	0.00958103280285807
-"d"	"ṭ"	"d"	"consonant"	"yes"	707	23	"AC interpreted dot as dental, so looked up dental t (not advanced t)"	NA	"d"	2375	0.0480526049570056	"d"	297	0.0482299447872686
-"dm"	"ṭpṇm"	"S"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"Dm"	148	0.00299443601416287	"Dm"	10	0.0016239038648912
-"dn"	"ṭṇ"	"?"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"Dn"	1	2.02326757713708e-05	"Dn"	1	0.00016239038648912
-"dp"	"ṭp"	"/"	"consonant"	"yes"	1	0	"AC used pt"	NA	"Dp"	215	0.00435002529084471	"Dp"	18	0.00292302695680416
-"e"	"ɛ"	"e"	"short_oral"	"yes"	1129	37	""	NA	"32"	1524	0.030834597875569	"32"	264	0.0428710620331276
-"ê"	"ə"	"ê"	"short_oral"	"yes"	675	22	""	NA	"26"	4446	0.0899544764795144	"26"	465	0.0755115297174407
-"ee"	"ɛː"	"ë"	"long_oral"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"21"	474	0.00959028831562974	"21"	66	0.0107177655082819
-"éé"	"e:"	"Ë"	"long_oral"	"yes"	641	21	""	NA	"17"	23	0.000465351542741528	"17"	12	0.00194868463786944
-"êê"	"ə:"	"2"	"long_oral"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"15"	199	0.00402630247850278	"15"	31	0.00503410198116272
-"gh"	"ɣ"	"H"	"consonant"	"yes"	436	14	""	NA	"Gh"	209	0.00422862923621649	"Gh"	50	0.00811951932445599
-"i"	"i"	"i"	"short_oral"	"yes"	2779	92	""	NA	"33"	3504	0.0708952959028832	"33"	421	0.0683663527119195
-"î"	"ɯ"	"8"	"long_oral"	"no"	193	6	""	NA	"25"	1276	0.0258168942842691	"25"	233	0.0378369600519649
-"ii"	"i:"	"ï"	"long_oral"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"22"	510	0.0103186646433991	"22"	43	0.00698278661903215
-"îî"	"ɯ:"	"Ï"	"long_oral"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"14"	41	0.000829539706626201	"14"	11	0.00178629425138032
-"k"	"k"	"k"	"consonant"	"yes"	2730	90	""	NA	"k"	1876	0.0379564997470916	"k"	194	0.0315037349788893
-"km"	"kpŋm"	"Z"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"Km"	75	0.00151745068285281	"Km"	26	0.00422215004871712
-"kn"	"kŋ"	"!"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"Kn"	205	0.00414769853313101	"Kn"	32	0.00519649236765183
-"kp"	"kp"	"P"	"consonant"	"yes"	373	12	""	NA	"Kp"	142	0.00287303995953465	"Kp"	50	0.00811951932445599
-"lv"	"lβʲ"	"L"	"consonant"	"yes"	10	0	"AC used βʲ so this may be an overestimate"	NA	NA	NA	NA	NA	NA	NA
-"m"	"m"	"m"	"consonant"	"yes"	2914	96	""	NA	"m"	2013	0.0407283763277694	"m"	339	0.0550503410198116
-"mb"	"mb"	"b"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"Mb"	302	0.00611026808295397	"Mb"	43	0.00698278661903215
-"md"	"ṇmḍb"	"J"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"Md"	10	0.000202326757713708	"Md"	3	0.00048717115946736
-"mg"	"ŋmɡb"	"X"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"Mg"	52	0.00105209914011128	"Mg"	25	0.004059759662228
-"mt"	"nmdb"	"C"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"Mt"	1	2.02326757713708e-05	"Mt"	1	0.00016239038648912
-"n"	"ṇ"	"n"	"consonant"	"yes"	532	18	"AC interpreted dot as dental, so looked up dental n (not advanced n)"	NA	"n"	2049	0.0414567526555387	"n"	280	0.0454693082169536
-"ń"	"n"	"ń"	"consonant"	"no"	2349	78	""	NA	"ń"	21	0.000424886191198786	"ń"	14	0.00227346541084768
-"nd"	"ṇḍ"	"D"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"Nd"	182	0.00368234699038948	"Nd"	40	0.00649561545956479
-"ng"	"ŋ"	"N"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"Ng"	1338	0.0270713201820941	"Ng"	85	0.0138031828515752
-"ngm"	"ŋm"	"G"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"50"	438	0.00886191198786039	"50"	25	0.004059759662228
-"nk"	"ŋɡ"	"K"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"Nk"	85	0.00171977744056651	"Nk"	16	0.00259824618382592
-"ńm"	"nm"	"M"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	NA	NA	NA	NA	NA	NA	NA
-"nt"	"nd"	"T"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"Nt"	412	0.00833586241780476	"Nt"	62	0.0100682039623254
-"o"	"ɔ"	"o"	"short_oral"	"yes"	1070	35	""	NA	"34"	1916	0.0387658067779464	"34"	284	0.04611886976291
-"ó"	"o"	"ó"	"short_oral"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"30"	512	0.0103591299949418	"30"	79	0.0128288405326405
-"oo"	"ɔ:"	"Ö"	"long_oral"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"23"	416	0.00841679312089024	"23"	41	0.00665800584605391
-"óó"	"o:"	"ö"	"long_oral"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"19"	204	0.00412746585735964	"19"	16	0.00259824618382592
-"p"	"p"	"p"	"consonant"	"yes"	2594	86	""	NA	"p"	1338	0.0270713201820941	"p"	206	0.0334524196167587
-"t"	"t"	"t"	"consonant"	"yes"	2064	68	""	NA	"t"	1281	0.0259180576631259	"t"	151	0.0245209483598571
-"tp"	"tp"	":"	"consonant"	"yes"	1	0	"AC used pt"	NA	"Tp"	486	0.00983308042488619	"Tp"	33	0.00535888275414096
-"u"	"u"	"u"	"short_oral"	"yes"	2646	88	""	NA	"35"	2522	0.0510268082953971	"35"	274	0.0444949658980188
-"uu"	"u:"	"ü"	"long_oral"	"yes"	1003	29	""	NA	"24"	340	0.00687910976226606	"24"	55	0.00893147125690159
-"vy"	"βʲ"	"V"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	NA	"Vy"	245	0.00495700556398584	"Vy"	32	0.00519649236765183
-"w"	"w"	"w"	"consonant"	"yes"	2483	82	""	NA	"w"	1213	0.0245422357106727	"w"	173	0.0280935368626177
-"y"	"j"	"y"	"consonant"	"yes"	2716	90	""	NA	"y"	1731	0.0350227617602428	"y"	190	0.0308541734329328
+"ortho"	"phono"	"unichar"	"type"	"in_stim"	"freq"	"pc"	"notes"	"wds_uni.x"	"counts_corpus"	"freq_corpus"	"wds_uni.y"	"counts_corpus_types"	"freq_corpus_types"
+":a"	"̃æ"	"ã"	"short_nasal"	"yes"	46	2	NA	"0"	47	0.000950935761254426	"0"	13	0.00211107502435856
+":â"	"ɑ͂"	"7"	"short_nasal"	"no"	NA	NA	"not looked up since not in stimuli"	"11"	33	0.000667678300455235	"11"	8	0.00129912309191296
+":aa"	"æ͂ː"	"à"	"long_nasal"	"yes"	7	0	NA	"3"	203	0.00410723318158827	"3"	26	0.00422215004871712
+":ââ"	"ɑ͂ː"	"6"	"long_nasal"	"yes"	16	1	NA	"5"	120	0.00242792109256449	"5"	22	0.00357258850276064
+":e"	"ɛ͂"	"4"	"short_nasal"	"no"	NA	NA	"not looked up since not in stimuli"	"9"	53	0.00107233181588265	"9"	14	0.00227346541084768
+":ê"	"ə͂"	"6"	"short_nasal"	"no"	91	3	NA	"10"	7	0.000141628730399595	"10"	2	0.00032478077297824
+":ee"	"ɛ͂ː"	"è"	"long_nasal"	"no"	NA	NA	"not looked up since not in stimuli"	"2"	132	0.00267071320182094	"2"	28	0.00454693082169536
+":êê"	"ə͂ː"	"3"	"long_nasal"	"yes"	20	1	NA	"4"	43	0.000870005058168943	"4"	11	0.00178629425138032
+":i"	"i͂"	"1"	"short_nasal"	"no"	NA	NA	"not looked up since not in stimuli"	"8"	84	0.00169954476479514	"8"	7	0.00113673270542384
+":ii"	"i͂ː"	"ì"	"long_nasal"	"no"	NA	NA	"not looked up since not in stimuli"	"1"	303	0.00613050075872534	"1"	27	0.00438454043520624
+":o"	"ɔ͂"	"9"	"short_nasal"	"no"	NA	NA	"not looked up since not in stimuli"	"13"	154	0.0031158320687911	"13"	20	0.0032478077297824
+":oo"	"ɔ͂ː"	"Ò"	"long_nasal"	"no"	NA	NA	"not looked up since not in stimuli"	"7"	333	0.00673748103186646	"7"	26	0.00422215004871712
+":u"	"u͂"	"8"	"short_nasal"	"no"	NA	NA	"not looked up since not in stimuli"	"12"	23	0.000465351542741528	"12"	11	0.00178629425138032
+":uu"	"u͂ː"	"ù"	"long_nasal"	"no"	NA	NA	"not looked up since not in stimuli"	"6"	310	0.00627212948912494	"6"	29	0.00470932120818448
+"a"	"æ"	"a"	"short_oral"	"yes"	223	7	NA	"31"	3316	0.0670915528578655	"31"	231	0.0375121792789867
+"â"	"ɑ"	"â"	"short_oral"	"yes"	225	7	NA	"27"	93	0.00188163884673748	"27"	50	0.00811951932445599
+"aa"	"æː"	"ä"	"long_oral"	"no"	NA	NA	"not looked up since not in stimuli"	"20"	934	0.0188973191704603	"20"	87	0.0141279636245534
+"áá"	"?"	"Ä"	"long_oral"	"no"	NA	NA	"not looked up since not in stimuli"	NA	NA	NA	NA	NA	NA
+"ââ"	"ɑ:"	"5"	"long_oral"	"yes"	104	3	NA	"16"	585	0.0118361153262519	"16"	59	0.00958103280285807
+"d"	"ṭ"	"d"	"consonant"	"yes"	481	16	"t = alveolar; tdot = postalveolar; MC used ʈ to represent the apical post-alveolar since the notation used by SCL is an older form used by Ladefoged that now appears to be not used anymore and instead these sounds would be conventionally grouped with the broader category of retroflex consonants"	"d"	2375	0.0480526049570056	"d"	297	0.0482299447872686
+"dm"	"ṭpṇm"	"S"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	"Dm"	148	0.00299443601416287	"Dm"	10	0.0016239038648912
+"dn"	"ṭṇ"	"?"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	"Dn"	1	2.02326757713708e-05	"Dn"	1	0.00016239038648912
+"dp"	"ṭp"	"/"	"consonant"	"yes"	1	0	"NOT IN INVENTORY, so used frequency = 1; t = alveolar; tdot = postalveolar; MC used ʈ to represent the apical post-alveolar since the notation used by SCL is an older form used by Ladefoged that now appears to be not used anymore and instead these sounds would be conventionally grouped with the broader category of retroflex consonants"	"Dp"	215	0.00435002529084471	"Dp"	18	0.00292302695680416
+"e"	"ɛ"	"e"	"short_oral"	"yes"	1129	37	NA	"32"	1524	0.030834597875569	"32"	264	0.0428710620331276
+"ê"	"ə"	"ê"	"short_oral"	"yes"	675	22	NA	"26"	4446	0.0899544764795144	"26"	465	0.0755115297174407
+"ee"	"ɛː"	"ë"	"long_oral"	"no"	NA	NA	"not looked up since not in stimuli"	"21"	474	0.00959028831562974	"21"	66	0.0107177655082819
+"éé"	"e:"	"Ë"	"long_oral"	"yes"	641	21	NA	"17"	23	0.000465351542741528	"17"	12	0.00194868463786944
+"êê"	"ə:"	"2"	"long_oral"	"no"	NA	NA	"not looked up since not in stimuli"	"15"	199	0.00402630247850278	"15"	31	0.00503410198116272
+"gh"	"ɣ"	"H"	"consonant"	"yes"	436	14	NA	"Gh"	209	0.00422862923621649	"Gh"	50	0.00811951932445599
+"i"	"i"	"i"	"short_oral"	"yes"	2779	92	NA	"33"	3504	0.0708952959028832	"33"	421	0.0683663527119195
+"î"	"ɯ"	"8"	"long_oral"	"no"	193	6	NA	"25"	1276	0.0258168942842691	"25"	233	0.0378369600519649
+"ii"	"i:"	"ï"	"long_oral"	"no"	NA	NA	"not looked up since not in stimuli"	"22"	510	0.0103186646433991	"22"	43	0.00698278661903215
+"îî"	"ɯ:"	"Ï"	"long_oral"	"no"	NA	NA	"not looked up since not in stimuli"	"14"	41	0.000829539706626201	"14"	11	0.00178629425138032
+"k"	"k"	"k"	"consonant"	"yes"	2730	90	NA	"k"	1876	0.0379564997470916	"k"	194	0.0315037349788893
+"km"	"kpŋm"	"Z"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	"Km"	75	0.00151745068285281	"Km"	26	0.00422215004871712
+"kn"	"kŋ"	"!"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	"Kn"	205	0.00414769853313101	"Kn"	32	0.00519649236765183
+"kp"	"kp"	"P"	"consonant"	"yes"	373	12	NA	"Kp"	142	0.00287303995953465	"Kp"	50	0.00811951932445599
+"lv"	"lβʲ"	"L"	"consonant"	"yes"	1	0	"NOT IN INVENTORY, so used frequency = 1; AC previously used βʲ but this is a different sequence"	NA	NA	NA	NA	NA	NA
+"m"	"m"	"m"	"consonant"	"yes"	2914	96	NA	"m"	2013	0.0407283763277694	"m"	339	0.0550503410198116
+"mb"	"mb"	"b"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	"Mb"	302	0.00611026808295397	"Mb"	43	0.00698278661903215
+"md"	"ṇmḍb"	"J"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	"Md"	10	0.000202326757713708	"Md"	3	0.00048717115946736
+"mg"	"ŋmɡb"	"X"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	"Mg"	52	0.00105209914011128	"Mg"	25	0.004059759662228
+"mt"	"nmdb"	"C"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	"Mt"	1	2.02326757713708e-05	"Mt"	1	0.00016239038648912
+"n"	"ṇ"	"n"	"consonant"	"yes"	399	13	"ń = alveolar; n/ndot = postalveolar; MC used ɳ to represent the apical post-alveolar since the notation used by SCL is an older form used by Ladefoged that now appears to be not used anymore and instead these sounds would be conventionally grouped with the broader category of retroflex consonants"	"n"	2049	0.0414567526555387	"n"	280	0.0454693082169536
+"ń"	"n"	"ń"	"consonant"	"no"	2349	78	"ń = alveolar; n/ndot = postalveolar"	"ń"	21	0.000424886191198786	"ń"	14	0.00227346541084768
+"nd"	"ṇḍ"	"D"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	"Nd"	182	0.00368234699038948	"Nd"	40	0.00649561545956479
+"ng"	"ŋ"	"N"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	"Ng"	1338	0.0270713201820941	"Ng"	85	0.0138031828515752
+"ngm"	"ŋm"	"G"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	"50"	438	0.00886191198786039	"50"	25	0.004059759662228
+"nk"	"ŋɡ"	"K"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	"Nk"	85	0.00171977744056651	"Nk"	16	0.00259824618382592
+"ńm"	"nm"	"M"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	NA	NA	NA	NA	NA	NA
+"nt"	"nd"	"T"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	"Nt"	412	0.00833586241780476	"Nt"	62	0.0100682039623254
+"o"	"ɔ"	"o"	"short_oral"	"yes"	1070	35	NA	"34"	1916	0.0387658067779464	"34"	284	0.04611886976291
+"ó"	"o"	"ó"	"short_oral"	"no"	NA	NA	"not looked up since not in stimuli"	"30"	512	0.0103591299949418	"30"	79	0.0128288405326405
+"oo"	"ɔ:"	"Ö"	"long_oral"	"no"	NA	NA	"not looked up since not in stimuli"	"23"	416	0.00841679312089024	"23"	41	0.00665800584605391
+"óó"	"o:"	"ö"	"long_oral"	"no"	NA	NA	"not looked up since not in stimuli"	"19"	204	0.00412746585735964	"19"	16	0.00259824618382592
+"p"	"p"	"p"	"consonant"	"yes"	2594	86	NA	"p"	1338	0.0270713201820941	"p"	206	0.0334524196167587
+"t"	"t"	"t"	"consonant"	"yes"	2064	68	NA	"t"	1281	0.0259180576631259	"t"	151	0.0245209483598571
+"tp"	"tp"	":"	"consonant"	"yes"	1	0	"NOT IN INVENTORY, so used frequency = 1; AC previously used pt, but this is a different sequence with only one PHOIBLE attestation from a very short sketch that claims it's only used medially, so I wouldn't use this for Yélî Dnye; t = alveolar; tdot = postalveolar"	"Tp"	486	0.00983308042488619	"Tp"	33	0.00535888275414096
+"u"	"u"	"u"	"short_oral"	"yes"	2646	88	NA	"35"	2522	0.0510268082953971	"35"	274	0.0444949658980188
+"uu"	"u:"	"ü"	"long_oral"	"yes"	888	29	"freq was previously listed as 1003 but MC saw this was inconsistent with PHOIBLE report (pc was accurate)"	"24"	340	0.00687910976226606	"24"	55	0.00893147125690159
+"vy"	"βʲ"	"V"	"consonant"	"no"	NA	NA	"not looked up since not in stimuli"	"Vy"	245	0.00495700556398584	"Vy"	32	0.00519649236765183
+"w"	"w"	"w"	"consonant"	"yes"	2483	82	NA	"w"	1213	0.0245422357106727	"w"	173	0.0280935368626177
+"y"	"j"	"y"	"consonant"	"yes"	2716	90	NA	"y"	1731	0.0350227617602428	"y"	190	0.0308541734329328
