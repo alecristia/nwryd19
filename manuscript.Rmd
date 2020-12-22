@@ -21,8 +21,7 @@ affiliation:
   - id            : "3"
     institution   : "University of Chicago"
 
-authornote: |
-  All data are made available in a repository in the Open Science Framework. AC acknowledges the support of the Agence Nationale de la Recherche (ANR-17-CE28-0007 LangAge, ANR-16-DATA-0004, ANR-14-CE30-0003, ANR-17-EURE-0017); and the J. S. McDonnell Foundation Understanding Human Cognition Scholar Award. 
+
    
 
   
@@ -33,7 +32,7 @@ abstract: >
 
 
 keywords          : "phonology, non-word repetition, development"
-wordcount         : "~xxx words"
+wordcount         : "~9,000 words"
 
 bibliography      : ["nwrbib.bib"]
 
@@ -157,7 +156,8 @@ cohensd2=function(m1,sd1,m2,sd2){round((m1-m2)/sqrt((sd1^2+sd2^2)/2),3)}
 
 Children's perception and production of phonetic and phonological units continues developing well beyond the first year of life, even extending into middle childhood [e.g., @hazan2000development]. Much of the evidence for later phonological development comes through the use of nonword repetition (NWR) tasks. In a NWR task, participants hear a short word-like form that is phonologically legal but lexically meaningless in the language(s) they are learning. After hearing this non-word, the participant's task is to try to immediately and precisely repeat it. NWR scores are thought to reflect long-term phonological knowledge (to perceive the item precisely despite not having heard it before) as well as online phonological working memory (to encode the item in the interval between hearing it and saying it back) and flexible production patterns (to produce the item precisely despite not having pronounced it before). 
 
-NWR has been used to seek answers to a variety of theoretical questions, including what the links are between phonology, working memory, and the lexicon [@bowey2001nonword], and how extensively phonological constraints found in the lexicon affect online production [@gallagher2014identity]. NWR is also frequently used in applied contexts, notably as a diagnostic tool for language delays and disorders [@estes2007differences]. Since non-words can be generated in any language, it has attracted the attention of researchers working in multilingual and linguistically diverse environments, particularly in Europe [@meir2016disentangling;@is08042009language]. However, it has seldom been used outside of Europe and North America [with exceptions including @gallagher2014identity and @cristia2020infant]. Further, the languages it has been used with have historically had small to moderate phonological inventories [@maddieson2005correlating].
+NWR has been used to seek answers to a variety of theoretical questions, including what the links are between phonology, working memory, and the lexicon [@bowey2001nonword], and how extensively phonological constraints found in the lexicon affect online production [@gallagher2014identity]. NWR is also frequently used in applied contexts, notably as a diagnostic tool for language delays and disorders [@estes2007differences]. Since non-words can be generated in any language, it has attracted the attention of researchers working in multilingual and linguistically diverse environments, particularly in Europe [@meir2016disentangling;@is08042009language]. However, it has seldom been used outside of Europe and North America [with exceptions including @gallagher2014identity and @cristia2020infant]. Further, the languages it has been used with have historically had small to moderate phonological inventories [@maddieson2005correlating]. 
+
 <!--M2A: Is the motivating idea here that application to YD is of interest because it's very different from what we've look at with NWR in the past? Or is there a specific hypothesis you had in mind about how inventory size affects phonological development and, hence, NWR performance? I could come up with something, but I think you had an idea already and I don't want to step on it!-->
 
 In the present study, we use NWR to investigate the phonological development of children learning Yélî Dnye, an isolate language spoken in Papua New Guinea (PNG) that has a large and unusually dense phonological inventory. The study was designed to contribute to multiple aspects of our understanding of phonological development: First, we included a subset of non-word items with typologically rare and/or challenging sounds to ask whether these rare sounds are disadvantaged in perception and/or production, both in terms of overall repetition scores and patterns of mispronunciation. Second, we varied the length (in syllables) of non-words to investigate the impact of word length on repetition and mispronunciation; previous NWR research has shown variable effects of length between populations. Third, these data give a first impression of how this task is responded to in a rarely-studied language and cultural setting; we add to this contribution by further investigating whether there are structured sources that account for individual variation in our sample.
@@ -311,11 +311,8 @@ A Praat script [@Praat] was written to randomize this list 20 times, and split i
 
 In adapting the typical NWR procedure for this context, we balanced three desiderata: That children would not be unduly exposed to the items before they themselves had to repeat them (i.e., from other children who had participated); that children would feel comfortable doing this task with us; and that community members would feel comfortable having their children do this task with us.
 
-We ran children in batches, testing within a handful of hamlet clusters spread across the northeastern region of the island. Because space availability was limited in different ways from hamlet to hamlet, the places where elicitation happened varied across testing sites. We tested in four different sites, only making a single visit to each, conducting back-to-back testing of all eligible children present at the time of our visit in order to prevent the items from 'spreading' between children through hearsay. In the first hamlet, we tested children in five different places, with some children being tested inside a house and others tested on the veranda. The complete list of places and the ways in which they met the desiderata mentioned above can be found in the raw data, available from the online supplementary materials. Whenever children living in the same household were tested, we tried to test children in age order, from oldest to youngest, to minimize intimidation for younger household members, and always using different elicitation sets.
-<!--M2A:
-We took out the actual hamlet names, right? So what do you want to put in the metadata mentioned in the sentence:
-"The complete list of places and the ways in which they met the desiderata mentioned above can be found in the raw data, available from the online supplementary materials."
--->
+We ran children in batches, testing within a handful of hamlet clusters spread across the northeastern region of the island. Because space availability was limited in different ways from hamlet to hamlet, the places where elicitation happened varied across testing sites. We tested in four different sites, only making a single visit to each, conducting back-to-back testing of all eligible children present at the time of our visit in order to prevent the items from 'spreading' between children through hearsay. In the first hamlet, we tested children in five different places, with some children being tested inside a house and others tested on the veranda. More information is available from the online supplementary materials. Whenever children living in the same household were tested, we tried to test children in age order, from oldest to youngest, to minimize intimidation for younger household members, and always using different elicitation sets.
+
 
 We fitted the child with a headset microphone (Shure SM10A or WH20 XLR with a dynamic microphone on a headband, most children using the former) that fed into the left channel of a Tascam DR40x digital audio recorder. The headsets were designed for adult use and could not be comfortably seated on many children's heads without a more involved adjustment period. To minimize adjustment time, which was uncomfortable for some children given the proximity of the experimenter and equipment, we placed the headband on children's shoulders in these cases, carefully adjusting the microphone's placement so that it was still close to the child's mouth. A research assistant who spoke Yélî Dnye natively sat next to the child throughout the task to provide instructions and, if needed, encouragement. The research assistant coached the child throughout the task to make sure that they understood what they were expected to do. An experimenter (the first author) delivered the pre-recorded stimuli to the research assistant and the child over headphones.
 
@@ -342,7 +339,7 @@ In addition to a binary word-level exact repetition score we scored items in ter
 
 <!--M2A: So what's the final determination here, keeping in mind we're now aiming for LDR?-->
 
-Additionally, we estimated the typological frequency of all phonological segments used in the target items using the PHOIBLE cross-linguistic phonological inventory database [@phoible]. For each phone in our task, we extracted the number and percentage of languages noted to have that phone in its inventory. While PHOIBLE is an unprecedentedly comprehensive database, with phonological inventory data for over 2000 languages at time of writing, it is of course still far from complete, so estimated frequencies should be taken with a pinch of salt. In both PHOIBLE and UPSID---another large phonemic inventory database---note that nearly half of the segment types are only attested in one language (Steven Moran, personal communication; see also [web.phonetik.uni-frankfurt.de/upsid_info.html](http://web.phonetik.uni-frankfurt.de/upsid_info.html)). It is therefore unsurprising that we did not find three of our segments (/lβʲ/, /ṭp/, and /tp/) in the database. Following the general pattern that many phones only appear once cross-linguistically, even in large databases, we treat our "missing" phones as having a frequency of 1, with a (rounded) percentage of 0%.
+Additionally, we estimated the typological frequency of all phonological segments used in the target items using the PHOIBLE cross-linguistic phonological inventory database [@phoible]. For each phone in our task, we extracted the number and percentage of languages noted to have that phone in its inventory. While PHOIBLE is an unprecedentedly comprehensive database, with phonological inventory data for over 2000 languages at time of writing, it is of course still far from complete, so estimated frequencies should be taken with a pinch of salt. In both PHOIBLE and UPSID---another large phonemic inventory database---note that nearly half of the segment types are only attested in one language (Steven Moran, personal communication; see also [web.phonetik.uni-frankfurt.de/upsid_info.html](http://web.phonetik.uni-frankfurt.de/upsid_info.html)). It is therefore unsurprising that we did not find three of our segments (/lβʲ/, /ṭp/, and /tp/) in the database. Following the general pattern that many phones only appear once cross-linguistically, even in large databases, we treat these unattested phones as having a frequency of 1, with a (rounded) percentage of 0%.
 
 Finally, when describing children's patterns of errors, we take all repetitions of a given target into account. We describe the proportion of items where the change resulted in a real word (semantic errors); as well as deletions, additions, and substitutions.
 <!-- a2m in the results, I put analyses based on all as well as just on first attempt. If we do just the latter, then come back to change this para -->
@@ -510,9 +507,9 @@ freq_cor=cor.test(segments$pc,log(segments$freq_corpus_types))
 ```
 
 
-We next checked whether the association between whole-item NWR scores and cross-linguistic phone frequence could actually be due to frequency of the sounds within the language: One can suppose that sounds that occur more frequently across languages are also more frequent within a language, and therefore may be easier for children to represent and repeat. We estimated frequency of the phones present in the stimuli in a corpus of child-centered recordings [@casillas2020early] by counting the number of word types in which they occurred, and applied the natural logarithm.[^2] As before, unattested sounds were not considered (i.e., they were declared NA so that they do not count for analyses). Phone frequencies estimated from this corpus were correlated with cross-linguistic phone frequencies (r(`r freq_cor$parameter`)=`r round(freq_cor$estimate,3)`, p `r pval.display(round(freq_cor$p.value,3))`). Moreover, averaging across items and participants, the Pearson correlation between scaled average corpus phone frequency and whole-item NWR scores was r = `r round(cor.test(cor_fr_tab$corf,cor_fr_tab$Word)$estimate,3)`. Therefore, we fit another mixed logistic regression, this time declaring as fixed effects both scaled cross-linguistic and corpus frequencies (averaged across all attested phones within each stimulus item), in addition to age. As before, the model contained random slopes for both child ID and target. In this model, both cross-linguistic frequency (ß = `r both_coeff["avg_fr_s","Estimate"]`, SE ß = `r both_coeff["avg_fr_s","Std. Error"]`, p `r pval.display(both_coeff["avg_fr_s","Pr(>|z|)"])`) and age (ß = `r both_coeff["age.rounded_s","Estimate"]`, SE ß = `r both_coeff["age.rounded_s","Std. Error"]`, p `r pval.display(both_coeff["age.rounded_s","Pr(>|z|)"])`) were significant predictors of whole-item  NWR scores, but corpus frequency (ß = `r both_coeff["avg_fr_cor_ty_s","Estimate"]`, SE ß = `r both_coeff["avg_fr_cor_ty_s","Std. Error"]`, p `r pval.display(both_coeff["avg_fr_cor_ty_s","Pr(>|z|)"])`) was not.
+We next checked whether the association between whole-item NWR scores and cross-linguistic phone frequence could actually be due to frequency of the sounds within the language: One can suppose that sounds that occur more frequently across languages are also more frequent within a language, and therefore may be easier for children to represent and repeat. We estimated frequency of the phones present in the stimuli in a corpus of child-centered recordings [@casillas2020early] by counting the number of word types in which they occurred, and applied the natural logarithm.[^2] Here, unattested sounds were not considered (i.e., they were declared NA so that they do not count for analyses). Phone frequencies estimated from this corpus were correlated with cross-linguistic phone frequencies (r(`r freq_cor$parameter`)=`r round(freq_cor$estimate,3)`, p `r pval.display(round(freq_cor$p.value,3))`). Moreover, averaging across items and participants, the Pearson correlation between scaled average corpus phone frequency and whole-item NWR scores was r = `r round(cor.test(cor_fr_tab$corf,cor_fr_tab$Word)$estimate,3)`. Therefore, we fit another mixed logistic regression, this time declaring as fixed effects both scaled cross-linguistic and corpus frequencies (averaged across all attested phones within each stimulus item), in addition to age. As before, the model contained random slopes for both child ID and target. In this model, both cross-linguistic frequency (ß = `r both_coeff["avg_fr_s","Estimate"]`, SE ß = `r both_coeff["avg_fr_s","Std. Error"]`, p `r pval.display(both_coeff["avg_fr_s","Pr(>|z|)"])`) and age (ß = `r both_coeff["age.rounded_s","Estimate"]`, SE ß = `r both_coeff["age.rounded_s","Std. Error"]`, p `r pval.display(both_coeff["age.rounded_s","Pr(>|z|)"])`) were significant predictors of whole-item  NWR scores, but corpus frequency (ß = `r both_coeff["avg_fr_cor_ty_s","Estimate"]`, SE ß = `r both_coeff["avg_fr_cor_ty_s","Std. Error"]`, p `r pval.display(both_coeff["avg_fr_cor_ty_s","Pr(>|z|)"])`) was not.
 
-<!--M2A: Above it says "As before, unattested sounds were not considered" -- well now we have taken care of PHOIBLE unattested sounds with a frequency of 1. Do we need to change this?-->
+
 
 [^2]: We also carried out this analysis using token phone frequency, but this measure was not correlated with whole-item NWR scores, and therefore the fact that it did not explain away the predictive value of cross-linguistic phone frequency was less informative than the relationship discussed in the main text, with type frequencies.
 
@@ -662,9 +659,7 @@ As for substitutions, it was as common for a nasal vowel to be produced as an or
 
 Finally, we looked into the frequency with which mispronunciations resulted in real words. In fact, two thirds of incorrect repetitions were recognizable as real words or phrases in Yélî Dnye or English: `r round(sum(!is.na(trnsc.inc$meaning) & trnsc.inc$meaning != "0")/sum(!is.na(trnsc.inc$mispronunciation))*100)`%. This type of analysis is seldom reported---we could only find one comparison point: @castro1998 found that illiterate Portuguese adults' NWR mispronunciations resulted in real words in `r round(53/475*100,2)`% of cases, whereas literate participants did so in only `r round(2/117*100,2)`% of cases. The percentage we observe here is much higher than reported in Castro and colleagues' study, but we do not know whether age, language, or even test structure explains this difference.
 
-<!--M2A: castro1998 is missing from bib. is it this one?:
-https://academic.oup.com/brain/article/121/6/1053/280348
--->
+
 
 ### NWR scores as a function of item length 
 
@@ -754,57 +749,11 @@ Last but not least, we investigated whether birth order might affect NWR scores,
 
 While NWR can, in theory, be used to test a variety of questions about phonological development in any language, previous work has been primarily limited to a handful of related languages spoken in urban, industrialized contexts. The present study shows that, not only can NWR be adapted for very different populations than have previously been tested, but that effects of age and typological frequency may strongly influence phonological development across these diverse settings, while effects of item length, participant gender, maternal education, and birth order, may either have little impact on this facet of language development or have an impact that vaies depending on the linguistic, cultural, and sociodemographic properties of the population under study. Because these latter predictors strongly relate to other language outcomes, the present findings raise the issue of why NWR would pattern differently, what that could tell us about the relationship between lexical development, phonological development, and the input environment and, last but not least, what is implied about the joint applicability of these outcome measures as a diagnostic indicator for language delays and disorders. In the meanwhile, we take the present findings as robustly supporting the idea that phonological development continues well past early childhood and as yielding preliminary support for a connection between individual learners and global language patterns when it comes to acoustic and articulatory markedness.
 
-<!--
-4. General prediction: Non-monolingual Yélî children have lower scores than monolingual ones when tested on the society-dominant language (we did not test any non-dominant language) 
-
-M2A: or just because they're acquiring two phonologies and so show slightly delayed linguistic development, in parallel with vocab development stuff; we don't have data on their dominant language, but i guess we can assume it's YD for most kids---i'm sure there are exceptions!)
-
-ac2mc I added "society-" because that's what I meant (we didn't get proportions of time in which they hear YD versus other languages); I didn't add anything about why this would come out like this or not here, but I'll add this -- although I think the evidence on that is mixed (ie no strong evidence that learning 2 phonologies sets you back)
-
-M2A: I'll take your word on the mixed evidence! I'm certainly not up to date in this domain. We don't really have enough kids (non-monoling = 6 kids) to investigate this anyway, which I think is also why you ultimately don't include it in the analyses of individual variation in NWR score. I'm therefore not going to include it in the discussion draft.
-
----
-
-4. Local prediction: Anecdotally Yélî children grow up in close-knitted communities and thus may receive significant portions of their language input from people not in their nuclear family 
-
-M2A: definitely almost all kin; 5k of them
-
-ac2mc I'm not sure this is how bio anthropologists think about kin; because it's about how you attribute resources to boost your genes' chances of being passed on relative to those of others in the same space. So my guess is that there is still a difference between nuclear family and not. Rewrote kin -> nuclear family
-
-M2A: I see what you mean! I wouldn't, however, directly apply this broad theory about genetic transmission to understanding the specific Rossel context. I'm really very unconvinced that there is the same kind of hard division between nuclear and non-nuclear family on Rossel wrt daily resources, caregiving, and even ceremonial and some land rights things. I think the real question being raised here is about the specific relevance the distribution of linguistic input over family members has for kids' language development. We're really too far from being able to groundedly talk about that for my comfort.
-
-
-(or at least from people other than their mothers, who tend to be the non-native speakers). If so, the difference between monolinguals and not monolinguals may be smaller than that found in other work
-
-M2A: maybe it'd be more useful to try and estimate the number of non-Y moms who live in each hamlet where testing is taking place?)
-
-ac2mc not sure it's worth the effort, in any case other female adults are almost certain to have very little impact on the target child... Perhaps I'm not saying something very clearly?
-
-M2A: In my experience most of the non-Rossel moms don't really speak Rossel to their kids at all (though they use some phrases and have some receptive knowledge)---there are exceptions of course! I don't think what you're saying is unclear, I'm just trying to wrap my head around what is being implied in some of the text and also doing a self-check for whether each of these implications is really meaningfully relevant in the Rossel context. Sorry, that probably feels like turning us in circles a bit!
-
-
-. That said, one recent study on the same population shows that most child-directed input in the first 2 years does come from the mother 
-
-M2A: i can get you actual estimates for this for YD; let's go with that instead!
-
-ac2mc I think I meant your own paper! added "on the same population "
-
-M2A: Heh yeah I know! I mean that, buried in my annotations, is also information about how often the TCDS in Casillas et al. (2020) comes from the mother vs. others. Right now the paper doesn't make this claim, it only talks about speech from women. So we could in theory extract actual input estimates from the mother. But I think that's moot since none of this is really pertinent to the discussion anymore.
-
-
-, so in so far as this input has a crucial formational role, then there may still be a score difference between these two groups.
-
-4. We don't see a difference
-
-M2A: Not currently tested as far as I can see (?)
-
--->
-
 \newpage
 
 ## Acknowledgments
 
-We are grateful to the individuals who participated in the study. The collection and annotation of these recordings was made possible by Ndapw:éé Yidika, Taakêmê Ńamono, and Y:aaw:aa Pikuwa; with thanks also to the PNG National Research Institute, and the Administration of Milne Bay Province AC acknowledges financial and institutional support from Agence Nationale de la Recherche (ANR-17-CE28-0007 LangAge, ANR-16-DATA-0004 ACLEW, ANR-14-CE30-0003 MechELex, ANR-17-EURE-0017) and the J. S. McDonnell Foundation Understanding Human Cognition Scholar Award. MC acknowledges financial support from an NWO Veni Innovational Scheme grant (275-89-033).
+We are grateful to the individuals who participated in the study. The collection and annotation of these recordings was made possible by Ndapw:éé Yidika, Taakêmê Ńamono, and Y:aaw:aa Pikuwa; with thanks also to the PNG National Research Institute, and the Administration of Milne Bay Province. AC acknowledges financial and institutional support from Agence Nationale de la Recherche (ANR-17-CE28-0007 LangAge, ANR-16-DATA-0004 ACLEW, ANR-14-CE30-0003 MechELex, ANR-17-EURE-0017) and the J. S. McDonnell Foundation Understanding Human Cognition Scholar Award. MC acknowledges financial support from an NWO Veni Innovational Scheme grant (275-89-033).
 
 
 # References
