@@ -35,8 +35,6 @@
 "fullcode"	whether the item was fullcoded (ignore)
 "Where"	precise location of testing
 "Village.anon"	ID village of testing
-"DOB.ISO"	date of birth in iso
-"dob"	date of birth, another representation
 "test.1"	ignore
 "age.exact"	precise age after checks
 "age.rounded"	age in months"type"             practice or by length (1-4 syllables)
