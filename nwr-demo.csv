@@ -1,0 +1,56 @@
+"","rown","ID","included","Age","Sex","birthOrder","familyID","notes_familyID","monolingual","matEd","Cond","Date","test","Time","File","fastcode","fullcode","Where","Village.anon","test.1","age.exact","age.rounded"
+"1",6,"c75","didnêt repeat",NA,"G",NA,"k c75",NA,NA,NA,"4a",20190827,"8/27/19","16:00",NA,NA,"","on veranda (in public)","hamlet1","8/27/19",NA,NA
+"2",9,"c78","too old",NA,"G",NA,"k c78",NA,NA,NA,"5a",20190827,"8/27/19","16:38","180101_0033S12",NA,"yes","on veranda (in public)","hamlet1","8/27/19",NA,NA
+"3",1,"c70","yes",5,"G",2,"2","old_familyID","yes",8,"1a",20190826,"8/26/19","15:28","190825_0021",NA,"yes","under house (in public)","hamlet1","8/26/19",5.194805195,5.19480519480519
+"4",2,"c71","yes",5,"G",4,"3","old_familyID","no",10,"2a",20190826,"8/26/19","15:40","190825_0022",NA,"yes","in house","hamlet1","8/26/19",5.799043062,5.79904306220096
+"5",3,"c72","yes",4,"B",5,"3","old_familyID","no",10,"2b",20190826,"8/26/19","15:47","190825_0023",NA,"yes","in house","hamlet1","8/26/19",4.801093643,4.80109364319891
+"6",4,"c73","yes",6,"G",4,"9","old_familyID","yes",8,"3a",20190826,"8/26/19","16:06","190825_0024",NA,"yes","in house","hamlet1","8/26/19",6.323991798,6.32399179767601
+"7",5,"c74","yes",5,"B",5,"9","old_familyID","yes",8,"3b",20190826,"8/26/19","16:12","190825_0025",NA,"yes","in house","hamlet1","8/26/19",5.096377307,5.09637730690362
+"8",7,"c76","yes",10,"G",4,"11","old_familyID","yes",6,"4a",20190827,"8/27/19","","180101_0031S12",NA,"yes","on veranda (in public)","hamlet1","8/27/19",10.19822283,10.1982228298018
+"9",8,"c77","yes",7,"B",5,"11","old_familyID","yes",6,"4b",20190827,"8/27/19","","180101_0032S12",NA,"yes","on veranda (in public)","hamlet1","8/27/19",7.811346548,7.81134654818865
+"10",10,"c79","yes",7,"B",1,"NA-14b","interpolated_old_familyID","yes",10,"6a",20190827,"8/27/19","16:51","180101_0034S12",NA,"yes","on veranda (in public)","hamlet1","8/27/19",7.499658237,7.49965823650034
+"11",11,"c80","yes",7,"B",3,"17","old_familyID","no",6,"5b",20190827,"8/27/19","","180101_0035S12",NA,"yes","on veranda (in public)","hamlet1","8/27/19",7.371155161,7.37115516062885
+"12",12,"c81","yes",9,"G",2,"17","old_familyID","no",6,"6b",20190827,"8/27/19","17:12","180101_0036S12",NA,"yes","on veranda (in public)","hamlet1","8/27/19",9.099111415,9.09911141490089
+"13",13,"c82","yes",8,"G",1,"40","not_found","yes",8,"7a",20190827,"8/27/19","","180101_0037S12","names","yes","on veranda (in public)","hamlet1","8/27/19",NA,NA
+"14",14,"c83","yes",6,"B",2,"40","not_found","yes",8,"7b",20190827,"8/27/19","17:25","180101_0038S12","names","","in house","hamlet1","8/27/19",NA,NA
+"15",17,"c86","didnêt repeat",5,"G",NA,"k c86",NA,NA,NA,"9a",20190828,"8/28/19","10:27","180101_0041S12",NA,"","in house","hamlet2","8/28/19",NA,NA
+"16",23,"c92","spoke too softly",NA,"G",NA,"","","",NA,"12a",20190828,"8/28/19","11:56","180101_0047S12",NA,"","in house","hamlet2","8/28/19",NA,NA
+"17",15,"c84","yes",5,"B",4,"NA-23b","interpolated_old_familyID","yes",10,"8a",20190828,"8/28/19","10:05","180101_0039S12","names","","in house","hamlet2","8/28/19",5.52836637,5.52836637047163
+"18",16,"c85","yes",6,"B",4,"23","old_familyID","yes",6,"8b",20190828,"8/28/19","","180101_0040S12","names","","in house","hamlet2","8/28/19",6.105263158,6.10526315789474
+"19",18,"c87","yes",4,"B",6,"27","old_familyID","yes",10,"9b",20190828,"8/28/19","10:40","180101_0042S12","names","","in house","hamlet2","8/28/19",4.978810663,4.97881066302119
+"20",19,"c88","yes",6,"G",4,"27","old_familyID","yes",10,"10a",20190828,"8/28/19","10:49","180101_0043S12","names","","in house","hamlet2","8/28/19",6.717703349,7.28366370471634
+"21",20,"c89","yes",5,"G",5,"27","old_familyID","yes",10,"10a",20190828,"8/28/19","11am","180101_0044S12","names","","in house","hamlet2","8/28/19",5.779904306,5.7799043062201
+"22",21,"c90","yes",7,"G",3,"18","old_familyID","yes",8,"11a",20190828,"8/28/19","11:41","180101_0045S12","names","","in house","hamlet2","8/28/19",7.253588517,7.25358851674641
+"23",22,"c91","yes",6,"G",4,"18","old_familyID","yes",8,"11b",20190828,"8/28/19","11:47","180101_0046S12","names","","in house","hamlet2","8/28/19",6.370471634,6.37047163362953
+"24",24,"c93","yes",3,"G",5,"18","old_familyID","yes",8,"13a",20190828,"8/28/19","12:08","180101_0048S12","names","","in house","hamlet2","8/28/19",3.91797676,3.91797676008202
+"25",25,"c94","yes",7,"B",2,"21","old_familyID","yes",10,"13b",20190828,"8/28/19","12:17","180101_0049S12","names","","in house","hamlet2","8/28/19",7.354750513,7.35475051264525
+"26",26,"c95","yes",5,"B",1,"39","old_familyID","yes",8,"12b",20190828,"8/28/19","12:27","180101_0050S12","names","","in house","hamlet2","8/28/19",5.112781955,5.11278195488722
+"27",32,"c100","spoke too softly",3,"G",NA,"k c100",NA,NA,NA,"14a",20190829,"8/29/19","09:56","190829_0056S12","","","below central house (public)","hamlet3","8/29/19",NA,NA
+"28",34,"c102","spoke too softly",6,"G",NA,"k c102",NA,NA,NA,"14b",20190829,"8/29/19","10:10","190829_0058S12","no, too soft","","below central house (public)","hamlet3","8/29/19",NA,NA
+"29",31,"c99","yes",7,"B",NA,"41","not_found","no",6,"13b",20190829,"8/29/19","ended 9:53","190829_0055S12","names","","below central house (public)","hamlet3","8/29/19",11.03212577,11.0321257689679
+"30",27,"c95b","didnêt repeat",NA,"G",NA,"","","",NA,"13a",20190829,"8/29/19","","190829_0051S12","","","below central house (public)","hamlet3","8/29/19",NA,NA
+"31",37,"c105","yes",13,"B",NA,"k c105","not_found","no",6,"15b",20190829,"8/29/19","","190829_0061S12","names","","on veranda (semi-public, small audience, included other children tested)","hamlet3","8/29/19",12.85850991,12.8585099111415
+"32",38,"c106","yes",7,"B",1,"36","old_familyID","yes",8,"16a",20190829,"8/29/19","15:34","190829_0062S12","names","","on veranda (semi-public, small audience, included other children tested)","hamlet3","8/29/19",7.207108681,7.20710868079289
+"33",33,"c101","didnêt repeat",3,"B",NA,"","","",NA,"14b",20190829,"8/29/19","10:04","190829_0057S12",NA,"","below central house (public)","hamlet3","8/29/19",NA,NA
+"34",39,"c107","yes",7,"B",1,"30","old_familyID","yes",10,"16b",20190829,"8/29/19","ended 15:41","190829_0063S12","names","","on veranda (semi-public, small audience, included other children tested)","hamlet3","8/29/19",7.606288448,7.60628844839371
+"35",40,"c108","yes",7,"B",2,"34","old_familyID","yes",10,"17a",20190829,"8/29/19","15:42","190829_0064S12","names","","on veranda (semi-public, small audience, included other children tested)","hamlet3","8/29/19",7.475051265,7.47505126452495
+"36",41,"c109","yes",5,"B",NA,"k c109","not_found","no",10,"17b",20190829,"8/29/19","15:50","190829_0065S12","names","","on veranda (semi-public, small audience, included other children tested)","hamlet3","8/29/19",5.640464798,5.64046479835954
+"37",42,"c110","yes",5,"B",1,"33","old_familyID","yes",8,"18a",20190829,"8/29/19","ended 16:03","190829_0066S12","names","","on veranda (semi-public, small audience, included other children tested)","hamlet3","8/29/19",5.241285031,5.24128503075871
+"38",35,"c103","spoke too softly",4,"B",NA,"","","",NA,"15a",20190829,"8/29/19","finished 10:28","190829_0059S12","ones","","below central house (public)","hamlet3","8/29/19",NA,NA
+"39",36,"c104","didnêt repeat",5,"B",NA,"","","",NA,"15b",20190829,"8/29/19","","190829_0060S12",NA,"","below central house (public)","hamlet3","8/29/19",NA,NA
+"40",28,"c96","didnêt repeat",NA,"B",NA,"","","",NA,"13a",20190829,"8/29/19","09:23","190829_0052S12","","","below central house (public)","hamlet3","8/29/19",NA,NA
+"41",29,"c97","spoke too softly",5,"B",NA,"","","",NA,"13a",20190829,"8/29/19","","190829_0053S12","partial names","","below central house (public)","hamlet3","8/29/19",NA,NA
+"42",30,"c98","didnêt repeat",NA,"B",NA,"","","",NA,"13b",20190829,"8/29/19","","190829_0054S12","","","below central house (public)","hamlet3","8/29/19",NA,NA
+"43",43,"c111","yes",9,"B",NA,"k c111","not_found","yes",10,"1a",20190830,"8/30/19","13:28","190830_0067S12","names","","on veranda (semi-public, small audience, included other children tested)","hamlet4","8/30/19",9.525632262,9.52563226247437
+"44",44,"c112","yes",7,"G",NA,"k c112","not_found","yes",7,"9a",20190830,"8/30/19","13:32","190830_0068S12","names","","on veranda (semi-public, small audience, included other children tested)","hamlet4","8/30/19",7.406698565,7.4066985645933
+"45",46,"c114","yes",8,"B",NA,"k c114","not_found","yes",12,"12a",20190830,"8/30/19","ended 13:49","190830_0070S12","names","","on veranda (semi-public, small audience, included other children tested)","hamlet4","8/30/19",8.308954204,8.30895420369105
+"46",47,"c115","yes",7,"B",NA,"k c115","not_found","yes",8,"19a",20190830,"8/30/19","13:52","190830_0071S12","names","","on veranda (semi-public, small audience, included other children tested)","hamlet4","8/30/19",NA,7.12781954887218
+"47",48,"c116","yes",8,"G",NA,"k c116","not_found","yes",10,"19a",20190830,"8/30/19","ended 14:02","190830_0072S12","names","","on veranda (semi-public, small audience, included other children tested)","hamlet4","8/30/19",8.516746411,8.51674641148325
+"48",49,"c117","yes",7,"G",NA,"k c117","not_found","yes",6,"20a",20190830,"8/30/19","","190830_0073S12","names","","on veranda (semi-public, small audience, included other children tested)","hamlet4","8/30/19",7.543403964,7.5434039644566
+"49",50,"c118","yes",5,"B",NA,"k c118","not_found","yes",6,"20b",20190830,"8/30/19","14:17","190830_0075S12","names","","on veranda (semi-public, small audience, included other children tested)","hamlet4","8/30/19",5.271360219,5.27136021872864
+"50",51,"c119","yes",7,"B",NA,"k c119","not_found","yes",8,"18a",20190830,"8/30/19","14:28","190830_0078S12","names","","on veranda (semi-public, small audience, included other children tested)","hamlet4","8/30/19",NA,6.76965140123035
+"51",52,"c120","yes",8,"B",NA,"k c120","not_found","yes",8,"5a",20190830,"8/30/19","14:42","190830_0079S12","names","","on veranda (semi-public, small audience, included other children tested)","hamlet4","8/30/19",8.032809296,8.03280929596719
+"52",53,"c121","yes",8,"B",NA,"k c121","not_found","yes",6,"1a",20190830,"8/30/19","end 14:54","190830_0080S12","names","","on veranda (semi-public, small audience, included other children tested)","hamlet4","8/30/19",8.601503759,8.6015037593985
+"53",54,"c122","yes",6,"B",NA,"k c122","not_found","yes",6,"2b",20190830,"8/30/19","end 14:59","190830_0081S12","names","","on veranda (semi-public, small audience, included other children tested)","hamlet4","8/30/19",6.884483937,6.88448393711552
+"54",45,"c113","didnêt repeat",NA,"B",NA,"","","",NA,"12a",20190830,"8/30/19","13:41","190830_0069S12","","","on veranda (semi-public, small audience, included other children tested)","hamlet4","8/30/19",NA,NA
+"55",55,"c123","yes",7,"B",NA,"k c123","not_found","yes",8,"3a",20190830,"8/30/19","end 15:04","190830_0082S12","names","","on veranda (semi-public, small audience, included other children tested)","hamlet4","8/30/19",7.942583732,7.94258373205742
