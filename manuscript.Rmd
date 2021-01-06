@@ -263,9 +263,9 @@ A first list of candidate items was generated during a trip to the island in 201
 
 A second list of candidate items was generated in a second trip to the island in 2019, when data were collected, by selecting complex consonants and systematically crossing them with all the vowels in the Yélî Dnye inventory to produce consonant-vowel monosyllabic forms. As before, items were automatically excluded if they appeared in the dictionary. Additionally, since perceiving vowel length in isolated monosyllables is challenging, any item that had a short/long lexical neighbor was excluded. Because there is still much to discover about the phonology and phonetics of Yélî Dnye [@levinsonYDgrammar], it was also possible that we initially generated items with illegal, but currently undocumented constraints. Therefore, we made sure that the precise consonant-vowel sequence occurred in some real word in the dictionary (i.e., that there was a longer word included the monosyllable as a subsequence). These candidates were then presented to one informant, for a final check that they did not mean anything. Together with the 2018 selection, they were recorded, based on their orthographic forms, using a Shure SM10A XLR dynamic headband microphone and an Olympus WS-832 stereo audio recorder (using an XLR to mini-jack adapter) by the same informant, monitored by the second author for clear production of the phonological target. The complete recorded list was finally presented to two more informants, who were able to repeat all the items and who confirmed there were no real words present. Despite these checks, one monosyllable was ultimately frequently identified as a real word in the resulting data (intended "yî" /yɯ/; identified as "yi" /yi/, *tree*). This item is removed from the analyses below.
 
-The final list includes: three practice items; 20 monoysllables containing sounds that are less frequent in the world's languages than singleton plosives; 8 bisyllables; 12 trisyllables; and 4 quadrisyllables (see Table 2).
+The final list includes: three practice items; 20 monoysllables containing sounds that are less frequent in the world's languages than singleton plosives; 8 bisyllables; 12 trisyllables; and 4 quadrisyllables (see Table \@ref(tab:tabstims)).
 
-```{r tab2-stims, results = "asis"}
+```{r tabstims, results = "asis"}
 #add orthographic representations targets & other stims chars
 stims.tbl <- read.xlsx("stimuli.xlsx") %>%
   arrange(factor(type, levels = c("practice", "1", "2", "3", "4"))) %>%
@@ -340,7 +340,7 @@ Previous work typically reports two scores: a binary word-level exact repetition
 
 Additionally, we estimated the typological frequency of all phonological segments used in the target items using the PHOIBLE cross-linguistic phonological inventory database [@phoible]. For each phone in our task, we extracted the number and percentage of languages noted to have that phone in its inventory. While PHOIBLE is an unprecedentedly comprehensive database, with phonological inventory data for over 2000 languages at the time of writing, it is of course still far from complete, which may mean that frequencies are estimates rather than precise descriptors). Note that nearly half of the segment types are only attested in one language (Steven Moran, personal communication). Extrapolating from this observation, we treat the three segments in our stimuli that were unattested in PHOIBLE (/lβʲ/, /ṭp/, and /tp/) as having a frequency of 1 (i.e., appearing in one language), with a (rounded) percentile of 0% (i.e., its cross-linguistic percentile is zero).
 
-Finally, when describing children's patterns of errors, we take all repetitions of a given target into account. We describe the proportion of items where the change resulted in a real word (semantic errors); as well as deletions, insertions, and substitutions.
+
 
 
 ### Participants
@@ -449,7 +449,7 @@ colnames(overall)<-c("ID","Word","Phoneme","NLD","Sex","Age","BrthO","matEd")
 
 Taking into account only the first attempts, we derived overall averages across all items. The overall NWR score was M = `r round(mean(overall$Word))`% (SD = `r round(sd(overall$Word))`%), Cohen's d = `r cohensd(mean(overall$Word),sd(overall$Word))`. The phoneme-based normalized Levenshtein distance was  M = `r round(mean(overall$NLD))`% (SD = `r round(sd(overall$NLD))`%), meaning that about a fifth of phonemes were substituted, inserted, or deleted.
 
-
+We also looked into the frequency with which mispronunciations resulted in real words. In fact, two thirds of incorrect repetitions were recognizable as real words or phrases in Yélî Dnye or English: `r round(sum(!is.na(trnsc.inc$meaning) & trnsc.inc$meaning != "0")/sum(!is.na(trnsc.inc$mispronunciation))*100)`%. This type of analysis is seldom reported. We could only find one comparison point: @castro1998illiterate found that illiterate European Portuguese adults' NWR mispronunciations resulted in real words in `r round(53/475*100,2)`% of cases, whereas literate participants did so in only `r round(2/117*100,2)`% of cases. The percentage we observe here is much higher than reported in Castro and colleagues' study, but we do not know whether age, language, or even test structure explains this difference.
 
 ### NWR as a function of cross-linguistic phone frequency
 
@@ -584,23 +584,62 @@ mat_pc=round(match_tab/denom_vec*100,3)
 #all numbers ... sum to 100 across sub, del, mat at the TARGET level 
 #NOTE! if you round above, then these don't sum to 100, so don't round very much...
 #rowSums(sub_pc, na.rm=T) + del_pc + mat_pc
+
+
 ```
 
 
 
-Next, we investigated patterns of deletion and substitution (as insertion was not attested), this time looking at all attempts so as to base our generalizations on more data. Deletions were very rare: there were only `r sum(del_tab[c(oralVs,nasalVs)])` instances of deleted vowels (~`r mean(del_pc[c(oralVs,nasalVs)],na.rm=T)`% of all vowel targets), and `r sum(del_tab[c(simplexCs,complexCs)])` instances of deleted consonants (~`r mean(del_pc[c(simplexCs,complexCs)],na.rm=T)`% of all consonant targets). We therefore focus our qualitative description here on substitutions: There were `r dim(sub_bank)[1]` cases of substitutions, ~`r round(dim(sub_bank)[1]/(dim(del_bank)[1] + dim(sub_bank)[1] + dim(match_bank)[1])*100,2)` of the `r dim(del_bank)[1] + dim(sub_bank)[1] + dim(match_bank)[1]` phones found collapsing across all children and target words, so that substitutions constituted the frank majority of incorrect phones (~`r round(dim(sub_bank)[1]/(dim(del_bank)[1] + dim(sub_bank)[1] )*100,2)` of unmatched phones). 
-
-<!-- reminder: this table has target as rows, realization as columns  -->
-Is it the case that cross-linguistically less common phones are more frequently substituted by more common ones than vice versa? We found that errors involving nasal vowel targets tended to result in a change in nasality (`r sum(sub_tab[nasalVs,oralVs])` nasal targets produced as oral, ~`r round(sum(sub_tab[nasalVs,oralVs])/sum(sub_tab[nasalVs,])*100)`% of substitutions for nasal vowel target phones) more frequently than in a change in quality (`r sum(sub_tab[nasalVs,nasalVs])` nasal targets produced as a different nasal vowel, ~`r round(sum(sub_tab[nasalVs,nasalVs])/sum(sub_tab[nasalVs,])*100)`% of substitutions for nasal targets). The opposite was true for oral vowels: there were `r sum(sub_tab[oralVs,nasalVs])` oral targets produced as nasal, constituting ~`r round(sum(sub_tab[oralVs,nasalVs])/sum(sub_tab[oralVs,])*100)`% of substitutions for oral target phones; compared to `r sum(sub_tab[oralVs,oralVs])` oral targets produced as a different oral vowel, ~`r round(sum(sub_tab[oralVs,oralVs])/sum(sub_tab[oralVs,])*100)`% of substitutions for oral targets). 
-
-**STOPPED HERE**
-
-Among consonants, complex consonants were occasionally substituted by simpler ones (specifically `r print.phone.list(complexCs.ipa)` as `r print.phone.list(simplexCs.ipa)`), `r sum(sub_tab[complexCs,simplexCs])` times, in approximately `r mean(sub_pc[complexCs,simplexCs],na.rm=T)`% of all complex consonant targets. Interestingly, simple consonants were sometimes also substituted by complex ones; this happened `r sum(sub_tab[simplexCs,complexCs])` times, in approximately `r mean(sub_pc[complexCs,simplexCs],na.rm=T)`% of all simple consonant targets. Finally, simple consonants were mispronounced as other simple consonants (`r sum(sub_tab[simplexCs,simplexCs])` instances, ~`r mean(sub_pc[simplexCs,simplexCs],na.rm=T)`% of all simple consonant targets) and complex consonants as other complex consonants (`r sum(sub_tab[complexCs,complexCs])` instances, ~`r mean(sub_pc[complexCs,complexCs],na.rm=T)`% of all complex consonant targets). Note that the substitutions included phones that are not native to Yélî Dnye but do occur in English (e.g., [tʃ]); as these data come from careful transcriptions by a native Yélî Dnye speaker who is very fluent in English, we take these segmental substitutions faithfully as an indication that several of our participants have mastered production of some English phones, possibly produced within whole English word forms.
+Is it the case that cross-linguistically less common and/or more complex phones are more frequently mispronounced, and more frequently substituted by more common ones than vice versa? To answer this question, we investigated patterns of deletion and substitution (as insertion was not attested), this time looking at all attempts so as to base our generalizations on more data. Deletions were very rare: there were only `r sum(del_tab[c(oralVs,nasalVs)])` instances of deleted vowels (~`r mean(del_pc[c(oralVs,nasalVs)],na.rm=T)`% of all vowel targets), and `r sum(del_tab[c(simplexCs,complexCs)])` instances of deleted consonants (~`r mean(del_pc[c(simplexCs,complexCs)],na.rm=T)`% of all consonant targets). We therefore focus our qualitative description here on substitutions: There were `r dim(sub_bank)[1]` cases of substitutions, ~`r round(dim(sub_bank)[1]/(dim(del_bank)[1] + dim(sub_bank)[1] + dim(match_bank)[1])*100,2)` of the `r dim(del_bank)[1] + dim(sub_bank)[1] + dim(match_bank)[1]` phones found collapsing across all children and target words, so that substitutions constituted the frank majority of incorrect phones (~`r round(dim(sub_bank)[1]/(dim(del_bank)[1] + dim(sub_bank)[1] )*100,2)` of unmatched phones). 
 
 
 
+```{r tab-v,results="asis"}
 
-Finally, we looked into the frequency with which mispronunciations resulted in real words. In fact, two thirds of incorrect repetitions were recognizable as real words or phrases in Yélî Dnye or English: `r round(sum(!is.na(trnsc.inc$meaning) & trnsc.inc$meaning != "0")/sum(!is.na(trnsc.inc$mispronunciation))*100)`%. This type of analysis is seldom reported. We could only find one comparison point: @castro1998illiterate found that illiterate European Portuguese adults' NWR mispronunciations resulted in real words in `r round(53/475*100,2)`% of cases, whereas literate participants did so in only `r round(2/117*100,2)`% of cases. The percentage we observe here is much higher than reported in Castro and colleagues' study, but we do not know whether age, language, or even test structure explains this difference.
+#vowel changes
+mytab=rbind(
+  #OK --                      nasal change --                 qual change
+  cbind(sum(match_tab[nasalVs]),sum(sub_tab[nasalVs,oralVs]),sum(sub_tab[nasalVs,nasalVs])), #nasal target
+  cbind(sum(match_tab[oralVs]),sum(sub_tab[oralVs,nasalVs]),sum(sub_tab[oralVs,oralVs])) #oral target
+)
+mytab=data.frame(mytab)
+mytab$pc_corr=round(mytab[,1]/rowSums(mytab)*100,1)
+mytab$pc_nas_err=round(mytab[,2]/rowSums(mytab)*100,1)
+mytab$pc_qual_err=round(mytab[,3]/rowSums(mytab)*100,1)
+rownames(mytab)<-c("Nasal Target", "Oral Target")
+colnames(mytab)<-c("Correct","Nasal Err.","Qual. Err","% Corr.","% Nasal Err.","% Qual Err.")
+
+kable(mytab,
+  "latex", booktabs = T,
+  caption="Number (and percent) of vowel targets that were correctly repeated or substituted, as a function of vowel type, and whether the error resulted in a nasality change (Nasal Err.) or only a quality change (Qual. Err.) Deletion errors are not shown.")
+
+```
+
+
+We approached our question regarding potential asymmetries in errors for different types of sounds in vowels by looking at the proportion of vowel phones that were correctly repeated or not separately for nasal and oral vowels, distinguishing errors that included a change of nasality (and may or may not have preserved quality), versus those that preserved nasality (but were therefore a quality error), shown in Table \@ref(tab:tab-v). We found that errors involving nasal vowel targets were more common than those involving oral vowels (`r round(100-mytab["Nasal Target","% Corr."],1)` versus `r round(100-mytab["Oral Target","% Corr."],1)`). Additionally, errors in which a nasal vowel lost its nasal character were 10 times more common than those in which an oral vowel was produced as a nasal one. 
+
+```{r tab-c,results="asis"}
+
+#consnant changes
+mytab=rbind(
+  #OK --                      complexity change --                 other change
+  cbind(sum(match_tab[complexCs]),sum(sub_tab[complexCs,simplexCs]),sum(sub_tab[complexCs,complexCs])), #nasal target
+  cbind(sum(match_tab[simplexCs]),sum(sub_tab[simplexCs,complexCs]),sum(sub_tab[simplexCs,simplexCs])) #oral target
+)
+mytab=data.frame(mytab)
+mytab$pc_corr=round(mytab[,1]/rowSums(mytab)*100,1)
+mytab$pc_comp_err=round(mytab[,2]/rowSums(mytab)*100)
+mytab$pc_oth_err=round(mytab[,3]/rowSums(mytab)*100,1)
+rownames(mytab)<-c("Complex Target", "Simple Target")
+colnames(mytab)<-c("Correct","Compl. Err.","Other Err","% Corr.","% Compl. Err.","% Other Err.")
+
+kable(mytab,
+  "latex", booktabs = T,
+  caption="Number (and percent) of consonant targets that were correctly repeated or substituted, as a function of the complexity of the consonant, and whether the error resulted in a change of complexity (Compl Err.) or not (Other Err.) Deletion errors are not shown.")
+
+```
+
+For consonants, we inspected complex (`r print.phone.list(complexCs.ipa)`) versus simpler ones (`r print.phone.list(simplexCs.ipa)`), using the same logic: We looked at correct phone repetition, substitution with a change in complexity category, or a change within the same complexity category.^[Note that the substitutions included phones that are not native to Yélî Dnye but do occur in English (e.g., [tʃ]); as these data come from careful transcriptions by a native Yélî Dnye speaker who is very fluent in English, we take these segmental substitutions faithfully as an indication that several of our participants have mastered production of some English phones, possibly produced within whole English word forms.] Results, shown in Table \@ref(tab:tab-c) showed that errors involving complex consonants targets were more common than those involving oral vowels (`r 100-mytab["Complex Target","% Corr."]` versus `r 100-mytab["Simple Target","% Corr."]`). Additionally, errors in which a complex consonant was mispronounced as a simple consonant were quite common, whereas those in which a simple consonant was produced as a complex one were vanishingly rare. 
 
 
 
@@ -615,18 +654,15 @@ by_length=cbind(by_length,phon_score$x,nld$x)
 by_length=merge(by_length, demo[,c("ID","Sex","Age","birthOrder","matEd")], by.x="Group.1",by.y="ID", all.x=T)
 colnames(by_length)<-c("ID","Length","Word","Phoneme","NLD","Sex","Age","BrthO","matEd")
 
-aggregate(trnsc.inc$correct*100,by=list(trnsc.inc$type),mean)->by_length_no_child
-colnames(by_length_no_child)<-c("Length","Word")
-by_length_no_child=by_length_no_child[-1,]
-length_r=cor.test(by_length_no_child$Length,by_length_no_child$Word)
 
 len_lm=glmer(correct~type+age.rounded_s+(1|file) + (1|target),data=trnsc.inc,family="binomial",subset=c(trnsc.inc$type!=1))
 mycoeff=round(summary(len_lm)$coefficients,3)
 
+
 ```
 
 
-Next, we inspected whether NWR scores varied as a function of word length (Table \@ref(tab:tablength)). Participants scored much lower on monosyllables than on non-words of other lengths. This is likely due to the fact that the majority of monosyllables were designed to include sounds that are rare in the world's languages, which may indicate that they are hard to produce or perceive. Setting monosyllables aside, we observe the typical pattern of lower scores for longer items, although this is particularly salient for the whole-item scoring. While whole-item scoring is the most commonly reported NWR outcome, it is also the least forgiving. Averaging across participants and items, the Pearson correlation between length (2-4 syllables) and whole-item NWR scores was r(`r length_r$parameter`) = `r round(length_r$estimate,3)`. In a generalized binomial mixed model, we included `r summary(len_lm)$devcomp$dims["N"]` observations, from `r summary(len_lm)$ngrps["file"]` children producing, in any given trial, one of `r summary(len_lm)$ngrps["target"]` potential target words. The analysis revealed a positive effect of age (ß = `r mycoeff["age.rounded_s","Estimate"]`, SE ß = `r mycoeff["age.rounded_s","Std. Error"]`, p `r pval.display(mycoeff["age.rounded_s","Pr(>|z|)"])`) and a negative but non-significant estimate for target length in number of syllables (ß = `r mycoeff["type","Estimate"]`, SE ß = `r mycoeff["type","Std. Error"]`, p `r pval.display(mycoeff["type","Pr(>|z|)"])`).
+Next, we inspected whether NWR scores varied as a function of word length (Table \@ref(tab:tablength)). Participants scored much lower on monosyllables than on non-words of other lengths. This is likely due to the fact that the majority of monosyllables were designed to include sounds that are rare in the world's languages, which may indicate that they are hard to produce or perceive. Setting monosyllables aside, we observed the typical pattern of lower scores for longer items only for the whole-item scoring, and even there differences were rather small. In a generalized binomial mixed model excluding monosyllables, we included `r summary(len_lm)$devcomp$dims["N"]` observations, from `r summary(len_lm)$ngrps["file"]` children producing, in any given trial, one of `r summary(len_lm)$ngrps["target"]` potential target words. The analysis revealed a positive effect of age (ß = `r mycoeff["age.rounded_s","Estimate"]`, SE ß = `r mycoeff["age.rounded_s","Std. Error"]`, p `r pval.display(mycoeff["age.rounded_s","Pr(>|z|)"])`) and a negative but non-significant estimate for target length in number of syllables (ß = `r mycoeff["type","Estimate"]`, SE ß = `r mycoeff["type","Std. Error"]`, p `r pval.display(mycoeff["type","Pr(>|z|)"])`).
 
 
 
@@ -637,29 +673,33 @@ for(myvar in c("Word","NLD")){
               paste0(round(aggregate(by_length[,myvar],by=list(by_length$Length),mean)$x),
               " (",round(aggregate(by_length[,myvar],by=list(by_length$Length),sd)$x),")"))
 }
-rownames(length.tab)<-levels(by_length$Length)
+rownames(length.tab)<-paste(c(1:4),"syll")
 colnames(length.tab)<-c("Word","NLD")
-apa_table(length.tab,caption="NWR measured in whole-word scores, and normalized Levenshtein Distance, separately for the four stimuli lengths.")
+kable(length.tab,"latex", booktabs = T,caption="NWR means (and standard deviations) measured in whole-word scores and normalized Levenshtein Distance (NLD), separately for the four stimuli lengths.")
 ```
 
 
 ### Factor structuring individual variation 
 
-
-
-```{r Fig2-scores-by-age, ig.pos = "T!", fig.width=5, fig.height=5, fig.cap="NWR whole-item scores for individual participants as a function of age and sex (purple = boys, orange = girls)."}
-
-plot(overall$Word~overall$Age,pch=20,cex=2,lty=3,ylab="NWR scores (% words)",xlab="Age (years)",col=ifelse(overall$Sex=="B","darkmagenta","chocolate1"))
-
+```{r indif}
 cor.test(overall$Word,overall$Age,method="s")->corage
 t.test(overall$Word~overall$Sex)->tsex
 cor.test(overall$Word,overall$BrthO,method="s")->corbo
 cor.test(overall$Word,overall$matEd,method="s")->corme
+```
+
+
+
+```{r Fig2-scores-by-age, ig.pos = "T!", fig.width=5, fig.height=5, fig.cap="NWR whole-item scores for individual participants as a function of age and sex (purple = boys, orange = girls)."}
+
+plot(overall$Word~overall$Age,pch=4,cex=2,lty=3,ylab="NWR scores (% words)",xlab="Age (years)",col=ifelse(overall$Sex=="B","darkmagenta","chocolate1"))
+
+
 
 ```
 
 
-Our final exploratory analysis assessed whether variation in scores was structured by factors that vary across individuals. As shown in Figure \@ref(fig:Fig2-scores-by-age), there was a greater deal of variance across the tested age range, with significantly higher NWR scores for older children (Spearman's rank correlation, given inequality of variance, rho (`r corage$statistic`) = `r corage$estimate`, p `r pval.display(corage$p.value)`). In contrast, there was no clear association between NWR scores and sex (t (`r tsex$statistic`) = `r tsex$parameter`, p `r pval.display(tsex$p.value)`), birth order  (data missing for `r sum(is.na(demo$birthOrder[demo$included=="yes"]))` children, rho = (`r corbo$statistic`) = `r corbo$estimate`, p `r pval.display(corbo$p.value)`), or maternal education  (data missing for `r sum(is.na(demo$matEd[demo$included=="yes"]))` children,  rho ( `r corme$statistic`) = `r corme$estimate`, p `r pval.display(corme$p.value)`).
+Our final exploratory analysis assessed whether variation in scores was structured by factors that vary across individuals. As shown in Figure \@ref(fig:Fig2-scores-by-age), there was a greater deal of variance across the tested age range, with significantly higher NWR scores for older children (Spearman's rank correlation, given inequality of variance, rho (`r corage$statistic`) = `r corage$estimate`, p `r pval.display(corage$p.value)`). In contrast, there was no clear association between NWR scores and sex (Welch t (`r tsex$parameter`) = `r tsex$statistic`, p `r pval.display(tsex$p.value)`), birth order  (data missing for `r sum(is.na(demo$birthOrder[demo$included=="yes"]))` children, rho = (`r round(corbo$statistic,1)`) = `r corbo$estimate`, p `r pval.display(corbo$p.value)`), or maternal education  (data missing for `r sum(is.na(demo$matEd[demo$included=="yes"]))` children,  rho ( `r round(corme$statistic,1)`) = `r corme$estimate`, p `r pval.display(corme$p.value)`).
 
 
 
@@ -676,7 +716,7 @@ We investigated the effect of item complexity on NWR scores by varying both the 
 
 Our monosyllabic items included typologically rare segments so that we could test whether lower average segmental frequency is associated with lower NWR scores. Typologically common sounds are associated with higher performance on a handful of other tasks (**REFS -- M2A: Alex, I added this based on your note, where it sounded like you had some particular studies in mind?**) though to our knowledge this has not yet been tested with non-word repetition. Regarding Yélî Dnye in particular, the phonemic inventory is both large and acoustically packed, in addition to containing several typologically infrequent (or unique) contrasts. We therefore expected to see that, while NWR scores would be lower for stimuli with lower average frequency, this effect would be relatively weak because the ambient language puts pressure on Yélî children to distinguish (perceptually and articulatorily) fine-grained phonetic differences in order to successfully communicate with others. Indeed we found a robust effect of average segmental frequency on NWR performance: Even accounting for age and random effects of item and participant, we see that target words with more frequent segments were repeated correctly more often. This effect is large, with a magnitude more than twice the size of the effect of participant age. This significant effect remains even once also accounting for the frequencies of these segments in Yélî Dnye child-directed speech, which are correlated with their typological frequencies. In sum, typological frequency effects, which have been found in other measurements of phonological processing. appear to strongly affect NWR performance, and do not appear mitigated by language-specific pressure to make finer-grained differences earlier in development.
 
-With respect to the types of errors in repetition made, we did not see clear patterns to further guide our discussion: base rates of deletion and substitution were fairly low and the relative distribution of errors over, e.g., nasal vs. oral vowels and simple vs. complex consonants, revealed no remarkable bias in error types. That said, the lack of a difference could be due to relative imbalance across our stimuli in the use of these phonemic features (e.g., we included many more more oral than nasal targets) and future work should investigate such sources of error bias more systemtically. Some portion of the errors were introduced when the participant produced a real word (in Yélî Dnye or English) in response to the stimulus. Real-word repetitions here made up two thirds of errorful repetitions---this is quite high compared to past work [e.g., @castro1998illiterate], but it is unclear what caused this pattern in the current study: Castro and colleagues' [-@castro1998illiterate] study focused on adults rather than children, the task was administered by a team including a foreign, English-speaking researcher, and the particularities of the Yélî Dnye phonological inventory result in many true-word phonetic neighbors. Follow-up work exploring this type of error in children from other populations in addition to further work on Yélî children will clarify this effect.
+With respect to the types of errors in repetition made, we did not see clear patterns to further guide our discussion: base rates of deletion and substitution were fairly low and the relative distribution of errors over, e.g., nasal vs. oral vowels and simple vs. complex consonants, revealed no remarkable bias in error types. That said, the lack of a difference could be due to relative imbalance across our stimuli in the use of these phonemic features (e.g., we included many more more oral than nasal targets) and future work should investigate such sources of error bias more systemtically.
 
 ### Individual differences
 
@@ -687,6 +727,11 @@ Following prior work, we expected that NWR scores would increase with participan
 In contrast, previous work shows little evidence for effects of maternal education [e.g., @farmani2018normalization; @kalnak2014nonword; @meir2017independent] or participant gender [@chiat2007preschool] on NWR scores. In addition to this prior work, education on Rossel Island, while generally highly valued, is not at all essential to ensuring one's success in society and may not be a reliable index of local socioeconomic variation. There is also limited variation in maternal education across the families in the region of the island where we sampled. We therefore expected little evidence for impact of either participant gender or maternal education in the present study. On the other hand, these predictors have established effects on other language development measures (**REFS: M2A: Alex go ahead and pick your faves here**). So to the extent that NWR scores share causal links to gender-based differences ein development and maternal linguistic input with these other language ouctome measures, we might then expect these factors to appear in NWR data. In fact, neither participant gender nor maternal education were correlated with NWR score in the current data.
 
 Last but not least, we investigated whether birth order might affect NWR scores, as it does other language tasks, resulting in first-born children showing higher scores on standardized language tests than later-born children [@havron2019effect], presumably because later-born children receive a smaller share of maternal input than their older siblings. Given shared caregiving practices and the hamlet organization typical of Rossel communities, children have many sources of adult and older child input that they encounter on a daily basis and first born children quickly integrate with a much larger pool of both older and younger children with whom they partly share caregivers. Therefore we expected that any effects of birth order on NWR would be attenuated in this context. In line with this prediction, our descriptive analysis showed no correlation between birth order and NWR score.
+
+### Other observations
+
+
+Some portion of the errors were introduced when the participant produced a real word (in Yélî Dnye or English) in response to the stimulus. Real-word repetitions here made up two thirds of errorful repetitions---this is quite high compared to past work [e.g., @castro1998illiterate], but it is unclear what caused this pattern in the current study: Castro and colleagues' [-@castro1998illiterate] study focused on adults rather than children, the task was administered by a team including a foreign, English-speaking researcher, and the particularities of the Yélî Dnye phonological inventory result in many true-word phonetic neighbors. Follow-up work exploring this type of error in children from other populations in addition to further work on Yélî children will clarify this effect.
 
 ### Conclusions
 
