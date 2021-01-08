@@ -217,21 +217,26 @@ After some preliminary analyses to set the stage, we address the following quest
 - How do NWR scores change as a function of item length in number of syllables?
 - Is individual variation in NWR scores attributable to child age, sex, birth order, and/or maternal education?
 
-We had considered boosting the interpretational value of this evidence by announcing our analysis plans prior to conducting them. However, we realized that even pre-registering an analysis would be equivocal because we would not have enough power to look at all relationships of interest, in many cases possibly not enough to detect any of the known effects, given their variability across studies. To illustrate this issue, we portray in Figure 1 studies in which children's NWR scores were gathered between 4 and 12 years of age, and reported separately for items that are relatively short (1-2 syllables) versus longer items (3-4 syllables). As discussed above,  the effect of stimulus length is minuscule among Italian children [@piazzalunga2019articulatory], but considerable among Arabic children [@jabere2018xperiment]. Even the effect of age is unstable in this sample of studies. Whereas it is quite clear that children's NWR scores increase in the Italian data [@piazzalunga2019articulatory], age effects are less stable among Tsimane' children [@cristia2020infant]. Therefore, all analyses in the present study are descriptive and should be considered exploratory.
+We had considered boosting the interpretational value of this evidence by announcing our analysis plans prior to conducting them. However, we realized that even pre-registering an analysis would be equivocal because we would not have enough power to look at all relationships of interest, in many cases possibly not enough to detect any of the known effects, given their variability across studies. To illustrate this issue, we portray in Figure \@ref(fig:fig-prevlit) studies in which children's NWR scores were gathered between 4 and 12 years of age, and reported separately for items that are relatively short (1-2 syllables) versus longer items (3-4 syllables). As discussed above,  the effect of stimulus length is minuscule among Italian children [@piazzalunga2019articulatory], but considerable among Arabic children [@jabere2018xperiment]. Even the effect of age is unstable in this sample of studies. Whereas it is quite clear that children's NWR scores increase in the Italian data [@piazzalunga2019articulatory], age effects are less stable among Tsimane' children [@cristia2020infant]. Therefore, all analyses in the present study are descriptive and should be considered exploratory.
 
 
-```{r prevlit-fig, echo = FALSE, ig.pos = "T!", fig.width=8, fig.height=5.5, fig.cap = "NWR scores as a function of age (in years) and item length for comparable studies. Arabic data  from Jaber-Awida (2018); Italian data from Piazzalunga et al. (2019); Tsimane' from Cristia et al. (2020); Yélî Dnye data from the present study."}
+```{r fig-prevlit, echo = FALSE, ig.pos = "T!", fig.width=8, fig.height=5.5, fig.cap = "NWR scores as a function of age (in years) and item length for comparable studies. Arabic data  from Jaber-Awida (2018); Italian data from Piazzalunga et al. (2019); Tsimane' from Cristia et al. (2020); Yélî Dnye data from the present study."}
 
-pl<- read.delim("pl-With_yd.tsv")
-palette = c( 
-             "Arabic 1-2 syll" = "orange",
-             "Yélî 3-4 syll"   ="navyblue",
-             "Yélî 1-2 syll"  ="lightblue",
-             "Italian 3-4 syll"   ="black",
-             "Italian 1-2 syll"  ="gray",
-             "Arabic 3-4 syll"     = "orange", 
-             "Tsimane' 1-2 syll" = "green",
-              "Tsimane' 3-4 syll" = "darkgreen")
+pl<- read.delim("previous_lit.tsv")
+
+pl_stacked=cbind(pl[,1:4],stack(pl[5:8]),stack(pl[9:12]))
+colnames(pl_stacked)[5:8]<-c("Median","Length","SD","sdtype")
+pl_stacked$Length=gsub("X","",pl_stacked$Length)
+
+mycols = c( 
+             "Arabic" = "orange",
+             "Italian"   ="black",
+             "Tsimane'" = "darkgreen")
+
+plot(pl_stacked$Median~pl_stacked$Age,col=mycols[pl_stacked$Language],pch=as.character(pl_stacked$Length))
+#https://stackoverflow.com/questions/33700186/line-connecting-the-points-in-the-plot-function-in-r
+#lines(x[order(x)], f_x[order(x)], xlim=range(x), ylim=range(f_x), pch=16)
+#NOT FINISHED!!
 
 myplot = ggplot(data = pl, aes(x = Age, y = Score, color = Language))+
   geom_point(aes(size = n, shape = Length))+
@@ -405,7 +410,7 @@ trnsc[which(trnsc$id %in% inc$ID),]->trnsc.inc
 ```
 
 
-```{r Fig1-first-vs-others, fig.pos = "!t", fig.width=5, fig.height=5, fig.cap="Whole-item NWR scores for individual participants averaging separately their first attempts and all other attempts."}
+```{r fig-first-vs-others, fig.pos = "!t", fig.width=5, fig.height=5, fig.cap="Whole-item NWR scores for individual participants averaging separately their first attempts and all other attempts."}
 
 aggregate(trnsc.inc$correct*100,by=list(trnsc.inc$id,trnsc.inc$age.rounded,trnsc.inc$attempt),mean)->pwcm_att
 colnames(pwcm_att)<-c("ID","Age","Attempt","Word")
@@ -427,7 +432,7 @@ t.test(pwcm_att$Word~pwcm_att$Attempt,paired=T)->myt
 
 ```
 
-We first checked whether whole-item NWR scores varied between first and subsequent presentations of an item by averaging word-level scores at the participant level separately for first attempts and subsequent repetitions. We excluded `r excl` child who did not have data for one of these two types. As shown in Figure \@ref(fig:Fig1-first-vs-others), participants' mean word-level scores became more heterogeneous in subsequent repetitions. Surprisingly, whole-item NWR scores for subsequent repetitions (M = `r round(mean(pwcm_att$Word[pwcm_att$Attempt!="first"]))`, SD = `r round(sd(pwcm_att$Word[pwcm_att$Attempt!="first"]))`)
+We first checked whether whole-item NWR scores varied between first and subsequent presentations of an item by averaging word-level scores at the participant level separately for first attempts and subsequent repetitions. We excluded `r excl` child who did not have data for one of these two types. As shown in Figure \@ref(fig:fig-first-vs-others), participants' mean word-level scores became more heterogeneous in subsequent repetitions. Surprisingly, whole-item NWR scores for subsequent repetitions (M = `r round(mean(pwcm_att$Word[pwcm_att$Attempt!="first"]))`, SD = `r round(sd(pwcm_att$Word[pwcm_att$Attempt!="first"]))`)
 were on average lower than first ones (M = `r round(mean(pwcm_att$Word[pwcm_att$Attempt=="first"]))`, SD = `r round(sd(pwcm_att$Word[pwcm_att$Attempt=="first"]))`), t(`r round(myt$parameter,2)`) = `r round(myt$statistic,2)`, p `r pval.display(round(myt$p.value,2))`; Cohen's d = `r cohensd2(mean(pwcm_att$Word[pwcm_att$Attempt=="first"]),sd(pwcm_att$Word[pwcm_att$Attempt=="first"]),mean(pwcm_att$Word[pwcm_att$Attempt!="first"]),sd(pwcm_att$Word[pwcm_att$Attempt!="first"]))`). Given uncertainty in whether previous work used first or all repetitions, and given that score here declined and became more heterogeneous in subsequent repetitions, we focus the remainder of our analyses only on first repetitions, with the exception of qualitative analyses of substitutions.
 
 ```{r exclude subsequent}
@@ -469,10 +474,10 @@ xlfr_r=cor.test(xl_fr_tab$xlf,xl_fr_tab$Word)
 ```
 
 
-We could include `r summary(xl_fr)$devcomp$dims["N"]` observations, from `r summary(xl_fr)$ngrps["file"]` children producing in any given trial one of `r summary(xl_fr)$ngrps["target"]` potential target words. The analysis revealed a main effect of age (ß = `r mycoeff["age.rounded_s","Estimate"]`, SE ß = `r mycoeff["age.rounded_s","Std. Error"]`, p `r pval.display(mycoeff["age.rounded_s","Pr(>|z|)"])`); and a significant estimate for the scaled average cross-linguistic frequency of phones in the target words (ß = `r mycoeff["avg_fr_s","Estimate"]`, SE ß = `r mycoeff["avg_fr_s","Std. Error"]`, p `r pval.display(mycoeff["avg_fr_s","Pr(>|z|)"])`): Target words with phones found more frequently across languages had higher correct repetition scores, as shown in Figure \@ref(fig:Fig2-xling-freq). Averaging across items and participants, the Pearson correlation between scaled average cross-linguistic phone frequency and whole-item NWR scores was r(`r xlfr_r$parameter`) = `r round(xlfr_r$estimate,3)`. 
+We could include `r summary(xl_fr)$devcomp$dims["N"]` observations, from `r summary(xl_fr)$ngrps["file"]` children producing in any given trial one of `r summary(xl_fr)$ngrps["target"]` potential target words. The analysis revealed a main effect of age (ß = `r mycoeff["age.rounded_s","Estimate"]`, SE ß = `r mycoeff["age.rounded_s","Std. Error"]`, p `r pval.display(mycoeff["age.rounded_s","Pr(>|z|)"])`); and a significant estimate for the scaled average cross-linguistic frequency of phones in the target words (ß = `r mycoeff["avg_fr_s","Estimate"]`, SE ß = `r mycoeff["avg_fr_s","Std. Error"]`, p `r pval.display(mycoeff["avg_fr_s","Pr(>|z|)"])`): Target words with phones found more frequently across languages had higher correct repetition scores, as shown in Figure \@ref(fig:fig-xling-freq). Averaging across items and participants, the Pearson correlation between scaled average cross-linguistic phone frequency and whole-item NWR scores was r(`r xlfr_r$parameter`) = `r round(xlfr_r$estimate,3)`. 
 
 
-```{r Fig2-xling-freq, fig.pos = "!t", fig.align = "center", out.width = '65%', fig.cap="NWR scores for individual target words as a function of the average frequency with which each phone is found across languages."}
+```{r fig-xling-freq, fig.pos = "!t", fig.align = "center", out.width = '65%', fig.cap="NWR scores for individual target words as a function of the average frequency with which each phone is found across languages."}
 aggregate(trnsc.inc$correct*100,by=list(trnsc.inc$target,trnsc.inc$avg_fr),mean)->xling
 colnames(xling)<-c("Target","Avg_fr","Word")
 stims.ipa <- read.xlsx("stimuli.xlsx") %>%
