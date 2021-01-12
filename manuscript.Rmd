@@ -268,9 +268,9 @@ After some preliminary analyses to set the stage, we address the following quest
 We had considered boosting the interpretational value of this evidence by announcing our analysis plans prior to conducting them. However, we realized that even pre-registering an analysis would be equivocal because we would not have enough power to look at all relationships of interest, in many cases possibly not enough to detect any of the known effects, given their variability across studies. To illustrate this issue, we portray in Figure \@ref(fig:fig-prevlit) studies in which children's NWR scores were gathered between 4 and 12 years of age, and reported separately for items that are relatively short (1-2 syllables) versus longer items (3-4 syllables). As discussed above,  the effect of stimulus length is minuscule among Italian children [@piazzalunga2019articulatory], but considerable among Arabic children [@jabere2018xperiment]. Even the effect of age is unstable in this sample of studies. Whereas it is quite clear that children's NWR scores increase in the Italian data [@piazzalunga2019articulatory], age effects are less stable among Tsimane' children [@cristia2020infant]. Therefore, all analyses in the present study are descriptive and should be considered exploratory.
 
 
-```{r fig-prevlit, echo = FALSE, ig.pos = "T!", fig.width=8, fig.height=5.5, fig.cap = "NWR scores as a function of age (in years) and item length for comparable studies (1-4 indicating number of syllables, 1=solid, 2=dashed, 3=dotted, 4=dotted and dashed). Arabic data (orange)  from Jaber-Awida (2018); Italian data (black) from Piazzalunga et al. (2019); Tsimane' (green) from Cristia et al. (2020); Yélî Dnye (purple) data from the present study. Central tendency using median in all studies but Jaber-Awida; error using one standard error. Missing points and error bars indicate no or one data point, respectively. Age has been slightly jittered for ease of inspection of different lengths."}
+```{r fig-prevlit, echo = FALSE, ig.pos = "T!", fig.width=8, fig.height=5.5, fig.cap = "NWR scores as a function of age (in years) and item length for comparable studies (1-4 indicating number of syllables, 1=solid, 2=dashed, 3=dotted, 4=dotted and dashed). Jaber-Awida (2018) reported on 20 Arabic learners (orange); Piazzalunga et al. (2019) reported on groups of 24-60 Italian learners (black); Cristia et al. (2020) reported on groups of 4-6 Tsimane' learners (green); the present study reports on groups of 8-19 Yélî Dnye learners (purple). Central tendency is mean in Arabic and Tsimane', median in Italian and Yélî Dnye; error is one standard error. Age has been slightly jittered for ease of inspection of different lengths at a given age."}
 
-pl<- read.delim("previous_lit.tsv")
+pl<- read.csv("previous_lit.csv")
 
 pl_stacked=cbind(pl[,1:4],stack(pl[5:8]),stack(pl[9:12]))
 colnames(pl_stacked)[5:8]<-c("Median","Length","SD","sdtype")
@@ -307,6 +307,12 @@ mycols = c(
              "Tsimane'" = "darkgreen",
              "Yélî Dnye" = "purple")
 
+mywd = c( 
+             "Arabic" = 1,
+             "Italian"   =1,
+             "Tsimane'" = 1,
+             "Yélî Dnye" = 2)
+
 jit_age=(pl_stacked$Age+(as.numeric(as.character(pl_stacked$Length))-2)/5)
 plot(pl_stacked$Median~jit_age,col=mycols[pl_stacked$Language],pch=as.character(pl_stacked$Length),
      xlab="Average age (years)",ylab="NWR Scores (words)",ylim=c(0,100))
@@ -315,7 +321,7 @@ for(thislang in levels(pl_stacked$Language)) for(thislength in levels(factor(pl_
   myx=pl_stacked$Age[pl_stacked$Language==thislang & pl_stacked$Length==thislength]
   myx=myx+(as.numeric(as.character(thislength))-2)/5 #jitter the length lines a little bit with respect to avg age
   myy=pl_stacked$Median[pl_stacked$Language==thislang & pl_stacked$Length==thislength]
-  lines(myy~myx, col=mycols[thislang],lty=as.numeric(thislength)) #join points of same length & lang
+  lines(myy~myx, col=mycols[thislang],lty=as.numeric(thislength),lwd=mywd[thislang]) #join points of same length & lang
   mylb=myy-pl_stacked$se[pl_stacked$Language==thislang & pl_stacked$Length==thislength]
   myhb=myy+pl_stacked$se[pl_stacked$Language==thislang & pl_stacked$Length==thislength]
   for(i in 1:length(mylb)) {
@@ -737,7 +743,7 @@ plot(overall$Word~overall$Age,pch=4,cex=2,lty=3,ylab="NWR scores (% words)",xlab
 ```
 
 
-Our final exploratory analysis assessed whether variation in scores was structured by factors that vary across individuals. As shown in Figure \@ref(fig:Fig2-scores-by-age), there was a greater deal of variance across the tested age range, with significantly higher NWR scores for older children (Spearman's rank correlation, given inequality of variance, rho (`r corage$statistic`) = `r corage$estimate`, p `r pval.display(corage$p.value)`). In contrast, there was no clear association between NWR scores and sex (Welch t (`r tsex$parameter`) = `r tsex$statistic`, p `r pval.display(tsex$p.value)`), birth order  (data missing for `r sum(is.na(demo$birthOrder[demo$included=="yes"]))` children, rho = (`r round(corbo$statistic,1)`) = `r corbo$estimate`, p `r pval.display(corbo$p.value)`), or maternal education  (data missing for `r sum(is.na(demo$matEd[demo$included=="yes"]))` children,  rho ( `r round(corme$statistic,1)`) = `r corme$estimate`, p `r pval.display(corme$p.value)`).
+Our final exploratory analysis assessed whether variation in scores was structured by factors that vary across individuals. As shown in Figure \@ref(fig:Fig2-scores-by-age), there was a greater deal of variance across the tested age range, with significantly higher NWR scores for older children (Spearman's rank correlation, given inequality of variance, rho (`r corage$statistic`) = `r corage$estimate`, p `r pval.display(corage$p.value)`). In contrast, there was no clear association between NWR scores and sex (Welch t (`r tsex$parameter`) = `r tsex$statistic`, p `r pval.display(tsex$p.value)`), birth order  (data missing for `r sum(is.na(demo$birthOrder[demo$included=="yes"]))` children, rho = (`r round(corbo$statistic,1)`) = `r corbo$estimate`, p `r pval.display(corbo$p.value)`), or maternal education  (rho ( `r round(corme$statistic,1)`) = `r corme$estimate`, p `r pval.display(corme$p.value)`).
 
 
 
