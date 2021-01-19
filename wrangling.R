@@ -140,9 +140,14 @@ dim(trnsc)
 #REMOVING ALL THE "YI"
 trnsc[trnsc$target!="yi",]->trnsc
 
+
+#REMOVING ALL THE "TPA"
+trnsc[trnsc$target!="tpa",]->trnsc
+trnsc[trnsc$target!="tp_a",]->trnsc
+
 #remove practice items
 trnsc=trnsc[trnsc$type !="practice",]
-dim(trnsc) #2020-09-16 1302
+dim(trnsc) #2021-01-19 1243
 
 ## PHONOLOGIZE AND SCORE
 
