@@ -1,13 +1,47 @@
-Study,Language,n,Age,1,2,3,4,sd1,sd2,sd3,sd4,Notes
-Piazzalunga 2018,Italian,24,3,NA,59,54,NA,NA,11,12,NA,"median, sd = 1/2*IQR=1/2 * (75pcl-25pcl)"
-Piazzalunga 2018,Italian,48,3.5,NA,68,63,NA,NA,8,14.5,NA,"median, sd = 1/2*IQR=1/2 * (75pcl-25pcl)"
-Piazzalunga 2018,Italian,56,4,NA,73,75,NA,NA,9,13.5,NA,"median, sd = 1/2*IQR=1/2 * (75pcl-25pcl)"
-Piazzalunga 2018,Italian,51,4.5,NA,82,75,NA,NA,7,8.5,NA,"median, sd = 1/2*IQR=1/2 * (75pcl-25pcl)"
-Piazzalunga 2018,Italian,41,5,NA,86,83,NA,NA,5.5,9.5,NA,"median, sd = 1/2*IQR=1/2 * (75pcl-25pcl)"
-Piazzalunga 2018,Italian,60,5.5,NA,84,85,NA,NA,7,6.5,NA,"median, sd = 1/2*IQR=1/2 * (75pcl-25pcl)"
-Piazzalunga 2018,Italian,45,6,NA,91,92,NA,NA,2.5,4,NA,"median, sd = 1/2*IQR=1/2 * (75pcl-25pcl)"
-Piazzalunga 2018,Italian,50,6.5,NA,91,92,NA,NA,2,4,NA,"median, sd = 1/2*IQR=1/2 * (75pcl-25pcl)"
-Jaber 2018,Arabic,20,5.5,NA,95.79288026,80.58252427,56.9579288,NA,NA,NA,NA,probably mean across children
-Tsimane' 2020,Tsimane',5,5,72.91666667,62.3030303,13.33333333,22.22222222,20.83333333,27.41846582,29.8142397,19.24500897,"mean, sd"
-Tsimane' 2020,Tsimane',4,6.5,93.75,59.02777778,50,27.08333333,12.5,26.96734422,57.73502692,20.83333333,"mean, sd"
-Tsimane' 2020,Tsimane',6,10,70.27777778,60.31746032,33.33333333,22.22222222,29.44706487,32.34685413,57.73502692,19.24500897,"mean, sd"
+Study,Language,n,Age,Lengths,Overall,SD,1,2,3,4,sd1,sd2,sd3,sd4,Notes,Length distribution,Syllable inventory
+Piazzalunga 2018,Italian,24,3,2-3,56.5,7.78125,NA,59,54,NA,NA,11,12,NA,"median, sd = 1/2*IQR=1/2 * (75pcl-25pcl)",,
+Piazzalunga 2018,Italian,48,3.5,2-3,65.5,7.25,NA,68,63,NA,NA,8,14.5,NA,"median, sd = 1/2*IQR=1/2 * (75pcl-25pcl)",,
+Piazzalunga 2018,Italian,56,4,2-3,74,9.730907537,NA,73,75,NA,NA,9,13.5,NA,"median, sd = 1/2*IQR=1/2 * (75pcl-25pcl)",,
+Piazzalunga 2018,Italian,51,4.5,2-3,78.5,14.17393405,NA,82,75,NA,NA,7,8.5,NA,"median, sd = 1/2*IQR=1/2 * (75pcl-25pcl)",,
+Piazzalunga 2018,Italian,41,5,2-3,84.5,19.50121127,NA,86,83,NA,NA,5.5,9.5,NA,"median, sd = 1/2*IQR=1/2 * (75pcl-25pcl)",,
+Piazzalunga 2018,Italian,60,5.5,2-3,84.5,19.51006841,NA,84,85,NA,NA,7,6.5,NA,"median, sd = 1/2*IQR=1/2 * (75pcl-25pcl)",,
+Piazzalunga 2018,Italian,45,6,2-3,91.5,20.28006841,NA,91,92,NA,NA,2.5,4,NA,"median, sd = 1/2*IQR=1/2 * (75pcl-25pcl)",,
+Piazzalunga 2018,Italian,50,6.5,2-3,91.5,17.78277081,NA,91,92,NA,NA,2,4,NA,"median, sd = 1/2*IQR=1/2 * (75pcl-25pcl)",,
+Jaber 2018,Arabic,20,5.5,2-3,88.18770227,19.26104789,NA,95.79288026,80.58252427,56.9579288,NA,NA,NA,NA,probably mean across children,,
+Tsimane' 2020,Tsimane',5,5,2-3,37.81818182,19.26104789,72.91666667,62.3030303,13.33333333,22.22222222,20.83333333,27.41846582,29.8142397,19.24500897,"mean, sd",,
+Tsimane' 2020,Tsimane',4,6.5,2-3,54.51388889,18.22156957,93.75,59.02777778,50,27.08333333,12.5,26.96734422,57.73502692,20.83333333,"mean, sd",,
+Tsimane' 2020,Tsimane',6,10,2-3,46.82539683,15.20536757,70.27777778,60.31746032,33.33333333,22.22222222,29.44706487,32.34685413,57.73502692,19.24500897,"mean, sd",,
+Stokes 2006,Cantonese,15,5,2-3,72.475,10.94314286,74.51,76.22,68.73,61.73,6.55,8.054,7.07,11.2,"mean, sd","mostly monosyllables, frequent sequences of 2 or 3 monosyllables, 4-syllables rare","20 onsets, 56 rimes, plus two nasal syllabics"
+Stokes 2006,Cantonese,15,3.25,2-3,61.375,11.50666667,69.8,65.77,56.98,44.81,9.13,10.27,14.01,15.43,"mean, sd","mostly monosyllables, frequent sequences of 2 or 3 monosyllables, 4-syllables rare","20 onsets, 56 rimes, plus two nasal syllabics"
+Vance 2005,English,17,3.7,2-3,75.1,15.75,71.4,65,85.2,,13.6,16.6,14.9,,,,
+Vance 2005,English,20,4.5,2-3,69.9,11.35,76,73.3,66.5,,9.7,10.4,12.3,,,,
+Vance 2005,English,20,5.6,2-3,77.5,9.35,76.3,81.5,73.5,,8.4,6.7,12,,,,
+Vance 2005,English,20,6.6,2-3,77.65,9.85,83.5,80.3,75,,6.1,6.2,13.5,,,,
+Vance 2005,English,20,7.5,2-3,81.9,10.6,80.3,84.8,79,,9.4,9.5,11.7,,,,
+Lei 2010,Mandarin,24,3.4,1-4,49.66666667,20.58333333,,,,,,,,,"mean, sd",,
+Lei 2010,Mandarin,24,5.4,1-4,68.75,18.04166667,,,,,,,,,"mean, sd",,
+Lei 2010,Mandarin,24,6.4,1-4,79.5,14.70833333,,,,,,,,,"mean, sd",,
+Kalnak 2014,Swedish,21,8,3-4,56.76348548,5.31120332,,,,,,,,,"mean, sd",,
+Kalnak 2014,Swedish,21,9,3-4,64.39834025,5.643153527,,,,,,,,,"mean, sd",,
+Kalnak 2014,Swedish,21,10,3-4,67.71784232,5.643153527,,,,,,,,,"mean, sd",,
+Kalnak 2014,Swedish,21,11,3-4,72.36514523,8.962655602,,,,,,,,,"mean, sd",,
+Kalnak 2014,Swedish,21,12,3-4,72.36514523,7.302904564,,,,,,,,,,,
+Radeborg 2006,Swedish,40,4,1-5,53,16,,,,,,,,,,,
+Radeborg 2006,Swedish,75,5,1-5,61,15,,,,,,,,,,,
+Radeborg 2006,Swedish,85,6,1-5,68,16,,,,,,,,,,,
+Kapalkova 2013,Slovak,20,3.6,1-5,66,29,,,,,,,,,,,
+Kapalkova 2013,Slovak,20,4.5,1-5,82,19,,,,,,,,,,,
+Kapalkova 2013,Slovak,20,5.4,1-5,85,17,,,,,,,,,,,
+Farmani 2018,Persian,109,4.5,1-4,68,14.168,,,,,,,,,,,
+Farmani 2018,Persian,62,5.5,1-4,68,14.712,,,,,,,,,,,
+Farmani 2018,Persian,91,6.5,1-4,69,12.668,,,,,,,,,,,
+Farmani 2018,Persian,96,7.5,1-4,74,12.568,,,,,,,,,,,
+Farmani 2018,Persian,96,8.5,1-4,77,10.664,,,,,,,,,,,
+Polisenska 2014,Slovak,24,2.5,1-4,24.84,21,,,,,,,,,,,
+Polisenska 2014,Slovak,60,3.5,1-4,33.88,18.36,,,,,,,,,,,
+Polisenska 2014,Slovak,113,4.5,1-4,52.08,21.36,,,,,,,,,,,
+Polisenska 2014,Slovak,115,5.5,1-4,69.92,17.32,,,,,,,,,,,
+Polisenska 2014,Slovak,72,6.3,1-4,71.04,15.2,,,,,,,,,,,
+Balladares 2016,Spanish,126,5.5,2-3,85.25,14.6875,,,,,,,,,,,
+Wilsenach 2013,Sotho (Sotho readers),25,9,4-7,57,15.65,,,,,,,,,,,
+Wilsenach 2013,Sotho (English readers),25,9,4-7,39,17.33,,,,,,,,,,,

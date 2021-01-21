@@ -202,14 +202,14 @@ trnsc.inc=trnsc.inc[trnsc.inc$attempt=="first",]
 
 ## TODO
 
-1. add SDs to https://docs.google.com/spreadsheets/d/1f4X7SmP4flhPlCEtvyqp_ERgMp5SC8qHCaMHj93C_FU/edit#gid=44537533
+1. add language chars to https://docs.google.com/spreadsheets/d/1f4X7SmP4flhPlCEtvyqp_ERgMp5SC8qHCaMHj93C_FU/edit#gid=44537533
 1. add a table with sample studies & languages & their characteristiscs
 1. be accurate on what hasn't been done x-ling speaking
 1. try to find data on length distribution across languages to see if this fits length differences
 1. to the above, add sylable characteristics, inventory size, inventory compactness
 1. revise intro
 1. revise discussion
-
+1. improve figure 1?
 
 
 ## Introduction
@@ -290,7 +290,7 @@ We had considered boosting the interpretational value of this evidence by announ
 
 pl<- read.csv("previous_lit.csv")
 
-pl_stacked=cbind(pl[,1:4],stack(pl[5:8]),stack(pl[9:12]))
+pl_stacked=cbind(pl[,c("Study","Language","n","Age")],stack(pl[c("X1","X2","X3","X4")]),stack(pl[c("sd1","sd2","sd3","sd4")]))
 colnames(pl_stacked)[5:8]<-c("Median","Length","SD","sdtype")
 pl_stacked$Length=gsub("X","",pl_stacked$Length)
 
@@ -325,12 +325,16 @@ pl_stacked=pl_stacked[pl_stacked$Length!=1,]
 mycols = c( 
              "Arabic" = "orange",
              "Italian"   ="black",
-             "Tsimane'" = "darkgreen",
+             "Cantonese"   ="blue",
+             "English"   ="green",
+            "Tsimane'" = "darkgreen",
              "Yélî Dnye" = "purple")
 
 mywd = c( 
              "Arabic" = 1,
              "Italian"   =1,
+             "Cantonese"   =1,
+             "English"   =1,
              "Tsimane'" = 2,
              "Yélî Dnye" = 4)
 
