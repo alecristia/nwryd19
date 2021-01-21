@@ -202,11 +202,13 @@ trnsc.inc=trnsc.inc[trnsc.inc$attempt=="first",]
 
 ## TODO
 
+1. add SDs to https://docs.google.com/spreadsheets/d/1f4X7SmP4flhPlCEtvyqp_ERgMp5SC8qHCaMHj93C_FU/edit#gid=44537533
 1. add a table with sample studies & languages & their characteristiscs
 1. be accurate on what hasn't been done x-ling speaking
 1. try to find data on length distribution across languages to see if this fits length differences
 1. to the above, add sylable characteristics, inventory size, inventory compactness
-1. fix camila ref
+1. revise intro
+1. revise discussion
 
 
 
@@ -851,6 +853,13 @@ Last but not least, we investigated whether birth order might affect NWR scores,
 In our sample of `r nrow(overall)` children between ages `r min(overall$Age)` and `r max(overall$Age)`, the average item-level score was `r round(mean(overall$Word))`%, falling well within the expected range of NWR applications in previous studies on a variety of linguistic populations (see Figure \@ref(fig:fig-prevlit)). Segment-based normalized Levenshtein distance  indicate that inexact repetitions often constituted _mostly_ accurate reroductions of the target, with an average of `r round(mean(overall$NLD))`% of the stimulus segments getting substituted, inserted, or deleted upon repetition. Paired with our thorough training protocol, we take these NWR scores as indicating that (a) our adaptations to NWR for this context were successful, even given a number of non-standard changes to the training phase and to the design of the stimuli and (b) Yélî children show comparable performance to others tested on a similar task, despite the many linguistic, cultural, and socioeconomic differences between this and previously tested populations. Given successful (and comparable) execution of this task.
 
 Some portion of the errors were introduced when the participant produced a real word (in Yélî Dnye or English) in response to the stimulus. Real-word repetitions here made up two thirds of errorful repetitions---this is quite high compared to past work [e.g., @castro1998illiterate], but it is unclear what caused this pattern in the current study: Castro and colleagues' [-@castro1998illiterate] study focused on adults rather than children, the task was administered by a team including a foreign, English-speaking researcher, and the particularities of the Yélî Dnye phonological inventory result in many true-word phonetic neighbors. Follow-up work exploring this type of error in children from other populations in addition to further work on Yélî children will clarify this effect.
+
+- despite 4-syll being rare, they are repeated correctly
+- similar levels of IDS in Tsi & YD, yet very different results: overall NWR, effect of length
+- conclusions Cristia about long-term effects perhaps don't hold
+- or perhaps input estimation is inaccurate -- talk about different ways of estimating input quantity across papers and uncertainty in estimates
+- or perhaps it's about the prevalence of literacy in the population -- phonetic effects of learning to read & consequences in young children's encoding and decoding of sounds for NWR
+- differences in test: group versus individual, level of training of RA, from the same community or not, model was native or not, heard over headphones or not
 
 ### Conclusions
 
