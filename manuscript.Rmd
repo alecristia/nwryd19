@@ -202,12 +202,8 @@ trnsc.inc=trnsc.inc[trnsc.inc$attempt=="first",]
 
 ## TODO
 
-1. add language chars to https://docs.google.com/spreadsheets/d/1f4X7SmP4flhPlCEtvyqp_ERgMp5SC8qHCaMHj93C_FU/edit#gid=44537533
-1. add a table with sample studies & languages & their characteristiscs
-1. be accurate on what hasn't been done x-ling speaking
-1. try to find data on length distribution across languages to see if this fits length differences
-1. to the above, add sylable characteristics, inventory size, inventory compactness
-1. revise intro
+1. add legend to new figure, improve color coding
+1. conclusion: definitely the case that Tsi lower than others, but unclear what this is due to; some variation across samples, but since stimuli haven't been carefully matched, and ages either, we can't be totally sure there either -- also, literacy may be another issue
 1. revise discussion
 1. improve figure 1?
 
@@ -286,7 +282,7 @@ Throughout these analyses and in the Discussion, we will also have in mind our f
 We had considered boosting the interpretational value of this evidence by announcing our analysis plans prior to conducting them. However, we realized that even pre-registering an analysis would be equivocal because we would not have enough power to look at all relationships of interest, in many cases possibly not enough to detect any of the known effects, given the previously discussed variability across studies. Therefore, all analyses in the present study are descriptive and should be considered exploratory.
 
 
-```{r fig-prevlit, echo = FALSE, ig.pos = "T!", fig.width=8, fig.height=5.5, fig.cap = "NWR scores as a function of age (in years) and item length for comparable studies (2-4 indicating number of syllables,  2=dashed, 3=dotted, 4=dotted and dashed). Jaber-Awida (2018) reported on 20 Arabic learners (orange); Piazzalunga et al. (2019) reported on groups of 24-60 Italian learners (black); Cristia et al. (2020) reported on groups of 4-6 Tsimane' learners (green); the present study reports on groups of 8-19 Yélî Dnye learners (purple). Central tendency is mean in Arabic and Tsimane', median in Italian and Yélî Dnye; error is one standard error. Age has been slightly jittered for ease of inspection of different lengths at a given age."}
+```{r fig-prevlit, echo = FALSE, ig.pos = "T!", fig.width=8, fig.height=5.5, fig.cap = "NWR scores as a function of age (in years) and item length for comparable studies (2-4 indicating number of syllables,  2=dashed, 3=dotted, 4=dotted and dashed). Jaber-Awida (2018) reported on 20 Arabic learners (orange); Piazzalunga et al. (2019) reported on groups of 24-60 Italian learners (black); Stokes et al. (2006) on 15 Cantonese learners (blue); Vance et al. (2005) on 17-20 English learners (light green); Cristia et al. (2020) reported on groups of 4-6 Tsimane' learners (dark green); the present study reports on groups of 8-19 Yélî Dnye learners (purple). Central tendency is mean in Arabic and Tsimane', median in Italian and Yélî Dnye; error is one standard error. Age has been slightly jittered for ease of inspection of different lengths at a given age."}
 
 pl<- read.csv("previous_lit.csv")
 
@@ -361,6 +357,7 @@ for(thislang in levels(pl_stacked$Language)) for(thislength in levels(factor(pl_
 
 
 ```
+
 
 
 ## Methods
@@ -812,7 +809,7 @@ cor.test(overall$Word,overall$matEd,method="s")->corme
 
 
 
-```{r Fig2-scores-by-age, ig.pos = "T!", fig.width=5, fig.height=5, fig.cap="NWR whole-item scores for individual participants as a function of age and sex (purple crosses = boys, orange circles = girls)."}
+```{r fig-scores-by-age, ig.pos = "T!", fig.width=5, fig.height=5, fig.cap="NWR whole-item scores for individual participants as a function of age and sex (purple crosses = boys, orange circles = girls)."}
 
 plot(overall$Word~overall$Age,pch=ifelse(overall$Sex=="B",4,1),cex=2,lty=3,ylab="NWR scores (% words)",xlab="Age (years)",col=ifelse(overall$Sex=="B","darkmagenta","chocolate1"))
 
@@ -821,7 +818,7 @@ plot(overall$Word~overall$Age,pch=ifelse(overall$Sex=="B",4,1),cex=2,lty=3,ylab=
 ```
 
 
-Our final exploratory analysis assessed whether variation in scores was structured by factors that vary across individuals, as per our third research question. As shown in Figure \@ref(fig:Fig2-scores-by-age), there was a greater deal of variance across the tested age range, with significantly higher NWR scores for older children (Spearman's rank correlation, given inequality of variance, rho (`r corage$statistic`) = `r corage$estimate`, p `r pval.display(corage$p.value)`). In contrast, there was no clear association between NWR scores and sex (Welch t (`r tsex$parameter`) = `r tsex$statistic`, p `r pval.display(tsex$p.value)`), birth order  (data missing for `r sum(is.na(demo$birthOrder[demo$included=="yes"]))` children, rho = (`r round(corbo$statistic,1)`) = `r corbo$estimate`, p `r pval.display(corbo$p.value)`), or maternal education  (rho ( `r round(corme$statistic,1)`) = `r corme$estimate`, p `r pval.display(corme$p.value)`).
+Our final exploratory analysis assessed whether variation in scores was structured by factors that vary across individuals, as per our third research question. As shown in Figure \@ref(fig:fig-scores-by-age), there was a greater deal of variance across the tested age range, with significantly higher NWR scores for older children (Spearman's rank correlation, given inequality of variance, rho (`r corage$statistic`) = `r corage$estimate`, p `r pval.display(corage$p.value)`). In contrast, there was no clear association between NWR scores and sex (Welch t (`r tsex$parameter`) = `r tsex$statistic`, p `r pval.display(tsex$p.value)`), birth order  (data missing for `r sum(is.na(demo$birthOrder[demo$included=="yes"]))` children, rho = (`r round(corbo$statistic,1)`) = `r corbo$estimate`, p `r pval.display(corbo$p.value)`), or maternal education  (rho ( `r round(corme$statistic,1)`) = `r corme$estimate`, p `r pval.display(corme$p.value)`).
 
 
 
@@ -852,7 +849,87 @@ In contrast, previous work shows little evidence for effects of maternal educati
 
 Last but not least, we investigated whether birth order might affect NWR scores, as it does other language tasks, resulting in first-born children showing higher scores on standardized language tests than later-born children [@havron2019effect], presumably because later-born children receive a smaller share of maternal input than their older siblings. Given shared caregiving practices and the hamlet organization typical of Rossel communities, children have many sources of adult and older child input that they encounter on a daily basis and first-born children quickly integrate with a much larger pool of both older and younger children with whom they partly share caregivers. Therefore we expected that any effects of birth order on NWR would be attenuated in this context. In line with this prediction, our descriptive analysis showed a non-significant correlation between birth order and NWR score. However, the effect size was larger than that found for the other factors, at r~.2, and thus we believe it may be worth revisiting this question with larger samples in similar child-rearing environments, to further establish whether distributed child care indeed results in more even language outcomes for first- and later-born children.
 
-### Other observations
+### NWR across languages and cultures
+
+```{r fig-prevlit-overall, echo = FALSE, ig.pos = "T!", fig.width=8, fig.height=5.5, fig.cap = "NWR scores as a function of age (in years). Jaber-Awida (2018) reported on 20 Arabic learners (orange); Piazzalunga et al. (2019) reported on groups of 24-60 Italian learners (black); Cristia et al. (2020) reported on groups of 4-6 Tsimane' learners (green); the present study reports on groups of 8-19 Yélî Dnye learners (purple). Central tendency is mean in Arabic and Tsimane', median in Italian and Yélî Dnye; error is one standard error. Age has been slightly jittered for ease of inspection of different lengths at a given age."}
+
+pl_overall=pl[,1:7]
+
+#add YD data
+yd_res_toadd[yd_res_toadd$Length!=1,]->yd_res_toadd
+means=aggregate(yd_res_toadd$Median,by=list(yd_res_toadd$Study,yd_res_toadd$Language,yd_res_toadd$n,yd_res_toadd$Age),mean)
+sds=aggregate(yd_res_toadd$SD,by=list(yd_res_toadd$Study,yd_res_toadd$Language,yd_res_toadd$n,yd_res_toadd$Age),mean)
+yd_res_toadd2=cbind(means,sds$x)
+
+colnames(yd_res_toadd2)<-c("Study","Language","n","Age","Overall","SD")
+yd_res_toadd2$Lengths<-"2-4"
+yd_res_toadd2=yd_res_toadd2[,c("Study","Language","n","Age","Lengths","Overall","SD")]
+
+#combine
+pl_overall=rbind(pl_overall,yd_res_toadd2)
+
+pl_overall$Language<-gsub(" (.*)","",pl_overall$Language)
+
+
+read.csv("lang-char.tsv",sep="\t")->lang
+merge(pl_overall,lang,by="Language")->pl_overall
+
+#add SE
+pl_overall$se=pl_overall$SD/sqrt(pl_overall$n)
+
+#pairs(pl_overall[c("Overall","nchar","phones","words")])
+
+#cor.test(pl_overall$Overall,pl_overall$nchar)
+#t.test(pl_overall$Overall~pl_overall$words)
+
+mycols = c( 
+             "Arabic" = "orange",
+             "Cantonese"   ="blue",
+             "English"   ="green",
+             "Italian"   ="black",
+             "Mandarin"   ="gray",
+             "Persian"   ="pink",
+             "Slovak"   ="lightblue",
+            "Sotho"   ="magenta",
+            "Spanish"   ="yellow",
+            "Swedish"   ="darkgray",
+            "Tsimane'" = "darkgreen",
+             "Yélî" = "purple")
+
+mywd = c( 
+             "Arabic" = 1,
+             "Cantonese"   =1,
+             "English"   =1,
+             "Italian"   =1,
+             "Mandarin"   =1,
+             "Persian"   =1,
+             "Slovak"   =1,
+            "Sotho"   =1,
+            "Spanish"   =1,
+            "Swedish"   =1,
+             "Tsimane'" = 2,
+             "Yélî" = 4)
+
+plot(pl_overall$Overall~pl_overall$Age,col=mycols[pl_overall$Language],pch=1,
+     xlab="Average age (years)",ylab="NWR Scores (words)",ylim=c(0,100))
+
+for(thislang in levels(factor(pl_overall$Language))) {
+  myx=pl_overall$Age[pl_overall$Language==thislang ]
+  myy=pl_overall$Overall[pl_overall$Language==thislang]
+  lines(myy~myx, col=mycols[thislang],lwd=mywd[thislang]) #join points of same length & lang
+  mylb=myy-pl_overall$se[pl_overall$Language==thislang]
+  myhb=myy+pl_overall$se[pl_overall$Language==thislang]
+  for(i in 1:length(mylb)) {
+    mylty=as.numeric(as.character(thislength))
+    lines(rep(myx[i],2),c(mylb[i],myhb[i]),col=mycols[thislang],lty=mylty) #error bar
+    lines(c(myx[i]-.1,myx[i]+.1),c(mylb[i],mylb[i]),col=mycols[thislang],lty=mylty) #lower error bar tip
+    lines(c(myx[i]-.1,myx[i]+.1),c(myhb[i],myhb[i]),col=mycols[thislang],lty=mylty) #higher error bar tip
+    }
+} 
+
+#add legend
+
+```
 
 In our sample of `r nrow(overall)` children between ages `r min(overall$Age)` and `r max(overall$Age)`, the average item-level score was `r round(mean(overall$Word))`%, falling well within the expected range of NWR applications in previous studies on a variety of linguistic populations (see Figure \@ref(fig:fig-prevlit)). Segment-based normalized Levenshtein distance  indicate that inexact repetitions often constituted _mostly_ accurate reroductions of the target, with an average of `r round(mean(overall$NLD))`% of the stimulus segments getting substituted, inserted, or deleted upon repetition. Paired with our thorough training protocol, we take these NWR scores as indicating that (a) our adaptations to NWR for this context were successful, even given a number of non-standard changes to the training phase and to the design of the stimuli and (b) Yélî children show comparable performance to others tested on a similar task, despite the many linguistic, cultural, and socioeconomic differences between this and previously tested populations. Given successful (and comparable) execution of this task.
 
