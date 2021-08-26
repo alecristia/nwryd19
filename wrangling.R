@@ -293,7 +293,7 @@ trnsc$ins=trnsc$del=trnsc$sub=trnsc$nchar=trnsc$trafos=trnsc$tarlen=NA
 substitution_bank=deletion_bank=match_bank=substitution_bank_try1=deletion_bank_try1=match_bank_try1=NULL
 
 for(i in grep("0",trnsc$correct)){ #this goes through all items with errors (" grep("0",trnsc$correct)")
-  #lev
+  #lev #i=2 ; i = 4
   lev=adist(trnsc[i,c("mp_uni")],trnsc[i,c("target_uni")],count=T)
   trnsc$ins[i]<-attributes(lev)$counts[,,"ins"]
   trnsc$del[i]<-attributes(lev)$counts[,,"del"]
@@ -304,29 +304,35 @@ for(i in grep("0",trnsc$correct)){ #this goes through all items with errors (" g
   
   #extract substitutions & add them to the bank
   sublist=which(strsplit(attributes(lev)$trafos, "")[[1]]=="S")
-  substitution_bank=rbind(substitution_bank,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][sublist],strsplit(trnsc[i,c("mp_uni")],"")[[1]][sublist]))
+  if(length(sublist) != 0) substitution_bank=rbind(substitution_bank,
+                          cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][sublist],
+                                strsplit(trnsc[i,c("mp_uni")],"")[[1]][sublist],
+                                trnsc[i,"age.rounded"])) # added age here
   
   #same for deletions  
   dellist=which(strsplit(attributes(lev)$trafos, "")[[1]]=="D")
-  deletion_bank=rbind(deletion_bank,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][dellist]))
+  if(length(dellist) != 0) deletion_bank=rbind(deletion_bank,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][dellist],
+                                                                   trnsc[i,"age.rounded"]))  # added age here
   
   #end with matches
   matlist=which(strsplit(attributes(lev)$trafos, "")[[1]]=="M")
-  match_bank=rbind(match_bank,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][matlist]))
+  if(length(matlist) != 0) match_bank=rbind(match_bank,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][matlist],
+                                                             trnsc[i,"age.rounded"])) # added age here
   
   #if item is first attempt, add to try1 version of these tables
   if(trnsc[i,"attempt"]=="first") {
-    substitution_bank_try1=rbind(substitution_bank_try1,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][sublist],strsplit(trnsc[i,c("mp_uni")],"")[[1]][sublist]))
-    deletion_bank_try1=rbind(deletion_bank_try1,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][dellist]))
-    match_bank_try1=rbind(match_bank_try1,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][matlist]))
+    if(length(sublist) != 0) substitution_bank_try1=rbind(substitution_bank_try1,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][sublist],strsplit(trnsc[i,c("mp_uni")],"")[[1]][sublist]))
+    if(length(dellist) != 0) deletion_bank_try1=rbind(deletion_bank_try1,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][dellist]))
+    if(length(matlist) != 0) match_bank_try1=rbind(match_bank_try1,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][matlist]))
     
     }
 }
 
 #create correct bank
 # M2A: what's this for if we don't expect any S/D/Is?
-#a2m for ease of reading the code, I had left the section that does insertions, deletions, substitutions -- but we know there are only matches here ;)
-#but seems that zas confusing
+#a2m for ease of reading the code, I had left the section that does insertions, deletions, substitutions -- 
+# but we know there are only matches here ;)
+#but seems that was confusing
 # M2A: ah alright!
 for(i in grep("1",trnsc$correct)){ #this goes through all items without errors (" grep("1",trnsc$correct)")
   #lev
@@ -358,7 +364,7 @@ trnsc$phon_score[is.na(trnsc$phon_score)]<-1
 
 write.table(trnsc,"final_data.txt",row.names=F,sep="\t")
 
-#finish by writing out the bqnks
+#finish by writing out the banks
 #back-transform into orthography
 for(i in dim(correspondances)[1]:1) { #
    substitution_bank=gsub(correspondances[i,2],correspondances[i,1],substitution_bank,fixed=T)
@@ -385,3 +391,4 @@ sort(match_bank)->match_bank
 write.table(match_bank,"match_bank.txt",row.names=F,sep="\t")
 sort(match_bank_try1)->match_bank_try1
 write.table(match_bank_try1,"match_bank_try1.txt",row.names=F,sep="\t")
+
