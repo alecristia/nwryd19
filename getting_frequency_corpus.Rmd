@@ -55,9 +55,9 @@ Middy gave me an onset list that converts all vowels and consonants to common re
 
 So all things considered, it looks like it may be easier to just do the replacement of the 4- and 3-letter segments here, just being careful to map these to something that is not used in the stimuli, such as ngm.
 
-Also, this reveals my rewrites were incomplete, so I added some lines for the onsets that were missing in my initial correspondance list.
+Also, this reveals my rewrites were incomplete, so I added some lines for the onsets that were missing in my initial correspondence list.
 
-The correspondances here looks similar to the one in wrangling but it has more entries because we want to separate each phoneme, and we want to distinguish between short and long
+The correspondences here looks similar to the one in wrangling but it has more entries because we want to separate each phoneme, and we want to distinguish between short and long
 
 ```{r pressure, echo=FALSE}
 
