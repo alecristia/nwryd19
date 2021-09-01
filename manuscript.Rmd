@@ -220,88 +220,46 @@ trnsc.inc=trnsc.inc[trnsc.inc$attempt=="first",]
 
 ## Introduction
 
-TODO
 
-- remove topics in intro that do not relate to aims of study (R1, unclear to me what this is...)
-
-Children's perception and production of phonetic and phonological units continues developing well beyond the first year of life, even extending into middle childhood [e.g., @hazan2000development]. Much of the evidence for later phonological development comes from non-word repetition (NWR) tasks. In the present study, we use NWR to investigate the phonological development of children learning Yélî Dnye, an isolate language spoken in Papua New Guinea (PNG), which has a large and unusually dense phonological inventory. This allows us to contribute data at the crossing of language typology, language acquisition, and individual variation, as presented in more detail below.
+Children's perception and production of phonetic and phonological units continues developing well beyond the first year of life, even extending into middle childhood [e.g., @hazan2000development]. Much of the evidence for later phonological development comes from non-word repetition (NWR) tasks. In the present study, we use NWR to investigate the phonological development of children learning Yélî Dnye, an isolate language spoken in Papua New Guinea (PNG), which has a large and unusually dense phonological inventory. This allows us to contribute data at the intersection of language typology, language acquisition, and individual variation, as presented in more detail below.
 
 ### What is NWR?
 
 
-In a NWR task, participants hear a short word-like form that is phonologically legal but lexically meaningless in the language(s) they are learning. After hearing this non-word, the participant's task is to try to immediately and precisely repeat it. NWR has been used to seek answers to a variety of theoretical questions, including what the links  between phonology, working memory, and the lexicon are [@bowey2001nonword], and how extensively phonological constraints found in the lexicon affect online production [@gallagher2014identity]. NWR is also frequently used in applied contexts, notably as a diagnostic tool for language delays and disorders [@estes2007differences]. Since non-words can be generated in any language, it has attracted the attention of researchers working in multilingual and linguistically diverse environments, particularly in Europe [@meir2016disentangling;@is08042009language;@chiat2015nonword;@armon2015assessing]. NWR scores are thought to reflect long-term phonological knowledge (to perceive the item precisely despite not having heard it before) as well as online phonological working memory (to encode the item in the interval between hearing it and saying it back) and flexible production patterns (to produce the item precisely despite not having pronounced it before).  
-
-#### NWR design and analysis adaptations
-
-In a basic NWR task, the participant listens to a production of a word-like form, such as /bilik/, and then repeats back what they heard without changing any phonological feature that is contrastive in the language. For instance, in English, a response of [bilig] or [pilik] would be scored as incorrect; a response [biːlik], where the vowel is lengthened without change of quality would be scored as correct, because English does not have contrastive vowel length. There is some variation in how past NWR studies have designed the presentation procedure and structure of items. For example, while items are often presented orally by the experimenter [@torrington2015non], an increasing number of studies have turned instead to playing back pre-recorded stimuli in order to increase control in stimulus presentation [@brandeker2015language]. Additionally, while some studies have used 10-15 non-words [e.g., @cristia2020infant], others have employed up to 46 unique items [@piazzalunga2019articulatory]. Authors also often modulate structural complexity, typically measured in terms of item length (measured in number of syllables) and/or syllable structure [open as opposed to closed syllables, @gallon2007non].
-
-Previous work typically steers clear of articulatorily and/or acoustically challenging sounds, but we included some in our experiment to more adequately represent Yélî Dnye's phonology and to contribute data on whether this affects repetition. We ultimately used a relatively large number of items that would enable us to explore both variation in structural complexity and in more vs. less challenging sounds. However, aware that this large item inventory might render the task longer and more tiresome, we split items across children (see below). Naturally, designing the task in this way may make the study of individual variation within the population more difficult because different children are exposed to different items. However, as discussed above, effects of individual differences in NWR are probably relatively small, and thus we reasoned that they would not be detectable with the sample size that we could collect during our short visit. That said, we contribute to the literature by also reporting descriptive analyses of individual variation that could potentially be integrated in meta- or mega-analytic efforts.
+In a basic NWR task, the participant listens to a production of a word-like form, such as /bilik/, and then repeats back what they heard without changing any phonological feature that is contrastive in the language. For instance, in English, a response of [bilig] or [pilik] would be scored as incorrect; a response [biːlik], where the vowel is lengthened without change of quality would be scored as correct, because English does not have contrastive vowel length.
 
 
-<!-- ac2ac address R's comment here: NWR tasks and what they measure. The authors suggest that their task measures phonological development, I think this point needs to be sharpened and better justified. Yes, researchers' opinion on what the task measures vary greatly, and it is briefly over-viewed. Yet, the rational for what the novel task measures needs to be either more strongly justified, or down-toned. -->
+NWR has been used to seek answers to a variety of theoretical questions, including what the links  between phonology, working memory, and the lexicon are [@bowey2001nonword], and how extensively phonological constraints found in the lexicon affect online production [@gallagher2014identity]. NWR is also frequently used in applied contexts, notably as a diagnostic tool for language delays and disorders [@chiat2015non;@estes2007differences]. Since non-words can be generated in any language, it has attracted the attention of researchers working in multilingual and linguistically diverse environments, particularly in Europe [@meir2016disentangling;@is08042009language;@chiat2015nonword;@armon2015assessing].  Non-words can be designed to try to isolate more narrowly certain skills; for instance, one can choose non-words that contain real morphemes in order to load more on prior language experience, or non-words that are shorter to avoid loading on working memory [see a discussion in @chiat2015nonword]. Broadly, however, NWR scores will necessarily reflect to a certain extent long-term phonological knowledge (to perceive the item precisely despite not having heard it before) as well as online phonological working memory (to encode the item in the interval between hearing it and saying it back) and flexible production patterns (to produce the item precisely despite not having pronounced it before).  
 
+### The present work
+
+We aimed to contribute to four areas of research. We motivate each in turn.
 
 #### NWR and typology
 
-The first research area is at the crossing of typology and phonological development.  Previous work using NWR has preferred relatively universal and early-acquired phonemes [with exceptions including @gallagher2014identity], in part as a way to separate phoneme pronunciation from broader syllable structure and word-level prosodic effects [@gallon2007non] and in part because the test is sometimes used to measure working memory in the context of executive functions [@mulder2017early] rather than purely linguistic skills. 
+The first research area is at the intersection of typology and phonological development. There has been an interest in adapting NWR to different languages, in part for applied purposes. In a review of NWR as a potential task to diagnose language impairments among bilingual children in Europe, @chiat2015non discusses the impossibility of creating language-universal non-word items: Languages vary in their phonological inventory, sound sequencing (phonotactics), syllable structure, and word-level prosody. As a result, any one item created will be relatively easier if it more closely resembles real words in the language, making it difficult to balance difficulty when comparing children learning different languages. This previous literature also suggests some dimensions of difficulty -- an issue to which we return in the next subsection.
 
-EXPLAIN MORE CLEARLY what is the intuition here
+Although this cross-linguistic literature is rich, the potential difficulty associated with specific phonetic targets composing the non-words has received relatively little attention. For example, @chiat2015non discusses segmental complexity as a function of whether there are consonant clusters -- which is arguably a factor reflecting phonotactics and syllable structure.
 
-Here, we investigate repetition of non-word items containing cross-linguistically common and cross-linguistically rare phonetic targets. Specifically, we included a subset of non-word items with typologically rare sounds to ask whether these sounds are disadvantaged in the perception-production loop involved in NWR.
+In the present study, we thought it was relevant to represent the rich phonological inventory found in Yélî Dnye, by including a variety of phonetic targets. Some of them are cross-linguistically rare, in that they are less common across languages than other sounds or phonetic targets. Phonologists and psycholinguists have discussed the extent to which cross-linguistic frequency may reflect ease of acquisition, focusing largely on phonotactics [@moreton2012structure]. The correlation between typological frequency and ease of acquisition is typically assumed to emerge from the following causal paths (which are not mutually exclusive):
 
-<!-- ac2ac address R's comment: (2) Language typology (universal and early-acquired phonemes / cross-linguistically common and cross-linguistically rare phonetic targets). Here I would recommend consulting a Chapter by Shula Chiat on language-universal and vs. language-specific NWR tasks. -->
-<!-- Chiat, S. (2015). Non-Word Repetition. In Armon-Lotem, S., de Jong, J., & Meir, N. (Eds.). Methods for assessing multilingual children: disentangling bilingualism from Specific Language Impairment (pp.125-150). Bristol: Multilingual Matters. -->
+1. Sounds (and sound sequences) that are harder to perceive tend to be misperceived and thus lost diachronically
+2. Sounds (and sound sequences) that are harder to prononunce tend to be mispronounced and thus lost diachronically
+3. Sound sequences that are harder to hold in memory tend to be mispronounced and thus lost diachronically
 
+Given these causal pathways, we predicted that variation in NWR across items will correlate with the cross-linguistic frequency of the phones composing those items. 
 
 #### Length effects on NWR
 
-```{r prep-prevlit, echo=F}
-pl<- read.csv("previous_lit.csv")
-
-pl_stacked=cbind(pl[,c("Study","Language","n","Age")],stack(pl[c("X1","X2","X3","X4")]),stack(pl[c("sd1","sd2","sd3","sd4")]))
-colnames(pl_stacked)[5:8]<-c("Median","Length","SD","sdtype")
-pl_stacked$Length=gsub("X","",pl_stacked$Length)
-
-#remove lines with NA median
-pl_stacked[!is.na(pl_stacked$Median),]->pl_stacked
 
 
-#add YD data
-aggregate(trnsc.inc$correct*100,by=list(trnsc.inc$id,trnsc.inc$type,trnsc.inc$age.rounded),mean,na.rm=T)->m_ty_id_age #get means by child and length and age
+The second research area we contribute data to is research looking at the impact of word length on NWR repetition within specific languages. Some work documents much lower NWR scores for longer, compared to shorter, items [e.g., among Cantonese-learning children; @stokes2006nonword], whereas differences are negligible in other studies  [e.g., among Italian learners; @piazzalunga2019articulatory]. 
 
-age_cuts=c(3,6,8,13)
-m_ty_id_age$age_g=cut(m_ty_id_age$Group.3,age_cuts) #apply cuts to define groups
-m_ty_id_age$age_gm<-ifelse(m_ty_id_age$age_g=="(3,6]",4.5,ifelse(m_ty_id_age$age_g=="(6,8]",7,10))
+It is possible that differences are due to language characteristics, including the modal length of words in the language and/or in child-directed speech in that culture -- a hypothesis discussed for instance in @chiat2015non (pp. 7-8; see also p. 5). In broad terms, one may expect languages with a lexicon that is heavily biased towards monosyllables to show greater length effects than languages where words are modally longer. A non-systematic meta-analyses does not provide overwhelming support for this hypothesis [@cristia2021supplementary; SM1].  
 
-
-aggregate(m_ty_id_age$x,by=list(m_ty_id_age$Group.2,m_ty_id_age$age_gm),median,na.rm=T)->yd_res #get avg across children within age groups
-yd_res=cbind(yd_res,aggregate(m_ty_id_age$x,by=list(m_ty_id_age$Group.2,m_ty_id_age$age_gm),sd,na.rm=T)$x,aggregate(m_ty_id_age$x,by=list(m_ty_id_age$Group.2,m_ty_id_age$age_gm),length)$x) #add sd & ns
-
-colnames(yd_res)<-c("Length","Age","Median","SD","n")
-yd_res_toadd=cbind("This paper","Yélî Dnye",yd_res[,c("n","Age","Median","Length","SD")],NA)
-colnames(yd_res_toadd)<-c("Study","Language","n","Age","Median","Length","SD","sdtype")
-
-#combine
-pl_stacked=rbind(pl_stacked,yd_res_toadd)
-
-#add SE
-pl_stacked$se=pl_stacked$SD/sqrt(pl_stacked$n)
-
-#remove monosyllables
-pl_stacked=pl_stacked[pl_stacked$Length!=1,]
-
-pl_stacked$Language=factor(pl_stacked$Language)
+Nonetheless, given the paucity of research looking at this question, and the diversity of current results, we do not approach this issue within a hypothesis-testing framework but sought instead to provide one more piece of data on the question, which may be re-used in future meta- or mega-analytic analyses.
 
 
-pl$dif<-pl$X2-pl$X3
-difs=aggregate(pl$dif,by=list(pl$Language),mean, na.rm=T)
-```
-
-
-The third research area we contribute data to is research looking at the impact of word length on NWR repetition, and what this may reflect about phonological development within specific languages. Some work documents much lower NWR scores for longer, compared to shorter, items [e.g., among Cantonese-learning children; @stokes2006nonword], whereas differences are negligible in other studies  [e.g., among Italian learners; @piazzalunga2019articulatory]. It is possible that differences are due to language characteristics, including the modal length of words in the language and/or in child-directed speech in that culture. In broad terms, one may expect languages with a lexicon that is heavily biased towards monosyllables to show greater length effects than languages where words are modally longer. 
-
-To see whether there were broad generalizations that could be drawn from previous literature fitting these predictions, we inspected NWR papers in a variety of languages which reported NWR scores separately for different word lengths, as described in Supplementary Materials [@cristia2021supplementary; SM1]. We found data for learners of Israeli Arabic  [@jabere2018xperiment]; Cantonese  [@stokes2006nonword]; English  [@vance2005speech]; Italian  [@piazzalunga2019articulatory]; and Tsimane'  [@cristia2020infant]. 
-Our reading of that work is that, although there is cross-linguistic (or cross-sample) variation in length effects, these do not systematically line up with expected word length in different languages. For instance, the difference in NWR scores for 2- versus 3-syllable items (averaging across age groups) is largest in Tsimane' (~`r round(difs[difs$Group.1=="Tsimane'","x"])`%) and Arabic (~`r round(difs[difs$Group.1=="Arabic","x"])`%), which tend to have longer words, as does Italian, where the difference between 2- and 3-syllable items was only ~`r round(difs[difs$Group.1=="Italian","x"])`%. Similarly, two languages that are often described as heavily biased towards monosyllables show diverse length effects (Cantonese ~`r round(difs[difs$Group.1=="Cantonese","x"])`% versus English ~`r round(difs[difs$Group.1=="English","x"])`%). Given the paucity of research looking at this question, and the diversity of current results, we do not approach this issue within a hypothesis-testing framework but sought instead to provide one more piece of data on the question, which may be re-used in future meta- or mega-analytic analyses.
 
 #### Individual variation effects on NWR
 
@@ -313,7 +271,7 @@ The fourth research goal we pursued is to use NWR with non-Western, non-urban po
 
 There are no theoretical reasons to presume that the technique will not generalize to these new conditions. That said, @cristia2020infant recently reported relatively lower NWR scores among the Tsimane', a non-Western rural population, interpreting these findings as consistent with the hypothesis that lower levels of infant-directed speech and/or low prevalence of literacy in a population could lead to population-level differences in NWR scores. 
 
-In view of these results, it is important to bear in mind that NWR is a task developed in countries where literacy is widespread, and it is considered an excellent predictor of reading, better than rhyme awareness for instance [e.g., @gathercole1991differentiating]. Therefore, it may not be a general index of phonological development, but reflect only certain non-universal skills. Indeed, @cristia2020infant present the task as being a good index of the development of "short-hand-like" representations specifically, which could thus miss, for example, more holistic phonological and phonetic representations. 
+In view of these results, it is important to bear in mind that NWR is a task developed in countries where literacy is widespread, and it is considered an excellent predictor of reading, better than rhyme awareness for instance [e.g., @gathercole1991differentiating]. Therefore, it may not be a general index of, for instance, phonological development, but reflect only certain non-universal language skills. Indeed, @cristia2020infant present their task as being a good index of the development of "short-hand-like" representations specifically, which could thus miss, for example, more holistic phonological and phonetic representations. We return to the question of what was measured here in the Discussion.
 
 Aside from @cristia2020infant's hypotheses just mentioned, we have found little discussion of linguistic effects (i.e., potential differences in NWR as a function of language typology) or cultural effects (i.e., potential differences in NWR as a function of other differences across human populations). 
 
@@ -397,7 +355,7 @@ We tested a total of `r dim(demo)[1]` children from `r length(levels(factor(demo
 
 ### Stimuli
 
-Many NWR studies are based on a fixed list of 12-16 items that vary in length between 1 and 4 syllables, often additionally varying syllable complexity and/or cluster presence and complexity, and always meeting the condition that they do not mean anything in the target language [e.g., @balladares2016socio; @wilsenach2013phonological]. We kept the same variation in item length and requirement for not being meaningful in the language, but we did not vary syllable complexity or clusters because these are vanishingly rare in Yélî Dnye. We also increased the number of items an individual child would be tested on, such that a child would get up to 23 items to repeat [other work has also used up to 24-30 items: @jabere2018xperiment; @kalnak2014nonword], with the entire test inventory of 40 final items distributed across children.
+Many NWR studies are based on a fixed list of 12-16 items that vary in length between 1 and 4 syllables, often additionally varying syllable complexity and/or cluster presence and complexity, and always meeting the condition that they do not mean anything in the target language [e.g., @balladares2016socio; @wilsenach2013phonological]. We kept the same variation in item length and requirement for not being meaningful in the language, but we did not vary syllable complexity or clusters because these are vanishingly rare in Yélî Dnye. We also increased the number of items an individual child would be tested on, such that a child would get up to 23 items to repeat [other work has also used up to 24-46 items: @jabere2018xperiment; @kalnak2014nonword;@piazzalunga2019articulatory], with the entire test inventory of 40 final items distributed across children. We  used a relatively large number of items to explore effects of length and phonological complexity. However, aware that this large item inventory might render the task longer and more tiresome, we split items across children. Naturally, designing the task in this way may make the study of individual variation within the population more difficult because different children are exposed to different items.
 
 A first list of candidate items was generated during a trip to the island in 2018 by selecting simple consonants (/p/,	/t/,	/ṭ/,	/k/,	/m/,	/n/,	/w/,	/y/) and vowels (/i/, /o/, /u/, /a/, /e/) and combining them into consonant-vowel syllables, then sampling the space of resulting possible 2- to 4-syllable sequences. These candidates were automatically removed from consideration if they appeared in Levinson's (2015) dictionary. The second author presented them orally to three local research assistants, all native speakers of Yélî Dnye, who repeated each form as they would in an NWR task and additionally let the experimenter know if the item was in fact a word or phrase in Yélî Dnye. Any item reported to have a meaning or a strong association with another word form or meaning was excluded.
 
@@ -467,7 +425,9 @@ Additionally, we estimated frequency of the phones present  in the target items 
 
 ### Procedure
 
-In adapting the typical NWR procedure for this context, we balanced three desiderata: That children would not be unduly exposed to the items before they themselves had to repeat them (i.e., from other children who had participated); that children would feel comfortable doing this task with us; and that community members would feel comfortable having their children do this task with us.
+There is some variation in procedure in previous work. For example, while items are often presented orally by the experimenter [@torrington2015non], an increasing number of studies have turned instead to playing back pre-recorded stimuli in order to increase control in stimulus presentation [@brandeker2015language].
+
+In adapting the typical NWR procedure for our context, we balanced three desiderata: That children would not be unduly exposed to the items before they themselves had to repeat them (i.e., from other children who had participated); that children would feel comfortable doing this task with us; and that community members would feel comfortable having their children do this task with us.
 
 We tested in four different sites spread across the northeastern region of the island, making a single visit to each, conducting back-to-back testing of all eligible children present at the time of our visit in order to prevent the items from 'spreading' between children through hearsay. Whenever children living in the same household were tested, we tried to test children in age order, from oldest to youngest, to minimize intimidation for younger household members, and always using different elicitation sets. Because space availability was limited in different ways from hamlet to hamlet, the places where elicitation happened varied across testing sites. More information is available from the online supplementary materials. 
 
@@ -872,7 +832,7 @@ Our final exploratory analysis assessed whether variation in scores was structur
 
 ## Discussion
 
-We used non-word repetition to investigate phonological development in a language with a large phonological inventory (including some typologically rare segments). We aimed to provide additional data on two questions already visited in NWR work, namely the influence of stimulus length and individual variation, plus one research area that has received less attention, regarding the possible relationship between phone frequency and NWR scores. An additional overarching goal was to discuss NWR in the context of population and language diversity, since it is very commonly used to document phonological development in children raised in urban settings with wide-spread literacy, and has been less seldom used in non-European languages (but note there are exceptions, including work cited in the Introduction and in the Discussion below). We consider implications of our results on each of these four research areas in turn. 
+We used non-word repetition to investigate phonological development in a language with a large phonological inventory (including some typologically rare segments). We aimed to provide additional data on two questions already visited in NWR work, namely the influence of stimulus length and individual variation, plus one research area that has received less attention, regarding the possible relationship between typological phone frequency and NWR scores. An additional overarching goal was to discuss NWR in the context of population and language diversity, since it is very commonly used to document phonological development in children raised in urban settings with wide-spread literacy, and has been less seldom used in non-European languages (but note there are exceptions, including work cited in the Introduction and in the Discussion below). We consider implications of our results on each of these four research areas in turn. 
 
 ### NWR and typology
 
@@ -909,7 +869,8 @@ Last but not least, we investigated whether birth order might affect NWR scores,
 ### NWR across languages and cultures
 
 
-
+WHAT IS BEING MEASURED?
+We then added a mention in the discussion that our work does not allow us to tease apart lexical knowledge from phonological knowledge and from working memory in ways that have been done in previous research.
 
 
 The fourth research area to which we wanted to contribute pertained to the use of NWR across languages and populations, as when designing this study we wondered whether NWR was a *fair* test of phonological development. Although our data cannot answer this question because we have only sampled one language and population here, we would like to spend some time discussing the integration of these results to the wider NWR literature. It is important to note at the outset that we cannot obtain a final answer because integration across studies implies not only variation in languages and child-rearing settings, but also in methodological aspects including non-word length, non-word design (e.g., the syllable and phone complexity included in the items), and task administration, among others. Nonetheless, we feel the NWR task is prevalent enough to warrant discussion about this, as it is done for other tasks sometimes used to describe and compare children's language skills across populations, like the recent re-use of the MacArthur-Bates Communicative Development Inventory to look at vocabulary acquisition across multiple languages [@frank2017wordbank]. 

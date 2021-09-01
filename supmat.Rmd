@@ -9,7 +9,53 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## SM1: Systematic review of previous work to check whether length there are typological differences in length effects on NWR
 
+```{r prep-prevlit, echo=F}
+pl<- read.csv("previous_lit.csv")
+
+pl_stacked=cbind(pl[,c("Study","Language","n","Age")],stack(pl[c("X1","X2","X3","X4")]),stack(pl[c("sd1","sd2","sd3","sd4")]))
+colnames(pl_stacked)[5:8]<-c("Median","Length","SD","sdtype")
+pl_stacked$Length=gsub("X","",pl_stacked$Length)
+
+#remove lines with NA median
+pl_stacked[!is.na(pl_stacked$Median),]->pl_stacked
+
+
+#add YD data
+aggregate(trnsc.inc$correct*100,by=list(trnsc.inc$id,trnsc.inc$type,trnsc.inc$age.rounded),mean,na.rm=T)->m_ty_id_age #get means by child and length and age
+
+age_cuts=c(3,6,8,13)
+m_ty_id_age$age_g=cut(m_ty_id_age$Group.3,age_cuts) #apply cuts to define groups
+m_ty_id_age$age_gm<-ifelse(m_ty_id_age$age_g=="(3,6]",4.5,ifelse(m_ty_id_age$age_g=="(6,8]",7,10))
+
+
+aggregate(m_ty_id_age$x,by=list(m_ty_id_age$Group.2,m_ty_id_age$age_gm),median,na.rm=T)->yd_res #get avg across children within age groups
+yd_res=cbind(yd_res,aggregate(m_ty_id_age$x,by=list(m_ty_id_age$Group.2,m_ty_id_age$age_gm),sd,na.rm=T)$x,aggregate(m_ty_id_age$x,by=list(m_ty_id_age$Group.2,m_ty_id_age$age_gm),length)$x) #add sd & ns
+
+colnames(yd_res)<-c("Length","Age","Median","SD","n")
+yd_res_toadd=cbind("This paper","Yélî Dnye",yd_res[,c("n","Age","Median","Length","SD")],NA)
+colnames(yd_res_toadd)<-c("Study","Language","n","Age","Median","Length","SD","sdtype")
+
+#combine
+pl_stacked=rbind(pl_stacked,yd_res_toadd)
+
+#add SE
+pl_stacked$se=pl_stacked$SD/sqrt(pl_stacked$n)
+
+#remove monosyllables
+pl_stacked=pl_stacked[pl_stacked$Length!=1,]
+
+pl_stacked$Language=factor(pl_stacked$Language)
+
+
+pl$dif<-pl$X2-pl$X3
+difs=aggregate(pl$dif,by=list(pl$Language),mean, na.rm=T)
+```
+
+
 ADD MORE INFO ABOUT HOW THESE PAPERS WERE DISCOVERED
+
+ We do not think previous literature fitting these predictions, we inspected NWR papers in a variety of languages which reported NWR scores separately for different word lengths, as described in Supplementary Materials. We found data for learners of Israeli Arabic  [@jabere2018xperiment]; Cantonese  [@stokes2006nonword]; English  [@vance2005speech]; Italian  [@piazzalunga2019articulatory]; and Tsimane'  [@cristia2020infant]. 
+Our reading of that work is that, although there is cross-linguistic (or cross-sample) variation in length effects, these do not systematically line up with expected word length in different languages. For instance, the difference in NWR scores for 2- versus 3-syllable items (averaging across age groups) is largest in Tsimane' (~`r round(difs[difs$Group.1=="Tsimane'","x"])`%) and Arabic (~`r round(difs[difs$Group.1=="Arabic","x"])`%), which tend to have longer words, as does Italian, where the difference between 2- and 3-syllable items was only ~`r round(difs[difs$Group.1=="Italian","x"])`%. Similarly, two languages that are often described as heavily biased towards monosyllables show diverse length effects (Cantonese ~`r round(difs[difs$Group.1=="Cantonese","x"])`% versus English ~`r round(difs[difs$Group.1=="English","x"])`%).
 
 ```{r prep-prevlit, echo=F}
 pl<- read.csv("previous_lit.csv")
