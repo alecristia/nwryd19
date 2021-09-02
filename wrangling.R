@@ -4,7 +4,7 @@ library(openxlsx)
 read.delim("NWR-transcription.txt", encoding="UTF-8")->trnsc
 
 
-#DATA REMOVAL *** ATTENTION *** 
+#DATA REMOVAL *** ATTENTION ***
 #REMOVE ALL TASK 4 (whatever that is)
 # M2A: This appears to be a second pass over productions that were deemed to
 # be words; the elicitation here is just a translation of what word the
@@ -21,7 +21,7 @@ trnsc$tokid=paste(trnsc$item,trnsc$token)
 # 361              two     two
 # 362              two     two
 # --> these two were converted to YD orthography
-# 
+#
 # The following have not been changed in any way
 # 732             loudî      English: loud
 # 879          no-pinêt                                          English: no peanut
@@ -74,7 +74,7 @@ trnsc <- trnsc %>%
 
 
 dim(trnsc)
-  
+
 # add demographic info
 read.csv("NWR-demo.csv",header=T)->demo
 #colnames(demo)
@@ -92,7 +92,7 @@ merge(trnsc,inc,by.x="id",by.y="ID",all.x=T)->trnsc
 dim(trnsc) #still no loss, all good
 
 #add orthographic representations targets & other stims chars
-#   
+#
 # also, notice that stims and segments are merged using ortho, so as long as ortho is matched
 # across the two, the merge should carry over whatever changes you make
 
@@ -107,7 +107,7 @@ read.delim("segment-counts-types.txt", encoding="UTF-8",sep="\t",header=T)->phon
 merge(segments,phone_counts_types,by.x="ortho",by.y="ortho",all.x=T)->segments
 write.table(segments,"segments_with_cor_freq.txt",sep="\t",row.names = F)
 
-#read in table with breakdown 
+#read in table with breakdown
 read.xlsx("stimuli.xlsx")->stims
 #add average crosslinguistic frequency
 stim_seg_freq=matrix(NA,nrow=dim(stims)[1],ncol=8)
@@ -120,7 +120,7 @@ stims$avg_fr=apply(stim_seg_freq,1,mean,na.rm=T)
 #add average corpus frequency - LOGGED
 stim_seg_freq=matrix(NA,nrow=dim(stims)[1],ncol=8)
 for(i in 1:dim(stim_seg_freq)[1]) for(j in 1:dim(stim_seg_freq)[2]) {
-  thisfreq=segments$freq_corpus[as.character(segments$ortho)==as.character(stims[i,paste0("ortho",j)])] 
+  thisfreq=segments$freq_corpus[as.character(segments$ortho)==as.character(stims[i,paste0("ortho",j)])]
   stim_seg_freq[i,j]<-ifelse(sum(!is.na(thisfreq))==1,thisfreq,NA)
 }
 stims$avg_fr_cor=apply(log(stim_seg_freq),1,mean,na.rm=T)
@@ -129,7 +129,7 @@ stims$avg_fr_cor=apply(log(stim_seg_freq),1,mean,na.rm=T)
 stim_seg_freq=matrix(NA,nrow=dim(stims)[1],ncol=8)
 for(i in 1:dim(stim_seg_freq)[1]) for(j in 1:dim(stim_seg_freq)[2]) {
   thisfreq=segments$freq_corpus_types[
-    as.character(segments$ortho)==as.character(stims[i,paste0("ortho",j)])] 
+    as.character(segments$ortho)==as.character(stims[i,paste0("ortho",j)])]
   stim_seg_freq[i,j]<-ifelse(sum(!is.na(thisfreq))==1,thisfreq,NA)
 }
 stims$avg_fr_cor_ty=apply(log(stim_seg_freq),1,mean,na.rm=T)
@@ -167,7 +167,7 @@ trnsc$mp_uni=gsub("-","",trnsc$mp_uni,fixed=T)
 trnsc$mp_uni=gsub("([aeiouêâéáóî])\\1+", "\\1", trnsc$mp_uni)
 trnsc$target_uni=gsub("([aeiouêâéáóî])\\1+", "\\1", trnsc$target_uni)
 
-# if correct=0 but orthotarget=mispronunciation (probably due to length errors) then change correct to 1 
+# if correct=0 but orthotarget=mispronunciation (probably due to length errors) then change correct to 1
 #sum(trnsc$correct==0 & trnsc$target_ortho == trnsc$mispronunciation & !is.na(trnsc$mispronunciation)) #this only happens twice
 trnsc[trnsc$correct==0 & trnsc$target_uni == trnsc$mp_uni & !is.na(trnsc$mp_uni),]
 trnsc$correct[trnsc$correct==0 & trnsc$target_uni == trnsc$mp_uni & !is.na(trnsc$mp_uni)]<-1
@@ -178,7 +178,7 @@ trnsc$correct[trnsc$correct==0 & trnsc$target_uni == trnsc$mp_uni & !is.na(trnsc
 
 # create phonological correspondance matrix
 # NOTE!! NON INTUITIVE MAPPING!!!! DO NOT READ THE OUTPUT BELIEVING IT IS PSEUDO IPA!!!
-# NOTE2!!! it's better if the chars are not accented & since we don't distinguish long & short, 
+# NOTE2!!! it's better if the chars are not accented & since we don't distinguish long & short,
 # we'll use capitals for nasal & small caps for oral, with no distinction between short and long (see above)
 correspondances=matrix( #list correspondances always by pairs, orthography then phonology
   c(
@@ -275,7 +275,7 @@ correspondances=matrix( #list correspondances always by pairs, orthography then 
     "gh","H",
     "lv","L",
     "ch","t" #this one doesn't exist in the local orthography but it appears -- middy said this is t before e and i
-    
+
   ),#last item above should not have a comma
   ncol = 2,byrow = T)
 
@@ -288,7 +288,7 @@ for(i in 1:dim(correspondances)[1]) { #transform into unicharacter
 head(trnsc[,c("mispronunciation","mp_uni","target_uni")])
 
 
-#calculate Levinshtein's distances 
+#calculate Levinshtein's distances
 trnsc$ins=trnsc$del=trnsc$sub=trnsc$nchar=trnsc$trafos=trnsc$tarlen=NA
 substitution_bank=deletion_bank=match_bank=substitution_bank_try1=deletion_bank_try1=match_bank_try1=NULL
 
@@ -301,56 +301,52 @@ for(i in grep("0",trnsc$correct)){ #this goes through all items with errors (" g
   trnsc$trafos[i]=attributes(lev)$trafos #M, I, D and S indicating a match, insertion, deletion and substitution
   trnsc$nchar[i]=nchar(attributes(lev)$trafos)
   trnsc$tarlen[i]=nchar(trnsc$target_uni[i])
-  
+
   #extract substitutions & add them to the bank
   sublist=which(strsplit(attributes(lev)$trafos, "")[[1]]=="S")
   if(length(sublist) != 0) substitution_bank=rbind(substitution_bank,
                           cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][sublist],
                                 strsplit(trnsc[i,c("mp_uni")],"")[[1]][sublist],
                                 trnsc[i,"age.rounded"])) # added age here
-  
-  #same for deletions  
+
+  #same for deletions
   dellist=which(strsplit(attributes(lev)$trafos, "")[[1]]=="D")
   if(length(dellist) != 0) deletion_bank=rbind(deletion_bank,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][dellist],
                                                                    trnsc[i,"age.rounded"]))  # added age here
-  
+
   #end with matches
   matlist=which(strsplit(attributes(lev)$trafos, "")[[1]]=="M")
   if(length(matlist) != 0) match_bank=rbind(match_bank,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][matlist],
                                                              trnsc[i,"age.rounded"])) # added age here
-  
+
   #if item is first attempt, add to try1 version of these tables
   if(trnsc[i,"attempt"]=="first") {
     if(length(sublist) != 0) substitution_bank_try1=rbind(substitution_bank_try1,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][sublist],strsplit(trnsc[i,c("mp_uni")],"")[[1]][sublist]))
     if(length(dellist) != 0) deletion_bank_try1=rbind(deletion_bank_try1,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][dellist]))
     if(length(matlist) != 0) match_bank_try1=rbind(match_bank_try1,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][matlist]))
-    
+
     }
 }
 
 #create correct bank
-# M2A: what's this for if we don't expect any S/D/Is?
-#a2m for ease of reading the code, I had left the section that does insertions, deletions, substitutions -- 
-# but we know there are only matches here ;)
-#but seems that was confusing
-# M2A: ah alright!
 for(i in grep("1",trnsc$correct)){ #this goes through all items without errors (" grep("1",trnsc$correct)")
   #lev
   lev=adist(trnsc[i,c("target_uni")],trnsc[i,c("target_uni")],count=T)
-  
+
   trnsc$trafos[i]=attributes(lev)$trafos #M, I, D and S indicating a match, insertion, deletion and substitution
   trnsc$nchar[i]=nchar(attributes(lev)$trafos)
   trnsc$tarlen[i]=nchar(trnsc$target_uni[i])
-  
-  
-  #end with matches
+
+
+  #matches
   matlist=which(strsplit(attributes(lev)$trafos, "")[[1]]=="M")
-  match_bank=rbind(match_bank,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][matlist]))
-  
+  if(length(matlist) != 0) match_bank=rbind(match_bank,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][matlist],
+                                                             trnsc[i,"age.rounded"])) # added age here
+
   #if item is first attempt, add to try1
   if(trnsc[i,"attempt"]=="first") {
     match_bank_try1=rbind(match_bank_try1,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][matlist]))
-    
+
   }
 }
 
@@ -378,7 +374,7 @@ for(i in dim(correspondances)[1]:1) { #
 substitution_bank[order(substitution_bank[,1]),]->substitution_bank
 write.table(substitution_bank,"substitution_bank.txt",row.names=F,sep="\t")
 
-substitution_bank_try1[order(substitution_bank_try1[,1]),]->substitution_bank_try1  
+substitution_bank_try1[order(substitution_bank_try1[,1]),]->substitution_bank_try1
 write.table(substitution_bank_try1,"substitution_bank_try1.txt",row.names=F,sep="\t")
 
 sort(deletion_bank)->deletion_bank
