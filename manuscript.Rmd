@@ -658,7 +658,7 @@ allVC=c(nasalVs,oralVs,simplexCs,complexCs)
 
 #read.table("substitution_bank_try1.txt",header=T)->sub_bank
 read.table("substitution_bank.txt",header=T)->sub_bank_full
-colnames(sub_bank_full)<-c("target","realization","age")
+colnames(sub_bank_full)<-c("target","realization","age","target_ortho","phono","tokid")
 sub_bank=sub_bank_full[,1:2]
 sub_bank$target=factor(sub_bank$target,levels=allVC)
 sub_bank$realization=factor(sub_bank$realization,levels=allVC)
@@ -668,14 +668,14 @@ sub_tab=table(sub_bank)[allVC,allVC]
 
 #read.table("deletion_bank_try1.txt",header=T)->del_bank
 read.table("deletion_bank.txt",header=T)->del_bank_full
-colnames(del_bank_full)<-c("target","age")
+colnames(del_bank_full)<-c("target","age","target_ortho","phono","tokid")
 del_bank=del_bank_full[,1]
 del_bank$target=factor(del_bank$target,levels=allVC)
 del_tab= table(del_bank)[allVC]
 
 #read.table("match_bank_try1.txt",header=T)->match_bank
 read.table("match_bank.txt",header=T)->match_bank_full
-colnames(match_bank_full)<-c("target","age")
+colnames(match_bank_full)<-c("target","age","target_ortho","phono","tokid")
 match_bank=match_bank_full[,1]
 match_bank$target=factor(match_bank$target,levels=allVC)
 match_tab= table(match_bank)[allVC]

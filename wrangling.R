@@ -48,6 +48,8 @@ trnsc$mispronunciation=as.character(trnsc$mispronunciation)
 trnsc$meaning=as.character(trnsc$meaning)
 trnsc$mispronunciation[trnsc$mispronunciation=="two"]<-"tuu"
 trnsc[grep("Eng",trnsc$meaning),c("mispronunciation","meaning")]
+trnsc$english<-F
+trnsc$english[grep("Eng",trnsc$meaning)]<-T
 
 read.table("final_order.txt",header=T)->crp
 crp$tokid=paste(crp$target,crp$nb)
@@ -173,7 +175,7 @@ trnsc[trnsc$correct==0 & trnsc$target_uni == trnsc$mp_uni & !is.na(trnsc$mp_uni)
 trnsc$correct[trnsc$correct==0 & trnsc$target_uni == trnsc$mp_uni & !is.na(trnsc$mp_uni)]<-1
 # M2A: I agree! My question is: Why then are they marked as incorrect in the first place?
 # Does this deserve more detective work?
-#a2m I looked into in there were disfluencies
+#a2m I looked into it and there were disfluencies
 # M2A: awesome, thank you! happy with this now :)
 
 # create phonological correspondance matrix
@@ -292,9 +294,10 @@ head(trnsc[,c("mispronunciation","mp_uni","target_uni")])
 trnsc$ins=trnsc$del=trnsc$sub=trnsc$nchar=trnsc$trafos=trnsc$tarlen=NA
 substitution_bank=deletion_bank=match_bank=substitution_bank_try1=deletion_bank_try1=match_bank_try1=NULL
 
-for(i in grep("0",trnsc$correct)){ #this goes through all items with errors (" grep("0",trnsc$correct)")
-  #lev #i=2 ; i = 4
-  lev=adist(trnsc[i,c("mp_uni")],trnsc[i,c("target_uni")],count=T)
+for(i in 1:dim(trnsc)[1]) if (!trnsc$english[i]){ #this goes through each line
+  #lev #i=2 ; i = 4 ; i =48 (has deletions)
+  #2021-09-02 flipped the order, so that deletions surface as deletions rather than insertions!
+  lev=adist(trnsc[i,c("target_uni")],trnsc[i,c("mp_uni")],count=T)
   trnsc$ins[i]<-attributes(lev)$counts[,,"ins"]
   trnsc$del[i]<-attributes(lev)$counts[,,"del"]
   trnsc$sub[i]<-attributes(lev)$counts[,,"sub"]
@@ -307,17 +310,17 @@ for(i in grep("0",trnsc$correct)){ #this goes through all items with errors (" g
   if(length(sublist) != 0) substitution_bank=rbind(substitution_bank,
                           cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][sublist],
                                 strsplit(trnsc[i,c("mp_uni")],"")[[1]][sublist],
-                                trnsc[i,"age.rounded"])) # added age here
+                                trnsc[i,c("age.rounded","target_ortho","phono","tokid")])) # added age & target info here
 
   #same for deletions
   dellist=which(strsplit(attributes(lev)$trafos, "")[[1]]=="D")
   if(length(dellist) != 0) deletion_bank=rbind(deletion_bank,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][dellist],
-                                                                   trnsc[i,"age.rounded"]))  # added age here
+                                                                   trnsc[i,c("age.rounded","target_ortho","phono","tokid")]))  # added age here
 
   #end with matches
   matlist=which(strsplit(attributes(lev)$trafos, "")[[1]]=="M")
   if(length(matlist) != 0) match_bank=rbind(match_bank,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][matlist],
-                                                             trnsc[i,"age.rounded"])) # added age here
+                                                             trnsc[i,c("age.rounded","target_ortho","phono","tokid")])) # added age here
 
   #if item is first attempt, add to try1 version of these tables
   if(trnsc[i,"attempt"]=="first") {
@@ -328,27 +331,6 @@ for(i in grep("0",trnsc$correct)){ #this goes through all items with errors (" g
     }
 }
 
-#create correct bank
-for(i in grep("1",trnsc$correct)){ #this goes through all items without errors (" grep("1",trnsc$correct)")
-  #lev
-  lev=adist(trnsc[i,c("target_uni")],trnsc[i,c("target_uni")],count=T)
-
-  trnsc$trafos[i]=attributes(lev)$trafos #M, I, D and S indicating a match, insertion, deletion and substitution
-  trnsc$nchar[i]=nchar(attributes(lev)$trafos)
-  trnsc$tarlen[i]=nchar(trnsc$target_uni[i])
-
-
-  #matches
-  matlist=which(strsplit(attributes(lev)$trafos, "")[[1]]=="M")
-  if(length(matlist) != 0) match_bank=rbind(match_bank,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][matlist],
-                                                             trnsc[i,"age.rounded"])) # added age here
-
-  #if item is first attempt, add to try1
-  if(trnsc[i,"attempt"]=="first") {
-    match_bank_try1=rbind(match_bank_try1,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][matlist]))
-
-  }
-}
 
 trnsc$ld=rowSums(trnsc[,c("ins","del","sub")])
 trnsc$nld=trnsc$ld/trnsc$nchar
@@ -363,9 +345,10 @@ write.table(trnsc,"final_data.txt",row.names=F,sep="\t")
 #finish by writing out the banks
 #back-transform into orthography
 for(i in dim(correspondances)[1]:1) { #
-   substitution_bank=gsub(correspondances[i,2],correspondances[i,1],substitution_bank,fixed=T)
-   deletion_bank=gsub(correspondances[i,2],correspondances[i,1],deletion_bank,fixed=T)
-   match_bank=gsub(correspondances[i,2],correspondances[i,1],match_bank,fixed=T)
+   substitution_bank[,1]=gsub(correspondances[i,2],correspondances[i,1],substitution_bank[,1],fixed=T)
+   substitution_bank[,2]=gsub(correspondances[i,2],correspondances[i,1],substitution_bank[,2],fixed=T)
+   deletion_bank[,1]=gsub(correspondances[i,2],correspondances[i,1],deletion_bank[,1],fixed=T)
+   match_bank[,1]=gsub(correspondances[i,2],correspondances[i,1],match_bank[,1],fixed=T)
    match_bank_try1=gsub(correspondances[i,2],correspondances[i,1],match_bank_try1,fixed=T)
    substitution_bank_try1=gsub(correspondances[i,2],correspondances[i,1],substitution_bank_try1,fixed=T)
    deletion_bank_try1=gsub(correspondances[i,2],correspondances[i,1],deletion_bank_try1,fixed=T)
@@ -377,14 +360,16 @@ write.table(substitution_bank,"substitution_bank.txt",row.names=F,sep="\t")
 substitution_bank_try1[order(substitution_bank_try1[,1]),]->substitution_bank_try1
 write.table(substitution_bank_try1,"substitution_bank_try1.txt",row.names=F,sep="\t")
 
-sort(deletion_bank)->deletion_bank
+deletion_bank[order(deletion_bank[,1]),]->deletion_bank
 write.table(deletion_bank,"deletion_bank.txt",row.names=F,sep="\t")
+
 sort(deletion_bank_try1)->deletion_bank_try1
 write.table(deletion_bank_try1,"deletion_bank_try1.txt",row.names=F,sep="\t")
 
 
-sort(match_bank)->match_bank
+match_bank[order(match_bank[,1]),]->match_bank
 write.table(match_bank,"match_bank.txt",row.names=F,sep="\t")
+
 sort(match_bank_try1)->match_bank_try1
 write.table(match_bank_try1,"match_bank_try1.txt",row.names=F,sep="\t")
 
