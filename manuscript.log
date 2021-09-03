@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.11.29)  3 SEP 2021 11:02
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.11.29)  3 SEP 2021 15:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2161,9 +2161,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Warning: Reference `fig:fig-prevlit' on page 33 undefined on input line 5
 67.
 
-
-Underfull \vbox (badness 2334) has occurred while \output is active []
-
 [33]
 Underfull \vbox (badness 4752) has occurred while \output is active []
 
@@ -2173,49 +2170,26 @@ LaTeX Warning: Reference `fig:fig-prevlit' on page 35 undefined on input line 5
 78.
 
 [35]
-Underfull \vbox (badness 2334) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [36]
-
-LaTeX Warning: Reference `fig:fig-prevlit-overall' on page 37 undefined on inpu
-t line 591.
-
-
 Underfull \vbox (badness 4752) has occurred while \output is active []
 
 [37]
+Underfull \vbox (badness 1320) has occurred while \output is active []
 
-LaTeX Warning: Reference `fig:fig-prevlit' on page 38 undefined on input line 5
-95.
-
-
-Underfull \vbox (badness 4752) has occurred while \output is active []
-
-[38]
-
-LaTeX Warning: Reference `fig:fig-prevlit-overall' on page 39 undefined on inpu
-t line 597.
-
-
-Underfull \vbox (badness 4752) has occurred while \output is active []
-
-[39]
-
-LaTeX Warning: Reference `fig:fig-prevlit-overall' on page 40 undefined on inpu
-t line 601.
-
-
-Underfull \vbox (badness 2334) has occurred while \output is active []
-
-[40] [41] [42] [43] [44] [45] [46] [47]
+[38] [39] [40] [41] [42]
 Underfull \vbox (badness 4686) has occurred while \output is active []
 
-[48] AED endfloat: Processing end Figures and Tables [49]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 804.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 804.
+[43] [44]
+Underfull \vbox (badness 1389) has occurred while \output is active []
+
+[45] AED endfloat: Processing end Figures and Tables [46]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 779.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 779.
 (./manuscript.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 804.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 804.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 779.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 779.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -2224,12 +2198,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 28127 strings out of 493005
- 497242 string characters out of 6134595
+ 28126 strings out of 493005
+ 497217 string characters out of 6134595
  716021 words of memory out of 5000000
- 31733 multiletter control sequences out of 15000+600000
+ 31732 multiletter control sequences out of 15000+600000
  36302 words of font info for 90 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  64i,11n,120p,10405b,528s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on manuscript.pdf (49 pages).
+Output written on manuscript.pdf (46 pages).
