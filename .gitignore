@@ -8,7 +8,7 @@ manuscript_files/*
 .DS_Store
 literature
 literature/*
-
+reading/old/
 
 # History files
 .Rhistory

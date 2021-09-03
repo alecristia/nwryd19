@@ -5,7 +5,7 @@ read.delim("NWR-transcription.txt", encoding="UTF-8")->trnsc
 
 
 #DATA REMOVAL *** ATTENTION ***
-#REMOVE ALL TASK 4 (whatever that is)
+#REMOVE ALL TASK 4
 # M2A: This appears to be a second pass over productions that were deemed to
 # be words; the elicitation here is just a translation of what word the
 # production was heard to be
@@ -290,14 +290,20 @@ for(i in 1:dim(correspondances)[1]) { #transform into unicharacter
 head(trnsc[,c("mispronunciation","mp_uni","target_uni")])
 
 
-#calculate Levinshtein's distances
+#calculate Levenshtein's distances
 trnsc$ins=trnsc$del=trnsc$sub=trnsc$nchar=trnsc$trafos=trnsc$tarlen=NA
-substitution_bank=deletion_bank=match_bank=substitution_bank_try1=deletion_bank_try1=match_bank_try1=NULL
+substitution_bank=insertion_bank=deletion_bank=match_bank=NULL
 
 for(i in 1:dim(trnsc)[1]) if (!trnsc$english[i]){ #this goes through each line
-  #lev #i=2 ; i = 4 ; i =48 (has deletions)
-  #2021-09-02 flipped the order, so that deletions surface as deletions rather than insertions!
-  lev=adist(trnsc[i,c("target_uni")],trnsc[i,c("mp_uni")],count=T)
+  #lev #i=2 ; i = 4 ; i =48 (has deletions) ; i = 1207 (has insertions)
+  #2021-09-03 major changes to mapping, because it was messed up in the presence of insertions
+  #I know it's confusing to call them source/target but I've double checked, and insertions contains insertions, deletions deletions
+  source_string=trnsc[i,c("target_uni")]
+
+  #use the target nonword's pronunciation if there was no error
+  if(is.na(trnsc[i,c("mp_uni")])) target_string=source_string else target_string=trnsc[i,c("mp_uni")]
+
+  lev=adist(source_string,target_string,count=T)
   trnsc$ins[i]<-attributes(lev)$counts[,,"ins"]
   trnsc$del[i]<-attributes(lev)$counts[,,"del"]
   trnsc$sub[i]<-attributes(lev)$counts[,,"sub"]
@@ -305,30 +311,40 @@ for(i in 1:dim(trnsc)[1]) if (!trnsc$english[i]){ #this goes through each line
   trnsc$nchar[i]=nchar(attributes(lev)$trafos)
   trnsc$tarlen[i]=nchar(trnsc$target_uni[i])
 
-  #extract substitutions & add them to the bank
-  sublist=which(strsplit(attributes(lev)$trafos, "")[[1]]=="S")
-  if(length(sublist) != 0) substitution_bank=rbind(substitution_bank,
-                          cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][sublist],
-                                strsplit(trnsc[i,c("mp_uni")],"")[[1]][sublist],
-                                trnsc[i,c("age.rounded","target_ortho","phono","tokid")])) # added age & target info here
-
-  #same for deletions
-  dellist=which(strsplit(attributes(lev)$trafos, "")[[1]]=="D")
-  if(length(dellist) != 0) deletion_bank=rbind(deletion_bank,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][dellist],
-                                                                   trnsc[i,c("age.rounded","target_ortho","phono","tokid")]))  # added age here
-
-  #end with matches
-  matlist=which(strsplit(attributes(lev)$trafos, "")[[1]]=="M")
-  if(length(matlist) != 0) match_bank=rbind(match_bank,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][matlist],
-                                                             trnsc[i,c("age.rounded","target_ortho","phono","tokid")])) # added age here
-
-  #if item is first attempt, add to try1 version of these tables
-  if(trnsc[i,"attempt"]=="first") {
-    if(length(sublist) != 0) substitution_bank_try1=rbind(substitution_bank_try1,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][sublist],strsplit(trnsc[i,c("mp_uni")],"")[[1]][sublist]))
-    if(length(dellist) != 0) deletion_bank_try1=rbind(deletion_bank_try1,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][dellist]))
-    if(length(matlist) != 0) match_bank_try1=rbind(match_bank_try1,cbind(strsplit(trnsc[i,c("target_uni")],"")[[1]][matlist]))
-
+  #https://stackoverflow.com/questions/56827772/how-to-know-the-operations-made-to-calculate-the-levenshtein-distance-between-st/69040268#69040268
+  changes<-strsplit(attributes(lev)$trafos, "")[[1]]
+  counter_source=counter_target=1
+  for(j in changes){
+    if(j=="S") {
+      substitution_bank=rbind(substitution_bank,
+                              cbind(strsplit(source_string,"")[[1]][counter_source], strsplit(target_string,"")[[1]][counter_target],
+                                    trnsc[i,c("target_uni","mp_uni","age.rounded","target_ortho","phono","tokid")],row.names = NULL))
+      counter_source=counter_source+1
+      counter_target=counter_target+1
     }
+    if(j=="I") {
+      insertion_bank=rbind(insertion_bank,
+                           cbind(strsplit(target_string,"")[[1]][counter_target],
+                           trnsc[i,c("target_uni","mp_uni","age.rounded","target_ortho","phono","tokid")],row.names = NULL))
+      counter_target=counter_target+1
+    }
+    if(j=="D") {
+      deletion_bank=rbind(deletion_bank,
+                          cbind(strsplit(source_string,"")[[1]][counter_source],
+                          trnsc[i,c("target_uni","mp_uni","age.rounded","target_ortho","phono","tokid")],row.names = NULL))
+      counter_source=counter_source+1
+    }
+    if(j=="M") {
+      match_bank=rbind(match_bank,
+                       cbind(strsplit(source_string,"")[[1]][counter_source],
+                       trnsc[i,c("target_uni","mp_uni","age.rounded","target_ortho","phono","tokid")],row.names = NULL))
+      counter_source=counter_source+1
+      counter_target=counter_target+1
+    }
+
+
+  }
+
 }
 
 
@@ -347,29 +363,21 @@ write.table(trnsc,"final_data.txt",row.names=F,sep="\t")
 for(i in dim(correspondances)[1]:1) { #
    substitution_bank[,1]=gsub(correspondances[i,2],correspondances[i,1],substitution_bank[,1],fixed=T)
    substitution_bank[,2]=gsub(correspondances[i,2],correspondances[i,1],substitution_bank[,2],fixed=T)
+   insertion_bank[,1]=gsub(correspondances[i,2],correspondances[i,1],insertion_bank[,1],fixed=T)
    deletion_bank[,1]=gsub(correspondances[i,2],correspondances[i,1],deletion_bank[,1],fixed=T)
    match_bank[,1]=gsub(correspondances[i,2],correspondances[i,1],match_bank[,1],fixed=T)
-   match_bank_try1=gsub(correspondances[i,2],correspondances[i,1],match_bank_try1,fixed=T)
-   substitution_bank_try1=gsub(correspondances[i,2],correspondances[i,1],substitution_bank_try1,fixed=T)
-   deletion_bank_try1=gsub(correspondances[i,2],correspondances[i,1],deletion_bank_try1,fixed=T)
 }
 
-substitution_bank[order(substitution_bank[,1]),]->substitution_bank
+colnames(substitution_bank)<-c("target","realization","target_word","mispronunciation","age","target_ortho","target_phono","tokid")
 write.table(substitution_bank,"substitution_bank.txt",row.names=F,sep="\t")
 
-substitution_bank_try1[order(substitution_bank_try1[,1]),]->substitution_bank_try1
-write.table(substitution_bank_try1,"substitution_bank_try1.txt",row.names=F,sep="\t")
+colnames(insertion_bank)<-c("target","target_word","mispronunciation","age","target_ortho","target_phono","tokid")
+write.table(insertion_bank,"insertion_bank.txt",row.names=F,sep="\t")
 
-deletion_bank[order(deletion_bank[,1]),]->deletion_bank
+colnames(deletion_bank)<-c("target","target_word","mispronunciation","age","target_ortho","target_phono","tokid")
 write.table(deletion_bank,"deletion_bank.txt",row.names=F,sep="\t")
 
-sort(deletion_bank_try1)->deletion_bank_try1
-write.table(deletion_bank_try1,"deletion_bank_try1.txt",row.names=F,sep="\t")
-
-
-match_bank[order(match_bank[,1]),]->match_bank
+colnames(match_bank)<-c("target","target_word","mispronunciation","age","target_ortho","target_phono","tokid")
 write.table(match_bank,"match_bank.txt",row.names=F,sep="\t")
 
-sort(match_bank_try1)->match_bank_try1
-write.table(match_bank_try1,"match_bank_try1.txt",row.names=F,sep="\t")
 
