@@ -269,7 +269,7 @@ for(thislang in names(myy)){
 } 
 ```
 
-## SM2: Age effects on accuracy
+## SM3: Age effects on accuracy
 
 
 ```{r fig-xage, fig.pos = "!t", fig.align = "center", out.width = '65%', fig.cap="NWR scores for individual target words as a function of the child's age (averaged in years)."}
@@ -290,3 +290,5 @@ ggsave("nwr.by.age.ITEM.png", dpi = 300, device = png())
 knitr::include_graphics("nwr.by.age.ITEM.png")
 
 ```
+
+## SM4: Re-analysis of mispronunciation patterns excluding errors resulting in real words
