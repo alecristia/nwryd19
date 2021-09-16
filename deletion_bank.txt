@@ -1,34 +1,34 @@
-"target"	"target_word"	"mispronunciation"	"age"	"target_ortho"	"target_phono"	"tokid"
-"p"	"dipońate"	"di"	9.09911141490089	"dipońate"	"ṭipɔnætɛ"	"diponate 19"
-"o"	"dipońate"	"di"	9.09911141490089	"dipońate"	"ṭipɔnætɛ"	"diponate 19"
-"'n"	"dipońate"	"di"	9.09911141490089	"dipońate"	"ṭipɔnætɛ"	"diponate 19"
-"a"	"dipońate"	"di"	9.09911141490089	"dipońate"	"ṭipɔnætɛ"	"diponate 19"
-"ch"	"dipońate"	"di"	9.09911141490089	"dipońate"	"ṭipɔnætɛ"	"diponate 19"
-"e"	"dipońate"	"di"	9.09911141490089	"dipońate"	"ṭipɔnætɛ"	"diponate 19"
-"d"	"diyeto"	"etO"	6.76965140123035	"diyeto"	"ṭijɛtɔ"	"diyeto 18"
-"i"	"diyeto"	"etO"	6.76965140123035	"diyeto"	"ṭijɛtɔ"	"diyeto 18"
-"y"	"diyeto"	"etO"	6.76965140123035	"diyeto"	"ṭijɛtɔ"	"diyeto 18"
-"y"	"diyeto"	"pieto"	7.60628844839371	"diyeto"	"ṭijɛtɔ"	"diyeto 37"
-"y"	"diyeto"	"/8"	3.91797676008202	"diyeto"	"ṭijɛtɔ"	"diyeto 8"
-"e"	"diyeto"	"/8"	3.91797676008202	"diyeto"	"ṭijɛtɔ"	"diyeto 8"
-"ch"	"diyeto"	"/8"	3.91797676008202	"diyeto"	"ṭijɛtɔ"	"diyeto 8"
-"o"	"diyeto"	"/8"	3.91797676008202	"diyeto"	"ṭijɛtɔ"	"diyeto 8"
-"a"	"kańi"	"k"	9.09911141490089	"kańi"	"kæni"	"kani 21"
-"'n"	"kańi"	"k"	9.09911141490089	"kańi"	"kæni"	"kani 21"
-"i"	"kańi"	"k"	9.09911141490089	"kańi"	"kæni"	"kani 21"
-"m"	"ńademo"	"lavu"	5.79904306220096	"ńademo"	"næṭɛmɔ"	"nademo 4"
-"o"	"ńademo"	"lavu"	5.79904306220096	"ńademo"	"næṭɛmɔ"	"nademo 4"
-"m"	"ńademo"	"navu"	5.79904306220096	"ńademo"	"næṭɛmɔ"	"nademo 16"
-"o"	"ńademo"	"navu"	5.79904306220096	"ńademo"	"næṭɛmɔ"	"nademo 16"
-"m"	"pedumi"	"pedu"	7.37115516062885	"pedumi"	"pɛṭumi"	"pedumi 10"
-"i"	"pedumi"	"pedu"	7.37115516062885	"pedumi"	"pɛṭumi"	"pedumi 10"
-"i"	"todiwuma"	"tot"	7.35475051264525	"todiwuma"	"tɔṭiwumæ"	"todiwuma 16"
-"w"	"todiwuma"	"tot"	7.35475051264525	"todiwuma"	"tɔṭiwumæ"	"todiwuma 16"
-"u"	"todiwuma"	"tot"	7.35475051264525	"todiwuma"	"tɔṭiwumæ"	"todiwuma 16"
-"m"	"todiwuma"	"tot"	7.35475051264525	"todiwuma"	"tɔṭiwumæ"	"todiwuma 16"
-"a"	"todiwuma"	"tot"	7.35475051264525	"todiwuma"	"tɔṭiwumæ"	"todiwuma 16"
-"w"	"towi"	"to"	4.80109364319891	"towi"	"tɔwi"	"towi 10"
-"i"	"towi"	"to"	4.80109364319891	"towi"	"tɔwi"	"towi 10"
-"i"	"towi"	"tow"	3.91797676008202	"towi"	"tɔwi"	"towi 28"
-"'n"	"widońe"	"walidi"	4.80109364319891	"widońe"	"wiṭɔnɛ"	"widone 12"
-"e"	"widońe"	"walidi"	4.80109364319891	"widońe"	"wiṭɔnɛ"	"widone 12"
+"target"	"target_word"	"mispronunciation"	"age"	"target_ortho"	"target_phono"	"tokid"	"meaningful"
+"p"	"dipońate"	"di"	9.09911141490089	"dipońate"	"ṭipɔnætɛ"	"diponate 19"	TRUE
+"o"	"dipońate"	"di"	9.09911141490089	"dipońate"	"ṭipɔnætɛ"	"diponate 19"	TRUE
+"'n"	"dipońate"	"di"	9.09911141490089	"dipońate"	"ṭipɔnætɛ"	"diponate 19"	TRUE
+"a"	"dipońate"	"di"	9.09911141490089	"dipońate"	"ṭipɔnætɛ"	"diponate 19"	TRUE
+"ch"	"dipońate"	"di"	9.09911141490089	"dipońate"	"ṭipɔnætɛ"	"diponate 19"	TRUE
+"e"	"dipońate"	"di"	9.09911141490089	"dipońate"	"ṭipɔnætɛ"	"diponate 19"	TRUE
+"d"	"diyeto"	"etO"	6.76965140123035	"diyeto"	"ṭijɛtɔ"	"diyeto 18"	TRUE
+"i"	"diyeto"	"etO"	6.76965140123035	"diyeto"	"ṭijɛtɔ"	"diyeto 18"	TRUE
+"y"	"diyeto"	"etO"	6.76965140123035	"diyeto"	"ṭijɛtɔ"	"diyeto 18"	TRUE
+"y"	"diyeto"	"pieto"	7.60628844839371	"diyeto"	"ṭijɛtɔ"	"diyeto 37"	TRUE
+"y"	"diyeto"	"/8"	3.91797676008202	"diyeto"	"ṭijɛtɔ"	"diyeto 8"	TRUE
+"e"	"diyeto"	"/8"	3.91797676008202	"diyeto"	"ṭijɛtɔ"	"diyeto 8"	TRUE
+"ch"	"diyeto"	"/8"	3.91797676008202	"diyeto"	"ṭijɛtɔ"	"diyeto 8"	TRUE
+"o"	"diyeto"	"/8"	3.91797676008202	"diyeto"	"ṭijɛtɔ"	"diyeto 8"	TRUE
+"a"	"kańi"	"k"	9.09911141490089	"kańi"	"kæni"	"kani 21"	TRUE
+"'n"	"kańi"	"k"	9.09911141490089	"kańi"	"kæni"	"kani 21"	TRUE
+"i"	"kańi"	"k"	9.09911141490089	"kańi"	"kæni"	"kani 21"	TRUE
+"m"	"ńademo"	"lavu"	5.79904306220096	"ńademo"	"næṭɛmɔ"	"nademo 4"	TRUE
+"o"	"ńademo"	"lavu"	5.79904306220096	"ńademo"	"næṭɛmɔ"	"nademo 4"	TRUE
+"m"	"ńademo"	"navu"	5.79904306220096	"ńademo"	"næṭɛmɔ"	"nademo 16"	TRUE
+"o"	"ńademo"	"navu"	5.79904306220096	"ńademo"	"næṭɛmɔ"	"nademo 16"	TRUE
+"m"	"pedumi"	"pedu"	7.37115516062885	"pedumi"	"pɛṭumi"	"pedumi 10"	TRUE
+"i"	"pedumi"	"pedu"	7.37115516062885	"pedumi"	"pɛṭumi"	"pedumi 10"	TRUE
+"i"	"todiwuma"	"tot"	7.35475051264525	"todiwuma"	"tɔṭiwumæ"	"todiwuma 16"	TRUE
+"w"	"todiwuma"	"tot"	7.35475051264525	"todiwuma"	"tɔṭiwumæ"	"todiwuma 16"	TRUE
+"u"	"todiwuma"	"tot"	7.35475051264525	"todiwuma"	"tɔṭiwumæ"	"todiwuma 16"	TRUE
+"m"	"todiwuma"	"tot"	7.35475051264525	"todiwuma"	"tɔṭiwumæ"	"todiwuma 16"	TRUE
+"a"	"todiwuma"	"tot"	7.35475051264525	"todiwuma"	"tɔṭiwumæ"	"todiwuma 16"	TRUE
+"w"	"towi"	"to"	4.80109364319891	"towi"	"tɔwi"	"towi 10"	TRUE
+"i"	"towi"	"to"	4.80109364319891	"towi"	"tɔwi"	"towi 10"	TRUE
+"i"	"towi"	"tow"	3.91797676008202	"towi"	"tɔwi"	"towi 28"	TRUE
+"'n"	"widońe"	"walidi"	4.80109364319891	"widońe"	"wiṭɔnɛ"	"widone 12"	TRUE
+"e"	"widońe"	"walidi"	4.80109364319891	"widońe"	"wiṭɔnɛ"	"widone 12"	TRUE

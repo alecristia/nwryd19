@@ -1,17 +1,120 @@
 ---
-title: "Supplementary materials"
-output: pdf_document
+title             : "Supplementary materials to: Non-word repetition in children learning Yélî Dnye"
+shorttitle        : "SM: NWR in Yélî Dnye learners"
+
+author: 
+  - name          : "Alejandrina Cristia"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "29, rue d’Ulm, 75005 Paris, France"
+    email         : "alecristia@gmail.com"
+  - name          : "Marisa Casillas"
+    affiliation   : "2,3"
+    address       : "Wundtlaan 1, 6525 XD, Nijmegen, The Netherlands"
+    email         : "marisa.casillas@mpi.nl"
+
+affiliation:
+  - id            : "1"
+    institution   : "Laboratoire de Sciences Cognitives et de Psycholinguistique, Département d'Etudes Cognitives, ENS, EHESS, CNRS, PSL University"
+  - id            : "2"
+    institution   : "Max Planck Institute for Psycholinguistics"
+  - id            : "3"
+    institution   : "University of Chicago"
+
+
+author_note: >
+       Both authors contributed to study funding, design, data collection, annotation, analyses, writing.
+
+  
+abstract: >
+   This is a supplementary material containing: 1. Explanation of a small-scale systematic review carried out to embed the main results in the NWR literature; 2. The use of this data to look at potential length effects on NWR as a function of language characteristics; 3. Length and age effects in this and previous work.
+
+
+
+bibliography      : ["nwrbib.bib"]
+
+figsintext        : yes
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+lineno            : no
+
+lang              : "english"
+class             : "doc"
+output            :
+  papaja::apa6_pdf
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
+library(ggplot2)
+library(dplyr)
+library(openxlsx)
 ```
 
-## TODO
-We have included information about the stimulus length in the caption of the figures.
 
 
-## SM1: Systematic review of previous work to check whether length there are typological differences in length effects on NWR
+
+## SM1: Small systematic review of previous NWR work 
+
+For many of our research questions, we wanted to know about previous work. It is common in psychology to do this via an unsystematic review -- that is, by e.g. starting out with papers one knows and then reading other papers citing those, or by doing searches on google scholar or another search engine, or by reading someone else's review. It has been well-established that overviews based on such unsystematic searches do not generalize and have other flaws because they represent biased samples of the literature [@thomas2020impact] -- for instance, famous studies are more likely to be found, even though there are no quality differences between more versus less famous studies. 
+
+So instead of relying on such an approach, we built on a systematic review that was carried out for a different paper: @cristia2020infant "combined our previous knowledge of the literature and systematic searching to yield a sample of 17 studies that we could interrogate further". Specifically, the main goal of that systematic review was to check whether "effects of infant-directed input quantities may have been reported. Input variability has not been studied, to our knowledge, but two potential proxies of input have: Monolingual status, and socio-economic status.  We set aside the literature comparing monolinguals against non-monolinguals because we reasoned that some readers may argue this contrast does not only show effects of input differences, but also interference across the languages being learned" (Cristia, 2020, personal records). Discovery combined an initial list produced by Gianmatteo Farabolini (based on readings of literature on bilingual NWR mainly), with a scholar.google.com search carried out in incognito mode by Cristia, with keywords "non-word-repetition socio-economic-status". Studies finally included reported on children who were monolingual and between 3 and 7 years of age, and which used proportion of non-words repeated as the outcome metric.
+
+We revisited this selection of articles in order to extract data on actual performance, taking into account also the length of the non-words used in the study. From that selection, only 8 articles reported on actual performance in the text, figures, or tables, fortunately representing a range of languages: Persian by @farmani2018normalization; Israeli Arabic  [@jabere2018xperiment];  English  [@vance2005speech]; Slovak by @kapalkova2013non and @polivsenska2014improving; Sotho by @wilsenach2013phonological; Swedish by @kalnak2014nonword and @radeborg2006swedish. We extended that selection with 5 additional papers selected to increase the number of languages represented, with both languages sometimes described as having short words [Cantonese  @stokes2006nonword; Mandarin  @lei2011developmental]; and others described as having long words [Italian  @piazzalunga2019articulatory; Spanish @balladares2016socio]. Finally, we also included Tsimane' data  [@cristia2020infant].
+
+
+## SM2: Assessing potential length effects 
+
+
+
+```{r demo}
+# please note that you will not be able to do this because you don't have this version, that is not fully de-identified
+# read.csv("NWR-test-log_FINAL.csv",header=T,sep=";")->fulldemo
+# fulldemo=fulldemo[,-2] #remove children's names
+# fulldemo$dob=as.Date(as.character(fulldemo$DOB.ISO),format="%Y%m%d")
+# fulldemo$test=as.Date(as.character(fulldemo$Date),format="%Y%m%d")
+# fulldemo$age.rounded=as.numeric(difftime(fulldemo$test,fulldemo$dob,unit="weeks"))/52.25
+# fulldemo$Age=as.numeric(as.character(fulldemo$Age))
+# plot(fulldemo$Age~fulldemo$age.rounded)
+# write.csv(fulldemo,"nwr-demo.csv")
+
+# read.csv("nwr-demo.csv",header=T)->demo
+# demo=demo[,-c(20,21)] #remove DOBs 
+# write.csv(demo,"nwr-demo.csv")
+
+read.csv("nwr-demo.csv",header=T)->demo
+#colnames(demo)
+
+
+subset(demo,included=="yes" & Age <12 & !is.na(Age))->inc
+#if age.rounded is missing, use reported age
+inc$age.rounded[is.na(inc$age.rounded)]<-inc$Age[is.na(inc$age.rounded)]
+#summary(inc)
+table(inc$birthOrder)->birthorder.tab
+
+
+```
+
+
+```{r readin}
+read.table("final_data.txt",header=T,encoding="UTF-8")->trnsc
+
+trnsc$Sex=factor(trnsc$Sex)
+trnsc$birthOrder=as.numeric(trnsc$birthOrder)
+
+# Include only included children in trnsc
+trnsc[which(trnsc$id %in% inc$ID),]->trnsc.inc
+
+```
+
+
+```{r exclude subsequent}
+trnsc.inc-> trnsc.inc_all #keep a copy for figure comparing first & subsequent
+
+trnsc.inc=trnsc.inc[trnsc.inc$attempt=="first",]
+
+```
 
 ```{r prep-prevlit, echo=F}
 pl<- read.csv("previous_lit.csv")
@@ -56,52 +159,12 @@ difs=aggregate(pl$dif,by=list(pl$Language),mean, na.rm=T)
 ```
 
 
-ADD MORE INFO ABOUT HOW THESE PAPERS WERE DISCOVERED
 
- We do not think previous literature fitting these predictions, we inspected NWR papers in a variety of languages which reported NWR scores separately for different word lengths, as described in Supplementary Materials. We found data for learners of Israeli Arabic  [@jabere2018xperiment]; Cantonese  [@stokes2006nonword]; English  [@vance2005speech]; Italian  [@piazzalunga2019articulatory]; and Tsimane'  [@cristia2020infant]. 
+We looked at the subset of papers that reported NWR scores separately for different word lengths. These were: Israeli Arabic  [@jabere2018xperiment]; Cantonese  [@stokes2006nonword]; English  [@vance2005speech]; Italian  [@piazzalunga2019articulatory]; and Tsimane'  [@cristia2020infant]. 
+
+
 Our reading of that work is that, although there is cross-linguistic (or cross-sample) variation in length effects, these do not systematically line up with expected word length in different languages. For instance, the difference in NWR scores for 2- versus 3-syllable items (averaging across age groups) is largest in Tsimane' (~`r round(difs[difs$Group.1=="Tsimane'","x"])`%) and Arabic (~`r round(difs[difs$Group.1=="Arabic","x"])`%), which tend to have longer words, as does Italian, where the difference between 2- and 3-syllable items was only ~`r round(difs[difs$Group.1=="Italian","x"])`%. Similarly, two languages that are often described as heavily biased towards monosyllables show diverse length effects (Cantonese ~`r round(difs[difs$Group.1=="Cantonese","x"])`% versus English ~`r round(difs[difs$Group.1=="English","x"])`%).
 
-```{r prep-prevlit, echo=F}
-pl<- read.csv("previous_lit.csv")
-
-pl_stacked=cbind(pl[,c("Study","Language","n","Age")],stack(pl[c("X1","X2","X3","X4")]),stack(pl[c("sd1","sd2","sd3","sd4")]))
-colnames(pl_stacked)[5:8]<-c("Median","Length","SD","sdtype")
-pl_stacked$Length=gsub("X","",pl_stacked$Length)
-
-#remove lines with NA median
-pl_stacked[!is.na(pl_stacked$Median),]->pl_stacked
-
-
-#add YD data
-aggregate(trnsc.inc$correct*100,by=list(trnsc.inc$id,trnsc.inc$type,trnsc.inc$age.rounded),mean,na.rm=T)->m_ty_id_age #get means by child and length and age
-
-age_cuts=c(3,6,8,13)
-m_ty_id_age$age_g=cut(m_ty_id_age$Group.3,age_cuts) #apply cuts to define groups
-m_ty_id_age$age_gm<-ifelse(m_ty_id_age$age_g=="(3,6]",4.5,ifelse(m_ty_id_age$age_g=="(6,8]",7,10))
-
-
-aggregate(m_ty_id_age$x,by=list(m_ty_id_age$Group.2,m_ty_id_age$age_gm),median,na.rm=T)->yd_res #get avg across children within age groups
-yd_res=cbind(yd_res,aggregate(m_ty_id_age$x,by=list(m_ty_id_age$Group.2,m_ty_id_age$age_gm),sd,na.rm=T)$x,aggregate(m_ty_id_age$x,by=list(m_ty_id_age$Group.2,m_ty_id_age$age_gm),length)$x) #add sd & ns
-
-colnames(yd_res)<-c("Length","Age","Median","SD","n")
-yd_res_toadd=cbind("This paper","Yélî Dnye",yd_res[,c("n","Age","Median","Length","SD")],NA)
-colnames(yd_res_toadd)<-c("Study","Language","n","Age","Median","Length","SD","sdtype")
-
-#combine
-pl_stacked=rbind(pl_stacked,yd_res_toadd)
-
-#add SE
-pl_stacked$se=pl_stacked$SD/sqrt(pl_stacked$n)
-
-#remove monosyllables
-pl_stacked=pl_stacked[pl_stacked$Length!=1,]
-
-pl_stacked$Language=factor(pl_stacked$Language)
-
-
-pl$dif<-pl$X2-pl$X3
-difs=aggregate(pl$dif,by=list(pl$Language),mean, na.rm=T)
-```
 
 
 
@@ -152,6 +215,7 @@ for(thislang in levels(pl_stacked$Language)) for(thislength in levels(factor(pl_
 ```
 
 
+
 ```{r prep-pl}
 
 pl_overall=pl[,1:7]
@@ -187,20 +251,10 @@ all_lang=levels(factor(pl_overall$Language))
 
 ```
 
-## SM2: Integrating data from other studies
+## SM3: Integrating our data with that from other studies
 
+For this analysis, we could include all studies that reported non-word repetition scores based on whole item scoring for at least some length, ideally separating children by age. Specifically, Arabic was represented by @jabere2018xperiment; Cantonese by @stokes2006nonword; English by @vance2005speech; Italian by @piazzalunga2019articulatory; Mandarin by @lei2011developmental; Spanish by @balladares2016socio;  Tsimane' by @cristia2020infant; and Yélî Dnye from the present study. Studies varied in the length of non-words that were considered; whenever results were reported separately for different lengths, we calculated overall averages based on lengths of 2 and 3 syllables, for increased comparability. Results separating different age groups are shown in Figure \@ref(fig:fig-prevlit-overall).
 
-To enrich this discussion, we looked for previous studies on monolingual children with normative development learning diverse languages, and entered them when they reported non-word repetition scores based on whole item scoring. We entered data from XX studies (including ours), presenting data from XX languages. Specifically, Arabic was represented by @jabere2018xperiment; Cantonese by @stokes2006nonword; English by @vance2005speech; Italian by @piazzalunga2019articulatory; Mandarin by @lei2011developmental; Persian by @farmani2018normalization; Slovak by @kapalkova2013non and @polivsenska2014improving; Sotho by @wilsenach2013phonological; Spanish by @balladares2016socio; Swedish by @kalnak2014nonword and @radeborg2006swedish; Tsimane' by @cristia2020infant; and Yélî Dnye from the present study. Studies varied in the length of non-words that were considered; whenever results were reported separately for different lengths, we calculated overall averages based on lengths of 2 and 3 syllables, for increased comparability. Results separating different age groups are shown in Figure \@ref(fig:fig-prevlit-overall).
-
-FIGURE REMOVED
-
-Several observations can be drawn from this figure. To begin with, we focus on the comparison between Yélî Dnye and Tsimane'. These two groups have been described as having roughly similar levels of child-directed speech, yet they exhibit very different results: Tsimane' shows lower overall NWR scores (and according to Figure  \@ref(fig:fig-prevlit), larger length effects). This suggests that the lower NWR scores found among the Tsimane' are due to long-term effects of lower levels of child-directed speech. Naturally, there is an alternative interpretation, namely that input estimation suggesting very slightly higher levels of child-directed speech among the Tsimane' than among Yélî Dnye learners is inaccurate. In fact, careful reading of previous reports highlight important methodological differences in how input quantity has been estimated across papers: @casillas2020early hand-coded speech with the help of a native research assistant, and then summed all child-directed speech, which effectively establishes an upper boundary of the speech children could potentially process. @cristia2019child estimated quantities from behavioral observations on the frequency of child-directed one-on-one conversation, which is probably closer to a lower boundary. Finally, @scaff2021daylong used human annotation for detecting speech but an automated temporal method for assigning speech as child-directed or not, in a way that could lead to over-estimation (because any speech by e.g. a female adult that was not temporally close to speech by others would count as child-directed). A final answer to the question of how much child-directed speech is afforded to Yélî and Tsimane' children must await fully comparable methods.
-
-That said, @cristia2020infant also pointed out another characteristic of the Tsimane' population, and this was the relatively low prevalence of literacy, and generally the variable access to formal education. This is a very different case from the Yélî population studied here, where nearly all adults have accumulated several years of schooling, and basic literacy in English (and sometimes Yélî Dnye) is widespread. If this second hypothesis holds, then this may mean that there are phonetic effects of learning to read in the input afforded to young children, and that this has consequences for young children's encoding and decoding of sounds in the context of NWR tasks. Notice that this is not the same as the oft-recorded effect of learning to read affecting NWR performance, illustrated for instance in the data for Sotho in Figure \@ref(fig:fig-prevlit-overall). These two data points have been gathered from two groups of children, all exposed mainly to Sotho, but children with higher NWR had been learning to read in Sotho, whereas those with lower scores were learning to read in English. What is at stake in our proposed alternative interpretation of the lower scores observed among the Tsimane' is related  to literacy *in the broader population* (rather than in the tested children themselves).
-
-Although exciting, this hypothesis is only one of many. Another plausible explanation is that the Tsimane' results are not comparable to the previous body of literature, and specifically to our study. @cristia2020infant administered the NWR in the form of a group game played outside, with a non-native experimenter providing the target, and each person of the group attempting it in their stead. This immediately means a number of important methodological differences with the standard implementation of NWR, where children are tested individually, they hear items spoken by a native speaker (often over headphones), the experimenter tends to belong to the same community as the children, and testing occurs in quiet conditions (with little background noise). Thus, a priority is for additional data gathered using this more novel testing paradigm in other populations, or from the Tsimane' using the more traditional paradigm.
-
-Broadening our discussion to all of the studies in our literature review, we notice that there is rather wide variation of the range of NWR scores found across these samples, and that, in fact, the strength of age effects also varies. We performed some exploratory analyses to see whether features of the languages children were learning could be related to their overall NWR scores. We extracted the number of phonemes in the language from PHOIBLE and coded whether words in the language tended to be longer or shorter based on information in the papers or other sources. Neither of these two predictors explained variance in Figure \@ref(fig:fig-prevlit-overall). It is possible that average word length plays a role, but often researchers incorporate this into their design by including longer items when the native language allows this, with e.g. Sotho non-words having 4-7 syllables in length. 
 
 ```{r fig-prevlit-overall, echo = FALSE, ig.pos = "T!", fig.width=8, fig.height=5.5, fig.cap = "NWR scores as a function of age (in years), averaged across multiple non-word lengths, as a function of children's native languages. The legend indicates language and the length of non-words (in syllables). Central tendency is mean; error is one standard error."}
 mycols = c( 
@@ -269,26 +323,16 @@ for(thislang in names(myy)){
 } 
 ```
 
-## SM3: Age effects on accuracy
 
+Several observations can be drawn from this figure. To begin with, we focus on the comparison between Yélî Dnye and Tsimane'. These two groups have been described as having roughly similar levels of child-directed speech, yet they exhibit very different results: Tsimane' shows lower overall NWR scores (and according to Figure  \@ref(fig:fig-prevlit), larger length effects). This suggests that the lower NWR scores found among the Tsimane' are due to long-term effects of lower levels of child-directed speech. Naturally, there is an alternative interpretation, namely that input estimation suggesting very slightly higher levels of child-directed speech among the Tsimane' than among Yélî Dnye learners is inaccurate. In fact, careful reading of previous reports highlight important methodological differences in how input quantity has been estimated across papers: @casillas2020early hand-coded speech with the help of a native research assistant, and then summed all child-directed speech, which effectively establishes an upper boundary of the speech children could potentially process. @cristia2019child estimated quantities from behavioral observations on the frequency of child-directed one-on-one conversation, which is probably closer to a lower boundary. Finally, @scaff2021daylong used human annotation for detecting speech but an automated temporal method for assigning speech as child-directed or not, in a way that could lead to over-estimation (because any speech by e.g. a female adult that was not temporally close to speech by others would count as child-directed). A final answer to the question of how much child-directed speech is afforded to Yélî and Tsimane' children must await fully comparable methods.
 
-```{r fig-xage, fig.pos = "!t", fig.align = "center", out.width = '65%', fig.cap="NWR scores for individual target words as a function of the child's age (averaged in years)."}
-aggregate(trnsc.inc$correct*100,by=list(trnsc.inc$target,round(trnsc.inc$age.rounded)),mean)->xage
-colnames(xage)<-c("Target","Age","Word")
-#stims.ipa <- read.xlsx("stimuli.xlsx") %>%
-#  select(target, target_ortho, phono)
-xage <- merge(xage, stims.ipa, by.x = "Target", by.y = "target")
+That said, @cristia2020infant also pointed out another characteristic of the Tsimane' population, and this was the relatively low prevalence of literacy, and generally the variable access to formal education. This is a very different case from the Yélî population studied here, where nearly all adults have accumulated several years of schooling, and basic literacy in English (and sometimes Yélî Dnye) is widespread. If this second hypothesis holds, then this may mean that there are phonetic effects of learning to read in the input afforded to young children, and that this has consequences for young children's encoding and decoding of sounds in the context of NWR tasks. Notice that this is not the same as the oft-recorded effect of learning to read affecting NWR performance, illustrated for instance in the data for Sotho in Figure \@ref(fig:fig-prevlit-overall). These two data points have been gathered from two groups of children, all exposed mainly to Sotho, but children with higher NWR had been learning to read in Sotho, whereas those with lower scores were learning to read in English. What is at stake in our proposed alternative interpretation of the lower scores observed among the Tsimane' is related  to literacy *in the broader population* (rather than in the tested children themselves).
 
-item.plot <- ggplot(data = xage, aes(x = Age, y = Word, label = phono)) +
-  geom_smooth(method = "lm", se = FALSE, color = "black") +
-  geom_text(family = "Doulos SIL") +
-  ylab("NWR scores (% words)") +
-  xlab("Children's age") +
-  theme_apa()
-ggsave("nwr.by.age.ITEM.png", dpi = 300, device = png())
+Although exciting, this hypothesis is only one of many. Another plausible explanation is that the Tsimane' results are not comparable to the previous body of literature, and specifically to our study. @cristia2020infant administered the NWR in the form of a group game played outside, with a non-native experimenter providing the target, and each person of the group attempting it in their stead. This immediately means a number of important methodological differences with the standard implementation of NWR, where children are tested individually, they hear items spoken by a native speaker (often over headphones), the experimenter tends to belong to the same community as the children, and testing occurs in quiet conditions (with little background noise). Thus, a priority is for additional data gathered using this more novel testing paradigm in other populations, or from the Tsimane' using the more traditional paradigm.
 
-knitr::include_graphics("nwr.by.age.ITEM.png")
+Broadening our discussion to all of the studies in our literature review, we notice that there is rather wide variation of the range of NWR scores found across these samples, and that, in fact, the strength of age effects also varies. We performed some exploratory analyses to see whether features of the languages children were learning could be related to their overall NWR scores. We extracted the number of phonemes in the language from PHOIBLE and coded whether words in the language tended to be longer or shorter based on information in the papers or other sources. Neither of these two predictors explained variance in Figure \@ref(fig:fig-prevlit-overall). It is possible that average word length plays a role, but often researchers incorporate this into their design by including longer items when the native language allows this, with e.g. Sotho non-words having 4-7 syllables in length. 
 
-```
+# References
 
-## SM4: Re-analysis of mispronunciation patterns excluding errors resulting in real words
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}

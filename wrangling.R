@@ -45,6 +45,9 @@ trnsc$tokid=paste(trnsc$item,trnsc$token)
 # 1411              wee     English: where
 
 trnsc$mispronunciation=as.character(trnsc$mispronunciation)
+trnsc$meaningful=F
+trnsc$meaningful[!is.na(trnsc$meaning)]<-T
+
 trnsc$meaning=as.character(trnsc$meaning)
 trnsc$mispronunciation[trnsc$mispronunciation=="two"]<-"tuu"
 trnsc[grep("Eng",trnsc$meaning),c("mispronunciation","meaning")]
@@ -318,26 +321,26 @@ for(i in 1:dim(trnsc)[1]) if (!trnsc$english[i]){ #this goes through each line
     if(j=="S") {
       substitution_bank=rbind(substitution_bank,
                               cbind(strsplit(source_string,"")[[1]][counter_source], strsplit(target_string,"")[[1]][counter_target],
-                                    trnsc[i,c("target_uni","mp_uni","age.rounded","target_ortho","phono","tokid")],row.names = NULL))
+                                    trnsc[i,c("target_uni","mp_uni","age.rounded","target_ortho","phono","tokid","meaningful")],row.names = NULL))
       counter_source=counter_source+1
       counter_target=counter_target+1
     }
     if(j=="I") {
       insertion_bank=rbind(insertion_bank,
                            cbind(strsplit(target_string,"")[[1]][counter_target],
-                           trnsc[i,c("target_uni","mp_uni","age.rounded","target_ortho","phono","tokid")],row.names = NULL))
+                           trnsc[i,c("target_uni","mp_uni","age.rounded","target_ortho","phono","tokid","meaningful")],row.names = NULL))
       counter_target=counter_target+1
     }
     if(j=="D") {
       deletion_bank=rbind(deletion_bank,
                           cbind(strsplit(source_string,"")[[1]][counter_source],
-                          trnsc[i,c("target_uni","mp_uni","age.rounded","target_ortho","phono","tokid")],row.names = NULL))
+                          trnsc[i,c("target_uni","mp_uni","age.rounded","target_ortho","phono","tokid","meaningful")],row.names = NULL))
       counter_source=counter_source+1
     }
     if(j=="M") {
       match_bank=rbind(match_bank,
                        cbind(strsplit(source_string,"")[[1]][counter_source],
-                       trnsc[i,c("target_uni","mp_uni","age.rounded","target_ortho","phono","tokid")],row.names = NULL))
+                       trnsc[i,c("target_uni","mp_uni","age.rounded","target_ortho","phono","tokid","meaningful")],row.names = NULL))
       counter_source=counter_source+1
       counter_target=counter_target+1
     }
@@ -368,16 +371,16 @@ for(i in dim(correspondances)[1]:1) { #
    match_bank[,1]=gsub(correspondances[i,2],correspondances[i,1],match_bank[,1],fixed=T)
 }
 
-colnames(substitution_bank)<-c("target","realization","target_word","mispronunciation","age","target_ortho","target_phono","tokid")
+colnames(substitution_bank)<-c("target","realization","target_word","mispronunciation","age","target_ortho","target_phono","tokid","meaningful")
 write.table(substitution_bank,"substitution_bank.txt",row.names=F,sep="\t")
 
-colnames(insertion_bank)<-c("target","target_word","mispronunciation","age","target_ortho","target_phono","tokid")
+colnames(insertion_bank)<-c("target","target_word","mispronunciation","age","target_ortho","target_phono","tokid","meaningful")
 write.table(insertion_bank,"insertion_bank.txt",row.names=F,sep="\t")
 
-colnames(deletion_bank)<-c("target","target_word","mispronunciation","age","target_ortho","target_phono","tokid")
+colnames(deletion_bank)<-c("target","target_word","mispronunciation","age","target_ortho","target_phono","tokid","meaningful")
 write.table(deletion_bank,"deletion_bank.txt",row.names=F,sep="\t")
 
-colnames(match_bank)<-c("target","target_word","mispronunciation","age","target_ortho","target_phono","tokid")
+colnames(match_bank)<-c("target","target_word","mispronunciation","age","target_ortho","target_phono","tokid","meaningful")
 write.table(match_bank,"match_bank.txt",row.names=F,sep="\t")
 
 

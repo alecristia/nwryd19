@@ -1,814 +1,814 @@
-"target"	"realization"	"target_word"	"mispronunciation"	"age"	"target_ortho"	"target_phono"	"tokid"
-"d"	"ch"	"dimope"	"timope"	7.37115516062885	"dimope"	"ṭimɔpɛ"	"dimope 12"
-"d"	"ch"	"dimope"	"timope"	6.32399179767601	"dimope"	"ṭimɔpɛ"	"dimope 4"
-"d"	"ch"	"dimope"	"timope"	7.60628844839371	"dimope"	"ṭimɔpɛ"	"dimope 13"
-"d"	"ch"	"dimope"	"timope"	NA	"dimope"	"ṭimɔpɛ"	"dimope 25"
-"d"	"k"	"dimope"	"kimope"	5.79904306220096	"dimope"	"ṭimɔpɛ"	"dimope 18"
-"d"	"ch"	"dimope"	"timope"	7.60628844839371	"dimope"	"ṭimɔpɛ"	"dimope 20"
-"d"	"k"	"dimope"	"kemope"	5.52836637047163	"dimope"	"ṭimɔpɛ"	"dimope 10"
-"i"	"e"	"dimope"	"kemope"	5.52836637047163	"dimope"	"ṭimɔpɛ"	"dimope 10"
-"d"	"ch"	"dimope"	"timope"	5.79904306220096	"dimope"	"ṭimɔpɛ"	"dimope 1"
-"d"	"ch"	"dipońate"	"tiponate"	5.27136021872864	"dipońate"	"ṭipɔnætɛ"	"diponate 14"
-"'n"	"n"	"dipońate"	"tiponate"	5.27136021872864	"dipońate"	"ṭipɔnætɛ"	"diponate 14"
-"d"	"ch"	"dipońate"	"tiponate"	5.19480519480519	"dipońate"	"ṭipɔnætɛ"	"diponate 2"
-"'n"	"n"	"dipońate"	"tiponate"	5.19480519480519	"dipońate"	"ṭipɔnætɛ"	"diponate 2"
-"d"	"ch"	"dipońate"	"tipodenate"	4.80109364319891	"dipońate"	"ṭipɔnætɛ"	"diponate 26"
-"'n"	"d"	"dipońate"	"tipodenate"	4.80109364319891	"dipońate"	"ṭipɔnætɛ"	"diponate 26"
-"d"	"ch"	"dipońate"	"tiponate"	8.51674641148325	"dipońate"	"ṭipɔnætɛ"	"diponate 20"
-"'n"	"n"	"dipońate"	"tiponate"	8.51674641148325	"dipońate"	"ṭipɔnætɛ"	"diponate 20"
-"d"	"ch"	"dipońate"	"tiponade"	6.88448393711552	"dipońate"	"ṭipɔnætɛ"	"diponate 3"
-"'n"	"n"	"dipońate"	"tiponade"	6.88448393711552	"dipońate"	"ṭipɔnætɛ"	"diponate 3"
-"ch"	"d"	"dipońate"	"tiponade"	6.88448393711552	"dipońate"	"ṭipɔnætɛ"	"diponate 3"
-"d"	"ch"	"dipońate"	"tiponape"	7.37115516062885	"dipońate"	"ṭipɔnætɛ"	"diponate 27"
-"'n"	"n"	"dipońate"	"tiponape"	7.37115516062885	"dipońate"	"ṭipɔnætɛ"	"diponate 27"
-"ch"	"p"	"dipońate"	"tiponape"	7.37115516062885	"dipońate"	"ṭipɔnætɛ"	"diponate 27"
-"d"	"ch"	"dipońate"	"tiponade"	4.80109364319891	"dipońate"	"ṭipɔnætɛ"	"diponate 18"
-"'n"	"n"	"dipońate"	"tiponade"	4.80109364319891	"dipońate"	"ṭipɔnætɛ"	"diponate 18"
-"ch"	"d"	"dipońate"	"tiponade"	4.80109364319891	"dipońate"	"ṭipɔnætɛ"	"diponate 18"
-"d"	"ch"	"dipońate"	"tiponate"	7.12781954887218	"dipońate"	"ṭipɔnætɛ"	"diponate 25"
-"'n"	"n"	"dipońate"	"tiponate"	7.12781954887218	"dipońate"	"ṭipɔnætɛ"	"diponate 25"
-"d"	"ch"	"dipońate"	"tiponate"	5.27136021872864	"dipońate"	"ṭipɔnætɛ"	"diponate 30"
-"'n"	"n"	"dipońate"	"tiponate"	5.27136021872864	"dipońate"	"ṭipɔnætɛ"	"diponate 30"
-"d"	"ch"	"dipońate"	"tiponate"	7.81134654818865	"dipońate"	"ṭipɔnætɛ"	"diponate 10"
-"'n"	"n"	"dipońate"	"tiponate"	7.81134654818865	"dipońate"	"ṭipɔnætɛ"	"diponate 10"
-"'n"	"n"	"dipońate"	"diponade"	8.30895420369105	"dipońate"	"ṭipɔnætɛ"	"diponate 16"
-"ch"	"d"	"dipońate"	"diponade"	8.30895420369105	"dipońate"	"ṭipɔnætɛ"	"diponate 16"
-"'n"	"n"	"dipońate"	"diponade"	NA	"dipońate"	"ṭipɔnætɛ"	"diponate 22"
-"ch"	"d"	"dipońate"	"diponade"	NA	"dipońate"	"ṭipɔnætɛ"	"diponate 22"
-"d"	"ch"	"dipońate"	"tiponate"	NA	"dipońate"	"ṭipɔnætɛ"	"diponate 5"
-"'n"	"n"	"dipońate"	"tiponate"	NA	"dipońate"	"ṭipɔnætɛ"	"diponate 5"
-"d"	"ch"	"diyeto"	"tiyeto"	7.60628844839371	"diyeto"	"ṭijɛtɔ"	"diyeto 25"
-"d"	"ch"	"diyeto"	"tiyeto"	5.24128503075871	"diyeto"	"ṭijɛtɔ"	"diyeto 27"
-"d"	"ch"	"diyeto"	"tiyeto"	4.97881066302119	"diyeto"	"ṭijɛtɔ"	"diyeto 36"
-"d"	"p"	"diyeto"	"piyeto"	5.64046479835954	"diyeto"	"ṭijɛtɔ"	"diyeto 10"
-"d"	"p"	"diyeto"	"piyeto"	5.64046479835954	"diyeto"	"ṭijɛtɔ"	"diyeto 23"
-"d"	"ch"	"diyeto"	"tiyeto"	5.27136021872864	"diyeto"	"ṭijɛtɔ"	"diyeto 15"
-"d"	"ch"	"diyeto"	"tiyeto"	3.91797676008202	"diyeto"	"ṭijɛtɔ"	"diyeto 3"
-"o"	"ó"	"diyeto"	"etO"	6.76965140123035	"diyeto"	"ṭijɛtɔ"	"diyeto 18"
-"d"	"ch"	"diyeto"	"tiyeto"	5.27136021872864	"diyeto"	"ṭijɛtɔ"	"diyeto 28"
-"d"	"ch"	"diyeto"	"tiyeto"	6	"diyeto"	"ṭijɛtɔ"	"diyeto 1"
-"d"	"p"	"diyeto"	"piyeto"	7.60628844839371	"diyeto"	"ṭijɛtɔ"	"diyeto 2"
-"d"	"ch"	"diyeto"	"tiyeto"	5.27136021872864	"diyeto"	"ṭijɛtɔ"	"diyeto 17"
-"d"	"p"	"diyeto"	"piyetO"	7.37115516062885	"diyeto"	"ṭijɛtɔ"	"diyeto 34"
-"o"	"ó"	"diyeto"	"piyetO"	7.37115516062885	"diyeto"	"ṭijɛtɔ"	"diyeto 34"
-"d"	"ch"	"diyeto"	"tiyeto"	3.91797676008202	"diyeto"	"ṭijɛtɔ"	"diyeto 16"
-"d"	"ch"	"diyeto"	"tiyeto"	4.97881066302119	"diyeto"	"ṭijɛtɔ"	"diyeto 35"
-"d"	"ch"	"diyeto"	"tiyeto"	4.97881066302119	"diyeto"	"ṭijɛtɔ"	"diyeto 20"
-"d"	"p"	"diyeto"	"pieto"	7.60628844839371	"diyeto"	"ṭijɛtɔ"	"diyeto 37"
-"d"	"p"	"diyeto"	"piyeto"	5.64046479835954	"diyeto"	"ṭijɛtɔ"	"diyeto 12"
-"d"	"dp"	"diyeto"	"/8"	3.91797676008202	"diyeto"	"ṭijɛtɔ"	"diyeto 8"
-"i"	"î"	"diyeto"	"/8"	3.91797676008202	"diyeto"	"ṭijɛtɔ"	"diyeto 8"
-"d"	"ch"	"diyeto"	"tiyeto"	4.97881066302119	"diyeto"	"ṭijɛtɔ"	"diyeto 5"
-"d"	"ch"	"diyeto"	"tiyeto"	5.09637730690362	"diyeto"	"ṭijɛtɔ"	"diyeto 4"
-"d"	"ch"	"diyeto"	"tiyoto"	5.79904306220096	"diyeto"	"ṭijɛtɔ"	"diyeto 6"
-"e"	"o"	"diyeto"	"tiyoto"	5.79904306220096	"diyeto"	"ṭijɛtɔ"	"diyeto 6"
-"d"	"ch"	"diyeto"	"tiyeto"	5.27136021872864	"diyeto"	"ṭijɛtɔ"	"diyeto 24"
-"d"	"ch"	"diyeto"	"tiyeto"	9.09911141490089	"diyeto"	"ṭijɛtɔ"	"diyeto 9"
-"dp"	"tp"	"/3"	":a"	6	"dp:a"	"ṭp̃æ"	"dp_a 17"
-":a"	"a"	"/3"	":a"	6	"dp:a"	"ṭp̃æ"	"dp_a 17"
-"dp"	"p"	"/3"	"pa"	11.0321257689679	"dp:a"	"ṭp̃æ"	"dp_a 8"
-":a"	"a"	"/3"	"pa"	11.0321257689679	"dp:a"	"ṭp̃æ"	"dp_a 8"
-"dp"	"tp"	"/3"	":a"	7.81134654818865	"dp:a"	"ṭp̃æ"	"dp_a 15"
-":a"	"a"	"/3"	":a"	7.81134654818865	"dp:a"	"ṭp̃æ"	"dp_a 15"
-"dp"	"p"	"/3"	"pa"	9.09911141490089	"dp:a"	"ṭp̃æ"	"dp_a 6"
-":a"	"a"	"/3"	"pa"	9.09911141490089	"dp:a"	"ṭp̃æ"	"dp_a 6"
-"dp"	"ch"	"/3"	"ta"	NA	"dp:a"	"ṭp̃æ"	"dp_a 27"
-":a"	"a"	"/3"	"ta"	NA	"dp:a"	"ṭp̃æ"	"dp_a 27"
-"dp"	"p"	"/3"	"pa"	6.37047163362953	"dp:a"	"ṭp̃æ"	"dp_a 11"
-":a"	"a"	"/3"	"pa"	6.37047163362953	"dp:a"	"ṭp̃æ"	"dp_a 11"
-"dp"	"ch"	"/3"	"ta"	7.60628844839371	"dp:a"	"ṭp̃æ"	"dp_a 22"
-":a"	"a"	"/3"	"ta"	7.60628844839371	"dp:a"	"ṭp̃æ"	"dp_a 22"
-"dp"	"tp"	"/3"	":i"	5.64046479835954	"dp:a"	"ṭp̃æ"	"dp_a 25"
-":a"	"i"	"/3"	":i"	5.64046479835954	"dp:a"	"ṭp̃æ"	"dp_a 25"
-"dp"	"p"	"/3"	"pa"	6	"dp:a"	"ṭp̃æ"	"dp_a 24"
-":a"	"a"	"/3"	"pa"	6	"dp:a"	"ṭp̃æ"	"dp_a 24"
-"dp"	"tp"	"/3"	":a"	4.97881066302119	"dp:a"	"ṭp̃æ"	"dp_a 10"
-":a"	"a"	"/3"	":a"	4.97881066302119	"dp:a"	"ṭp̃æ"	"dp_a 10"
-"dp"	"tp"	"/3"	":a"	5.27136021872864	"dp:a"	"ṭp̃æ"	"dp_a 12"
-":a"	"a"	"/3"	":a"	5.27136021872864	"dp:a"	"ṭp̃æ"	"dp_a 12"
-"dp"	"p"	"/3"	"pa"	7.37115516062885	"dp:a"	"ṭp̃æ"	"dp_a 9"
-":a"	"a"	"/3"	"pa"	7.37115516062885	"dp:a"	"ṭp̃æ"	"dp_a 9"
-"dp"	"p"	"/3"	"pa"	5.09637730690362	"dp:a"	"ṭp̃æ"	"dp_a 20"
-":a"	"a"	"/3"	"pa"	5.09637730690362	"dp:a"	"ṭp̃æ"	"dp_a 20"
-"dp"	"p"	"/3"	"pa"	9.09911141490089	"dp:a"	"ṭp̃æ"	"dp_a 14"
-":a"	"a"	"/3"	"pa"	9.09911141490089	"dp:a"	"ṭp̃æ"	"dp_a 14"
-"dp"	"tp"	"/3"	":a"	7.35475051264525	"dp:a"	"ṭp̃æ"	"dp_a 2"
-":a"	"a"	"/3"	":a"	7.35475051264525	"dp:a"	"ṭp̃æ"	"dp_a 2"
-"dp"	"p"	"/3"	"pa"	7.60628844839371	"dp:a"	"ṭp̃æ"	"dp_a 21"
-":a"	"a"	"/3"	"pa"	7.60628844839371	"dp:a"	"ṭp̃æ"	"dp_a 21"
-"dp"	"p"	"/3"	"pa"	7.60628844839371	"dp:a"	"ṭp̃æ"	"dp_a 7"
-":a"	"a"	"/3"	"pa"	7.60628844839371	"dp:a"	"ṭp̃æ"	"dp_a 7"
-"dp"	"p"	"/3"	"pe"	4.80109364319891	"dp:a"	"ṭp̃æ"	"dp_a 5"
-":a"	"e"	"/3"	"pe"	4.80109364319891	"dp:a"	"ṭp̃æ"	"dp_a 5"
-"dp"	"p"	"/3"	"pa"	9.09911141490089	"dp:a"	"ṭp̃æ"	"dp_a 28"
-":a"	"a"	"/3"	"pa"	9.09911141490089	"dp:a"	"ṭp̃æ"	"dp_a 28"
-"dp"	"tp"	"/3"	":3"	6.10526315789474	"dp:a"	"ṭp̃æ"	"dp_a 23"
-"dp"	"p"	"/3"	"pa"	7.60628844839371	"dp:a"	"ṭp̃æ"	"dp_a 13"
-":a"	"a"	"/3"	"pa"	7.60628844839371	"dp:a"	"ṭp̃æ"	"dp_a 13"
-"dp"	"ch"	"/a"	"tata"	7.12781954887218	"dpa"	"ṭpæ"	"dpa 10"
-"dp"	"ch"	"/a"	"t0"	7.12781954887218	"dpa"	"ṭpæ"	"dpa 11"
-"a"	"â"	"/a"	"t0"	7.12781954887218	"dpa"	"ṭpæ"	"dpa 11"
-"dp"	"ch"	"/a"	"te"	5.64046479835954	"dpa"	"ṭpæ"	"dpa 7"
-"a"	"e"	"/a"	"te"	5.64046479835954	"dpa"	"ṭpæ"	"dpa 7"
-"dp"	"tp"	"/a"	":a"	7.94258373205742	"dpa"	"ṭpæ"	"dpa 59"
-"dp"	"tp"	"/a"	":a"	5.79904306220096	"dpa"	"ṭpæ"	"dpa 22"
-"dp"	"p"	"/a"	"pa"	6	"dpa"	"ṭpæ"	"dpa 15"
-"dp"	"ch"	"/a"	"ta"	5.79904306220096	"dpa"	"ṭpæ"	"dpa 28"
-"dp"	"p"	"/a"	"pa"	7.37115516062885	"dpa"	"ṭpæ"	"dpa 53"
-"dp"	"tp"	"/a"	":a"	10.1982228298018	"dpa"	"ṭpæ"	"dpa 43"
-"dp"	"ch"	"/a"	"tata"	7.81134654818865	"dpa"	"ṭpæ"	"dpa 4"
-"dp"	"p"	"/a"	"pa"	5.19480519480519	"dpa"	"ṭpæ"	"dpa 30"
-"dp"	"ch"	"/a"	"ta"	7.47505126452495	"dpa"	"ṭpæ"	"dpa 54"
-"dp"	"d"	"/a"	"d5"	3.91797676008202	"dpa"	"ṭpæ"	"dpa 31"
-"a"	":â"	"/a"	"d5"	3.91797676008202	"dpa"	"ṭpæ"	"dpa 31"
-"dp"	"ch"	"/a"	"ta"	7.12781954887218	"dpa"	"ṭpæ"	"dpa 52"
-"dp"	"p"	"/a"	"pa"	7.60628844839371	"dpa"	"ṭpæ"	"dpa 18"
-"dp"	"p"	"/a"	"pa"	7.20710868079289	"dpa"	"ṭpæ"	"dpa 21"
-"dp"	"p"	"/a"	"pa"	6	"dpa"	"ṭpæ"	"dpa 16"
-"dp"	"ly"	"/a"	"xa"	10.1982228298018	"dpa"	"ṭpæ"	"dpa 19"
-"dp"	"p"	"/a"	"p7"	4.80109364319891	"dpa"	"ṭpæ"	"dpa 17"
-"a"	":o"	"/a"	"p7"	4.80109364319891	"dpa"	"ṭpæ"	"dpa 17"
-"dp"	"tp"	"/a"	":8"	7.28366370471634	"dpa"	"ṭpæ"	"dpa 32"
-"a"	"î"	"/a"	":8"	7.28366370471634	"dpa"	"ṭpæ"	"dpa 32"
-"dp"	"p"	"/a"	"pa"	6.37047163362953	"dpa"	"ṭpæ"	"dpa 23"
-"dp"	"tp"	"/a"	":a"	8.6015037593985	"dpa"	"ṭpæ"	"dpa 50"
-"dp"	"p"	"/a"	"pa"	6.76965140123035	"dpa"	"ṭpæ"	"dpa 20"
-"dp"	"p"	"/a"	"pa"	7.60628844839371	"dpa"	"ṭpæ"	"dpa 36"
-"dp"	"tp"	"/a"	":a"	9.09911141490089	"dpa"	"ṭpæ"	"dpa 48"
-"dp"	"p"	"/a"	"pa"	6.32399179767601	"dpa"	"ṭpæ"	"dpa 51"
-"dp"	"p"	"/a"	"pa"	9.09911141490089	"dpa"	"ṭpæ"	"dpa 38"
-"dp"	"p"	"/a"	"pa"	4.97881066302119	"dpa"	"ṭpæ"	"dpa 37"
-"dp"	"ch"	"/a"	"ta"	11.0321257689679	"dpa"	"ṭpæ"	"dpa 55"
-"dp"	"tp"	"/a"	":a"	8	"dpa"	"ṭpæ"	"dpa 39"
-"dp"	"p"	"/a"	"pa"	5.7799043062201	"dpa"	"ṭpæ"	"dpa 14"
-"dp"	"ch"	"/a"	"te"	5.24128503075871	"dpa"	"ṭpæ"	"dpa 1"
-"a"	"e"	"/a"	"te"	5.24128503075871	"dpa"	"ṭpæ"	"dpa 1"
-"dp"	"tp"	"/a"	":a"	6.88448393711552	"dpa"	"ṭpæ"	"dpa 49"
-"dp"	"tp"	"/a"	":a"	8.6015037593985	"dpa"	"ṭpæ"	"dpa 47"
-"dp"	"ch"	"/a"	"tata"	5.52836637047163	"dpa"	"ṭpæ"	"dpa 9"
-"dp"	"ch"	"/a"	"tO"	5.24128503075871	"dpa"	"ṭpæ"	"dpa 26"
-"a"	"ó"	"/a"	"tO"	5.24128503075871	"dpa"	"ṭpæ"	"dpa 26"
-"dp"	"p"	"/a"	"pa"	5.27136021872864	"dpa"	"ṭpæ"	"dpa 12"
-"dp"	"p"	"/0"	"pa"	7.47505126452495	"dpâ"	"ṭpɑ"	"dpa2 20"
-"â"	"a"	"/0"	"pa"	7.47505126452495	"dpâ"	"ṭpɑ"	"dpa2 20"
-"dp"	"ch"	"/0"	"t5"	7.94258373205742	"dpâ"	"ṭpɑ"	"dpa2 29"
-"â"	":â"	"/0"	"t5"	7.94258373205742	"dpâ"	"ṭpɑ"	"dpa2 29"
-"dp"	"d"	"/0"	"d8"	3.91797676008202	"dpâ"	"ṭpɑ"	"dpa2 18"
-"â"	"î"	"/0"	"d8"	3.91797676008202	"dpâ"	"ṭpɑ"	"dpa2 18"
-"dp"	"p"	"/0"	"pa"	6.32399179767601	"dpâ"	"ṭpɑ"	"dpa2 8"
-"â"	"a"	"/0"	"pa"	6.32399179767601	"dpâ"	"ṭpɑ"	"dpa2 8"
-"dp"	"p"	"/0"	"pa"	7.20710868079289	"dpâ"	"ṭpɑ"	"dpa2 10"
-"â"	"a"	"/0"	"pa"	7.20710868079289	"dpâ"	"ṭpɑ"	"dpa2 10"
-"dp"	"ch"	"/0"	"t5"	8.03280929596719	"dpâ"	"ṭpɑ"	"dpa2 25"
-"â"	":â"	"/0"	"t5"	8.03280929596719	"dpâ"	"ṭpɑ"	"dpa2 25"
-"dp"	"ch"	"/0"	"t3"	10.1982228298018	"dpâ"	"ṭpɑ"	"dpa2 7"
-"â"	":a"	"/0"	"t3"	10.1982228298018	"dpâ"	"ṭpɑ"	"dpa2 7"
-"dp"	"p"	"/0"	"pa"	5.52836637047163	"dpâ"	"ṭpɑ"	"dpa2 22"
-"â"	"a"	"/0"	"pa"	5.52836637047163	"dpâ"	"ṭpɑ"	"dpa2 22"
-"dp"	"d"	"/0"	"d5"	9.52563226247437	"dpâ"	"ṭpɑ"	"dpa2 23"
-"â"	":â"	"/0"	"d5"	9.52563226247437	"dpâ"	"ṭpɑ"	"dpa2 23"
-"dp"	"d"	"/0"	"d5"	3.91797676008202	"dpâ"	"ṭpɑ"	"dpa2 14"
-"â"	":â"	"/0"	"d5"	3.91797676008202	"dpâ"	"ṭpɑ"	"dpa2 14"
-"dp"	"d"	"/0"	"d5"	8	"dpâ"	"ṭpɑ"	"dpa2 24"
-"â"	":â"	"/0"	"d5"	8	"dpâ"	"ṭpɑ"	"dpa2 24"
-"dp"	"tp"	"/0"	":a"	8.6015037593985	"dpâ"	"ṭpɑ"	"dpa2 19"
-"â"	"a"	"/0"	":a"	8.6015037593985	"dpâ"	"ṭpɑ"	"dpa2 19"
-"dp"	"ch"	"/9"	"te"	7.94258373205742	"dpê"	"ṭpə"	"dpe 41"
-"ê"	"e"	"/9"	"te"	7.94258373205742	"dpê"	"ṭpə"	"dpe 41"
-"dp"	"ch"	"/9"	"te"	5.79904306220096	"dpê"	"ṭpə"	"dpe 13"
-"ê"	"e"	"/9"	"te"	5.79904306220096	"dpê"	"ṭpə"	"dpe 13"
-"dp"	"tp"	"/9"	":e"	5.19480519480519	"dpê"	"ṭpə"	"dpe 3"
-"ê"	"e"	"/9"	":e"	5.19480519480519	"dpê"	"ṭpə"	"dpe 3"
-"dp"	"tp"	"/9"	":e"	8.51674641148325	"dpê"	"ṭpə"	"dpe 23"
-"ê"	"e"	"/9"	":e"	8.51674641148325	"dpê"	"ṭpə"	"dpe 23"
-"dp"	"d"	"/9"	"d5"	3.91797676008202	"dpê"	"ṭpə"	"dpe 34"
-"ê"	":â"	"/9"	"d5"	3.91797676008202	"dpê"	"ṭpə"	"dpe 34"
-"ê"	"a"	"/9"	"/a"	NA	"dpê"	"ṭpə"	"dpe 16"
-"dp"	"d"	"/9"	"d9"	7.47505126452495	"dpê"	"ṭpə"	"dpe 22"
-"dp"	"ch"	"/9"	"te"	5.52836637047163	"dpê"	"ṭpə"	"dpe 37"
-"ê"	"e"	"/9"	"te"	5.52836637047163	"dpê"	"ṭpə"	"dpe 37"
-"dp"	"tp"	"/9"	":a"	7.20710868079289	"dpê"	"ṭpə"	"dpe 2"
-"ê"	"a"	"/9"	":a"	7.20710868079289	"dpê"	"ṭpə"	"dpe 2"
-"dp"	"d"	"/9"	"d4"	3.91797676008202	"dpê"	"ṭpə"	"dpe 17"
-"ê"	":ê"	"/9"	"d4"	3.91797676008202	"dpê"	"ṭpə"	"dpe 17"
-"dp"	"d"	"/9"	"d9"	7.47505126452495	"dpê"	"ṭpə"	"dpe 33"
-"dp"	"ch"	"/9"	"te"	5.52836637047163	"dpê"	"ṭpə"	"dpe 11"
-"ê"	"e"	"/9"	"te"	5.52836637047163	"dpê"	"ṭpə"	"dpe 11"
-"dp"	"ch"	"/9"	"te"	5.52836637047163	"dpê"	"ṭpə"	"dpe 14"
-"ê"	"e"	"/9"	"te"	5.52836637047163	"dpê"	"ṭpə"	"dpe 14"
-"dp"	"d"	"/9"	"d4"	3.91797676008202	"dpê"	"ṭpə"	"dpe 21"
-"ê"	":ê"	"/9"	"d4"	3.91797676008202	"dpê"	"ṭpə"	"dpe 21"
-"dp"	"ch"	"/9"	"te"	7.47505126452495	"dpê"	"ṭpə"	"dpe 27"
-"ê"	"e"	"/9"	"te"	7.47505126452495	"dpê"	"ṭpə"	"dpe 27"
-"dp"	"d"	"/9"	"d5"	7.25358851674641	"dpê"	"ṭpə"	"dpe 1"
-"ê"	":â"	"/9"	"d5"	7.25358851674641	"dpê"	"ṭpə"	"dpe 1"
-"dp"	"tp"	"/9"	":7"	8.03280929596719	"dpê"	"ṭpə"	"dpe 25"
-"ê"	":o"	"/9"	":7"	8.03280929596719	"dpê"	"ṭpə"	"dpe 25"
-"dp"	"tp"	"/9"	":a"	7.20710868079289	"dpê"	"ṭpə"	"dpe 9"
-"ê"	"a"	"/9"	":a"	7.20710868079289	"dpê"	"ṭpə"	"dpe 9"
-"dp"	"tp"	"/9"	":e"	7.12781954887218	"dpê"	"ṭpə"	"dpe 10"
-"ê"	"e"	"/9"	":e"	7.12781954887218	"dpê"	"ṭpə"	"dpe 10"
-"dp"	"ch"	"/9"	"te"	5.52836637047163	"dpê"	"ṭpə"	"dpe 32"
-"ê"	"e"	"/9"	"te"	5.52836637047163	"dpê"	"ṭpə"	"dpe 32"
-"dp"	"ch"	"/9"	"te"	5.24128503075871	"dpê"	"ṭpə"	"dpe 12"
-"ê"	"e"	"/9"	"te"	5.24128503075871	"dpê"	"ṭpə"	"dpe 12"
-"dp"	"ch"	"/9"	"te"	5.52836637047163	"dpê"	"ṭpə"	"dpe 5"
-"ê"	"e"	"/9"	"te"	5.52836637047163	"dpê"	"ṭpə"	"dpe 5"
-"dp"	"ch"	"/9"	"t3"	10.1982228298018	"dpê"	"ṭpə"	"dpe 31"
-"ê"	":a"	"/9"	"t3"	10.1982228298018	"dpê"	"ṭpə"	"dpe 31"
-"dp"	"d"	"/9"	"d9"	7.47505126452495	"dpê"	"ṭpə"	"dpe 38"
-"dp"	"tp"	"/9"	":a"	7.20710868079289	"dpê"	"ṭpə"	"dpe 28"
-"ê"	"a"	"/9"	":a"	7.20710868079289	"dpê"	"ṭpə"	"dpe 28"
-"dp"	"ch"	"/9"	"te"	7.12781954887218	"dpê"	"ṭpə"	"dpe 29"
-"ê"	"e"	"/9"	"te"	7.12781954887218	"dpê"	"ṭpə"	"dpe 29"
-"dp"	"ch"	"/9"	"t3"	10.1982228298018	"dpê"	"ṭpə"	"dpe 35"
-"ê"	":a"	"/9"	"t3"	10.1982228298018	"dpê"	"ṭpə"	"dpe 35"
-"dp"	"p"	"/E"	"pe"	6	"dpéé"	"ṭpeː"	"dpee 9"
-"é"	"e"	"/E"	"pe"	6	"dpéé"	"ṭpeː"	"dpee 9"
-"dp"	"ch"	"/E"	"te"	4.80109364319891	"dpéé"	"ṭpeː"	"dpee 14"
-"é"	"e"	"/E"	"te"	4.80109364319891	"dpéé"	"ṭpeː"	"dpee 14"
-"dp"	"tp"	"/E"	":e"	5.09637730690362	"dpéé"	"ṭpeː"	"dpee 21"
-"é"	"e"	"/E"	":e"	5.09637730690362	"dpéé"	"ṭpeː"	"dpee 21"
-"dp"	"p"	"/E"	"pe"	7.37115516062885	"dpéé"	"ṭpeː"	"dpee 25"
-"é"	"e"	"/E"	"pe"	7.37115516062885	"dpéé"	"ṭpeː"	"dpee 25"
-"dp"	"tp"	"/E"	":e"	9.09911141490089	"dpéé"	"ṭpeː"	"dpee 2"
-"é"	"e"	"/E"	":e"	9.09911141490089	"dpéé"	"ṭpeː"	"dpee 2"
-"dp"	"tp"	"/E"	":a"	6.88448393711552	"dpéé"	"ṭpeː"	"dpee 19"
-"é"	"a"	"/E"	":a"	6.88448393711552	"dpéé"	"ṭpeː"	"dpee 19"
-"dp"	"p"	"/E"	"pe"	7.60628844839371	"dpéé"	"ṭpeː"	"dpee 13"
-"é"	"e"	"/E"	"pe"	7.60628844839371	"dpéé"	"ṭpeː"	"dpee 13"
-"dp"	"tp"	"/E"	":e"	5.27136021872864	"dpéé"	"ṭpeː"	"dpee 10"
-"é"	"e"	"/E"	":e"	5.27136021872864	"dpéé"	"ṭpeː"	"dpee 10"
-"dp"	"p"	"/E"	"pe"	11.0321257689679	"dpéé"	"ṭpeː"	"dpee 24"
-"é"	"e"	"/E"	"pe"	11.0321257689679	"dpéé"	"ṭpeː"	"dpee 24"
-"dp"	"ch"	"/E"	"te"	5.64046479835954	"dpéé"	"ṭpeː"	"dpee 3"
-"é"	"e"	"/E"	"te"	5.64046479835954	"dpéé"	"ṭpeː"	"dpee 3"
-"dp"	"ch"	"/E"	"te"	4.80109364319891	"dpéé"	"ṭpeː"	"dpee 5"
-"é"	"e"	"/E"	"te"	4.80109364319891	"dpéé"	"ṭpeː"	"dpee 5"
-"dp"	"p"	"/E"	"pe"	4.80109364319891	"dpéé"	"ṭpeː"	"dpee 28"
-"é"	"e"	"/E"	"pe"	4.80109364319891	"dpéé"	"ṭpeː"	"dpee 28"
-"dp"	"p"	"/E"	"pe"	7.35475051264525	"dpéé"	"ṭpeː"	"dpee 16"
-"é"	"e"	"/E"	"pe"	7.35475051264525	"dpéé"	"ṭpeː"	"dpee 16"
-"dp"	"p"	"/E"	"pe"	7.35475051264525	"dpéé"	"ṭpeː"	"dpee 17"
-"é"	"e"	"/E"	"pe"	7.35475051264525	"dpéé"	"ṭpeː"	"dpee 17"
-"dp"	"p"	"/E"	"pe"	7.35475051264525	"dpéé"	"ṭpeː"	"dpee 8"
-"é"	"e"	"/E"	"pe"	7.35475051264525	"dpéé"	"ṭpeː"	"dpee 8"
-"dp"	"ch"	"/E"	"te"	5.11278195488722	"dpéé"	"ṭpeː"	"dpee 15"
-"é"	"e"	"/E"	"te"	5.11278195488722	"dpéé"	"ṭpeː"	"dpee 15"
-"dp"	"p"	"/E"	"pe"	7.60628844839371	"dpéé"	"ṭpeː"	"dpee 6"
-"é"	"e"	"/E"	"pe"	7.60628844839371	"dpéé"	"ṭpeː"	"dpee 6"
-"dp"	"p"	"/E"	"pe"	7.60628844839371	"dpéé"	"ṭpeː"	"dpee 18"
-"é"	"e"	"/E"	"pe"	7.60628844839371	"dpéé"	"ṭpeː"	"dpee 18"
-"dp"	"p"	"/E"	"pe"	7.60628844839371	"dpéé"	"ṭpeː"	"dpee 23"
-"é"	"e"	"/E"	"pe"	7.60628844839371	"dpéé"	"ṭpeː"	"dpee 23"
-"dp"	"ly"	"/i"	"xE"	6.88448393711552	"dpi"	"ṭpi"	"dpi 11"
-"i"	"é"	"/i"	"xE"	6.88448393711552	"dpi"	"ṭpi"	"dpi 11"
-"dp"	"ly"	"/i"	"xi"	4.97881066302119	"dpi"	"ṭpi"	"dpi 12"
-"dp"	"ly"	"/i"	"xi"	7.37115516062885	"dpi"	"ṭpi"	"dpi 30"
-"dp"	"ly"	"/i"	"xE"	6.88448393711552	"dpi"	"ṭpi"	"dpi 9"
-"i"	"é"	"/i"	"xE"	6.88448393711552	"dpi"	"ṭpi"	"dpi 9"
-"dp"	"ly"	"/i"	"xi"	9.09911141490089	"dpi"	"ṭpi"	"dpi 10"
-"dp"	"tp"	"/i"	":i"	5.64046479835954	"dpi"	"ṭpi"	"dpi 7"
-"dp"	"ly"	"/i"	"xi"	NA	"dpi"	"ṭpi"	"dpi 37"
-"dp"	"ch"	"/i"	"ti"	5.64046479835954	"dpi"	"ṭpi"	"dpi 33"
-"dp"	"ly"	"/i"	"xi"	6.37047163362953	"dpi"	"ṭpi"	"dpi 38"
-"dp"	"d"	"/i"	"d8"	6	"dpi"	"ṭpi"	"dpi 19"
-"i"	"î"	"/i"	"d8"	6	"dpi"	"ṭpi"	"dpi 19"
-"dp"	"tp"	"/i"	":i"	4.97881066302119	"dpi"	"ṭpi"	"dpi 5"
-"dp"	"ly"	"/i"	"xE"	9.09911141490089	"dpi"	"ṭpi"	"dpi 13"
-"i"	"é"	"/i"	"xE"	9.09911141490089	"dpi"	"ṭpi"	"dpi 13"
-"dp"	"d"	"/i"	"dE"	11.0321257689679	"dpi"	"ṭpi"	"dpi 21"
-"i"	"é"	"/i"	"dE"	11.0321257689679	"dpi"	"ṭpi"	"dpi 21"
-"dp"	"ly"	"/i"	"xE"	NA	"dpi"	"ṭpi"	"dpi 14"
-"i"	"é"	"/i"	"xE"	NA	"dpi"	"ṭpi"	"dpi 14"
-"dp"	"ly"	"/i"	"xi"	9.09911141490089	"dpi"	"ṭpi"	"dpi 35"
-"dp"	"ly"	"/i"	"xE"	9.09911141490089	"dpi"	"ṭpi"	"dpi 16"
-"i"	"é"	"/i"	"xE"	9.09911141490089	"dpi"	"ṭpi"	"dpi 16"
-"dp"	"d"	"/i"	"d8"	11.0321257689679	"dpi"	"ṭpi"	"dpi 26"
-"i"	"î"	"/i"	"d8"	11.0321257689679	"dpi"	"ṭpi"	"dpi 26"
-"dp"	"d"	"/i"	"dE"	6	"dpi"	"ṭpi"	"dpi 24"
-"i"	"é"	"/i"	"dE"	6	"dpi"	"ṭpi"	"dpi 24"
-"dp"	"p"	"/i"	"pE"	7.60628844839371	"dpi"	"ṭpi"	"dpi 23"
-"i"	"é"	"/i"	"pE"	7.60628844839371	"dpi"	"ṭpi"	"dpi 23"
-"dp"	"ly"	"/i"	"xE"	7.81134654818865	"dpi"	"ṭpi"	"dpi 6"
-"i"	"é"	"/i"	"xE"	7.81134654818865	"dpi"	"ṭpi"	"dpi 6"
-"dp"	"ch"	"/i"	"ti"	4.80109364319891	"dpi"	"ṭpi"	"dpi 8"
-"dp"	"d"	"/i"	"dE"	6	"dpi"	"ṭpi"	"dpi 2"
-"i"	"é"	"/i"	"dE"	6	"dpi"	"ṭpi"	"dpi 2"
-"dp"	"ly"	"/i"	"xi"	9.09911141490089	"dpi"	"ṭpi"	"dpi 4"
-"dp"	"d"	"/i"	"dE"	6	"dpi"	"ṭpi"	"dpi 31"
-"i"	"é"	"/i"	"dE"	6	"dpi"	"ṭpi"	"dpi 31"
-"dp"	"ly"	"/i"	"xi"	7.60628844839371	"dpi"	"ṭpi"	"dpi 15"
-"dp"	"ly"	"/i"	"xi"	5.27136021872864	"dpi"	"ṭpi"	"dpi 1"
-"dp"	"d"	"/i"	"d8"	11.0321257689679	"dpi"	"ṭpi"	"dpi 18"
-"i"	"î"	"/i"	"d8"	11.0321257689679	"dpi"	"ṭpi"	"dpi 18"
-"dp"	"ly"	"/i"	"xi"	4.97881066302119	"dpi"	"ṭpi"	"dpi 28"
-"dp"	"ly"	"/i"	"xi"	6.10526315789474	"dpi"	"ṭpi"	"dpi 39"
-"dp"	"ly"	"/i"	"xi"	4.97881066302119	"dpi"	"ṭpi"	"dpi 34"
-"dp"	"ch"	"/i"	"ti"	5.64046479835954	"dpi"	"ṭpi"	"dpi 36"
-"dp"	"p"	"/i"	"pi"	7.35475051264525	"dpi"	"ṭpi"	"dpi 22"
-"dp"	"ly"	"/i"	"xi"	5.11278195488722	"dpi"	"ṭpi"	"dpi 17"
-"dp"	"ly"	"/i"	"xi"	4.97881066302119	"dpi"	"ṭpi"	"dpi 3"
-"dp"	"p"	"/i"	"pE"	4.80109364319891	"dpi"	"ṭpi"	"dpi 29"
-"i"	"é"	"/i"	"pE"	4.80109364319891	"dpi"	"ṭpi"	"dpi 29"
-"dp"	"ly"	"/i"	"xE"	5.27136021872864	"dpi"	"ṭpi"	"dpi 32"
-"i"	"é"	"/i"	"xE"	5.27136021872864	"dpi"	"ṭpi"	"dpi 32"
-"dp"	"d"	"/i"	"d8"	5.11278195488722	"dpi"	"ṭpi"	"dpi 25"
-"i"	"î"	"/i"	"d8"	5.11278195488722	"dpi"	"ṭpi"	"dpi 25"
-"dp"	"ch"	"/u"	"tu"	6.76965140123035	"dpu"	"ṭpu"	"dpu 43"
-"u"	"î"	"/u"	"/8"	5.52836637047163	"dpu"	"ṭpu"	"dpu 48"
-"dp"	"d"	"/u"	"du"	5.24128503075871	"dpu"	"ṭpu"	"dpu 34"
-"dp"	"d"	"/u"	"du"	5.19480519480519	"dpu"	"ṭpu"	"dpu 38"
-"dp"	"d"	"/u"	"du"	8	"dpu"	"ṭpu"	"dpu 39"
-"dp"	"d"	"/u"	"dO"	7.28366370471634	"dpu"	"ṭpu"	"dpu 30"
-"u"	"ó"	"/u"	"dO"	7.28366370471634	"dpu"	"ṭpu"	"dpu 30"
-"dp"	"d"	"/u"	"du"	8.03280929596719	"dpu"	"ṭpu"	"dpu 17"
-"dp"	"d"	"/u"	"du"	7.47505126452495	"dpu"	"ṭpu"	"dpu 12"
-"dp"	"d"	"/u"	"du"	8.6015037593985	"dpu"	"ṭpu"	"dpu 10"
-"dp"	"d"	"/u"	"du"	5.52836637047163	"dpu"	"ṭpu"	"dpu 6"
-"dp"	"ch"	"/u"	"tO"	7.94258373205742	"dpu"	"ṭpu"	"dpu 40"
-"u"	"ó"	"/u"	"tO"	7.94258373205742	"dpu"	"ṭpu"	"dpu 40"
-"dp"	"d"	"/u"	"du"	8.6015037593985	"dpu"	"ṭpu"	"dpu 46"
-"dp"	"d"	"/u"	"du"	5.79904306220096	"dpu"	"ṭpu"	"dpu 47"
-"dp"	"d"	"/u"	"dO"	8.6015037593985	"dpu"	"ṭpu"	"dpu 29"
-"u"	"ó"	"/u"	"dO"	8.6015037593985	"dpu"	"ṭpu"	"dpu 29"
-"dp"	"d"	"/u"	"dO"	6.76965140123035	"dpu"	"ṭpu"	"dpu 31"
-"u"	"ó"	"/u"	"dO"	6.76965140123035	"dpu"	"ṭpu"	"dpu 31"
-"dp"	"d"	"/u"	"du"	8.03280929596719	"dpu"	"ṭpu"	"dpu 22"
-"dp"	"d"	"/u"	"du"	7.47505126452495	"dpu"	"ṭpu"	"dpu 16"
-"dp"	"d"	"/u"	"dO"	5.52836637047163	"dpu"	"ṭpu"	"dpu 28"
-"u"	"ó"	"/u"	"dO"	5.52836637047163	"dpu"	"ṭpu"	"dpu 28"
-"dp"	"ly"	"/u"	"xu"	5.7799043062201	"dpu"	"ṭpu"	"dpu 20"
-"dp"	"d"	"/u"	"du"	8.6015037593985	"dpu"	"ṭpu"	"dpu 15"
-"dp"	"ch"	"/u"	"tO"	6.76965140123035	"dpu"	"ṭpu"	"dpu 13"
-"u"	"ó"	"/u"	"tO"	6.76965140123035	"dpu"	"ṭpu"	"dpu 13"
-"dp"	"ch"	"/u"	"tO"	3.91797676008202	"dpu"	"ṭpu"	"dpu 14"
-"u"	"ó"	"/u"	"tO"	3.91797676008202	"dpu"	"ṭpu"	"dpu 14"
-"dp"	"d"	"/u"	"di"	8.6015037593985	"dpu"	"ṭpu"	"dpu 45"
-"u"	"i"	"/u"	"di"	8.6015037593985	"dpu"	"ṭpu"	"dpu 45"
-"dp"	"d"	"/u"	"du"	8.03280929596719	"dpu"	"ṭpu"	"dpu 33"
-"dp"	"d"	"/u"	"du"	8.03280929596719	"dpu"	"ṭpu"	"dpu 35"
-"dp"	"d"	"/u"	"du"	5.52836637047163	"dpu"	"ṭpu"	"dpu 2"
-"dp"	"d"	"/u"	"du"	8.30895420369105	"dpu"	"ṭpu"	"dpu 18"
-"dp"	"d"	"/u"	"du"	8.03280929596719	"dpu"	"ṭpu"	"dpu 8"
-"u"	"î"	"/u"	"/8/8"	8	"dpu"	"ṭpu"	"dpu 21"
-"dp"	"d"	"/u"	"du"	7.28366370471634	"dpu"	"ṭpu"	"dpu 32"
-"dp"	"d"	"/u"	"du"	5.52836637047163	"dpu"	"ṭpu"	"dpu 42"
-"dp"	"ch"	"/u"	"tu"	3.91797676008202	"dpu"	"ṭpu"	"dpu 44"
-"dp"	"d"	"/u"	"du"	6.76965140123035	"dpu"	"ṭpu"	"dpu 37"
-"dp"	"ch"	"/u"	"tO"	3.91797676008202	"dpu"	"ṭpu"	"dpu 36"
-"u"	"ó"	"/u"	"tO"	3.91797676008202	"dpu"	"ṭpu"	"dpu 36"
-"dp"	"tp"	"/u"	":u"	7.4066985645933	"dpu"	"ṭpu"	"dpu 49"
-"dp"	"d"	"/u"	"du"	6.32399179767601	"dpu"	"ṭpu"	"dpu 4"
-"dp"	"ch"	"/u"	"tO"	3.91797676008202	"dpu"	"ṭpu"	"dpu 7"
-"u"	"ó"	"/u"	"tO"	3.91797676008202	"dpu"	"ṭpu"	"dpu 7"
-"dp"	"ch"	"/u"	"tO"	3.91797676008202	"dpu"	"ṭpu"	"dpu 41"
-"u"	"ó"	"/u"	"tO"	3.91797676008202	"dpu"	"ṭpu"	"dpu 41"
-":â"	":a"	"H5"	"H3"	5.79904306220096	"gh:ââ"	"ɣ̃ɑː"	"gh_aa 33"
-":â"	":ê"	"H5"	"H4"	7.20710868079289	"gh:ââ"	"ɣ̃ɑː"	"gh_aa 9"
-"gh"	"kn"	"H5"	"!5"	7.47505126452495	"gh:ââ"	"ɣ̃ɑː"	"gh_aa 8"
-":â"	":ê"	"H5"	"H4"	7.47505126452495	"gh:ââ"	"ɣ̃ɑː"	"gh_aa 29"
-"gh"	"w"	"H5"	"w5"	7.28366370471634	"gh:ââ"	"ɣ̃ɑː"	"gh_aa 20"
-":â"	"e"	"H5"	"He"	6.32399179767601	"gh:ââ"	"ɣ̃ɑː"	"gh_aa 31"
-":â"	"ó"	"H5"	"HO"	8.03280929596719	"gh:ââ"	"ɣ̃ɑː"	"gh_aa 22"
-":â"	":ê"	"H5"	"H4"	8	"gh:ââ"	"ɣ̃ɑː"	"gh_aa 13"
-"gh"	"w"	"H5"	"w5"	5.52836637047163	"gh:ââ"	"ɣ̃ɑː"	"gh_aa 26"
-":â"	"e"	"H5"	"He"	6.32399179767601	"gh:ââ"	"ɣ̃ɑː"	"gh_aa 16"
-":â"	":ê"	"H5"	"H4"	8	"gh:ââ"	"ɣ̃ɑː"	"gh_aa 7"
-":â"	":a"	"H5"	"H3"	5.19480519480519	"gh:ââ"	"ɣ̃ɑː"	"gh_aa 17"
-"u"	"ê"	"Hu"	"H9"	5.09637730690362	"ghuu"	"ɣuː"	"ghuu 4"
-"u"	"ê"	"Hu"	"H9"	7.35475051264525	"ghuu"	"ɣuː"	"ghuu 29"
-"u"	"ê"	"Hu"	"H9"	7.35475051264525	"ghuu"	"ɣuː"	"ghuu 23"
-"u"	"ê"	"Hu"	"H9"	NA	"ghuu"	"ɣuː"	"ghuu 19"
-"u"	"ê"	"Hu"	"H9"	7.35475051264525	"ghuu"	"ɣuː"	"ghuu 22"
-"u"	"ê"	"Hu"	"H9"	6.37047163362953	"ghuu"	"ɣuː"	"ghuu 16"
-"u"	"ê"	"Hu"	"H9"	4.97881066302119	"ghuu"	"ɣuː"	"ghuu 5"
-"u"	"ê"	"Hu"	"H9"	6.10526315789474	"ghuu"	"ɣuː"	"ghuu 11"
-"u"	"ê"	"Hu"	"H9"	7.81134654818865	"ghuu"	"ɣuː"	"ghuu 6"
-"u"	"ê"	"Hu"	"H9"	6.37047163362953	"ghuu"	"ɣuː"	"ghuu 28"
-"a"	":a"	"kamo"	"k3moyi"	7.25358851674641	"kamo"	"kæmɔ"	"kamo 5"
-"a"	":a"	"kamo"	"k3mo"	11.0321257689679	"kamo"	"kæmɔ"	"kamo 1"
-"a"	":a"	"kamo"	"k3mo"	7.35475051264525	"kamo"	"kæmɔ"	"kamo 2"
-"k"	"d"	"kańi"	"deni"	4.80109364319891	"kańi"	"kæni"	"kani 10"
-"a"	"e"	"kańi"	"deni"	4.80109364319891	"kańi"	"kæni"	"kani 10"
-"'n"	"n"	"kańi"	"deni"	4.80109364319891	"kańi"	"kæni"	"kani 10"
-"a"	":a"	"kańi"	"k3ni"	6	"kańi"	"kæni"	"kani 27"
-"'n"	"n"	"kańi"	"k3ni"	6	"kańi"	"kæni"	"kani 27"
-"a"	"e"	"kańi"	"keni"	9.09911141490089	"kańi"	"kæni"	"kani 8"
-"'n"	"n"	"kańi"	"keni"	9.09911141490089	"kańi"	"kæni"	"kani 8"
-"k"	"d"	"kańi"	"deni"	4.80109364319891	"kańi"	"kæni"	"kani 28"
-"a"	"e"	"kańi"	"deni"	4.80109364319891	"kańi"	"kæni"	"kani 28"
-"'n"	"n"	"kańi"	"deni"	4.80109364319891	"kańi"	"kæni"	"kani 28"
-"a"	":a"	"kańi"	"k3ni"	7.20710868079289	"kańi"	"kæni"	"kani 13"
-"'n"	"n"	"kańi"	"k3ni"	7.20710868079289	"kańi"	"kæni"	"kani 13"
-"a"	"e"	"kańi"	"keni"	6	"kańi"	"kæni"	"kani 19"
-"'n"	"n"	"kańi"	"keni"	6	"kańi"	"kæni"	"kani 19"
-"a"	":a"	"kańi"	"k3ni"	7.20710868079289	"kańi"	"kæni"	"kani 1"
-"'n"	"n"	"kańi"	"k3ni"	7.20710868079289	"kańi"	"kæni"	"kani 1"
-"a"	":a"	"kańi"	"k3ni"	3.91797676008202	"kańi"	"kæni"	"kani 12"
-"'n"	"n"	"kańi"	"k3ni"	3.91797676008202	"kańi"	"kæni"	"kani 12"
-"k"	"d"	"kańi"	"dani"	5.24128503075871	"kańi"	"kæni"	"kani 3"
-"'n"	"n"	"kańi"	"dani"	5.24128503075871	"kańi"	"kæni"	"kani 3"
-"a"	":a"	"kańi"	"k3ni"	7.12781954887218	"kańi"	"kæni"	"kani 20"
-"'n"	"n"	"kańi"	"k3ni"	7.12781954887218	"kańi"	"kæni"	"kani 20"
-"a"	":a"	"kańi"	"k3ni"	6.88448393711552	"kańi"	"kæni"	"kani 2"
-"'n"	"n"	"kańi"	"k3ni"	6.88448393711552	"kańi"	"kæni"	"kani 2"
-"k"	"d"	"kipo"	"dipo"	6	"kipo"	"kipɔ"	"kipo 17"
-"k"	"ch"	"kipo"	"tipo"	3.91797676008202	"kipo"	"kipɔ"	"kipo 18"
-"k"	"ch"	"kipo"	"tipo"	3.91797676008202	"kipo"	"kipɔ"	"kipo 6"
-"k"	"d"	"kipo"	"dipo"	6	"kipo"	"kipɔ"	"kipo 15"
-"k"	"ch"	"kipo"	"tipo"	6	"kipo"	"kipɔ"	"kipo 21"
-"k"	"ch"	"kipo"	"tipo"	3.91797676008202	"kipo"	"kipɔ"	"kipo 26"
-"k"	"ch"	"kipo"	"tipo"	3.91797676008202	"kipo"	"kipɔ"	"kipo 13"
-"kp"	"d"	"P5"	"d5"	NA	"kp:ââ"	"kp̃ɑː"	"kp_aa 23"
-"kp"	"d"	"P5"	"d5"	6.32399179767601	"kp:ââ"	"kp̃ɑː"	"kp_aa 18"
-"kp"	"ch"	"P5"	"t5"	7.47505126452495	"kp:ââ"	"kp̃ɑː"	"kp_aa 41"
-":â"	"o"	"P5"	"Po"	7.20710868079289	"kp:ââ"	"kp̃ɑː"	"kp_aa 15"
-"kp"	"k"	"P5"	"k5"	7.47505126452495	"kp:ââ"	"kp̃ɑː"	"kp_aa 4"
-"kp"	"p"	"P5"	"pa"	6.32399179767601	"kp:ââ"	"kp̃ɑː"	"kp_aa 12"
-":â"	"a"	"P5"	"pa"	6.32399179767601	"kp:ââ"	"kp̃ɑː"	"kp_aa 12"
-"kp"	"kn"	"P5"	"!5"	7.28366370471634	"kp:ââ"	"kp̃ɑː"	"kp_aa 29"
-"kp"	"ch"	"P5"	"t5"	8.6015037593985	"kp:ââ"	"kp̃ɑː"	"kp_aa 25"
-"kp"	"kn"	"P5"	"!5"	8.03280929596719	"kp:ââ"	"kp̃ɑː"	"kp_aa 9"
-"kp"	"k"	"P5"	"k5"	7.47505126452495	"kp:ââ"	"kp̃ɑː"	"kp_aa 19"
-"kp"	"km"	"P5"	"Zo"	9.52563226247437	"kp:ââ"	"kp̃ɑː"	"kp_aa 37"
-":â"	"o"	"P5"	"Zo"	9.52563226247437	"kp:ââ"	"kp̃ɑː"	"kp_aa 37"
-"kp"	"ch"	"P5"	"t5"	7.47505126452495	"kp:ââ"	"kp̃ɑː"	"kp_aa 24"
-"kp"	"d"	"P5"	"d5"	5.24128503075871	"kp:ââ"	"kp̃ɑː"	"kp_aa 33"
-"kp"	"km"	"P5"	"Zo"	7.12781954887218	"kp:ââ"	"kp̃ɑː"	"kp_aa 36"
-":â"	"o"	"P5"	"Zo"	7.12781954887218	"kp:ââ"	"kp̃ɑː"	"kp_aa 36"
-"kp"	"w"	"P5"	"w5"	5.24128503075871	"kp:ââ"	"kp̃ɑː"	"kp_aa 20"
-"kp"	"d"	"P5"	"d5"	5.24128503075871	"kp:ââ"	"kp̃ɑː"	"kp_aa 5"
-":â"	"o"	"P5"	"Po"	7.20710868079289	"kp:ââ"	"kp̃ɑː"	"kp_aa 39"
-"kp"	"ch"	"P5"	"t5"	NA	"kp:ââ"	"kp̃ɑː"	"kp_aa 3"
-"kp"	"d"	"P5"	"d5"	7.25358851674641	"kp:ââ"	"kp̃ɑː"	"kp_aa 40"
-"kp"	"d"	"P5"	"d5"	7.25358851674641	"kp:ââ"	"kp̃ɑː"	"kp_aa 38"
-"kp"	"ch"	"P5"	"t5"	7.25358851674641	"kp:ââ"	"kp̃ɑː"	"kp_aa 2"
-"kp"	"kn"	"P5"	"!5"	3.91797676008202	"kp:ââ"	"kp̃ɑː"	"kp_aa 7"
-"kp"	"ch"	"P5"	"t5"	7.47505126452495	"kp:ââ"	"kp̃ɑː"	"kp_aa 35"
-"kp"	"d"	"P5"	"d5"	7.25358851674641	"kp:ââ"	"kp̃ɑː"	"kp_aa 16"
-"kp"	"p"	"Pu"	"p9"	5.64046479835954	"kpu"	"kpu"	"kpu 1"
-"u"	"ê"	"Pu"	"p9"	5.64046479835954	"kpu"	"kpu"	"kpu 1"
-"u"	"ê"	"Pu"	"P9"	6.88448393711552	"kpu"	"kpu"	"kpu 18"
-"kp"	"tp"	"Pu"	":e"	5.09637730690362	"kpu"	"kpu"	"kpu 3"
-"u"	"e"	"Pu"	":e"	5.09637730690362	"kpu"	"kpu"	"kpu 3"
-"u"	"ê"	"Pu"	"P9"	5.27136021872864	"kpu"	"kpu"	"kpu 4"
-"u"	"ê"	"Pu"	"P9"	11.0321257689679	"kpu"	"kpu"	"kpu 17"
-"kp"	"p"	"Pu"	"p9"	5.64046479835954	"kpu"	"kpu"	"kpu 5"
-"u"	"ê"	"Pu"	"p9"	5.64046479835954	"kpu"	"kpu"	"kpu 5"
-"u"	"ê"	"Pu"	"P9"	5.27136021872864	"kpu"	"kpu"	"kpu 6"
-"u"	"ê"	"Pu"	"P9"	6.10526315789474	"kpu"	"kpu"	"kpu 13"
-"u"	"ê"	"Pu"	"P9"	NA	"kpu"	"kpu"	"kpu 10"
-"u"	"ê"	"Pu"	"P9"	4.80109364319891	"kpu"	"kpu"	"kpu 19"
-"u"	"ê"	"Pu"	"P9"	7.35475051264525	"kpu"	"kpu"	"kpu 7"
-"u"	"ê"	"Pu"	"P9"	7.81134654818865	"kpu"	"kpu"	"kpu 20"
-"lv"	"v"	"L4"	"va"	NA	"lv:ê"	"lβʲ̃ə"	"lv_e 7"
-":ê"	"a"	"L4"	"va"	NA	"lv:ê"	"lβʲ̃ə"	"lv_e 7"
-"lv"	"w"	"L4"	"w5"	6.88448393711552	"lv:ê"	"lβʲ̃ə"	"lv_e 11"
-":ê"	":â"	"L4"	"w5"	6.88448393711552	"lv:ê"	"lβʲ̃ə"	"lv_e 11"
-"lv"	"w"	"L4"	"w5"	6.88448393711552	"lv:ê"	"lβʲ̃ə"	"lv_e 8"
-":ê"	":â"	"L4"	"w5"	6.88448393711552	"lv:ê"	"lβʲ̃ə"	"lv_e 8"
-"lv"	"gh"	"L4"	"H8"	7.35475051264525	"lv:ê"	"lβʲ̃ə"	"lv_e 14"
-":ê"	"î"	"L4"	"H8"	7.35475051264525	"lv:ê"	"lβʲ̃ə"	"lv_e 14"
-"lv"	"w"	"L4"	"w5"	4.80109364319891	"lv:ê"	"lβʲ̃ə"	"lv_e 6"
-":ê"	":â"	"L4"	"w5"	4.80109364319891	"lv:ê"	"lβʲ̃ə"	"lv_e 6"
-"lv"	"w"	"L4"	"w5"	4.97881066302119	"lv:ê"	"lβʲ̃ə"	"lv_e 4"
-":ê"	":â"	"L4"	"w5"	4.97881066302119	"lv:ê"	"lβʲ̃ə"	"lv_e 4"
-"lv"	"w"	"L4"	"w5"	7.37115516062885	"lv:ê"	"lβʲ̃ə"	"lv_e 23"
-":ê"	":â"	"L4"	"w5"	7.37115516062885	"lv:ê"	"lβʲ̃ə"	"lv_e 23"
-"lv"	"w"	"L4"	"w5"	5.11278195488722	"lv:ê"	"lβʲ̃ə"	"lv_e 24"
-":ê"	":â"	"L4"	"w5"	5.11278195488722	"lv:ê"	"lβʲ̃ə"	"lv_e 24"
-"lv"	"w"	"L4"	"wo"	4.97881066302119	"lv:ê"	"lβʲ̃ə"	"lv_e 18"
-":ê"	"o"	"L4"	"wo"	4.97881066302119	"lv:ê"	"lβʲ̃ə"	"lv_e 18"
-"lv"	"w"	"L4"	"w5"	11.0321257689679	"lv:ê"	"lβʲ̃ə"	"lv_e 16"
-":ê"	":â"	"L4"	"w5"	11.0321257689679	"lv:ê"	"lβʲ̃ə"	"lv_e 16"
-"lv"	"v"	"L4"	"v3"	7.37115516062885	"lv:ê"	"lβʲ̃ə"	"lv_e 9"
-":ê"	":a"	"L4"	"v3"	7.37115516062885	"lv:ê"	"lβʲ̃ə"	"lv_e 9"
-"lv"	"w"	"L4"	"w5"	6.10526315789474	"lv:ê"	"lβʲ̃ə"	"lv_e 21"
-":ê"	":â"	"L4"	"w5"	6.10526315789474	"lv:ê"	"lβʲ̃ə"	"lv_e 21"
-"lv"	"km"	"L4"	"Z1"	9.09911141490089	"lv:ê"	"lβʲ̃ə"	"lv_e 27"
-":ê"	":i"	"L4"	"Z1"	9.09911141490089	"lv:ê"	"lβʲ̃ə"	"lv_e 27"
-"lv"	"v"	"L4"	"va"	5.11278195488722	"lv:ê"	"lβʲ̃ə"	"lv_e 10"
-":ê"	"a"	"L4"	"va"	5.11278195488722	"lv:ê"	"lβʲ̃ə"	"lv_e 10"
-"lv"	"w"	"L4"	"wo"	4.97881066302119	"lv:ê"	"lβʲ̃ə"	"lv_e 13"
-":ê"	"o"	"L4"	"wo"	4.97881066302119	"lv:ê"	"lβʲ̃ə"	"lv_e 13"
-"lv"	"vy"	"La"	"V3"	5.19480519480519	"lva"	"lβʲæ"	"lva 12"
-"a"	":a"	"La"	"V3"	5.19480519480519	"lva"	"lβʲæ"	"lva 12"
-"lv"	"vy"	"La"	"V3"	10.1982228298018	"lva"	"lβʲæ"	"lva 17"
-"a"	":a"	"La"	"V3"	10.1982228298018	"lva"	"lβʲæ"	"lva 17"
-"lv"	"vy"	"La"	"V3"	7.25358851674641	"lva"	"lβʲæ"	"lva 26"
-"a"	":a"	"La"	"V3"	7.25358851674641	"lva"	"lβʲæ"	"lva 26"
-"lv"	"w"	"La"	"w5"	7.28366370471634	"lva"	"lβʲæ"	"lva 29"
-"a"	":â"	"La"	"w5"	7.28366370471634	"lva"	"lβʲæ"	"lva 29"
-"lv"	"vy"	"La"	"V3"	7.5434039644566	"lva"	"lβʲæ"	"lva 30"
-"a"	":a"	"La"	"V3"	7.5434039644566	"lva"	"lβʲæ"	"lva 30"
-"a"	"e"	"La"	"Le"	7.20710868079289	"lva"	"lβʲæ"	"lva 11"
-"lv"	"gh"	"La"	"He"	6.32399179767601	"lva"	"lβʲæ"	"lva 7"
-"a"	"e"	"La"	"He"	6.32399179767601	"lva"	"lβʲæ"	"lva 7"
-"lv"	"d"	"La"	"d5"	7.12781954887218	"lva"	"lβʲæ"	"lva 18"
-"a"	":â"	"La"	"d5"	7.12781954887218	"lva"	"lβʲæ"	"lva 18"
-"lv"	"vy"	"La"	"V3"	10.1982228298018	"lva"	"lβʲæ"	"lva 31"
-"a"	":a"	"La"	"V3"	10.1982228298018	"lva"	"lβʲæ"	"lva 31"
-"lv"	"vy"	"La"	"V3"	6.76965140123035	"lva"	"lβʲæ"	"lva 13"
-"a"	":a"	"La"	"V3"	6.76965140123035	"lva"	"lβʲæ"	"lva 13"
-"a"	":â"	"La"	"L5"	3.91797676008202	"lva"	"lβʲæ"	"lva 5"
-"lv"	"vy"	"La"	"V3"	8.03280929596719	"lva"	"lβʲæ"	"lva 10"
-"a"	":a"	"La"	"V3"	8.03280929596719	"lva"	"lβʲæ"	"lva 10"
-"a"	"e"	"La"	"Le"	5.79904306220096	"lva"	"lβʲæ"	"lva 24"
-"a"	"e"	"La"	"Le"	5.79904306220096	"lva"	"lβʲæ"	"lva 22"
-"a"	"e"	"La"	"Le"	5.52836637047163	"lva"	"lβʲæ"	"lva 23"
-"lv"	"vy"	"Li"	"Vi"	8.03280929596719	"lvi"	"lβʲi"	"lvi 31"
-"lv"	"vy"	"Li"	"Vi"	6.32399179767601	"lvi"	"lβʲi"	"lvi 7"
-"lv"	"vy"	"Li"	"Vi"	10.1982228298018	"lvi"	"lβʲi"	"lvi 4"
-"lv"	"vy"	"Li"	"Vi"	7.20710868079289	"lvi"	"lβʲi"	"lvi 20"
-"lv"	"gh"	"Li"	"Hi"	5.19480519480519	"lvi"	"lβʲi"	"lvi 9"
-"lv"	"l"	"Li"	"luxe"	7.5434039644566	"lvi"	"lβʲi"	"lvi 18"
-"i"	"u"	"Li"	"luxe"	7.5434039644566	"lvi"	"lβʲi"	"lvi 18"
-"lv"	"vy"	"Li"	"Vi"	8.03280929596719	"lvi"	"lβʲi"	"lvi 8"
-"lv"	"vy"	"Li"	"Vi"	5.19480519480519	"lvi"	"lβʲi"	"lvi 19"
-"lv"	"vy"	"Li"	"Vi"	8.03280929596719	"lvi"	"lβʲi"	"lvi 33"
-"lv"	"vy"	"Li"	"Vi"	8.03280929596719	"lvi"	"lβʲi"	"lvi 23"
-"e"	"i"	"meyadi"	"miyedi"	7.20710868079289	"meyadi"	"mɛjæṭi"	"meyadi 14"
-"a"	"e"	"meyadi"	"miyedi"	7.20710868079289	"meyadi"	"mɛjæṭi"	"meyadi 14"
-"m"	"n"	"meyadi"	"neyadi"	11.0321257689679	"meyadi"	"mɛjæṭi"	"meyadi 1"
-"a"	"e"	"meyadi"	"meyedi"	6.10526315789474	"meyadi"	"mɛjæṭi"	"meyadi 19"
-"e"	"a"	"mituye"	"mituya"	3.91797676008202	"mituye"	"mitujɛ"	"mituye 15"
-"u"	"e"	"mituye"	"miteye"	5.19480519480519	"mituye"	"mitujɛ"	"mituye 6"
-"e"	"a"	"mituye"	"mituya"	5.64046479835954	"mituye"	"mitujɛ"	"mituye 20"
-"e"	"a"	"mituye"	"mituya"	7.12781954887218	"mituye"	"mitujɛ"	"mituye 26"
-"e"	"a"	"mituye"	"mituya"	7.25358851674641	"mituye"	"mitujɛ"	"mituye 17"
-"'n"	"e"	"ńademo"	"enademo"	5.79904306220096	"ńademo"	"næṭɛmɔ"	"nademo 10"
-"'n"	"l"	"ńademo"	"lavu"	5.79904306220096	"ńademo"	"næṭɛmɔ"	"nademo 4"
-"d"	"v"	"ńademo"	"lavu"	5.79904306220096	"ńademo"	"næṭɛmɔ"	"nademo 4"
-"e"	"u"	"ńademo"	"lavu"	5.79904306220096	"ńademo"	"næṭɛmɔ"	"nademo 4"
-"'n"	"n"	"ńademo"	"natemo"	6.32399179767601	"ńademo"	"næṭɛmɔ"	"nademo 3"
-"d"	"ch"	"ńademo"	"natemo"	6.32399179767601	"ńademo"	"næṭɛmɔ"	"nademo 3"
-"'n"	"n"	"ńademo"	"navu"	5.79904306220096	"ńademo"	"næṭɛmɔ"	"nademo 16"
-"d"	"v"	"ńademo"	"navu"	5.79904306220096	"ńademo"	"næṭɛmɔ"	"nademo 16"
-"e"	"u"	"ńademo"	"navu"	5.79904306220096	"ńademo"	"næṭɛmɔ"	"nademo 16"
-"'n"	"n"	"ńayeki"	"nayaki"	7.37115516062885	"ńayeki"	"næjɛki"	"nayeki 22"
-"e"	"a"	"ńayeki"	"nayaki"	7.37115516062885	"ńayeki"	"næjɛki"	"nayeki 22"
-"'n"	"n"	"ńayeki"	"nayek1k1"	8.51674641148325	"ńayeki"	"næjɛki"	"nayeki 6"
-"i"	":i"	"ńayeki"	"nayek1k1"	8.51674641148325	"ńayeki"	"næjɛki"	"nayeki 6"
-"'n"	"n"	"ńayeki"	"nakek1"	8.51674641148325	"ńayeki"	"næjɛki"	"nayeki 25"
-"y"	"k"	"ńayeki"	"nakek1"	8.51674641148325	"ńayeki"	"næjɛki"	"nayeki 25"
-"i"	":i"	"ńayeki"	"nakek1"	8.51674641148325	"ńayeki"	"næjɛki"	"nayeki 25"
-"'n"	"n"	"ńoki"	"nok1"	7.47505126452495	"ńoki"	"nɔki"	"noki 19"
-"i"	":i"	"ńoki"	"nok1"	7.47505126452495	"ńoki"	"nɔki"	"noki 19"
-"'n"	"n"	"ńoki"	"nok1"	7.25358851674641	"ńoki"	"nɔki"	"noki 25"
-"i"	":i"	"ńoki"	"nok1"	7.25358851674641	"ńoki"	"nɔki"	"noki 25"
-"'n"	"n"	"ńoki"	"nok1"	7.25358851674641	"ńoki"	"nɔki"	"noki 7"
-"i"	":i"	"ńoki"	"nok1"	7.25358851674641	"ńoki"	"nɔki"	"noki 7"
-"'n"	"n"	"ńoki"	"nok8"	7.94258373205742	"ńoki"	"nɔki"	"noki 6"
-"i"	"î"	"ńoki"	"nok8"	7.94258373205742	"ńoki"	"nɔki"	"noki 6"
-"'n"	"n"	"ńoki"	"nok1"	5.7799043062201	"ńoki"	"nɔki"	"noki 24"
-"i"	":i"	"ńoki"	"nok1"	5.7799043062201	"ńoki"	"nɔki"	"noki 24"
-"'n"	"f"	"ńomiwake"	"formewake"	4.97881066302119	"ńomiwake"	"nɔmiwækɛ"	"nomiwake 25"
-"i"	"e"	"ńomiwake"	"formewake"	4.97881066302119	"ńomiwake"	"nɔmiwækɛ"	"nomiwake 25"
-"'n"	"n"	"ńomiwake"	"nomiwake"	5.79904306220096	"ńomiwake"	"nɔmiwækɛ"	"nomiwake 18"
-"'n"	"n"	"ńomiwake"	"nOxuwake"	10.1982228298018	"ńomiwake"	"nɔmiwækɛ"	"nomiwake 10"
-"o"	"ó"	"ńomiwake"	"nOxuwake"	10.1982228298018	"ńomiwake"	"nɔmiwækɛ"	"nomiwake 10"
-"m"	"ly"	"ńomiwake"	"nOxuwake"	10.1982228298018	"ńomiwake"	"nɔmiwækɛ"	"nomiwake 10"
-"i"	"u"	"ńomiwake"	"nOxuwake"	10.1982228298018	"ńomiwake"	"nɔmiwækɛ"	"nomiwake 10"
-"'n"	"n"	"ńomiwake"	"nomiwake"	5.24128503075871	"ńomiwake"	"nɔmiwækɛ"	"nomiwake 21"
-"'n"	"n"	"ńomiwake"	"nexiwate"	6.32399179767601	"ńomiwake"	"nɔmiwækɛ"	"nomiwake 20"
-"o"	"e"	"ńomiwake"	"nexiwate"	6.32399179767601	"ńomiwake"	"nɔmiwækɛ"	"nomiwake 20"
-"m"	"ly"	"ńomiwake"	"nexiwate"	6.32399179767601	"ńomiwake"	"nɔmiwækɛ"	"nomiwake 20"
-"k"	"ch"	"ńomiwake"	"nexiwate"	6.32399179767601	"ńomiwake"	"nɔmiwækɛ"	"nomiwake 20"
-"'n"	"n"	"ńomiwake"	"nomiwake"	5.24128503075871	"ńomiwake"	"nɔmiwækɛ"	"nomiwake 17"
-"'n"	"n"	"ńuyedi"	"nuyetE"	8	"ńuyedi"	"nujɛṭi"	"nuyedi 17"
-"d"	"ch"	"ńuyedi"	"nuyetE"	8	"ńuyedi"	"nujɛṭi"	"nuyedi 17"
-"i"	"é"	"ńuyedi"	"nuyetE"	8	"ńuyedi"	"nujɛṭi"	"nuyedi 17"
-"'n"	"n"	"ńuyedi"	"nuyedi"	5.27136021872864	"ńuyedi"	"nujɛṭi"	"nuyedi 28"
-"p"	"d"	"pedumi"	"dedumi"	6.32399179767601	"pedumi"	"pɛṭumi"	"pedumi 16"
-"d"	"s"	"pedumi"	"peshumi"	7.35475051264525	"pedumi"	"pɛṭumi"	"pedumi 21"
-"p"	"ch"	"piwa"	"tiwa"	4.80109364319891	"piwa"	"piwæ"	"piwa 2"
-"p"	"d"	"piwa"	"diwa"	6.37047163362953	"piwa"	"piwæ"	"piwa 22"
-"p"	"ch"	"piwa"	"tiwa"	6.37047163362953	"piwa"	"piwæ"	"piwa 6"
-"p"	"ch"	"piwa"	"tiwa"	6.37047163362953	"piwa"	"piwæ"	"piwa 20"
-"p"	"d"	"piwa"	"diwa"	8.30895420369105	"piwa"	"piwæ"	"piwa 33"
-"p"	"d"	"piwa"	"diwa"	8.30895420369105	"piwa"	"piwæ"	"piwa 5"
-"p"	"d"	"piwa"	"diwa"	5.09637730690362	"piwa"	"piwæ"	"piwa 29"
-"p"	"ch"	"piwa"	"tiwa"	6.37047163362953	"piwa"	"piwæ"	"piwa 4"
-"p"	"d"	"piwa"	"diwa"	6.88448393711552	"piwa"	"piwæ"	"piwa 34"
-"p"	"d"	"piwa"	"diwa"	6.88448393711552	"piwa"	"piwæ"	"piwa 32"
-"p"	"ch"	"piwa"	"tiwa"	8.30895420369105	"piwa"	"piwæ"	"piwa 8"
-"p"	"d"	"piwa"	"diwa"	6.88448393711552	"piwa"	"piwæ"	"piwa 18"
-"a"	"o"	"piwa"	"piwo"	5.52836637047163	"piwa"	"piwæ"	"piwa 16"
-"p"	"d"	"piwa"	"diwa"	6.88448393711552	"piwa"	"piwæ"	"piwa 13"
-":ê"	"â"	"t4"	"t0"	5.19480519480519	"t:êê"	"t̃əː"	"t_ee 14"
-":ê"	"e"	"t4"	"te"	5.24128503075871	"t:êê"	"t̃əː"	"t_ee 17"
-":ê"	"â"	"t4"	"t0"	5.24128503075871	"t:êê"	"t̃əː"	"t_ee 5"
-":ê"	"e"	"t4"	"te"	5.24128503075871	"t:êê"	"t̃əː"	"t_ee 12"
-":ê"	":a"	"t4"	"t3"	5.24128503075871	"t:êê"	"t̃əː"	"t_ee 7"
-":ê"	"e"	"t4"	"te"	5.24128503075871	"t:êê"	"t̃əː"	"t_ee 10"
-":ê"	"â"	"t4"	"t0"	6.32399179767601	"t:êê"	"t̃əː"	"t_ee 3"
-"ch"	"d"	"tiwuńe"	"diwune"	5.7799043062201	"tiwuńe"	"tiwunɛ"	"tiwune 30"
-"'n"	"n"	"tiwuńe"	"diwune"	5.7799043062201	"tiwuńe"	"tiwunɛ"	"tiwune 30"
-"ch"	"k"	"tiwuńe"	"kiwune"	8.51674641148325	"tiwuńe"	"tiwunɛ"	"tiwune 4"
-"'n"	"n"	"tiwuńe"	"kiwune"	8.51674641148325	"tiwuńe"	"tiwunɛ"	"tiwune 4"
-"ch"	"d"	"tiwuńe"	"duwine"	4.80109364319891	"tiwuńe"	"tiwunɛ"	"tiwune 29"
-"i"	"u"	"tiwuńe"	"duwine"	4.80109364319891	"tiwuńe"	"tiwunɛ"	"tiwune 29"
-"u"	"i"	"tiwuńe"	"duwine"	4.80109364319891	"tiwuńe"	"tiwunɛ"	"tiwune 29"
-"'n"	"n"	"tiwuńe"	"duwine"	4.80109364319891	"tiwuńe"	"tiwunɛ"	"tiwune 29"
-"w"	"k"	"tiwuńe"	"tikune"	7.47505126452495	"tiwuńe"	"tiwunɛ"	"tiwune 20"
-"'n"	"n"	"tiwuńe"	"tikune"	7.47505126452495	"tiwuńe"	"tiwunɛ"	"tiwune 20"
-"ch"	"d"	"tiwuńe"	"diwuma"	8.6015037593985	"tiwuńe"	"tiwunɛ"	"tiwune 36"
-"'n"	"m"	"tiwuńe"	"diwuma"	8.6015037593985	"tiwuńe"	"tiwunɛ"	"tiwune 36"
-"e"	"a"	"tiwuńe"	"diwuma"	8.6015037593985	"tiwuńe"	"tiwunɛ"	"tiwune 36"
-"ch"	"d"	"tiwuńe"	"diwune"	11.0321257689679	"tiwuńe"	"tiwunɛ"	"tiwune 28"
-"'n"	"n"	"tiwuńe"	"diwune"	11.0321257689679	"tiwuńe"	"tiwunɛ"	"tiwune 28"
-"u"	"i"	"tiwuńe"	"tiwine"	4.80109364319891	"tiwuńe"	"tiwunɛ"	"tiwune 8"
-"'n"	"n"	"tiwuńe"	"tiwine"	4.80109364319891	"tiwuńe"	"tiwunɛ"	"tiwune 8"
-"ch"	"k"	"tiwuńe"	"k1kune"	8.51674641148325	"tiwuńe"	"tiwunɛ"	"tiwune 21"
-"i"	":i"	"tiwuńe"	"k1kune"	8.51674641148325	"tiwuńe"	"tiwunɛ"	"tiwune 21"
-"w"	"k"	"tiwuńe"	"k1kune"	8.51674641148325	"tiwuńe"	"tiwunɛ"	"tiwune 21"
-"'n"	"n"	"tiwuńe"	"k1kune"	8.51674641148325	"tiwuńe"	"tiwunɛ"	"tiwune 21"
-"w"	"h"	"tiwuńe"	"tihune"	7.60628844839371	"tiwuńe"	"tiwunɛ"	"tiwune 33"
-"'n"	"n"	"tiwuńe"	"tihune"	7.60628844839371	"tiwuńe"	"tiwunɛ"	"tiwune 33"
-"ch"	"d"	"tiwuńe"	"diwune"	8.6015037593985	"tiwuńe"	"tiwunɛ"	"tiwune 39"
-"'n"	"n"	"tiwuńe"	"diwune"	8.6015037593985	"tiwuńe"	"tiwunɛ"	"tiwune 39"
-"ch"	"d"	"tiwuńe"	"diwune"	5.7799043062201	"tiwuńe"	"tiwunɛ"	"tiwune 19"
-"'n"	"n"	"tiwuńe"	"diwune"	5.7799043062201	"tiwuńe"	"tiwunɛ"	"tiwune 19"
-"ch"	"d"	"tiwuńe"	"diwune"	8.03280929596719	"tiwuńe"	"tiwunɛ"	"tiwune 40"
-"'n"	"n"	"tiwuńe"	"diwune"	8.03280929596719	"tiwuńe"	"tiwunɛ"	"tiwune 40"
-"ch"	"d"	"tiwuńe"	"dihune"	5.19480519480519	"tiwuńe"	"tiwunɛ"	"tiwune 34"
-"w"	"h"	"tiwuńe"	"dihune"	5.19480519480519	"tiwuńe"	"tiwunɛ"	"tiwune 34"
-"'n"	"n"	"tiwuńe"	"dihune"	5.19480519480519	"tiwuńe"	"tiwunɛ"	"tiwune 34"
-"ch"	"d"	"tiwuńe"	"diwune"	8.30895420369105	"tiwuńe"	"tiwunɛ"	"tiwune 13"
-"'n"	"n"	"tiwuńe"	"diwune"	8.30895420369105	"tiwuńe"	"tiwunɛ"	"tiwune 13"
-"ch"	"d"	"tiwuńe"	"diwunE"	7.28366370471634	"tiwuńe"	"tiwunɛ"	"tiwune 26"
-"'n"	"n"	"tiwuńe"	"diwunE"	7.28366370471634	"tiwuńe"	"tiwunɛ"	"tiwune 26"
-"e"	"é"	"tiwuńe"	"diwunE"	7.28366370471634	"tiwuńe"	"tiwunɛ"	"tiwune 26"
-"ch"	"k"	"tiwuńe"	"kikune"	4.97881066302119	"tiwuńe"	"tiwunɛ"	"tiwune 35"
-"w"	"k"	"tiwuńe"	"kikune"	4.97881066302119	"tiwuńe"	"tiwunɛ"	"tiwune 35"
-"'n"	"n"	"tiwuńe"	"kikune"	4.97881066302119	"tiwuńe"	"tiwunɛ"	"tiwune 35"
-"w"	"g"	"tiwuńe"	"tigune"	6.88448393711552	"tiwuńe"	"tiwunɛ"	"tiwune 12"
-"'n"	"n"	"tiwuńe"	"tigune"	6.88448393711552	"tiwuńe"	"tiwunɛ"	"tiwune 12"
-"w"	"g"	"tiwuńe"	"tigune"	5.27136021872864	"tiwuńe"	"tiwunɛ"	"tiwune 31"
-"'n"	"n"	"tiwuńe"	"tigune"	5.27136021872864	"tiwuńe"	"tiwunɛ"	"tiwune 31"
-"ch"	"k"	"tiwuńe"	"kikune"	8	"tiwuńe"	"tiwunɛ"	"tiwune 23"
-"w"	"k"	"tiwuńe"	"kikune"	8	"tiwuńe"	"tiwunɛ"	"tiwune 23"
-"'n"	"n"	"tiwuńe"	"kikune"	8	"tiwuńe"	"tiwunɛ"	"tiwune 23"
-"i"	"u"	"tiwuńe"	"tubune"	5.09637730690362	"tiwuńe"	"tiwunɛ"	"tiwune 2"
-"w"	"mb"	"tiwuńe"	"tubune"	5.09637730690362	"tiwuńe"	"tiwunɛ"	"tiwune 2"
-"'n"	"n"	"tiwuńe"	"tubune"	5.09637730690362	"tiwuńe"	"tiwunɛ"	"tiwune 2"
-"w"	"g"	"tiwuńe"	"tigune"	6.10526315789474	"tiwuńe"	"tiwunɛ"	"tiwune 17"
-"'n"	"n"	"tiwuńe"	"tigune"	6.10526315789474	"tiwuńe"	"tiwunɛ"	"tiwune 17"
-"ch"	"k"	"tiwuńe"	"kikikiwune"	5.7799043062201	"tiwuńe"	"tiwunɛ"	"tiwune 1"
-"'n"	"n"	"tiwuńe"	"kikikiwune"	5.7799043062201	"tiwuńe"	"tiwunɛ"	"tiwune 1"
-"ch"	"d"	"tiwuńe"	"diwuma"	6.88448393711552	"tiwuńe"	"tiwunɛ"	"tiwune 32"
-"'n"	"m"	"tiwuńe"	"diwuma"	6.88448393711552	"tiwuńe"	"tiwunɛ"	"tiwune 32"
-"e"	"a"	"tiwuńe"	"diwuma"	6.88448393711552	"tiwuńe"	"tiwunɛ"	"tiwune 32"
-"w"	"g"	"tiwuńe"	"tigune"	6.88448393711552	"tiwuńe"	"tiwunɛ"	"tiwune 3"
-"'n"	"n"	"tiwuńe"	"tigune"	6.88448393711552	"tiwuńe"	"tiwunɛ"	"tiwune 3"
-"w"	"n"	"todiwuma"	"todinuma"	7.47505126452495	"todiwuma"	"tɔṭiwumæ"	"todiwuma 7"
-"ch"	"d"	"todiwuma"	"dodiwuma"	4.97881066302119	"todiwuma"	"tɔṭiwumæ"	"todiwuma 18"
-"ch"	"d"	"todiwuma"	"dodiwuma"	4.97881066302119	"todiwuma"	"tɔṭiwumæ"	"todiwuma 15"
-"d"	"ch"	"todiwuma"	"tot"	7.35475051264525	"todiwuma"	"tɔṭiwumæ"	"todiwuma 16"
-"ch"	"d"	"todiwuma"	"dodiwuma"	4.97881066302119	"todiwuma"	"tɔṭiwumæ"	"todiwuma 25"
-"ch"	"d"	"todiwuma"	"dodiwuma"	4.97881066302119	"todiwuma"	"tɔṭiwumæ"	"todiwuma 11"
-"ch"	"d"	"todiwuma"	"daduwuma"	5.79904306220096	"todiwuma"	"tɔṭiwumæ"	"todiwuma 24"
-"o"	"a"	"todiwuma"	"daduwuma"	5.79904306220096	"todiwuma"	"tɔṭiwumæ"	"todiwuma 24"
-"i"	"u"	"todiwuma"	"daduwuma"	5.79904306220096	"todiwuma"	"tɔṭiwumæ"	"todiwuma 24"
-"ch"	"d"	"todiwuma"	"dadiwuma"	5.79904306220096	"todiwuma"	"tɔṭiwumæ"	"todiwuma 4"
-"o"	"a"	"todiwuma"	"dadiwuma"	5.79904306220096	"todiwuma"	"tɔṭiwumæ"	"todiwuma 4"
-"w"	"n"	"todiwuma"	"todinuma"	7.47505126452495	"todiwuma"	"tɔṭiwumæ"	"todiwuma 13"
-"o"	"u"	"towi"	"tuwi"	7.47505126452495	"towi"	"tɔwi"	"towi 22"
-"o"	"u"	"towi"	"tuwi"	7.60628844839371	"towi"	"tɔwi"	"towi 15"
-"o"	"u"	"towi"	"tuwi"	7.47505126452495	"towi"	"tɔwi"	"towi 7"
-"o"	"u"	"towi"	"tuwi"	7.28366370471634	"towi"	"tɔwi"	"towi 20"
-"o"	"u"	"towi"	"tuwi"	4.97881066302119	"towi"	"tɔwi"	"towi 19"
-"o"	"u"	"towi"	"tuwi"	4.97881066302119	"towi"	"tɔwi"	"towi 9"
-"o"	"u"	"towi"	"tuwi"	3.91797676008202	"towi"	"tɔwi"	"towi 8"
-"i"	"u"	"towi"	"towuNa"	5.24128503075871	"towi"	"tɔwi"	"towi 13"
-"o"	"u"	"towi"	"tuwi"	7.47505126452495	"towi"	"tɔwi"	"towi 30"
-"o"	"u"	"towi"	"tuwi"	9.09911141490089	"towi"	"tɔwi"	"towi 26"
-"o"	"u"	"towi"	"tuwi"	8	"towi"	"tɔwi"	"towi 24"
-"o"	"u"	"towi"	"tuwi"	5.09637730690362	"towi"	"tɔwi"	"towi 33"
-"tp"	"ch"	":9"	"te"	8.51674641148325	"tpê"	"tpə"	"tpe 37"
-"ê"	"e"	":9"	"te"	8.51674641148325	"tpê"	"tpə"	"tpe 37"
-"tp"	"ch"	":9"	"te"	8.51674641148325	"tpê"	"tpə"	"tpe 24"
-"ê"	"e"	":9"	"te"	8.51674641148325	"tpê"	"tpə"	"tpe 24"
-"tp"	"ch"	":9"	"te"	7.49965823650034	"tpê"	"tpə"	"tpe 6"
-"ê"	"e"	":9"	"te"	7.49965823650034	"tpê"	"tpə"	"tpe 6"
-"tp"	"d"	":9"	"d3"	7.25358851674641	"tpê"	"tpə"	"tpe 48"
-"ê"	":a"	":9"	"d3"	7.25358851674641	"tpê"	"tpə"	"tpe 48"
-"tp"	"ch"	":9"	"te"	5.19480519480519	"tpê"	"tpə"	"tpe 14"
-"ê"	"e"	":9"	"te"	5.19480519480519	"tpê"	"tpə"	"tpe 14"
-"tp"	"ch"	":9"	"te"	5.52836637047163	"tpê"	"tpə"	"tpe 20"
-"ê"	"e"	":9"	"te"	5.52836637047163	"tpê"	"tpə"	"tpe 20"
-"tp"	"ch"	":9"	"te"	8.03280929596719	"tpê"	"tpə"	"tpe 27"
-"ê"	"e"	":9"	"te"	8.03280929596719	"tpê"	"tpə"	"tpe 27"
-"tp"	"ch"	":9"	"te"	7.20710868079289	"tpê"	"tpə"	"tpe 47"
-"ê"	"e"	":9"	"te"	7.20710868079289	"tpê"	"tpə"	"tpe 47"
-"tp"	"ch"	":9"	"ta"	7.25358851674641	"tpê"	"tpə"	"tpe 17"
-"ê"	"a"	":9"	"ta"	7.25358851674641	"tpê"	"tpə"	"tpe 17"
-"tp"	"ch"	":9"	"te"	7.12781954887218	"tpê"	"tpə"	"tpe 61"
-"ê"	"e"	":9"	"te"	7.12781954887218	"tpê"	"tpə"	"tpe 61"
-"tp"	"ch"	":9"	"te"	7.20710868079289	"tpê"	"tpə"	"tpe 45"
-"ê"	"e"	":9"	"te"	7.20710868079289	"tpê"	"tpə"	"tpe 45"
-"tp"	"ch"	":9"	"te"	8.51674641148325	"tpê"	"tpə"	"tpe 35"
-"ê"	"e"	":9"	"te"	8.51674641148325	"tpê"	"tpə"	"tpe 35"
-"tp"	"ch"	":9"	"ta"	8.03280929596719	"tpê"	"tpə"	"tpe 28"
-"ê"	"a"	":9"	"ta"	8.03280929596719	"tpê"	"tpə"	"tpe 28"
-"tp"	"d"	":9"	"da"	8.03280929596719	"tpê"	"tpə"	"tpe 49"
-"ê"	"a"	":9"	"da"	8.03280929596719	"tpê"	"tpə"	"tpe 49"
-"tp"	"ch"	":9"	"ta"	5.52836637047163	"tpê"	"tpə"	"tpe 9"
-"ê"	"a"	":9"	"ta"	5.52836637047163	"tpê"	"tpə"	"tpe 9"
-"ê"	"a"	":9"	":a"	7.25358851674641	"tpê"	"tpə"	"tpe 60"
-"tp"	"ch"	":9"	"te"	8.6015037593985	"tpê"	"tpə"	"tpe 43"
-"ê"	"e"	":9"	"te"	8.6015037593985	"tpê"	"tpə"	"tpe 43"
-"tp"	"ch"	":9"	"te"	7.4066985645933	"tpê"	"tpə"	"tpe 62"
-"ê"	"e"	":9"	"te"	7.4066985645933	"tpê"	"tpə"	"tpe 62"
-"tp"	"ch"	":9"	"te"	7.5434039644566	"tpê"	"tpə"	"tpe 23"
-"ê"	"e"	":9"	"te"	7.5434039644566	"tpê"	"tpə"	"tpe 23"
-"tp"	"ch"	":9"	"te"	7.5434039644566	"tpê"	"tpə"	"tpe 38"
-"ê"	"e"	":9"	"te"	7.5434039644566	"tpê"	"tpə"	"tpe 38"
-"tp"	"ch"	":9"	"te"	7.47505126452495	"tpê"	"tpə"	"tpe 46"
-"ê"	"e"	":9"	"te"	7.47505126452495	"tpê"	"tpə"	"tpe 46"
-"tp"	"d"	":9"	"d4"	8.30895420369105	"tpê"	"tpə"	"tpe 67"
-"ê"	":ê"	":9"	"d4"	8.30895420369105	"tpê"	"tpə"	"tpe 67"
-"tp"	"ch"	":9"	"t3"	3.91797676008202	"tpê"	"tpə"	"tpe 34"
-"ê"	":a"	":9"	"t3"	3.91797676008202	"tpê"	"tpə"	"tpe 34"
-"tp"	"ch"	":9"	"te"	7.47505126452495	"tpê"	"tpə"	"tpe 36"
-"ê"	"e"	":9"	"te"	7.47505126452495	"tpê"	"tpə"	"tpe 36"
-"tp"	"ch"	":9"	"ta"	5.52836637047163	"tpê"	"tpə"	"tpe 30"
-"ê"	"a"	":9"	"ta"	5.52836637047163	"tpê"	"tpə"	"tpe 30"
-"tp"	"ch"	":9"	"te"	7.20710868079289	"tpê"	"tpə"	"tpe 65"
-"ê"	"e"	":9"	"te"	7.20710868079289	"tpê"	"tpə"	"tpe 65"
-"ê"	"a"	":9"	":a"	5.79904306220096	"tpê"	"tpə"	"tpe 56"
-"tp"	"ch"	":9"	"te"	8.03280929596719	"tpê"	"tpə"	"tpe 53"
-"ê"	"e"	":9"	"te"	8.03280929596719	"tpê"	"tpə"	"tpe 53"
-"tp"	"ch"	":9"	"ta"	7.12781954887218	"tpê"	"tpə"	"tpe 8"
-"ê"	"a"	":9"	"ta"	7.12781954887218	"tpê"	"tpə"	"tpe 8"
-"tp"	"ch"	":9"	"t3"	3.91797676008202	"tpê"	"tpə"	"tpe 59"
-"ê"	":a"	":9"	"t3"	3.91797676008202	"tpê"	"tpə"	"tpe 59"
-"tp"	"ch"	":9"	"te"	7.49965823650034	"tpê"	"tpə"	"tpe 54"
-"ê"	"e"	":9"	"te"	7.49965823650034	"tpê"	"tpə"	"tpe 54"
-"tp"	"d"	":9"	"d9"	8.30895420369105	"tpê"	"tpə"	"tpe 1"
-"tp"	"ch"	":9"	"te"	10.1982228298018	"tpê"	"tpə"	"tpe 51"
-"ê"	"e"	":9"	"te"	10.1982228298018	"tpê"	"tpə"	"tpe 51"
-"tp"	"d"	":9"	"d9"	7.47505126452495	"tpê"	"tpə"	"tpe 52"
-"tp"	"ch"	":9"	"te"	7.47505126452495	"tpê"	"tpə"	"tpe 33"
-"ê"	"e"	":9"	"te"	7.47505126452495	"tpê"	"tpə"	"tpe 33"
-"tp"	"ch"	":9"	"te"	7.20710868079289	"tpê"	"tpə"	"tpe 41"
-"ê"	"e"	":9"	"te"	7.20710868079289	"tpê"	"tpə"	"tpe 41"
-"tp"	"ch"	":9"	"te"	7.47505126452495	"tpê"	"tpə"	"tpe 3"
-"ê"	"e"	":9"	"te"	7.47505126452495	"tpê"	"tpə"	"tpe 3"
-"tp"	"dp"	":9"	"/3"	8	"tpê"	"tpə"	"tpe 42"
-"ê"	":a"	":9"	"/3"	8	"tpê"	"tpə"	"tpe 42"
-"tp"	"d"	":9"	"d4"	3.91797676008202	"tpê"	"tpə"	"tpe 15"
-"ê"	":ê"	":9"	"d4"	3.91797676008202	"tpê"	"tpə"	"tpe 15"
-"tp"	"ch"	":9"	"te"	5.52836637047163	"tpê"	"tpə"	"tpe 7"
-"ê"	"e"	":9"	"te"	5.52836637047163	"tpê"	"tpə"	"tpe 7"
-"tp"	"ch"	":9"	"te"	7.12781954887218	"tpê"	"tpə"	"tpe 55"
-"ê"	"e"	":9"	"te"	7.12781954887218	"tpê"	"tpə"	"tpe 55"
-"tp"	"ch"	":9"	"te"	7.4066985645933	"tpê"	"tpə"	"tpe 64"
-"ê"	"e"	":9"	"te"	7.4066985645933	"tpê"	"tpə"	"tpe 64"
-"tp"	"ch"	":9"	"te"	8.03280929596719	"tpê"	"tpə"	"tpe 2"
-"ê"	"e"	":9"	"te"	8.03280929596719	"tpê"	"tpə"	"tpe 2"
-"tp"	"ch"	":9"	"te"	7.4066985645933	"tpê"	"tpə"	"tpe 68"
-"ê"	"e"	":9"	"te"	7.4066985645933	"tpê"	"tpə"	"tpe 68"
-"tp"	"dp"	":9"	"/3"	8	"tpê"	"tpə"	"tpe 50"
-"ê"	":a"	":9"	"/3"	8	"tpê"	"tpə"	"tpe 50"
-"tp"	"dp"	":9"	"/a"	NA	"tpê"	"tpə"	"tpe 63"
-"ê"	"a"	":9"	"/a"	NA	"tpê"	"tpə"	"tpe 63"
-"tp"	"dp"	":9"	"/3"	8	"tpê"	"tpə"	"tpe 40"
-"ê"	":a"	":9"	"/3"	8	"tpê"	"tpə"	"tpe 40"
-"tp"	"ch"	":9"	"te"	7.4066985645933	"tpê"	"tpə"	"tpe 16"
-"ê"	"e"	":9"	"te"	7.4066985645933	"tpê"	"tpə"	"tpe 16"
-"tp"	"ch"	":9"	"te"	7.12781954887218	"tpê"	"tpə"	"tpe 22"
-"ê"	"e"	":9"	"te"	7.12781954887218	"tpê"	"tpə"	"tpe 22"
-"tp"	"ch"	":9"	"t3"	6.32399179767601	"tpê"	"tpə"	"tpe 44"
-"ê"	":a"	":9"	"t3"	6.32399179767601	"tpê"	"tpə"	"tpe 44"
-"tp"	"dp"	":9"	"/a"	10.1982228298018	"tpê"	"tpə"	"tpe 4"
-"ê"	"a"	":9"	"/a"	10.1982228298018	"tpê"	"tpə"	"tpe 4"
-"tp"	"d"	":9"	"d4"	8.30895420369105	"tpê"	"tpə"	"tpe 21"
-"ê"	":ê"	":9"	"d4"	8.30895420369105	"tpê"	"tpə"	"tpe 21"
-"tp"	"d"	":9"	"d9"	8.30895420369105	"tpê"	"tpə"	"tpe 5"
-"tp"	"dp"	":9"	"/3"	8	"tpê"	"tpə"	"tpe 12"
-"ê"	":a"	":9"	"/3"	8	"tpê"	"tpə"	"tpe 12"
-"tp"	"ch"	":9"	"te"	7.4066985645933	"tpê"	"tpə"	"tpe 32"
-"ê"	"e"	":9"	"te"	7.4066985645933	"tpê"	"tpə"	"tpe 32"
-"o"	"u"	"tumowe"	"tumuwe"	5.7799043062201	"tumowe"	"tumɔwɛ"	"tumowe 9"
-"p"	"f"	"tupa"	"tufa"	5.64046479835954	"tupa"	"tupæ"	"tupa 10"
-"d"	"l"	"wadikeńo"	"walikedu"	4.80109364319891	"wadikeńo"	"wæṭikɛnɔ"	"wadikeno 8"
-"'n"	"d"	"wadikeńo"	"walikedu"	4.80109364319891	"wadikeńo"	"wæṭikɛnɔ"	"wadikeno 8"
-"o"	"u"	"wadikeńo"	"walikedu"	4.80109364319891	"wadikeńo"	"wæṭikɛnɔ"	"wadikeno 8"
-"w"	"p"	"wadikeńo"	"putekeno"	5.09637730690362	"wadikeńo"	"wæṭikɛnɔ"	"wadikeno 20"
-"a"	"u"	"wadikeńo"	"putekeno"	5.09637730690362	"wadikeńo"	"wæṭikɛnɔ"	"wadikeno 20"
-"d"	"ch"	"wadikeńo"	"putekeno"	5.09637730690362	"wadikeńo"	"wæṭikɛnɔ"	"wadikeno 20"
-"i"	"e"	"wadikeńo"	"putekeno"	5.09637730690362	"wadikeńo"	"wæṭikɛnɔ"	"wadikeno 20"
-"'n"	"n"	"wadikeńo"	"putekeno"	5.09637730690362	"wadikeńo"	"wæṭikɛnɔ"	"wadikeno 20"
-"'n"	"n"	"widońe"	"widoni"	7.20710868079289	"widońe"	"wiṭɔnɛ"	"widone 15"
-"e"	"i"	"widońe"	"widoni"	7.20710868079289	"widońe"	"wiṭɔnɛ"	"widone 15"
-"'n"	"n"	"widońe"	"widoni"	7.20710868079289	"widońe"	"wiṭɔnɛ"	"widone 10"
-"e"	"i"	"widońe"	"widoni"	7.20710868079289	"widońe"	"wiṭɔnɛ"	"widone 10"
-"'n"	"n"	"widońe"	"widoni"	6.88448393711552	"widońe"	"wiṭɔnɛ"	"widone 14"
-"e"	"i"	"widońe"	"widoni"	6.88448393711552	"widońe"	"wiṭɔnɛ"	"widone 14"
-"o"	"i"	"widońe"	"walidi"	4.80109364319891	"widońe"	"wiṭɔnɛ"	"widone 12"
-"d"	"ch"	"widońe"	"witone"	5.27136021872864	"widońe"	"wiṭɔnɛ"	"widone 9"
-"'n"	"n"	"widońe"	"witone"	5.27136021872864	"widońe"	"wiṭɔnɛ"	"widone 9"
-"w"	"p"	"wumipo"	"pimipo"	5.19480519480519	"wumipo"	"wumipɔ"	"wumipo 25"
-"u"	"i"	"wumipo"	"pimipo"	5.19480519480519	"wumipo"	"wumipɔ"	"wumipo 25"
+"target"	"realization"	"target_word"	"mispronunciation"	"age"	"target_ortho"	"target_phono"	"tokid"	"meaningful"
+"d"	"ch"	"dimope"	"timope"	7.37115516062885	"dimope"	"ṭimɔpɛ"	"dimope 12"	TRUE
+"d"	"ch"	"dimope"	"timope"	6.32399179767601	"dimope"	"ṭimɔpɛ"	"dimope 4"	TRUE
+"d"	"ch"	"dimope"	"timope"	7.60628844839371	"dimope"	"ṭimɔpɛ"	"dimope 13"	TRUE
+"d"	"ch"	"dimope"	"timope"	NA	"dimope"	"ṭimɔpɛ"	"dimope 25"	TRUE
+"d"	"k"	"dimope"	"kimope"	5.79904306220096	"dimope"	"ṭimɔpɛ"	"dimope 18"	TRUE
+"d"	"ch"	"dimope"	"timope"	7.60628844839371	"dimope"	"ṭimɔpɛ"	"dimope 20"	TRUE
+"d"	"k"	"dimope"	"kemope"	5.52836637047163	"dimope"	"ṭimɔpɛ"	"dimope 10"	TRUE
+"i"	"e"	"dimope"	"kemope"	5.52836637047163	"dimope"	"ṭimɔpɛ"	"dimope 10"	TRUE
+"d"	"ch"	"dimope"	"timope"	5.79904306220096	"dimope"	"ṭimɔpɛ"	"dimope 1"	TRUE
+"d"	"ch"	"dipońate"	"tiponate"	5.27136021872864	"dipońate"	"ṭipɔnætɛ"	"diponate 14"	TRUE
+"'n"	"n"	"dipońate"	"tiponate"	5.27136021872864	"dipońate"	"ṭipɔnætɛ"	"diponate 14"	TRUE
+"d"	"ch"	"dipońate"	"tiponate"	5.19480519480519	"dipońate"	"ṭipɔnætɛ"	"diponate 2"	TRUE
+"'n"	"n"	"dipońate"	"tiponate"	5.19480519480519	"dipońate"	"ṭipɔnætɛ"	"diponate 2"	TRUE
+"d"	"ch"	"dipońate"	"tipodenate"	4.80109364319891	"dipońate"	"ṭipɔnætɛ"	"diponate 26"	TRUE
+"'n"	"d"	"dipońate"	"tipodenate"	4.80109364319891	"dipońate"	"ṭipɔnætɛ"	"diponate 26"	TRUE
+"d"	"ch"	"dipońate"	"tiponate"	8.51674641148325	"dipońate"	"ṭipɔnætɛ"	"diponate 20"	TRUE
+"'n"	"n"	"dipońate"	"tiponate"	8.51674641148325	"dipońate"	"ṭipɔnætɛ"	"diponate 20"	TRUE
+"d"	"ch"	"dipońate"	"tiponade"	6.88448393711552	"dipońate"	"ṭipɔnætɛ"	"diponate 3"	TRUE
+"'n"	"n"	"dipońate"	"tiponade"	6.88448393711552	"dipońate"	"ṭipɔnætɛ"	"diponate 3"	TRUE
+"ch"	"d"	"dipońate"	"tiponade"	6.88448393711552	"dipońate"	"ṭipɔnætɛ"	"diponate 3"	TRUE
+"d"	"ch"	"dipońate"	"tiponape"	7.37115516062885	"dipońate"	"ṭipɔnætɛ"	"diponate 27"	TRUE
+"'n"	"n"	"dipońate"	"tiponape"	7.37115516062885	"dipońate"	"ṭipɔnætɛ"	"diponate 27"	TRUE
+"ch"	"p"	"dipońate"	"tiponape"	7.37115516062885	"dipońate"	"ṭipɔnætɛ"	"diponate 27"	TRUE
+"d"	"ch"	"dipońate"	"tiponade"	4.80109364319891	"dipońate"	"ṭipɔnætɛ"	"diponate 18"	TRUE
+"'n"	"n"	"dipońate"	"tiponade"	4.80109364319891	"dipońate"	"ṭipɔnætɛ"	"diponate 18"	TRUE
+"ch"	"d"	"dipońate"	"tiponade"	4.80109364319891	"dipońate"	"ṭipɔnætɛ"	"diponate 18"	TRUE
+"d"	"ch"	"dipońate"	"tiponate"	7.12781954887218	"dipońate"	"ṭipɔnætɛ"	"diponate 25"	TRUE
+"'n"	"n"	"dipońate"	"tiponate"	7.12781954887218	"dipońate"	"ṭipɔnætɛ"	"diponate 25"	TRUE
+"d"	"ch"	"dipońate"	"tiponate"	5.27136021872864	"dipońate"	"ṭipɔnætɛ"	"diponate 30"	TRUE
+"'n"	"n"	"dipońate"	"tiponate"	5.27136021872864	"dipońate"	"ṭipɔnætɛ"	"diponate 30"	TRUE
+"d"	"ch"	"dipońate"	"tiponate"	7.81134654818865	"dipońate"	"ṭipɔnætɛ"	"diponate 10"	TRUE
+"'n"	"n"	"dipońate"	"tiponate"	7.81134654818865	"dipońate"	"ṭipɔnætɛ"	"diponate 10"	TRUE
+"'n"	"n"	"dipońate"	"diponade"	8.30895420369105	"dipońate"	"ṭipɔnætɛ"	"diponate 16"	TRUE
+"ch"	"d"	"dipońate"	"diponade"	8.30895420369105	"dipońate"	"ṭipɔnætɛ"	"diponate 16"	TRUE
+"'n"	"n"	"dipońate"	"diponade"	NA	"dipońate"	"ṭipɔnætɛ"	"diponate 22"	TRUE
+"ch"	"d"	"dipońate"	"diponade"	NA	"dipońate"	"ṭipɔnætɛ"	"diponate 22"	TRUE
+"d"	"ch"	"dipońate"	"tiponate"	NA	"dipońate"	"ṭipɔnætɛ"	"diponate 5"	TRUE
+"'n"	"n"	"dipońate"	"tiponate"	NA	"dipońate"	"ṭipɔnætɛ"	"diponate 5"	TRUE
+"d"	"ch"	"diyeto"	"tiyeto"	7.60628844839371	"diyeto"	"ṭijɛtɔ"	"diyeto 25"	TRUE
+"d"	"ch"	"diyeto"	"tiyeto"	5.24128503075871	"diyeto"	"ṭijɛtɔ"	"diyeto 27"	TRUE
+"d"	"ch"	"diyeto"	"tiyeto"	4.97881066302119	"diyeto"	"ṭijɛtɔ"	"diyeto 36"	TRUE
+"d"	"p"	"diyeto"	"piyeto"	5.64046479835954	"diyeto"	"ṭijɛtɔ"	"diyeto 10"	TRUE
+"d"	"p"	"diyeto"	"piyeto"	5.64046479835954	"diyeto"	"ṭijɛtɔ"	"diyeto 23"	TRUE
+"d"	"ch"	"diyeto"	"tiyeto"	5.27136021872864	"diyeto"	"ṭijɛtɔ"	"diyeto 15"	TRUE
+"d"	"ch"	"diyeto"	"tiyeto"	3.91797676008202	"diyeto"	"ṭijɛtɔ"	"diyeto 3"	TRUE
+"o"	"ó"	"diyeto"	"etO"	6.76965140123035	"diyeto"	"ṭijɛtɔ"	"diyeto 18"	TRUE
+"d"	"ch"	"diyeto"	"tiyeto"	5.27136021872864	"diyeto"	"ṭijɛtɔ"	"diyeto 28"	TRUE
+"d"	"ch"	"diyeto"	"tiyeto"	6	"diyeto"	"ṭijɛtɔ"	"diyeto 1"	TRUE
+"d"	"p"	"diyeto"	"piyeto"	7.60628844839371	"diyeto"	"ṭijɛtɔ"	"diyeto 2"	TRUE
+"d"	"ch"	"diyeto"	"tiyeto"	5.27136021872864	"diyeto"	"ṭijɛtɔ"	"diyeto 17"	TRUE
+"d"	"p"	"diyeto"	"piyetO"	7.37115516062885	"diyeto"	"ṭijɛtɔ"	"diyeto 34"	TRUE
+"o"	"ó"	"diyeto"	"piyetO"	7.37115516062885	"diyeto"	"ṭijɛtɔ"	"diyeto 34"	TRUE
+"d"	"ch"	"diyeto"	"tiyeto"	3.91797676008202	"diyeto"	"ṭijɛtɔ"	"diyeto 16"	TRUE
+"d"	"ch"	"diyeto"	"tiyeto"	4.97881066302119	"diyeto"	"ṭijɛtɔ"	"diyeto 35"	TRUE
+"d"	"ch"	"diyeto"	"tiyeto"	4.97881066302119	"diyeto"	"ṭijɛtɔ"	"diyeto 20"	TRUE
+"d"	"p"	"diyeto"	"pieto"	7.60628844839371	"diyeto"	"ṭijɛtɔ"	"diyeto 37"	TRUE
+"d"	"p"	"diyeto"	"piyeto"	5.64046479835954	"diyeto"	"ṭijɛtɔ"	"diyeto 12"	TRUE
+"d"	"dp"	"diyeto"	"/8"	3.91797676008202	"diyeto"	"ṭijɛtɔ"	"diyeto 8"	TRUE
+"i"	"î"	"diyeto"	"/8"	3.91797676008202	"diyeto"	"ṭijɛtɔ"	"diyeto 8"	TRUE
+"d"	"ch"	"diyeto"	"tiyeto"	4.97881066302119	"diyeto"	"ṭijɛtɔ"	"diyeto 5"	TRUE
+"d"	"ch"	"diyeto"	"tiyeto"	5.09637730690362	"diyeto"	"ṭijɛtɔ"	"diyeto 4"	TRUE
+"d"	"ch"	"diyeto"	"tiyoto"	5.79904306220096	"diyeto"	"ṭijɛtɔ"	"diyeto 6"	TRUE
+"e"	"o"	"diyeto"	"tiyoto"	5.79904306220096	"diyeto"	"ṭijɛtɔ"	"diyeto 6"	TRUE
+"d"	"ch"	"diyeto"	"tiyeto"	5.27136021872864	"diyeto"	"ṭijɛtɔ"	"diyeto 24"	TRUE
+"d"	"ch"	"diyeto"	"tiyeto"	9.09911141490089	"diyeto"	"ṭijɛtɔ"	"diyeto 9"	TRUE
+"dp"	"tp"	"/3"	":a"	6	"dp:a"	"ṭp̃æ"	"dp_a 17"	TRUE
+":a"	"a"	"/3"	":a"	6	"dp:a"	"ṭp̃æ"	"dp_a 17"	TRUE
+"dp"	"p"	"/3"	"pa"	11.0321257689679	"dp:a"	"ṭp̃æ"	"dp_a 8"	TRUE
+":a"	"a"	"/3"	"pa"	11.0321257689679	"dp:a"	"ṭp̃æ"	"dp_a 8"	TRUE
+"dp"	"tp"	"/3"	":a"	7.81134654818865	"dp:a"	"ṭp̃æ"	"dp_a 15"	TRUE
+":a"	"a"	"/3"	":a"	7.81134654818865	"dp:a"	"ṭp̃æ"	"dp_a 15"	TRUE
+"dp"	"p"	"/3"	"pa"	9.09911141490089	"dp:a"	"ṭp̃æ"	"dp_a 6"	TRUE
+":a"	"a"	"/3"	"pa"	9.09911141490089	"dp:a"	"ṭp̃æ"	"dp_a 6"	TRUE
+"dp"	"ch"	"/3"	"ta"	NA	"dp:a"	"ṭp̃æ"	"dp_a 27"	TRUE
+":a"	"a"	"/3"	"ta"	NA	"dp:a"	"ṭp̃æ"	"dp_a 27"	TRUE
+"dp"	"p"	"/3"	"pa"	6.37047163362953	"dp:a"	"ṭp̃æ"	"dp_a 11"	TRUE
+":a"	"a"	"/3"	"pa"	6.37047163362953	"dp:a"	"ṭp̃æ"	"dp_a 11"	TRUE
+"dp"	"ch"	"/3"	"ta"	7.60628844839371	"dp:a"	"ṭp̃æ"	"dp_a 22"	TRUE
+":a"	"a"	"/3"	"ta"	7.60628844839371	"dp:a"	"ṭp̃æ"	"dp_a 22"	TRUE
+"dp"	"tp"	"/3"	":i"	5.64046479835954	"dp:a"	"ṭp̃æ"	"dp_a 25"	TRUE
+":a"	"i"	"/3"	":i"	5.64046479835954	"dp:a"	"ṭp̃æ"	"dp_a 25"	TRUE
+"dp"	"p"	"/3"	"pa"	6	"dp:a"	"ṭp̃æ"	"dp_a 24"	TRUE
+":a"	"a"	"/3"	"pa"	6	"dp:a"	"ṭp̃æ"	"dp_a 24"	TRUE
+"dp"	"tp"	"/3"	":a"	4.97881066302119	"dp:a"	"ṭp̃æ"	"dp_a 10"	TRUE
+":a"	"a"	"/3"	":a"	4.97881066302119	"dp:a"	"ṭp̃æ"	"dp_a 10"	TRUE
+"dp"	"tp"	"/3"	":a"	5.27136021872864	"dp:a"	"ṭp̃æ"	"dp_a 12"	TRUE
+":a"	"a"	"/3"	":a"	5.27136021872864	"dp:a"	"ṭp̃æ"	"dp_a 12"	TRUE
+"dp"	"p"	"/3"	"pa"	7.37115516062885	"dp:a"	"ṭp̃æ"	"dp_a 9"	TRUE
+":a"	"a"	"/3"	"pa"	7.37115516062885	"dp:a"	"ṭp̃æ"	"dp_a 9"	TRUE
+"dp"	"p"	"/3"	"pa"	5.09637730690362	"dp:a"	"ṭp̃æ"	"dp_a 20"	TRUE
+":a"	"a"	"/3"	"pa"	5.09637730690362	"dp:a"	"ṭp̃æ"	"dp_a 20"	TRUE
+"dp"	"p"	"/3"	"pa"	9.09911141490089	"dp:a"	"ṭp̃æ"	"dp_a 14"	TRUE
+":a"	"a"	"/3"	"pa"	9.09911141490089	"dp:a"	"ṭp̃æ"	"dp_a 14"	TRUE
+"dp"	"tp"	"/3"	":a"	7.35475051264525	"dp:a"	"ṭp̃æ"	"dp_a 2"	TRUE
+":a"	"a"	"/3"	":a"	7.35475051264525	"dp:a"	"ṭp̃æ"	"dp_a 2"	TRUE
+"dp"	"p"	"/3"	"pa"	7.60628844839371	"dp:a"	"ṭp̃æ"	"dp_a 21"	TRUE
+":a"	"a"	"/3"	"pa"	7.60628844839371	"dp:a"	"ṭp̃æ"	"dp_a 21"	TRUE
+"dp"	"p"	"/3"	"pa"	7.60628844839371	"dp:a"	"ṭp̃æ"	"dp_a 7"	TRUE
+":a"	"a"	"/3"	"pa"	7.60628844839371	"dp:a"	"ṭp̃æ"	"dp_a 7"	TRUE
+"dp"	"p"	"/3"	"pe"	4.80109364319891	"dp:a"	"ṭp̃æ"	"dp_a 5"	TRUE
+":a"	"e"	"/3"	"pe"	4.80109364319891	"dp:a"	"ṭp̃æ"	"dp_a 5"	TRUE
+"dp"	"p"	"/3"	"pa"	9.09911141490089	"dp:a"	"ṭp̃æ"	"dp_a 28"	TRUE
+":a"	"a"	"/3"	"pa"	9.09911141490089	"dp:a"	"ṭp̃æ"	"dp_a 28"	TRUE
+"dp"	"tp"	"/3"	":3"	6.10526315789474	"dp:a"	"ṭp̃æ"	"dp_a 23"	TRUE
+"dp"	"p"	"/3"	"pa"	7.60628844839371	"dp:a"	"ṭp̃æ"	"dp_a 13"	TRUE
+":a"	"a"	"/3"	"pa"	7.60628844839371	"dp:a"	"ṭp̃æ"	"dp_a 13"	TRUE
+"dp"	"ch"	"/a"	"tata"	7.12781954887218	"dpa"	"ṭpæ"	"dpa 10"	TRUE
+"dp"	"ch"	"/a"	"t0"	7.12781954887218	"dpa"	"ṭpæ"	"dpa 11"	TRUE
+"a"	"â"	"/a"	"t0"	7.12781954887218	"dpa"	"ṭpæ"	"dpa 11"	TRUE
+"dp"	"ch"	"/a"	"te"	5.64046479835954	"dpa"	"ṭpæ"	"dpa 7"	TRUE
+"a"	"e"	"/a"	"te"	5.64046479835954	"dpa"	"ṭpæ"	"dpa 7"	TRUE
+"dp"	"tp"	"/a"	":a"	7.94258373205742	"dpa"	"ṭpæ"	"dpa 59"	TRUE
+"dp"	"tp"	"/a"	":a"	5.79904306220096	"dpa"	"ṭpæ"	"dpa 22"	TRUE
+"dp"	"p"	"/a"	"pa"	6	"dpa"	"ṭpæ"	"dpa 15"	TRUE
+"dp"	"ch"	"/a"	"ta"	5.79904306220096	"dpa"	"ṭpæ"	"dpa 28"	TRUE
+"dp"	"p"	"/a"	"pa"	7.37115516062885	"dpa"	"ṭpæ"	"dpa 53"	TRUE
+"dp"	"tp"	"/a"	":a"	10.1982228298018	"dpa"	"ṭpæ"	"dpa 43"	TRUE
+"dp"	"ch"	"/a"	"tata"	7.81134654818865	"dpa"	"ṭpæ"	"dpa 4"	TRUE
+"dp"	"p"	"/a"	"pa"	5.19480519480519	"dpa"	"ṭpæ"	"dpa 30"	TRUE
+"dp"	"ch"	"/a"	"ta"	7.47505126452495	"dpa"	"ṭpæ"	"dpa 54"	TRUE
+"dp"	"d"	"/a"	"d5"	3.91797676008202	"dpa"	"ṭpæ"	"dpa 31"	TRUE
+"a"	":â"	"/a"	"d5"	3.91797676008202	"dpa"	"ṭpæ"	"dpa 31"	TRUE
+"dp"	"ch"	"/a"	"ta"	7.12781954887218	"dpa"	"ṭpæ"	"dpa 52"	TRUE
+"dp"	"p"	"/a"	"pa"	7.60628844839371	"dpa"	"ṭpæ"	"dpa 18"	TRUE
+"dp"	"p"	"/a"	"pa"	7.20710868079289	"dpa"	"ṭpæ"	"dpa 21"	TRUE
+"dp"	"p"	"/a"	"pa"	6	"dpa"	"ṭpæ"	"dpa 16"	TRUE
+"dp"	"ly"	"/a"	"xa"	10.1982228298018	"dpa"	"ṭpæ"	"dpa 19"	TRUE
+"dp"	"p"	"/a"	"p7"	4.80109364319891	"dpa"	"ṭpæ"	"dpa 17"	TRUE
+"a"	":o"	"/a"	"p7"	4.80109364319891	"dpa"	"ṭpæ"	"dpa 17"	TRUE
+"dp"	"tp"	"/a"	":8"	7.28366370471634	"dpa"	"ṭpæ"	"dpa 32"	TRUE
+"a"	"î"	"/a"	":8"	7.28366370471634	"dpa"	"ṭpæ"	"dpa 32"	TRUE
+"dp"	"p"	"/a"	"pa"	6.37047163362953	"dpa"	"ṭpæ"	"dpa 23"	TRUE
+"dp"	"tp"	"/a"	":a"	8.6015037593985	"dpa"	"ṭpæ"	"dpa 50"	TRUE
+"dp"	"p"	"/a"	"pa"	6.76965140123035	"dpa"	"ṭpæ"	"dpa 20"	TRUE
+"dp"	"p"	"/a"	"pa"	7.60628844839371	"dpa"	"ṭpæ"	"dpa 36"	TRUE
+"dp"	"tp"	"/a"	":a"	9.09911141490089	"dpa"	"ṭpæ"	"dpa 48"	TRUE
+"dp"	"p"	"/a"	"pa"	6.32399179767601	"dpa"	"ṭpæ"	"dpa 51"	TRUE
+"dp"	"p"	"/a"	"pa"	9.09911141490089	"dpa"	"ṭpæ"	"dpa 38"	TRUE
+"dp"	"p"	"/a"	"pa"	4.97881066302119	"dpa"	"ṭpæ"	"dpa 37"	TRUE
+"dp"	"ch"	"/a"	"ta"	11.0321257689679	"dpa"	"ṭpæ"	"dpa 55"	TRUE
+"dp"	"tp"	"/a"	":a"	8	"dpa"	"ṭpæ"	"dpa 39"	TRUE
+"dp"	"p"	"/a"	"pa"	5.7799043062201	"dpa"	"ṭpæ"	"dpa 14"	TRUE
+"dp"	"ch"	"/a"	"te"	5.24128503075871	"dpa"	"ṭpæ"	"dpa 1"	TRUE
+"a"	"e"	"/a"	"te"	5.24128503075871	"dpa"	"ṭpæ"	"dpa 1"	TRUE
+"dp"	"tp"	"/a"	":a"	6.88448393711552	"dpa"	"ṭpæ"	"dpa 49"	TRUE
+"dp"	"tp"	"/a"	":a"	8.6015037593985	"dpa"	"ṭpæ"	"dpa 47"	TRUE
+"dp"	"ch"	"/a"	"tata"	5.52836637047163	"dpa"	"ṭpæ"	"dpa 9"	TRUE
+"dp"	"ch"	"/a"	"tO"	5.24128503075871	"dpa"	"ṭpæ"	"dpa 26"	TRUE
+"a"	"ó"	"/a"	"tO"	5.24128503075871	"dpa"	"ṭpæ"	"dpa 26"	TRUE
+"dp"	"p"	"/a"	"pa"	5.27136021872864	"dpa"	"ṭpæ"	"dpa 12"	TRUE
+"dp"	"p"	"/0"	"pa"	7.47505126452495	"dpâ"	"ṭpɑ"	"dpa2 20"	TRUE
+"â"	"a"	"/0"	"pa"	7.47505126452495	"dpâ"	"ṭpɑ"	"dpa2 20"	TRUE
+"dp"	"ch"	"/0"	"t5"	7.94258373205742	"dpâ"	"ṭpɑ"	"dpa2 29"	TRUE
+"â"	":â"	"/0"	"t5"	7.94258373205742	"dpâ"	"ṭpɑ"	"dpa2 29"	TRUE
+"dp"	"d"	"/0"	"d8"	3.91797676008202	"dpâ"	"ṭpɑ"	"dpa2 18"	TRUE
+"â"	"î"	"/0"	"d8"	3.91797676008202	"dpâ"	"ṭpɑ"	"dpa2 18"	TRUE
+"dp"	"p"	"/0"	"pa"	6.32399179767601	"dpâ"	"ṭpɑ"	"dpa2 8"	TRUE
+"â"	"a"	"/0"	"pa"	6.32399179767601	"dpâ"	"ṭpɑ"	"dpa2 8"	TRUE
+"dp"	"p"	"/0"	"pa"	7.20710868079289	"dpâ"	"ṭpɑ"	"dpa2 10"	TRUE
+"â"	"a"	"/0"	"pa"	7.20710868079289	"dpâ"	"ṭpɑ"	"dpa2 10"	TRUE
+"dp"	"ch"	"/0"	"t5"	8.03280929596719	"dpâ"	"ṭpɑ"	"dpa2 25"	TRUE
+"â"	":â"	"/0"	"t5"	8.03280929596719	"dpâ"	"ṭpɑ"	"dpa2 25"	TRUE
+"dp"	"ch"	"/0"	"t3"	10.1982228298018	"dpâ"	"ṭpɑ"	"dpa2 7"	TRUE
+"â"	":a"	"/0"	"t3"	10.1982228298018	"dpâ"	"ṭpɑ"	"dpa2 7"	TRUE
+"dp"	"p"	"/0"	"pa"	5.52836637047163	"dpâ"	"ṭpɑ"	"dpa2 22"	TRUE
+"â"	"a"	"/0"	"pa"	5.52836637047163	"dpâ"	"ṭpɑ"	"dpa2 22"	TRUE
+"dp"	"d"	"/0"	"d5"	9.52563226247437	"dpâ"	"ṭpɑ"	"dpa2 23"	TRUE
+"â"	":â"	"/0"	"d5"	9.52563226247437	"dpâ"	"ṭpɑ"	"dpa2 23"	TRUE
+"dp"	"d"	"/0"	"d5"	3.91797676008202	"dpâ"	"ṭpɑ"	"dpa2 14"	TRUE
+"â"	":â"	"/0"	"d5"	3.91797676008202	"dpâ"	"ṭpɑ"	"dpa2 14"	TRUE
+"dp"	"d"	"/0"	"d5"	8	"dpâ"	"ṭpɑ"	"dpa2 24"	TRUE
+"â"	":â"	"/0"	"d5"	8	"dpâ"	"ṭpɑ"	"dpa2 24"	TRUE
+"dp"	"tp"	"/0"	":a"	8.6015037593985	"dpâ"	"ṭpɑ"	"dpa2 19"	TRUE
+"â"	"a"	"/0"	":a"	8.6015037593985	"dpâ"	"ṭpɑ"	"dpa2 19"	TRUE
+"dp"	"ch"	"/9"	"te"	7.94258373205742	"dpê"	"ṭpə"	"dpe 41"	TRUE
+"ê"	"e"	"/9"	"te"	7.94258373205742	"dpê"	"ṭpə"	"dpe 41"	TRUE
+"dp"	"ch"	"/9"	"te"	5.79904306220096	"dpê"	"ṭpə"	"dpe 13"	TRUE
+"ê"	"e"	"/9"	"te"	5.79904306220096	"dpê"	"ṭpə"	"dpe 13"	TRUE
+"dp"	"tp"	"/9"	":e"	5.19480519480519	"dpê"	"ṭpə"	"dpe 3"	TRUE
+"ê"	"e"	"/9"	":e"	5.19480519480519	"dpê"	"ṭpə"	"dpe 3"	TRUE
+"dp"	"tp"	"/9"	":e"	8.51674641148325	"dpê"	"ṭpə"	"dpe 23"	TRUE
+"ê"	"e"	"/9"	":e"	8.51674641148325	"dpê"	"ṭpə"	"dpe 23"	TRUE
+"dp"	"d"	"/9"	"d5"	3.91797676008202	"dpê"	"ṭpə"	"dpe 34"	TRUE
+"ê"	":â"	"/9"	"d5"	3.91797676008202	"dpê"	"ṭpə"	"dpe 34"	TRUE
+"ê"	"a"	"/9"	"/a"	NA	"dpê"	"ṭpə"	"dpe 16"	TRUE
+"dp"	"d"	"/9"	"d9"	7.47505126452495	"dpê"	"ṭpə"	"dpe 22"	TRUE
+"dp"	"ch"	"/9"	"te"	5.52836637047163	"dpê"	"ṭpə"	"dpe 37"	TRUE
+"ê"	"e"	"/9"	"te"	5.52836637047163	"dpê"	"ṭpə"	"dpe 37"	TRUE
+"dp"	"tp"	"/9"	":a"	7.20710868079289	"dpê"	"ṭpə"	"dpe 2"	TRUE
+"ê"	"a"	"/9"	":a"	7.20710868079289	"dpê"	"ṭpə"	"dpe 2"	TRUE
+"dp"	"d"	"/9"	"d4"	3.91797676008202	"dpê"	"ṭpə"	"dpe 17"	TRUE
+"ê"	":ê"	"/9"	"d4"	3.91797676008202	"dpê"	"ṭpə"	"dpe 17"	TRUE
+"dp"	"d"	"/9"	"d9"	7.47505126452495	"dpê"	"ṭpə"	"dpe 33"	TRUE
+"dp"	"ch"	"/9"	"te"	5.52836637047163	"dpê"	"ṭpə"	"dpe 11"	TRUE
+"ê"	"e"	"/9"	"te"	5.52836637047163	"dpê"	"ṭpə"	"dpe 11"	TRUE
+"dp"	"ch"	"/9"	"te"	5.52836637047163	"dpê"	"ṭpə"	"dpe 14"	TRUE
+"ê"	"e"	"/9"	"te"	5.52836637047163	"dpê"	"ṭpə"	"dpe 14"	TRUE
+"dp"	"d"	"/9"	"d4"	3.91797676008202	"dpê"	"ṭpə"	"dpe 21"	TRUE
+"ê"	":ê"	"/9"	"d4"	3.91797676008202	"dpê"	"ṭpə"	"dpe 21"	TRUE
+"dp"	"ch"	"/9"	"te"	7.47505126452495	"dpê"	"ṭpə"	"dpe 27"	TRUE
+"ê"	"e"	"/9"	"te"	7.47505126452495	"dpê"	"ṭpə"	"dpe 27"	TRUE
+"dp"	"d"	"/9"	"d5"	7.25358851674641	"dpê"	"ṭpə"	"dpe 1"	TRUE
+"ê"	":â"	"/9"	"d5"	7.25358851674641	"dpê"	"ṭpə"	"dpe 1"	TRUE
+"dp"	"tp"	"/9"	":7"	8.03280929596719	"dpê"	"ṭpə"	"dpe 25"	TRUE
+"ê"	":o"	"/9"	":7"	8.03280929596719	"dpê"	"ṭpə"	"dpe 25"	TRUE
+"dp"	"tp"	"/9"	":a"	7.20710868079289	"dpê"	"ṭpə"	"dpe 9"	TRUE
+"ê"	"a"	"/9"	":a"	7.20710868079289	"dpê"	"ṭpə"	"dpe 9"	TRUE
+"dp"	"tp"	"/9"	":e"	7.12781954887218	"dpê"	"ṭpə"	"dpe 10"	TRUE
+"ê"	"e"	"/9"	":e"	7.12781954887218	"dpê"	"ṭpə"	"dpe 10"	TRUE
+"dp"	"ch"	"/9"	"te"	5.52836637047163	"dpê"	"ṭpə"	"dpe 32"	TRUE
+"ê"	"e"	"/9"	"te"	5.52836637047163	"dpê"	"ṭpə"	"dpe 32"	TRUE
+"dp"	"ch"	"/9"	"te"	5.24128503075871	"dpê"	"ṭpə"	"dpe 12"	TRUE
+"ê"	"e"	"/9"	"te"	5.24128503075871	"dpê"	"ṭpə"	"dpe 12"	TRUE
+"dp"	"ch"	"/9"	"te"	5.52836637047163	"dpê"	"ṭpə"	"dpe 5"	TRUE
+"ê"	"e"	"/9"	"te"	5.52836637047163	"dpê"	"ṭpə"	"dpe 5"	TRUE
+"dp"	"ch"	"/9"	"t3"	10.1982228298018	"dpê"	"ṭpə"	"dpe 31"	TRUE
+"ê"	":a"	"/9"	"t3"	10.1982228298018	"dpê"	"ṭpə"	"dpe 31"	TRUE
+"dp"	"d"	"/9"	"d9"	7.47505126452495	"dpê"	"ṭpə"	"dpe 38"	TRUE
+"dp"	"tp"	"/9"	":a"	7.20710868079289	"dpê"	"ṭpə"	"dpe 28"	TRUE
+"ê"	"a"	"/9"	":a"	7.20710868079289	"dpê"	"ṭpə"	"dpe 28"	TRUE
+"dp"	"ch"	"/9"	"te"	7.12781954887218	"dpê"	"ṭpə"	"dpe 29"	TRUE
+"ê"	"e"	"/9"	"te"	7.12781954887218	"dpê"	"ṭpə"	"dpe 29"	TRUE
+"dp"	"ch"	"/9"	"t3"	10.1982228298018	"dpê"	"ṭpə"	"dpe 35"	TRUE
+"ê"	":a"	"/9"	"t3"	10.1982228298018	"dpê"	"ṭpə"	"dpe 35"	TRUE
+"dp"	"p"	"/E"	"pe"	6	"dpéé"	"ṭpeː"	"dpee 9"	TRUE
+"é"	"e"	"/E"	"pe"	6	"dpéé"	"ṭpeː"	"dpee 9"	TRUE
+"dp"	"ch"	"/E"	"te"	4.80109364319891	"dpéé"	"ṭpeː"	"dpee 14"	TRUE
+"é"	"e"	"/E"	"te"	4.80109364319891	"dpéé"	"ṭpeː"	"dpee 14"	TRUE
+"dp"	"tp"	"/E"	":e"	5.09637730690362	"dpéé"	"ṭpeː"	"dpee 21"	TRUE
+"é"	"e"	"/E"	":e"	5.09637730690362	"dpéé"	"ṭpeː"	"dpee 21"	TRUE
+"dp"	"p"	"/E"	"pe"	7.37115516062885	"dpéé"	"ṭpeː"	"dpee 25"	TRUE
+"é"	"e"	"/E"	"pe"	7.37115516062885	"dpéé"	"ṭpeː"	"dpee 25"	TRUE
+"dp"	"tp"	"/E"	":e"	9.09911141490089	"dpéé"	"ṭpeː"	"dpee 2"	TRUE
+"é"	"e"	"/E"	":e"	9.09911141490089	"dpéé"	"ṭpeː"	"dpee 2"	TRUE
+"dp"	"tp"	"/E"	":a"	6.88448393711552	"dpéé"	"ṭpeː"	"dpee 19"	TRUE
+"é"	"a"	"/E"	":a"	6.88448393711552	"dpéé"	"ṭpeː"	"dpee 19"	TRUE
+"dp"	"p"	"/E"	"pe"	7.60628844839371	"dpéé"	"ṭpeː"	"dpee 13"	TRUE
+"é"	"e"	"/E"	"pe"	7.60628844839371	"dpéé"	"ṭpeː"	"dpee 13"	TRUE
+"dp"	"tp"	"/E"	":e"	5.27136021872864	"dpéé"	"ṭpeː"	"dpee 10"	TRUE
+"é"	"e"	"/E"	":e"	5.27136021872864	"dpéé"	"ṭpeː"	"dpee 10"	TRUE
+"dp"	"p"	"/E"	"pe"	11.0321257689679	"dpéé"	"ṭpeː"	"dpee 24"	TRUE
+"é"	"e"	"/E"	"pe"	11.0321257689679	"dpéé"	"ṭpeː"	"dpee 24"	TRUE
+"dp"	"ch"	"/E"	"te"	5.64046479835954	"dpéé"	"ṭpeː"	"dpee 3"	TRUE
+"é"	"e"	"/E"	"te"	5.64046479835954	"dpéé"	"ṭpeː"	"dpee 3"	TRUE
+"dp"	"ch"	"/E"	"te"	4.80109364319891	"dpéé"	"ṭpeː"	"dpee 5"	TRUE
+"é"	"e"	"/E"	"te"	4.80109364319891	"dpéé"	"ṭpeː"	"dpee 5"	TRUE
+"dp"	"p"	"/E"	"pe"	4.80109364319891	"dpéé"	"ṭpeː"	"dpee 28"	TRUE
+"é"	"e"	"/E"	"pe"	4.80109364319891	"dpéé"	"ṭpeː"	"dpee 28"	TRUE
+"dp"	"p"	"/E"	"pe"	7.35475051264525	"dpéé"	"ṭpeː"	"dpee 16"	TRUE
+"é"	"e"	"/E"	"pe"	7.35475051264525	"dpéé"	"ṭpeː"	"dpee 16"	TRUE
+"dp"	"p"	"/E"	"pe"	7.35475051264525	"dpéé"	"ṭpeː"	"dpee 17"	TRUE
+"é"	"e"	"/E"	"pe"	7.35475051264525	"dpéé"	"ṭpeː"	"dpee 17"	TRUE
+"dp"	"p"	"/E"	"pe"	7.35475051264525	"dpéé"	"ṭpeː"	"dpee 8"	TRUE
+"é"	"e"	"/E"	"pe"	7.35475051264525	"dpéé"	"ṭpeː"	"dpee 8"	TRUE
+"dp"	"ch"	"/E"	"te"	5.11278195488722	"dpéé"	"ṭpeː"	"dpee 15"	TRUE
+"é"	"e"	"/E"	"te"	5.11278195488722	"dpéé"	"ṭpeː"	"dpee 15"	TRUE
+"dp"	"p"	"/E"	"pe"	7.60628844839371	"dpéé"	"ṭpeː"	"dpee 6"	TRUE
+"é"	"e"	"/E"	"pe"	7.60628844839371	"dpéé"	"ṭpeː"	"dpee 6"	TRUE
+"dp"	"p"	"/E"	"pe"	7.60628844839371	"dpéé"	"ṭpeː"	"dpee 18"	TRUE
+"é"	"e"	"/E"	"pe"	7.60628844839371	"dpéé"	"ṭpeː"	"dpee 18"	TRUE
+"dp"	"p"	"/E"	"pe"	7.60628844839371	"dpéé"	"ṭpeː"	"dpee 23"	TRUE
+"é"	"e"	"/E"	"pe"	7.60628844839371	"dpéé"	"ṭpeː"	"dpee 23"	TRUE
+"dp"	"ly"	"/i"	"xE"	6.88448393711552	"dpi"	"ṭpi"	"dpi 11"	TRUE
+"i"	"é"	"/i"	"xE"	6.88448393711552	"dpi"	"ṭpi"	"dpi 11"	TRUE
+"dp"	"ly"	"/i"	"xi"	4.97881066302119	"dpi"	"ṭpi"	"dpi 12"	TRUE
+"dp"	"ly"	"/i"	"xi"	7.37115516062885	"dpi"	"ṭpi"	"dpi 30"	TRUE
+"dp"	"ly"	"/i"	"xE"	6.88448393711552	"dpi"	"ṭpi"	"dpi 9"	TRUE
+"i"	"é"	"/i"	"xE"	6.88448393711552	"dpi"	"ṭpi"	"dpi 9"	TRUE
+"dp"	"ly"	"/i"	"xi"	9.09911141490089	"dpi"	"ṭpi"	"dpi 10"	TRUE
+"dp"	"tp"	"/i"	":i"	5.64046479835954	"dpi"	"ṭpi"	"dpi 7"	TRUE
+"dp"	"ly"	"/i"	"xi"	NA	"dpi"	"ṭpi"	"dpi 37"	TRUE
+"dp"	"ch"	"/i"	"ti"	5.64046479835954	"dpi"	"ṭpi"	"dpi 33"	TRUE
+"dp"	"ly"	"/i"	"xi"	6.37047163362953	"dpi"	"ṭpi"	"dpi 38"	TRUE
+"dp"	"d"	"/i"	"d8"	6	"dpi"	"ṭpi"	"dpi 19"	TRUE
+"i"	"î"	"/i"	"d8"	6	"dpi"	"ṭpi"	"dpi 19"	TRUE
+"dp"	"tp"	"/i"	":i"	4.97881066302119	"dpi"	"ṭpi"	"dpi 5"	TRUE
+"dp"	"ly"	"/i"	"xE"	9.09911141490089	"dpi"	"ṭpi"	"dpi 13"	TRUE
+"i"	"é"	"/i"	"xE"	9.09911141490089	"dpi"	"ṭpi"	"dpi 13"	TRUE
+"dp"	"d"	"/i"	"dE"	11.0321257689679	"dpi"	"ṭpi"	"dpi 21"	TRUE
+"i"	"é"	"/i"	"dE"	11.0321257689679	"dpi"	"ṭpi"	"dpi 21"	TRUE
+"dp"	"ly"	"/i"	"xE"	NA	"dpi"	"ṭpi"	"dpi 14"	TRUE
+"i"	"é"	"/i"	"xE"	NA	"dpi"	"ṭpi"	"dpi 14"	TRUE
+"dp"	"ly"	"/i"	"xi"	9.09911141490089	"dpi"	"ṭpi"	"dpi 35"	TRUE
+"dp"	"ly"	"/i"	"xE"	9.09911141490089	"dpi"	"ṭpi"	"dpi 16"	TRUE
+"i"	"é"	"/i"	"xE"	9.09911141490089	"dpi"	"ṭpi"	"dpi 16"	TRUE
+"dp"	"d"	"/i"	"d8"	11.0321257689679	"dpi"	"ṭpi"	"dpi 26"	TRUE
+"i"	"î"	"/i"	"d8"	11.0321257689679	"dpi"	"ṭpi"	"dpi 26"	TRUE
+"dp"	"d"	"/i"	"dE"	6	"dpi"	"ṭpi"	"dpi 24"	TRUE
+"i"	"é"	"/i"	"dE"	6	"dpi"	"ṭpi"	"dpi 24"	TRUE
+"dp"	"p"	"/i"	"pE"	7.60628844839371	"dpi"	"ṭpi"	"dpi 23"	TRUE
+"i"	"é"	"/i"	"pE"	7.60628844839371	"dpi"	"ṭpi"	"dpi 23"	TRUE
+"dp"	"ly"	"/i"	"xE"	7.81134654818865	"dpi"	"ṭpi"	"dpi 6"	TRUE
+"i"	"é"	"/i"	"xE"	7.81134654818865	"dpi"	"ṭpi"	"dpi 6"	TRUE
+"dp"	"ch"	"/i"	"ti"	4.80109364319891	"dpi"	"ṭpi"	"dpi 8"	TRUE
+"dp"	"d"	"/i"	"dE"	6	"dpi"	"ṭpi"	"dpi 2"	TRUE
+"i"	"é"	"/i"	"dE"	6	"dpi"	"ṭpi"	"dpi 2"	TRUE
+"dp"	"ly"	"/i"	"xi"	9.09911141490089	"dpi"	"ṭpi"	"dpi 4"	TRUE
+"dp"	"d"	"/i"	"dE"	6	"dpi"	"ṭpi"	"dpi 31"	TRUE
+"i"	"é"	"/i"	"dE"	6	"dpi"	"ṭpi"	"dpi 31"	TRUE
+"dp"	"ly"	"/i"	"xi"	7.60628844839371	"dpi"	"ṭpi"	"dpi 15"	TRUE
+"dp"	"ly"	"/i"	"xi"	5.27136021872864	"dpi"	"ṭpi"	"dpi 1"	TRUE
+"dp"	"d"	"/i"	"d8"	11.0321257689679	"dpi"	"ṭpi"	"dpi 18"	TRUE
+"i"	"î"	"/i"	"d8"	11.0321257689679	"dpi"	"ṭpi"	"dpi 18"	TRUE
+"dp"	"ly"	"/i"	"xi"	4.97881066302119	"dpi"	"ṭpi"	"dpi 28"	TRUE
+"dp"	"ly"	"/i"	"xi"	6.10526315789474	"dpi"	"ṭpi"	"dpi 39"	TRUE
+"dp"	"ly"	"/i"	"xi"	4.97881066302119	"dpi"	"ṭpi"	"dpi 34"	TRUE
+"dp"	"ch"	"/i"	"ti"	5.64046479835954	"dpi"	"ṭpi"	"dpi 36"	TRUE
+"dp"	"p"	"/i"	"pi"	7.35475051264525	"dpi"	"ṭpi"	"dpi 22"	TRUE
+"dp"	"ly"	"/i"	"xi"	5.11278195488722	"dpi"	"ṭpi"	"dpi 17"	TRUE
+"dp"	"ly"	"/i"	"xi"	4.97881066302119	"dpi"	"ṭpi"	"dpi 3"	TRUE
+"dp"	"p"	"/i"	"pE"	4.80109364319891	"dpi"	"ṭpi"	"dpi 29"	TRUE
+"i"	"é"	"/i"	"pE"	4.80109364319891	"dpi"	"ṭpi"	"dpi 29"	TRUE
+"dp"	"ly"	"/i"	"xE"	5.27136021872864	"dpi"	"ṭpi"	"dpi 32"	TRUE
+"i"	"é"	"/i"	"xE"	5.27136021872864	"dpi"	"ṭpi"	"dpi 32"	TRUE
+"dp"	"d"	"/i"	"d8"	5.11278195488722	"dpi"	"ṭpi"	"dpi 25"	TRUE
+"i"	"î"	"/i"	"d8"	5.11278195488722	"dpi"	"ṭpi"	"dpi 25"	TRUE
+"dp"	"ch"	"/u"	"tu"	6.76965140123035	"dpu"	"ṭpu"	"dpu 43"	TRUE
+"u"	"î"	"/u"	"/8"	5.52836637047163	"dpu"	"ṭpu"	"dpu 48"	TRUE
+"dp"	"d"	"/u"	"du"	5.24128503075871	"dpu"	"ṭpu"	"dpu 34"	TRUE
+"dp"	"d"	"/u"	"du"	5.19480519480519	"dpu"	"ṭpu"	"dpu 38"	TRUE
+"dp"	"d"	"/u"	"du"	8	"dpu"	"ṭpu"	"dpu 39"	TRUE
+"dp"	"d"	"/u"	"dO"	7.28366370471634	"dpu"	"ṭpu"	"dpu 30"	TRUE
+"u"	"ó"	"/u"	"dO"	7.28366370471634	"dpu"	"ṭpu"	"dpu 30"	TRUE
+"dp"	"d"	"/u"	"du"	8.03280929596719	"dpu"	"ṭpu"	"dpu 17"	TRUE
+"dp"	"d"	"/u"	"du"	7.47505126452495	"dpu"	"ṭpu"	"dpu 12"	TRUE
+"dp"	"d"	"/u"	"du"	8.6015037593985	"dpu"	"ṭpu"	"dpu 10"	TRUE
+"dp"	"d"	"/u"	"du"	5.52836637047163	"dpu"	"ṭpu"	"dpu 6"	TRUE
+"dp"	"ch"	"/u"	"tO"	7.94258373205742	"dpu"	"ṭpu"	"dpu 40"	TRUE
+"u"	"ó"	"/u"	"tO"	7.94258373205742	"dpu"	"ṭpu"	"dpu 40"	TRUE
+"dp"	"d"	"/u"	"du"	8.6015037593985	"dpu"	"ṭpu"	"dpu 46"	TRUE
+"dp"	"d"	"/u"	"du"	5.79904306220096	"dpu"	"ṭpu"	"dpu 47"	TRUE
+"dp"	"d"	"/u"	"dO"	8.6015037593985	"dpu"	"ṭpu"	"dpu 29"	TRUE
+"u"	"ó"	"/u"	"dO"	8.6015037593985	"dpu"	"ṭpu"	"dpu 29"	TRUE
+"dp"	"d"	"/u"	"dO"	6.76965140123035	"dpu"	"ṭpu"	"dpu 31"	TRUE
+"u"	"ó"	"/u"	"dO"	6.76965140123035	"dpu"	"ṭpu"	"dpu 31"	TRUE
+"dp"	"d"	"/u"	"du"	8.03280929596719	"dpu"	"ṭpu"	"dpu 22"	TRUE
+"dp"	"d"	"/u"	"du"	7.47505126452495	"dpu"	"ṭpu"	"dpu 16"	TRUE
+"dp"	"d"	"/u"	"dO"	5.52836637047163	"dpu"	"ṭpu"	"dpu 28"	TRUE
+"u"	"ó"	"/u"	"dO"	5.52836637047163	"dpu"	"ṭpu"	"dpu 28"	TRUE
+"dp"	"ly"	"/u"	"xu"	5.7799043062201	"dpu"	"ṭpu"	"dpu 20"	TRUE
+"dp"	"d"	"/u"	"du"	8.6015037593985	"dpu"	"ṭpu"	"dpu 15"	TRUE
+"dp"	"ch"	"/u"	"tO"	6.76965140123035	"dpu"	"ṭpu"	"dpu 13"	TRUE
+"u"	"ó"	"/u"	"tO"	6.76965140123035	"dpu"	"ṭpu"	"dpu 13"	TRUE
+"dp"	"ch"	"/u"	"tO"	3.91797676008202	"dpu"	"ṭpu"	"dpu 14"	TRUE
+"u"	"ó"	"/u"	"tO"	3.91797676008202	"dpu"	"ṭpu"	"dpu 14"	TRUE
+"dp"	"d"	"/u"	"di"	8.6015037593985	"dpu"	"ṭpu"	"dpu 45"	TRUE
+"u"	"i"	"/u"	"di"	8.6015037593985	"dpu"	"ṭpu"	"dpu 45"	TRUE
+"dp"	"d"	"/u"	"du"	8.03280929596719	"dpu"	"ṭpu"	"dpu 33"	TRUE
+"dp"	"d"	"/u"	"du"	8.03280929596719	"dpu"	"ṭpu"	"dpu 35"	TRUE
+"dp"	"d"	"/u"	"du"	5.52836637047163	"dpu"	"ṭpu"	"dpu 2"	TRUE
+"dp"	"d"	"/u"	"du"	8.30895420369105	"dpu"	"ṭpu"	"dpu 18"	TRUE
+"dp"	"d"	"/u"	"du"	8.03280929596719	"dpu"	"ṭpu"	"dpu 8"	TRUE
+"u"	"î"	"/u"	"/8/8"	8	"dpu"	"ṭpu"	"dpu 21"	TRUE
+"dp"	"d"	"/u"	"du"	7.28366370471634	"dpu"	"ṭpu"	"dpu 32"	TRUE
+"dp"	"d"	"/u"	"du"	5.52836637047163	"dpu"	"ṭpu"	"dpu 42"	TRUE
+"dp"	"ch"	"/u"	"tu"	3.91797676008202	"dpu"	"ṭpu"	"dpu 44"	TRUE
+"dp"	"d"	"/u"	"du"	6.76965140123035	"dpu"	"ṭpu"	"dpu 37"	TRUE
+"dp"	"ch"	"/u"	"tO"	3.91797676008202	"dpu"	"ṭpu"	"dpu 36"	TRUE
+"u"	"ó"	"/u"	"tO"	3.91797676008202	"dpu"	"ṭpu"	"dpu 36"	TRUE
+"dp"	"tp"	"/u"	":u"	7.4066985645933	"dpu"	"ṭpu"	"dpu 49"	TRUE
+"dp"	"d"	"/u"	"du"	6.32399179767601	"dpu"	"ṭpu"	"dpu 4"	TRUE
+"dp"	"ch"	"/u"	"tO"	3.91797676008202	"dpu"	"ṭpu"	"dpu 7"	TRUE
+"u"	"ó"	"/u"	"tO"	3.91797676008202	"dpu"	"ṭpu"	"dpu 7"	TRUE
+"dp"	"ch"	"/u"	"tO"	3.91797676008202	"dpu"	"ṭpu"	"dpu 41"	TRUE
+"u"	"ó"	"/u"	"tO"	3.91797676008202	"dpu"	"ṭpu"	"dpu 41"	TRUE
+":â"	":a"	"H5"	"H3"	5.79904306220096	"gh:ââ"	"ɣ̃ɑː"	"gh_aa 33"	TRUE
+":â"	":ê"	"H5"	"H4"	7.20710868079289	"gh:ââ"	"ɣ̃ɑː"	"gh_aa 9"	TRUE
+"gh"	"kn"	"H5"	"!5"	7.47505126452495	"gh:ââ"	"ɣ̃ɑː"	"gh_aa 8"	TRUE
+":â"	":ê"	"H5"	"H4"	7.47505126452495	"gh:ââ"	"ɣ̃ɑː"	"gh_aa 29"	TRUE
+"gh"	"w"	"H5"	"w5"	7.28366370471634	"gh:ââ"	"ɣ̃ɑː"	"gh_aa 20"	TRUE
+":â"	"e"	"H5"	"He"	6.32399179767601	"gh:ââ"	"ɣ̃ɑː"	"gh_aa 31"	TRUE
+":â"	"ó"	"H5"	"HO"	8.03280929596719	"gh:ââ"	"ɣ̃ɑː"	"gh_aa 22"	TRUE
+":â"	":ê"	"H5"	"H4"	8	"gh:ââ"	"ɣ̃ɑː"	"gh_aa 13"	TRUE
+"gh"	"w"	"H5"	"w5"	5.52836637047163	"gh:ââ"	"ɣ̃ɑː"	"gh_aa 26"	TRUE
+":â"	"e"	"H5"	"He"	6.32399179767601	"gh:ââ"	"ɣ̃ɑː"	"gh_aa 16"	TRUE
+":â"	":ê"	"H5"	"H4"	8	"gh:ââ"	"ɣ̃ɑː"	"gh_aa 7"	TRUE
+":â"	":a"	"H5"	"H3"	5.19480519480519	"gh:ââ"	"ɣ̃ɑː"	"gh_aa 17"	TRUE
+"u"	"ê"	"Hu"	"H9"	5.09637730690362	"ghuu"	"ɣuː"	"ghuu 4"	TRUE
+"u"	"ê"	"Hu"	"H9"	7.35475051264525	"ghuu"	"ɣuː"	"ghuu 29"	TRUE
+"u"	"ê"	"Hu"	"H9"	7.35475051264525	"ghuu"	"ɣuː"	"ghuu 23"	TRUE
+"u"	"ê"	"Hu"	"H9"	NA	"ghuu"	"ɣuː"	"ghuu 19"	TRUE
+"u"	"ê"	"Hu"	"H9"	7.35475051264525	"ghuu"	"ɣuː"	"ghuu 22"	TRUE
+"u"	"ê"	"Hu"	"H9"	6.37047163362953	"ghuu"	"ɣuː"	"ghuu 16"	TRUE
+"u"	"ê"	"Hu"	"H9"	4.97881066302119	"ghuu"	"ɣuː"	"ghuu 5"	TRUE
+"u"	"ê"	"Hu"	"H9"	6.10526315789474	"ghuu"	"ɣuː"	"ghuu 11"	TRUE
+"u"	"ê"	"Hu"	"H9"	7.81134654818865	"ghuu"	"ɣuː"	"ghuu 6"	TRUE
+"u"	"ê"	"Hu"	"H9"	6.37047163362953	"ghuu"	"ɣuː"	"ghuu 28"	TRUE
+"a"	":a"	"kamo"	"k3moyi"	7.25358851674641	"kamo"	"kæmɔ"	"kamo 5"	TRUE
+"a"	":a"	"kamo"	"k3mo"	11.0321257689679	"kamo"	"kæmɔ"	"kamo 1"	TRUE
+"a"	":a"	"kamo"	"k3mo"	7.35475051264525	"kamo"	"kæmɔ"	"kamo 2"	TRUE
+"k"	"d"	"kańi"	"deni"	4.80109364319891	"kańi"	"kæni"	"kani 10"	TRUE
+"a"	"e"	"kańi"	"deni"	4.80109364319891	"kańi"	"kæni"	"kani 10"	TRUE
+"'n"	"n"	"kańi"	"deni"	4.80109364319891	"kańi"	"kæni"	"kani 10"	TRUE
+"a"	":a"	"kańi"	"k3ni"	6	"kańi"	"kæni"	"kani 27"	TRUE
+"'n"	"n"	"kańi"	"k3ni"	6	"kańi"	"kæni"	"kani 27"	TRUE
+"a"	"e"	"kańi"	"keni"	9.09911141490089	"kańi"	"kæni"	"kani 8"	TRUE
+"'n"	"n"	"kańi"	"keni"	9.09911141490089	"kańi"	"kæni"	"kani 8"	TRUE
+"k"	"d"	"kańi"	"deni"	4.80109364319891	"kańi"	"kæni"	"kani 28"	TRUE
+"a"	"e"	"kańi"	"deni"	4.80109364319891	"kańi"	"kæni"	"kani 28"	TRUE
+"'n"	"n"	"kańi"	"deni"	4.80109364319891	"kańi"	"kæni"	"kani 28"	TRUE
+"a"	":a"	"kańi"	"k3ni"	7.20710868079289	"kańi"	"kæni"	"kani 13"	TRUE
+"'n"	"n"	"kańi"	"k3ni"	7.20710868079289	"kańi"	"kæni"	"kani 13"	TRUE
+"a"	"e"	"kańi"	"keni"	6	"kańi"	"kæni"	"kani 19"	TRUE
+"'n"	"n"	"kańi"	"keni"	6	"kańi"	"kæni"	"kani 19"	TRUE
+"a"	":a"	"kańi"	"k3ni"	7.20710868079289	"kańi"	"kæni"	"kani 1"	TRUE
+"'n"	"n"	"kańi"	"k3ni"	7.20710868079289	"kańi"	"kæni"	"kani 1"	TRUE
+"a"	":a"	"kańi"	"k3ni"	3.91797676008202	"kańi"	"kæni"	"kani 12"	TRUE
+"'n"	"n"	"kańi"	"k3ni"	3.91797676008202	"kańi"	"kæni"	"kani 12"	TRUE
+"k"	"d"	"kańi"	"dani"	5.24128503075871	"kańi"	"kæni"	"kani 3"	TRUE
+"'n"	"n"	"kańi"	"dani"	5.24128503075871	"kańi"	"kæni"	"kani 3"	TRUE
+"a"	":a"	"kańi"	"k3ni"	7.12781954887218	"kańi"	"kæni"	"kani 20"	TRUE
+"'n"	"n"	"kańi"	"k3ni"	7.12781954887218	"kańi"	"kæni"	"kani 20"	TRUE
+"a"	":a"	"kańi"	"k3ni"	6.88448393711552	"kańi"	"kæni"	"kani 2"	TRUE
+"'n"	"n"	"kańi"	"k3ni"	6.88448393711552	"kańi"	"kæni"	"kani 2"	TRUE
+"k"	"d"	"kipo"	"dipo"	6	"kipo"	"kipɔ"	"kipo 17"	TRUE
+"k"	"ch"	"kipo"	"tipo"	3.91797676008202	"kipo"	"kipɔ"	"kipo 18"	TRUE
+"k"	"ch"	"kipo"	"tipo"	3.91797676008202	"kipo"	"kipɔ"	"kipo 6"	TRUE
+"k"	"d"	"kipo"	"dipo"	6	"kipo"	"kipɔ"	"kipo 15"	TRUE
+"k"	"ch"	"kipo"	"tipo"	6	"kipo"	"kipɔ"	"kipo 21"	TRUE
+"k"	"ch"	"kipo"	"tipo"	3.91797676008202	"kipo"	"kipɔ"	"kipo 26"	TRUE
+"k"	"ch"	"kipo"	"tipo"	3.91797676008202	"kipo"	"kipɔ"	"kipo 13"	TRUE
+"kp"	"d"	"P5"	"d5"	NA	"kp:ââ"	"kp̃ɑː"	"kp_aa 23"	TRUE
+"kp"	"d"	"P5"	"d5"	6.32399179767601	"kp:ââ"	"kp̃ɑː"	"kp_aa 18"	TRUE
+"kp"	"ch"	"P5"	"t5"	7.47505126452495	"kp:ââ"	"kp̃ɑː"	"kp_aa 41"	TRUE
+":â"	"o"	"P5"	"Po"	7.20710868079289	"kp:ââ"	"kp̃ɑː"	"kp_aa 15"	TRUE
+"kp"	"k"	"P5"	"k5"	7.47505126452495	"kp:ââ"	"kp̃ɑː"	"kp_aa 4"	TRUE
+"kp"	"p"	"P5"	"pa"	6.32399179767601	"kp:ââ"	"kp̃ɑː"	"kp_aa 12"	TRUE
+":â"	"a"	"P5"	"pa"	6.32399179767601	"kp:ââ"	"kp̃ɑː"	"kp_aa 12"	TRUE
+"kp"	"kn"	"P5"	"!5"	7.28366370471634	"kp:ââ"	"kp̃ɑː"	"kp_aa 29"	TRUE
+"kp"	"ch"	"P5"	"t5"	8.6015037593985	"kp:ââ"	"kp̃ɑː"	"kp_aa 25"	TRUE
+"kp"	"kn"	"P5"	"!5"	8.03280929596719	"kp:ââ"	"kp̃ɑː"	"kp_aa 9"	TRUE
+"kp"	"k"	"P5"	"k5"	7.47505126452495	"kp:ââ"	"kp̃ɑː"	"kp_aa 19"	TRUE
+"kp"	"km"	"P5"	"Zo"	9.52563226247437	"kp:ââ"	"kp̃ɑː"	"kp_aa 37"	TRUE
+":â"	"o"	"P5"	"Zo"	9.52563226247437	"kp:ââ"	"kp̃ɑː"	"kp_aa 37"	TRUE
+"kp"	"ch"	"P5"	"t5"	7.47505126452495	"kp:ââ"	"kp̃ɑː"	"kp_aa 24"	TRUE
+"kp"	"d"	"P5"	"d5"	5.24128503075871	"kp:ââ"	"kp̃ɑː"	"kp_aa 33"	TRUE
+"kp"	"km"	"P5"	"Zo"	7.12781954887218	"kp:ââ"	"kp̃ɑː"	"kp_aa 36"	TRUE
+":â"	"o"	"P5"	"Zo"	7.12781954887218	"kp:ââ"	"kp̃ɑː"	"kp_aa 36"	TRUE
+"kp"	"w"	"P5"	"w5"	5.24128503075871	"kp:ââ"	"kp̃ɑː"	"kp_aa 20"	TRUE
+"kp"	"d"	"P5"	"d5"	5.24128503075871	"kp:ââ"	"kp̃ɑː"	"kp_aa 5"	TRUE
+":â"	"o"	"P5"	"Po"	7.20710868079289	"kp:ââ"	"kp̃ɑː"	"kp_aa 39"	TRUE
+"kp"	"ch"	"P5"	"t5"	NA	"kp:ââ"	"kp̃ɑː"	"kp_aa 3"	TRUE
+"kp"	"d"	"P5"	"d5"	7.25358851674641	"kp:ââ"	"kp̃ɑː"	"kp_aa 40"	TRUE
+"kp"	"d"	"P5"	"d5"	7.25358851674641	"kp:ââ"	"kp̃ɑː"	"kp_aa 38"	TRUE
+"kp"	"ch"	"P5"	"t5"	7.25358851674641	"kp:ââ"	"kp̃ɑː"	"kp_aa 2"	TRUE
+"kp"	"kn"	"P5"	"!5"	3.91797676008202	"kp:ââ"	"kp̃ɑː"	"kp_aa 7"	TRUE
+"kp"	"ch"	"P5"	"t5"	7.47505126452495	"kp:ââ"	"kp̃ɑː"	"kp_aa 35"	TRUE
+"kp"	"d"	"P5"	"d5"	7.25358851674641	"kp:ââ"	"kp̃ɑː"	"kp_aa 16"	TRUE
+"kp"	"p"	"Pu"	"p9"	5.64046479835954	"kpu"	"kpu"	"kpu 1"	TRUE
+"u"	"ê"	"Pu"	"p9"	5.64046479835954	"kpu"	"kpu"	"kpu 1"	TRUE
+"u"	"ê"	"Pu"	"P9"	6.88448393711552	"kpu"	"kpu"	"kpu 18"	TRUE
+"kp"	"tp"	"Pu"	":e"	5.09637730690362	"kpu"	"kpu"	"kpu 3"	TRUE
+"u"	"e"	"Pu"	":e"	5.09637730690362	"kpu"	"kpu"	"kpu 3"	TRUE
+"u"	"ê"	"Pu"	"P9"	5.27136021872864	"kpu"	"kpu"	"kpu 4"	TRUE
+"u"	"ê"	"Pu"	"P9"	11.0321257689679	"kpu"	"kpu"	"kpu 17"	TRUE
+"kp"	"p"	"Pu"	"p9"	5.64046479835954	"kpu"	"kpu"	"kpu 5"	TRUE
+"u"	"ê"	"Pu"	"p9"	5.64046479835954	"kpu"	"kpu"	"kpu 5"	TRUE
+"u"	"ê"	"Pu"	"P9"	5.27136021872864	"kpu"	"kpu"	"kpu 6"	TRUE
+"u"	"ê"	"Pu"	"P9"	6.10526315789474	"kpu"	"kpu"	"kpu 13"	TRUE
+"u"	"ê"	"Pu"	"P9"	NA	"kpu"	"kpu"	"kpu 10"	TRUE
+"u"	"ê"	"Pu"	"P9"	4.80109364319891	"kpu"	"kpu"	"kpu 19"	TRUE
+"u"	"ê"	"Pu"	"P9"	7.35475051264525	"kpu"	"kpu"	"kpu 7"	TRUE
+"u"	"ê"	"Pu"	"P9"	7.81134654818865	"kpu"	"kpu"	"kpu 20"	TRUE
+"lv"	"v"	"L4"	"va"	NA	"lv:ê"	"lβʲ̃ə"	"lv_e 7"	TRUE
+":ê"	"a"	"L4"	"va"	NA	"lv:ê"	"lβʲ̃ə"	"lv_e 7"	TRUE
+"lv"	"w"	"L4"	"w5"	6.88448393711552	"lv:ê"	"lβʲ̃ə"	"lv_e 11"	TRUE
+":ê"	":â"	"L4"	"w5"	6.88448393711552	"lv:ê"	"lβʲ̃ə"	"lv_e 11"	TRUE
+"lv"	"w"	"L4"	"w5"	6.88448393711552	"lv:ê"	"lβʲ̃ə"	"lv_e 8"	TRUE
+":ê"	":â"	"L4"	"w5"	6.88448393711552	"lv:ê"	"lβʲ̃ə"	"lv_e 8"	TRUE
+"lv"	"gh"	"L4"	"H8"	7.35475051264525	"lv:ê"	"lβʲ̃ə"	"lv_e 14"	TRUE
+":ê"	"î"	"L4"	"H8"	7.35475051264525	"lv:ê"	"lβʲ̃ə"	"lv_e 14"	TRUE
+"lv"	"w"	"L4"	"w5"	4.80109364319891	"lv:ê"	"lβʲ̃ə"	"lv_e 6"	TRUE
+":ê"	":â"	"L4"	"w5"	4.80109364319891	"lv:ê"	"lβʲ̃ə"	"lv_e 6"	TRUE
+"lv"	"w"	"L4"	"w5"	4.97881066302119	"lv:ê"	"lβʲ̃ə"	"lv_e 4"	TRUE
+":ê"	":â"	"L4"	"w5"	4.97881066302119	"lv:ê"	"lβʲ̃ə"	"lv_e 4"	TRUE
+"lv"	"w"	"L4"	"w5"	7.37115516062885	"lv:ê"	"lβʲ̃ə"	"lv_e 23"	TRUE
+":ê"	":â"	"L4"	"w5"	7.37115516062885	"lv:ê"	"lβʲ̃ə"	"lv_e 23"	TRUE
+"lv"	"w"	"L4"	"w5"	5.11278195488722	"lv:ê"	"lβʲ̃ə"	"lv_e 24"	TRUE
+":ê"	":â"	"L4"	"w5"	5.11278195488722	"lv:ê"	"lβʲ̃ə"	"lv_e 24"	TRUE
+"lv"	"w"	"L4"	"wo"	4.97881066302119	"lv:ê"	"lβʲ̃ə"	"lv_e 18"	TRUE
+":ê"	"o"	"L4"	"wo"	4.97881066302119	"lv:ê"	"lβʲ̃ə"	"lv_e 18"	TRUE
+"lv"	"w"	"L4"	"w5"	11.0321257689679	"lv:ê"	"lβʲ̃ə"	"lv_e 16"	TRUE
+":ê"	":â"	"L4"	"w5"	11.0321257689679	"lv:ê"	"lβʲ̃ə"	"lv_e 16"	TRUE
+"lv"	"v"	"L4"	"v3"	7.37115516062885	"lv:ê"	"lβʲ̃ə"	"lv_e 9"	TRUE
+":ê"	":a"	"L4"	"v3"	7.37115516062885	"lv:ê"	"lβʲ̃ə"	"lv_e 9"	TRUE
+"lv"	"w"	"L4"	"w5"	6.10526315789474	"lv:ê"	"lβʲ̃ə"	"lv_e 21"	TRUE
+":ê"	":â"	"L4"	"w5"	6.10526315789474	"lv:ê"	"lβʲ̃ə"	"lv_e 21"	TRUE
+"lv"	"km"	"L4"	"Z1"	9.09911141490089	"lv:ê"	"lβʲ̃ə"	"lv_e 27"	TRUE
+":ê"	":i"	"L4"	"Z1"	9.09911141490089	"lv:ê"	"lβʲ̃ə"	"lv_e 27"	TRUE
+"lv"	"v"	"L4"	"va"	5.11278195488722	"lv:ê"	"lβʲ̃ə"	"lv_e 10"	TRUE
+":ê"	"a"	"L4"	"va"	5.11278195488722	"lv:ê"	"lβʲ̃ə"	"lv_e 10"	TRUE
+"lv"	"w"	"L4"	"wo"	4.97881066302119	"lv:ê"	"lβʲ̃ə"	"lv_e 13"	TRUE
+":ê"	"o"	"L4"	"wo"	4.97881066302119	"lv:ê"	"lβʲ̃ə"	"lv_e 13"	TRUE
+"lv"	"vy"	"La"	"V3"	5.19480519480519	"lva"	"lβʲæ"	"lva 12"	TRUE
+"a"	":a"	"La"	"V3"	5.19480519480519	"lva"	"lβʲæ"	"lva 12"	TRUE
+"lv"	"vy"	"La"	"V3"	10.1982228298018	"lva"	"lβʲæ"	"lva 17"	TRUE
+"a"	":a"	"La"	"V3"	10.1982228298018	"lva"	"lβʲæ"	"lva 17"	TRUE
+"lv"	"vy"	"La"	"V3"	7.25358851674641	"lva"	"lβʲæ"	"lva 26"	TRUE
+"a"	":a"	"La"	"V3"	7.25358851674641	"lva"	"lβʲæ"	"lva 26"	TRUE
+"lv"	"w"	"La"	"w5"	7.28366370471634	"lva"	"lβʲæ"	"lva 29"	TRUE
+"a"	":â"	"La"	"w5"	7.28366370471634	"lva"	"lβʲæ"	"lva 29"	TRUE
+"lv"	"vy"	"La"	"V3"	7.5434039644566	"lva"	"lβʲæ"	"lva 30"	TRUE
+"a"	":a"	"La"	"V3"	7.5434039644566	"lva"	"lβʲæ"	"lva 30"	TRUE
+"a"	"e"	"La"	"Le"	7.20710868079289	"lva"	"lβʲæ"	"lva 11"	TRUE
+"lv"	"gh"	"La"	"He"	6.32399179767601	"lva"	"lβʲæ"	"lva 7"	TRUE
+"a"	"e"	"La"	"He"	6.32399179767601	"lva"	"lβʲæ"	"lva 7"	TRUE
+"lv"	"d"	"La"	"d5"	7.12781954887218	"lva"	"lβʲæ"	"lva 18"	TRUE
+"a"	":â"	"La"	"d5"	7.12781954887218	"lva"	"lβʲæ"	"lva 18"	TRUE
+"lv"	"vy"	"La"	"V3"	10.1982228298018	"lva"	"lβʲæ"	"lva 31"	TRUE
+"a"	":a"	"La"	"V3"	10.1982228298018	"lva"	"lβʲæ"	"lva 31"	TRUE
+"lv"	"vy"	"La"	"V3"	6.76965140123035	"lva"	"lβʲæ"	"lva 13"	TRUE
+"a"	":a"	"La"	"V3"	6.76965140123035	"lva"	"lβʲæ"	"lva 13"	TRUE
+"a"	":â"	"La"	"L5"	3.91797676008202	"lva"	"lβʲæ"	"lva 5"	TRUE
+"lv"	"vy"	"La"	"V3"	8.03280929596719	"lva"	"lβʲæ"	"lva 10"	TRUE
+"a"	":a"	"La"	"V3"	8.03280929596719	"lva"	"lβʲæ"	"lva 10"	TRUE
+"a"	"e"	"La"	"Le"	5.79904306220096	"lva"	"lβʲæ"	"lva 24"	TRUE
+"a"	"e"	"La"	"Le"	5.79904306220096	"lva"	"lβʲæ"	"lva 22"	TRUE
+"a"	"e"	"La"	"Le"	5.52836637047163	"lva"	"lβʲæ"	"lva 23"	TRUE
+"lv"	"vy"	"Li"	"Vi"	8.03280929596719	"lvi"	"lβʲi"	"lvi 31"	TRUE
+"lv"	"vy"	"Li"	"Vi"	6.32399179767601	"lvi"	"lβʲi"	"lvi 7"	TRUE
+"lv"	"vy"	"Li"	"Vi"	10.1982228298018	"lvi"	"lβʲi"	"lvi 4"	TRUE
+"lv"	"vy"	"Li"	"Vi"	7.20710868079289	"lvi"	"lβʲi"	"lvi 20"	TRUE
+"lv"	"gh"	"Li"	"Hi"	5.19480519480519	"lvi"	"lβʲi"	"lvi 9"	TRUE
+"lv"	"l"	"Li"	"luxe"	7.5434039644566	"lvi"	"lβʲi"	"lvi 18"	TRUE
+"i"	"u"	"Li"	"luxe"	7.5434039644566	"lvi"	"lβʲi"	"lvi 18"	TRUE
+"lv"	"vy"	"Li"	"Vi"	8.03280929596719	"lvi"	"lβʲi"	"lvi 8"	TRUE
+"lv"	"vy"	"Li"	"Vi"	5.19480519480519	"lvi"	"lβʲi"	"lvi 19"	TRUE
+"lv"	"vy"	"Li"	"Vi"	8.03280929596719	"lvi"	"lβʲi"	"lvi 33"	TRUE
+"lv"	"vy"	"Li"	"Vi"	8.03280929596719	"lvi"	"lβʲi"	"lvi 23"	TRUE
+"e"	"i"	"meyadi"	"miyedi"	7.20710868079289	"meyadi"	"mɛjæṭi"	"meyadi 14"	TRUE
+"a"	"e"	"meyadi"	"miyedi"	7.20710868079289	"meyadi"	"mɛjæṭi"	"meyadi 14"	TRUE
+"m"	"n"	"meyadi"	"neyadi"	11.0321257689679	"meyadi"	"mɛjæṭi"	"meyadi 1"	TRUE
+"a"	"e"	"meyadi"	"meyedi"	6.10526315789474	"meyadi"	"mɛjæṭi"	"meyadi 19"	TRUE
+"e"	"a"	"mituye"	"mituya"	3.91797676008202	"mituye"	"mitujɛ"	"mituye 15"	TRUE
+"u"	"e"	"mituye"	"miteye"	5.19480519480519	"mituye"	"mitujɛ"	"mituye 6"	TRUE
+"e"	"a"	"mituye"	"mituya"	5.64046479835954	"mituye"	"mitujɛ"	"mituye 20"	TRUE
+"e"	"a"	"mituye"	"mituya"	7.12781954887218	"mituye"	"mitujɛ"	"mituye 26"	TRUE
+"e"	"a"	"mituye"	"mituya"	7.25358851674641	"mituye"	"mitujɛ"	"mituye 17"	TRUE
+"'n"	"e"	"ńademo"	"enademo"	5.79904306220096	"ńademo"	"næṭɛmɔ"	"nademo 10"	TRUE
+"'n"	"l"	"ńademo"	"lavu"	5.79904306220096	"ńademo"	"næṭɛmɔ"	"nademo 4"	TRUE
+"d"	"v"	"ńademo"	"lavu"	5.79904306220096	"ńademo"	"næṭɛmɔ"	"nademo 4"	TRUE
+"e"	"u"	"ńademo"	"lavu"	5.79904306220096	"ńademo"	"næṭɛmɔ"	"nademo 4"	TRUE
+"'n"	"n"	"ńademo"	"natemo"	6.32399179767601	"ńademo"	"næṭɛmɔ"	"nademo 3"	TRUE
+"d"	"ch"	"ńademo"	"natemo"	6.32399179767601	"ńademo"	"næṭɛmɔ"	"nademo 3"	TRUE
+"'n"	"n"	"ńademo"	"navu"	5.79904306220096	"ńademo"	"næṭɛmɔ"	"nademo 16"	TRUE
+"d"	"v"	"ńademo"	"navu"	5.79904306220096	"ńademo"	"næṭɛmɔ"	"nademo 16"	TRUE
+"e"	"u"	"ńademo"	"navu"	5.79904306220096	"ńademo"	"næṭɛmɔ"	"nademo 16"	TRUE
+"'n"	"n"	"ńayeki"	"nayaki"	7.37115516062885	"ńayeki"	"næjɛki"	"nayeki 22"	TRUE
+"e"	"a"	"ńayeki"	"nayaki"	7.37115516062885	"ńayeki"	"næjɛki"	"nayeki 22"	TRUE
+"'n"	"n"	"ńayeki"	"nayek1k1"	8.51674641148325	"ńayeki"	"næjɛki"	"nayeki 6"	TRUE
+"i"	":i"	"ńayeki"	"nayek1k1"	8.51674641148325	"ńayeki"	"næjɛki"	"nayeki 6"	TRUE
+"'n"	"n"	"ńayeki"	"nakek1"	8.51674641148325	"ńayeki"	"næjɛki"	"nayeki 25"	TRUE
+"y"	"k"	"ńayeki"	"nakek1"	8.51674641148325	"ńayeki"	"næjɛki"	"nayeki 25"	TRUE
+"i"	":i"	"ńayeki"	"nakek1"	8.51674641148325	"ńayeki"	"næjɛki"	"nayeki 25"	TRUE
+"'n"	"n"	"ńoki"	"nok1"	7.47505126452495	"ńoki"	"nɔki"	"noki 19"	TRUE
+"i"	":i"	"ńoki"	"nok1"	7.47505126452495	"ńoki"	"nɔki"	"noki 19"	TRUE
+"'n"	"n"	"ńoki"	"nok1"	7.25358851674641	"ńoki"	"nɔki"	"noki 25"	TRUE
+"i"	":i"	"ńoki"	"nok1"	7.25358851674641	"ńoki"	"nɔki"	"noki 25"	TRUE
+"'n"	"n"	"ńoki"	"nok1"	7.25358851674641	"ńoki"	"nɔki"	"noki 7"	TRUE
+"i"	":i"	"ńoki"	"nok1"	7.25358851674641	"ńoki"	"nɔki"	"noki 7"	TRUE
+"'n"	"n"	"ńoki"	"nok8"	7.94258373205742	"ńoki"	"nɔki"	"noki 6"	TRUE
+"i"	"î"	"ńoki"	"nok8"	7.94258373205742	"ńoki"	"nɔki"	"noki 6"	TRUE
+"'n"	"n"	"ńoki"	"nok1"	5.7799043062201	"ńoki"	"nɔki"	"noki 24"	TRUE
+"i"	":i"	"ńoki"	"nok1"	5.7799043062201	"ńoki"	"nɔki"	"noki 24"	TRUE
+"'n"	"f"	"ńomiwake"	"formewake"	4.97881066302119	"ńomiwake"	"nɔmiwækɛ"	"nomiwake 25"	TRUE
+"i"	"e"	"ńomiwake"	"formewake"	4.97881066302119	"ńomiwake"	"nɔmiwækɛ"	"nomiwake 25"	TRUE
+"'n"	"n"	"ńomiwake"	"nomiwake"	5.79904306220096	"ńomiwake"	"nɔmiwækɛ"	"nomiwake 18"	FALSE
+"'n"	"n"	"ńomiwake"	"nOxuwake"	10.1982228298018	"ńomiwake"	"nɔmiwækɛ"	"nomiwake 10"	TRUE
+"o"	"ó"	"ńomiwake"	"nOxuwake"	10.1982228298018	"ńomiwake"	"nɔmiwækɛ"	"nomiwake 10"	TRUE
+"m"	"ly"	"ńomiwake"	"nOxuwake"	10.1982228298018	"ńomiwake"	"nɔmiwækɛ"	"nomiwake 10"	TRUE
+"i"	"u"	"ńomiwake"	"nOxuwake"	10.1982228298018	"ńomiwake"	"nɔmiwækɛ"	"nomiwake 10"	TRUE
+"'n"	"n"	"ńomiwake"	"nomiwake"	5.24128503075871	"ńomiwake"	"nɔmiwækɛ"	"nomiwake 21"	TRUE
+"'n"	"n"	"ńomiwake"	"nexiwate"	6.32399179767601	"ńomiwake"	"nɔmiwækɛ"	"nomiwake 20"	TRUE
+"o"	"e"	"ńomiwake"	"nexiwate"	6.32399179767601	"ńomiwake"	"nɔmiwækɛ"	"nomiwake 20"	TRUE
+"m"	"ly"	"ńomiwake"	"nexiwate"	6.32399179767601	"ńomiwake"	"nɔmiwækɛ"	"nomiwake 20"	TRUE
+"k"	"ch"	"ńomiwake"	"nexiwate"	6.32399179767601	"ńomiwake"	"nɔmiwækɛ"	"nomiwake 20"	TRUE
+"'n"	"n"	"ńomiwake"	"nomiwake"	5.24128503075871	"ńomiwake"	"nɔmiwækɛ"	"nomiwake 17"	FALSE
+"'n"	"n"	"ńuyedi"	"nuyetE"	8	"ńuyedi"	"nujɛṭi"	"nuyedi 17"	TRUE
+"d"	"ch"	"ńuyedi"	"nuyetE"	8	"ńuyedi"	"nujɛṭi"	"nuyedi 17"	TRUE
+"i"	"é"	"ńuyedi"	"nuyetE"	8	"ńuyedi"	"nujɛṭi"	"nuyedi 17"	TRUE
+"'n"	"n"	"ńuyedi"	"nuyedi"	5.27136021872864	"ńuyedi"	"nujɛṭi"	"nuyedi 28"	FALSE
+"p"	"d"	"pedumi"	"dedumi"	6.32399179767601	"pedumi"	"pɛṭumi"	"pedumi 16"	TRUE
+"d"	"s"	"pedumi"	"peshumi"	7.35475051264525	"pedumi"	"pɛṭumi"	"pedumi 21"	FALSE
+"p"	"ch"	"piwa"	"tiwa"	4.80109364319891	"piwa"	"piwæ"	"piwa 2"	TRUE
+"p"	"d"	"piwa"	"diwa"	6.37047163362953	"piwa"	"piwæ"	"piwa 22"	TRUE
+"p"	"ch"	"piwa"	"tiwa"	6.37047163362953	"piwa"	"piwæ"	"piwa 6"	TRUE
+"p"	"ch"	"piwa"	"tiwa"	6.37047163362953	"piwa"	"piwæ"	"piwa 20"	TRUE
+"p"	"d"	"piwa"	"diwa"	8.30895420369105	"piwa"	"piwæ"	"piwa 33"	TRUE
+"p"	"d"	"piwa"	"diwa"	8.30895420369105	"piwa"	"piwæ"	"piwa 5"	TRUE
+"p"	"d"	"piwa"	"diwa"	5.09637730690362	"piwa"	"piwæ"	"piwa 29"	TRUE
+"p"	"ch"	"piwa"	"tiwa"	6.37047163362953	"piwa"	"piwæ"	"piwa 4"	TRUE
+"p"	"d"	"piwa"	"diwa"	6.88448393711552	"piwa"	"piwæ"	"piwa 34"	TRUE
+"p"	"d"	"piwa"	"diwa"	6.88448393711552	"piwa"	"piwæ"	"piwa 32"	TRUE
+"p"	"ch"	"piwa"	"tiwa"	8.30895420369105	"piwa"	"piwæ"	"piwa 8"	TRUE
+"p"	"d"	"piwa"	"diwa"	6.88448393711552	"piwa"	"piwæ"	"piwa 18"	TRUE
+"a"	"o"	"piwa"	"piwo"	5.52836637047163	"piwa"	"piwæ"	"piwa 16"	TRUE
+"p"	"d"	"piwa"	"diwa"	6.88448393711552	"piwa"	"piwæ"	"piwa 13"	TRUE
+":ê"	"â"	"t4"	"t0"	5.19480519480519	"t:êê"	"t̃əː"	"t_ee 14"	TRUE
+":ê"	"e"	"t4"	"te"	5.24128503075871	"t:êê"	"t̃əː"	"t_ee 17"	TRUE
+":ê"	"â"	"t4"	"t0"	5.24128503075871	"t:êê"	"t̃əː"	"t_ee 5"	TRUE
+":ê"	"e"	"t4"	"te"	5.24128503075871	"t:êê"	"t̃əː"	"t_ee 12"	TRUE
+":ê"	":a"	"t4"	"t3"	5.24128503075871	"t:êê"	"t̃əː"	"t_ee 7"	TRUE
+":ê"	"e"	"t4"	"te"	5.24128503075871	"t:êê"	"t̃əː"	"t_ee 10"	TRUE
+":ê"	"â"	"t4"	"t0"	6.32399179767601	"t:êê"	"t̃əː"	"t_ee 3"	TRUE
+"ch"	"d"	"tiwuńe"	"diwune"	5.7799043062201	"tiwuńe"	"tiwunɛ"	"tiwune 30"	TRUE
+"'n"	"n"	"tiwuńe"	"diwune"	5.7799043062201	"tiwuńe"	"tiwunɛ"	"tiwune 30"	TRUE
+"ch"	"k"	"tiwuńe"	"kiwune"	8.51674641148325	"tiwuńe"	"tiwunɛ"	"tiwune 4"	TRUE
+"'n"	"n"	"tiwuńe"	"kiwune"	8.51674641148325	"tiwuńe"	"tiwunɛ"	"tiwune 4"	TRUE
+"ch"	"d"	"tiwuńe"	"duwine"	4.80109364319891	"tiwuńe"	"tiwunɛ"	"tiwune 29"	TRUE
+"i"	"u"	"tiwuńe"	"duwine"	4.80109364319891	"tiwuńe"	"tiwunɛ"	"tiwune 29"	TRUE
+"u"	"i"	"tiwuńe"	"duwine"	4.80109364319891	"tiwuńe"	"tiwunɛ"	"tiwune 29"	TRUE
+"'n"	"n"	"tiwuńe"	"duwine"	4.80109364319891	"tiwuńe"	"tiwunɛ"	"tiwune 29"	TRUE
+"w"	"k"	"tiwuńe"	"tikune"	7.47505126452495	"tiwuńe"	"tiwunɛ"	"tiwune 20"	TRUE
+"'n"	"n"	"tiwuńe"	"tikune"	7.47505126452495	"tiwuńe"	"tiwunɛ"	"tiwune 20"	TRUE
+"ch"	"d"	"tiwuńe"	"diwuma"	8.6015037593985	"tiwuńe"	"tiwunɛ"	"tiwune 36"	TRUE
+"'n"	"m"	"tiwuńe"	"diwuma"	8.6015037593985	"tiwuńe"	"tiwunɛ"	"tiwune 36"	TRUE
+"e"	"a"	"tiwuńe"	"diwuma"	8.6015037593985	"tiwuńe"	"tiwunɛ"	"tiwune 36"	TRUE
+"ch"	"d"	"tiwuńe"	"diwune"	11.0321257689679	"tiwuńe"	"tiwunɛ"	"tiwune 28"	TRUE
+"'n"	"n"	"tiwuńe"	"diwune"	11.0321257689679	"tiwuńe"	"tiwunɛ"	"tiwune 28"	TRUE
+"u"	"i"	"tiwuńe"	"tiwine"	4.80109364319891	"tiwuńe"	"tiwunɛ"	"tiwune 8"	TRUE
+"'n"	"n"	"tiwuńe"	"tiwine"	4.80109364319891	"tiwuńe"	"tiwunɛ"	"tiwune 8"	TRUE
+"ch"	"k"	"tiwuńe"	"k1kune"	8.51674641148325	"tiwuńe"	"tiwunɛ"	"tiwune 21"	TRUE
+"i"	":i"	"tiwuńe"	"k1kune"	8.51674641148325	"tiwuńe"	"tiwunɛ"	"tiwune 21"	TRUE
+"w"	"k"	"tiwuńe"	"k1kune"	8.51674641148325	"tiwuńe"	"tiwunɛ"	"tiwune 21"	TRUE
+"'n"	"n"	"tiwuńe"	"k1kune"	8.51674641148325	"tiwuńe"	"tiwunɛ"	"tiwune 21"	TRUE
+"w"	"h"	"tiwuńe"	"tihune"	7.60628844839371	"tiwuńe"	"tiwunɛ"	"tiwune 33"	TRUE
+"'n"	"n"	"tiwuńe"	"tihune"	7.60628844839371	"tiwuńe"	"tiwunɛ"	"tiwune 33"	TRUE
+"ch"	"d"	"tiwuńe"	"diwune"	8.6015037593985	"tiwuńe"	"tiwunɛ"	"tiwune 39"	TRUE
+"'n"	"n"	"tiwuńe"	"diwune"	8.6015037593985	"tiwuńe"	"tiwunɛ"	"tiwune 39"	TRUE
+"ch"	"d"	"tiwuńe"	"diwune"	5.7799043062201	"tiwuńe"	"tiwunɛ"	"tiwune 19"	TRUE
+"'n"	"n"	"tiwuńe"	"diwune"	5.7799043062201	"tiwuńe"	"tiwunɛ"	"tiwune 19"	TRUE
+"ch"	"d"	"tiwuńe"	"diwune"	8.03280929596719	"tiwuńe"	"tiwunɛ"	"tiwune 40"	TRUE
+"'n"	"n"	"tiwuńe"	"diwune"	8.03280929596719	"tiwuńe"	"tiwunɛ"	"tiwune 40"	TRUE
+"ch"	"d"	"tiwuńe"	"dihune"	5.19480519480519	"tiwuńe"	"tiwunɛ"	"tiwune 34"	TRUE
+"w"	"h"	"tiwuńe"	"dihune"	5.19480519480519	"tiwuńe"	"tiwunɛ"	"tiwune 34"	TRUE
+"'n"	"n"	"tiwuńe"	"dihune"	5.19480519480519	"tiwuńe"	"tiwunɛ"	"tiwune 34"	TRUE
+"ch"	"d"	"tiwuńe"	"diwune"	8.30895420369105	"tiwuńe"	"tiwunɛ"	"tiwune 13"	TRUE
+"'n"	"n"	"tiwuńe"	"diwune"	8.30895420369105	"tiwuńe"	"tiwunɛ"	"tiwune 13"	TRUE
+"ch"	"d"	"tiwuńe"	"diwunE"	7.28366370471634	"tiwuńe"	"tiwunɛ"	"tiwune 26"	TRUE
+"'n"	"n"	"tiwuńe"	"diwunE"	7.28366370471634	"tiwuńe"	"tiwunɛ"	"tiwune 26"	TRUE
+"e"	"é"	"tiwuńe"	"diwunE"	7.28366370471634	"tiwuńe"	"tiwunɛ"	"tiwune 26"	TRUE
+"ch"	"k"	"tiwuńe"	"kikune"	4.97881066302119	"tiwuńe"	"tiwunɛ"	"tiwune 35"	TRUE
+"w"	"k"	"tiwuńe"	"kikune"	4.97881066302119	"tiwuńe"	"tiwunɛ"	"tiwune 35"	TRUE
+"'n"	"n"	"tiwuńe"	"kikune"	4.97881066302119	"tiwuńe"	"tiwunɛ"	"tiwune 35"	TRUE
+"w"	"g"	"tiwuńe"	"tigune"	6.88448393711552	"tiwuńe"	"tiwunɛ"	"tiwune 12"	TRUE
+"'n"	"n"	"tiwuńe"	"tigune"	6.88448393711552	"tiwuńe"	"tiwunɛ"	"tiwune 12"	TRUE
+"w"	"g"	"tiwuńe"	"tigune"	5.27136021872864	"tiwuńe"	"tiwunɛ"	"tiwune 31"	TRUE
+"'n"	"n"	"tiwuńe"	"tigune"	5.27136021872864	"tiwuńe"	"tiwunɛ"	"tiwune 31"	TRUE
+"ch"	"k"	"tiwuńe"	"kikune"	8	"tiwuńe"	"tiwunɛ"	"tiwune 23"	TRUE
+"w"	"k"	"tiwuńe"	"kikune"	8	"tiwuńe"	"tiwunɛ"	"tiwune 23"	TRUE
+"'n"	"n"	"tiwuńe"	"kikune"	8	"tiwuńe"	"tiwunɛ"	"tiwune 23"	TRUE
+"i"	"u"	"tiwuńe"	"tubune"	5.09637730690362	"tiwuńe"	"tiwunɛ"	"tiwune 2"	TRUE
+"w"	"mb"	"tiwuńe"	"tubune"	5.09637730690362	"tiwuńe"	"tiwunɛ"	"tiwune 2"	TRUE
+"'n"	"n"	"tiwuńe"	"tubune"	5.09637730690362	"tiwuńe"	"tiwunɛ"	"tiwune 2"	TRUE
+"w"	"g"	"tiwuńe"	"tigune"	6.10526315789474	"tiwuńe"	"tiwunɛ"	"tiwune 17"	TRUE
+"'n"	"n"	"tiwuńe"	"tigune"	6.10526315789474	"tiwuńe"	"tiwunɛ"	"tiwune 17"	TRUE
+"ch"	"k"	"tiwuńe"	"kikikiwune"	5.7799043062201	"tiwuńe"	"tiwunɛ"	"tiwune 1"	TRUE
+"'n"	"n"	"tiwuńe"	"kikikiwune"	5.7799043062201	"tiwuńe"	"tiwunɛ"	"tiwune 1"	TRUE
+"ch"	"d"	"tiwuńe"	"diwuma"	6.88448393711552	"tiwuńe"	"tiwunɛ"	"tiwune 32"	TRUE
+"'n"	"m"	"tiwuńe"	"diwuma"	6.88448393711552	"tiwuńe"	"tiwunɛ"	"tiwune 32"	TRUE
+"e"	"a"	"tiwuńe"	"diwuma"	6.88448393711552	"tiwuńe"	"tiwunɛ"	"tiwune 32"	TRUE
+"w"	"g"	"tiwuńe"	"tigune"	6.88448393711552	"tiwuńe"	"tiwunɛ"	"tiwune 3"	TRUE
+"'n"	"n"	"tiwuńe"	"tigune"	6.88448393711552	"tiwuńe"	"tiwunɛ"	"tiwune 3"	TRUE
+"w"	"n"	"todiwuma"	"todinuma"	7.47505126452495	"todiwuma"	"tɔṭiwumæ"	"todiwuma 7"	TRUE
+"ch"	"d"	"todiwuma"	"dodiwuma"	4.97881066302119	"todiwuma"	"tɔṭiwumæ"	"todiwuma 18"	TRUE
+"ch"	"d"	"todiwuma"	"dodiwuma"	4.97881066302119	"todiwuma"	"tɔṭiwumæ"	"todiwuma 15"	TRUE
+"d"	"ch"	"todiwuma"	"tot"	7.35475051264525	"todiwuma"	"tɔṭiwumæ"	"todiwuma 16"	TRUE
+"ch"	"d"	"todiwuma"	"dodiwuma"	4.97881066302119	"todiwuma"	"tɔṭiwumæ"	"todiwuma 25"	TRUE
+"ch"	"d"	"todiwuma"	"dodiwuma"	4.97881066302119	"todiwuma"	"tɔṭiwumæ"	"todiwuma 11"	TRUE
+"ch"	"d"	"todiwuma"	"daduwuma"	5.79904306220096	"todiwuma"	"tɔṭiwumæ"	"todiwuma 24"	TRUE
+"o"	"a"	"todiwuma"	"daduwuma"	5.79904306220096	"todiwuma"	"tɔṭiwumæ"	"todiwuma 24"	TRUE
+"i"	"u"	"todiwuma"	"daduwuma"	5.79904306220096	"todiwuma"	"tɔṭiwumæ"	"todiwuma 24"	TRUE
+"ch"	"d"	"todiwuma"	"dadiwuma"	5.79904306220096	"todiwuma"	"tɔṭiwumæ"	"todiwuma 4"	TRUE
+"o"	"a"	"todiwuma"	"dadiwuma"	5.79904306220096	"todiwuma"	"tɔṭiwumæ"	"todiwuma 4"	TRUE
+"w"	"n"	"todiwuma"	"todinuma"	7.47505126452495	"todiwuma"	"tɔṭiwumæ"	"todiwuma 13"	TRUE
+"o"	"u"	"towi"	"tuwi"	7.47505126452495	"towi"	"tɔwi"	"towi 22"	TRUE
+"o"	"u"	"towi"	"tuwi"	7.60628844839371	"towi"	"tɔwi"	"towi 15"	TRUE
+"o"	"u"	"towi"	"tuwi"	7.47505126452495	"towi"	"tɔwi"	"towi 7"	TRUE
+"o"	"u"	"towi"	"tuwi"	7.28366370471634	"towi"	"tɔwi"	"towi 20"	TRUE
+"o"	"u"	"towi"	"tuwi"	4.97881066302119	"towi"	"tɔwi"	"towi 19"	TRUE
+"o"	"u"	"towi"	"tuwi"	4.97881066302119	"towi"	"tɔwi"	"towi 9"	TRUE
+"o"	"u"	"towi"	"tuwi"	3.91797676008202	"towi"	"tɔwi"	"towi 8"	TRUE
+"i"	"u"	"towi"	"towuNa"	5.24128503075871	"towi"	"tɔwi"	"towi 13"	TRUE
+"o"	"u"	"towi"	"tuwi"	7.47505126452495	"towi"	"tɔwi"	"towi 30"	TRUE
+"o"	"u"	"towi"	"tuwi"	9.09911141490089	"towi"	"tɔwi"	"towi 26"	TRUE
+"o"	"u"	"towi"	"tuwi"	8	"towi"	"tɔwi"	"towi 24"	TRUE
+"o"	"u"	"towi"	"tuwi"	5.09637730690362	"towi"	"tɔwi"	"towi 33"	TRUE
+"tp"	"ch"	":9"	"te"	8.51674641148325	"tpê"	"tpə"	"tpe 37"	TRUE
+"ê"	"e"	":9"	"te"	8.51674641148325	"tpê"	"tpə"	"tpe 37"	TRUE
+"tp"	"ch"	":9"	"te"	8.51674641148325	"tpê"	"tpə"	"tpe 24"	TRUE
+"ê"	"e"	":9"	"te"	8.51674641148325	"tpê"	"tpə"	"tpe 24"	TRUE
+"tp"	"ch"	":9"	"te"	7.49965823650034	"tpê"	"tpə"	"tpe 6"	TRUE
+"ê"	"e"	":9"	"te"	7.49965823650034	"tpê"	"tpə"	"tpe 6"	TRUE
+"tp"	"d"	":9"	"d3"	7.25358851674641	"tpê"	"tpə"	"tpe 48"	TRUE
+"ê"	":a"	":9"	"d3"	7.25358851674641	"tpê"	"tpə"	"tpe 48"	TRUE
+"tp"	"ch"	":9"	"te"	5.19480519480519	"tpê"	"tpə"	"tpe 14"	TRUE
+"ê"	"e"	":9"	"te"	5.19480519480519	"tpê"	"tpə"	"tpe 14"	TRUE
+"tp"	"ch"	":9"	"te"	5.52836637047163	"tpê"	"tpə"	"tpe 20"	TRUE
+"ê"	"e"	":9"	"te"	5.52836637047163	"tpê"	"tpə"	"tpe 20"	TRUE
+"tp"	"ch"	":9"	"te"	8.03280929596719	"tpê"	"tpə"	"tpe 27"	TRUE
+"ê"	"e"	":9"	"te"	8.03280929596719	"tpê"	"tpə"	"tpe 27"	TRUE
+"tp"	"ch"	":9"	"te"	7.20710868079289	"tpê"	"tpə"	"tpe 47"	TRUE
+"ê"	"e"	":9"	"te"	7.20710868079289	"tpê"	"tpə"	"tpe 47"	TRUE
+"tp"	"ch"	":9"	"ta"	7.25358851674641	"tpê"	"tpə"	"tpe 17"	TRUE
+"ê"	"a"	":9"	"ta"	7.25358851674641	"tpê"	"tpə"	"tpe 17"	TRUE
+"tp"	"ch"	":9"	"te"	7.12781954887218	"tpê"	"tpə"	"tpe 61"	TRUE
+"ê"	"e"	":9"	"te"	7.12781954887218	"tpê"	"tpə"	"tpe 61"	TRUE
+"tp"	"ch"	":9"	"te"	7.20710868079289	"tpê"	"tpə"	"tpe 45"	TRUE
+"ê"	"e"	":9"	"te"	7.20710868079289	"tpê"	"tpə"	"tpe 45"	TRUE
+"tp"	"ch"	":9"	"te"	8.51674641148325	"tpê"	"tpə"	"tpe 35"	TRUE
+"ê"	"e"	":9"	"te"	8.51674641148325	"tpê"	"tpə"	"tpe 35"	TRUE
+"tp"	"ch"	":9"	"ta"	8.03280929596719	"tpê"	"tpə"	"tpe 28"	TRUE
+"ê"	"a"	":9"	"ta"	8.03280929596719	"tpê"	"tpə"	"tpe 28"	TRUE
+"tp"	"d"	":9"	"da"	8.03280929596719	"tpê"	"tpə"	"tpe 49"	TRUE
+"ê"	"a"	":9"	"da"	8.03280929596719	"tpê"	"tpə"	"tpe 49"	TRUE
+"tp"	"ch"	":9"	"ta"	5.52836637047163	"tpê"	"tpə"	"tpe 9"	TRUE
+"ê"	"a"	":9"	"ta"	5.52836637047163	"tpê"	"tpə"	"tpe 9"	TRUE
+"ê"	"a"	":9"	":a"	7.25358851674641	"tpê"	"tpə"	"tpe 60"	TRUE
+"tp"	"ch"	":9"	"te"	8.6015037593985	"tpê"	"tpə"	"tpe 43"	TRUE
+"ê"	"e"	":9"	"te"	8.6015037593985	"tpê"	"tpə"	"tpe 43"	TRUE
+"tp"	"ch"	":9"	"te"	7.4066985645933	"tpê"	"tpə"	"tpe 62"	TRUE
+"ê"	"e"	":9"	"te"	7.4066985645933	"tpê"	"tpə"	"tpe 62"	TRUE
+"tp"	"ch"	":9"	"te"	7.5434039644566	"tpê"	"tpə"	"tpe 23"	TRUE
+"ê"	"e"	":9"	"te"	7.5434039644566	"tpê"	"tpə"	"tpe 23"	TRUE
+"tp"	"ch"	":9"	"te"	7.5434039644566	"tpê"	"tpə"	"tpe 38"	TRUE
+"ê"	"e"	":9"	"te"	7.5434039644566	"tpê"	"tpə"	"tpe 38"	TRUE
+"tp"	"ch"	":9"	"te"	7.47505126452495	"tpê"	"tpə"	"tpe 46"	TRUE
+"ê"	"e"	":9"	"te"	7.47505126452495	"tpê"	"tpə"	"tpe 46"	TRUE
+"tp"	"d"	":9"	"d4"	8.30895420369105	"tpê"	"tpə"	"tpe 67"	TRUE
+"ê"	":ê"	":9"	"d4"	8.30895420369105	"tpê"	"tpə"	"tpe 67"	TRUE
+"tp"	"ch"	":9"	"t3"	3.91797676008202	"tpê"	"tpə"	"tpe 34"	TRUE
+"ê"	":a"	":9"	"t3"	3.91797676008202	"tpê"	"tpə"	"tpe 34"	TRUE
+"tp"	"ch"	":9"	"te"	7.47505126452495	"tpê"	"tpə"	"tpe 36"	TRUE
+"ê"	"e"	":9"	"te"	7.47505126452495	"tpê"	"tpə"	"tpe 36"	TRUE
+"tp"	"ch"	":9"	"ta"	5.52836637047163	"tpê"	"tpə"	"tpe 30"	TRUE
+"ê"	"a"	":9"	"ta"	5.52836637047163	"tpê"	"tpə"	"tpe 30"	TRUE
+"tp"	"ch"	":9"	"te"	7.20710868079289	"tpê"	"tpə"	"tpe 65"	TRUE
+"ê"	"e"	":9"	"te"	7.20710868079289	"tpê"	"tpə"	"tpe 65"	TRUE
+"ê"	"a"	":9"	":a"	5.79904306220096	"tpê"	"tpə"	"tpe 56"	TRUE
+"tp"	"ch"	":9"	"te"	8.03280929596719	"tpê"	"tpə"	"tpe 53"	TRUE
+"ê"	"e"	":9"	"te"	8.03280929596719	"tpê"	"tpə"	"tpe 53"	TRUE
+"tp"	"ch"	":9"	"ta"	7.12781954887218	"tpê"	"tpə"	"tpe 8"	TRUE
+"ê"	"a"	":9"	"ta"	7.12781954887218	"tpê"	"tpə"	"tpe 8"	TRUE
+"tp"	"ch"	":9"	"t3"	3.91797676008202	"tpê"	"tpə"	"tpe 59"	TRUE
+"ê"	":a"	":9"	"t3"	3.91797676008202	"tpê"	"tpə"	"tpe 59"	TRUE
+"tp"	"ch"	":9"	"te"	7.49965823650034	"tpê"	"tpə"	"tpe 54"	TRUE
+"ê"	"e"	":9"	"te"	7.49965823650034	"tpê"	"tpə"	"tpe 54"	TRUE
+"tp"	"d"	":9"	"d9"	8.30895420369105	"tpê"	"tpə"	"tpe 1"	TRUE
+"tp"	"ch"	":9"	"te"	10.1982228298018	"tpê"	"tpə"	"tpe 51"	TRUE
+"ê"	"e"	":9"	"te"	10.1982228298018	"tpê"	"tpə"	"tpe 51"	TRUE
+"tp"	"d"	":9"	"d9"	7.47505126452495	"tpê"	"tpə"	"tpe 52"	TRUE
+"tp"	"ch"	":9"	"te"	7.47505126452495	"tpê"	"tpə"	"tpe 33"	TRUE
+"ê"	"e"	":9"	"te"	7.47505126452495	"tpê"	"tpə"	"tpe 33"	TRUE
+"tp"	"ch"	":9"	"te"	7.20710868079289	"tpê"	"tpə"	"tpe 41"	TRUE
+"ê"	"e"	":9"	"te"	7.20710868079289	"tpê"	"tpə"	"tpe 41"	TRUE
+"tp"	"ch"	":9"	"te"	7.47505126452495	"tpê"	"tpə"	"tpe 3"	TRUE
+"ê"	"e"	":9"	"te"	7.47505126452495	"tpê"	"tpə"	"tpe 3"	TRUE
+"tp"	"dp"	":9"	"/3"	8	"tpê"	"tpə"	"tpe 42"	TRUE
+"ê"	":a"	":9"	"/3"	8	"tpê"	"tpə"	"tpe 42"	TRUE
+"tp"	"d"	":9"	"d4"	3.91797676008202	"tpê"	"tpə"	"tpe 15"	TRUE
+"ê"	":ê"	":9"	"d4"	3.91797676008202	"tpê"	"tpə"	"tpe 15"	TRUE
+"tp"	"ch"	":9"	"te"	5.52836637047163	"tpê"	"tpə"	"tpe 7"	TRUE
+"ê"	"e"	":9"	"te"	5.52836637047163	"tpê"	"tpə"	"tpe 7"	TRUE
+"tp"	"ch"	":9"	"te"	7.12781954887218	"tpê"	"tpə"	"tpe 55"	TRUE
+"ê"	"e"	":9"	"te"	7.12781954887218	"tpê"	"tpə"	"tpe 55"	TRUE
+"tp"	"ch"	":9"	"te"	7.4066985645933	"tpê"	"tpə"	"tpe 64"	TRUE
+"ê"	"e"	":9"	"te"	7.4066985645933	"tpê"	"tpə"	"tpe 64"	TRUE
+"tp"	"ch"	":9"	"te"	8.03280929596719	"tpê"	"tpə"	"tpe 2"	TRUE
+"ê"	"e"	":9"	"te"	8.03280929596719	"tpê"	"tpə"	"tpe 2"	TRUE
+"tp"	"ch"	":9"	"te"	7.4066985645933	"tpê"	"tpə"	"tpe 68"	TRUE
+"ê"	"e"	":9"	"te"	7.4066985645933	"tpê"	"tpə"	"tpe 68"	TRUE
+"tp"	"dp"	":9"	"/3"	8	"tpê"	"tpə"	"tpe 50"	TRUE
+"ê"	":a"	":9"	"/3"	8	"tpê"	"tpə"	"tpe 50"	TRUE
+"tp"	"dp"	":9"	"/a"	NA	"tpê"	"tpə"	"tpe 63"	TRUE
+"ê"	"a"	":9"	"/a"	NA	"tpê"	"tpə"	"tpe 63"	TRUE
+"tp"	"dp"	":9"	"/3"	8	"tpê"	"tpə"	"tpe 40"	TRUE
+"ê"	":a"	":9"	"/3"	8	"tpê"	"tpə"	"tpe 40"	TRUE
+"tp"	"ch"	":9"	"te"	7.4066985645933	"tpê"	"tpə"	"tpe 16"	TRUE
+"ê"	"e"	":9"	"te"	7.4066985645933	"tpê"	"tpə"	"tpe 16"	TRUE
+"tp"	"ch"	":9"	"te"	7.12781954887218	"tpê"	"tpə"	"tpe 22"	TRUE
+"ê"	"e"	":9"	"te"	7.12781954887218	"tpê"	"tpə"	"tpe 22"	TRUE
+"tp"	"ch"	":9"	"t3"	6.32399179767601	"tpê"	"tpə"	"tpe 44"	TRUE
+"ê"	":a"	":9"	"t3"	6.32399179767601	"tpê"	"tpə"	"tpe 44"	TRUE
+"tp"	"dp"	":9"	"/a"	10.1982228298018	"tpê"	"tpə"	"tpe 4"	TRUE
+"ê"	"a"	":9"	"/a"	10.1982228298018	"tpê"	"tpə"	"tpe 4"	TRUE
+"tp"	"d"	":9"	"d4"	8.30895420369105	"tpê"	"tpə"	"tpe 21"	TRUE
+"ê"	":ê"	":9"	"d4"	8.30895420369105	"tpê"	"tpə"	"tpe 21"	TRUE
+"tp"	"d"	":9"	"d9"	8.30895420369105	"tpê"	"tpə"	"tpe 5"	TRUE
+"tp"	"dp"	":9"	"/3"	8	"tpê"	"tpə"	"tpe 12"	TRUE
+"ê"	":a"	":9"	"/3"	8	"tpê"	"tpə"	"tpe 12"	TRUE
+"tp"	"ch"	":9"	"te"	7.4066985645933	"tpê"	"tpə"	"tpe 32"	TRUE
+"ê"	"e"	":9"	"te"	7.4066985645933	"tpê"	"tpə"	"tpe 32"	TRUE
+"o"	"u"	"tumowe"	"tumuwe"	5.7799043062201	"tumowe"	"tumɔwɛ"	"tumowe 9"	TRUE
+"p"	"f"	"tupa"	"tufa"	5.64046479835954	"tupa"	"tupæ"	"tupa 10"	TRUE
+"d"	"l"	"wadikeńo"	"walikedu"	4.80109364319891	"wadikeńo"	"wæṭikɛnɔ"	"wadikeno 8"	TRUE
+"'n"	"d"	"wadikeńo"	"walikedu"	4.80109364319891	"wadikeńo"	"wæṭikɛnɔ"	"wadikeno 8"	TRUE
+"o"	"u"	"wadikeńo"	"walikedu"	4.80109364319891	"wadikeńo"	"wæṭikɛnɔ"	"wadikeno 8"	TRUE
+"w"	"p"	"wadikeńo"	"putekeno"	5.09637730690362	"wadikeńo"	"wæṭikɛnɔ"	"wadikeno 20"	TRUE
+"a"	"u"	"wadikeńo"	"putekeno"	5.09637730690362	"wadikeńo"	"wæṭikɛnɔ"	"wadikeno 20"	TRUE
+"d"	"ch"	"wadikeńo"	"putekeno"	5.09637730690362	"wadikeńo"	"wæṭikɛnɔ"	"wadikeno 20"	TRUE
+"i"	"e"	"wadikeńo"	"putekeno"	5.09637730690362	"wadikeńo"	"wæṭikɛnɔ"	"wadikeno 20"	TRUE
+"'n"	"n"	"wadikeńo"	"putekeno"	5.09637730690362	"wadikeńo"	"wæṭikɛnɔ"	"wadikeno 20"	TRUE
+"'n"	"n"	"widońe"	"widoni"	7.20710868079289	"widońe"	"wiṭɔnɛ"	"widone 15"	TRUE
+"e"	"i"	"widońe"	"widoni"	7.20710868079289	"widońe"	"wiṭɔnɛ"	"widone 15"	TRUE
+"'n"	"n"	"widońe"	"widoni"	7.20710868079289	"widońe"	"wiṭɔnɛ"	"widone 10"	TRUE
+"e"	"i"	"widońe"	"widoni"	7.20710868079289	"widońe"	"wiṭɔnɛ"	"widone 10"	TRUE
+"'n"	"n"	"widońe"	"widoni"	6.88448393711552	"widońe"	"wiṭɔnɛ"	"widone 14"	FALSE
+"e"	"i"	"widońe"	"widoni"	6.88448393711552	"widońe"	"wiṭɔnɛ"	"widone 14"	FALSE
+"o"	"i"	"widońe"	"walidi"	4.80109364319891	"widońe"	"wiṭɔnɛ"	"widone 12"	TRUE
+"d"	"ch"	"widońe"	"witone"	5.27136021872864	"widońe"	"wiṭɔnɛ"	"widone 9"	TRUE
+"'n"	"n"	"widońe"	"witone"	5.27136021872864	"widońe"	"wiṭɔnɛ"	"widone 9"	TRUE
+"w"	"p"	"wumipo"	"pimipo"	5.19480519480519	"wumipo"	"wumipɔ"	"wumipo 25"	TRUE
+"u"	"i"	"wumipo"	"pimipo"	5.19480519480519	"wumipo"	"wumipɔ"	"wumipo 25"	TRUE

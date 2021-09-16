@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.11.29)  16 SEP 2021 09:34
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.11.29)  16 SEP 2021 18:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2136,59 +2136,46 @@ e 422.
 [24]
 File: manuscript_files/figure-latex/fig-xling-freq-age3-1.pdf Graphic file (typ
 e QTm)
-<use  "manuscript_files/figure-latex/fig-xling-freq-age3-1.pdf" >
-File: manuscript_files/figure-latex/fig-xling-freq-age1-1.pdf Graphic file (typ
-e QTm)
-<use  "manuscript_files/figure-latex/fig-xling-freq-age1-1.pdf" >
-File: manuscript_files/figure-latex/fig-xling-freq-age2-1.pdf Graphic file (typ
-e QTm)
-<use  "manuscript_files/figure-latex/fig-xling-freq-age2-1.pdf" > [25]
-
-LaTeX Warning: Text page 26 contains only floats.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[26]
-Overfull \hbox (37.69043pt too wide) in paragraph at lines 469--477
+<use  "manuscript_files/figure-latex/fig-xling-freq-age3-1.pdf" > [25]
+Overfull \hbox (37.69043pt too wide) in paragraph at lines 451--459
  [][] 
  []
 
 
 Underfull \vbox (badness 2334) has occurred while \output is active []
 
-[27]
-Overfull \hbox (46.50879pt too wide) in paragraph at lines 489--497
+[26]
+Overfull \hbox (46.50879pt too wide) in paragraph at lines 471--479
  [][] 
  []
 
 
 Underfull \vbox (badness 3623) has occurred while \output is active []
 
-[28]
+[27]
 File: manuscript_files/figure-latex/fig-scores-by-age-1.pdf Graphic file (type 
 QTm)
-<use  "manuscript_files/figure-latex/fig-scores-by-age-1.pdf" > [29] [30] [31]
+<use  "manuscript_files/figure-latex/fig-scores-by-age-1.pdf" > [28] [29] [30]
 Underfull \vbox (badness 2334) has occurred while \output is active []
 
-[32]
+[31]
 Underfull \vbox (badness 4752) has occurred while \output is active []
 
-[33] [34]
+[32] [33]
 Underfull \vbox (badness 2334) has occurred while \output is active []
 
-[35]
+[34]
 Underfull \vbox (badness 4752) has occurred while \output is active []
 
-[36] [37] [38] [39] [40] [41] [42] [43]
+[35] [36] [37] [38] [39] [40] [41] [42]
 Underfull \vbox (badness 2205) has occurred while \output is active []
 
-[44] [45] AED endfloat: Processing end Figures and Tables [46] [47] [48]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 789.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 789.
+[43] [44] AED endfloat: Processing end Figures and Tables [45] [46] [47]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 771.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 771.
 (./manuscript.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 789.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 789.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 771.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 771.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -2197,12 +2184,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 28120 strings out of 493005
- 497109 string characters out of 6134595
- 728021 words of memory out of 5000000
- 31729 multiletter control sequences out of 15000+600000
+ 28114 strings out of 493005
+ 496899 string characters out of 6134595
+ 727557 words of memory out of 5000000
+ 31725 multiletter control sequences out of 15000+600000
  36294 words of font info for 89 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  64i,11n,120p,10405b,528s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on manuscript.pdf (48 pages).
+Output written on manuscript.pdf (47 pages).

@@ -585,15 +585,7 @@ plot_model(xl_fr,type="pred",terms=c("age.rounded_s","avg_fr_s"))
 ```
 
 
-
-```{r fig-xling-freq-age1, fig.pos = "!t", fig.align = "center", out.width = '65%', fig.cap="(WE WILL PROBABLY NOT USE THIS ONE) Model predicting NWR scores from the average frequency with which each phone is found across languages (x axis) and child age (median split on scaled age)."}
-plot_model(xl_fr,type="int")
-```
-
-```{r fig-xling-freq-age2, fig.pos = "!t", fig.align = "center", out.width = '65%', fig.cap="(WE WILL PROBABLY NOT USE THIS ONE) Model predicting NWR scores from the average frequency with which each phone is found across languages (x axis) and child age (mean, or plus/minus one standard deviation)."}
-
-plot_model(xl_fr,type="pred",terms=c("avg_fr_s","age.rounded_s"))
-```
+<!-- ac2mc if it's easy for you to add dots representing actual children in the above, that would be awesome! If not, I can try to tackle it :) -->
 
 
 ```{r cor vs xl}
@@ -631,9 +623,6 @@ We next checked whether the association between whole-item NWR scores and cross-
 
 
 Phone corpus-based frequencies were correlated with phone cross-linguistic frequencies [r(`r freq_cor_phone$parameter`)=`r round(freq_cor_phone$estimate,3)`, p `r pval.display(round(freq_cor_phone$p.value,3))`]; and item-level average phone corpus-based frequencies were correlated with the corresponding cross-linguistic frequencies [r(`r freq_cor_item$parameter`)=`r round(freq_cor_item$estimate,3)`, p `r pval.display(round(freq_cor_item$p.value,3))`]. Moreover, averaging across participants, the Pearson correlation between scaled average corpus phone frequency and whole-item NWR scores was r(`r cor_ty_nwr$parameter`)=`r printr(cor_ty_nwr$estimate)`, p `r pval.display(round(cor_ty_nwr$p.value,3))`. Therefore, we fit another mixed logistic regression, this time declaring as fixed effects both scaled cross-linguistic and corpus frequencies (averaged across all attested phones within each stimulus item), in addition to age. As before, the model contained random slopes for both child ID and target. In this model, both cross-linguistic phone frequency (ß = `r both_coeff["avg_fr_s","Estimate"]`, SE ß = `r both_coeff["avg_fr_s","Std. Error"]`, p `r pval.display(both_coeff["avg_fr_s","Pr(>|z|)"])`) and age (ß = `r both_coeff["age.rounded_s","Estimate"]`, SE ß = `r both_coeff["age.rounded_s","Std. Error"]`, p `r pval.display(both_coeff["age.rounded_s","Pr(>|z|)"])`) were significant predictors of whole-item  NWR scores, but corpus phone frequency (ß = `r both_coeff["avg_fr_cor_ty_s","Estimate"]`, SE ß = `r both_coeff["avg_fr_cor_ty_s","Std. Error"]`, p `r pval.display(both_coeff["avg_fr_cor_ty_s","Pr(>|z|)"])`) was not.
-
-
-
 
 
 
