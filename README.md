@@ -27,12 +27,12 @@ These are 'raw' files, they cannot be created from other materials
 
 #### Created by wrangling.R
 
-- match_bank_try1.txt: each line represents a phone that was pronounced correctly, taking into account only the first attempt
-- match_bank.txt: each line represents a phone that was pronounced correctly, taking into account all attempts
-- deletion_bank_try1.txt: each line represents a phone that was deleted, taking into account only the first attempt
-- deletion_bank.txt: each line represents a phone that was deleted, taking into account all attempts
-- substitution_bank_try1.txt: each line represents a phone that was changed, together with what it was changed into, taking into account only the first attempt
-- substitution_bank.txt: each line represents a phone that was changed, together with what it was changed into, taking into account all attempts
+- match_bank_try1.txt: each line represents a phone that was pronounced correctly, taking into account only the first attempt; column names as in final_data_fields.txt 
+- match_bank.txt: each line represents a phone that was pronounced correctly, taking into account all attempts; column names as in final_data_fields.txt
+- deletion_bank_try1.txt: each line represents a phone that was deleted, taking into account only the first attempt; column names as in final_data_fields.txt
+- deletion_bank.txt: each line represents a phone that was deleted, taking into account all attempts; column names as in final_data_fields.txt
+- substitution_bank_try1.txt: each line represents a phone that was changed, together with what it was changed into, taking into account only the first attempt; column names as in final_data_fields.txt
+- substitution_bank.txt: each line represents a phone that was changed, together with what it was changed into, taking into account all attempts; column names as in final_data_fields.txt
 - final_data.txt: final data set combining all information together; see final_data_fields.txt for field explanations
 - segments_with_cor_freq.txt: intermediate file which combines phonemes' characteristics with cross-linguistic and corpus frequencies
 

@@ -10,16 +10,18 @@
 "item"	item id
 "correct"	whether annotator thought the pronunciation was correct
 "mispronunciation"	if it was not correct, what the annotator thought the child said
-"meaning"	whether the mispronunciation meant something in YD
-"comment"	further comments from annotation"file"	recording file name
+"meaning"	if the mispronunciation meant something in YD or English, what it was
+"comment"	further comments from annotation"meaningful"	whether the mispronunciation meant something in YD or English (T) or not (F)
+"english"	whether the mispronunciation meant something in English (T) or not (F)
+"file"	recording file name
 "int"	interval in praat coding
 "on"	onset of interval in original recording
-"off"	offset of interval idem"cor"	whether the non-native experimenter thought the child said the item correctly (probably not to be trusted)
+"off"	offset of interval idem"cor"	whether the native RA asked for the item to be replayed (and thus may have been detected online as incorrect)
 "mp"	what the non-native experimenter thought the child said (probably not to be trusted)
 "outfile"	which file the item was written out to for annotation
 "rand"	random number used for sorting"nb"	number of repetition (1 if first attempt)
 "rep"	True/false whether it's a repetition"attempt"	first if it's first attempt, subsequent otherwise
-"cor.online"	whether the native RA asked for the item to be replayed (and thus may have been detected online as incorrect)
+"X"	ignore
 "rown"	ignore
 "included"	whether the child should be included
 "Age"	rough child age written down while testing -- ignore, corrections were done elsewhere with better age estimates"Sex"	child sex
