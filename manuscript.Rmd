@@ -579,7 +579,7 @@ knitr::include_graphics("nwr.by.freq.ITEM.png")
 dev.off()
 ```
 
-Additionally, the effect for the interaction between the two fixed effects was small but significant (ß = `r mycoeff["avg_fr_s:age.rounded_s","Estimate"]`, SE ß = `r mycoeff["avg_fr_s:age.rounded_s","Std. Error"]`, p `r pval.display(mycoeff["avg_fr_s:age.rounded_s","Pr(>|z|)"])`): The effect of frequency was larger for younger children. Inspection of Figure \@ref(fig:fig-xling-freq-age3) suggests that the age effects are more marked for items containing cross-linguistically common phones, such that children's average performance increases more rapidly with age for those than for items containing cross-linguistically common phones.
+Additionally, the effect for the interaction between the two fixed effects was small but significant (ß = `r mycoeff["avg_fr_s:age.rounded_s","Estimate"]`, SE ß = `r mycoeff["avg_fr_s:age.rounded_s","Std. Error"]`, p `r pval.display(mycoeff["avg_fr_s:age.rounded_s","Pr(>|z|)"])`): The effect of frequency was larger for younger children. Inspection of Figure \@ref(fig:fig-xling-freq-age3) suggests that the age effects are more marked for items containing cross-linguistically common phones, such that children's average performance increases more rapidly with age for those than for items containing cross-linguistically uncommon phones.
 
 ```{r fig-xling-freq-age3, fig.pos = "!t", fig.align = "center", out.width = '65%', fig.cap="Model predicting NWR scores from child age (x axis) and the average frequency with which each phone is found across languages (mean, or plus/minus one standard deviation)."}
 
