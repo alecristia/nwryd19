@@ -583,11 +583,43 @@ Additionally, the effect for the interaction between the two fixed effects was s
 
 ```{r fig-xling-freq-age3, fig.pos = "!t", fig.align = "center", out.width = '65%', fig.cap="Model predicting NWR scores from child age (x axis) and the average frequency with which each phone is found across languages (mean, or plus/minus one standard deviation)."}
 
-plot_model(xl_fr,type="pred",terms=c("age.rounded_s","avg_fr_s"))
+trnsc.inc.indivs <- trnsc.inc %>%
+  mutate(avg_fr_s = case_when(
+    avg_fr_s <= mean(xl_fr_tab$xlf)-sd(xl_fr_tab$xlf) ~ -1,
+    avg_fr_s >= mean(xl_fr_tab$xlf)+sd(xl_fr_tab$xlf) ~ 1,
+    TRUE ~ 0
+  )) %>%
+  group_by(file, age.rounded_s, avg_fr_s) %>%
+  summarize(correct = mean(correct))
+
+plot_model(xl_fr, type = "pred", terms = c("age.rounded_s","avg_fr_s")) +
+  geom_point(data = trnsc.inc.indivs, inherit.aes = FALSE,
+             aes(x = age.rounded_s, y = correct, color = factor(avg_fr_s))) +
+  scale_color_manual(values = c("red", "orange", "green"),
+                     labels = c("mean - 1sd", "mean", "mean + 1sd")) +
+  scale_fill_manual(values = c("red", "orange", "green"),
+                    guide = FALSE) +
+  labs(color = "Avgerage\nfrequency\nscore",
+       y = "% Correct", x = "Child age\n(standardized)") +
+  theme_apa() +
+  theme(plot.title = element_blank(),
+        legend.key = element_rect(color = "white")) +
+  guides(color = guide_legend(override.aes = list(fill = NA), reverse = TRUE))
+  
+
+
 ```
 
 
-<!-- ac2mc if it's easy for you to add dots representing actual children in the above, that would be awesome! If not, I can try to tackle it :) -->
+<!-- ac2mc if it's easy for you to add dots representing actual children in the above, that would be awesome! If not, I can try to tackle it :)
+
+mc2ac here's my attempt! i wasn't sure how you wanted to aggregate the real data to correspond to the model estimates so i have here grouped correctness within individual by
+<= m - 1sd
+mean <±> 1sd (unconventional notation, sorry)
+>= m + 1sd
+
+if you had something else in mind but are otherwise cool with the figure, it should be easy to edit on the mutate/case_when() portion defining trnsc.inc.indivs
+-->
 
 
 ```{r cor vs xl}
