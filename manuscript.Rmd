@@ -561,7 +561,7 @@ xlfr_r=cor.test(xl_fr_tab$xlf,xl_fr_tab$Word)
 We could include `r summary(xl_fr)$devcomp$dims["N"]` observations, from `r summary(xl_fr)$ngrps["file"]` children producing in any given trial one of `r summary(xl_fr)$ngrps["target"]` potential target words. The analysis revealed a main effect of age (ß = `r mycoeff["age.rounded_s","Estimate"]`, SE ß = `r mycoeff["age.rounded_s","Std. Error"]`, p `r pval.display(mycoeff["age.rounded_s","Pr(>|z|)"])`), with older children repeating more items correctly. It also revealed a significant estimate for the scaled average cross-linguistic frequency of phones in the target words (ß = `r mycoeff["avg_fr_s","Estimate"]`, SE ß = `r mycoeff["avg_fr_s","Std. Error"]`, p `r pval.display(mycoeff["avg_fr_s","Pr(>|z|)"])`): Target words with phones found more frequently across languages had higher correct repetition scores, as shown in Figure \@ref(fig:fig-xling-freq).  Averaging across participants, the Pearson correlation between scaled average cross-linguistic phone frequency and whole-item NWR scores was r(`r xlfr_r$parameter`) = `r printr(xlfr_r$estimate)`. 
 
 
-```{r fig-xling-freq, fig.pos = "!t", fig.align = "center", out.width = '65%', fig.cap="NWR scores for individual target words as a function of the average frequency with which each phone is found across languages.",eval=F}
+```{r fig-xling-freq, fig.pos = "!t", fig.align = "center", out.width = '65%', fig.cap="NWR scores for individual target words as a function of the average frequency with which each phone is found across languages."}
 aggregate(trnsc.inc$correct*100,by=list(trnsc.inc$target,trnsc.inc$avg_fr),mean)->xling
 colnames(xling)<-c("Target","Avg_fr","Word")
 stims.ipa <- read.xlsx("stimuli.xlsx") %>%
