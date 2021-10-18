@@ -390,7 +390,7 @@ The final list includes three practice items and 40 test items (across infants):
 
 ```{r tabstims, results = "asis"}
 #add orthographic representations targets & other stims chars
-stims.tbl <- read.xlsx("stimuli.xlsx") %>%
+stims.tbl <- read.xlsx("stimuli-20211018.xlsx") %>%
   arrange(factor(type, levels = c("practice", "1", "2", "3", "4"))) %>%
   select(type, target_ortho, phono) %>%
   rename("Type" = type, "Orthographic" = target_ortho, "Phonological" = phono)
