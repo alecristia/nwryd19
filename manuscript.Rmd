@@ -564,7 +564,7 @@ We could include `r summary(xl_fr)$devcomp$dims["N"]` observations, from `r summ
 ```{r fig-xling-freq, fig.pos = "!t", fig.align = "center", out.width = '65%', fig.cap="NWR scores for individual target words as a function of the average frequency with which each phone is found across languages."}
 aggregate(trnsc.inc$correct*100,by=list(trnsc.inc$target,trnsc.inc$avg_fr),mean)->xling
 colnames(xling)<-c("Target","Avg_fr","Word")
-stims.ipa <- read.xlsx("stimuli.xlsx") %>%
+stims.ipa <- read.xlsx("stimuli-20211018.xlsx") %>%
   select(target, target_ortho, phono)
 xling <- merge(xling, stims.ipa, by.x = "Target", by.y = "target")
 
