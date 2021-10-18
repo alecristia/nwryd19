@@ -1,0 +1,270 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  american,
+  ,doc,floatsintext]{apa6}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Supplementary materials to: Non-word repetition in children learning Yélî Dnye},
+  pdfauthor={Alejandrina Cristia1 \& Marisa Casillas2,3},
+  pdflang={en-US},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+% Manuscript styling
+\usepackage{upgreek}
+\captionsetup{font=singlespacing,justification=justified}
+
+% Table formatting
+\usepackage{longtable}
+\usepackage{lscape}
+% \usepackage[counterclockwise]{rotating}   % Landscape page setup for large tables
+\usepackage{multirow}		% Table styling
+\usepackage{tabularx}		% Control Column width
+\usepackage[flushleft]{threeparttable}	% Allows for three part tables with a specified notes section
+\usepackage{threeparttablex}            % Lets threeparttable work with longtable
+
+% Create new environments so endfloat can handle them
+% \newenvironment{ltable}
+%   {\begin{landscape}\centering\begin{threeparttable}}
+%   {\end{threeparttable}\end{landscape}}
+\newenvironment{lltable}{\begin{landscape}\centering\begin{ThreePartTable}}{\end{ThreePartTable}\end{landscape}}
+
+% Enables adjusting longtable caption width to table width
+% Solution found at http://golatex.de/longtable-mit-caption-so-breit-wie-die-tabelle-t15767.html
+\makeatletter
+\newcommand\LastLTentrywidth{1em}
+\newlength\longtablewidth
+\setlength{\longtablewidth}{1in}
+\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
+
+% \setlength{\parindent}{0.5in}
+% \setlength{\parskip}{0pt plus 0pt minus 0pt}
+
+% \usepackage{etoolbox}
+\makeatletter
+\patchcmd{\HyOrg@maketitle}
+  {\section{\normalfont\normalsize\abstractname}}
+  {\section*{\normalfont\normalsize\abstractname}}
+  {}{\typeout{Failed to patch abstract.}}
+\patchcmd{\HyOrg@maketitle}
+  {\section{\protect\normalfont{\@title}}}
+  {\section*{\protect\normalfont{\@title}}}
+  {}{\typeout{Failed to patch title.}}
+\makeatother
+\shorttitle{SM: NWR in Yélî Dnye learners}
+\usepackage{csquotes}
+\ifxetex
+  % Load polyglossia as late as possible: uses bidi with RTL langages (e.g. Hebrew, Arabic)
+  \usepackage{polyglossia}
+  \setmainlanguage[variant=american]{english}
+\else
+  \usepackage[main=american]{babel}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\fi
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\title{Supplementary materials to: Non-word repetition in children learning Yélî Dnye}
+\author{Alejandrina Cristia\textsuperscript{1} \& Marisa Casillas\textsuperscript{2,3}}
+\date{}
+
+
+\affiliation{\vspace{0.5cm}\textsuperscript{1} Laboratoire de Sciences Cognitives et de Psycholinguistique, Département d'Etudes Cognitives, ENS, EHESS, CNRS, PSL University\\\textsuperscript{2} Max Planck Institute for Psycholinguistics\\\textsuperscript{3} University of Chicago}
+
+\abstract{
+This is a supplementary material containing: 1. Explanation of a small-scale systematic review carried out to embed the main results in the NWR literature; 2. The use of this data to look at potential length effects on NWR as a function of language characteristics; 3. Length and age effects in this and previous work.
+}
+
+
+
+\begin{document}
+\maketitle
+
+\hypertarget{sm1-small-systematic-review-of-previous-nwr-work}{%
+\subsection{SM1: Small systematic review of previous NWR work}\label{sm1-small-systematic-review-of-previous-nwr-work}}
+
+In order to embed our research questions in the context of previous work, we build our current study on a systematic review of NWR done for a different paper: Cristia, Farabolini, Scaff, Havron, and Stieglitz (2020). We preferred to build on a systematic review because, while they are common in psychology research, \emph{unsystematic reviews}---e.g.~starting out with familiar papers and then reading other papers citing those; searching via Google Scholar or another search engine; or reading someone else's review---do not generalize and represent biased samples of the literature (Thomas-Odenthal, Molero, Does, \& Molendijk, 2020). For instance, famous studies are more likely to be found, even though there are no quality differences between more versus less famous studies.
+
+We here build on a recent and highly relevant systematic review: Cristia, Farabolini, Scaff, Havron, and Stieglitz (2020) ``combined our previous knowledge of the literature and systematic searching to yield a sample of 17 studies that we could interrogate further.'' Specifically, the main goal of that systematic review was to check whether ``effects of infant-directed input quantities may have been reported. Input variability has not been studied, to our knowledge, but two potential proxies of input have: Monolingual status, and socio-economic status. We set aside the literature comparing monolinguals against non-monolinguals because we reasoned that some readers may argue this contrast does not only show effects of input differences, but also interference across the languages being learned'' (Cristia, 2020, personal records). Discovery combined an initial list produced by Gianmatteo Farabolini (based on readings of literature on bilingual NWR mainly), with a scholar.google.com search carried out in incognito mode by Cristia, with keywords ``non-word-repetition socio-economic-status.'' Studies finally included reported on children who were monolingual and between 3 and 7 years of age, and which used proportion of non-words repeated as the outcome metric.
+
+We revisited this selection of articles in order to extract data on actual performance, taking into account also the length of the non-words used in the study. From that selection, only 8 articles reported on actual performance in the text, figures, or tables, fortunately representing a range of languages: Persian by Farmani et al. (2018); Israeli Arabic (Jaber-Awida, 2018); English (Vance, Stackhouse, \& Wells, 2005); Slovak by Kapalková, Polišenská, and Vicenová (2013) and Polišenská and Kapalková (2014); Sotho by Wilsenach (2013); Swedish by Kalnak, Peyrard-Janvid, Forssberg, and Sahlén (2014) and Radeborg, Barthelom, SjöBerg, and Sahlén (2006). We extended that selection with 5 additional papers selected to increase the number of languages represented, with both languages sometimes described as having short words (Cantonese: Stokes, Wong, Fletcher, \& Leonard, 2006; Mandarin: Lei et al., 2011); and others described as having long words (Italian: Piazzalunga, Previtali, Pozzoli, Scarponi, \& Schindler, 2019; Spanish: Balladares, Marshall, \& Griffiths, 2016). Finally, we also included the Tsimane' data presented in that paper (Cristia, Farabolini, Scaff, Havron, \& Stieglitz, 2020).
+
+\hypertarget{sm2-assessing-potential-length-effects}{%
+\subsection{SM2: Assessing potential length effects}\label{sm2-assessing-potential-length-effects}}
+
+We looked at the subset of papers that reported NWR scores separately for different word lengths. These were: Israeli Arabic (Jaber-Awida, 2018); Cantonese (Stokes, Wong, Fletcher, \& Leonard, 2006); English (Vance, Stackhouse, \& Wells, 2005); Italian (Piazzalunga, Previtali, Pozzoli, Scarponi, \& Schindler, 2019); and Tsimane' (Cristia, Farabolini, Scaff, Havron, \& Stieglitz, 2020).
+
+Our reading of that work is that, although there is cross-linguistic (or cross-sample) variation in length effects, these do not systematically line up with expected typical word length in different languages. For instance, the difference in NWR scores for 2- versus 3-syllable items (averaging across age groups) is largest in Tsimane' (\textasciitilde28\%) and Arabic (\textasciitilde15\%), which tend to have longer words, as does Italian, where the difference between 2- and 3-syllable items was only \textasciitilde2\%. Similarly, two languages that are often described as heavily biased towards monosyllables show diverse length effects (Cantonese \textasciitilde8\% versus English \textasciitilde1\%).
+
+\begin{figure}
+\centering
+\includegraphics{supmat_files/figure-latex/fig-prevlit-1.pdf}
+\caption{\label{fig:fig-prevlit}NWR scores as a function of age (in years) and item length for comparable studies (2-4 indicating number of syllables, 2=dashed, 3=dotted, 4=dotted and dashed). Jaber-Awida (2018) reported on 20 Israeli Arabic learners (orange); Piazzalunga et al.~(2019) reported on groups of 24-60 Italian learners (black); Stokes et al.~(2006) on 15 Cantonese learners (blue); Vance et al.~(2005) on 17-20 English learners (light green); Cristia et al.~(2020) reported on groups of 4-6 Tsimane' learners (dark green); the present study reports on groups of 8-19 Yélî Dnye learners (purple). Central tendency is the mean except for Italian and Yélî Dnye (median); error is one standard error. Age has been slightly shifted for ease of inspection of different lengths at a given age.}
+\end{figure}
+
+\hypertarget{sm3-integrating-our-data-with-that-from-other-studies}{%
+\subsection{SM3: Integrating our data with that from other studies}\label{sm3-integrating-our-data-with-that-from-other-studies}}
+
+For this analysis, we could include all studies that reported non-word repetition scores based on whole item scoring for at least some length, ideally separating children by age. Specifically, Arabic was represented by Jaber-Awida (2018); Cantonese by Stokes, Wong, Fletcher, and Leonard (2006); English by Vance, Stackhouse, and Wells (2005); Italian by Piazzalunga, Previtali, Pozzoli, Scarponi, and Schindler (2019); Mandarin by Lei et al. (2011); Spanish by Balladares, Marshall, and Griffiths (2016); Tsimane' by Cristia, Farabolini, Scaff, Havron, and Stieglitz (2020); and Yélî Dnye from the present study. Studies varied in the length of non-words that were considered; whenever results were reported separately for different lengths, we calculated overall averages based on lengths of 2 and 3 syllables, for increased comparability. Results separating different age groups are shown in Figure \ref{fig:fig-prevlit-overall}.
+
+\begin{figure}
+\centering
+\includegraphics{supmat_files/figure-latex/fig-prevlit-overall-1.pdf}
+\caption{\label{fig:fig-prevlit-overall}NWR scores as a function of age (in years), averaged across multiple non-word lengths, as a function of children's native languages. The legend indicates language and the length of non-words (in syllables). Central tendency is mean; error is one standard error.}
+\end{figure}
+
+Several observations can be drawn from this figure. To begin with, we focus on the comparison between Yélî Dnye and Tsimane'. These two groups have been described as having (very) roughly similar lifestyles and levels of child-directed speech, yet they exhibit very different results: Tsimane' shows lower overall NWR scores (and according to Figure \ref{fig:fig-prevlit}, larger length effects). What can we conclude from this apparent difference?
+
+One possible lens of interpretation relates NWR differences to the minor differences in children's directed linguistic input rates. However, the differences in methods used to estimate these rates render this first interpretation unreliable. Based on current estimates Tsimane' children may encounter somewhere between similar to somewhat lower rates of directed speech comared to Yélî children. The lower boundary for Tsimane' input rate is established by Cristia, Dupoux, Gurven, and Stieglitz (2019), who used behavioral observations of child-inclusive one-on-one conversation. The upper boundary is set by Scaff, Stieglitz, Casillas, and Cristia (2021), who used human annotation to detect speech, feeding this into an automated temporal method for assigning speech as child-directed or not (NB: this method could lead to over- but not under-estimation because any nearby speech, e.g.~from a female adult, that coincided with child vocalization would count as child-directed). Yélî Dnye estimates come from Casillas, Brown, and Levinson (2021), who hand-coded speech with the help of a native research assistant, and then summed all child-directed speech, effectively establishing an upper boundary of all the speech children could potentially process. There is no equivalent `lower bound' for Yélî Dnye to compare with the Tsimane' findings. So, while it is tempting to link this difference in NWR scores to directed input rates, we will first need to actually establish input rates using comparable methods for Yéli and Tsimane' children.
+
+Prevalence of literacy is a second possible way to interpret these differences in NWR scores. Cristia, Farabolini, Scaff, Havron, and Stieglitz (2020) point out the relatively low prevalence of literacy, and more generally, the variable access to formal education available in the Tsimane' population. This is very different from the present Yélî population, where most adults have accumulated some schooling, with many having basic to fluent literacy in English (note: literacy in Yélî Dnye is much less common, especially among the very young; see main text). Under this second hypothesis, there are phonetic effects of learning to read that have significant consequences for young children's encoding and decoding of sounds in the context of NWR tasks. Notice that this is not the same as the oft-recorded effect of learning to read affecting NWR performance illustrated, for instance, in the data for Sotho in Figure \ref{fig:fig-prevlit-overall}. Those two data points have been gathered from two groups of children, all exposed mainly to Sotho, but children with higher NWR had been learning to read in Sotho, whereas those with lower scores were learning to read in English. What is at stake in our proposed alternative interpretation of the lower scores observed among the Tsimane' is related to literacy \emph{in the broader population} (rather than in the tested children themselves). However, there is at least one more plausible explanation: design and execution of the NWR task
+
+A third, plausible, explanation for these differences in NWR is that the Tsimane' results are not generally comparable to the previous body of literature, and specifically not comparable to our present study. Cristia, Farabolini, Scaff, Havron, and Stieglitz (2020) administered the NWR in the form of a group game played outside, with a non-native experimenter providing the target, and each person of the group attempting it in their stead. This implies a number of important methodological differences with the standard implementation of NWR, where children are tested individually, they hear items spoken by a native speaker (often over headphones), the experimenter tends to belong to the same community as the children, and testing occurs in quiet conditions (with little background noise). Thus, a priority is for additional data to be gathered using this more novel testing paradigm in other populations; or more from the Tsimane' population, but using the more traditional paradigm.
+
+Broadening our discussion to all of the studies in our literature review, we notice that there is rather wide variation of the range of NWR scores found across these samples, and that, in fact, the strength of age effects also varies. We performed some exploratory analyses to see whether features of the languages children were learning could be related to their overall NWR scores. We extracted the estimated number of phonemes in the language from PHOIBLE and coded whether words in the language tended to be relatively short or long, based on information in the papers cited above and other sources. Neither of these two predictors explained the variance in average NWR scores, illustrated in Figure \ref{fig:fig-prevlit-overall}. It is possible that average word length plays a role, but that researchers tend to incorporate this into their design by including longer items when the native language allows it, with e.g.~Sotho non-words having 4--7 syllables in length.
+
+\hypertarget{references}{%
+\section{References}\label{references}}
+
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{1}{0}
+\leavevmode\hypertarget{ref-balladares2016socio}{}%
+Balladares, J., Marshall, C., \& Griffiths, Y. (2016). {Socio-economic status affects sentence repetition, but not non-word repetition, in Chilean preschoolers}. \emph{{First Language}}, \emph{36}(3), 338--351. \url{https://doi.org/10.1177/0142723715626067}
+
+\leavevmode\hypertarget{ref-casillas2021early}{}%
+Casillas, M., Brown, P., \& Levinson, S. C. (2021). {Early language experience in a Papuan community}. \emph{Journal of Child Language}, \emph{48}(4), 792--814.
+
+\leavevmode\hypertarget{ref-cristia2019child}{}%
+Cristia, A., Dupoux, E., Gurven, M., \& Stieglitz, J. (2019). Child-directed speech is infrequent in a forager-farmer population. \emph{{Child Development}}, \emph{90}, 759--773. \url{https://doi.org/10.1111/cdev.12974}
+
+\leavevmode\hypertarget{ref-cristia2020infant}{}%
+Cristia, A., Farabolini, G., Scaff, C., Havron, N., \& Stieglitz, J. (2020). Infant-directed input and literacy effects on phonological processing: Non-word repetition scores among the {T}simane'. \emph{PLoS ONE}, \emph{15}(9), e0237702. https://doi.org/\url{https://doi.org/10.1371/journal.pone.0237702}
+
+\leavevmode\hypertarget{ref-farmani2018normalization}{}%
+Farmani, H., Sayyahi, F., Soleymani, Z., Labbaf, F. Z., Talebi, E., \& Shourvazi, Z. (2018). Normalization of the non-word repetition test in {F}arsi-speaking children. \emph{Journal of Modern Rehabilitation}, \emph{12}(4), 217--224.
+
+\leavevmode\hypertarget{ref-jabere2018xperiment}{}%
+Jaber-Awida, A. (2018). Experiment in non word repetition by monolingual {A}rabic preschoolers. \emph{Athens Journal of Philology}, \emph{5}, 317--334. \url{https://doi.org/10.30958/ajp.5-4-4}
+
+\leavevmode\hypertarget{ref-kalnak2014nonword}{}%
+Kalnak, N., Peyrard-Janvid, M., Forssberg, H., \& Sahlén, B. (2014). Nonword repetition--a clinical marker for specific language impairment in {S}wedish associated with parents' language-related problems. \emph{PloS One}, \emph{9}(2), e89544.
+
+\leavevmode\hypertarget{ref-kapalkova2013non}{}%
+Kapalková, S., Polišenská, K., \& Vicenová, Z. (2013). {Non-word repetition performance in Slovak-speaking children with and without SLI: novel scoring methods}. \emph{{International Journal of Language and Communication Disorders}}, \emph{48}(1), 78--89. \url{https://doi.org/10.1111/j.1460-6984.2012.00189.x}
+
+\leavevmode\hypertarget{ref-lei2011developmental}{}%
+Lei, L., Pan, J., Liu, H., McBride-Chang, C., Li, H., Zhang, Y., \ldots{} others. (2011). Developmental trajectories of reading development and impairment from ages 3 to 8 years in chinese children. \emph{Journal of Child Psychology and Psychiatry}, \emph{52}(2), 212--220.
+
+\leavevmode\hypertarget{ref-piazzalunga2019articulatory}{}%
+Piazzalunga, S., Previtali, L., Pozzoli, R., Scarponi, L., \& Schindler, A. (2019). {An articulatory-based disyllabic and trisyllabic Non-Word Repetition test: reliability and validity in Italian 3-to 7-year-old children}. \emph{Clinical Linguistics \& Phonetics}, \emph{33}(5), 437--456.
+
+\leavevmode\hypertarget{ref-polivsenska2014improving}{}%
+Polišenská, K., \& Kapalková, S. (2014). Improving child compliance on a computer-administered nonword repetition task. \emph{{Journal of Speech, Language and Hearing Research}}, \emph{57}(3).
+
+\leavevmode\hypertarget{ref-radeborg2006swedish}{}%
+Radeborg, K., Barthelom, E., SjöBerg, M., \& Sahlén, B. (2006). {A Swedish non-word repetition test for preschool children}. \emph{{Scandinavian Journal of Psychology}}, \emph{47}(3), 187--192. \url{https://doi.org/10.1111/j.1467-9450.2006.00506.x}
+
+\leavevmode\hypertarget{ref-scaff2021daylong}{}%
+Scaff, C., Stieglitz, J., Casillas, M., \& Cristia, A. (2021). Daylong audio recordings of young children in a forager-farmer society show low levels of verbal input with minimal age-related changes. \emph{Draft}.
+
+\leavevmode\hypertarget{ref-stokes2006nonword}{}%
+Stokes, S. F., Wong, A. M., Fletcher, P., \& Leonard, L. B. (2006). Nonword repetition and sentence repetition as clinical markers of specific language impairment: The case of cantonese. \emph{Journal of Speech, Language, and Hearing Research}, \emph{49}, 219--236.
+
+\leavevmode\hypertarget{ref-thomas2020impact}{}%
+Thomas-Odenthal, F., Molero, P., Does, W. van der, \& Molendijk, M. (2020). Impact of review method on the conclusions of clinical reviews: A systematic review on dietary interventions in depression as a case in point. \emph{PloS One}, \emph{15}(9), e0238131.
+
+\leavevmode\hypertarget{ref-vance2005speech}{}%
+Vance, M., Stackhouse, J., \& Wells, B. (2005). Speech-production skills in children aged 3--7 years. \emph{International Journal of Language \& Communication Disorders}, \emph{40}(1), 29--48.
+
+\leavevmode\hypertarget{ref-wilsenach2013phonological}{}%
+Wilsenach, C. (2013). {Phonological skills as predictor of reading success: An investigation of emergent bilingual Northern Sotho/English learners}. \emph{{Per Linguam: A Journal of Language Learning= Per Linguam: Tydskrif Vir Taalaanleer}}, \emph{29}(2), 17--32. \url{https://doi.org/10.5785/29-2-554}
+
+\end{CSLReferences}
+
+
+\end{document}

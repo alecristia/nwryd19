@@ -39,7 +39,7 @@ tablelist         : no
 footnotelist      : no
 lineno            : no
 
-lang              : "english"
+lang              : "en-US"
 class             : "doc"
 output            :
   papaja::apa6_pdf
