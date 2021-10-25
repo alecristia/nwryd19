@@ -1,8 +1,9 @@
 # nwryd19
 
-This repository contains historical and in-progress versions of the manuscript "Non-word repetition in Yélî Dnye". 
+This repository contains historical and in-progress versions of the manuscript "Non-word repetition in Yélî Dnye". Please see LICENSE for details for reuse (Apache license).
 
 ## Explanation of contents
+
 
 ### Original files
 
@@ -39,4 +40,13 @@ These are 'raw' files, they cannot be created from other materials
 - segment-counts-types.txt: type counts for phonemes in a YD corpus
 - segment-counts.txt: token counts for phonemes in a YD corpus
 - getting_frequency_corpus.pdf: knitted results of that script
+
+
+### Files that can be ignored most of the time
+
+- .gitignore: specifies files to be ignored by git
+- header.tex: needed for reknitting manuscript.Rmd
+- renv folder, renv lock, .rprofile, .rproj: useful for reproducibility
+- LICENSE: specifies Apache license for reuse
+
 

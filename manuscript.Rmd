@@ -60,7 +60,7 @@ REDOALL=FALSE #use true if you want to recalculate the final-data and other data
 # Seed for random number generation
 set.seed(42)
 knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
-
+options(knitr.graphics.error = FALSE)
 
 #Sys.setlocale("LC_CTYPE", "en_US_POSIX.UTF-8")
 #Sys.setlocale("LANG", "en_US_POSIX.UTF-8")
@@ -390,7 +390,7 @@ The final list includes three practice items and 40 test items (across infants):
 
 ```{r tabstims, results = "asis"}
 #add orthographic representations targets & other stims chars
-stims.tbl <- read.xlsx("stimuli-20211018.xlsx") %>%
+stims.tbl <- read.xlsx("stimuli.xlsx") %>%
   arrange(factor(type, levels = c("practice", "1", "2", "3", "4"))) %>%
   select(type, target_ortho, phono) %>%
   rename("Type" = type, "Orthographic" = target_ortho, "Phonological" = phono)
@@ -564,7 +564,7 @@ We could include `r summary(xl_fr)$devcomp$dims["N"]` observations, from `r summ
 ```{r fig-xling-freq, fig.pos = "!t", fig.align = "center", out.width = '65%', fig.cap="NWR scores for individual target words as a function of the average frequency with which each phone is found across languages."}
 aggregate(trnsc.inc$correct*100,by=list(trnsc.inc$target,trnsc.inc$avg_fr),mean)->xling
 colnames(xling)<-c("Target","Avg_fr","Word")
-stims.ipa <- read.xlsx("stimuli-20211018.xlsx") %>%
+stims.ipa <- read.xlsx("stimuli.xlsx") %>%
   select(target, target_ortho, phono)
 xling <- merge(xling, stims.ipa, by.x = "Target", by.y = "target")
 
@@ -731,7 +731,7 @@ mat_pc=round(match_tab/denom_vec*100,3)
 
 We addressed our first research question in a second way, by investigating patterns of error, looking at all attempts and not excluding errors resulting in real words, so as to base our generalizations on more data. Insertions and deletions were very rare (metathesis was not attested): there were only `r sum(del_tab[c(oralVs,nasalVs)])` instances of deleted vowels (~`r mean(del_pc[c(oralVs,nasalVs)],na.rm=T)`% of all vowel targets), and `r sum(del_tab[c(simplexCs,complexCs)])` instances of deleted consonants (~`r mean(del_pc[c(simplexCs,complexCs)],na.rm=T)`% of all consonant targets). We therefore focus our qualitative description here on substitutions: There were `r dim(sub_bank)[1]` cases of substitutions, ~`r round(dim(sub_bank)[1]/(dim(del_bank)[1] + dim(sub_bank)[1] + dim(match_bank)[1])*100,2)` of the `r dim(del_bank)[1] + dim(sub_bank)[1] + dim(match_bank)[1]` phones found collapsing across all children and target words, so that substitutions constituted the  majority of incorrect phones (~`r round(dim(sub_bank)[1]/(dim(del_bank)[1] + dim(sub_bank)[1] )*100,2)` of unmatched phones). To inform our understanding of how cross-linguistic patterns may be reflected in NWR scores, we asked: Is it the case that cross-linguistically less common and/or more complex phones are more frequently mispronounced, and more frequently substituted by more common ones than vice versa? [^4]
 
-[^4]: Note that a full anonymized, but age-annotated table of errors is provided in the project repository for those interested in a finer-grained analysis than what is presented here: ALEX?].
+[^4]: Note that tables of errors including child age are provided in the project repository for those interested in a finer-grained analysis than what is presented here. See https://osf.io/5qspb/wiki/home/, quick links, error tables.
 
 
 
