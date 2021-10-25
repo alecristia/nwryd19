@@ -1,6 +1,6 @@
 # nwryd19
 
-This repository contains historical and in-progress versions of the manuscript "Non-word repetition in Yélî Dnye". For archival versions, please visit https://osf.io/5qspb/
+This repository contains historical and in-progress versions of the manuscript "Non-word repetition in Yélî Dnye". 
 
 ## Explanation of contents
 
@@ -19,6 +19,7 @@ These are 'raw' files, they cannot be created from other materials
 - stimuli.xlsx: description of the stimuli
 - nwr-demo.csv: demographic information of participants
 - manuscript.Rmd: file to regenerate the manuscript
+- manuscript.pdf: knitted version of the manuscript
 - wrangling.R: file that combines datasets for analyses in the manuscripts
 - final_data_fields.txt: field explanations for final_data.txt
 
@@ -37,4 +38,5 @@ These are 'raw' files, they cannot be created from other materials
 
 - segment-counts-types.txt: type counts for phonemes in a YD corpus
 - segment-counts.txt: token counts for phonemes in a YD corpus
+- getting_frequency_corpus.pdf: knitted results of that script
 

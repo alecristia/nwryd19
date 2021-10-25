@@ -10,6 +10,9 @@ manuscript_files/*
 literature
 literature/*
 reading/
+nwr.by.freq.ITEM.png
+manuscript.tex
+supmat.tex
 
 # History files
 .Rhistory
