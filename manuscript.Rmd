@@ -46,7 +46,7 @@ lineno            : yes
 lang              : "en-US"
 class             : "man"
 output            :
-  papaja::apa6_pdf:
+  papaja::apa6_word:
     latex_engine: xelatex
     includes:
       in_header: header.tex
@@ -784,7 +784,7 @@ The complex consonants in our stimuli occur in ~`r mean(segments$pc[segments$typ
 whereas simple consonants in our stimuli occur in ~`r mean(segments$pc[segments$type %in% c("simple")],na.rm=T)`% of languages' phonologies (range `r min(segments$pc[segments$type %in% c("simple")],na.rm=T)`% to `r max(segments$pc[segments$type %in% c("simple")],na.rm=T)`%). 
 Again these groups of sounds differ in their frequency within the language. Their type frequencies in Yélî Dnye are: complex consonants ~`r mean(segments$freq_corpus_types[segments$type %in% c("complex")],na.rm=T)*10`‰  (range `r min(segments$freq_corpus_types[segments$type %in% c("complex")],na.rm=T)*10`‰ to `r max(segments$freq_corpus_types[segments$type %in% c("complex")],na.rm=T)*10`‰) versus simple consonants ~`r mean(segments$freq_corpus_types[segments$type %in% c("simple")],na.rm=T)*10`‰ (range `r min(segments$freq_corpus_types[segments$type %in% c("simple")],na.rm=T)*10`‰ to `r max(segments$freq_corpus_types[segments$type %in% c("simple")],na.rm=T)*10`‰). 
 
-Table \@ref(tab:tab-c) showed that errors involving complex consonant targets were more common than those involving simple consonants (`r 100-mytab["Complex Target","% Corr."]` versus `r 100-mytab["Simple Target","% Corr."]`%). Additionally, errors in which a complex consonant was mispronounced as a simple consonant were quite common, whereas those in which a simple consonant was produced as a complex one were vanishingly rare. 
+Table \@ref(tab:tab-c) showed that complex consonant targets were more often pronounced incorrectly than simple consonant targets (`r round(mytab["Complex Target","% Corr."])`% versus `r round(mytab["Simple Target","% Corr."])`%, respectively). Additionally, errors in which a complex consonant was mispronounced as a simple consonant were quite common, whereas those in which a simple consonant was produced as a complex one were vanishingly rare. 
 
 ```{r fig-pc-phone}
 mat_pc2=data.frame(mat_pc)
