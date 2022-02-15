@@ -46,7 +46,7 @@ lineno            : yes
 lang              : "en-US"
 class             : "man"
 output            :
-  papaja::apa6_pdf:
+  papaja::apa6_word:
     latex_engine: xelatex
     includes:
       in_header: header.tex
