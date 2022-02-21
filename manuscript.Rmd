@@ -432,7 +432,7 @@ kable(stims.wide,
   kable_styling(latex_options = "HOLD_position") %>%
   add_header_above(c("Practice" = 2, "Monosyll" = 2,
     "Bisyll" = 2, "Trisyll" = 2, "Tetrasyll" = 2))
-
+write.csv(stims.wide,"tab1.csv")
 ```
 
 
@@ -746,7 +746,7 @@ colnames(mytab)<-c("Corr.","Del.","Nasal Err.","Qual. Err","% Corr.","% Del.","%
 kable(mytab,
   "latex", booktabs = T,
   caption="Number (and percent) of vowel targets that were correctly repeated (Corr.), deleted (Del.), or substituted, as a function of vowel type, and whether the error resulted in a nasality change (Nasal Err.) or only a quality change (Qual. Err.)")
-
+write.csv(mytab,"tab2.csv")
 ```
 
 
@@ -776,7 +776,7 @@ colnames(mytab)<-c("Corr.","Del.","Cmpl Err.","Othr Err.","% Corr.","% Del","% C
 kable(mytab,
   "latex", booktabs = T,
   caption="Number (and percent) of consonant targets that were correctly repeated (Corr.), deleted (Del.), or substituted, as a function of the complexity of the consonant, and whether the error resulted in a change of complexity (Cmpl Err.) or not (Othr Err.)")
-
+write.csv(mytab,"tab3.csv")
 ```
 
 For consonants, we inspected complex (`r print.phone.list(complexCs.ipa)`) versus simpler ones (`r print.phone.list(simplexCs.ipa)`), using the same logic: We looked at correct phone repetition, substitution with a change in complexity category, or a change within the same complexity category.^[Note that the substitutions included phones that are not native to Yélî Dnye but do occur in English (e.g., [tʃ]). These data come from careful transcriptions by a native Yélî Dnye speaker who is very fluent in English.] 
