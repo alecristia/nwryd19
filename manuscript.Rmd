@@ -844,6 +844,8 @@ for(myvar in c("Word","NLD")){
 rownames(length.tab)<-paste(c(1:4),"syll")
 colnames(length.tab)<-c("Word","NLD")
 kable(length.tab,"latex", booktabs = T,caption="NWR means (and standard deviations) measured in whole-word scores and normalized Levenshtein Distance (NLD), separately for the four stimuli lengths.")
+
+write.csv(length.tab,"tab4.csv")
 ```
 
 
